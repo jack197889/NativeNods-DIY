@@ -53,24 +53,26 @@ except ImportError as e:
 # ══════════════════════════════════════════════════════════════════
 
 SOURCE_URLS = [
-    # ========== 核心高质量源（真实 HTTP 验证 + 国家拆分） ==========
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",                    # 全局精选 ~2000（已验证）
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-US.txt",       # 美国 ~650
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-NL.txt",       # 荷兰 ~110
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-GB.txt",       # 英国 ~40
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-AU.txt",       # 澳大利亚 ~4–10
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-JP.txt",       # 日本 ~500+（速度快）
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt",       # 台湾 ~70–80（速度快）
+    # ========== 核心高质量 + 国家专项（优先美国/荷兰） ==========
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-US.txt",
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-NL.txt",
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-GB.txt",
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-AU.txt",
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-JP.txt",
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt",
 
-    # ========== 补充高质量聚合源 ==========
-    "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub1.txt",                                # Top 100（质量优先，TLS/Reality 优先）
-    "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub2.txt",                                # 次 100
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/US.txt",                   # 美国专项（GeoIP 分类）
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/NL.txt",                   # 荷兰专项
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/GB.txt",                   # 英国专项
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/AU.txt",                   # 澳大利亚专项
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/JP.txt",                   # 日本专项
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/TW.txt",                   # 台湾专项
+    # ========== 补充高质量源 ==========
+    "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub1.txt",
+    "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub2.txt",
+    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/US.txt",
+    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/NL.txt",
+    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/AU.txt",
+
+    # ========== 额外加大美国/荷兰样本量 ==========
+    "https://raw.githubusercontent.com/r3zarahimi/tg-v2ray-configs-every2h/main/regions/conf-US.txt",
+    "https://raw.githubusercontent.com/r3zarahimi/tg-v2ray-configs-every2h/main/regions/conf-NL.txt",
+    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/countries/us.txt",   
 ]
 
 OUTPUT_DIR = "output"
