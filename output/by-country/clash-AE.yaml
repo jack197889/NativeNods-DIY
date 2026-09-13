@@ -5,6 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01 - jack
+  server: 31.58.181.88
+  port: 8443
+  udp: true
+  type: vless
+  uuid: d0da19f1-fb05-488e-99c2-262389b3537b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  servername: tradingview.com
+  client-fingerprint: chrome
+- name: 🇦🇪 阿联酋 (UAE) 02 - jack
   server: 31.56.189.27
   port: 2087
   udp: true
@@ -17,17 +29,15 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: freegrpc
-- name: 🇦🇪 阿联酋 (UAE) 02 - jack
-  server: 130.49.161.70
-  port: 443
+- name: 🇦🇪 阿联酋 (UAE) 03 - jack
+  server: 85.204.107.183
+  port: 8080
   udp: true
   type: hysteria2
-  password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
-  sni: hy2.aspidnet.xyz
-  skip-cert-verify: false
-  obfs: salamander
-  obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
-- name: 🇦🇪 阿联酋 (UAE) 03 - jack
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+  sni: hopp-romania-new.roxa.org
+  skip-cert-verify: true
+- name: 🇦🇪 阿联酋 (UAE) 04 - jack
   server: upload.tbotapi.ru
   port: 443
   udp: true
@@ -39,42 +49,7 @@ proxies:
     public-key: nDUrcIPWyCo7gAOVPfjAneLz17NdCrUMCIvdJsTRsD4
   servername: upload.tbotapi.ru
   client-fingerprint: firefox
-- name: 🇦🇪 阿联酋 (UAE) 04 - jack
-  server: 116.204.164.17
-  port: 7443
-  udp: true
-  type: vless
-  uuid: 57c830ca-19a2-441c-811d-db5d81b86b47
-  tls: true
-  servername: o-85ley6knn8ut.6nvkygqh144t7xtdyvh0y3o4gzo3ujhnk8n.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: o-85ley6knn8ut.6nvkygqh144t7xtdyvh0y3o4gzo3ujhnk8n.workers.dev
 - name: 🇦🇪 阿联酋 (UAE) 05 - jack
-  server: 85.204.107.178
-  port: 8080
-  udp: true
-  type: hysteria2
-  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
-  sni: hopp-romania-new.roxa.org
-  skip-cert-verify: true
-- name: 🇦🇪 阿联酋 (UAE) 06 - jack
-  server: 31.58.181.88
-  port: 8443
-  udp: true
-  type: vless
-  uuid: e3c57af3-51e0-4e06-bfd8-f05cc37d5069
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
-  servername: tradingview.com
-  client-fingerprint: firefox
-- name: 🇦🇪 阿联酋 (UAE) 07 - jack
   server: 84.235.244.108
   port: 22573
   udp: true
@@ -85,20 +60,16 @@ proxies:
     path: /
     headers:
       Host: uae.unixzone.us
-- name: 🇦🇪 阿联酋 (UAE) 08 - jack
-  server: 89.47.55.8
-  port: 8443
+- name: 🇦🇪 阿联酋 (UAE) 06 - jack
+  server: 130.49.161.70
+  port: 443
   udp: true
-  type: vless
-  uuid: 4350213a-b4e7-262a-0bd7-bd16957cf71a
-  tls: true
-  reality-opts:
-    public-key: WtLZK1KyhSpI3K-R4M3sLAHWPOgGPMgkL6RneL0OfCY
-  servername: download.nvidia.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TunService
+  type: hysteria2
+  password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
+  sni: hy2.aspidnet.xyz
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
 proxy-groups:
 - name: PROXIES
   type: select
@@ -110,8 +81,6 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 04 - jack
   - 🇦🇪 阿联酋 (UAE) 05 - jack
   - 🇦🇪 阿联酋 (UAE) 06 - jack
-  - 🇦🇪 阿联酋 (UAE) 07 - jack
-  - 🇦🇪 阿联酋 (UAE) 08 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -123,7 +92,5 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 04 - jack
   - 🇦🇪 阿联酋 (UAE) 05 - jack
   - 🇦🇪 阿联酋 (UAE) 06 - jack
-  - 🇦🇪 阿联酋 (UAE) 07 - jack
-  - 🇦🇪 阿联酋 (UAE) 08 - jack
 rules:
 - MATCH,PROXIES

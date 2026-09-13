@@ -4,17 +4,17 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - jack
-  server: 62.233.39.9
+- name: 🇵🇰 巴基斯坦 (Pakistan) 01 - jack
+  server: 64.49.38.3
   port: 8443
   udp: true
   type: vless
-  uuid: 4350213a-b4e7-262a-0bd7-bd16957cf71a
+  uuid: dca76b88-b038-e82b-45e1-1d76b476d7ca
   tls: true
   reality-opts:
-    public-key: oHaUPZiESTQQ89DMd4uIcPWgsyeFFy58iZYX_8mbvWk
-  servername: dl.dell.com
-  client-fingerprint: safari
+    public-key: JeVpfwIwteGa8xfysPJUzrbHgmOPyLGomRqyH8Pi7W0
+  servername: download.nvidia.com
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: TunService
@@ -23,12 +23,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - jack
+  - 🇵🇰 巴基斯坦 (Pakistan) 01 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - jack
+  - 🇵🇰 巴基斯坦 (Pakistan) 01 - jack
 rules:
 - MATCH,PROXIES

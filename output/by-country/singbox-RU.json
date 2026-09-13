@@ -4,40 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇷🇺 俄罗斯 (Russia) 01 - jack",
-      "server": "195.133.23.200",
-      "server_port": 50111,
-      "method": "aes-256-gcm",
-      "password": "81a20429165df87e"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇷🇺 俄罗斯 (Russia) 02 - jack",
-      "server": "195.133.5.102",
-      "server_port": 50111,
-      "method": "aes-256-gcm",
-      "password": "895b4b796a357570"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇷🇺 俄罗斯 (Russia) 03 - jack",
-      "server": "195.58.48.137",
-      "server_port": 50111,
-      "method": "aes-256-gcm",
-      "password": "8ad9d72a5571df86"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇷🇺 俄罗斯 (Russia) 04 - jack",
-      "server": "130.49.189.158",
-      "server_port": 43558,
-      "method": "chacha20-ietf-poly1305",
-      "password": "jIlQi9jGPJd7KHMx6Y4+JbaNoWSWfe2A73U4J4o0Qrs="
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇷🇺 俄罗斯 (Russia) 05 - jack",
+      "tag": "🇷🇺 俄罗斯 (Russia) 01 - jack",
       "server": "msk.frkn.org",
       "server_port": 443,
       "password": "f317b5d6-d399-4d3d-a051-89d674ae953c",
@@ -48,32 +16,12 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇷🇺 俄罗斯 (Russia) 06 - jack",
-      "server": "78.159.247.246",
-      "server_port": 443,
-      "uuid": "1852b02c-1828-40eb-81ff-4de3d097cb35",
-      "tls": {
-        "enabled": true,
-        "server_name": "sb2.hat.onl",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇷🇺 俄罗斯 (Russia) 07 - jack",
-      "server": "31.76.71.252",
-      "server_port": 443,
-      "password": "mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj",
-      "tls": {
-        "enabled": true,
-        "server_name": "gta.internet-card.sbs",
-        "insecure": true
-      }
+      "type": "shadowsocks",
+      "tag": "🇷🇺 俄罗斯 (Russia) 02 - jack",
+      "server": "130.49.189.158",
+      "server_port": 43558,
+      "method": "chacha20-ietf-poly1305",
+      "password": "jIlQi9jGPJd7KHMx6Y4+JbaNoWSWfe2A73U4J4o0Qrs="
     },
     {
       "type": "selector",
@@ -81,12 +29,7 @@
       "outbounds": [
         "auto",
         "🇷🇺 俄罗斯 (Russia) 01 - jack",
-        "🇷🇺 俄罗斯 (Russia) 02 - jack",
-        "🇷🇺 俄罗斯 (Russia) 03 - jack",
-        "🇷🇺 俄罗斯 (Russia) 04 - jack",
-        "🇷🇺 俄罗斯 (Russia) 05 - jack",
-        "🇷🇺 俄罗斯 (Russia) 06 - jack",
-        "🇷🇺 俄罗斯 (Russia) 07 - jack"
+        "🇷🇺 俄罗斯 (Russia) 02 - jack"
       ]
     },
     {
@@ -94,12 +37,7 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 俄罗斯 (Russia) 01 - jack",
-        "🇷🇺 俄罗斯 (Russia) 02 - jack",
-        "🇷🇺 俄罗斯 (Russia) 03 - jack",
-        "🇷🇺 俄罗斯 (Russia) 04 - jack",
-        "🇷🇺 俄罗斯 (Russia) 05 - jack",
-        "🇷🇺 俄罗斯 (Russia) 06 - jack",
-        "🇷🇺 俄罗斯 (Russia) 07 - jack"
+        "🇷🇺 俄罗斯 (Russia) 02 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

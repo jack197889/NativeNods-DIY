@@ -13,11 +13,11 @@ proxies:
   password: FAdUvMJUq5vDgKEq
 - name: 🇵🇱 波兰 (Poland) 02 - jack
   server: 217.30.10.44
-  port: 9095
+  port: 9052
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: N7j3pdTYkKmsy8CR
+  password: jt2ekBNc9HuVtm2a
 - name: 🇵🇱 波兰 (Poland) 03 - jack
   server: 217.30.10.44
   port: 9041
@@ -26,12 +26,16 @@ proxies:
   cipher: aes-256-cfb
   password: U6qnYRhfyDmn8sgn
 - name: 🇵🇱 波兰 (Poland) 04 - jack
-  server: 217.30.10.44
-  port: 9052
+  server: 94.183.209.58
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: jt2ekBNc9HuVtm2a
+  type: vless
+  uuid: 78791f9e-fe09-4d4f-88ec-895764bae0d6
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: pl2.lckdwn.ru
 - name: 🇵🇱 波兰 (Poland) 05 - jack
   server: 94.183.209.59
   port: 443
@@ -42,6 +46,13 @@ proxies:
   ws-opts:
     path: /
 - name: 🇵🇱 波兰 (Poland) 06 - jack
+  server: 194.61.121.93
+  port: 7538
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: U9YAoqBgg5VyGBc6vQv1sN
+- name: 🇵🇱 波兰 (Poland) 07 - jack
   server: 144.31.5.64
   port: 443
   udp: true
@@ -51,54 +62,16 @@ proxies:
   tls: true
   servername: pl6.moritech.net
   skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 07 - jack
-  server: 45.192.12.93
+- name: 🇵🇱 波兰 (Poland) 08 - jack
+  server: admin.wwwinternetvideo.click
   port: 443
   udp: true
   type: hysteria2
   password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
   sni: admin.wwwinternetvideo.click
   skip-cert-verify: true
-- name: 🇵🇱 波兰 (Poland) 08 - jack
-  server: poland-new-ded-2.failspace.top
-  port: 443
-  udp: true
-  type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: poland-new-ded-2.failspace.top
-  skip-cert-verify: false
 - name: 🇵🇱 波兰 (Poland) 09 - jack
-  server: 194.61.121.93
-  port: 7538
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: U9YAoqBgg5VyGBc6vQv1sN
-- name: 🇵🇱 波兰 (Poland) 10 - jack
-  server: poland-viper.moritech.net
-  port: 443
-  udp: true
-  type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: poland-viper.moritech.net
-  skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 11 - jack
-  server: poland-new-ded.failspace.top
-  port: 443
-  udp: true
-  type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: poland-new-ded.failspace.top
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 12 - jack
-  server: 222.167.245.124
+  server: datpol.2clash.ru
   port: 443
   udp: true
   type: vless
@@ -109,7 +82,7 @@ proxies:
     public-key: QOT8VdR2idgWURLucBQrAMtWtsEx1gfO8AcPEj7xhCU
     short-id: '32445654'
   servername: datpol.2clash.ru
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -124,9 +97,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 07 - jack
   - 🇵🇱 波兰 (Poland) 08 - jack
   - 🇵🇱 波兰 (Poland) 09 - jack
-  - 🇵🇱 波兰 (Poland) 10 - jack
-  - 🇵🇱 波兰 (Poland) 11 - jack
-  - 🇵🇱 波兰 (Poland) 12 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -141,8 +111,5 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 07 - jack
   - 🇵🇱 波兰 (Poland) 08 - jack
   - 🇵🇱 波兰 (Poland) 09 - jack
-  - 🇵🇱 波兰 (Poland) 10 - jack
-  - 🇵🇱 波兰 (Poland) 11 - jack
-  - 🇵🇱 波兰 (Poland) 12 - jack
 rules:
 - MATCH,PROXIES

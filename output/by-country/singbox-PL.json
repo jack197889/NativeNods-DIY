@@ -15,9 +15,9 @@
       "type": "shadowsocks",
       "tag": "🇵🇱 波兰 (Poland) 02 - jack",
       "server": "217.30.10.44",
-      "server_port": 9095,
+      "server_port": 9052,
       "method": "aes-256-cfb",
-      "password": "N7j3pdTYkKmsy8CR"
+      "password": "jt2ekBNc9HuVtm2a"
     },
     {
       "type": "shadowsocks",
@@ -28,12 +28,18 @@
       "password": "U6qnYRhfyDmn8sgn"
     },
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 04 - jack",
-      "server": "217.30.10.44",
-      "server_port": 9052,
-      "method": "aes-256-cfb",
-      "password": "jt2ekBNc9HuVtm2a"
+      "server": "94.183.209.58",
+      "server_port": 443,
+      "uuid": "78791f9e-fe09-4d4f-88ec-895764bae0d6",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "pl2.lckdwn.ru"
+        }
+      }
     },
     {
       "type": "vless",
@@ -47,8 +53,16 @@
       }
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇵🇱 波兰 (Poland) 06 - jack",
+      "server": "194.61.121.93",
+      "server_port": 7538,
+      "method": "chacha20-ietf-poly1305",
+      "password": "U9YAoqBgg5VyGBc6vQv1sN"
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 07 - jack",
       "server": "144.31.5.64",
       "server_port": 443,
       "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
@@ -61,8 +75,8 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇵🇱 波兰 (Poland) 07 - jack",
-      "server": "45.192.12.93",
+      "tag": "🇵🇱 波兰 (Poland) 08 - jack",
+      "server": "admin.wwwinternetvideo.click",
       "server_port": 443,
       "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
       "tls": {
@@ -73,59 +87,8 @@
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 08 - jack",
-      "server": "poland-new-ded-2.failspace.top",
-      "server_port": 443,
-      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "poland-new-ded-2.failspace.top",
-        "insecure": false
-      }
-    },
-    {
-      "type": "shadowsocks",
       "tag": "🇵🇱 波兰 (Poland) 09 - jack",
-      "server": "194.61.121.93",
-      "server_port": 7538,
-      "method": "chacha20-ietf-poly1305",
-      "password": "U9YAoqBgg5VyGBc6vQv1sN"
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 10 - jack",
-      "server": "poland-viper.moritech.net",
-      "server_port": 443,
-      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "poland-viper.moritech.net",
-        "insecure": false
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 11 - jack",
-      "server": "poland-new-ded.failspace.top",
-      "server_port": 443,
-      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "poland-new-ded.failspace.top",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 12 - jack",
-      "server": "222.167.245.124",
+      "server": "datpol.2clash.ru",
       "server_port": 443,
       "uuid": "3b6a9df3-f1d1-4bc1-94a5-0d8f2d5512b1",
       "flow": "xtls-rprx-vision",
@@ -134,7 +97,7 @@
         "server_name": "datpol.2clash.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -156,10 +119,7 @@
         "🇵🇱 波兰 (Poland) 06 - jack",
         "🇵🇱 波兰 (Poland) 07 - jack",
         "🇵🇱 波兰 (Poland) 08 - jack",
-        "🇵🇱 波兰 (Poland) 09 - jack",
-        "🇵🇱 波兰 (Poland) 10 - jack",
-        "🇵🇱 波兰 (Poland) 11 - jack",
-        "🇵🇱 波兰 (Poland) 12 - jack"
+        "🇵🇱 波兰 (Poland) 09 - jack"
       ]
     },
     {
@@ -174,10 +134,7 @@
         "🇵🇱 波兰 (Poland) 06 - jack",
         "🇵🇱 波兰 (Poland) 07 - jack",
         "🇵🇱 波兰 (Poland) 08 - jack",
-        "🇵🇱 波兰 (Poland) 09 - jack",
-        "🇵🇱 波兰 (Poland) 10 - jack",
-        "🇵🇱 波兰 (Poland) 11 - jack",
-        "🇵🇱 波兰 (Poland) 12 - jack"
+        "🇵🇱 波兰 (Poland) 09 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

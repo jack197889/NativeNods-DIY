@@ -4,29 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack
-  server: 36.224.152.189
-  port: 50099
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-- name: 🇯🇵 日本 (Japan) 02 (家宽) - jack
-  server: 80.240.18.227
-  port: 10051
-  udp: true
-  type: vless
-  uuid: 73996ef7-544c-45e7-abc0-973218c727e2
-  tls: true
-  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
-- name: 🇷🇴 罗马尼亚 (Romania) 03 (家宽) - jack
+- name: 🇷🇴 罗马尼亚 (Romania) 01 (家宽) - jack
   server: roma2.moritech.net
   port: 443
   udp: true
@@ -36,8 +14,8 @@ proxies:
   tls: true
   servername: roma2.moritech.net
   skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
+  client-fingerprint: qq
+- name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
   server: hinet1.2yly.com
   port: 24215
   udp: true
@@ -53,18 +31,14 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack
-  - 🇯🇵 日本 (Japan) 02 (家宽) - jack
-  - 🇷🇴 罗马尼亚 (Romania) 03 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
+  - 🇷🇴 罗马尼亚 (Romania) 01 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack
-  - 🇯🇵 日本 (Japan) 02 (家宽) - jack
-  - 🇷🇴 罗马尼亚 (Romania) 03 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
+  - 🇷🇴 罗马尼亚 (Romania) 01 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
 rules:
 - MATCH,PROXIES
