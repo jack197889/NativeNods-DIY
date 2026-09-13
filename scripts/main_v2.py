@@ -65,6 +65,7 @@ SOURCE_URLS = [
     # ========== 补充高质量源 ==========
     "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub1.txt",
     "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub2.txt",
+    "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub3.txt",
     "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/US.txt",
     "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/NL.txt",
     "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/AU.txt",
@@ -72,7 +73,18 @@ SOURCE_URLS = [
     # ========== 额外加大美国/荷兰样本量 ==========
     "https://raw.githubusercontent.com/r3zarahimi/tg-v2ray-configs-every2h/main/regions/conf-US.txt",
     "https://raw.githubusercontent.com/r3zarahimi/tg-v2ray-configs-every2h/main/regions/conf-NL.txt",
-    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/countries/us.txt",   
+    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/countries/us.txt",
+    "https://raw.githubusercontent.com/ninjastrikers/Nexus-nodes/main/configs/countries/us/all.txt",
+    "https://raw.githubusercontent.com/ninjastrikers/Nexus-nodes/main/configs/countries/nl/all.txt",
+    "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",
+
+    # ========== 澳大利亚补充 ==========
+    "https://raw.githubusercontent.com/miladtahanian/V2RayScrapeByCountry/main/Australia.txt",
+    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/countries/au.txt",
+    "https://raw.githubusercontent.com/ninjastrikers/Nexus-nodes/main/configs/countries/au/all.txt",
+
+    # ========== 大型综合源（含 Telegram 等） ==========
+    "https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/merged.txt",
 ]
 
 OUTPUT_DIR = "output"
