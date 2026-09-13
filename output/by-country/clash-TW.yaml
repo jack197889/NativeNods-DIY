@@ -5,61 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 - jack
-  server: 160.187.100.109
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 160.187.100.109
-  skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 02 - jack
-  server: 103.115.109.49
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2
-  skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 03 - jack
-  server: 35.229.136.113
-  port: 35412
-  udp: true
-  type: vless
-  uuid: 5d3cbdb2-b82d-4078-82b8-5dd413cca82b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: eg6DfbLnWtz7PubkXRYvSuQx6QWIRxUsn4l7QEO3Cg4
-    short-id: 0630b874d595
-  servername: www.amd.com
-  client-fingerprint: qq
-- name: 🇹🇼 中国台湾 (Taiwan) 04 - jack
-  server: 35.194.157.16
-  port: 43450
-  udp: true
-  type: vless
-  uuid: 64d77a12-ad6b-4d85-a349-bd287535af1c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: HNPJBiUbqYVC3ylvu1GA7fCHLTaHO7S13Bex1nm0O1o
-    short-id: e65d010354bdad73
-  servername: www.amd.com
-  client-fingerprint: chrome
-- name: 🇹🇼 中国台湾 (Taiwan) 05 - jack
-  server: 34.80.184.198
-  port: 44848
-  udp: true
-  type: vless
-  uuid: b0342e8a-a25e-4e30-b598-d9391b0df4c9
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: w9vWLOHjl46krA8IEpGoPI9scTL0rFdjCtjdukJDciU
-    short-id: 2338740580a5de
-  servername: www.tesla.com
-  client-fingerprint: random
-- name: 🇹🇼 中国台湾 (Taiwan) 06 - jack
   server: 35.221.158.209
   port: 32981
   udp: true
@@ -72,6 +17,48 @@ proxies:
     short-id: 70f4b7a4c40636
   servername: www.sony.com
   client-fingerprint: firefox
+- name: 🇹🇼 中国台湾 (Taiwan) 02 - jack
+  server: 103.115.109.49
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 'https:'
+  skip-cert-verify: true
+- name: 🇹🇼 中国台湾 (Taiwan) 03 - jack
+  server: 160.187.100.109
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 160.187.100.109
+  skip-cert-verify: true
+- name: 🇹🇼 中国台湾 (Taiwan) 04 - jack
+  server: 104.199.219.172
+  port: 40800
+  udp: true
+  type: vless
+  uuid: 5859f6a7-cda1-47c2-8353-fcdee281f31d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zohUbvPLKVBwzuDmZNsaXXFYZSKA9_xEhdUyURChrgo
+    short-id: 186e4c2732d61a3d
+  servername: www.intel.com
+  client-fingerprint: qq
+- name: 🇹🇼 中国台湾 (Taiwan) 05 - jack
+  server: 104.199.134.231
+  port: 28364
+  udp: true
+  type: vless
+  uuid: 3a62a0c2-ba80-43a9-b757-9aca88b0552e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: NPhCET0GkjSZuKg4vWsPHLvjYGHW9w99Ucxvavu0-1I
+    short-id: 7241c359c2dfab
+  servername: www.sony.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -82,7 +69,6 @@ proxy-groups:
   - 🇹🇼 中国台湾 (Taiwan) 03 - jack
   - 🇹🇼 中国台湾 (Taiwan) 04 - jack
   - 🇹🇼 中国台湾 (Taiwan) 05 - jack
-  - 🇹🇼 中国台湾 (Taiwan) 06 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -93,6 +79,5 @@ proxy-groups:
   - 🇹🇼 中国台湾 (Taiwan) 03 - jack
   - 🇹🇼 中国台湾 (Taiwan) 04 - jack
   - 🇹🇼 中国台湾 (Taiwan) 05 - jack
-  - 🇹🇼 中国台湾 (Taiwan) 06 - jack
 rules:
 - MATCH,PROXIES

@@ -5,6 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - jack
+  server: 185.87.24.2
+  port: 2085
+  udp: true
+  type: vless
+  uuid: a1d1b142-17c5-4472-99de-df220df4d4fb
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
+- name: 🇹🇷 土耳其 (Turkey) 02 - jack
   server: 185.87.24.167
   port: 2085
   udp: true
@@ -13,20 +22,33 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: vless
-- name: 🇹🇷 土耳其 (Turkey) 02 - jack
-  server: 162.159.91.222
+- name: 🇹🇷 土耳其 (Turkey) 03 - jack
+  server: 156.67.63.231
   port: 443
   udp: true
   type: vless
-  uuid: 50414e45-4c5f-5a45-5553-723a643df685
+  uuid: b052df40-d51c-456c-9bd6-57af01a87e4e
+  flow: xtls-rprx-vision
   tls: true
-  servername: n3zaxce7u0es.crzl48eiuses.workers.dev
+  reality-opts:
+    public-key: PTqeBbbr2xJ1L3V1PyYjKjxanMKKqJHU-wtnpYmFQCI
+    short-id: 5606d4a25c99e7af
+  servername: sync-bridge.org
+  client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 04 - jack
+  server: 104.21.238.93
+  port: 443
+  udp: true
+  type: vless
+  uuid: 50414e45-4c5f-5a45-5553-44890b90d17e
+  tls: true
+  servername: afzoybehu2ws.vtzv4xe1un6s.workers.dev
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /stream/PANEL_ZEUS/723a643df685/loc-0
+    path: /stream/PANEL_ZEUS/44890b90d17e/loc-0
     headers:
-      Host: n3zaxce7u0es.crzl48eiuses.workers.dev
+      Host: afzoybehu2ws.vtzv4xe1un6s.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -34,6 +56,8 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 - jack
   - 🇹🇷 土耳其 (Turkey) 02 - jack
+  - 🇹🇷 土耳其 (Turkey) 03 - jack
+  - 🇹🇷 土耳其 (Turkey) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -41,5 +65,7 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 - jack
   - 🇹🇷 土耳其 (Turkey) 02 - jack
+  - 🇹🇷 土耳其 (Turkey) 03 - jack
+  - 🇹🇷 土耳其 (Turkey) 04 - jack
 rules:
 - MATCH,PROXIES

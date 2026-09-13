@@ -15,7 +15,7 @@ proxies:
     public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
     short-id: a8ae
   servername: deepl.com
-  client-fingerprint: firefox
+  client-fingerprint: qq
 - name: 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
   server: cassiopeia.yokkastars.com
   port: 40443
@@ -27,7 +27,7 @@ proxies:
     public-key: WFvn-RRJzpt2qV4xwj_R93gDr6dduIjkQKO3De3Y2Hc
     short-id: 5d96
   servername: deepl.com
-  client-fingerprint: chrome
+  client-fingerprint: ''
 - name: 🇨🇾 塞浦路斯 (Cyprus) 03 - jack
   server: 5.253.42.163
   port: 40443
@@ -40,6 +40,19 @@ proxies:
     public-key: d1gJntekIStCHyAwgJCuv-N4_BBx5dDQ7K6CeWmpMRo
     short-id: 84fc
   servername: deepl.com
+  client-fingerprint: chrome
+- name: 🇨🇾 塞浦路斯 (Cyprus) 04 - jack
+  server: 2.56.124.241
+  port: 443
+  udp: true
+  type: vless
+  uuid: eec2f6a7-c10f-43b0-b133-61f9bf9bbc27
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: bPbAdn6ogLbiv5cRe5d12EL7FhooAIVrC3-fg90P-Bw
+    short-id: 72104d27a0f5f62e
+  servername: www.amazon.com
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
@@ -49,6 +62,7 @@ proxy-groups:
   - 🇨🇾 塞浦路斯 (Cyprus) 01 - jack
   - 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
   - 🇨🇾 塞浦路斯 (Cyprus) 03 - jack
+  - 🇨🇾 塞浦路斯 (Cyprus) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -57,5 +71,6 @@ proxy-groups:
   - 🇨🇾 塞浦路斯 (Cyprus) 01 - jack
   - 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
   - 🇨🇾 塞浦路斯 (Cyprus) 03 - jack
+  - 🇨🇾 塞浦路斯 (Cyprus) 04 - jack
 rules:
 - MATCH,PROXIES
