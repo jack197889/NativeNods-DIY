@@ -53,26 +53,28 @@ except ImportError as e:
 # ══════════════════════════════════════════════════════════════════
 
 SOURCE_URLS = [
-    # --- 原项目大基数落地源（保障家宽筛选基数） ---
-    "https://wild-cloud-9893.heleimail.workers.dev",
-    "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/mix",
-    "https://raw.githubusercontent.com/freefq/free/master/v2",
-    "https://www.ermao.net/sub/v2ray/ermao.net",
-
-    # --- 新增动态野生节点池（保障每日新鲜度） ---
+    # 基础稳定源
     "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt",
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",
     "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
     "https://raw.githubusercontent.com/clashv2ray-hub/v2rayfree/refs/heads/main/v2ray.txt",
     "https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.txt",
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",
     "https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml",
+    "https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml",
     "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml",
 
-    # --- 补充大基数每日更新源（提升整体产出率） ---
-    "https://raw.githubusercontent.com/er260124/v2ray/main/v2ray.txt",
-    "https://raw.githubusercontent.com/v2rayshare/v2ray/main/v2ray.txt",
-    "https://raw.githubusercontent.com/peibei/free-nodes/main/v2ray.txt",
-    "https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/All_Configs_Sub.txt"
+    # 欧美（美/英/德/荷）家宽专项补充源
+    "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub1.txt",
+    "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub2.txt",
+    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/all_extracted_configs.txt",
+    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/subscriptions/location/US.txt",
+    "https://raw.githubusercontent.com/yebekhe/TVC/main/subscriptions/xray/base64",
+    "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
+
+    # 针对性提升澳洲（AU）节点成功率与家宽获取的新增源
+    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/subscriptions/location/AU.txt",
+    "https://raw.githubusercontent.com/LonUp/NodeList/main/Link/v2ray.txt",
+    "https://raw.githubusercontent.com/roosterkiev/optimus/main/sub.txt"
 ]
 
 OUTPUT_DIR = "output"
