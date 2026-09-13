@@ -53,16 +53,14 @@ except ImportError as e:
 # ══════════════════════════════════════════════════════════════════
 
 SOURCE_URLS = [
-    "https://wild-cloud-9893.heleimail.workers.dev",
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt",
-    "https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/all.txt",
-    "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/mix",
-    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/hysteria",
-    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/security/tls",
+    "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt",
+    "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
+    "https://raw.githubusercontent.com/clashv2ray-hub/v2rayfree/refs/heads/main/v2ray.txt",
+    "https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.txt",
     "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",
-    "https://raw.githubusercontent.com/freefq/free/master/v2",
-    "https://open.heleimail.workers.dev/",
-    "https://www.ermao.net/sub/v2ray/ermao.net",
+    "https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml",
+    "https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml",
+    "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml"
 ]
 
 OUTPUT_DIR = "output"
