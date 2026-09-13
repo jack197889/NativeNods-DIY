@@ -53,14 +53,26 @@ except ImportError as e:
 # ══════════════════════════════════════════════════════════════════
 
 SOURCE_URLS = [
+    # --- 原项目大基数落地源（保障家宽筛选基数） ---
+    "https://wild-cloud-9893.heleimail.workers.dev",
+    "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/mix",
+    "https://raw.githubusercontent.com/freefq/free/master/v2",
+    "https://www.ermao.net/sub/v2ray/ermao.net",
+
+    # --- 新增动态野生节点池（保障每日新鲜度） ---
     "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt",
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",
     "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
     "https://raw.githubusercontent.com/clashv2ray-hub/v2rayfree/refs/heads/main/v2ray.txt",
     "https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.txt",
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",
     "https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml",
-    "https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml",
-    "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml"
+    "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml",
+
+    # --- 补充大基数每日更新源（提升整体产出率） ---
+    "https://raw.githubusercontent.com/er260124/v2ray/main/v2ray.txt",
+    "https://raw.githubusercontent.com/v2rayshare/v2ray/main/v2ray.txt",
+    "https://raw.githubusercontent.com/peibei/free-nodes/main/v2ray.txt",
+    "https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/All_Configs_Sub.txt"
 ]
 
 OUTPUT_DIR = "output"
