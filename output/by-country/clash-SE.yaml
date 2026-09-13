@@ -4,7 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇪 瑞典 (Sweden) 01 - xiaohe
+- name: 🇸🇪 瑞典 (Sweden) 01 - jack
   server: 79.141.174.147
   port: 33743
   udp: true
@@ -18,7 +18,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: TunService
-- name: 🇸🇪 瑞典 (Sweden) 02 - xiaohe
+- name: 🇸🇪 瑞典 (Sweden) 02 - jack
   server: 91.193.17.156
   port: 9458
   udp: true
@@ -32,7 +32,19 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: TunService
-- name: 🇸🇪 瑞典 (Sweden) 03 - xiaohe
+- name: 🇸🇪 瑞典 (Sweden) 03 - jack
+  server: 88.216.130.139
+  port: 8443
+  udp: true
+  type: vless
+  uuid: fb67fd37-8d41-43a9-a093-c0b807fc5299
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: iRym2aMWC0ZoLJL7MtJm9p0xqFMutfe6_5B5tZyobxU
+  servername: apple.com
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 04 - jack
   server: se-node.rumedia-cdn.com
   port: 25443
   udp: true
@@ -40,21 +52,38 @@ proxies:
   password: 29ffde49-e1d6-4dcd-a135-352920f9f0b8
   sni: cf2.rumedia-cdn.com
   skip-cert-verify: false
+- name: 🇸🇪 瑞典 (Sweden) 05 - jack
+  server: 171.22.129.56
+  port: 2083
+  udp: true
+  type: vless
+  uuid: b2744db0-1c64-4218-a93b-9eba0e5f811f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 40eDnye2AHCQqgM2_ikKzRayZ4Vlu4rnnkHmLmNalQc
+    short-id: 32a37218722f0081
+  servername: swe-one.quiet-rogue.site
+  client-fingerprint: edge
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇸🇪 瑞典 (Sweden) 01 - xiaohe
-  - 🇸🇪 瑞典 (Sweden) 02 - xiaohe
-  - 🇸🇪 瑞典 (Sweden) 03 - xiaohe
+  - 🇸🇪 瑞典 (Sweden) 01 - jack
+  - 🇸🇪 瑞典 (Sweden) 02 - jack
+  - 🇸🇪 瑞典 (Sweden) 03 - jack
+  - 🇸🇪 瑞典 (Sweden) 04 - jack
+  - 🇸🇪 瑞典 (Sweden) 05 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇪 瑞典 (Sweden) 01 - xiaohe
-  - 🇸🇪 瑞典 (Sweden) 02 - xiaohe
-  - 🇸🇪 瑞典 (Sweden) 03 - xiaohe
+  - 🇸🇪 瑞典 (Sweden) 01 - jack
+  - 🇸🇪 瑞典 (Sweden) 02 - jack
+  - 🇸🇪 瑞典 (Sweden) 03 - jack
+  - 🇸🇪 瑞典 (Sweden) 04 - jack
+  - 🇸🇪 瑞典 (Sweden) 05 - jack
 rules:
 - MATCH,PROXIES

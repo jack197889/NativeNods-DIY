@@ -4,7 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇲 缅甸 (Myanmar) 01 - xiaohe
+- name: 🇲🇲 缅甸 (Myanmar) 01 - jack
   server: z-sg2.6send.com
   port: 10046
   udp: true
@@ -17,12 +17,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇲🇲 缅甸 (Myanmar) 01 - xiaohe
+  - 🇲🇲 缅甸 (Myanmar) 01 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇲 缅甸 (Myanmar) 01 - xiaohe
+  - 🇲🇲 缅甸 (Myanmar) 01 - jack
 rules:
 - MATCH,PROXIES

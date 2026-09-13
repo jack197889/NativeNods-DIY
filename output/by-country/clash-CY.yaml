@@ -4,7 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇾 塞浦路斯 (Cyprus) 01 - xiaohe
+- name: 🇨🇾 塞浦路斯 (Cyprus) 01 - jack
   server: 194.76.154.31
   port: 40443
   udp: true
@@ -16,20 +16,7 @@ proxies:
     short-id: a8ae
   servername: deepl.com
   client-fingerprint: qq
-- name: 🇨🇾 塞浦路斯 (Cyprus) 02 - xiaohe
-  server: 45.9.2.171
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 167610e4-bcaf-4074-bc2d-0c08dc4ea294
-  tls: true
-  servername: torr.wlrus.cfd
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ''
-- name: 🇨🇾 塞浦路斯 (Cyprus) 03 - xiaohe
+- name: 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
   server: cassiopeia.yokkastars.com
   port: 40443
   udp: true
@@ -41,7 +28,7 @@ proxies:
     short-id: 5d96
   servername: deepl.com
   client-fingerprint: chrome
-- name: 🇨🇾 塞浦路斯 (Cyprus) 04 - xiaohe
+- name: 🇨🇾 塞浦路斯 (Cyprus) 03 - jack
   server: 2.56.124.241
   port: 443
   udp: true
@@ -54,20 +41,7 @@ proxies:
     short-id: 72104d27a0f5f62e
   servername: www.amazon.com
   client-fingerprint: firefox
-- name: 🇨🇾 塞浦路斯 (Cyprus) 05 - xiaohe
-  server: 5.253.42.164
-  port: 40443
-  udp: true
-  type: vless
-  uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
-    short-id: 68a8
-  servername: deepl.com
-  client-fingerprint: chrome
-- name: 🇨🇾 塞浦路斯 (Cyprus) 06 - xiaohe
+- name: 🇨🇾 塞浦路斯 (Cyprus) 04 - jack
   server: 5.253.42.163
   port: 40443
   udp: true
@@ -80,42 +54,38 @@ proxies:
     short-id: 84fc
   servername: deepl.com
   client-fingerprint: chrome
-- name: 🇨🇾 塞浦路斯 (Cyprus) 07 - xiaohe
-  server: 5.253.30.99
+- name: 🇨🇾 塞浦路斯 (Cyprus) 05 - jack
+  server: dorado.yokkastars.com
   port: 40443
   udp: true
   type: vless
-  uuid: 511c1563-2cb6-4064-abc6-a59ee49818a8
+  uuid: af5eac96-e478-488a-bc8c-45269d7e8847
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
-    short-id: 88b6
+    public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
+    short-id: 68a8
   servername: deepl.com
-  client-fingerprint: chrome
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇾 塞浦路斯 (Cyprus) 01 - xiaohe
-  - 🇨🇾 塞浦路斯 (Cyprus) 02 - xiaohe
-  - 🇨🇾 塞浦路斯 (Cyprus) 03 - xiaohe
-  - 🇨🇾 塞浦路斯 (Cyprus) 04 - xiaohe
-  - 🇨🇾 塞浦路斯 (Cyprus) 05 - xiaohe
-  - 🇨🇾 塞浦路斯 (Cyprus) 06 - xiaohe
-  - 🇨🇾 塞浦路斯 (Cyprus) 07 - xiaohe
+  - 🇨🇾 塞浦路斯 (Cyprus) 01 - jack
+  - 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
+  - 🇨🇾 塞浦路斯 (Cyprus) 03 - jack
+  - 🇨🇾 塞浦路斯 (Cyprus) 04 - jack
+  - 🇨🇾 塞浦路斯 (Cyprus) 05 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇾 塞浦路斯 (Cyprus) 01 - xiaohe
-  - 🇨🇾 塞浦路斯 (Cyprus) 02 - xiaohe
-  - 🇨🇾 塞浦路斯 (Cyprus) 03 - xiaohe
-  - 🇨🇾 塞浦路斯 (Cyprus) 04 - xiaohe
-  - 🇨🇾 塞浦路斯 (Cyprus) 05 - xiaohe
-  - 🇨🇾 塞浦路斯 (Cyprus) 06 - xiaohe
-  - 🇨🇾 塞浦路斯 (Cyprus) 07 - xiaohe
+  - 🇨🇾 塞浦路斯 (Cyprus) 01 - jack
+  - 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
+  - 🇨🇾 塞浦路斯 (Cyprus) 03 - jack
+  - 🇨🇾 塞浦路斯 (Cyprus) 04 - jack
+  - 🇨🇾 塞浦路斯 (Cyprus) 05 - jack
 rules:
 - MATCH,PROXIES
