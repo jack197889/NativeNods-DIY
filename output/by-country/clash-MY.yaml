@@ -14,6 +14,14 @@ proxies:
   ws-opts:
     path: /db55c40bbc75
 - name: 🇲🇾 马来西亚 (Malaysia) 02 - xiaohe
+  server: mszz.mangshe.xyz
+  port: 20563
+  udp: true
+  type: hysteria2
+  password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
+  sni: mlxy.mangshe.xyz
+  skip-cert-verify: true
+- name: 🇲🇾 马来西亚 (Malaysia) 03 - xiaohe
   server: 56.69.159.191
   port: 53271
   udp: true
@@ -33,6 +41,7 @@ proxy-groups:
   - AUTO
   - 🇲🇾 马来西亚 (Malaysia) 01 - xiaohe
   - 🇲🇾 马来西亚 (Malaysia) 02 - xiaohe
+  - 🇲🇾 马来西亚 (Malaysia) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -40,5 +49,6 @@ proxy-groups:
   proxies:
   - 🇲🇾 马来西亚 (Malaysia) 01 - xiaohe
   - 🇲🇾 马来西亚 (Malaysia) 02 - xiaohe
+  - 🇲🇾 马来西亚 (Malaysia) 03 - xiaohe
 rules:
 - MATCH,PROXIES

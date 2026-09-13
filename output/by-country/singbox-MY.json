@@ -15,8 +15,20 @@
       }
     },
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇲🇾 马来西亚 (Malaysia) 02 - xiaohe",
+      "server": "mszz.mangshe.xyz",
+      "server_port": 20563,
+      "password": "5d0a6445-a30d-4522-bb1f-94f1d3ad63be",
+      "tls": {
+        "enabled": true,
+        "server_name": "mlxy.mangshe.xyz",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇲🇾 马来西亚 (Malaysia) 03 - xiaohe",
       "server": "56.69.159.191",
       "server_port": 53271,
       "uuid": "e8358eb5-7210-4cf8-982f-68af141b7694",
@@ -41,7 +53,8 @@
       "outbounds": [
         "auto",
         "🇲🇾 马来西亚 (Malaysia) 01 - xiaohe",
-        "🇲🇾 马来西亚 (Malaysia) 02 - xiaohe"
+        "🇲🇾 马来西亚 (Malaysia) 02 - xiaohe",
+        "🇲🇾 马来西亚 (Malaysia) 03 - xiaohe"
       ]
     },
     {
@@ -49,7 +62,8 @@
       "tag": "auto",
       "outbounds": [
         "🇲🇾 马来西亚 (Malaysia) 01 - xiaohe",
-        "🇲🇾 马来西亚 (Malaysia) 02 - xiaohe"
+        "🇲🇾 马来西亚 (Malaysia) 02 - xiaohe",
+        "🇲🇾 马来西亚 (Malaysia) 03 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
