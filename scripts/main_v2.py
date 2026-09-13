@@ -56,25 +56,23 @@ SOURCE_URLS = [
     # 基础稳定源
     "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt",
     "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
-    "https://raw.githubusercontent.com/clashv2ray-hub/v2rayfree/refs/heads/main/v2ray.txt",
     "https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.txt",
     "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",
     "https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml",
-    "https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml",
-    "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml",
 
-    # 欧美（美/英/德/荷）家宽专项补充源
+    # 欧美（美/英/德/荷）家宽专项源
     "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub1.txt",
     "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub2.txt",
-    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/all_extracted_configs.txt",
     "https://raw.githubusercontent.com/Danialsamadi/v2go/main/subscriptions/location/US.txt",
     "https://raw.githubusercontent.com/yebekhe/TVC/main/subscriptions/xray/base64",
-    "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
 
-    # 针对性提升澳洲（AU）节点成功率与家宽获取的新增源
+    # 针对性提升澳洲（AU）节点成功率与家宽获取源
     "https://raw.githubusercontent.com/Danialsamadi/v2go/main/subscriptions/location/AU.txt",
     "https://raw.githubusercontent.com/LonUp/NodeList/main/Link/v2ray.txt",
-    "https://raw.githubusercontent.com/roosterkiev/optimus/main/sub.txt"
+    "https://raw.githubusercontent.com/roosterkiev/optimus/main/sub.txt",
+    
+    # 替换新增的高效率全地域补充源
+    "https://raw.githubusercontent.com/mftzm/v2ray/main/v2ray.txt"
 ]
 
 OUTPUT_DIR = "output"
