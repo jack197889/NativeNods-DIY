@@ -5,13 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇪 爱沙尼亚 (Estonia) 01 - jack
-  server: 109.206.241.10
-  port: 449
+  server: 94.183.170.135
+  port: 8443
   udp: true
-  type: trojan
-  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
-  sni: russiapower.accesscam.org
-  skip-cert-verify: true
+  type: vless
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  tls: true
+  servername: estproxy4.lockdwn.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
 - name: 🇪🇪 爱沙尼亚 (Estonia) 02 - jack
   server: 94.183.170.135
   port: 443
@@ -21,17 +23,10 @@ proxies:
   network: ws
   ws-opts:
     path: /
+    headers:
+      Host: 94.183.170.135
 - name: 🇪🇪 爱沙尼亚 (Estonia) 03 - jack
-  server: 94.183.170.135
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-  tls: true
-  servername: estproxy4.lockdwn.com
-  skip-cert-verify: false
-- name: 🇪🇪 爱沙尼亚 (Estonia) 04 - jack
-  server: 31.76.71.63
+  server: cabinet.wwwinternetvideo.click
   port: 443
   udp: true
   type: hysteria2
@@ -46,7 +41,6 @@ proxy-groups:
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - jack
   - 🇪🇪 爱沙尼亚 (Estonia) 02 - jack
   - 🇪🇪 爱沙尼亚 (Estonia) 03 - jack
-  - 🇪🇪 爱沙尼亚 (Estonia) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -55,6 +49,5 @@ proxy-groups:
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - jack
   - 🇪🇪 爱沙尼亚 (Estonia) 02 - jack
   - 🇪🇪 爱沙尼亚 (Estonia) 03 - jack
-  - 🇪🇪 爱沙尼亚 (Estonia) 04 - jack
 rules:
 - MATCH,PROXIES

@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01 - jack
-  server: 205.237.109.166
+  server: 205.237.109.164
   port: 8443
   udp: true
   type: hysteria2
@@ -21,14 +21,40 @@ proxies:
   sni: hopp-germany-new.ddnsguru.com
   skip-cert-verify: true
 - name: 🇷🇴 罗马尼亚 (Romania) 03 - jack
-  server: 85.204.107.175
+  server: bogging-eyeteeth-fly.freesocks.work
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
+- name: 🇷🇴 罗马尼亚 (Romania) 04 - jack
+  server: 185.156.44.99
+  port: 443
+  udp: true
+  type: hysteria2
+  password: gf1:gfhysteria2024
+  sni: www.amazon.com
+  skip-cert-verify: true
+- name: 🇷🇴 罗马尼亚 (Romania) 05 - jack
+  server: 85.204.107.174
   port: 8443
   udp: true
   type: hysteria2
   password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
   sni: hopp-romania-new.roxa.org
   skip-cert-verify: true
-- name: 🇷🇴 罗马尼亚 (Romania) 04 - jack
+- name: 🇷🇴 罗马尼亚 (Romania) 06 - jack
+  server: roma1.moritech.net
+  port: 443
+  udp: true
+  type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  flow: xtls-rprx-vision
+  tls: true
+  servername: roma1.moritech.net
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🇷🇴 罗马尼亚 (Romania) 07 - jack
   server: 46.28.67.55
   port: 443
   udp: true
@@ -40,26 +66,19 @@ proxies:
     public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
     short-id: d06d78e974491b6e
   servername: www.cloudflare.com
-  client-fingerprint: random
-- name: 🇷🇴 罗马尼亚 (Romania) 05 - jack
-  server: 185.156.44.99
+  client-fingerprint: chrome
+- name: 🇷🇴 罗马尼亚 (Romania) 08 - jack
+  server: roma3.moritech.net
   port: 443
   udp: true
-  type: hysteria2
-  password: gf1:gfhysteria2024
-  sni: whatsapp.com
-  skip-cert-verify: true
-- name: 🇷🇴 罗马尼亚 (Romania) 06 - jack
-  server: 162.249.125.133
-  port: 443
-  udp: true
-  type: hysteria2
-  password: QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s
-  sni: hy2-new.aspidnet.xyz
+  type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  flow: xtls-rprx-vision
+  tls: true
+  servername: roma3.moritech.net
   skip-cert-verify: false
-  obfs: salamander
-  obfs-password: c1b4086fea89914496c7e10967a419216566
-- name: 🇷🇴 罗马尼亚 (Romania) 07 - jack
+  client-fingerprint: chrome
+- name: 🇷🇴 罗马尼亚 (Romania) 09 - jack
   server: hy2-new.aspidnet.xyz
   port: 443
   udp: true
@@ -69,16 +88,16 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: c1b4086fea89914496c7e10967a419216566
-- name: 🇷🇴 罗马尼亚 (Romania) 08 - jack
-  server: roma1.moritech.net
+- name: 🇷🇴 罗马尼亚 (Romania) 10 - jack
+  server: 162.249.125.133
   port: 443
   udp: true
-  type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: roma1.moritech.net
+  type: hysteria2
+  password: QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s
+  sni: hy2-new.aspidnet.xyz
   skip-cert-verify: false
+  obfs: salamander
+  obfs-password: c1b4086fea89914496c7e10967a419216566
 proxy-groups:
 - name: PROXIES
   type: select
@@ -92,6 +111,8 @@ proxy-groups:
   - 🇷🇴 罗马尼亚 (Romania) 06 - jack
   - 🇷🇴 罗马尼亚 (Romania) 07 - jack
   - 🇷🇴 罗马尼亚 (Romania) 08 - jack
+  - 🇷🇴 罗马尼亚 (Romania) 09 - jack
+  - 🇷🇴 罗马尼亚 (Romania) 10 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -105,5 +126,7 @@ proxy-groups:
   - 🇷🇴 罗马尼亚 (Romania) 06 - jack
   - 🇷🇴 罗马尼亚 (Romania) 07 - jack
   - 🇷🇴 罗马尼亚 (Romania) 08 - jack
+  - 🇷🇴 罗马尼亚 (Romania) 09 - jack
+  - 🇷🇴 罗马尼亚 (Romania) 10 - jack
 rules:
 - MATCH,PROXIES

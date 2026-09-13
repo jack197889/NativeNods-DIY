@@ -5,24 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - jack
-  server: 185.87.24.2
-  port: 2085
-  udp: true
-  type: vless
-  uuid: a1d1b142-17c5-4472-99de-df220df4d4fb
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-- name: 🇹🇷 土耳其 (Turkey) 02 - jack
-  server: 185.87.24.167
-  port: 2085
-  udp: true
-  type: vless
-  uuid: c9373ff0-c263-4949-885f-366671f3c6a1
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-- name: 🇹🇷 土耳其 (Turkey) 03 - jack
   server: 156.67.63.231
   port: 443
   udp: true
@@ -35,30 +17,7 @@ proxies:
     short-id: 5606d4a25c99e7af
   servername: sync-bridge.org
   client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 04 - jack
-  server: 107.161.174.96
-  port: 443
-  udp: true
-  type: vless
-  uuid: 97ecaad4-452c-45ec-b591-d68d3308aad4
-  flow: xtls-rprx-vision
-  tls: true
-  servername: partaa2.api3-max.ru
-  skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 05 - jack
-  server: 83.217.9.252
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 6be01e14-b937-4ed5-9d2c-074a0da22ffc
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: fXsQV_dib6rKGAl6EncN6Pm-fTb6TqOa3uTCQWe86Dg
-  servername: ads.x5.ru
-  client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 06 - jack
+- name: 🇹🇷 土耳其 (Turkey) 02 - jack
   server: 158.94.216.50
   port: 32306
   udp: true
@@ -69,8 +28,17 @@ proxies:
     public-key: 5iqitmx5fd71pubTxlrX0sd-ei7palcgVL7vtKToJGA
     short-id: 61614f026070554f
   servername: play-apps-features.googleusercontent.com
-  client-fingerprint: edge
-- name: 🇹🇷 土耳其 (Turkey) 07 - jack
+  client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 03 - jack
+  server: connect3.nyxserver.ir
+  port: 8444
+  udp: true
+  type: vless
+  uuid: 0b39a009-2a2a-4035-ba87-cc82894f8e21
+  tls: true
+  servername: connect3.nyxserver.ir
+  skip-cert-verify: false
+- name: 🇹🇷 土耳其 (Turkey) 04 - jack
   server: tr.iramssmoth.ir
   port: 8443
   udp: true
@@ -81,61 +49,21 @@ proxies:
     public-key: 72SJFDXHCtB2fWWRrjMj23J8iJ8T_2jvj-iNThmLREs
     short-id: 8dc4f3de3846efa9
   servername: play-apps-features.googleusercontent.com
-  client-fingerprint: edge
-- name: 🇹🇷 土耳其 (Turkey) 08 - jack
-  server: 13.143.137.164
-  port: 9443
-  udp: true
-  type: vless
-  uuid: 953358cb-82ba-4296-960d-6d2ec3468f4c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: dZ0rhO_PL67-Ciwc6CHQgtde3a5EUUuReA7M-lRNCDQ
-    short-id: e336c9a786fae301
-  servername: plaincanvas.videoclothing.xyz
-  client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 09 - jack
-  server: 188.114.97.8
-  port: 2087
-  udp: true
-  type: vless
-  uuid: 4fea1f87-e983-4111-8afc-dccb43b3fd38
-  tls: true
-  servername: kurdnet.arianetmili.xyz
-  skip-cert-verify: false
   client-fingerprint: chrome
-  network: httpupgrade
-  httpupgrade-opts:
-    path: /random
-    headers:
-      Host: kurdnet.arianetmili.xyz
-- name: 🇹🇷 土耳其 (Turkey) 10 - jack
-  server: shop.neexbyte.ir
+- name: 🇹🇷 土耳其 (Turkey) 05 - jack
+  server: 170.168.97.8
   port: 8443
   udp: true
   type: vless
-  uuid: 464bc502-f963-45b6-81e3-e33d18427506
+  uuid: 4350213a-b4e7-262a-0bd7-bd16957cf71a
   tls: true
-  servername: shop.neexbyte.ir
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇹🇷 土耳其 (Turkey) 11 - jack
-  server: 162.159.91.222
-  port: 443
-  udp: true
-  type: vless
-  uuid: 50414e45-4c5f-5a45-5553-723a643df685
-  tls: true
-  servername: n3zaxce7u0es.crzl48eiuses.workers.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /stream/PANEL_ZEUS/723a643df685/loc-0
-    headers:
-      Host: n3zaxce7u0es.crzl48eiuses.workers.dev
+  reality-opts:
+    public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+  servername: download.nvidia.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: TunService
 proxy-groups:
 - name: PROXIES
   type: select
@@ -146,12 +74,6 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 03 - jack
   - 🇹🇷 土耳其 (Turkey) 04 - jack
   - 🇹🇷 土耳其 (Turkey) 05 - jack
-  - 🇹🇷 土耳其 (Turkey) 06 - jack
-  - 🇹🇷 土耳其 (Turkey) 07 - jack
-  - 🇹🇷 土耳其 (Turkey) 08 - jack
-  - 🇹🇷 土耳其 (Turkey) 09 - jack
-  - 🇹🇷 土耳其 (Turkey) 10 - jack
-  - 🇹🇷 土耳其 (Turkey) 11 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -162,11 +84,5 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 03 - jack
   - 🇹🇷 土耳其 (Turkey) 04 - jack
   - 🇹🇷 土耳其 (Turkey) 05 - jack
-  - 🇹🇷 土耳其 (Turkey) 06 - jack
-  - 🇹🇷 土耳其 (Turkey) 07 - jack
-  - 🇹🇷 土耳其 (Turkey) 08 - jack
-  - 🇹🇷 土耳其 (Turkey) 09 - jack
-  - 🇹🇷 土耳其 (Turkey) 10 - jack
-  - 🇹🇷 土耳其 (Turkey) 11 - jack
 rules:
 - MATCH,PROXIES

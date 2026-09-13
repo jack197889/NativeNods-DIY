@@ -9,7 +9,7 @@ proxies:
   port: 8443
   udp: true
   type: vless
-  uuid: 87057278-6c82-470a-9c19-4bfc7f4e6106
+  uuid: b375bdc2-5a7d-4074-898e-030ad75e3503
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
@@ -17,29 +17,7 @@ proxies:
   servername: tradingview.com
   client-fingerprint: firefox
 - name: 🇦🇪 阿联酋 (UAE) 02 - jack
-  server: 130.49.161.70
-  port: 443
-  udp: true
-  type: hysteria2
-  password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
-  sni: hy2.aspidnet.xyz
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
-- name: 🇦🇪 阿联酋 (UAE) 03 - jack
-  server: 45.135.128.5
-  port: 443
-  udp: true
-  type: vless
-  uuid: 624208cf-54e0-4341-823b-1bee6595fce9
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: nDUrcIPWyCo7gAOVPfjAneLz17NdCrUMCIvdJsTRsD4
-  servername: upload.tbotapi.ru
-  client-fingerprint: firefox
-- name: 🇦🇪 阿联酋 (UAE) 04 - jack
-  server: srv-21bac9.vless.monster
+  server: 31.56.189.27
   port: 2087
   udp: true
   type: vless
@@ -51,84 +29,25 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: freegrpc
-- name: 🇦🇪 阿联酋 (UAE) 05 - jack
-  server: 104.143.223.217
-  port: 2085
+- name: 🇦🇪 阿联酋 (UAE) 03 - jack
+  server: 130.49.161.70
+  port: 443
   udp: true
-  type: vless
-  uuid: c9373ff0-c263-4949-885f-366671f3c6a1
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-- name: 🇦🇪 阿联酋 (UAE) 06 - jack
-  server: 104.143.223.65
-  port: 2085
-  udp: true
-  type: vless
-  uuid: a1d1b142-17c5-4472-99de-df220df4d4fb
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-- name: 🇦🇪 阿联酋 (UAE) 07 - jack
-  server: 104.143.223.64
-  port: 2085
-  udp: true
-  type: vless
-  uuid: c9373ff0-c263-4949-885f-366671f3c6a1
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-- name: 🇦🇪 阿联酋 (UAE) 08 - jack
-  server: 45.76.87.125
-  port: 14750
-  udp: true
-  type: vless
-  uuid: 432289de-8dec-46ef-9a3f-001a3af178a7
-  tls: true
-  servername: d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev
-- name: 🇦🇪 阿联酋 (UAE) 09 - jack
-  server: 210.152.85.154
-  port: 19364
-  udp: true
-  type: vless
-  uuid: 2b1d61e5-6835-488a-a5fe-b91874a8c1a1
-  tls: true
-  servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
-- name: 🇦🇪 阿联酋 (UAE) 10 - jack
-  server: 85.204.107.177
+  type: hysteria2
+  password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
+  sni: hy2.aspidnet.xyz
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
+- name: 🇦🇪 阿联酋 (UAE) 04 - jack
+  server: 85.204.107.174
   port: 8080
   udp: true
   type: hysteria2
   password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
   sni: hopp-romania-new.roxa.org
-  skip-cert-verify: false
-- name: 🇦🇪 阿联酋 (UAE) 11 - jack
-  server: upload.tbotapi.ru
-  port: 443
-  udp: true
-  type: vless
-  uuid: 624208cf-54e0-4341-823b-1bee6595fce9
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: nDUrcIPWyCo7gAOVPfjAneLz17NdCrUMCIvdJsTRsD4
-  servername: upload.tbotapi.ru
-  client-fingerprint: chrome
-- name: 🇦🇪 阿联酋 (UAE) 12 - jack
+  skip-cert-verify: true
+- name: 🇦🇪 阿联酋 (UAE) 05 - jack
   server: 84.235.244.108
   port: 22573
   udp: true
@@ -149,13 +68,6 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 03 - jack
   - 🇦🇪 阿联酋 (UAE) 04 - jack
   - 🇦🇪 阿联酋 (UAE) 05 - jack
-  - 🇦🇪 阿联酋 (UAE) 06 - jack
-  - 🇦🇪 阿联酋 (UAE) 07 - jack
-  - 🇦🇪 阿联酋 (UAE) 08 - jack
-  - 🇦🇪 阿联酋 (UAE) 09 - jack
-  - 🇦🇪 阿联酋 (UAE) 10 - jack
-  - 🇦🇪 阿联酋 (UAE) 11 - jack
-  - 🇦🇪 阿联酋 (UAE) 12 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -166,12 +78,5 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 03 - jack
   - 🇦🇪 阿联酋 (UAE) 04 - jack
   - 🇦🇪 阿联酋 (UAE) 05 - jack
-  - 🇦🇪 阿联酋 (UAE) 06 - jack
-  - 🇦🇪 阿联酋 (UAE) 07 - jack
-  - 🇦🇪 阿联酋 (UAE) 08 - jack
-  - 🇦🇪 阿联酋 (UAE) 09 - jack
-  - 🇦🇪 阿联酋 (UAE) 10 - jack
-  - 🇦🇪 阿联酋 (UAE) 11 - jack
-  - 🇦🇪 阿联酋 (UAE) 12 - jack
 rules:
 - MATCH,PROXIES
