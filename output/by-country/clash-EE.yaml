@@ -21,19 +21,6 @@ proxies:
   password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
   sni: cabinet.wwwinternetvideo.click
   skip-cert-verify: false
-- name: 🇪🇪 爱沙尼亚 (Estonia) 03 - jack
-  server: 95.85.224.154
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 52ecaf96-9c28-4cad-a132-13898f2bbb29
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: BX8CqIiZTbjfp--_TsYmp5pPQzzIZZ6rW9ly5HxDM3E
-    short-id: 8c554321
-  servername: fota-cloud-dn.ospserver.net
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -41,7 +28,6 @@ proxy-groups:
   - AUTO
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - jack
   - 🇪🇪 爱沙尼亚 (Estonia) 02 - jack
-  - 🇪🇪 爱沙尼亚 (Estonia) 03 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -49,6 +35,5 @@ proxy-groups:
   proxies:
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - jack
   - 🇪🇪 爱沙尼亚 (Estonia) 02 - jack
-  - 🇪🇪 爱沙尼亚 (Estonia) 03 - jack
 rules:
 - MATCH,PROXIES

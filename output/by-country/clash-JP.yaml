@@ -5,14 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - jack
-  server: 168.110.60.104
-  port: 18112
-  udp: true
-  type: vmess
-  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
-  alterId: 0
-  cipher: auto
-- name: 🇯🇵 日本 (Japan) 02 - jack
   server: 155.248.176.44
   port: 55216
   udp: true
@@ -20,7 +12,43 @@ proxies:
   uuid: 154dbc39-0921-cf11-29bd-156c5000d763
   alterId: 0
   cipher: auto
+- name: 🇯🇵 日本 (Japan) 02 - jack
+  server: 149.22.87.241
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
 - name: 🇯🇵 日本 (Japan) 03 - jack
+  server: 176.97.73.215
+  port: 8388
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ma6zc4JoLRJA
+- name: 🇯🇵 日本 (Japan) 04 - jack
+  server: 149.22.87.204
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇯🇵 日本 (Japan) 05 - jack
+  server: 149.22.87.240
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇯🇵 日本 (Japan) 06 - jack
+  server: 168.110.60.104
+  port: 18112
+  udp: true
+  type: vmess
+  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
+  alterId: 0
+  cipher: auto
+- name: 🇯🇵 日本 (Japan) 07 - jack
   server: 45.32.57.118
   port: 4433
   udp: true
@@ -28,7 +56,79 @@ proxies:
   uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
   alterId: 0
   cipher: auto
-- name: 🇯🇵 日本 (Japan) 04 - jack
+- name: 🇯🇵 日本 (Japan) 08 - jack
+  server: 31.76.91.72
+  port: 2087
+  udp: true
+  type: vless
+  uuid: 524e00ce-ed89-481d-b4a4-6d7017f884e3
+  tls: true
+  reality-opts:
+    public-key: -ZTJcZ_UcqAB7LHgkUqhnlJsQs_oBafRgjsFtWZElmM
+    short-id: c226283c4de5b1ad
+  servername: ads.x5.ru
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
+- name: 🇯🇵 日本 (Japan) 09 - jack
+  server: 57.129.130.57
+  port: 52014
+  udp: true
+  type: vless
+  uuid: 091ea5fd-4e8d-4459-90af-e4d10179efff
+  tls: true
+  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+- name: 🇯🇵 日本 (Japan) 10 - jack
+  server: 185.141.219.167
+  port: 8388
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: BHRwNRhwqUtDzeRT
+- name: 🇯🇵 日本 (Japan) 11 - jack
+  server: 84.247.155.196
+  port: 80
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
+- name: 🇯🇵 日本 (Japan) 12 - jack
+  server: 57.129.130.10
+  port: 52014
+  udp: true
+  type: vless
+  uuid: 395bab7e-302a-42b4-bac7-8acb7d36fdf3
+  tls: true
+  servername: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
+- name: 🇯🇵 日本 (Japan) 13 - jack
+  server: 156.231.113.153
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3340c44a-042e-4dfd-b82c-33192d56ba98
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: h2GGazCHLBtmIUxiCxGUvsaEF8mGi8xFeCcI14sAJTI
+    short-id: 4bbe62498d4cc3c9
+  servername: www.cloudflare.com
+  client-fingerprint: qq
+- name: 🇯🇵 日本 (Japan) 14 - jack
   server: 154.31.114.248
   port: 50159
   udp: true
@@ -41,70 +141,57 @@ proxies:
     short-id: 091e1c5db8451757
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 05 - jack
-  server: 156.231.113.153
-  port: 443
+- name: 🇯🇵 日本 (Japan) 15 - jack
+  server: 45.131.66.247
+  port: 20002
   udp: true
   type: vless
-  uuid: 3340c44a-042e-4dfd-b82c-33192d56ba98
-  flow: xtls-rprx-vision
+  uuid: 74f67dcd-4d40-4af1-b8e7-8af849bb2444
   tls: true
-  reality-opts:
-    public-key: h2GGazCHLBtmIUxiCxGUvsaEF8mGi8xFeCcI14sAJTI
-    short-id: 4bbe62498d4cc3c9
-  servername: www.cloudflare.com
-  client-fingerprint: random
-- name: 🇯🇵 日本 (Japan) 06 - jack
-  server: 84.247.155.196
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
-- name: 🇯🇵 日本 (Japan) 07 - jack
-  server: 138.3.208.26
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: 184cdec28da5a09450803c8debcd2cc9
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 08 - jack
-  server: 84.247.155.196
-  port: 80
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
-- name: 🇯🇵 日本 (Japan) 09 - jack
-  server: 104.21.70.21
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  tls: true
-  servername: jp3.yohototo.top
+  servername: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
   skip-cert-verify: false
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /tyxyws
+    path: /@Marisa_kristi
     headers:
-      Host: jp3.yohototo.top
-- name: 🇯🇵 日本 (Japan) 10 - jack
-  server: 3.114.220.22
-  port: 18007
+      Host: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+- name: 🇯🇵 日本 (Japan) 16 - jack
+  server: 84.247.155.196
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
+- name: 🇯🇵 日本 (Japan) 17 - jack
+  server: 13.231.7.104
+  port: 24620
   udp: true
   type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  uuid: b969ef8f-7bdb-474f-9481-d8f3c5686fb8
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  servername: www.apple.com
-  client-fingerprint: qq
-- name: 🇯🇵 日本 (Japan) 11 - jack
+    public-key: eZthMfn0kQJFNr_srk502fr8yUHMoHQ7Oh3v4_HfTBI
+    short-id: db2cb3b3c2dbb711
+  servername: www.amd.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 18 - jack
+  server: 57.129.130.57
+  port: 52014
+  udp: true
+  type: vless
+  uuid: 201e0019-2e79-4147-8a09-e510d630abeb
+  tls: true
+  servername: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+- name: 🇯🇵 日本 (Japan) 19 - jack
   server: 3.114.220.22
   port: 19645
   udp: true
@@ -116,14 +203,35 @@ proxies:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
   servername: www.apple.com
-  client-fingerprint: edge
-- name: 🇯🇵 日本 (Japan) 12 - jack
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 20 - jack
+  server: 138.3.208.26
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 184cdec28da5a09450803c8debcd2cc9
+  sni: 138.3.208.26
+  skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 21 - jack
+  server: 3.114.220.22
+  port: 18007
+  udp: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  servername: www.apple.com
+  client-fingerprint: random
+- name: 🇯🇵 日本 (Japan) 22 - jack
   server: 137.220.221.179
   port: 443
   udp: true
   type: vless
   uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
-- name: 🇯🇵 日本 (Japan) 13 - jack
+- name: 🇯🇵 日本 (Japan) 23 - jack
   server: 3.114.220.22
   port: 10583
   udp: true
@@ -136,6 +244,21 @@ proxies:
     short-id: 48050fab
   servername: www.apple.com
   client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 24 - jack
+  server: 104.16.10.185
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  tls: true
+  servername: jp3.yohototo.top
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
 proxy-groups:
 - name: PROXIES
   type: select
@@ -154,6 +277,17 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 11 - jack
   - 🇯🇵 日本 (Japan) 12 - jack
   - 🇯🇵 日本 (Japan) 13 - jack
+  - 🇯🇵 日本 (Japan) 14 - jack
+  - 🇯🇵 日本 (Japan) 15 - jack
+  - 🇯🇵 日本 (Japan) 16 - jack
+  - 🇯🇵 日本 (Japan) 17 - jack
+  - 🇯🇵 日本 (Japan) 18 - jack
+  - 🇯🇵 日本 (Japan) 19 - jack
+  - 🇯🇵 日本 (Japan) 20 - jack
+  - 🇯🇵 日本 (Japan) 21 - jack
+  - 🇯🇵 日本 (Japan) 22 - jack
+  - 🇯🇵 日本 (Japan) 23 - jack
+  - 🇯🇵 日本 (Japan) 24 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -172,5 +306,16 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 11 - jack
   - 🇯🇵 日本 (Japan) 12 - jack
   - 🇯🇵 日本 (Japan) 13 - jack
+  - 🇯🇵 日本 (Japan) 14 - jack
+  - 🇯🇵 日本 (Japan) 15 - jack
+  - 🇯🇵 日本 (Japan) 16 - jack
+  - 🇯🇵 日本 (Japan) 17 - jack
+  - 🇯🇵 日本 (Japan) 18 - jack
+  - 🇯🇵 日本 (Japan) 19 - jack
+  - 🇯🇵 日本 (Japan) 20 - jack
+  - 🇯🇵 日本 (Japan) 21 - jack
+  - 🇯🇵 日本 (Japan) 22 - jack
+  - 🇯🇵 日本 (Japan) 23 - jack
+  - 🇯🇵 日本 (Japan) 24 - jack
 rules:
 - MATCH,PROXIES

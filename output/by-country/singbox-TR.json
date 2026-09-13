@@ -6,26 +6,9 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01 - jack",
-      "server": "170.168.97.8",
-      "server_port": 8443,
-      "uuid": "4350213a-b4e7-262a-0bd7-bd16957cf71a",
-      "tls": {
-        "enabled": true,
-        "server_name": "download.nvidia.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs",
-          "short_id": ""
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "TunService"
-      }
+      "server": "188.132.237.20",
+      "server_port": 2095,
+      "uuid": "3b9e513e-30d9-4ca8-8340-8f33fc6710de"
     },
     {
       "type": "vless",
@@ -39,7 +22,7 @@
         "server_name": "sync-bridge.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -51,9 +34,58 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 03 - jack",
-      "server": "188.132.237.20",
-      "server_port": 2095,
-      "uuid": "3b9e513e-30d9-4ca8-8340-8f33fc6710de"
+      "server": "158.94.216.50",
+      "server_port": 32306,
+      "uuid": "f1505323-ecb6-4152-9a5b-d37b3ae1cacf",
+      "tls": {
+        "enabled": true,
+        "server_name": "play-apps-features.googleusercontent.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "5iqitmx5fd71pubTxlrX0sd-ei7palcgVL7vtKToJGA",
+          "short_id": "61614f026070554f"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 04 - jack",
+      "server": "shop.neexbyte.ir",
+      "server_port": 8443,
+      "uuid": "464bc502-f963-45b6-81e3-e33d18427506",
+      "tls": {
+        "enabled": true,
+        "server_name": "",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 05 - jack",
+      "server": "45.74.159.233",
+      "server_port": 56659,
+      "uuid": "12af43c3-84b4-4248-878b-b75f35835487",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "amp-api-edge.apps.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "qLggZ7qospn6X7UEO1zSoohNXK4Y1EX7Hx2sJeWfvw0",
+          "short_id": "9aa3a3f599f3d5d0"
+        }
+      }
     },
     {
       "type": "selector",
@@ -62,7 +94,9 @@
         "auto",
         "🇹🇷 土耳其 (Turkey) 01 - jack",
         "🇹🇷 土耳其 (Turkey) 02 - jack",
-        "🇹🇷 土耳其 (Turkey) 03 - jack"
+        "🇹🇷 土耳其 (Turkey) 03 - jack",
+        "🇹🇷 土耳其 (Turkey) 04 - jack",
+        "🇹🇷 土耳其 (Turkey) 05 - jack"
       ]
     },
     {
@@ -71,7 +105,9 @@
       "outbounds": [
         "🇹🇷 土耳其 (Turkey) 01 - jack",
         "🇹🇷 土耳其 (Turkey) 02 - jack",
-        "🇹🇷 土耳其 (Turkey) 03 - jack"
+        "🇹🇷 土耳其 (Turkey) 03 - jack",
+        "🇹🇷 土耳其 (Turkey) 04 - jack",
+        "🇹🇷 土耳其 (Turkey) 05 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

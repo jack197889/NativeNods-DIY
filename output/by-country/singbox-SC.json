@@ -6,26 +6,26 @@
     {
       "type": "vless",
       "tag": "🇸🇨 塞舌尔 (Seychelles) 01 - jack",
-      "server": "172.64.32.108",
-      "server_port": 2052,
+      "server": "188.114.97.6",
+      "server_port": 2095,
       "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
-        "path": "/?ed=2560security=tls ",
+        "path": "/?ed=2560",
         "headers": {
-          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
+          "Host": "zb1zi.s3nx.dyz.hh.vavava.kdns.fr"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇸🇨 塞舌尔 (Seychelles) 02 - jack",
-      "server": "108.162.198.178",
+      "server": "104.18.47.113",
       "server_port": 2086,
       "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
-        "path": "/",
+        "path": "/?ed=2560security=tls",
         "headers": {
           "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
         }
@@ -34,12 +34,12 @@
     {
       "type": "vless",
       "tag": "🇸🇨 塞舌尔 (Seychelles) 03 - jack",
-      "server": "108.162.198.178",
-      "server_port": 80,
+      "server": "162.159.24.131",
+      "server_port": 2082,
       "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
-        "path": "/?ed=2560security=tls ",
+        "path": "/?ed=2560security=tls",
         "headers": {
           "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
         }
@@ -48,6 +48,32 @@
     {
       "type": "vless",
       "tag": "🇸🇨 塞舌尔 (Seychelles) 04 - jack",
+      "server": "108.162.198.178",
+      "server_port": 8880,
+      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560security=tls",
+        "headers": {
+          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇸🇨 塞舌尔 (Seychelles) 05 - jack",
+      "server": "185.79.138.71",
+      "server_port": 8080,
+      "password": "h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT",
+      "tls": {
+        "enabled": true,
+        "server_name": "hopp-legend-se.roxa.org",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇨 塞舌尔 (Seychelles) 06 - jack",
       "server": "hk3n.wxgqlfx.vip",
       "server_port": 35193,
       "uuid": "35cbae61-ee10-4cb9-abb8-4950b35e9851",
@@ -67,18 +93,6 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇸🇨 塞舌尔 (Seychelles) 05 - jack",
-      "server": "185.79.138.71",
-      "server_port": 8080,
-      "password": "h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT",
-      "tls": {
-        "enabled": true,
-        "server_name": "hopp-legend-se.roxa.org",
-        "insecure": true
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -87,7 +101,8 @@
         "🇸🇨 塞舌尔 (Seychelles) 02 - jack",
         "🇸🇨 塞舌尔 (Seychelles) 03 - jack",
         "🇸🇨 塞舌尔 (Seychelles) 04 - jack",
-        "🇸🇨 塞舌尔 (Seychelles) 05 - jack"
+        "🇸🇨 塞舌尔 (Seychelles) 05 - jack",
+        "🇸🇨 塞舌尔 (Seychelles) 06 - jack"
       ]
     },
     {
@@ -98,7 +113,8 @@
         "🇸🇨 塞舌尔 (Seychelles) 02 - jack",
         "🇸🇨 塞舌尔 (Seychelles) 03 - jack",
         "🇸🇨 塞舌尔 (Seychelles) 04 - jack",
-        "🇸🇨 塞舌尔 (Seychelles) 05 - jack"
+        "🇸🇨 塞舌尔 (Seychelles) 05 - jack",
+        "🇸🇨 塞舌尔 (Seychelles) 06 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

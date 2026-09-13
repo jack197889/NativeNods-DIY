@@ -4,32 +4,173 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇩🇪 德国 (Germany) 01 - jack",
-      "server": "8.209.74.72",
-      "server_port": 20001,
-      "method": "chacha20-ietf-poly1305",
-      "password": "PWpjPo3tqhPN4yRZ"
+      "server": "66.81.247.155",
+      "server_port": 2083,
+      "uuid": "6cc29a05-4828-4e48-a34a-20b7ada60e85",
+      "tls": {
+        "enabled": true,
+        "server_name": "testmikonim.hydrymhmdamyn7.workers.dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/OAZko425kNFF0PpQ",
+        "headers": {
+          "Host": "testmikonim.hydrymhmdamyn7.workers.dev"
+        }
+      }
     },
     {
-      "type": "shadowsocks",
+      "type": "trojan",
       "tag": "🇩🇪 德国 (Germany) 02 - jack",
-      "server": "2.58.81.221",
+      "server": "151.101.56.101",
       "server_port": 443,
-      "method": "aes-256-gcm",
-      "password": "kKEd0rBrd56Furjz"
+      "password": "MiTiVPN",
+      "tls": {
+        "enabled": true,
+        "server_name": "ssl.fastly.com",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "@mehrosaboran",
+        "headers": {
+          "Host": "mitivpn---ss--s---mitivpn-5.global.ssl.fastly.net"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇩🇪 德国 (Germany) 03 - jack",
+      "server": "167.82.76.7",
+      "server_port": 443,
+      "password": "MiTiVPN",
+      "tls": {
+        "enabled": true,
+        "server_name": "ssl.fastly.com",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "@mehrosaboran",
+        "headers": {
+          "Host": "mitivpn---ss--s---mitivpn-33.global.ssl.fastly.net"
+        }
+      }
     },
     {
       "type": "shadowsocks",
-      "tag": "🇩🇪 德国 (Germany) 03 - jack",
+      "tag": "🇩🇪 德国 (Germany) 04 - jack",
       "server": "209.46.102.22",
       "server_port": 8388,
       "method": "chacha20-ietf-poly1305",
       "password": "1hhrqrokj3ag"
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇩🇪 德国 (Germany) 05 - jack",
+      "server": "185.226.172.8",
+      "server_port": 8008,
+      "method": "aes-256-gcm",
+      "password": "XKFKl2rULjIp74"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇩🇪 德国 (Germany) 06 - jack",
+      "server": "2.58.81.221",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "kKEd0rBrd56Furjz"
+    },
+    {
+      "type": "trojan",
+      "tag": "🇩🇪 德国 (Germany) 07 - jack",
+      "server": "199.232.78.101",
+      "server_port": 443,
+      "password": "MiTiVPN",
+      "tls": {
+        "enabled": true,
+        "server_name": "ssl.fastly.com",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "---@mehrosaboran",
+        "headers": {
+          "Host": "mitivpn---ss--s---mitivpn-11.global.ssl.fastly.net"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇩🇪 德国 (Germany) 08 - jack",
+      "server": "130.61.85.116",
+      "server_port": 59924,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "3/Ww5SSfxqu0aei8xP1jEaBpAc24C4WNY18GEwfTg0M="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇩🇪 德国 (Germany) 09 - jack",
+      "server": "2.58.81.221",
+      "server_port": 80,
+      "method": "aes-256-gcm",
+      "password": "kKEd0rBrd56Furjz"
+    },
+    {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 04 - jack",
+      "tag": "🇩🇪 德国 (Germany) 10 - jack",
+      "server": "162.248.166.35",
+      "server_port": 443,
+      "uuid": "d92b6509-8b63-4505-b3a2-1dc5b1c014ac",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.caradisiac.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "NYG48Fv1MF3SqOpHwoa4GqJH5IJrocSrwWzrffY-tCk",
+          "short_id": "c6dc8abb0235dc05"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 11 - jack",
       "server": "82.24.203.20",
       "server_port": 2087,
       "uuid": "5fcdc9b7-e70f-4a5c-85c3-e018ad818326",
@@ -40,7 +181,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 05 - jack",
+      "tag": "🇩🇪 德国 (Germany) 12 - jack",
       "server": "82.118.19.153",
       "server_port": 443,
       "uuid": "adcaa148-7c66-4282-a81a-99ec8afa029d",
@@ -60,70 +201,20 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇩🇪 德国 (Germany) 06 - jack",
-      "server": "130.61.85.116",
-      "server_port": 59924,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "3/Ww5SSfxqu0aei8xP1jEaBpAc24C4WNY18GEwfTg0M="
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 07 - jack",
-      "server": "31.76.20.209",
-      "server_port": 443,
-      "uuid": "827a0eb0-21bf-4bce-96ef-0a7bac5d68f5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "de.pinkmoon.pro",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "DS9mX6cMb5wvwFzga8yN2NLbs7soXM7038_P23yPKwk",
-          "short_id": "8ffa160e608bf539"
-        }
-      }
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇩🇪 德国 (Germany) 08 - jack",
-      "server": "144.31.148.87",
-      "server_port": 443,
-      "password": "2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f",
+      "tag": "🇩🇪 德国 (Germany) 13 - jack",
+      "server": "130.61.50.75",
+      "server_port": 6443,
+      "password": "zhangyang",
       "tls": {
         "enabled": true,
-        "server_name": "replay.wwwinternetvideo.click",
+        "server_name": "130.61.50.75",
         "insecure": true
       }
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 09 - jack",
-      "server": "31.56.189.224",
-      "server_port": 3443,
-      "uuid": "92089155-6602-4122-86d4-fe6de20e8c4d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "special.aeternavpn.space",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "-6SjfnZXAYm69euKQ3XNhq0nC7No7YE4qfdc2qx0Xwo",
-          "short_id": "a1b2c3d4"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 10 - jack",
+      "tag": "🇩🇪 德国 (Germany) 14 - jack",
       "server": "170.101.109.37",
       "server_port": 443,
       "uuid": "bf645ffe-a3cc-4480-8e4c-9bcd1af41052",
@@ -144,7 +235,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 11 - jack",
+      "tag": "🇩🇪 德国 (Germany) 15 - jack",
       "server": "93.94.52.23",
       "server_port": 40443,
       "uuid": "bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54",
@@ -165,7 +256,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 12 - jack",
+      "tag": "🇩🇪 德国 (Germany) 16 - jack",
       "server": "144.31.168.95",
       "server_port": 443,
       "uuid": "423b1d79-08c4-403f-9d5e-c541f791b55f",
@@ -175,7 +266,7 @@
         "server_name": "eu-central.cendora.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": ""
         },
         "reality": {
           "enabled": true,
@@ -186,7 +277,40 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 13 - jack",
+      "tag": "🇩🇪 德国 (Germany) 17 - jack",
+      "server": "31.56.189.224",
+      "server_port": 3443,
+      "uuid": "92089155-6602-4122-86d4-fe6de20e8c4d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "special.aeternavpn.space",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "-6SjfnZXAYm69euKQ3XNhq0nC7No7YE4qfdc2qx0Xwo",
+          "short_id": "a1b2c3d4"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇩🇪 德国 (Germany) 18 - jack",
+      "server": "player.wwwinternetvideo.click",
+      "server_port": 443,
+      "password": "V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8",
+      "tls": {
+        "enabled": true,
+        "server_name": "player.wwwinternetvideo.click",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 19 - jack",
       "server": "93.152.217.41",
       "server_port": 40443,
       "uuid": "969bcce0-de8a-4b02-8cf8-d00d2d2ca7a5",
@@ -205,32 +329,54 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇩🇪 德国 (Germany) 14 - jack",
-      "server": "player.wwwinternetvideo.click",
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 20 - jack",
+      "server": "31.76.20.209",
       "server_port": 443,
-      "password": "V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8",
+      "uuid": "827a0eb0-21bf-4bce-96ef-0a7bac5d68f5",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "player.wwwinternetvideo.click",
-        "insecure": true
+        "server_name": "de.pinkmoon.pro",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "DS9mX6cMb5wvwFzga8yN2NLbs7soXM7038_P23yPKwk",
+          "short_id": "8ffa160e608bf539"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 21 - jack",
+      "server": "nasnet-571299667-direct.mbghalibaf.com",
+      "server_port": 443,
+      "uuid": "nasnet",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "nasnet-571299667-direct.mbghalibaf.com",
+        "insecure": false
       }
     },
     {
       "type": "hysteria2",
-      "tag": "🇩🇪 德国 (Germany) 15 - jack",
-      "server": "130.61.50.75",
-      "server_port": 6443,
-      "password": "zhangyang",
+      "tag": "🇩🇪 德国 (Germany) 22 - jack",
+      "server": "144.31.148.87",
+      "server_port": 443,
+      "password": "2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f",
       "tls": {
         "enabled": true,
-        "server_name": "130.61.50.75",
+        "server_name": "replay.wwwinternetvideo.click",
         "insecure": true
       }
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 16 - jack",
+      "tag": "🇩🇪 德国 (Germany) 23 - jack",
       "server": "82.39.171.12",
       "server_port": 443,
       "uuid": "d65cc14c-f53f-4fe2-b262-97856601319c",
@@ -250,45 +396,48 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 17 - jack",
-      "server": "nasnet-571299667-direct.mbghalibaf.com",
-      "server_port": 443,
-      "uuid": "nasnet",
-      "flow": "xtls-rprx-vision",
+      "type": "hysteria2",
+      "tag": "🇩🇪 德国 (Germany) 24 - jack",
+      "server": "bwdf2fnt.xn--e1aatfr8bwa.online",
+      "server_port": 30000,
+      "password": "tnnls:b735eacd-3ca7-4019-b98c-3559918100e6",
       "tls": {
         "enabled": true,
-        "server_name": "nasnet-571299667-direct.mbghalibaf.com",
+        "server_name": "bwdf2fnt.xn--e1aatfr8bwa.online",
         "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "b6d1f3888ab1d90dd11aac1dce427b81"
       }
     },
     {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 18 - jack",
-      "server": "5.35.81.60",
-      "server_port": 4443,
-      "uuid": "cabd9303-ae32-4d25-86b9-26b312d0f044",
+      "type": "shadowsocks",
+      "tag": "🇩🇪 德国 (Germany) 25 - jack",
+      "server": "8.209.74.72",
+      "server_port": 20001,
+      "method": "chacha20-ietf-poly1305",
+      "password": "PWpjPo3tqhPN4yRZ"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇩🇪 德国 (Germany) 26 - jack",
+      "server": "2.27.59.206",
+      "server_port": 443,
+      "password": "cd74c0a406664a5bc0bac098220a2468",
       "tls": {
         "enabled": true,
-        "server_name": "maps.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "nhvyI4KrKDUSgw9Fa63SDeNATaTsAu9bRZ4qaraydRM",
-          "short_id": "e5f6a1b2"
-        }
+        "server_name": "de1.sferavpn.pro",
+        "insecure": true
       },
-      "transport": {
-        "type": "grpc",
-        "service_name": "snob-grpc-de"
+      "obfs": {
+        "type": "salamander",
+        "password": "44f1c1e2f8b99e792ceed574627a1eb0"
       }
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 19 - jack",
+      "tag": "🇩🇪 德国 (Germany) 27 - jack",
       "server": "connect6.nyxserver.ir",
       "server_port": 8446,
       "uuid": "0b39a009-2a2a-4035-ba87-cc82894f8e21",
@@ -299,27 +448,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 20 - jack",
-      "server": "171.22.129.56",
-      "server_port": 8443,
-      "uuid": "9f5b9ca7-d0bb-4e50-a3ca-acf5968027fc",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "de-two.quiet-rogue.site",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "QMJRGTqZRbpeLpIAdvn6dhftuzrpwbtwmVG2s5IuuU0",
-          "short_id": "00a02855ba568c29"
         }
       }
     },
@@ -347,7 +475,14 @@
         "🇩🇪 德国 (Germany) 17 - jack",
         "🇩🇪 德国 (Germany) 18 - jack",
         "🇩🇪 德国 (Germany) 19 - jack",
-        "🇩🇪 德国 (Germany) 20 - jack"
+        "🇩🇪 德国 (Germany) 20 - jack",
+        "🇩🇪 德国 (Germany) 21 - jack",
+        "🇩🇪 德国 (Germany) 22 - jack",
+        "🇩🇪 德国 (Germany) 23 - jack",
+        "🇩🇪 德国 (Germany) 24 - jack",
+        "🇩🇪 德国 (Germany) 25 - jack",
+        "🇩🇪 德国 (Germany) 26 - jack",
+        "🇩🇪 德国 (Germany) 27 - jack"
       ]
     },
     {
@@ -373,7 +508,14 @@
         "🇩🇪 德国 (Germany) 17 - jack",
         "🇩🇪 德国 (Germany) 18 - jack",
         "🇩🇪 德国 (Germany) 19 - jack",
-        "🇩🇪 德国 (Germany) 20 - jack"
+        "🇩🇪 德国 (Germany) 20 - jack",
+        "🇩🇪 德国 (Germany) 21 - jack",
+        "🇩🇪 德国 (Germany) 22 - jack",
+        "🇩🇪 德国 (Germany) 23 - jack",
+        "🇩🇪 德国 (Germany) 24 - jack",
+        "🇩🇪 德国 (Germany) 25 - jack",
+        "🇩🇪 德国 (Germany) 26 - jack",
+        "🇩🇪 德国 (Germany) 27 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

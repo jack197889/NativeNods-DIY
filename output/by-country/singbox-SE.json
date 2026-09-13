@@ -30,6 +30,27 @@
     {
       "type": "vless",
       "tag": "🇸🇪 瑞典 (Sweden) 02 - jack",
+      "server": "88.216.130.139",
+      "server_port": 8443,
+      "uuid": "fb67fd37-8d41-43a9-a093-c0b807fc5299",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "iRym2aMWC0ZoLJL7MtJm9p0xqFMutfe6_5B5tZyobxU",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 03 - jack",
       "server": "91.193.17.156",
       "server_port": 9458,
       "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
@@ -52,27 +73,6 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 03 - jack",
-      "server": "88.216.130.139",
-      "server_port": 8443,
-      "uuid": "fb67fd37-8d41-43a9-a093-c0b807fc5299",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "iRym2aMWC0ZoLJL7MtJm9p0xqFMutfe6_5B5tZyobxU",
-          "short_id": ""
-        }
-      }
-    },
-    {
       "type": "hysteria2",
       "tag": "🇸🇪 瑞典 (Sweden) 04 - jack",
       "server": "se-node.rumedia-cdn.com",
@@ -85,27 +85,6 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 05 - jack",
-      "server": "171.22.129.56",
-      "server_port": 2083,
-      "uuid": "b2744db0-1c64-4218-a93b-9eba0e5f811f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "swe-one.quiet-rogue.site",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "40eDnye2AHCQqgM2_ikKzRayZ4Vlu4rnnkHmLmNalQc",
-          "short_id": "32a37218722f0081"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -113,8 +92,7 @@
         "🇸🇪 瑞典 (Sweden) 01 - jack",
         "🇸🇪 瑞典 (Sweden) 02 - jack",
         "🇸🇪 瑞典 (Sweden) 03 - jack",
-        "🇸🇪 瑞典 (Sweden) 04 - jack",
-        "🇸🇪 瑞典 (Sweden) 05 - jack"
+        "🇸🇪 瑞典 (Sweden) 04 - jack"
       ]
     },
     {
@@ -124,8 +102,7 @@
         "🇸🇪 瑞典 (Sweden) 01 - jack",
         "🇸🇪 瑞典 (Sweden) 02 - jack",
         "🇸🇪 瑞典 (Sweden) 03 - jack",
-        "🇸🇪 瑞典 (Sweden) 04 - jack",
-        "🇸🇪 瑞典 (Sweden) 05 - jack"
+        "🇸🇪 瑞典 (Sweden) 04 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
