@@ -5,7 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - jack
-  server: 2.26.0.201
+  server: 144.31.7.182
+  port: 443
+  udp: true
+  type: vless
+  uuid: becd3b04-62a8-4b74-be67-be746008b4c2
+  tls: true
+  servername: cdn-582.spliceflowtech.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
+- name: 🇫🇮 芬兰 (Finland) 02 - jack
+  server: 31.76.21.11
   port: 443
   udp: true
   type: vless
@@ -17,17 +30,140 @@ proxies:
     short-id: 8ffa160e608bf539
   servername: fin.pinkmoon.pro
   client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 03 - jack
+  server: 185.79.138.71
+  port: 448
+  udp: true
+  type: vless
+  uuid: 0b0915d7-6800-4580-a44b-77d84f105e6a
+  tls: true
+  reality-opts:
+    public-key: CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8
+    short-id: cd21e552537c7c0b
+  servername: www.samsung.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 04 - jack
+  server: 31.77.199.182
+  port: 443
+  udp: true
+  type: vless
+  uuid: c09cfd91-b234-4998-9bed-a0211b7f5c3c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: -qLezG1nUEtvOJi-Ra7WRYv-aHkv3PSefEuXpWV2G04
+    short-id: abcd1234
+  servername: fi2.yservice.help
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 05 - jack
+  server: 37.143.129.244
+  port: 443
+  udp: true
+  type: vless
+  uuid: 0e6de971-69e8-4536-b06d-8b6eae57021b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 5HArul2NDXfFUxijHj1xiPCfH-77zuuRxylT1vWIvUY
+    short-id: 48fd192dc4e46bc0
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 06 - jack
+  server: 31.76.21.9
+  port: 443
+  udp: true
+  type: vless
+  uuid: 827a0eb0-21bf-4bce-96ef-0a7bac5d68f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: DS9mX6cMb5wvwFzga8yN2NLbs7soXM7038_P23yPKwk
+    short-id: 8ffa160e608bf539
+  servername: fin.pinkmoon.pro
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 07 - jack
+  server: fl.windconnect.pro
+  port: 443
+  udp: true
+  type: vless
+  uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 40Tmrw44FhOyoqCQiOfR2kCgxEPXrBLLv6oYFvjbGUI
+    short-id: 3c6ec7b2d73a28b6
+  servername: fl.windconnect.pro
+  client-fingerprint: safari
+- name: 🇫🇮 芬兰 (Finland) 08 - jack
+  server: 204.168.195.30
+  port: 51185
+  udp: true
+  type: vless
+  uuid: 12af43c3-84b4-4248-878b-b75f35835487
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: VFDbAJQdqzKl7hL6SmUrhHHEORtILSsJHYWF67an1HU
+    short-id: 55a464180d3b1f7e
+  servername: amp-api-edge.apps.apple.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 09 - jack
+  server: 2.26.100.192
+  port: 445
+  udp: true
+  type: vless
+  uuid: 40205ae5-d30f-4216-b2e0-0506dbbd382e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Ku60WZ3HEdE07DoEBJ5I9o_fjcN_bhdK8bTW3RJjBmM
+    short-id: c226283c4de5b1ad
+  servername: ads.x5.ru
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 10 - jack
+  server: 2.26.100.192
+  port: 2087
+  udp: true
+  type: vless
+  uuid: 40205ae5-d30f-4216-b2e0-0506dbbd382e
+  tls: true
+  reality-opts:
+    public-key: Ku60WZ3HEdE07DoEBJ5I9o_fjcN_bhdK8bTW3RJjBmM
+    short-id: c226283c4de5b1ad
+  servername: ads.x5.ru
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01 - jack
+  - 🇫🇮 芬兰 (Finland) 02 - jack
+  - 🇫🇮 芬兰 (Finland) 03 - jack
+  - 🇫🇮 芬兰 (Finland) 04 - jack
+  - 🇫🇮 芬兰 (Finland) 05 - jack
+  - 🇫🇮 芬兰 (Finland) 06 - jack
+  - 🇫🇮 芬兰 (Finland) 07 - jack
+  - 🇫🇮 芬兰 (Finland) 08 - jack
+  - 🇫🇮 芬兰 (Finland) 09 - jack
+  - 🇫🇮 芬兰 (Finland) 10 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇮 芬兰 (Finland) 01 - jack
+  - 🇫🇮 芬兰 (Finland) 02 - jack
+  - 🇫🇮 芬兰 (Finland) 03 - jack
+  - 🇫🇮 芬兰 (Finland) 04 - jack
+  - 🇫🇮 芬兰 (Finland) 05 - jack
+  - 🇫🇮 芬兰 (Finland) 06 - jack
+  - 🇫🇮 芬兰 (Finland) 07 - jack
+  - 🇫🇮 芬兰 (Finland) 08 - jack
+  - 🇫🇮 芬兰 (Finland) 09 - jack
+  - 🇫🇮 芬兰 (Finland) 10 - jack
 rules:
 - MATCH,PROXIES

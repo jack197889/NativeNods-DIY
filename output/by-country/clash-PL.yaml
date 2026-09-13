@@ -5,32 +5,77 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01 - jack
+  server: 217.30.10.44
+  port: 9099
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 7heRqkPG3hg4UnRm
+- name: 🇵🇱 波兰 (Poland) 02 - jack
+  server: 217.30.10.44
+  port: 9041
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: U6qnYRhfyDmn8sgn
+- name: 🇵🇱 波兰 (Poland) 03 - jack
+  server: 217.30.10.44
+  port: 9071
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: mENfxTFQpRKKh4As
+- name: 🇵🇱 波兰 (Poland) 04 - jack
+  server: 217.30.10.44
+  port: 9063
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: aQqJbtwFGcCCaeL3
+- name: 🇵🇱 波兰 (Poland) 05 - jack
+  server: 217.30.10.44
+  port: 9006
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: FAdUvMJUq5vDgKEq
+- name: 🇵🇱 波兰 (Poland) 06 - jack
+  server: 217.30.10.44
+  port: 9052
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: jt2ekBNc9HuVtm2a
+- name: 🇵🇱 波兰 (Poland) 07 - jack
+  server: 217.30.10.44
+  port: 9095
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: N7j3pdTYkKmsy8CR
+- name: 🇵🇱 波兰 (Poland) 08 - jack
   server: 45.192.12.93
   port: 443
   udp: true
   type: hysteria2
   password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
   sni: admin.wwwinternetvideo.click
-  skip-cert-verify: true
-- name: 🇵🇱 波兰 (Poland) 02 - jack
-  server: 94.183.209.59
+  skip-cert-verify: false
+- name: 🇵🇱 波兰 (Poland) 09 - jack
+  server: 82.118.22.161
   port: 443
   udp: true
   type: vless
-  uuid: d23cb516-40db-4aa4-8142-6b45ff882f90
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇵🇱 波兰 (Poland) 03 - jack
-  server: streambox.wwwinternetvideo.click
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01
-  sni: streambox.wwwinternetvideo.click
-  skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 04 - jack
-  server: 185.223.57.16
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
+    short-id: fa3ea655619a3e78
+  servername: www.cloudflare.com
+  client-fingerprint: safari
+- name: 🇵🇱 波兰 (Poland) 10 - jack
+  server: 185.223.57.10
   port: 33743
   udp: true
   type: vless
@@ -39,41 +84,63 @@ proxies:
   reality-opts:
     public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
   servername: www.google.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: TunService
-- name: 🇵🇱 波兰 (Poland) 05 - jack
-  server: poland.failspace.top
+- name: 🇵🇱 波兰 (Poland) 11 - jack
+  server: 94.183.209.58
+  port: 443
+  udp: true
+  type: vless
+  uuid: 78791f9e-fe09-4d4f-88ec-895764bae0d6
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: pl2.lckdwn.ru
+- name: 🇵🇱 波兰 (Poland) 12 - jack
+  server: 150.251.113.34
+  port: 443
+  udp: true
+  type: vless
+  uuid: d7d724b5-17ce-4f3c-877d-dfbf0f07afa1
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 8yMLSTbkpJFfbgTjNzotzz7U8OT6AERrclgKdKrXXW8
+    short-id: 150a627d15154cf2
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 13 - jack
+  server: 94.183.209.59
+  port: 443
+  udp: true
+  type: vless
+  uuid: d23cb516-40db-4aa4-8142-6b45ff882f90
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇵🇱 波兰 (Poland) 14 - jack
+  server: 50.7.248.236
   port: 443
   udp: true
   type: vless
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
   flow: xtls-rprx-vision
   tls: true
-  servername: poland.failspace.top
+  servername: poland-new-ded.failspace.top
   skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 06 - jack
-  server: poland-viper.moritech.net
+  client-fingerprint: firefox
+- name: 🇵🇱 波兰 (Poland) 15 - jack
+  server: 217.60.33.215
   port: 443
   udp: true
-  type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: poland-viper.moritech.net
-  skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 07 - jack
-  server: 144.31.5.64
-  port: 443
-  udp: true
-  type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: pl6.moritech.net
-  skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 08 - jack
+  type: hysteria2
+  password: 865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01
+  sni: streambox.wwwinternetvideo.click
+  skip-cert-verify: true
+- name: 🇵🇱 波兰 (Poland) 16 - jack
   server: poland-ded.moritech.net
   port: 443
   udp: true
@@ -83,16 +150,34 @@ proxies:
   tls: true
   servername: poland-ded.moritech.net
   skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 09 - jack
-  server: poland-new-ded.failspace.top
+- name: 🇵🇱 波兰 (Poland) 17 - jack
+  server: poland-new-ded-2.failspace.top
   port: 443
   udp: true
   type: vless
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
   flow: xtls-rprx-vision
   tls: true
-  servername: poland-new-ded.failspace.top
+  servername: poland-new-ded-2.failspace.top
   skip-cert-verify: false
+- name: 🇵🇱 波兰 (Poland) 18 - jack
+  server: 194.61.121.93
+  port: 7538
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: U9YAoqBgg5VyGBc6vQv1sN
+- name: 🇵🇱 波兰 (Poland) 19 - jack
+  server: 144.31.5.64
+  port: 443
+  udp: true
+  type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  flow: xtls-rprx-vision
+  tls: true
+  servername: pl6.moritech.net
+  skip-cert-verify: false
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -107,6 +192,16 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 07 - jack
   - 🇵🇱 波兰 (Poland) 08 - jack
   - 🇵🇱 波兰 (Poland) 09 - jack
+  - 🇵🇱 波兰 (Poland) 10 - jack
+  - 🇵🇱 波兰 (Poland) 11 - jack
+  - 🇵🇱 波兰 (Poland) 12 - jack
+  - 🇵🇱 波兰 (Poland) 13 - jack
+  - 🇵🇱 波兰 (Poland) 14 - jack
+  - 🇵🇱 波兰 (Poland) 15 - jack
+  - 🇵🇱 波兰 (Poland) 16 - jack
+  - 🇵🇱 波兰 (Poland) 17 - jack
+  - 🇵🇱 波兰 (Poland) 18 - jack
+  - 🇵🇱 波兰 (Poland) 19 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -121,5 +216,15 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 07 - jack
   - 🇵🇱 波兰 (Poland) 08 - jack
   - 🇵🇱 波兰 (Poland) 09 - jack
+  - 🇵🇱 波兰 (Poland) 10 - jack
+  - 🇵🇱 波兰 (Poland) 11 - jack
+  - 🇵🇱 波兰 (Poland) 12 - jack
+  - 🇵🇱 波兰 (Poland) 13 - jack
+  - 🇵🇱 波兰 (Poland) 14 - jack
+  - 🇵🇱 波兰 (Poland) 15 - jack
+  - 🇵🇱 波兰 (Poland) 16 - jack
+  - 🇵🇱 波兰 (Poland) 17 - jack
+  - 🇵🇱 波兰 (Poland) 18 - jack
+  - 🇵🇱 波兰 (Poland) 19 - jack
 rules:
 - MATCH,PROXIES

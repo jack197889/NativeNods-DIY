@@ -49,19 +49,154 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 04 - jack",
-      "server": "104.21.238.93",
+      "server": "107.161.174.96",
       "server_port": 443,
-      "uuid": "50414e45-4c5f-5a45-5553-44890b90d17e",
+      "uuid": "97ecaad4-452c-45ec-b591-d68d3308aad4",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "afzoybehu2ws.vtzv4xe1un6s.workers.dev",
+        "server_name": "partaa2.api3-max.ru",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 05 - jack",
+      "server": "83.217.9.252",
+      "server_port": 8443,
+      "uuid": "6be01e14-b937-4ed5-9d2c-074a0da22ffc",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "fXsQV_dib6rKGAl6EncN6Pm-fTb6TqOa3uTCQWe86Dg",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 06 - jack",
+      "server": "158.94.216.50",
+      "server_port": 32306,
+      "uuid": "f1505323-ecb6-4152-9a5b-d37b3ae1cacf",
+      "tls": {
+        "enabled": true,
+        "server_name": "play-apps-features.googleusercontent.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "5iqitmx5fd71pubTxlrX0sd-ei7palcgVL7vtKToJGA",
+          "short_id": "61614f026070554f"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 07 - jack",
+      "server": "tr.iramssmoth.ir",
+      "server_port": 8443,
+      "uuid": "f1505323-ecb6-4152-9a5b-d37b3ae1cacf",
+      "tls": {
+        "enabled": true,
+        "server_name": "play-apps-features.googleusercontent.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "72SJFDXHCtB2fWWRrjMj23J8iJ8T_2jvj-iNThmLREs",
+          "short_id": "8dc4f3de3846efa9"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 08 - jack",
+      "server": "13.143.137.164",
+      "server_port": 9443,
+      "uuid": "953358cb-82ba-4296-960d-6d2ec3468f4c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "plaincanvas.videoclothing.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "dZ0rhO_PL67-Ciwc6CHQgtde3a5EUUuReA7M-lRNCDQ",
+          "short_id": "e336c9a786fae301"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 09 - jack",
+      "server": "188.114.97.8",
+      "server_port": 2087,
+      "uuid": "4fea1f87-e983-4111-8afc-dccb43b3fd38",
+      "tls": {
+        "enabled": true,
+        "server_name": "kurdnet.arianetmili.xyz",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "httpupgrade",
+        "path": "/random",
+        "host": "kurdnet.arianetmili.xyz"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 10 - jack",
+      "server": "shop.neexbyte.ir",
+      "server_port": 8443,
+      "uuid": "464bc502-f963-45b6-81e3-e33d18427506",
+      "tls": {
+        "enabled": true,
+        "server_name": "shop.neexbyte.ir",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 11 - jack",
+      "server": "162.159.91.222",
+      "server_port": 443,
+      "uuid": "50414e45-4c5f-5a45-5553-723a643df685",
+      "tls": {
+        "enabled": true,
+        "server_name": "n3zaxce7u0es.crzl48eiuses.workers.dev",
         "insecure": false
       },
       "transport": {
         "type": "ws",
-        "path": "/stream/PANEL_ZEUS/44890b90d17e/loc-0",
+        "path": "/stream/PANEL_ZEUS/723a643df685/loc-0",
         "headers": {
-          "Host": "afzoybehu2ws.vtzv4xe1un6s.workers.dev"
+          "Host": "n3zaxce7u0es.crzl48eiuses.workers.dev"
         }
       }
     },
@@ -73,7 +208,14 @@
         "🇹🇷 土耳其 (Turkey) 01 - jack",
         "🇹🇷 土耳其 (Turkey) 02 - jack",
         "🇹🇷 土耳其 (Turkey) 03 - jack",
-        "🇹🇷 土耳其 (Turkey) 04 - jack"
+        "🇹🇷 土耳其 (Turkey) 04 - jack",
+        "🇹🇷 土耳其 (Turkey) 05 - jack",
+        "🇹🇷 土耳其 (Turkey) 06 - jack",
+        "🇹🇷 土耳其 (Turkey) 07 - jack",
+        "🇹🇷 土耳其 (Turkey) 08 - jack",
+        "🇹🇷 土耳其 (Turkey) 09 - jack",
+        "🇹🇷 土耳其 (Turkey) 10 - jack",
+        "🇹🇷 土耳其 (Turkey) 11 - jack"
       ]
     },
     {
@@ -83,7 +225,14 @@
         "🇹🇷 土耳其 (Turkey) 01 - jack",
         "🇹🇷 土耳其 (Turkey) 02 - jack",
         "🇹🇷 土耳其 (Turkey) 03 - jack",
-        "🇹🇷 土耳其 (Turkey) 04 - jack"
+        "🇹🇷 土耳其 (Turkey) 04 - jack",
+        "🇹🇷 土耳其 (Turkey) 05 - jack",
+        "🇹🇷 土耳其 (Turkey) 06 - jack",
+        "🇹🇷 土耳其 (Turkey) 07 - jack",
+        "🇹🇷 土耳其 (Turkey) 08 - jack",
+        "🇹🇷 土耳其 (Turkey) 09 - jack",
+        "🇹🇷 土耳其 (Turkey) 10 - jack",
+        "🇹🇷 土耳其 (Turkey) 11 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

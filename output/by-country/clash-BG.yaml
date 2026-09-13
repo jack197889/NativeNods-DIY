@@ -5,6 +5,39 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇧🇬 保加利亚 (Bulgaria) 01 - jack
+  server: 192.145.31.5
+  port: 443
+  udp: true
+  type: vless
+  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇧🇬 保加利亚 (Bulgaria) 02 - jack
+  server: 192.145.31.5
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
+  tls: true
+  servername: neth9.lunariai.ru
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🇧🇬 保加利亚 (Bulgaria) 03 - jack
+  server: 213.183.63.60
+  port: 9085
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 9ej82EKe2gq7gLAM
+- name: 🇧🇬 保加利亚 (Bulgaria) 04 - jack
+  server: 213.183.63.60
+  port: 9066
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 2KUaE2a8NWTvuCZ3
+- name: 🇧🇬 保加利亚 (Bulgaria) 05 - jack
   server: 193.148.59.178
   port: 443
   udp: true
@@ -17,17 +50,40 @@ proxies:
     short-id: e3daad69
   servername: www.apple.com
   client-fingerprint: chrome
+- name: 🇧🇬 保加利亚 (Bulgaria) 06 - jack
+  server: 144.31.50.236
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1c332eae-7e02-4acd-996d-4eb3e652401c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: uitO4Z8t9TplwwYaqwLqh5rfxDh_X8bOBiNuPbzvaEM
+    short-id: bbe46bd8f6b96839
+  servername: yandex.ru
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇧🇬 保加利亚 (Bulgaria) 01 - jack
+  - 🇧🇬 保加利亚 (Bulgaria) 02 - jack
+  - 🇧🇬 保加利亚 (Bulgaria) 03 - jack
+  - 🇧🇬 保加利亚 (Bulgaria) 04 - jack
+  - 🇧🇬 保加利亚 (Bulgaria) 05 - jack
+  - 🇧🇬 保加利亚 (Bulgaria) 06 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇧🇬 保加利亚 (Bulgaria) 01 - jack
+  - 🇧🇬 保加利亚 (Bulgaria) 02 - jack
+  - 🇧🇬 保加利亚 (Bulgaria) 03 - jack
+  - 🇧🇬 保加利亚 (Bulgaria) 04 - jack
+  - 🇧🇬 保加利亚 (Bulgaria) 05 - jack
+  - 🇧🇬 保加利亚 (Bulgaria) 06 - jack
 rules:
 - MATCH,PROXIES

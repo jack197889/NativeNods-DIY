@@ -13,14 +13,60 @@ proxies:
   alterId: 0
   cipher: auto
 - name: 🇰🇷 韩国 (South Korea) 02 - jack
-  server: 3.36.93.74
+  server: 3.39.4.109
+  port: 13672
+  udp: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 03 - jack
+  server: 132.145.80.230
+  port: 80
+  udp: true
+  type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: kr02.a0a.xyz
+- name: 🇰🇷 韩国 (South Korea) 04 - jack
+  server: vpn-kr-003.fastervpn.world
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: whatsapp.com
+  sni: vpn-kr-003.fastervpn.world
   skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 03 - jack
+- name: 🇰🇷 韩国 (South Korea) 05 - jack
+  server: 119.28.161.143
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1ebb0858-218a-4dee-8746-36a67bc64462
+  tls: true
+  reality-opts:
+    public-key: pR7MPTAA4cZsW9AO-twMzuogiWGMKPiheTg70fcWWWs
+    short-id: 0a427bc3
+  servername: apple.com
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 06 - jack
+  server: vpn-kr-002.fastervpn.world
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ9wR5tF6vB3z
+  sni: vpn-kr-002.fastervpn.world
+  skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 07 - jack
   server: 3.39.4.109
   port: 18967
   udp: true
@@ -33,7 +79,15 @@ proxies:
     short-id: 48050fab
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 04 - jack
+- name: 🇰🇷 韩国 (South Korea) 08 - jack
+  server: 150-230-252-217.liao.kdns.fr
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 9cfc9458e48c028ec03ff86ebc71c744
+  sni: 127.0.0.1
+  skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 09 - jack
   server: 151.245.106.49
   port: 2053
   udp: true
@@ -45,15 +99,7 @@ proxies:
     short-id: 429499c03d4cc8a0
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🇰🇷 韩国 (South Korea) 05 - jack
-  server: 152.70.237.123
-  port: 2053
-  udp: true
-  type: hysteria2
-  password: maintell
-  sni: bing.com
-  skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 06 - jack
+- name: 🇰🇷 韩国 (South Korea) 10 - jack
   server: 154.90.62.70
   port: 56127
   udp: true
@@ -61,27 +107,128 @@ proxies:
   password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
   sni: 154.90.62.70
   skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 07 - jack
-  server: 3.39.4.109
-  port: 13672
+- name: 🇰🇷 韩国 (South Korea) 11 - jack
+  server: 110.10.178.240
+  port: 443
   udp: true
   type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  flow: xtls-rprx-vision
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   tls: true
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  servername: www.apple.com
-  client-fingerprint: random
-- name: 🇰🇷 韩国 (South Korea) 08 - jack
+  servername: m73j8.fssr.jst.hh.vavava.kdns.fr
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: m73j8.fssr.jst.hh.vavava.kdns.fr
+- name: 🇰🇷 韩国 (South Korea) 12 - jack
+  server: 152.67.198.36
+  port: 443
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  tls: true
+  servername: m73j8.fssr.jst.hh.vavava.kdns.fr
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: m73j8.fssr.jst.hh.vavava.kdns.fr
+- name: 🇰🇷 韩国 (South Korea) 13 - jack
+  server: 132.226.226.189
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 1671a252e2a97dc2bda4e515475931da
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 14 - jack
   server: 152.67.200.82
   port: 50160
   udp: true
   type: hysteria2
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  sni: www.bing.com
+  sni: vk.com
   skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 15 - jack
+  server: 43.164.134.99
+  port: 443
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  tls: true
+  servername: m73j8.fssr.jst.hh.vavava.kdns.fr
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: m73j8.fssr.jst.hh.vavava.kdns.fr
+- name: 🇰🇷 韩国 (South Korea) 16 - jack
+  server: 152.70.237.123
+  port: 2053
+  udp: true
+  type: hysteria2
+  password: maintell
+  sni: bing.com
+  skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 17 - jack
+  server: 140.245.65.122
+  port: 443
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  tls: true
+  servername: m73j8.fssr.jst.hh.vavava.kdns.fr
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: m73j8.fssr.jst.hh.vavava.kdns.fr
+- name: 🇰🇷 韩国 (South Korea) 18 - jack
+  server: 152.67.208.47
+  port: 443
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  tls: true
+  servername: m73j8.fssr.jst.hh.vavava.kdns.fr
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: m73j8.fssr.jst.hh.vavava.kdns.fr
+- name: 🇰🇷 韩国 (South Korea) 19 - jack
+  server: 134.185.99.52
+  port: 443
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  tls: true
+  servername: m73j8.fssr.jst.hh.vavava.kdns.fr
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: m73j8.fssr.jst.hh.vavava.kdns.fr
+- name: 🇰🇷 韩国 (South Korea) 20 - jack
+  server: 43.155.134.179
+  port: 443
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  tls: true
+  servername: m73j8.fssr.jst.hh.vavava.kdns.fr
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: m73j8.fssr.jst.hh.vavava.kdns.fr
 proxy-groups:
 - name: PROXIES
   type: select
@@ -95,6 +242,18 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 06 - jack
   - 🇰🇷 韩国 (South Korea) 07 - jack
   - 🇰🇷 韩国 (South Korea) 08 - jack
+  - 🇰🇷 韩国 (South Korea) 09 - jack
+  - 🇰🇷 韩国 (South Korea) 10 - jack
+  - 🇰🇷 韩国 (South Korea) 11 - jack
+  - 🇰🇷 韩国 (South Korea) 12 - jack
+  - 🇰🇷 韩国 (South Korea) 13 - jack
+  - 🇰🇷 韩国 (South Korea) 14 - jack
+  - 🇰🇷 韩国 (South Korea) 15 - jack
+  - 🇰🇷 韩国 (South Korea) 16 - jack
+  - 🇰🇷 韩国 (South Korea) 17 - jack
+  - 🇰🇷 韩国 (South Korea) 18 - jack
+  - 🇰🇷 韩国 (South Korea) 19 - jack
+  - 🇰🇷 韩国 (South Korea) 20 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -108,5 +267,17 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 06 - jack
   - 🇰🇷 韩国 (South Korea) 07 - jack
   - 🇰🇷 韩国 (South Korea) 08 - jack
+  - 🇰🇷 韩国 (South Korea) 09 - jack
+  - 🇰🇷 韩国 (South Korea) 10 - jack
+  - 🇰🇷 韩国 (South Korea) 11 - jack
+  - 🇰🇷 韩国 (South Korea) 12 - jack
+  - 🇰🇷 韩国 (South Korea) 13 - jack
+  - 🇰🇷 韩国 (South Korea) 14 - jack
+  - 🇰🇷 韩国 (South Korea) 15 - jack
+  - 🇰🇷 韩国 (South Korea) 16 - jack
+  - 🇰🇷 韩国 (South Korea) 17 - jack
+  - 🇰🇷 韩国 (South Korea) 18 - jack
+  - 🇰🇷 韩国 (South Korea) 19 - jack
+  - 🇰🇷 韩国 (South Korea) 20 - jack
 rules:
 - MATCH,PROXIES

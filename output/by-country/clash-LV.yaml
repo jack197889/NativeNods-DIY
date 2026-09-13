@@ -5,6 +5,68 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇱🇻 拉脱维亚 (Latvia) 01 - jack
+  server: 185.135.86.175
+  port: 9086
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 37Z4TFCYhfxcpc9Q
+- name: 🇱🇻 拉脱维亚 (Latvia) 02 - jack
+  server: 185.135.86.175
+  port: 9068
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: mwgRg9hRq3b4Qnwb
+- name: 🇱🇻 拉脱维亚 (Latvia) 03 - jack
+  server: 185.135.86.175
+  port: 9034
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: Yg4MbdXFQ9HFFVY6
+- name: 🇱🇻 拉脱维亚 (Latvia) 04 - jack
+  server: 185.135.86.175
+  port: 9007
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: kSPmvwdFzGMMW5pY
+- name: 🇱🇻 拉脱维亚 (Latvia) 05 - jack
+  server: 185.135.86.175
+  port: 9094
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: rpgbNnU9rDDU4aWZ
+- name: 🇱🇻 拉脱维亚 (Latvia) 06 - jack
+  server: 185.135.86.175
+  port: 9082
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 45xgMgm386pjWjTx
+- name: 🇱🇻 拉脱维亚 (Latvia) 07 - jack
+  server: 185.135.86.175
+  port: 9033
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: UTJA57ypk2XKQpnm
+- name: 🇱🇻 拉脱维亚 (Latvia) 08 - jack
+  server: 138.124.180.137
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5234b2b7-5e07-422c-8159-d62a676c00c6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
+    short-id: 33acba1b
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇱🇻 拉脱维亚 (Latvia) 09 - jack
   server: 195.123.213.28
   port: 443
   udp: true
@@ -16,20 +78,7 @@ proxies:
     public-key: NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo
     short-id: 5c256336e3b673fa
   servername: www.cloudflare.com
-  client-fingerprint: random
-- name: 🇱🇻 拉脱维亚 (Latvia) 02 - jack
-  server: 45.39.108.109
-  port: 443
-  udp: true
-  type: vless
-  uuid: d806a58b-33aa-42e0-b170-395e49c16b37
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Y0noOXC8qHmbM0GmDpj-9BBwKSOtHs-uMbNfKU050GQ
-    short-id: b558b9305a0b
-  servername: www.microsoft.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -37,6 +86,13 @@ proxy-groups:
   - AUTO
   - 🇱🇻 拉脱维亚 (Latvia) 01 - jack
   - 🇱🇻 拉脱维亚 (Latvia) 02 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 03 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 04 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 05 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 06 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 07 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 08 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 09 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,5 +100,12 @@ proxy-groups:
   proxies:
   - 🇱🇻 拉脱维亚 (Latvia) 01 - jack
   - 🇱🇻 拉脱维亚 (Latvia) 02 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 03 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 04 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 05 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 06 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 07 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 08 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 09 - jack
 rules:
 - MATCH,PROXIES

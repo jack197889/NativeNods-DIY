@@ -4,9 +4,57 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
-      "server": "118.167.209.5",
+      "server": "36.224.152.189",
+      "server_port": 50099,
+      "method": "chacha20-ietf-poly1305",
+      "password": "b1ae0fce-9340-4f2e-882d-fdb2218e2e2b"
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 02 (家宽) - jack",
+      "server": "194.5.248.88",
+      "server_port": 443,
+      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "roma2.moritech.net",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 03 (家宽) - jack",
+      "server": "109.120.155.155",
+      "server_port": 444,
+      "uuid": "c325206e-0f0c-4472-9d76-43e9b9b2ef63",
+      "tls": {
+        "enabled": true,
+        "server_name": "bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
+      "server": "hinet1.2yly.com",
       "server_port": 24215,
       "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
       "tls": {
@@ -14,7 +62,7 @@
         "server_name": "addons.mozilla.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -24,24 +72,14 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
-      "server": "hk02.xn--9kq85xcu6b.com",
-      "server_port": 65534,
-      "password": "45dae7e6-4573-4e6b-a1f3-57b3bbaf990d",
-      "tls": {
-        "enabled": true,
-        "server_name": "hk02.xn--9kq85xcu6b.com",
-        "insecure": true
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack"
+        "🇷🇴 罗马尼亚 (Romania) 02 (家宽) - jack",
+        "🇯🇵 日本 (Japan) 03 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack"
       ]
     },
     {
@@ -49,7 +87,9 @@
       "tag": "auto",
       "outbounds": [
         "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack"
+        "🇷🇴 罗马尼亚 (Romania) 02 (家宽) - jack",
+        "🇯🇵 日本 (Japan) 03 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
