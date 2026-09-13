@@ -6,41 +6,84 @@
     {
       "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 01 - jack",
-      "server": "185.79.138.71",
-      "server_port": 448,
-      "uuid": "0b0915d7-6800-4580-a44b-77d84f105e6a",
+      "server": "2.26.0.201",
+      "server_port": 443,
+      "uuid": "827a0eb0-21bf-4bce-96ef-0a7bac5d68f5",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.samsung.com",
+        "server_name": "fin.pinkmoon.pro",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8",
-          "short_id": "cd21e552537c7c0b"
+          "public_key": "DS9mX6cMb5wvwFzga8yN2NLbs7soXM7038_P23yPKwk",
+          "short_id": "8ffa160e608bf539"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 02 - jack",
-      "server": "204.168.195.30",
-      "server_port": 51185,
-      "uuid": "12af43c3-84b4-4248-878b-b75f35835487",
+      "server": "31.76.21.10",
+      "server_port": 443,
+      "uuid": "827a0eb0-21bf-4bce-96ef-0a7bac5d68f5",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "amp-api-edge.apps.apple.com",
+        "server_name": "fin.pinkmoon.pro",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "VFDbAJQdqzKl7hL6SmUrhHHEORtILSsJHYWF67an1HU",
-          "short_id": "55a464180d3b1f7e"
+          "public_key": "DS9mX6cMb5wvwFzga8yN2NLbs7soXM7038_P23yPKwk",
+          "short_id": "8ffa160e608bf539"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 03 - jack",
+      "server": "31.76.21.9",
+      "server_port": 443,
+      "uuid": "827a0eb0-21bf-4bce-96ef-0a7bac5d68f5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fin.pinkmoon.pro",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "DS9mX6cMb5wvwFzga8yN2NLbs7soXM7038_P23yPKwk",
+          "short_id": "8ffa160e608bf539"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 04 - jack",
+      "server": "app-ms-35.ecom-ai-solutions.com",
+      "server_port": 443,
+      "uuid": "a71ad164-3b29-4dbe-aa66-24d095ca7b6d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets-ms-35.ecom-ai-solutions.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "NA5eMfdHkl_L80S75uxQwUirS9nvZ80V2u1s71KeXkc",
+          "short_id": "2de63d3fd7261b7e"
         }
       }
     },
@@ -50,7 +93,9 @@
       "outbounds": [
         "auto",
         "🇫🇮 芬兰 (Finland) 01 - jack",
-        "🇫🇮 芬兰 (Finland) 02 - jack"
+        "🇫🇮 芬兰 (Finland) 02 - jack",
+        "🇫🇮 芬兰 (Finland) 03 - jack",
+        "🇫🇮 芬兰 (Finland) 04 - jack"
       ]
     },
     {
@@ -58,7 +103,9 @@
       "tag": "auto",
       "outbounds": [
         "🇫🇮 芬兰 (Finland) 01 - jack",
-        "🇫🇮 芬兰 (Finland) 02 - jack"
+        "🇫🇮 芬兰 (Finland) 02 - jack",
+        "🇫🇮 芬兰 (Finland) 03 - jack",
+        "🇫🇮 芬兰 (Finland) 04 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

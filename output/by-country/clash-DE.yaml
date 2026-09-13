@@ -5,76 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - jack
-  server: 172.67.159.65
+  server: 63.141.128.22
   port: 443
   udp: true
   type: vless
-  uuid: d8c14c5c-a80a-4f6f-a5fb-52071849c443
+  uuid: b8b01773-36b1-4b49-9bd0-6249f52345b4
   tls: true
-  servername: CgxGqchEiAMnA-jkS01FiDlsnqOjwF-S.ALIAmA.WOrKErS.DeV
+  servername: MiSty-tooth-78cA.FoboGAH414-e7B.WoRKERs.DEv
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiZTFWRGJFS0NUd2F2NkRmIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==
+    path: /eyJqdW5rIjoiTkNUaFg0ZnJNUjhhcyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
     headers:
-      Host: cgxgqcheiamna-jks01fidlsnqojwf-s.aliama.workers.dev
+      Host: MiSty-tooth-78cA.FoboGAH414-e7B.WoRKERs.DEv
 - name: 🇩🇪 德国 (Germany) 02 - jack
-  server: 199.232.78.101
-  port: 443
-  udp: true
-  type: trojan
-  password: MiTiVPN
-  sni: ssl.fastly.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇩🇪 德国 (Germany) 03 - jack
-  server: www.speedtest.net
-  port: 443
-  udp: true
-  type: trojan
-  password: Telegram_healer_config
-  sni: jfw5Fii30i7-sc560AVFNfNH613.i6JSQ7Mr66E-e14trd.wOrkeRs.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tr/WBxqItFfodwwd5KkhKtK2o
-- name: 🇩🇪 德国 (Germany) 04 - jack
-  server: 167.82.76.7
-  port: 443
-  udp: true
-  type: trojan
-  password: MiTiVPN
-  sni: ssl.fastly.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇩🇪 德国 (Germany) 05 - jack
-  server: 130.61.85.116
-  port: 59924
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: 3/Ww5SSfxqu0aei8xP1jEaBpAc24C4WNY18GEwfTg0M=
-- name: 🇩🇪 德国 (Germany) 06 - jack
-  server: 2.58.81.221
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: kKEd0rBrd56Furjz
-- name: 🇩🇪 德国 (Germany) 07 - jack
-  server: 185.226.172.8
-  port: 8008
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: XKFKl2rULjIp74
-- name: 🇩🇪 德国 (Germany) 08 - jack
-  server: 151.101.56.101
+  server: 199.232.78.160
   port: 443
   udp: true
   type: trojan
@@ -84,14 +29,14 @@ proxies:
   network: ws
   ws-opts:
     path: '@mehrosaboran'
-- name: 🇩🇪 德国 (Germany) 09 - jack
-  server: 8.209.74.72
-  port: 20001
+- name: 🇩🇪 德国 (Germany) 03 - jack
+  server: 2.58.81.221
+  port: 443
   udp: true
   type: ss
-  cipher: chacha20-ietf-poly1305
-  password: PWpjPo3tqhPN4yRZ
-- name: 🇩🇪 德国 (Germany) 10 - jack
+  cipher: aes-256-gcm
+  password: kKEd0rBrd56Furjz
+- name: 🇩🇪 德国 (Germany) 04 - jack
   server: 144.31.168.95
   port: 443
   udp: true
@@ -104,7 +49,159 @@ proxies:
     short-id: 00bca5982f82d083
   servername: eu-central.cendora.ru
   client-fingerprint: random
+- name: 🇩🇪 德国 (Germany) 05 - jack
+  server: 82.198.246.97
+  port: 180
+  udp: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 06 - jack
+  server: 82.198.246.97
+  port: 180
+  udp: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 07 - jack
+  server: 82.198.246.97
+  port: 180
+  udp: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 08 - jack
+  server: 82.198.246.97
+  port: 180
+  udp: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 09 - jack
+  server: 82.198.246.97
+  port: 180
+  udp: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 10 - jack
+  server: 82.198.246.97
+  port: 180
+  udp: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
 - name: 🇩🇪 德国 (Germany) 11 - jack
+  server: 82.198.246.97
+  port: 180
+  udp: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 12 - jack
+  server: 82.198.246.97
+  port: 180
+  udp: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 13 - jack
+  server: 82.198.246.97
+  port: 180
+  udp: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 14 - jack
+  server: 82.198.246.97
+  port: 180
+  udp: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 15 - jack
+  server: 82.198.246.97
+  port: 180
+  udp: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 16 - jack
+  server: 82.198.246.97
+  port: 180
+  udp: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 17 - jack
+  server: 82.198.246.97
+  port: 180
+  udp: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 18 - jack
+  server: 82.198.246.97
+  port: 180
+  udp: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 19 - jack
+  server: 82.198.246.97
+  port: 180
+  udp: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 20 - jack
+  server: 82.198.246.97
+  port: 180
+  udp: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 21 - jack
+  server: 82.198.246.97
+  port: 180
+  udp: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 22 - jack
+  server: 82.198.246.97
+  port: 180
+  udp: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 23 - jack
+  server: 82.198.246.97
+  port: 180
+  udp: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 24 - jack
   server: 93.94.52.23
   port: 40443
   udp: true
@@ -117,91 +214,7 @@ proxies:
     short-id: db46e2946fc466fd
   servername: deepl.com
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 12 - jack
-  server: 178.105.61.61
-  port: 2083
-  udp: true
-  type: vless
-  uuid: cb077bf2-70b7-457b-af42-27cdc3e0e544
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: H0nCazQFHVhSObfqSUhGLhK7KRwKzTMggIBPjnMMqhk
-    short-id: af04ff8094115e93
-  servername: 178.105.61.61
-  client-fingerprint: random
-- name: 🇩🇪 德国 (Germany) 13 - jack
-  server: 170.101.109.37
-  port: 443
-  udp: true
-  type: vless
-  uuid: bf645ffe-a3cc-4480-8e4c-9bcd1af41052
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: rTnh7Y8RsSA5HSvFf-pWT49x8va6U6XHMRgNiMuwB0A
-    short-id: ab88d256
-  servername: www.cloudflare.com
-  client-fingerprint: qq
-- name: 🇩🇪 德国 (Germany) 14 - jack
-  server: 130.61.50.75
-  port: 6443
-  udp: true
-  type: hysteria2
-  password: zhangyang
-  sni: 130.61.50.75
-  skip-cert-verify: true
-- name: 🇩🇪 德国 (Germany) 15 - jack
-  server: 141.95.29.163
-  port: 2083
-  udp: true
-  type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:JTou+JSmZOAyrMLdvNBcXFm0Y9luZ/8u17ie48jQfVc=
-- name: 🇩🇪 德国 (Germany) 16 - jack
-  server: 82.118.19.153
-  port: 443
-  udp: true
-  type: vless
-  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE
-    short-id: 670ed9f350bd8ee0
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 17 - jack
-  server: 82.24.203.20
-  port: 2087
-  udp: true
-  type: vless
-  uuid: 5fcdc9b7-e70f-4a5c-85c3-e018ad818326
-  network: ws
-  ws-opts:
-    path: /fd5ba98a3970
-- name: 🇩🇪 德国 (Germany) 18 - jack
-  server: 144.31.148.87
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f
-  sni: replay.wwwinternetvideo.click
-  skip-cert-verify: true
-- name: 🇩🇪 德国 (Germany) 19 - jack
-  server: 31.76.20.209
-  port: 443
-  udp: true
-  type: vless
-  uuid: 827a0eb0-21bf-4bce-96ef-0a7bac5d68f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: DS9mX6cMb5wvwFzga8yN2NLbs7soXM7038_P23yPKwk
-    short-id: 8ffa160e608bf539
-  servername: de.pinkmoon.pro
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 20 - jack
+- name: 🇩🇪 德国 (Germany) 25 - jack
   server: 31.56.189.224
   port: 3443
   udp: true
@@ -214,17 +227,28 @@ proxies:
     short-id: a1b2c3d4
   servername: special.aeternavpn.space
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 21 - jack
-  server: nasnet-571299667-direct.mbghalibaf.com
+- name: 🇩🇪 德国 (Germany) 26 - jack
+  server: 144.31.148.87
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f
+  sni: replay.wwwinternetvideo.click
+  skip-cert-verify: true
+- name: 🇩🇪 德国 (Germany) 27 - jack
+  server: 170.101.109.37
   port: 443
   udp: true
   type: vless
-  uuid: nasnet
+  uuid: bf645ffe-a3cc-4480-8e4c-9bcd1af41052
   flow: xtls-rprx-vision
   tls: true
-  servername: nasnet-571299667-direct.mbghalibaf.com
-  skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 22 - jack
+  reality-opts:
+    public-key: rTnh7Y8RsSA5HSvFf-pWT49x8va6U6XHMRgNiMuwB0A
+    short-id: ab88d256
+  servername: www.cloudflare.com
+  client-fingerprint: ''
+- name: 🇩🇪 德国 (Germany) 28 - jack
   server: 93.152.217.41
   port: 40443
   udp: true
@@ -236,20 +260,15 @@ proxies:
     short-id: 5b97
   servername: deepl.com
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 23 - jack
-  server: 82.39.171.12
-  port: 443
+- name: 🇩🇪 德国 (Germany) 29 - jack
+  server: 130.61.50.75
+  port: 6443
   udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 24 - jack
+  type: hysteria2
+  password: zhangyang
+  sni: dash.cloudflare.com
+  skip-cert-verify: true
+- name: 🇩🇪 德国 (Germany) 30 - jack
   server: player.wwwinternetvideo.click
   port: 443
   udp: true
@@ -257,44 +276,52 @@ proxies:
   password: V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8
   sni: player.wwwinternetvideo.click
   skip-cert-verify: true
-- name: 🇩🇪 德国 (Germany) 25 - jack
-  server: 162.248.166.35
+- name: 🇩🇪 德国 (Germany) 31 - jack
+  server: 57.129.96.67
   port: 443
   udp: true
   type: vless
-  uuid: d92b6509-8b63-4505-b3a2-1dc5b1c014ac
+  uuid: nasnet
+  flow: xtls-rprx-vision
+  tls: true
+  servername: nasnet-571299667-direct.mbghalibaf.com
+  skip-cert-verify: false
+- name: 🇩🇪 德国 (Germany) 32 - jack
+  server: 31.76.20.209
+  port: 443
+  udp: true
+  type: vless
+  uuid: 827a0eb0-21bf-4bce-96ef-0a7bac5d68f5
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: NYG48Fv1MF3SqOpHwoa4GqJH5IJrocSrwWzrffY-tCk
-    short-id: c6dc8abb0235dc05
-  servername: www.caradisiac.com
-  client-fingerprint: edge
-- name: 🇩🇪 德国 (Germany) 26 - jack
-  server: bwdf2fnt.xn--e1aatfr8bwa.online
-  port: 30000
-  udp: true
-  type: hysteria2
-  password: tnnls:b735eacd-3ca7-4019-b98c-3559918100e6
-  sni: bwdf2fnt.xn--e1aatfr8bwa.online
-  skip-cert-verify: false
-  obfs: salamander
-  obfs-password: b6d1f3888ab1d90dd11aac1dce427b81
-- name: 🇩🇪 德国 (Germany) 27 - jack
-  server: 5.35.81.60
-  port: 4443
-  udp: true
-  type: vless
-  uuid: cabd9303-ae32-4d25-86b9-26b312d0f044
-  tls: true
-  reality-opts:
-    public-key: nhvyI4KrKDUSgw9Fa63SDeNATaTsAu9bRZ4qaraydRM
-    short-id: e5f6a1b2
-  servername: maps.apple.com
+    public-key: DS9mX6cMb5wvwFzga8yN2NLbs7soXM7038_P23yPKwk
+    short-id: 8ffa160e608bf539
+  servername: de.pinkmoon.pro
   client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: snob-grpc-de
+- name: 🇩🇪 德国 (Germany) 33 - jack
+  server: 94.159.110.41
+  port: 443
+  udp: true
+  type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+- name: 🇩🇪 德国 (Germany) 34 - jack
+  server: 130.61.85.116
+  port: 59924
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 3/Ww5SSfxqu0aei8xP1jEaBpAc24C4WNY18GEwfTg0M=
 proxy-groups:
 - name: PROXIES
   type: select
@@ -327,6 +354,13 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 25 - jack
   - 🇩🇪 德国 (Germany) 26 - jack
   - 🇩🇪 德国 (Germany) 27 - jack
+  - 🇩🇪 德国 (Germany) 28 - jack
+  - 🇩🇪 德国 (Germany) 29 - jack
+  - 🇩🇪 德国 (Germany) 30 - jack
+  - 🇩🇪 德国 (Germany) 31 - jack
+  - 🇩🇪 德国 (Germany) 32 - jack
+  - 🇩🇪 德国 (Germany) 33 - jack
+  - 🇩🇪 德国 (Germany) 34 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -359,5 +393,12 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 25 - jack
   - 🇩🇪 德国 (Germany) 26 - jack
   - 🇩🇪 德国 (Germany) 27 - jack
+  - 🇩🇪 德国 (Germany) 28 - jack
+  - 🇩🇪 德国 (Germany) 29 - jack
+  - 🇩🇪 德国 (Germany) 30 - jack
+  - 🇩🇪 德国 (Germany) 31 - jack
+  - 🇩🇪 德国 (Germany) 32 - jack
+  - 🇩🇪 德国 (Germany) 33 - jack
+  - 🇩🇪 德国 (Germany) 34 - jack
 rules:
 - MATCH,PROXIES

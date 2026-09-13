@@ -7,29 +7,37 @@
       "type": "shadowsocks",
       "tag": "🇵🇱 波兰 (Poland) 01 - jack",
       "server": "217.30.10.44",
-      "server_port": 9006,
-      "method": "aes-256-cfb",
-      "password": "FAdUvMJUq5vDgKEq"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇵🇱 波兰 (Poland) 02 - jack",
-      "server": "217.30.10.44",
       "server_port": 9052,
       "method": "aes-256-cfb",
       "password": "jt2ekBNc9HuVtm2a"
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇵🇱 波兰 (Poland) 03 - jack",
-      "server": "217.30.10.44",
-      "server_port": 9041,
-      "method": "aes-256-cfb",
-      "password": "U6qnYRhfyDmn8sgn"
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 02 - jack",
+      "server": "185.223.57.16",
+      "server_port": 33743,
+      "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY",
+          "short_id": ""
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "TunService"
+      }
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 04 - jack",
+      "tag": "🇵🇱 波兰 (Poland) 03 - jack",
       "server": "94.183.209.58",
       "server_port": 443,
       "uuid": "78791f9e-fe09-4d4f-88ec-895764bae0d6",
@@ -39,6 +47,18 @@
         "headers": {
           "Host": "pl2.lckdwn.ru"
         }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇵🇱 波兰 (Poland) 04 - jack",
+      "server": "admin.wwwinternetvideo.click",
+      "server_port": 443,
+      "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.wwwinternetvideo.click",
+        "insecure": true
       }
     },
     {
@@ -53,16 +73,8 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇵🇱 波兰 (Poland) 06 - jack",
-      "server": "194.61.121.93",
-      "server_port": 7538,
-      "method": "chacha20-ietf-poly1305",
-      "password": "U9YAoqBgg5VyGBc6vQv1sN"
-    },
-    {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 07 - jack",
+      "tag": "🇵🇱 波兰 (Poland) 06 - jack",
       "server": "144.31.5.64",
       "server_port": 443,
       "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
@@ -71,39 +83,6 @@
         "enabled": true,
         "server_name": "pl6.moritech.net",
         "insecure": false
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇵🇱 波兰 (Poland) 08 - jack",
-      "server": "admin.wwwinternetvideo.click",
-      "server_port": 443,
-      "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.wwwinternetvideo.click",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 09 - jack",
-      "server": "datpol.2clash.ru",
-      "server_port": 443,
-      "uuid": "3b6a9df3-f1d1-4bc1-94a5-0d8f2d5512b1",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "datpol.2clash.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "QOT8VdR2idgWURLucBQrAMtWtsEx1gfO8AcPEj7xhCU",
-          "short_id": "32445654"
-        }
       }
     },
     {
@@ -116,10 +95,7 @@
         "🇵🇱 波兰 (Poland) 03 - jack",
         "🇵🇱 波兰 (Poland) 04 - jack",
         "🇵🇱 波兰 (Poland) 05 - jack",
-        "🇵🇱 波兰 (Poland) 06 - jack",
-        "🇵🇱 波兰 (Poland) 07 - jack",
-        "🇵🇱 波兰 (Poland) 08 - jack",
-        "🇵🇱 波兰 (Poland) 09 - jack"
+        "🇵🇱 波兰 (Poland) 06 - jack"
       ]
     },
     {
@@ -131,10 +107,7 @@
         "🇵🇱 波兰 (Poland) 03 - jack",
         "🇵🇱 波兰 (Poland) 04 - jack",
         "🇵🇱 波兰 (Poland) 05 - jack",
-        "🇵🇱 波兰 (Poland) 06 - jack",
-        "🇵🇱 波兰 (Poland) 07 - jack",
-        "🇵🇱 波兰 (Poland) 08 - jack",
-        "🇵🇱 波兰 (Poland) 09 - jack"
+        "🇵🇱 波兰 (Poland) 06 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -34,6 +34,14 @@ proxies:
     short-id: d15c17cef9b2e456
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇦🇺 澳大利亚 (Australia) 04 - jack
+  server: vpn-au-002.fastervpn.world
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: www.bing.com
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -42,6 +50,7 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 01 - jack
   - 🇦🇺 澳大利亚 (Australia) 02 - jack
   - 🇦🇺 澳大利亚 (Australia) 03 - jack
+  - 🇦🇺 澳大利亚 (Australia) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -50,5 +59,6 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 01 - jack
   - 🇦🇺 澳大利亚 (Australia) 02 - jack
   - 🇦🇺 澳大利亚 (Australia) 03 - jack
+  - 🇦🇺 澳大利亚 (Australia) 04 - jack
 rules:
 - MATCH,PROXIES

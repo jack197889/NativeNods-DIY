@@ -12,26 +12,18 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇮🇹 意大利 (Italy) 02 - jack
-  server: 172.238.232.239
-  port: 32833
+  server: 57.131.38.163
+  port: 2053
   udp: true
   type: vless
-  uuid: 167ed405-7de9-4bff-b1ea-6e3d49c76b0b
-  flow: xtls-rprx-vision
+  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
   tls: true
   reality-opts:
-    public-key: PaTDdYBrlh1xBixdI0igvRRkf0vnUwMRzi-4oDyfS20
-    short-id: a0a305ccc8e94aa8
-  servername: www.intel.com
+    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
+    short-id: 5b8a942318178e7b
+  servername: www.apple.com
   client-fingerprint: chrome
 - name: 🇮🇹 意大利 (Italy) 03 - jack
-  server: 57.131.48.45
-  port: 8388
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: itzvpn@321
-- name: 🇮🇹 意大利 (Italy) 04 - jack
   server: 82.118.16.187
   port: 443
   udp: true
@@ -44,7 +36,7 @@ proxies:
     short-id: cd6065902eea7a02
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇮🇹 意大利 (Italy) 05 - jack
+- name: 🇮🇹 意大利 (Italy) 04 - jack
   server: 31.77.154.91
   port: 443
   udp: true
@@ -66,7 +58,6 @@ proxy-groups:
   - 🇮🇹 意大利 (Italy) 02 - jack
   - 🇮🇹 意大利 (Italy) 03 - jack
   - 🇮🇹 意大利 (Italy) 04 - jack
-  - 🇮🇹 意大利 (Italy) 05 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -76,6 +67,5 @@ proxy-groups:
   - 🇮🇹 意大利 (Italy) 02 - jack
   - 🇮🇹 意大利 (Italy) 03 - jack
   - 🇮🇹 意大利 (Italy) 04 - jack
-  - 🇮🇹 意大利 (Italy) 05 - jack
 rules:
 - MATCH,PROXIES

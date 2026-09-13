@@ -4,8 +4,32 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇹🇼 中国台湾 (Taiwan) 01 - jack",
+      "server": "160.187.100.109",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "160.187.100.109",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 02 - jack",
+      "server": "103.115.109.49",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "https://t.me/wangcai2",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 03 - jack",
       "server": "35.229.136.113",
       "server_port": 35412,
       "uuid": "5d3cbdb2-b82d-4078-82b8-5dd413cca82b",
@@ -25,20 +49,8 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 02 - jack",
-      "server": "103.115.109.49",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "t.me",
-        "insecure": true
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 03 - jack",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 04 - jack",
       "server": "35.194.157.16",
       "server_port": 43450,
       "uuid": "64d77a12-ad6b-4d85-a349-bd287535af1c",
@@ -48,7 +60,7 @@
         "server_name": "www.amd.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -58,20 +70,29 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 04 - jack",
-      "server": "160.187.100.109",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "type": "vless",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 05 - jack",
+      "server": "34.80.184.198",
+      "server_port": 44848,
+      "uuid": "b0342e8a-a25e-4e30-b598-d9391b0df4c9",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "160.187.100.109",
-        "insecure": true
+        "server_name": "www.tesla.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "w9vWLOHjl46krA8IEpGoPI9scTL0rFdjCtjdukJDciU",
+          "short_id": "2338740580a5de"
+        }
       }
     },
     {
       "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 05 - jack",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 06 - jack",
       "server": "35.221.158.209",
       "server_port": 32981,
       "uuid": "41b96ee9-ee5e-455f-9753-187a9dead97a",
@@ -91,48 +112,6 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 06 - jack",
-      "server": "34.80.164.239",
-      "server_port": 21776,
-      "uuid": "b0399730-1618-4727-8ddd-2baf94ab90d6",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.tesla.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "nm6jFiI7_auZ15UMqpeEbiITrK4OR2rfFTqXhe5pMFA",
-          "short_id": "79b6f82800c68925"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 07 - jack",
-      "server": "104.199.219.172",
-      "server_port": 40800,
-      "uuid": "5859f6a7-cda1-47c2-8353-fcdee281f31d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.intel.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "zohUbvPLKVBwzuDmZNsaXXFYZSKA9_xEhdUyURChrgo",
-          "short_id": "186e4c2732d61a3d"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -142,8 +121,7 @@
         "🇹🇼 中国台湾 (Taiwan) 03 - jack",
         "🇹🇼 中国台湾 (Taiwan) 04 - jack",
         "🇹🇼 中国台湾 (Taiwan) 05 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 06 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 07 - jack"
+        "🇹🇼 中国台湾 (Taiwan) 06 - jack"
       ]
     },
     {
@@ -155,8 +133,7 @@
         "🇹🇼 中国台湾 (Taiwan) 03 - jack",
         "🇹🇼 中国台湾 (Taiwan) 04 - jack",
         "🇹🇼 中国台湾 (Taiwan) 05 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 06 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 07 - jack"
+        "🇹🇼 中国台湾 (Taiwan) 06 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

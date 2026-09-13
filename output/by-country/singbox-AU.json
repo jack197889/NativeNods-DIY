@@ -44,13 +44,26 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "🇦🇺 澳大利亚 (Australia) 04 - jack",
+      "server": "vpn-au-002.fastervpn.world",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇦🇺 澳大利亚 (Australia) 01 - jack",
         "🇦🇺 澳大利亚 (Australia) 02 - jack",
-        "🇦🇺 澳大利亚 (Australia) 03 - jack"
+        "🇦🇺 澳大利亚 (Australia) 03 - jack",
+        "🇦🇺 澳大利亚 (Australia) 04 - jack"
       ]
     },
     {
@@ -59,7 +72,8 @@
       "outbounds": [
         "🇦🇺 澳大利亚 (Australia) 01 - jack",
         "🇦🇺 澳大利亚 (Australia) 02 - jack",
-        "🇦🇺 澳大利亚 (Australia) 03 - jack"
+        "🇦🇺 澳大利亚 (Australia) 03 - jack",
+        "🇦🇺 澳大利亚 (Australia) 04 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
