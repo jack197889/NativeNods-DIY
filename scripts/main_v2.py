@@ -53,26 +53,24 @@ except ImportError as e:
 # ══════════════════════════════════════════════════════════════════
 
 SOURCE_URLS = [
-    # 基础稳定源
-    "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt",
-    "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
-    "https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.txt",
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",
-    "https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml",
+    # ========== 核心高质量源（真实 HTTP 验证 + 国家拆分） ==========
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",                    # 全局精选 ~2000（已验证）
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-US.txt",       # 美国 ~650
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-NL.txt",       # 荷兰 ~110
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-GB.txt",       # 英国 ~40
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-AU.txt",       # 澳大利亚 ~4–10
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-JP.txt",       # 日本 ~500+（速度快）
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt",       # 台湾 ~70–80（速度快）
 
-    # 欧美（美/英/德/荷）家宽专项源
-    "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub1.txt",
-    "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub2.txt",
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/subscriptions/location/US.txt",
-    "https://raw.githubusercontent.com/yebekhe/TVC/main/subscriptions/xray/base64",
-
-    # 针对性提升澳洲（AU）节点成功率与家宽获取源
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/subscriptions/location/AU.txt",
-    "https://raw.githubusercontent.com/LonUp/NodeList/main/Link/v2ray.txt",
-    "https://raw.githubusercontent.com/roosterkiev/optimus/main/sub.txt",
-    
-    # 替换新增的高效率全地域补充源
-    "https://raw.githubusercontent.com/mftzm/v2ray/main/v2ray.txt"
+    # ========== 补充高质量聚合源 ==========
+    "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub1.txt",                                # Top 100（质量优先，TLS/Reality 优先）
+    "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub2.txt",                                # 次 100
+    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/US.txt",                   # 美国专项（GeoIP 分类）
+    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/NL.txt",                   # 荷兰专项
+    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/GB.txt",                   # 英国专项
+    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/AU.txt",                   # 澳大利亚专项
+    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/JP.txt",                   # 日本专项
+    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/TW.txt",                   # 台湾专项
 ]
 
 OUTPUT_DIR = "output"
