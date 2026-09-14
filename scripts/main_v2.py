@@ -53,38 +53,31 @@ except ImportError as e:
 # ══════════════════════════════════════════════════════════════════
 
 SOURCE_URLS = [
-    # ========== 核心高质量 + 国家专项（优先美国/荷兰） ==========
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-US.txt",
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-NL.txt",
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-GB.txt",
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-AU.txt",
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-JP.txt",
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt",
-
-    # ========== 补充高质量源 ==========
-    "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub1.txt",
-    "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub2.txt",
-    "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub3.txt",
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/US.txt",
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/NL.txt",
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/AU.txt",
-
-    # ========== 额外加大美国/荷兰样本量 ==========
-    "https://raw.githubusercontent.com/r3zarahimi/tg-v2ray-configs-every2h/main/regions/conf-US.txt",
-    "https://raw.githubusercontent.com/r3zarahimi/tg-v2ray-configs-every2h/main/regions/conf-NL.txt",
-    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/countries/us.txt",
-    "https://raw.githubusercontent.com/ninjastrikers/Nexus-nodes/main/configs/countries/us/all.txt",
-    "https://raw.githubusercontent.com/ninjastrikers/Nexus-nodes/main/configs/countries/nl/all.txt",
-    "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",
-
-    # ========== 澳大利亚补充 ==========
-    "https://raw.githubusercontent.com/miladtahanian/V2RayScrapeByCountry/main/Australia.txt",
-    "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/countries/au.txt",
-    "https://raw.githubusercontent.com/ninjastrikers/Nexus-nodes/main/configs/countries/au/all.txt",
-
-    # ========== 大型综合源（含 Telegram 等） ==========
+    # ========== 1. TG 频道实时爬虫源（更新极快，活节点多） ==========
+    "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/configs/vless.txt",
+    "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/configs/vmess.txt",
+    "https://raw.githubusercontent.com/MohammadBahemmat/V2ray-Collector/main/sub/mix",
     "https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/merged.txt",
+
+    # ========== 2. GitHub 自动化高频去重源 ==========
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",
+    "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",
+    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/V2Ray-Config-By-EbraSha-All-Type.txt",
+    "https://raw.githubusercontent.com/theGreatPeter/v2rayNodes/main/v2ray.txt",
+
+    # ========== 3. 欧美及澳洲定向高命中补充源 ==========
+    "https://raw.githubusercontent.com/yebekhe/TVC/main/subscriptions/xray/base64",
+    "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub1.txt",
+    "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub2.txt",
+    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/subscriptions/location/AU.txt",
+    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/subscriptions/location/US.txt",
+    "https://raw.githubusercontent.com/miladtahanian/V2RayScrapeByCountry/main/Australia.txt",
+
+    # ========== 4. 基础多源兜底保障 ==========
+    "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt",
+    "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
+    "https://raw.githubusercontent.com/LonUp/NodeList/main/Link/v2ray.txt",
+    "https://raw.githubusercontent.com/mftzm/v2ray/main/v2ray.txt"
 ]
 
 OUTPUT_DIR = "output"
