@@ -1,0 +1,66 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇱🇺 卢森堡 (Luxembourg) 01 - jack",
+      "server": "188.114.97.6",
+      "server_port": 8080,
+      "uuid": "0926b50d-3a90-18dd-7c8e-0cf100000000",
+      "transport": {
+        "type": "ws",
+        "path": "/NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN",
+        "headers": {
+          "Host": "netlivpn4024.bgfjhd.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇱🇺 卢森堡 (Luxembourg) 02 - jack",
+      "server": "172.67.211.79",
+      "server_port": 443,
+      "password": "Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q",
+      "tls": {
+        "enabled": true,
+        "server_name": "mfyousheng.nl.eu.org",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tjwsLhx0SFASG4l9FERJ1g",
+        "headers": {
+          "Host": "mfyousheng.nl.eu.org"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇱🇺 卢森堡 (Luxembourg) 01 - jack",
+        "🇱🇺 卢森堡 (Luxembourg) 02 - jack"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇱🇺 卢森堡 (Luxembourg) 01 - jack",
+        "🇱🇺 卢森堡 (Luxembourg) 02 - jack"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

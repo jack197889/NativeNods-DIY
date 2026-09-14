@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01 (家宽) - jack
-  server: 194.5.248.88
+  server: roma2.moritech.net
   port: 443
   udp: true
   type: vless
@@ -14,7 +14,6 @@ proxies:
   tls: true
   servername: roma2.moritech.net
   skip-cert-verify: false
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select

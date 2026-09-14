@@ -4,23 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇿 阿塞拜疆 (Azerbaijan) 01 - jack
-  server: basalam.horqen.ir
-  port: 21289
+- name: 🇧🇷 巴西 (Brazil) 01 - jack
+  server: 216.128.168.190
+  port: 8388
   udp: true
-  type: vless
-  uuid: c12db015-a63c-43e5-a744-6398a90373b5
+  type: ss
+  cipher: aes-256-gcm
+  password: owVdNnQcdPgthSyX
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇿 阿塞拜疆 (Azerbaijan) 01 - jack
+  - 🇧🇷 巴西 (Brazil) 01 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇿 阿塞拜疆 (Azerbaijan) 01 - jack
+  - 🇧🇷 巴西 (Brazil) 01 - jack
 rules:
 - MATCH,PROXIES

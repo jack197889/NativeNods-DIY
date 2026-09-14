@@ -4,30 +4,29 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🌐 其他地区 (Other) 01 - jack
-  server: ccs2g.pai50288.uk
-  port: 443
+- name: 🇴🇲 OM 01 - jack
+  server: piki.speediihub.ir
+  port: 2053
   udp: true
   type: vless
-  uuid: 8be461cb-a0df-47cf-bc0d-4d9e6a22fa74
+  uuid: 4925d57f-1fd6-4cf3-9640-c4cad64d604f
   tls: true
-  servername: ccs2g.pai50288.uk
-  skip-cert-verify: false
+  reality-opts:
+    public-key: 80gx4VJQMhIOfst4X6MdcBqDSubKt5rPD9dB9LBTgwg
+    short-id: 7b9af11c1921713b
+  servername: www.speedtest.net
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /pai50288
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🌐 其他地区 (Other) 01 - jack
+  - 🇴🇲 OM 01 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🌐 其他地区 (Other) 01 - jack
+  - 🇴🇲 OM 01 - jack
 rules:
 - MATCH,PROXIES
