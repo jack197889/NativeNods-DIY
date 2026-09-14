@@ -1,0 +1,168 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "trojan",
+      "tag": "🌐 其他地区 (Other) 01 - jack",
+      "server": "104.19.229.21",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🌐 其他地区 (Other) 02 - jack",
+      "server": "104.19.229.21",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ignitelimit.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🌐 其他地区 (Other) 03 - jack",
+      "server": "104.19.229.21",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ignitelimit.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🌐 其他地区 (Other) 04 - jack",
+      "server": "104.19.229.21",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ignitelimit.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.ignitelimit.com"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🌐 其他地区 (Other) 05 - jack",
+      "server": "104.19.229.21",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "104.19.229.21",
+        "insecure": false
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🌐 其他地区 (Other) 06 - jack",
+      "server": "104.19.229.21",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ignitelimit.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "assignment"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🌐 其他地区 (Other) 07 - jack",
+      "server": "162.159.244.91",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🌐 其他地区 (Other) 01 - jack",
+        "🌐 其他地区 (Other) 02 - jack",
+        "🌐 其他地区 (Other) 03 - jack",
+        "🌐 其他地区 (Other) 04 - jack",
+        "🌐 其他地区 (Other) 05 - jack",
+        "🌐 其他地区 (Other) 06 - jack",
+        "🌐 其他地区 (Other) 07 - jack"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🌐 其他地区 (Other) 01 - jack",
+        "🌐 其他地区 (Other) 02 - jack",
+        "🌐 其他地区 (Other) 03 - jack",
+        "🌐 其他地区 (Other) 04 - jack",
+        "🌐 其他地区 (Other) 05 - jack",
+        "🌐 其他地区 (Other) 06 - jack",
+        "🌐 其他地区 (Other) 07 - jack"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

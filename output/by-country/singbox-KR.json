@@ -4,54 +4,142 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇰🇷 韩国 (South Korea) 01 - jack",
-      "server": "45.192.224.30",
-      "server_port": 8880,
-      "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "vms.lifetime17.workers.dev"
-        }
-      }
+      "server": "221.139.79.57",
+      "server_port": 13979,
+      "method": "aes-256-cfb",
+      "password": "qwerREWQ@@"
     },
     {
       "type": "vmess",
       "tag": "🇰🇷 韩国 (South Korea) 02 - jack",
+      "server": "146.56.112.110",
+      "server_port": 8888,
+      "uuid": "e7c302f3-90d6-42dd-9d7d-94a3683a3707",
+      "security": "auto"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇰🇷 韩国 (South Korea) 03 - jack",
       "server": "140.238.2.250",
       "server_port": 443,
       "uuid": "41a7089a-040b-4538-8b8d-010902405bde",
       "security": "auto"
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇰🇷 韩国 (South Korea) 03 - jack",
-      "server": "218.237.185.230",
-      "server_port": 4652,
-      "method": "aes-256-cfb",
-      "password": "qwerREWQ@@"
-    },
-    {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇰🇷 韩国 (South Korea) 04 - jack",
-      "server": "49.254.204.133",
-      "server_port": 1774,
-      "method": "aes-256-cfb",
-      "password": "1234!@#$"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇰🇷 韩国 (South Korea) 05 - jack",
-      "server": "211.178.105.134",
-      "server_port": 6123,
-      "method": "aes-256-cfb",
-      "password": "qwerREWQ@@"
+      "server": "3.39.4.109",
+      "server_port": 13672,
+      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+          "short_id": "48050fab"
+        }
+      }
     },
     {
       "type": "vless",
+      "tag": "🇰🇷 韩国 (South Korea) 05 - jack",
+      "server": "3.39.4.109",
+      "server_port": 18967,
+      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+          "short_id": "48050fab"
+        }
+      }
+    },
+    {
+      "type": "vmess",
       "tag": "🇰🇷 韩国 (South Korea) 06 - jack",
+      "server": "132.145.80.230",
+      "server_port": 80,
+      "uuid": "5155860e-d07d-46c3-9128-3afbd84626c7",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/cctv13.m3u8"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇰🇷 韩国 (South Korea) 07 - jack",
+      "server": "3.36.93.74",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "css.rbxcdn.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇰🇷 韩国 (South Korea) 08 - jack",
+      "server": "154.90.62.70",
+      "server_port": 56127,
+      "password": "p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B",
+      "tls": {
+        "enabled": true,
+        "server_name": "154.90.62.70",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 韩国 (South Korea) 09 - jack",
+      "server": "151.245.106.49",
+      "server_port": 2053,
+      "uuid": "a2de9567-9646-45a9-a410-7303a43bdb6c",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo",
+          "short_id": "429499c03d4cc8a0"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇰🇷 韩国 (South Korea) 10 - jack",
+      "server": "vpn-kr-002.fastervpn.world",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ9wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "vpn-kr-002.fastervpn.world",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 韩国 (South Korea) 11 - jack",
       "server": "kr3-r.link-t7.com",
       "server_port": 10048,
       "uuid": "7134DB35-F254-4468-BA00-D9C099CF5AF7",
@@ -75,52 +163,7 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 07 - jack",
-      "server": "132.226.226.189",
-      "server_port": 50160,
-      "password": "1671a252e2a97dc2bda4e515475931da",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇰🇷 韩国 (South Korea) 08 - jack",
-      "server": "3.39.4.109",
-      "server_port": 18967,
-      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
-          "short_id": "48050fab"
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 09 - jack",
-      "server": "131.186.19.174",
-      "server_port": 50160,
-      "password": "7302ad33229de166d393cd56143a1e4c",
-      "tls": {
-        "enabled": true,
-        "server_name": "google.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 10 - jack",
+      "tag": "🇰🇷 韩国 (South Korea) 12 - jack",
       "server": "152.70.237.123",
       "server_port": 2053,
       "password": "maintell",
@@ -132,156 +175,75 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 11 - jack",
-      "server": "3.36.93.74",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tag": "🇰🇷 韩国 (South Korea) 13 - jack",
+      "server": "150-230-252-217.liao.kdns.fr",
+      "server_port": 50160,
+      "password": "9cfc9458e48c028ec03ff86ebc71c744",
       "tls": {
         "enabled": true,
-        "server_name": "google.com",
+        "server_name": "127.0.0.1",
         "insecure": true
       }
     },
     {
-      "type": "vless",
-      "tag": "🇰🇷 韩国 (South Korea) 12 - jack",
-      "server": "3.39.4.109",
-      "server_port": 13672,
-      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
-          "short_id": "48050fab"
-        }
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇰🇷 韩国 (South Korea) 13 - jack",
-      "server": "132.145.80.230",
-      "server_port": 80,
-      "uuid": "5155860e-d07d-46c3-9128-3afbd84626c7",
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/cctv13.m3u8"
-      }
-    },
-    {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇰🇷 韩国 (South Korea) 14 - jack",
-      "server": "kr4-r.link-t7.com",
-      "server_port": 10049,
-      "uuid": "7134DB35-F254-4468-BA00-D9C099CF5AF7",
+      "server": "132.226.226.189",
+      "server_port": 50160,
+      "password": "1671a252e2a97dc2bda4e515475931da",
       "tls": {
         "enabled": true,
-        "server_name": "s0.awsstatic.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE",
-          "short_id": "686c0ef0"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "update"
+        "server_name": "www.bing.com",
+        "insecure": true
       }
     },
     {
       "type": "hysteria2",
       "tag": "🇰🇷 韩国 (South Korea) 15 - jack",
-      "server": "vpn-kr-002.fastervpn.world",
+      "server": "47.80.61.21",
       "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ9wR5tF6vB3z",
+      "password": "bf902e668996d97397a6427725141ef6",
       "tls": {
         "enabled": true,
-        "server_name": "vpn-kr-002.fastervpn.world",
+        "server_name": "47.80.61.21",
         "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "5c8f1a3e7b2d9046c1f8a5e3b7d04f2a"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇰🇷 韩国 (South Korea) 16 - jack",
+      "server": "152-69-231-175.liao.kdns.fr",
+      "server_port": 50160,
+      "password": "1beb216e3f60aea9555dae60d219a5ca",
+      "tls": {
+        "enabled": true,
+        "server_name": "152-69-231-175.liao.kdns.fr",
+        "insecure": false
       }
     },
     {
       "type": "shadowsocks",
-      "tag": "🇰🇷 韩国 (South Korea) 16 - jack",
-      "server": "221.139.79.57",
-      "server_port": 13979,
-      "method": "aes-256-cfb",
-      "password": "qwerREWQ@@"
-    },
-    {
-      "type": "vless",
       "tag": "🇰🇷 韩国 (South Korea) 17 - jack",
-      "server": "151.245.106.49",
-      "server_port": 2053,
-      "uuid": "a2de9567-9646-45a9-a410-7303a43bdb6c",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo",
-          "short_id": "429499c03d4cc8a0"
-        }
-      }
+      "server": "141.164.45.187",
+      "server_port": 6679,
+      "method": "aes-256-gcm",
+      "password": "TEzjfAYq2IjtuoS"
     },
     {
-      "type": "trojan",
+      "type": "shadowsocks",
       "tag": "🇰🇷 韩国 (South Korea) 18 - jack",
-      "server": "154.90.62.70",
-      "server_port": 56127,
-      "password": "p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B",
-      "tls": {
-        "enabled": true,
-        "server_name": "154.90.62.70",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇰🇷 韩国 (South Korea) 19 - jack",
-      "server": "13.125.236.86",
-      "server_port": 8686,
-      "uuid": "1a17b19d-4896-4531-af79-6e91d8ef8228",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw",
-          "short_id": "628b3c90c98ead4f"
-        }
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇰🇷 韩国 (South Korea) 20 - jack",
-      "server": "146.56.112.110",
-      "server_port": 8888,
-      "uuid": "e7c302f3-90d6-42dd-9d7d-94a3683a3707",
-      "security": "auto"
+      "server": "141.164.45.187",
+      "server_port": 8119,
+      "method": "aes-256-gcm",
+      "password": "cdBIDV42DCwnfIN"
     },
     {
       "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 21 - jack",
+      "tag": "🇰🇷 韩国 (South Korea) 19 - jack",
       "server": "152.67.200.82",
       "server_port": 50160,
       "password": "3d7634af8cb2c6cb4bac1c0efad8b43d",
@@ -289,55 +251,6 @@
         "enabled": true,
         "server_name": "css.rbxcdn.com",
         "insecure": true
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇰🇷 韩国 (South Korea) 22 - jack",
-      "server": "141.164.45.187",
-      "server_port": 8888,
-      "method": "aes-256-gcm",
-      "password": "Y6R9pAtvxxzmGC"
-    },
-    {
-      "type": "vless",
-      "tag": "🇰🇷 韩国 (South Korea) 23 - jack",
-      "server": "47.80.14.8",
-      "server_port": 443,
-      "uuid": "581cb8c3-dadb-4e10-a18b-5e79bfe7bd93",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.samsung.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "OBIHAXdhfYJ0PWsZjy3QYPRjTfMQlvjmBsTf1CT671w",
-          "short_id": "71110d3f7ef57760"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇰🇷 韩国 (South Korea) 24 - jack",
-      "server": "119.28.161.143",
-      "server_port": 443,
-      "uuid": "1ebb0858-218a-4dee-8746-36a67bc64462",
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "pR7MPTAA4cZsW9AO-twMzuogiWGMKPiheTg70fcWWWs",
-          "short_id": "0a427bc3"
-        }
       }
     },
     {
@@ -363,12 +276,7 @@
         "🇰🇷 韩国 (South Korea) 16 - jack",
         "🇰🇷 韩国 (South Korea) 17 - jack",
         "🇰🇷 韩国 (South Korea) 18 - jack",
-        "🇰🇷 韩国 (South Korea) 19 - jack",
-        "🇰🇷 韩国 (South Korea) 20 - jack",
-        "🇰🇷 韩国 (South Korea) 21 - jack",
-        "🇰🇷 韩国 (South Korea) 22 - jack",
-        "🇰🇷 韩国 (South Korea) 23 - jack",
-        "🇰🇷 韩国 (South Korea) 24 - jack"
+        "🇰🇷 韩国 (South Korea) 19 - jack"
       ]
     },
     {
@@ -393,12 +301,7 @@
         "🇰🇷 韩国 (South Korea) 16 - jack",
         "🇰🇷 韩国 (South Korea) 17 - jack",
         "🇰🇷 韩国 (South Korea) 18 - jack",
-        "🇰🇷 韩国 (South Korea) 19 - jack",
-        "🇰🇷 韩国 (South Korea) 20 - jack",
-        "🇰🇷 韩国 (South Korea) 21 - jack",
-        "🇰🇷 韩国 (South Korea) 22 - jack",
-        "🇰🇷 韩国 (South Korea) 23 - jack",
-        "🇰🇷 韩国 (South Korea) 24 - jack"
+        "🇰🇷 韩国 (South Korea) 19 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

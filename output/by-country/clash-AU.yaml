@@ -5,17 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇺 澳大利亚 (Australia) 01 - jack
-  server: 188.114.97.6
-  port: 80
-  udp: true
-  type: vless
-  uuid: 6faeb6a0-5055-4e4b-8fb1-ffd77e57aefa
-  network: ws
-  ws-opts:
-    path: /au-do
-    headers:
-      Host: somersby.pt.r3xxe.eu.cc
-- name: 🇦🇺 澳大利亚 (Australia) 02 - jack
   server: 82.198.246.233
   port: 180
   udp: true
@@ -23,41 +12,7 @@ proxies:
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   alterId: 0
   cipher: auto
-- name: 🇦🇺 澳大利亚 (Australia) 03 - jack
-  server: 104.18.155.229
-  port: 443
-  udp: true
-  type: vless
-  uuid: 42026ed0-7d74-4585-8e46-0fe6aa4d665a
-  tls: true
-  servername: www.genflix.co.id.r3xxe.eu.cc
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /au-do
-    headers:
-      Host: www.genflix.co.id.r3xxe.eu.cc
-- name: 🇦🇺 澳大利亚 (Australia) 04 - jack
-  server: 152.67.115.203
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 633bc3be486b646190661ac2387c150a
-  sni: www.bing.com
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: 850a3fb1cd33a28f12d837578ae1a2e7
-- name: 🇦🇺 澳大利亚 (Australia) 05 - jack
-  server: 103.75.119.126
-  port: 2087
-  udp: true
-  type: vless
-  uuid: 731f177e-00aa-480c-b935-661456139a32
-  network: ws
-  ws-opts:
-    path: /7586c69d3dc9
-- name: 🇦🇺 澳大利亚 (Australia) 06 - jack
+- name: 🇦🇺 澳大利亚 (Australia) 02 - jack
   server: 51.161.204.242
   port: 443
   udp: true
@@ -70,26 +25,23 @@ proxies:
     short-id: d15c17cef9b2e456
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇦🇺 澳大利亚 (Australia) 07 - jack
+- name: 🇦🇺 澳大利亚 (Australia) 03 - jack
+  server: 103.75.119.126
+  port: 2087
+  udp: true
+  type: vless
+  uuid: 731f177e-00aa-480c-b935-661456139a32
+  network: ws
+  ws-opts:
+    path: /7586c69d3dc9
+- name: 🇦🇺 澳大利亚 (Australia) 04 - jack
   server: vpn-au-002.fastervpn.world
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: google.com
+  sni: vk.com
   skip-cert-verify: true
-- name: 🇦🇺 澳大利亚 (Australia) 08 - jack
-  server: 46.250.240.80
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 948df76f-505d-4608-9c76-a933ee3ccc76
-  tls: true
-  reality-opts:
-    public-key: CYFeysLf--_IVhxQOCd3ZxLrAVWFFOkJzvIGHOVXN3E
-    short-id: 4cc9dc65f7770115
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -99,10 +51,6 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 02 - jack
   - 🇦🇺 澳大利亚 (Australia) 03 - jack
   - 🇦🇺 澳大利亚 (Australia) 04 - jack
-  - 🇦🇺 澳大利亚 (Australia) 05 - jack
-  - 🇦🇺 澳大利亚 (Australia) 06 - jack
-  - 🇦🇺 澳大利亚 (Australia) 07 - jack
-  - 🇦🇺 澳大利亚 (Australia) 08 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -112,9 +60,5 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 02 - jack
   - 🇦🇺 澳大利亚 (Australia) 03 - jack
   - 🇦🇺 澳大利亚 (Australia) 04 - jack
-  - 🇦🇺 澳大利亚 (Australia) 05 - jack
-  - 🇦🇺 澳大利亚 (Australia) 06 - jack
-  - 🇦🇺 澳大利亚 (Australia) 07 - jack
-  - 🇦🇺 澳大利亚 (Australia) 08 - jack
 rules:
 - MATCH,PROXIES

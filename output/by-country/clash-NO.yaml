@@ -25,19 +25,6 @@ proxies:
   servername: bowandbead.com
   client-fingerprint: ios
 - name: 🇳🇴 挪威 (Norway) 03 - jack
-  server: 151.242.169.119
-  port: 443
-  udp: true
-  type: vless
-  uuid: 10de5732-5d62-43bd-80a2-ec678100824a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  servername: yidio.com
-  client-fingerprint: chrome
-- name: 🇳🇴 挪威 (Norway) 04 - jack
   server: 46.29.238.88
   port: 40443
   udp: true
@@ -48,19 +35,7 @@ proxies:
     public-key: aZOpodpnifoxDqTzWgxJRffgsiGnG9-h-EZd4SvOImc
     short-id: f7b2
   servername: deepl.com
-  client-fingerprint: chrome
-- name: 🇳🇴 挪威 (Norway) 05 - jack
-  server: 89.185.81.65
-  port: 40443
-  udp: true
-  type: vless
-  uuid: ed91e79c-f6bf-4fba-8cc0-6d45acaec22b
-  tls: true
-  reality-opts:
-    public-key: dvx6zPztKbgHpYaW6J4OZQC74Uy0JS6HUVdDfbjG5V4
-    short-id: '7606'
-  servername: deepl.com
-  client-fingerprint: firefox
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
@@ -69,8 +44,6 @@ proxy-groups:
   - 🇳🇴 挪威 (Norway) 01 - jack
   - 🇳🇴 挪威 (Norway) 02 - jack
   - 🇳🇴 挪威 (Norway) 03 - jack
-  - 🇳🇴 挪威 (Norway) 04 - jack
-  - 🇳🇴 挪威 (Norway) 05 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -79,7 +52,5 @@ proxy-groups:
   - 🇳🇴 挪威 (Norway) 01 - jack
   - 🇳🇴 挪威 (Norway) 02 - jack
   - 🇳🇴 挪威 (Norway) 03 - jack
-  - 🇳🇴 挪威 (Norway) 04 - jack
-  - 🇳🇴 挪威 (Norway) 05 - jack
 rules:
 - MATCH,PROXIES

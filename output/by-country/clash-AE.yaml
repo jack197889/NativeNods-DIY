@@ -5,16 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01 - jack
-  server: 89.117.112.40
-  port: 8880
+  server: 31.58.181.88
+  port: 8443
   udp: true
   type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime11.workers.dev
+  uuid: 75efda17-fdc2-43d8-a2c6-fbdba0289244
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  servername: tradingview.com
+  client-fingerprint: firefox
 - name: 🇦🇪 阿联酋 (UAE) 02 - jack
   server: 31.56.189.27
   port: 2087
@@ -39,127 +40,15 @@ proxies:
   obfs: salamander
   obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
 - name: 🇦🇪 阿联酋 (UAE) 04 - jack
-  server: 78.40.195.140
-  port: 443
-  udp: true
-  type: vless
-  uuid: eec2f6a7-c10f-43b0-b133-61f9bf9bbc27
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Rp0WaupRP9LtJ-dd4vjKwuvSzqo_ZqIZPZWDEbSoIAo
-    short-id: 98096455d963bdbb
-  servername: www.booking.com
-  client-fingerprint: firefox
-- name: 🇦🇪 阿联酋 (UAE) 05 - jack
-  server: 57.129.130.57
-  port: 52014
-  udp: true
-  type: vless
-  uuid: c290d7f3-8399-43c9-9a1b-4977f380d65b
-  tls: true
-  servername: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
-- name: 🇦🇪 阿联酋 (UAE) 06 - jack
-  server: 89.47.55.8
-  port: 8443
-  udp: true
-  type: vless
-  uuid: dca76b88-b038-e82b-45e1-1d76b476d7ca
-  tls: true
-  reality-opts:
-    public-key: iVDh09Vm2DqZMNQoUdf-LCZ6TqVGb9mLXnClAK2LRj4
-  servername: www.canon.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TunService
-- name: 🇦🇪 阿联酋 (UAE) 07 - jack
-  server: 104.17.147.22
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5ef04ae8-8d7c-0a66-13f4-6e3f00000005
-  tls: true
-  servername: relay.lunetcloud.ir
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /lunetnetwork
-    headers:
-      Host: relay.lunetcloud.ir
-- name: 🇦🇪 阿联酋 (UAE) 08 - jack
-  server: 45.130.125.201
-  port: 80
-  udp: true
-  type: vless
-  uuid: dc8a9493-c54a-459e-d060-81a700000001
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: nahan-core.netizo09.workers.dev
-- name: 🇦🇪 阿联酋 (UAE) 09 - jack
-  server: 89.47.55.8
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 4350213a-b4e7-262a-0bd7-bd16957cf71a
-  tls: true
-  reality-opts:
-    public-key: WtLZK1KyhSpI3K-R4M3sLAHWPOgGPMgkL6RneL0OfCY
-  servername: download.nvidia.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TunService
-- name: 🇦🇪 阿联酋 (UAE) 10 - jack
-  server: 45.131.66.61
-  port: 20001
-  udp: true
-  type: vless
-  uuid: abfff946-4ee4-4c1f-a6c8-5e8a000755f2
-  tls: true
-  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
-- name: 🇦🇪 阿联酋 (UAE) 11 - jack
-  server: 85.204.107.183
+  server: 85.204.107.171
   port: 8080
   udp: true
   type: hysteria2
   password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
   sni: hopp-romania-new.roxa.org
   skip-cert-verify: true
-- name: 🇦🇪 阿联酋 (UAE) 12 - jack
-  server: 203.137.165.164
-  port: 57554
-  udp: true
-  type: vless
-  uuid: 7fdb95f9-c758-486c-865a-7c1219823670
-  tls: true
-  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
-- name: 🇦🇪 阿联酋 (UAE) 13 - jack
-  server: 84.235.244.108
+- name: 🇦🇪 阿联酋 (UAE) 05 - jack
+  server: uae.unixzone.us
   port: 22573
   udp: true
   type: vless
@@ -179,14 +68,6 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 03 - jack
   - 🇦🇪 阿联酋 (UAE) 04 - jack
   - 🇦🇪 阿联酋 (UAE) 05 - jack
-  - 🇦🇪 阿联酋 (UAE) 06 - jack
-  - 🇦🇪 阿联酋 (UAE) 07 - jack
-  - 🇦🇪 阿联酋 (UAE) 08 - jack
-  - 🇦🇪 阿联酋 (UAE) 09 - jack
-  - 🇦🇪 阿联酋 (UAE) 10 - jack
-  - 🇦🇪 阿联酋 (UAE) 11 - jack
-  - 🇦🇪 阿联酋 (UAE) 12 - jack
-  - 🇦🇪 阿联酋 (UAE) 13 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -197,13 +78,5 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 03 - jack
   - 🇦🇪 阿联酋 (UAE) 04 - jack
   - 🇦🇪 阿联酋 (UAE) 05 - jack
-  - 🇦🇪 阿联酋 (UAE) 06 - jack
-  - 🇦🇪 阿联酋 (UAE) 07 - jack
-  - 🇦🇪 阿联酋 (UAE) 08 - jack
-  - 🇦🇪 阿联酋 (UAE) 09 - jack
-  - 🇦🇪 阿联酋 (UAE) 10 - jack
-  - 🇦🇪 阿联酋 (UAE) 11 - jack
-  - 🇦🇪 阿联酋 (UAE) 12 - jack
-  - 🇦🇪 阿联酋 (UAE) 13 - jack
 rules:
 - MATCH,PROXIES
