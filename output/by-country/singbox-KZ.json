@@ -6,6 +6,43 @@
     {
       "type": "vless",
       "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - jack",
+      "server": "104.18.46.46",
+      "server_port": 2082,
+      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560security=tls",
+        "headers": {
+          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - jack",
+      "server": "104.18.42.54",
+      "server_port": 2083,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tls": {
+        "enabled": true,
+        "server_name": "newwk1.f1w.de5.net",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "newwk1.f1w.de5.net"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 03 - jack",
       "server": "62.233.39.9",
       "server_port": 8443,
       "uuid": "4350213a-b4e7-262a-0bd7-bd16957cf71a",
@@ -14,7 +51,7 @@
         "server_name": "dl.dell.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": ""
         },
         "reality": {
           "enabled": true,
@@ -29,7 +66,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - jack",
+      "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 04 - jack",
       "server": "91.224.87.22",
       "server_port": 9882,
       "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
@@ -52,9 +89,49 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 05 - jack",
+      "server": "77.73.232.61",
+      "server_port": 19747,
+      "uuid": "2a9ed01e-5455-44b4-a66a-76ee8165f0ac",
+      "tls": {
+        "enabled": true,
+        "server_name": "yahoo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "ZO9dTeg1slvTXgVsBsaJ1BDvz_YUImTLJjbHs-GdVyM",
+          "short_id": "2001"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 06 - jack",
+      "server": "178.236.16.98",
+      "server_port": 35728,
+      "uuid": "a00d89f6-ab7e-4e30-a5e5-54c701d62c93",
+      "tls": {
+        "enabled": true,
+        "server_name": "yahoo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng",
+          "short_id": "69a2"
+        }
+      }
+    },
+    {
       "type": "vmess",
-      "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 03 - jack",
-      "server": "3h-kazakhstan1.09vpn.com",
+      "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 07 - jack",
+      "server": "38.107.234.57",
       "server_port": 80,
       "uuid": "567f4be5-12ab-42e1-b8d9-db6fd1fdd31c",
       "security": "auto",
@@ -65,7 +142,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 04 - jack",
+      "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 08 - jack",
       "server": "109.248.170.119",
       "server_port": 13447,
       "uuid": "b573cefb-7bc7-4a42-b407-b8b534e66773",
@@ -85,7 +162,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 05 - jack",
+      "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 09 - jack",
       "server": "83.222.23.81",
       "server_port": 38065,
       "uuid": "4b9063e0-3288-44e9-9aac-80fbfce323a0",
@@ -104,26 +181,6 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 06 - jack",
-      "server": "77.73.232.61",
-      "server_port": 19747,
-      "uuid": "2a9ed01e-5455-44b4-a66a-76ee8165f0ac",
-      "tls": {
-        "enabled": true,
-        "server_name": "yahoo.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ZO9dTeg1slvTXgVsBsaJ1BDvz_YUImTLJjbHs-GdVyM",
-          "short_id": "2001"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -133,7 +190,10 @@
         "🇰🇿 哈萨克斯坦 (Kazakhstan) 03 - jack",
         "🇰🇿 哈萨克斯坦 (Kazakhstan) 04 - jack",
         "🇰🇿 哈萨克斯坦 (Kazakhstan) 05 - jack",
-        "🇰🇿 哈萨克斯坦 (Kazakhstan) 06 - jack"
+        "🇰🇿 哈萨克斯坦 (Kazakhstan) 06 - jack",
+        "🇰🇿 哈萨克斯坦 (Kazakhstan) 07 - jack",
+        "🇰🇿 哈萨克斯坦 (Kazakhstan) 08 - jack",
+        "🇰🇿 哈萨克斯坦 (Kazakhstan) 09 - jack"
       ]
     },
     {
@@ -145,7 +205,10 @@
         "🇰🇿 哈萨克斯坦 (Kazakhstan) 03 - jack",
         "🇰🇿 哈萨克斯坦 (Kazakhstan) 04 - jack",
         "🇰🇿 哈萨克斯坦 (Kazakhstan) 05 - jack",
-        "🇰🇿 哈萨克斯坦 (Kazakhstan) 06 - jack"
+        "🇰🇿 哈萨克斯坦 (Kazakhstan) 06 - jack",
+        "🇰🇿 哈萨克斯坦 (Kazakhstan) 07 - jack",
+        "🇰🇿 哈萨克斯坦 (Kazakhstan) 08 - jack",
+        "🇰🇿 哈萨克斯坦 (Kazakhstan) 09 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

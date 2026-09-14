@@ -5,15 +5,21 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 01 (家宽) - jack",
-      "server": "roma2.moritech.net",
+      "tag": "🇹🇷 土耳其 (Turkey) 01 (家宽) R53 - jack",
+      "server": "172.67.151.109",
       "server_port": 443,
-      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-      "flow": "xtls-rprx-vision",
+      "uuid": "50414e45-4c5f-5a45-5553-635698a6bb9c",
       "tls": {
         "enabled": true,
-        "server_name": "roma2.moritech.net",
+        "server_name": "jdzit4e4urks.xwzohsebujps.workers.dev",
         "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/stream/PANEL_ZEUS/635698a6bb9c/loc-0",
+        "headers": {
+          "Host": "jdzit4e4urks.xwzohsebujps.workers.dev"
+        }
       }
     },
     {
@@ -21,14 +27,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇴 罗马尼亚 (Romania) 01 (家宽) - jack"
+        "🇹🇷 土耳其 (Turkey) 01 (家宽) R53 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇴 罗马尼亚 (Romania) 01 (家宽) - jack"
+        "🇹🇷 土耳其 (Turkey) 01 (家宽) R53 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

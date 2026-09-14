@@ -18,9 +18,32 @@
       }
     },
     {
-      "type": "trojan",
+      "type": "vless",
       "tag": "🇱🇺 卢森堡 (Luxembourg) 02 - jack",
-      "server": "172.67.211.79",
+      "server": "104.21.117.9",
+      "server_port": 443,
+      "uuid": "0926b50d-3a90-18dd-7c8e-0cf100000000",
+      "tls": {
+        "enabled": true,
+        "server_name": "netlivpn4024.bgfjhd.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN",
+        "headers": {
+          "Host": "netlivpn4024.bgfjhd.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇱🇺 卢森堡 (Luxembourg) 03 - jack",
+      "server": "mfyousheng.nl.eu.org",
       "server_port": 443,
       "password": "Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q",
       "tls": {
@@ -30,10 +53,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/tjwsLhx0SFASG4l9FERJ1g",
-        "headers": {
-          "Host": "mfyousheng.nl.eu.org"
-        }
+        "path": "/tjwsLhx0SFASG4l9FERJ1g"
       }
     },
     {
@@ -42,7 +62,8 @@
       "outbounds": [
         "auto",
         "🇱🇺 卢森堡 (Luxembourg) 01 - jack",
-        "🇱🇺 卢森堡 (Luxembourg) 02 - jack"
+        "🇱🇺 卢森堡 (Luxembourg) 02 - jack",
+        "🇱🇺 卢森堡 (Luxembourg) 03 - jack"
       ]
     },
     {
@@ -50,7 +71,8 @@
       "tag": "auto",
       "outbounds": [
         "🇱🇺 卢森堡 (Luxembourg) 01 - jack",
-        "🇱🇺 卢森堡 (Luxembourg) 02 - jack"
+        "🇱🇺 卢森堡 (Luxembourg) 02 - jack",
+        "🇱🇺 卢森堡 (Luxembourg) 03 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

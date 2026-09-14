@@ -12,6 +12,44 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
 - name: 🇳🇴 挪威 (Norway) 02 - jack
+  server: 151.242.168.125
+  port: 390
+  udp: true
+  type: vless
+  uuid: b02ff150-ee30-46e0-9ea1-adbfd7762a06
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 5RCgAVjaT7hwdVIKAEULswXGqR127ZOZV6X17nEhYk8
+    short-id: b545fe8c5e22f92d
+  servername: bowandbead.com
+  client-fingerprint: ios
+- name: 🇳🇴 挪威 (Norway) 03 - jack
+  server: 151.242.169.119
+  port: 443
+  udp: true
+  type: vless
+  uuid: 10de5732-5d62-43bd-80a2-ec678100824a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
+    short-id: fd55b698ee8c3629
+  servername: yidio.com
+  client-fingerprint: chrome
+- name: 🇳🇴 挪威 (Norway) 04 - jack
+  server: 46.29.238.88
+  port: 40443
+  udp: true
+  type: vless
+  uuid: db320947-adfb-400d-b60b-383b8324bffe
+  tls: true
+  reality-opts:
+    public-key: aZOpodpnifoxDqTzWgxJRffgsiGnG9-h-EZd4SvOImc
+    short-id: f7b2
+  servername: deepl.com
+  client-fingerprint: chrome
+- name: 🇳🇴 挪威 (Norway) 05 - jack
   server: 89.185.81.65
   port: 40443
   udp: true
@@ -23,44 +61,6 @@ proxies:
     short-id: '7606'
   servername: deepl.com
   client-fingerprint: firefox
-- name: 🇳🇴 挪威 (Norway) 03 - jack
-  server: 46.29.238.88
-  port: 40443
-  udp: true
-  type: vless
-  uuid: db320947-adfb-400d-b60b-383b8324bffe
-  tls: true
-  reality-opts:
-    public-key: aZOpodpnifoxDqTzWgxJRffgsiGnG9-h-EZd4SvOImc
-    short-id: f7b2
-  servername: deepl.com
-  client-fingerprint: qq
-- name: 🇳🇴 挪威 (Norway) 04 - jack
-  server: 151.242.169.119
-  port: 443
-  udp: true
-  type: vless
-  uuid: d2a3fdbd-386c-485c-a6d4-74dea3f970d8
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  servername: yidio.com
-  client-fingerprint: firefox
-- name: 🇳🇴 挪威 (Norway) 05 - jack
-  server: 151.242.168.125
-  port: 390
-  udp: true
-  type: vless
-  uuid: 7b363f9c-3df9-4b60-a789-9cd36be0bdfe
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 5RCgAVjaT7hwdVIKAEULswXGqR127ZOZV6X17nEhYk8
-    short-id: b545fe8c5e22f92d
-  servername: bowandbead.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

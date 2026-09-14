@@ -22,7 +22,7 @@
         "server_name": "cdn.steamstatic.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -37,13 +37,27 @@
     },
     {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 03 (家宽) - jack",
-      "server": "185.125.103.62",
-      "server_port": 8082,
-      "uuid": "7909e164-d482-4620-a370-07e6fda6676b",
+      "tag": "🇺🇸 美国 (United States) 03 (家宽) - jack",
+      "server": "104.21.39.47",
+      "server_port": 8080,
+      "uuid": "b0c94dd5-0c4c-6e1e-7ecf-84c386f7c748",
+      "transport": {
+        "type": "ws",
+        "path": "/taha3",
+        "headers": {
+          "Host": "aged-silence-8d7d.tahaggs.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 04 (家宽) - jack",
+      "server": "116.204.164.5",
+      "server_port": 7443,
+      "uuid": "d430d61d-5404-4f5b-9eaf-3266b059969b",
       "tls": {
         "enabled": true,
-        "server_name": "wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev",
+        "server_name": "bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -54,21 +68,27 @@
         "type": "ws",
         "path": "/@Marisa_kristi",
         "headers": {
-          "Host": "wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev"
+          "Host": "bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 04 (家宽) - jack",
-      "server": "roma2.moritech.net",
+      "tag": "🇹🇷 土耳其 (Turkey) 05 (家宽) R53 - jack",
+      "server": "172.67.151.109",
       "server_port": 443,
-      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-      "flow": "xtls-rprx-vision",
+      "uuid": "50414e45-4c5f-5a45-5553-635698a6bb9c",
       "tls": {
         "enabled": true,
-        "server_name": "roma2.moritech.net",
+        "server_name": "jdzit4e4urks.xwzohsebujps.workers.dev",
         "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/stream/PANEL_ZEUS/635698a6bb9c/loc-0",
+        "headers": {
+          "Host": "jdzit4e4urks.xwzohsebujps.workers.dev"
+        }
       }
     },
     {
@@ -78,8 +98,9 @@
         "auto",
         "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
         "🇸🇪 瑞典 (Sweden) 02 (移动家宽) - jack",
-        "🇯🇵 日本 (Japan) 03 (家宽) - jack",
-        "🇷🇴 罗马尼亚 (Romania) 04 (家宽) - jack"
+        "🇺🇸 美国 (United States) 03 (家宽) - jack",
+        "🇯🇵 日本 (Japan) 04 (家宽) - jack",
+        "🇹🇷 土耳其 (Turkey) 05 (家宽) R53 - jack"
       ]
     },
     {
@@ -88,8 +109,9 @@
       "outbounds": [
         "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
         "🇸🇪 瑞典 (Sweden) 02 (移动家宽) - jack",
-        "🇯🇵 日本 (Japan) 03 (家宽) - jack",
-        "🇷🇴 罗马尼亚 (Romania) 04 (家宽) - jack"
+        "🇺🇸 美国 (United States) 03 (家宽) - jack",
+        "🇯🇵 日本 (Japan) 04 (家宽) - jack",
+        "🇹🇷 土耳其 (Turkey) 05 (家宽) R53 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

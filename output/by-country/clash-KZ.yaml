@@ -5,6 +5,32 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - jack
+  server: 104.18.46.46
+  port: 2082
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - jack
+  server: 104.18.42.54
+  port: 2083
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: newwk1.f1w.de5.net
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: newwk1.f1w.de5.net
+- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 03 - jack
   server: 62.233.39.9
   port: 8443
   udp: true
@@ -14,11 +40,11 @@ proxies:
   reality-opts:
     public-key: oHaUPZiESTQQ89DMd4uIcPWgsyeFFy58iZYX_8mbvWk
   servername: dl.dell.com
-  client-fingerprint: chrome
+  client-fingerprint: ''
   network: grpc
   grpc-opts:
     grpc-service-name: TunService
-- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - jack
+- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 04 - jack
   server: 91.224.87.22
   port: 9882
   udp: true
@@ -33,8 +59,32 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc-tunnel
-- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 03 - jack
-  server: 3h-kazakhstan1.09vpn.com
+- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 05 - jack
+  server: 77.73.232.61
+  port: 19747
+  udp: true
+  type: vless
+  uuid: 2a9ed01e-5455-44b4-a66a-76ee8165f0ac
+  tls: true
+  reality-opts:
+    public-key: ZO9dTeg1slvTXgVsBsaJ1BDvz_YUImTLJjbHs-GdVyM
+    short-id: '2001'
+  servername: yahoo.com
+  client-fingerprint: chrome
+- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 06 - jack
+  server: 178.236.16.98
+  port: 35728
+  udp: true
+  type: vless
+  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
+  tls: true
+  reality-opts:
+    public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
+    short-id: 69a2
+  servername: yahoo.com
+  client-fingerprint: chrome
+- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 07 - jack
+  server: 38.107.234.57
   port: 80
   udp: true
   type: vmess
@@ -44,7 +94,7 @@ proxies:
   network: ws
   ws-opts:
     path: /vmess/
-- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 04 - jack
+- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 08 - jack
   server: 109.248.170.119
   port: 13447
   udp: true
@@ -56,7 +106,7 @@ proxies:
     short-id: '83'
   servername: yahoo.com
   client-fingerprint: chrome
-- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 05 - jack
+- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 09 - jack
   server: 83.222.23.81
   port: 38065
   udp: true
@@ -66,18 +116,6 @@ proxies:
   reality-opts:
     public-key: dSSDPTK6AHfAdRAXD9i4rzqcNIY65RxlF25UyCKdiyo
     short-id: fa
-  servername: yahoo.com
-  client-fingerprint: chrome
-- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 06 - jack
-  server: 77.73.232.61
-  port: 19747
-  udp: true
-  type: vless
-  uuid: 2a9ed01e-5455-44b4-a66a-76ee8165f0ac
-  tls: true
-  reality-opts:
-    public-key: ZO9dTeg1slvTXgVsBsaJ1BDvz_YUImTLJjbHs-GdVyM
-    short-id: '2001'
   servername: yahoo.com
   client-fingerprint: chrome
 proxy-groups:
@@ -91,6 +129,9 @@ proxy-groups:
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 04 - jack
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 05 - jack
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 06 - jack
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 07 - jack
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 08 - jack
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 09 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -102,5 +143,8 @@ proxy-groups:
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 04 - jack
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 05 - jack
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 06 - jack
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 07 - jack
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 08 - jack
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 09 - jack
 rules:
 - MATCH,PROXIES

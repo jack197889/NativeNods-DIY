@@ -6,54 +6,74 @@ log-level: info
 proxies:
 - name: 🇱🇻 拉脱维亚 (Latvia) 01 - jack
   server: 185.135.86.175
-  port: 9068
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: mwgRg9hRq3b4Qnwb
-- name: 🇱🇻 拉脱维亚 (Latvia) 02 - jack
-  server: 185.135.86.175
-  port: 9086
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 37Z4TFCYhfxcpc9Q
-- name: 🇱🇻 拉脱维亚 (Latvia) 03 - jack
-  server: 185.135.86.175
-  port: 9017
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: HAVAdE3nXhqA5nHp
-- name: 🇱🇻 拉脱维亚 (Latvia) 04 - jack
-  server: 185.135.86.175
-  port: 9082
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 45xgMgm386pjWjTx
-- name: 🇱🇻 拉脱维亚 (Latvia) 05 - jack
-  server: 185.135.86.175
-  port: 9007
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: kSPmvwdFzGMMW5pY
-- name: 🇱🇻 拉脱维亚 (Latvia) 06 - jack
-  server: 185.135.86.175
   port: 9033
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: UTJA57ypk2XKQpnm
-- name: 🇱🇻 拉脱维亚 (Latvia) 07 - jack
+- name: 🇱🇻 拉脱维亚 (Latvia) 02 - jack
   server: 185.135.86.175
   port: 9094
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: rpgbNnU9rDDU4aWZ
+- name: 🇱🇻 拉脱维亚 (Latvia) 03 - jack
+  server: 185.135.86.175
+  port: 9068
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: mwgRg9hRq3b4Qnwb
+- name: 🇱🇻 拉脱维亚 (Latvia) 04 - jack
+  server: 185.135.86.175
+  port: 9086
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 37Z4TFCYhfxcpc9Q
+- name: 🇱🇻 拉脱维亚 (Latvia) 05 - jack
+  server: 185.135.86.175
+  port: 9017
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: HAVAdE3nXhqA5nHp
+- name: 🇱🇻 拉脱维亚 (Latvia) 06 - jack
+  server: 185.135.86.175
+  port: 9034
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: Yg4MbdXFQ9HFFVY6
+- name: 🇱🇻 拉脱维亚 (Latvia) 07 - jack
+  server: 138.124.180.137
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5234b2b7-5e07-422c-8159-d62a676c00c6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
+    short-id: 33acba1b
+  servername: www.apple.com
+  client-fingerprint: chrome
 - name: 🇱🇻 拉脱维亚 (Latvia) 08 - jack
+  server: 185.135.86.175
+  port: 9007
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: kSPmvwdFzGMMW5pY
+- name: 🇱🇻 拉脱维亚 (Latvia) 09 - jack
+  server: 185.135.86.175
+  port: 9082
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 45xgMgm386pjWjTx
+- name: 🇱🇻 拉脱维亚 (Latvia) 10 - jack
   server: 195.123.213.28
   port: 443
   udp: true
@@ -66,17 +86,7 @@ proxies:
     short-id: 5c256336e3b673fa
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇱🇻 拉脱维亚 (Latvia) 09 - jack
-  server: 46.8.237.12
-  port: 2096
-  udp: true
-  type: vless
-  uuid: 1a67126c-b9c4-4e78-b96e-eabd4002ab0c
-  tls: true
-  servername: uycneynsieuocxniseunciusecmsepiock.novexgroup.ir
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇱🇻 拉脱维亚 (Latvia) 10 - jack
+- name: 🇱🇻 拉脱维亚 (Latvia) 11 - jack
   server: 131.123.25.3
   port: 443
   udp: true
@@ -89,18 +99,15 @@ proxies:
     short-id: 00a61d55a07de885
   servername: fr.convert-flow.net
   client-fingerprint: qq
-- name: 🇱🇻 拉脱维亚 (Latvia) 11 - jack
-  server: 138.124.180.137
-  port: 443
+- name: 🇱🇻 拉脱维亚 (Latvia) 12 - jack
+  server: uycneynsieuocxniseunciusecmsepiock.novexgroup.ir
+  port: 2096
   udp: true
   type: vless
-  uuid: 5234b2b7-5e07-422c-8159-d62a676c00c6
-  flow: xtls-rprx-vision
+  uuid: 1a67126c-b9c4-4e78-b96e-eabd4002ab0c
   tls: true
-  reality-opts:
-    public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
-    short-id: 33acba1b
-  servername: www.apple.com
+  servername: uycneynsieuocxniseunciusecmsepiock.novexgroup.ir
+  skip-cert-verify: false
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -118,6 +125,7 @@ proxy-groups:
   - 🇱🇻 拉脱维亚 (Latvia) 09 - jack
   - 🇱🇻 拉脱维亚 (Latvia) 10 - jack
   - 🇱🇻 拉脱维亚 (Latvia) 11 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 12 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -134,5 +142,6 @@ proxy-groups:
   - 🇱🇻 拉脱维亚 (Latvia) 09 - jack
   - 🇱🇻 拉脱维亚 (Latvia) 10 - jack
   - 🇱🇻 拉脱维亚 (Latvia) 11 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 12 - jack
 rules:
 - MATCH,PROXIES
