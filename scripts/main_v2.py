@@ -53,28 +53,19 @@ except ImportError as e:
 # ══════════════════════════════════════════════════════════════════
 
 SOURCE_URLS = [
-    # ========== 1. 高频 TG 实时爬虫源（更新极快，活节点多，已替换失效链接） ==========
-    "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/configs/vless.txt",
-    "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/configs/vmess.txt",
+    # ========== 1. 实时爬虫与 Telegram 聚合源（已修正真实路径） ==========
+    "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/Config_jo.txt",
     "https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/merged.txt",
+    "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/base64/mix",
 
-    # ========== 2. 精选 GitHub 自动化去重源 ==========
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",
+    # ========== 2. 精选高品质自动化去重源 ==========
+    "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt",
     "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",
-    "https://raw.githubusercontent.com/theGreatPeter/v2rayNodes/main/v2ray.txt",
-
-    # ========== 3. 欧美及澳大利亚定向补充源（体量适中） ==========
-    "https://raw.githubusercontent.com/yebekhe/TVC/main/subscriptions/xray/base64",
     "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub1.txt",
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/subscriptions/location/AU.txt",
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/subscriptions/location/US.txt",
-    "https://raw.githubusercontent.com/miladtahanian/V2RayScrapeByCountry/main/Australia.txt",
 
-    # ========== 4. 基础稳定源（补充不同骨干网线路） ==========
-    "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt",
+    # ========== 3. 基础稳定补充源 ==========
     "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
-    "https://raw.githubusercontent.com/LonUp/NodeList/main/Link/v2ray.txt",
-    "https://raw.githubusercontent.com/mftzm/v2ray/main/v2ray.txt"
+    "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/best.txt"
 ]
 
 OUTPUT_DIR = "output"
