@@ -4,34 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 01 (家宽) - jack",
-      "server": "188.114.96.3",
-      "server_port": 2087,
-      "uuid": "756e8f39-04e8-436d-b5c6-905d37d9562c",
-      "tls": {
-        "enabled": true,
-        "server_name": "Ez-98919A.MOtoRicb.Workers.DeV",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoiR1BxUFhYR0w1TlBLMTRsIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ",
-        "headers": {
-          "Host": "ez-98919a.motoricb.workers.dev"
-        }
-      }
-    },
-    {
       "type": "shadowsocks",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
       "server": "36.224.152.189",
       "server_port": 50099,
       "method": "chacha20-ietf-poly1305",
@@ -39,30 +13,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 03 (家宽) - jack",
-      "server": "57.129.130.57",
-      "server_port": 52014,
-      "uuid": "b30c54d5-315f-428c-80d0-83b4f423abb2",
-      "tls": {
-        "enabled": true,
-        "server_name": "ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/@Marisa_kristi",
-        "headers": {
-          "Host": "ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
       "server": "hinet1.2yly.com",
       "server_port": 24215,
       "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
@@ -85,20 +36,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇦 加拿大 (Canada) 01 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
-        "🇯🇵 日本 (Japan) 03 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇦 加拿大 (Canada) 01 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
-        "🇯🇵 日本 (Japan) 03 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

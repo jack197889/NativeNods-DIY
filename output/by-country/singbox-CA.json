@@ -6,86 +6,30 @@
     {
       "type": "shadowsocks",
       "tag": "🇨🇦 加拿大 (Canada) 01 - jack",
-      "server": "137.184.174.93",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
+      "server": "149.22.95.183",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
       "type": "shadowsocks",
       "tag": "🇨🇦 加拿大 (Canada) 02 - jack",
-      "server": "51.222.200.165",
-      "server_port": 5000,
+      "server": "166.88.130.218",
+      "server_port": 7018,
       "method": "aes-256-gcm",
-      "password": "Y6R9pAtvxxzmGC"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 03 - jack",
-      "server": "138.197.141.58",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 04 - jack",
-      "server": "51.222.107.43",
-      "server_port": 2083,
-      "method": "2022-blake3-aes-256-gcm",
-      "password": "cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:HWFFJN19JkvbTKo/79AfnbRBK9uHUUaFNZJyLjEoJGs="
+      "password": "fbcec76953a2d173"
     },
     {
       "type": "vmess",
-      "tag": "🇨🇦 加拿大 (Canada) 05 - jack",
+      "tag": "🇨🇦 加拿大 (Canada) 03 - jack",
       "server": "23.162.200.198",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
       "security": "auto"
     },
     {
-      "type": "hysteria2",
-      "tag": "🇨🇦 加拿大 (Canada) 06 - jack",
-      "server": "15.223.122.197",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "15.223.122.197",
-        "insecure": true
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 07 - jack",
-      "server": "188.114.97.6",
-      "server_port": 2086,
-      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "zb1zi.s3nx.dyz.hh.vavava.kdns.fr"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 08 - jack",
-      "server": "188.114.97.6",
-      "server_port": 8080,
-      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2560",
-        "headers": {
-          "Host": "zb1zi.s3nx.dyz.hh.vavava.kdns.fr"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 09 - jack",
+      "tag": "🇨🇦 加拿大 (Canada) 04 - jack",
       "server": "216.152.147.28",
       "server_port": 443,
       "uuid": "d9e4721d-cdac-44c7-bc91-117367eac194",
@@ -106,31 +50,51 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 10 - jack",
-      "server": "51.222.141.125",
-      "server_port": 445,
+      "tag": "🇨🇦 加拿大 (Canada) 05 - jack",
+      "server": "51.222.200.165",
+      "server_port": 5000,
       "method": "aes-256-gcm",
-      "password": "zDNVedRFPQexG9v"
+      "password": "Y6R9pAtvxxzmGC"
     },
     {
       "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 11 - jack",
-      "server": "149.22.95.183",
+      "tag": "🇨🇦 加拿大 (Canada) 06 - jack",
+      "server": "137.184.174.93",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇨🇦 加拿大 (Canada) 07 - jack",
+      "server": "vpn-ca-002.fastervpn.world",
       "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.com",
+        "insecure": true
+      }
     },
     {
       "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 12 - jack",
-      "server": "51.79.64.198",
-      "server_port": 8119,
+      "tag": "🇨🇦 加拿大 (Canada) 08 - jack",
+      "server": "51.222.155.113",
+      "server_port": 5601,
       "method": "aes-256-gcm",
-      "password": "cdBIDV42DCwnfIN"
+      "password": "Y6R9pAtvxxzmGC"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇨🇦 加拿大 (Canada) 09 - jack",
+      "server": "51.222.107.43",
+      "server_port": 2083,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:HWFFJN19JkvbTKo/79AfnbRBK9uHUUaFNZJyLjEoJGs="
     },
     {
       "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 13 - jack",
+      "tag": "🇨🇦 加拿大 (Canada) 10 - jack",
       "server": "130.107.73.148",
       "server_port": 41373,
       "uuid": "a71c8954-66a8-4321-bedb-2336230d81ce",
@@ -140,7 +104,7 @@
         "server_name": "google.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
@@ -151,139 +115,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 14 - jack",
-      "server": "66.70.179.198",
-      "server_port": 2053,
-      "uuid": "dc620cd6-a9d8-4a0f-8f18-006b895db77e",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": ""
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU",
-          "short_id": "83f8317a948bb769"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 15 - jack",
-      "server": "104.21.70.21",
-      "server_port": 443,
-      "uuid": "fee1da7e-a258-4456-8e5e-8ecf6518ed12",
-      "tls": {
-        "enabled": true,
-        "server_name": "ez-82c7e7.abobaba.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoiemxGMEFDU1VDRyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0",
-        "headers": {
-          "Host": "ez-82c7e7.abobaba.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 16 - jack",
-      "server": "51.222.12.127",
-      "server_port": 445,
-      "method": "aes-256-gcm",
-      "password": "zDNVedRFPQexG9v"
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 17 - jack",
-      "server": "209.200.246.148",
-      "server_port": 443,
-      "uuid": "ca52e2b6-fb9f-4dac-b6dc-49da9923f251",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk",
-          "short_id": "f98843107912e782"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 18 - jack",
-      "server": "172.67.215.39",
-      "server_port": 443,
-      "uuid": "532a9115-aee7-4d39-9638-1e5146de075b",
-      "tls": {
-        "enabled": true,
-        "server_name": "muddy-math-c1fc.tmpnriqueau89.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/js/cHlpcC55Z2tray5kcGRucy5vcmc=/",
-        "headers": {
-          "Host": "muddy-math-c1fc.tmpnriqueau89.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 19 - jack",
-      "server": "05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev",
-      "server_port": 443,
-      "uuid": "527451fe-ee1f-4e6f-94ca-808f055f7c9b",
-      "tls": {
-        "enabled": true,
-        "server_name": "05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/vl/ERYN0G44hia16zhR"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 20 - jack",
-      "server": "188.114.97.6",
-      "server_port": 8080,
-      "uuid": "96e341a7-3077-4613-b482-41bd9c90cc4d",
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoiN2w4dDlRNVV5NkZ5NU1aeSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
-        "headers": {
-          "Host": "ezaccess-project-4c7950.ez-dc9bbb.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 21 - jack",
+      "tag": "🇨🇦 加拿大 (Canada) 11 - jack",
       "server": "158.69.112.254",
       "server_port": 443,
       "uuid": "661f395d-b153-4199-a04b-693f5fe7f261",
@@ -304,30 +136,68 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 22 - jack",
-      "server": "188.114.97.6",
+      "tag": "🇨🇦 加拿大 (Canada) 12 - jack",
+      "server": "209.200.246.148",
       "server_port": 443,
-      "uuid": "813cd228-ebf6-0e21-481a-ba4af8f85b82",
+      "uuid": "ca52e2b6-fb9f-4dac-b6dc-49da9923f251",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "odd-disk-98c5.assassincreed4048.workers.dev",
-        "insecure": false,
+        "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/sync",
-        "headers": {
-          "Host": "odd-disk-98c5.assassincreed4048.workers.dev"
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk",
+          "short_id": "f98843107912e782"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 23 - jack",
+      "tag": "🇨🇦 加拿大 (Canada) 13 - jack",
+      "server": "66.70.179.198",
+      "server_port": 2053,
+      "uuid": "dc620cd6-a9d8-4a0f-8f18-006b895db77e",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": ""
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU",
+          "short_id": "83f8317a948bb769"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇨🇦 加拿大 (Canada) 14 - jack",
+      "server": "15.223.122.197",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "15.223.122.197",
+        "insecure": true
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇨🇦 加拿大 (Canada) 15 - jack",
+      "server": "138.197.141.58",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇦 加拿大 (Canada) 16 - jack",
       "server": "66.70.179.124",
       "server_port": 443,
       "uuid": "c8f9e08d-7d07-4059-9f71-0b014b9e0ec7",
@@ -348,232 +218,27 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 24 - jack",
-      "server": "51.79.85.185",
-      "server_port": 8118,
+      "tag": "🇨🇦 加拿大 (Canada) 17 - jack",
+      "server": "51.222.141.125",
+      "server_port": 445,
       "method": "aes-256-gcm",
-      "password": "cdBIDV42DCwnfIN"
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 25 - jack",
-      "server": "172.67.151.77",
-      "server_port": 443,
-      "uuid": "73796e63-0000-4000-8000-000000000000",
-      "tls": {
-        "enabled": true,
-        "server_name": "nahan-core.fatitelegram.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/sync",
-        "headers": {
-          "Host": "nahan-core.fatitelegram.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 26 - jack",
-      "server": "172.67.219.50",
-      "server_port": 443,
-      "uuid": "a5b1d1ec-327c-f1c5-5856-b34600000000",
-      "tls": {
-        "enabled": true,
-        "server_name": "ez-541f9d.ezaccess1d3db24.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/sync",
-        "headers": {
-          "Host": "ez-541f9d.ezaccess1d3db24.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 27 - jack",
-      "server": "104.21.14.116",
-      "server_port": 443,
-      "uuid": "566c0473-382e-aabb-c62a-f5bb00000000",
-      "tls": {
-        "enabled": true,
-        "server_name": "ez-4b5fd4.appelidmymat.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/sync",
-        "headers": {
-          "Host": "ez-4b5fd4.appelidmymat.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 28 (家宽) - jack",
-      "server": "app-q0zc4t.user-4gfyh5.workers.dev",
-      "server_port": 443,
-      "uuid": "07f9bc85-613f-4a33-8da1-191973c43c0a",
-      "tls": {
-        "enabled": true,
-        "server_name": "app-q0zc4t.user-4gfyh5.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "app-q0zc4t.user-4gfyh5.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 29 - jack",
-      "server": "peekconfigg.vipserver1-39d.workers.dev",
-      "server_port": 443,
-      "uuid": "7c6a566b-4c4a-b8f2-1719-a3096b424141",
-      "tls": {
-        "enabled": true,
-        "server_name": "peekconfigg.vipserver1-39d.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/sync",
-        "headers": {
-          "Host": "peekconfigg.vipserver1-39d.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 30 - jack",
-      "server": "172.67.214.106",
-      "server_port": 443,
-      "uuid": "a8890c1b-3622-3106-c4be-d8671be32d2b",
-      "tls": {
-        "enabled": true,
-        "server_name": "summer-meadow-af5b.woowoorrrkk.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/sync",
-        "headers": {
-          "Host": "summer-meadow-af5b.woowoorrrkk.workers.dev"
-        }
-      }
+      "password": "zDNVedRFPQexG9v"
     },
     {
       "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 31 - jack",
+      "tag": "🇨🇦 加拿大 (Canada) 18 - jack",
       "server": "51.79.49.116",
       "server_port": 8882,
       "method": "aes-256-gcm",
       "password": "kDWvXYZoTBcGkC4"
     },
     {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 32 - jack",
-      "server": "172.67.137.223",
-      "server_port": 443,
-      "uuid": "4ce7cb8a-f9b1-4bfa-a80d-9e168c61a633",
-      "tls": {
-        "enabled": true,
-        "server_name": "curly-night-6928.ggdhchjk.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/sync",
-        "headers": {
-          "Host": "curly-night-6928.ggdhchjk.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 33 - jack",
-      "server": "188.114.97.6",
-      "server_port": 8080,
-      "uuid": "5a0028f9-c656-cec9-4b61-54678477a408",
-      "transport": {
-        "type": "ws",
-        "path": "/game",
-        "headers": {
-          "Host": "green-credit-7e7b.vpnfreev2rayconfig-sale1.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 34 - jack",
-      "server": "188.114.97.6",
-      "server_port": 8080,
-      "uuid": "a8b1d666-d3ba-4b17-90c4-ba7514c74f78",
-      "transport": {
-        "type": "ws",
-        "path": "/xiron",
-        "headers": {
-          "Host": "xstack.mahanfixe.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 35 - jack",
-      "server": "51.222.136.236",
-      "server_port": 8882,
-      "method": "aes-256-gcm",
-      "password": "kDWvXYZoTBcGkC4"
-    },
-    {
       "type": "vmess",
-      "tag": "🇨🇦 加拿大 (Canada) 36 - jack",
+      "tag": "🇨🇦 加拿大 (Canada) 19 - jack",
       "server": "134.195.196.211",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
       "security": "auto"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 37 - jack",
-      "server": "51.222.155.113",
-      "server_port": 5601,
-      "method": "aes-256-gcm",
-      "password": "Y6R9pAtvxxzmGC"
     },
     {
       "type": "selector",
@@ -598,25 +263,7 @@
         "🇨🇦 加拿大 (Canada) 16 - jack",
         "🇨🇦 加拿大 (Canada) 17 - jack",
         "🇨🇦 加拿大 (Canada) 18 - jack",
-        "🇨🇦 加拿大 (Canada) 19 - jack",
-        "🇨🇦 加拿大 (Canada) 20 - jack",
-        "🇨🇦 加拿大 (Canada) 21 - jack",
-        "🇨🇦 加拿大 (Canada) 22 - jack",
-        "🇨🇦 加拿大 (Canada) 23 - jack",
-        "🇨🇦 加拿大 (Canada) 24 - jack",
-        "🇨🇦 加拿大 (Canada) 25 - jack",
-        "🇨🇦 加拿大 (Canada) 26 - jack",
-        "🇨🇦 加拿大 (Canada) 27 - jack",
-        "🇨🇦 加拿大 (Canada) 28 (家宽) - jack",
-        "🇨🇦 加拿大 (Canada) 29 - jack",
-        "🇨🇦 加拿大 (Canada) 30 - jack",
-        "🇨🇦 加拿大 (Canada) 31 - jack",
-        "🇨🇦 加拿大 (Canada) 32 - jack",
-        "🇨🇦 加拿大 (Canada) 33 - jack",
-        "🇨🇦 加拿大 (Canada) 34 - jack",
-        "🇨🇦 加拿大 (Canada) 35 - jack",
-        "🇨🇦 加拿大 (Canada) 36 - jack",
-        "🇨🇦 加拿大 (Canada) 37 - jack"
+        "🇨🇦 加拿大 (Canada) 19 - jack"
       ]
     },
     {
@@ -641,25 +288,7 @@
         "🇨🇦 加拿大 (Canada) 16 - jack",
         "🇨🇦 加拿大 (Canada) 17 - jack",
         "🇨🇦 加拿大 (Canada) 18 - jack",
-        "🇨🇦 加拿大 (Canada) 19 - jack",
-        "🇨🇦 加拿大 (Canada) 20 - jack",
-        "🇨🇦 加拿大 (Canada) 21 - jack",
-        "🇨🇦 加拿大 (Canada) 22 - jack",
-        "🇨🇦 加拿大 (Canada) 23 - jack",
-        "🇨🇦 加拿大 (Canada) 24 - jack",
-        "🇨🇦 加拿大 (Canada) 25 - jack",
-        "🇨🇦 加拿大 (Canada) 26 - jack",
-        "🇨🇦 加拿大 (Canada) 27 - jack",
-        "🇨🇦 加拿大 (Canada) 28 (家宽) - jack",
-        "🇨🇦 加拿大 (Canada) 29 - jack",
-        "🇨🇦 加拿大 (Canada) 30 - jack",
-        "🇨🇦 加拿大 (Canada) 31 - jack",
-        "🇨🇦 加拿大 (Canada) 32 - jack",
-        "🇨🇦 加拿大 (Canada) 33 - jack",
-        "🇨🇦 加拿大 (Canada) 34 - jack",
-        "🇨🇦 加拿大 (Canada) 35 - jack",
-        "🇨🇦 加拿大 (Canada) 36 - jack",
-        "🇨🇦 加拿大 (Canada) 37 - jack"
+        "🇨🇦 加拿大 (Canada) 19 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

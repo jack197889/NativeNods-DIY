@@ -5,44 +5,35 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - jack
-  server: 188.114.97.6
-  port: 8080
+  server: 194.87.196.13
+  port: 7018
   udp: true
-  type: vless
-  uuid: 0991a0c4-0ee5-4213-af89-7ad589f853f3
-  network: ws
-  ws-opts:
-    path: /ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY?ed=2560
-    headers:
-      Host: elenaaaaaaaaaa.cloudns.pro
+  type: ss
+  cipher: aes-256-gcm
+  password: 4938e975724d0ed1
 - name: 🇷🇺 俄罗斯 (Russia) 02 - jack
-  server: 91.196.32.163
-  port: 443
-  udp: true
-  type: hysteria2
-  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
-  sni: germany3.h2corp.local
-  skip-cert-verify: true
-- name: 🇷🇺 俄罗斯 (Russia) 03 - jack
   server: 130.49.189.158
   port: 43558
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: /QFycb02d87cByC9+5ZRSygI1avHiPXkgYG2yc+TnGA=
+- name: 🇷🇺 俄罗斯 (Russia) 03 - jack
+  server: 91.240.86.70
+  port: 22443
+  udp: true
+  type: hysteria2
+  password: 3f63c86c-ac4a-4900-85cf-4fedf93c2ca5
+  sni: hy.quattro-tech.ru
+  skip-cert-verify: false
 - name: 🇷🇺 俄罗斯 (Russia) 04 - jack
-  server: 89.105.206.124
+  server: 91.196.32.163
   port: 443
   udp: true
-  type: vless
-  uuid: 4360f941-b541-0028-8507-2de3763e0cfd
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w
-    short-id: 00a61d55a07de885
-  servername: nl.convert-flow.net
-  client-fingerprint: firefox
+  type: hysteria2
+  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
+  sni: 91.196.32.163
+  skip-cert-verify: true
 - name: 🇷🇺 俄罗斯 (Russia) 05 - jack
   server: msk.frkn.org
   port: 443
@@ -52,21 +43,6 @@ proxies:
   sni: msk.frkn.org
   skip-cert-verify: false
 - name: 🇷🇺 俄罗斯 (Russia) 06 - jack
-  server: 46.8.200.91
-  port: 443
-  udp: true
-  type: vless
-  uuid: 0a2dde28-70da-4863-a06f-35d007d94d35
-  tls: true
-  servername: cf3.rumedia-cdn.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /casc
-    headers:
-      Host: cf3.rumedia-cdn.com
-- name: 🇷🇺 俄罗斯 (Russia) 07 - jack
   server: 45.12.75.242
   port: 26424
   udp: true
@@ -78,19 +54,6 @@ proxies:
     short-id: 23103e1e
   servername: ya.ru
   client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 08 - jack
-  server: pr-media.pepro.site
-  port: 14443
-  udp: true
-  type: vless
-  uuid: fb67fd37-8d41-43a9-a093-c0b807fc5299
-  tls: true
-  servername: pr-media.pepro.site
-  skip-cert-verify: false
-  client-fingerprint: qq
-  network: ws
-  ws-opts:
-    path: /ws
 proxy-groups:
 - name: PROXIES
   type: select
@@ -102,8 +65,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 04 - jack
   - 🇷🇺 俄罗斯 (Russia) 05 - jack
   - 🇷🇺 俄罗斯 (Russia) 06 - jack
-  - 🇷🇺 俄罗斯 (Russia) 07 - jack
-  - 🇷🇺 俄罗斯 (Russia) 08 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -115,7 +76,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 04 - jack
   - 🇷🇺 俄罗斯 (Russia) 05 - jack
   - 🇷🇺 俄罗斯 (Russia) 06 - jack
-  - 🇷🇺 俄罗斯 (Russia) 07 - jack
-  - 🇷🇺 俄罗斯 (Russia) 08 - jack
 rules:
 - MATCH,PROXIES

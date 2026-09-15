@@ -5,22 +5,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇦🇱 AL 01 - jack",
-      "server": "194.93.61.100",
+      "tag": "🇮🇪 爱尔兰 (Ireland) 01 - jack",
+      "server": "64.130.61.73",
       "server_port": 443,
-      "uuid": "41e71ba7-d389-47aa-94f7-ed1f55fdbcdf",
+      "uuid": "aea9e420-de22-4dcb-93b8-af1f71a3c264",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "cdnjs.com",
+        "server_name": "82c0f.tornadonext.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "E1te_g9q6EWQVOCgjwI4PF-cml9qqW7OEAf33tYkUxQ",
-          "short_id": "17d334ad29b2ff40"
+          "public_key": "R_ax16JLUFGtv5quE08v6l35O7B_-3j5C31ejUBElRU",
+          "short_id": "6bcd199b"
         }
       }
     },
@@ -29,14 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇱 AL 01 - jack"
+        "🇮🇪 爱尔兰 (Ireland) 01 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇱 AL 01 - jack"
+        "🇮🇪 爱尔兰 (Ireland) 01 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

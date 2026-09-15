@@ -13,13 +13,6 @@ proxies:
   alterId: 0
   cipher: auto
 - name: 🇰🇷 韩国 (South Korea) 02 - jack
-  server: 49.254.204.133
-  port: 1774
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 1234!@#$
-- name: 🇰🇷 韩国 (South Korea) 03 - jack
   server: 146.56.112.110
   port: 8888
   udp: true
@@ -27,36 +20,7 @@ proxies:
   uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
   alterId: 0
   cipher: auto
-- name: 🇰🇷 韩国 (South Korea) 04 - jack
-  server: 3.39.4.109
-  port: 18967
-  udp: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🇰🇷 韩国 (South Korea) 05 - jack
-  server: 3.36.93.74
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 3.36.93.74
-  skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 06 - jack
-  server: 132.226.226.189
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: 1671a252e2a97dc2bda4e515475931da
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 07 - jack
+- name: 🇰🇷 韩国 (South Korea) 03 - jack
   server: 3.39.4.109
   port: 13672
   udp: true
@@ -69,15 +33,15 @@ proxies:
     short-id: 48050fab
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 08 - jack
-  server: 131.186.19.174
-  port: 50160
+- name: 🇰🇷 韩国 (South Korea) 04 - jack
+  server: vpn-kr-003.fastervpn.world
+  port: 443
   udp: true
   type: hysteria2
-  password: 7302ad33229de166d393cd56143a1e4c
-  sni: t.me
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-kr-003.fastervpn.world
   skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 09 - jack
+- name: 🇰🇷 韩国 (South Korea) 05 - jack
   server: vpn-kr-002.fastervpn.world
   port: 443
   udp: true
@@ -85,7 +49,28 @@ proxies:
   password: H7mP2xY9kJ4nQ9wR5tF6vB3z
   sni: vpn-kr-002.fastervpn.world
   skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 10 - jack
+- name: 🇰🇷 韩国 (South Korea) 06 - jack
+  server: 3.39.4.109
+  port: 18967
+  udp: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 07 - jack
+  server: 132.226.226.189
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 1671a252e2a97dc2bda4e515475931da
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 08 - jack
   server: 152.70.237.123
   port: 2053
   udp: true
@@ -93,30 +78,7 @@ proxies:
   password: maintell
   sni: bing.com
   skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 11 - jack
-  server: kr3-r.link-t7.com
-  port: 10048
-  udp: true
-  type: vless
-  uuid: 7134DB35-F254-4468-BA00-D9C099CF5AF7
-  tls: true
-  reality-opts:
-    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    short-id: 686c0ef0
-  servername: s0.awsstatic.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: update
-- name: 🇰🇷 韩国 (South Korea) 12 - jack
-  server: 154.90.62.70
-  port: 56127
-  udp: true
-  type: trojan
-  password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
-  sni: 154.90.62.70
-  skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 13 - jack
+- name: 🇰🇷 韩国 (South Korea) 09 - jack
   server: 151.245.106.49
   port: 2053
   udp: true
@@ -128,7 +90,36 @@ proxies:
     short-id: 429499c03d4cc8a0
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🇰🇷 韩国 (South Korea) 14 - jack
+- name: 🇰🇷 韩国 (South Korea) 10 - jack
+  server: 131.186.19.174
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 7302ad33229de166d393cd56143a1e4c
+  sni: css.rbxcdn.com
+  skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 11 - jack
+  server: 154.90.62.70
+  port: 56127
+  udp: true
+  type: trojan
+  password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
+  sni: 154.90.62.70
+  skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 12 - jack
+  server: 47.80.62.191
+  port: 443
+  udp: true
+  type: vless
+  uuid: 43e60b75-9920-450a-94ee-8762758ca49c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Qe5e0FBZwuwYMRYikx8sH5iaowPQwdkn6kgIN8xrQHE
+    short-id: bd0040df20a53b36
+  servername: www.logitech.com
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 13 - jack
   server: 119.28.161.143
   port: 443
   udp: true
@@ -140,64 +131,21 @@ proxies:
     short-id: 0a427bc3
   servername: apple.com
   client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 15 - jack
-  server: 218.237.185.230
-  port: 4652
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-- name: 🇰🇷 韩国 (South Korea) 16 - jack
+- name: 🇰🇷 韩国 (South Korea) 14 - jack
   server: 152.67.200.82
   port: 50160
   udp: true
   type: hysteria2
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  sni: vk.com
+  sni: css.rbxcdn.com
   skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 17 - jack
+- name: 🇰🇷 韩国 (South Korea) 15 - jack
   server: 211.178.105.134
   port: 6123
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: qwerREWQ@@
-- name: 🇰🇷 韩国 (South Korea) 18 - jack
-  server: 47.80.61.21
-  port: 443
-  udp: true
-  type: hysteria2
-  password: bf902e668996d97397a6427725141ef6
-  sni: 47.80.61.21
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: 5c8f1a3e7b2d9046c1f8a5e3b7d04f2a
-- name: 🇰🇷 韩国 (South Korea) 19 - jack
-  server: 47.80.14.8
-  port: 443
-  udp: true
-  type: vless
-  uuid: 581cb8c3-dadb-4e10-a18b-5e79bfe7bd93
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: OBIHAXdhfYJ0PWsZjy3QYPRjTfMQlvjmBsTf1CT671w
-    short-id: 71110d3f7ef57760
-  servername: www.samsung.com
-  client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 20 - jack
-  server: 47.80.62.71
-  port: 443
-  udp: true
-  type: vless
-  uuid: 0d4cb711-c030-4f13-adf5-6a72dab4121c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: AT4sr3XkuNa7QewDoScx7NnPTCa-Z6o_7ccPgivVDSQ
-    short-id: 0b674631d5fc6b93
-  servername: www.nvidia.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -218,11 +166,6 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 13 - jack
   - 🇰🇷 韩国 (South Korea) 14 - jack
   - 🇰🇷 韩国 (South Korea) 15 - jack
-  - 🇰🇷 韩国 (South Korea) 16 - jack
-  - 🇰🇷 韩国 (South Korea) 17 - jack
-  - 🇰🇷 韩国 (South Korea) 18 - jack
-  - 🇰🇷 韩国 (South Korea) 19 - jack
-  - 🇰🇷 韩国 (South Korea) 20 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -243,10 +186,5 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 13 - jack
   - 🇰🇷 韩国 (South Korea) 14 - jack
   - 🇰🇷 韩国 (South Korea) 15 - jack
-  - 🇰🇷 韩国 (South Korea) 16 - jack
-  - 🇰🇷 韩国 (South Korea) 17 - jack
-  - 🇰🇷 韩国 (South Korea) 18 - jack
-  - 🇰🇷 韩国 (South Korea) 19 - jack
-  - 🇰🇷 韩国 (South Korea) 20 - jack
 rules:
 - MATCH,PROXIES
