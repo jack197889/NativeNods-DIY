@@ -30,18 +30,6 @@ proxies:
   servername: books.blackbigdog.com
   client-fingerprint: chrome
 - name: 🇹🇷 土耳其 (Turkey) 03 - jack
-  server: 151.241.226.201
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  tls: true
-  reality-opts:
-    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
-    short-id: 9e419c0759b54d6f
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 04 - jack
   server: config-turkey.zelnora.ir
   port: 2296
   udp: true
@@ -54,6 +42,18 @@ proxies:
     path: /
     headers:
       Host: config-turkey.zelnora.ir
+- name: 🇹🇷 土耳其 (Turkey) 04 - jack
+  server: 151.241.226.201
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  tls: true
+  reality-opts:
+    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
+    short-id: 9e419c0759b54d6f
+  servername: www.apple.com
+  client-fingerprint: firefox
 - name: 🇹🇷 土耳其 (Turkey) 05 - jack
   server: 13.143.137.164
   port: 9443

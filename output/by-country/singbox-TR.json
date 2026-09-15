@@ -46,8 +46,23 @@
       }
     },
     {
-      "type": "vless",
+      "type": "vmess",
       "tag": "🇹🇷 土耳其 (Turkey) 03 - jack",
+      "server": "config-turkey.zelnora.ir",
+      "server_port": 2296,
+      "uuid": "e4bbe685-a287-4a59-8dbc-02c18b1265df",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "config-turkey.zelnora.ir"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 04 - jack",
       "server": "151.241.226.201",
       "server_port": 2053,
       "uuid": "0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8",
@@ -62,21 +77,6 @@
           "enabled": true,
           "public_key": "bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104",
           "short_id": "9e419c0759b54d6f"
-        }
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇹🇷 土耳其 (Turkey) 04 - jack",
-      "server": "config-turkey.zelnora.ir",
-      "server_port": 2296,
-      "uuid": "e4bbe685-a287-4a59-8dbc-02c18b1265df",
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "config-turkey.zelnora.ir"
         }
       }
     },

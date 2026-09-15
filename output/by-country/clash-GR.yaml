@@ -18,15 +18,6 @@ proxies:
   servername: deepl.com
   client-fingerprint: firefox
 - name: 🇬🇷 希腊 (Greece) 02 - jack
-  server: 185.126.238.87
-  port: 2083
-  udp: true
-  type: vless
-  uuid: 7668f678-faee-40cc-9b56-9c39dc773388
-  network: grpc
-  grpc-opts:
-    grpc-service-name: security.debian.org
-- name: 🇬🇷 希腊 (Greece) 03 - jack
   server: 85.90.197.220
   port: 443
   udp: true
@@ -39,6 +30,15 @@ proxies:
     short-id: 94acb54627612d43
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇬🇷 希腊 (Greece) 03 - jack
+  server: 185.126.238.87
+  port: 2083
+  udp: true
+  type: vless
+  uuid: 7668f678-faee-40cc-9b56-9c39dc773388
+  network: grpc
+  grpc-opts:
+    grpc-service-name: security.debian.org
 proxy-groups:
 - name: PROXIES
   type: select

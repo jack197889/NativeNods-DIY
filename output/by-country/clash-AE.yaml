@@ -9,7 +9,7 @@ proxies:
   port: 8443
   udp: true
   type: vless
-  uuid: f0394424-db02-4e65-9685-d1c0f54ef5c2
+  uuid: 41a463f0-8c2d-4090-8456-e3278cab8fa2
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
@@ -17,17 +17,7 @@ proxies:
   servername: tradingview.com
   client-fingerprint: firefox
 - name: 🇦🇪 阿联酋 (UAE) 02 - jack
-  server: 130.49.161.70
-  port: 443
-  udp: true
-  type: hysteria2
-  password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
-  sni: hy2.aspidnet.xyz
-  skip-cert-verify: false
-  obfs: salamander
-  obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
-- name: 🇦🇪 阿联酋 (UAE) 03 - jack
-  server: 31.56.189.27
+  server: srv-21bac9.vless.monster
   port: 2087
   udp: true
   type: vless
@@ -39,8 +29,18 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: freegrpc
+- name: 🇦🇪 阿联酋 (UAE) 03 - jack
+  server: 130.49.161.70
+  port: 443
+  udp: true
+  type: hysteria2
+  password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
+  sni: hy2.aspidnet.xyz
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
 - name: 🇦🇪 阿联酋 (UAE) 04 - jack
-  server: 85.204.107.175
+  server: 85.204.107.178
   port: 8080
   udp: true
   type: hysteria2
@@ -48,6 +48,17 @@ proxies:
   sni: hopp-romania-new.roxa.org
   skip-cert-verify: true
 - name: 🇦🇪 阿联酋 (UAE) 05 - jack
+  server: 84.235.244.108
+  port: 22573
+  udp: true
+  type: vless
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uae.unixzone.us
+- name: 🇦🇪 阿联酋 (UAE) 06 - jack
   server: 78.40.195.140
   port: 443
   udp: true
@@ -70,6 +81,7 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 03 - jack
   - 🇦🇪 阿联酋 (UAE) 04 - jack
   - 🇦🇪 阿联酋 (UAE) 05 - jack
+  - 🇦🇪 阿联酋 (UAE) 06 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -80,5 +92,6 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 03 - jack
   - 🇦🇪 阿联酋 (UAE) 04 - jack
   - 🇦🇪 阿联酋 (UAE) 05 - jack
+  - 🇦🇪 阿联酋 (UAE) 06 - jack
 rules:
 - MATCH,PROXIES
