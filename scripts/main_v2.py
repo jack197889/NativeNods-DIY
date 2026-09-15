@@ -53,34 +53,16 @@ except ImportError as e:
 # ══════════════════════════════════════════════════════════════════
 
 SOURCE_URLS = [
-    # ========== 1. 高频 TG 实时爬虫源（更新极快，活节点多） ==========
-    "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/configs/vless.txt",
-    "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/configs/vmess.txt",
-    "https://raw.githubusercontent.com/MohammadBahemmat/V2ray-Collector/main/sub/mix",
-    "https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/merged.txt",
-
-    # ========== 2. 核心精选 GitHub 去重汇总源 ==========
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",
     "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",
-    "https://raw.githubusercontent.com/theGreatPeter/v2rayNodes/main/v2ray.txt",
-
-    # ========== 3. 新增：体量适中、补充数千节点的优质中型源 ==========
-    "https://raw.githubusercontent.com/roosterkiev/optimus/main/sub.txt",
+    "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt",
+    "https://raw.githubusercontent.com/r3zarahimi/tg-v2ray-configs-every2h/main/Config_jo.txt",
+    "https://raw.githubusercontent.com/MohammadBahemmat/V2ray-Collector/main/sub/mix",
     "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub1.txt",
-    "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub2.txt",
-    "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
-
-    # ========== 4. 欧美及澳洲国家定向高命中源 ==========
-    "https://raw.githubusercontent.com/yebekhe/TVC/main/subscriptions/xray/base64",
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/subscriptions/location/AU.txt",
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/subscriptions/location/US.txt",
-    "https://raw.githubusercontent.com/miladtahanian/V2RayScrapeByCountry/main/Australia.txt",
-
-    # ========== 5. 基础稳定源 ==========
-    "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt",
+    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/AllConfigsSub.txt",
+    "https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/merged.txt",
     "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
-    "https://raw.githubusercontent.com/LonUp/NodeList/main/Link/v2ray.txt",
-    "https://raw.githubusercontent.com/mftzm/v2ray/main/v2ray.txt"
+    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/V2Ray-Config-By-EbraSha-All-Type.txt",
+    "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/best.txt",
 ]
 
 OUTPUT_DIR = "output"
