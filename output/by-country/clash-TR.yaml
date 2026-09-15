@@ -5,28 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - jack
-  server: 107.161.174.26
-  port: 443
-  udp: true
-  type: vless
-  uuid: 069ba4cf-e8af-4561-b11e-18bd07b0dbd3
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: N8tPKh6gTyc6L5GOmBn_3wIy707a-5QYB0FrF2HigUc
-  servername: books.blackbigdog.com
-  client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 02 - jack
-  server: me17.msjia8844.site
-  port: 7443
-  udp: true
-  type: hysteria2
-  password: M8LP9DztTr3znqCkmf-r08CQLBLLFK1r
-  sni: me17.msjia8844.site
-  skip-cert-verify: false
-  obfs: salamander
-  obfs-password: u3Soh9_Ui0UmcuY6vk0ug8Lq
-- name: 🇹🇷 土耳其 (Turkey) 03 - jack
   server: 156.67.63.231
   port: 443
   udp: true
@@ -39,7 +17,19 @@ proxies:
     short-id: 5606d4a25c99e7af
   servername: sync-bridge.org
   client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 04 - jack
+- name: 🇹🇷 土耳其 (Turkey) 02 - jack
+  server: 107.161.174.26
+  port: 443
+  udp: true
+  type: vless
+  uuid: 069ba4cf-e8af-4561-b11e-18bd07b0dbd3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: N8tPKh6gTyc6L5GOmBn_3wIy707a-5QYB0FrF2HigUc
+  servername: books.blackbigdog.com
+  client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 03 - jack
   server: 151.241.226.201
   port: 2053
   udp: true
@@ -51,6 +41,32 @@ proxies:
     short-id: 9e419c0759b54d6f
   servername: www.apple.com
   client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 04 - jack
+  server: config-turkey.zelnora.ir
+  port: 2296
+  udp: true
+  type: vmess
+  uuid: e4bbe685-a287-4a59-8dbc-02c18b1265df
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: config-turkey.zelnora.ir
+- name: 🇹🇷 土耳其 (Turkey) 05 - jack
+  server: 13.143.137.164
+  port: 9443
+  udp: true
+  type: vless
+  uuid: 953358cb-82ba-4296-960d-6d2ec3468f4c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: dZ0rhO_PL67-Ciwc6CHQgtde3a5EUUuReA7M-lRNCDQ
+    short-id: e336c9a786fae301
+  servername: plaincanvas.videoclothing.xyz
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -60,6 +76,7 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 02 - jack
   - 🇹🇷 土耳其 (Turkey) 03 - jack
   - 🇹🇷 土耳其 (Turkey) 04 - jack
+  - 🇹🇷 土耳其 (Turkey) 05 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -69,5 +86,6 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 02 - jack
   - 🇹🇷 土耳其 (Turkey) 03 - jack
   - 🇹🇷 土耳其 (Turkey) 04 - jack
+  - 🇹🇷 土耳其 (Turkey) 05 - jack
 rules:
 - MATCH,PROXIES

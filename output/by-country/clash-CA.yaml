@@ -5,86 +5,49 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01 - jack
+  server: 134.195.196.211
+  port: 18000
+  udp: true
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+- name: 🇨🇦 加拿大 (Canada) 02 - jack
   server: 166.88.130.218
   port: 7018
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: fbcec76953a2d173
-- name: 🇨🇦 加拿大 (Canada) 02 - jack
-  server: 66.70.179.198
-  port: 2053
-  udp: true
-  type: vless
-  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
-  tls: true
-  reality-opts:
-    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
-    short-id: 83f8317a948bb769
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
 - name: 🇨🇦 加拿大 (Canada) 03 - jack
-  server: 188.114.97.6
-  port: 2082
+  server: 138.197.141.58
+  port: 8080
   udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
 - name: 🇨🇦 加拿大 (Canada) 04 - jack
-  server: vpn-ca-002.fastervpn.world
-  port: 443
+  server: 137.184.174.93
+  port: 8080
   udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-ca-002.fastervpn.world
-  skip-cert-verify: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
 - name: 🇨🇦 加拿大 (Canada) 05 - jack
-  server: 188.114.97.6
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: 🇨🇦 加拿大 (Canada) 06 - jack
-  server: 216.152.147.28
-  port: 443
-  udp: true
-  type: vless
-  uuid: d9e4721d-cdac-44c7-bc91-117367eac194
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: kjiuPmjM4IutdZudHfcPZHEwcrBEFY4qBLlvfC6A_Ss
-    short-id: b9f8d3f8
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇨🇦 加拿大 (Canada) 07 - jack
   server: 15.235.75.71
   port: 8388
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: FD3rCuOsxOay
-- name: 🇨🇦 加拿大 (Canada) 08 - jack
-  server: 188.114.97.6
-  port: 2095
+- name: 🇨🇦 加拿大 (Canada) 06 - jack
+  server: 149.22.95.183
+  port: 443
   udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: 🇨🇦 加拿大 (Canada) 09 - jack
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇨🇦 加拿大 (Canada) 07 - jack
   server: 130.107.73.148
   port: 41373
   udp: true
@@ -97,29 +60,47 @@ proxies:
     short-id: 0e
   servername: google.com
   client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 10 - jack
+- name: 🇨🇦 加拿大 (Canada) 08 - jack
   server: 15.223.122.197
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 15.223.122.197
+  sni: t.me
   skip-cert-verify: true
-- name: 🇨🇦 加拿大 (Canada) 11 - jack
-  server: 138.197.141.58
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 12 - jack
-  server: 149.22.95.183
+- name: 🇨🇦 加拿大 (Canada) 09 - jack
+  server: 216.152.147.28
   port: 443
   udp: true
+  type: vless
+  uuid: d9e4721d-cdac-44c7-bc91-117367eac194
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: kjiuPmjM4IutdZudHfcPZHEwcrBEFY4qBLlvfC6A_Ss
+    short-id: b9f8d3f8
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇨🇦 加拿大 (Canada) 10 - jack
+  server: 66.70.179.198
+  port: 2053
+  udp: true
+  type: vless
+  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
+  tls: true
+  reality-opts:
+    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
+    short-id: 83f8317a948bb769
+  servername: www.cloudflare.com
+  client-fingerprint: random
+- name: 🇨🇦 加拿大 (Canada) 11 - jack
+  server: 51.222.200.165
+  port: 5000
+  udp: true
   type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇨🇦 加拿大 (Canada) 13 - jack
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: 🇨🇦 加拿大 (Canada) 12 - jack
   server: 158.69.112.254
   port: 443
   udp: true
@@ -131,23 +112,17 @@ proxies:
     public-key: wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y
     short-id: 3d3c1e645f763ee3
   servername: www.speedtest.net
-  client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 14 - jack
-  server: 104.21.70.21
+  client-fingerprint: random
+- name: 🇨🇦 加拿大 (Canada) 13 - jack
+  server: 184.107.106.68
   port: 443
   udp: true
   type: vless
-  uuid: efe19c5a-0ea1-4666-8a4c-4a33f4670775
+  uuid: 716426fa-bcb7-4eb9-b460-36399ebf740d
   tls: true
-  servername: bodyshine.help
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /raccoonwsvless
-    headers:
-      Host: bodyshine.help
-- name: 🇨🇦 加拿大 (Canada) 15 - jack
+  servername: lizca2.footballfantasyforum.com
+  skip-cert-verify: true
+- name: 🇨🇦 加拿大 (Canada) 14 - jack
   server: 209.200.246.148
   port: 443
   udp: true
@@ -160,14 +135,15 @@ proxies:
     short-id: f98843107912e782
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🇨🇦 加拿大 (Canada) 16 - jack
-  server: 137.184.174.93
-  port: 8080
+- name: 🇨🇦 加拿大 (Canada) 15 - jack
+  server: vpn-ca-002.fastervpn.world
+  port: 443
   udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 17 - jack
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-ca-002.fastervpn.world
+  skip-cert-verify: true
+- name: 🇨🇦 加拿大 (Canada) 16 - jack
   server: 66.70.179.124
   port: 443
   udp: true
@@ -180,36 +156,28 @@ proxies:
     short-id: af7e79b5
   servername: www.apple.com
   client-fingerprint: chrome
+- name: 🇨🇦 加拿大 (Canada) 17 - jack
+  server: 51.222.12.127
+  port: 445
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
 - name: 🇨🇦 加拿大 (Canada) 18 - jack
-  server: 51.222.200.165
-  port: 5000
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-- name: 🇨🇦 加拿大 (Canada) 19 - jack
-  server: 51.222.155.113
-  port: 5601
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-- name: 🇨🇦 加拿大 (Canada) 20 - jack
   server: 51.222.141.125
   port: 445
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: zDNVedRFPQexG9v
-- name: 🇨🇦 加拿大 (Canada) 21 - jack
-  server: 134.195.196.211
-  port: 18000
+- name: 🇨🇦 加拿大 (Canada) 19 - jack
+  server: 51.222.107.43
+  port: 2083
   udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-- name: 🇨🇦 加拿大 (Canada) 22 - jack
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:HWFFJN19JkvbTKo/79AfnbRBK9uHUUaFNZJyLjEoJGs=
+- name: 🇨🇦 加拿大 (Canada) 20 - jack
   server: 23.162.200.198
   port: 18000
   udp: true
@@ -217,6 +185,13 @@ proxies:
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: auto
+- name: 🇨🇦 加拿大 (Canada) 21 - jack
+  server: 51.222.155.113
+  port: 5601
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
 proxy-groups:
 - name: PROXIES
   type: select
@@ -243,7 +218,6 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 19 - jack
   - 🇨🇦 加拿大 (Canada) 20 - jack
   - 🇨🇦 加拿大 (Canada) 21 - jack
-  - 🇨🇦 加拿大 (Canada) 22 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -270,6 +244,5 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 19 - jack
   - 🇨🇦 加拿大 (Canada) 20 - jack
   - 🇨🇦 加拿大 (Canada) 21 - jack
-  - 🇨🇦 加拿大 (Canada) 22 - jack
 rules:
 - MATCH,PROXIES

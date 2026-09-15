@@ -4,34 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇨🇿 捷克 (Czech) 01 - jack",
-      "server": "199.232.78.160",
-      "server_port": 443,
-      "password": "MITIVPN",
-      "tls": {
-        "enabled": true,
-        "server_name": "ssl.fastly.com",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e1i@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN",
-        "headers": {
-          "Host": "mitivpn---ss--s---mitivpn-44s.global.ssl.fastly.net"
-        }
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇨🇿 捷克 (Czech) 02 - jack",
+      "tag": "🇨🇿 捷克 (Czech) 01 - jack",
       "server": "194.87.59.6",
       "server_port": 2085,
       "uuid": "ffa722c8-da3f-4371-a0e0-6afcc9f3f93b",
@@ -45,16 +19,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇿 捷克 (Czech) 01 - jack",
-        "🇨🇿 捷克 (Czech) 02 - jack"
+        "🇨🇿 捷克 (Czech) 01 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇿 捷克 (Czech) 01 - jack",
-        "🇨🇿 捷克 (Czech) 02 - jack"
+        "🇨🇿 捷克 (Czech) 01 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
