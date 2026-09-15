@@ -1,0 +1,89 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 01 - jack",
+      "server": "104.21.87.238",
+      "server_port": 8080,
+      "uuid": "8f53fce2-6c17-4e37-9ae9-d969fd85117c",
+      "transport": {
+        "type": "ws",
+        "path": "/vl/Wp4FqWLcoYNYXCovu4?ed=2560",
+        "headers": {
+          "Host": "ApI-hub-C9A393.ALiMiRZAi539-484.WOrKerS.DeV"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 02 - jack",
+      "server": "104.21.70.21",
+      "server_port": 8080,
+      "uuid": "33918b20-9e02-4dc6-8b30-79b2d4b2e0e6",
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiUjJBU3JkVlRwSWtnciIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0",
+        "headers": {
+          "Host": "auto-scale-238b2b.infra-core-1630dd.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 03 - jack",
+      "server": "104.25.5.52",
+      "server_port": 443,
+      "uuid": "93fa8bdb-9cca-4a3e-8355-b7c12e4f595e",
+      "tls": {
+        "enabled": true,
+        "server_name": "FORnEwIRAn.ADE-1000.worKeRS.dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/yLWNcuUuw1jlJpkDhGy?ed=2560",
+        "headers": {
+          "Host": "fornewiran.ade-1000.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇨🇿 捷克 (Czech) 01 - jack",
+        "🇨🇿 捷克 (Czech) 02 - jack",
+        "🇨🇿 捷克 (Czech) 03 - jack"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇨🇿 捷克 (Czech) 01 - jack",
+        "🇨🇿 捷克 (Czech) 02 - jack",
+        "🇨🇿 捷克 (Czech) 03 - jack"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

@@ -15,7 +15,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -25,18 +25,39 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇸🇨 塞舌尔 (Seychelles) 02 - jack",
+      "server": "104.21.238.93",
+      "server_port": 443,
+      "uuid": "50414e45-4c5f-5a45-5553-44890b90d17e",
+      "tls": {
+        "enabled": true,
+        "server_name": "afzoybehu2ws.vtzv4xe1un6s.workers.dev",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/stream/PANEL_ZEUS/44890b90d17e/loc-0",
+        "headers": {
+          "Host": "afzoybehu2ws.vtzv4xe1un6s.workers.dev"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇨 塞舌尔 (Seychelles) 01 - jack"
+        "🇸🇨 塞舌尔 (Seychelles) 01 - jack",
+        "🇸🇨 塞舌尔 (Seychelles) 02 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇨 塞舌尔 (Seychelles) 01 - jack"
+        "🇸🇨 塞舌尔 (Seychelles) 01 - jack",
+        "🇸🇨 塞舌尔 (Seychelles) 02 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

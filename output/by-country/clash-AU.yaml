@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇺 澳大利亚 (Australia) 01 - jack
-  server: 82.198.246.233
+  server: 82.198.246.37
   port: 180
   udp: true
   type: vmess
@@ -13,6 +13,17 @@ proxies:
   alterId: 0
   cipher: auto
 - name: 🇦🇺 澳大利亚 (Australia) 02 - jack
+  server: 188.114.97.6
+  port: 80
+  udp: true
+  type: vless
+  uuid: 6faeb6a0-5055-4e4b-8fb1-ffd77e57aefa
+  network: ws
+  ws-opts:
+    path: /au-do
+    headers:
+      Host: somersby.pt.r3xxe.eu.cc
+- name: 🇦🇺 澳大利亚 (Australia) 03 - jack
   server: 51.161.204.242
   port: 443
   udp: true
@@ -25,23 +36,6 @@ proxies:
     short-id: d15c17cef9b2e456
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇦🇺 澳大利亚 (Australia) 03 - jack
-  server: 103.75.119.126
-  port: 2087
-  udp: true
-  type: vless
-  uuid: 731f177e-00aa-480c-b935-661456139a32
-  network: ws
-  ws-opts:
-    path: /7586c69d3dc9
-- name: 🇦🇺 澳大利亚 (Australia) 04 - jack
-  server: vpn-au-002.fastervpn.world
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vk.com
-  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -50,7 +44,6 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 01 - jack
   - 🇦🇺 澳大利亚 (Australia) 02 - jack
   - 🇦🇺 澳大利亚 (Australia) 03 - jack
-  - 🇦🇺 澳大利亚 (Australia) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -59,6 +52,5 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 01 - jack
   - 🇦🇺 澳大利亚 (Australia) 02 - jack
   - 🇦🇺 澳大利亚 (Australia) 03 - jack
-  - 🇦🇺 澳大利亚 (Australia) 04 - jack
 rules:
 - MATCH,PROXIES

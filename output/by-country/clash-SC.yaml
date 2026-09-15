@@ -16,18 +16,34 @@ proxies:
     public-key: d_pn_DMaIxhCkNh80h0Mc7nP94hrlN--I8liOIREDxE
     short-id: e8daed2d
   servername: www.apple.com
-  client-fingerprint: edge
+  client-fingerprint: firefox
+- name: 🇸🇨 塞舌尔 (Seychelles) 02 - jack
+  server: 104.21.238.93
+  port: 443
+  udp: true
+  type: vless
+  uuid: 50414e45-4c5f-5a45-5553-44890b90d17e
+  tls: true
+  servername: afzoybehu2ws.vtzv4xe1un6s.workers.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /stream/PANEL_ZEUS/44890b90d17e/loc-0
+    headers:
+      Host: afzoybehu2ws.vtzv4xe1un6s.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇸🇨 塞舌尔 (Seychelles) 01 - jack
+  - 🇸🇨 塞舌尔 (Seychelles) 02 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇨 塞舌尔 (Seychelles) 01 - jack
+  - 🇸🇨 塞舌尔 (Seychelles) 02 - jack
 rules:
 - MATCH,PROXIES

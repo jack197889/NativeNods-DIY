@@ -1,0 +1,35 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇯🇵 日本 (Japan) 01 (家宽) - jack
+  server: 57.129.130.57
+  port: 52014
+  udp: true
+  type: vless
+  uuid: b30c54d5-315f-428c-80d0-83b4f423abb2
+  tls: true
+  servername: ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇯🇵 日本 (Japan) 01 (家宽) - jack
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇯🇵 日本 (Japan) 01 (家宽) - jack
+rules:
+- MATCH,PROXIES
