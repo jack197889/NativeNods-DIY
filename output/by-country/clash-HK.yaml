@@ -12,35 +12,25 @@ proxies:
   cipher: aes-256-gcm
   password: XTy3WkCf95LVBY7x
 - name: 🇭🇰 中国香港 (Hong Kong) 02 - jack
-  server: zfd-hkv1.kunlun01dns.com
-  port: 16114
+  server: 46.17.42.166
+  port: 50111
   udp: true
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
+  type: ss
+  cipher: aes-256-gcm
+  password: 6b39ae3234dfd68b
 - name: 🇭🇰 中国香港 (Hong Kong) 03 - jack
-  server: dog-hk.kunlun01dns.com
-  port: 21018
-  udp: true
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 04 - jack
-  server: 207.56.137.51
-  port: 443
+  server: 47.238.210.5
+  port: 13779
   udp: true
   type: vless
-  uuid: 01ada9fb-fa2f-45da-a0d0-bce80cdf433b
-  flow: xtls-rprx-vision
+  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
   tls: true
   reality-opts:
-    public-key: WNifT0qNHWrUsvC6cuvej0rzZe6qPijopbmJyRADOF0
-    short-id: f713561d
-  servername: www.cloudflare.com
+    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
+    short-id: af1bdd293097b664
+  servername: tesla.com
   client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 05 - jack
+- name: 🇭🇰 中国香港 (Hong Kong) 04 - jack
   server: 162.128.157.164
   port: 443
   udp: true
@@ -52,31 +42,8 @@ proxies:
     public-key: TP_bpIPUtjdxxGA9j7mpsHtSDfM2HMSZFNWW9MtDPT0
     short-id: 14156e3ac23212cc
   servername: www.bing.com
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 06 - jack
-  server: 46.17.42.166
-  port: 50111
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 6b39ae3234dfd68b
-- name: 🇭🇰 中国香港 (Hong Kong) 07 - jack
-  server: 202.146.222.174
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2🇨🇳
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 08 - jack
-  server: 202.146.222.89
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 202.146.222.89
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 09 - jack
+  client-fingerprint: firefox
+- name: 🇭🇰 中国香港 (Hong Kong) 05 - jack
   server: hk-1.gsafevpnapi.com
   port: 20270
   udp: true
@@ -89,23 +56,39 @@ proxies:
     short-id: d5b538acf8a93540
   servername: www.yahoo.com
   client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 10 - jack
+- name: 🇭🇰 中国香港 (Hong Kong) 06 - jack
+  server: 119.246.1.143
+  port: 443
+  udp: true
+  type: trojan
+  password: BxceQaOe
+  sni: t.me
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 07 - jack
   server: 202.146.222.29
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2рҹү
+  sni: t.me
   skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 11 - jack
-  server: zfd-hkv2.kunlun01dns.com
-  port: 16116
+- name: 🇭🇰 中国香港 (Hong Kong) 08 - jack
+  server: 202.146.222.174
+  port: 443
   udp: true
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 12 - jack
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https://t.me/wangcai2🇨🇳
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 09 - jack
+  server: 202.146.222.89
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 202.146.222.89
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 10 - jack
   server: www.wto.org
   port: 443
   udp: true
@@ -114,51 +97,12 @@ proxies:
   tls: true
   servername: hk.152568.xyz
   skip-cert-verify: false
-  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /cdn/packages/runtime-core.tar.gz
     headers:
       Host: hk.152568.xyz
-- name: 🇭🇰 中国香港 (Hong Kong) 13 - jack
-  server: 47.238.210.5
-  port: 13779
-  udp: true
-  type: vless
-  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
-  tls: true
-  reality-opts:
-    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
-    short-id: af1bdd293097b664
-  servername: tesla.com
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 14 - jack
-  server: nas.aizhzo.com
-  port: 5010
-  udp: true
-  type: hysteria2
-  password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ
-  sni: nas.aizhzo.com
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
-- name: 🇭🇰 中国香港 (Hong Kong) 15 - jack
-  server: mz.hkychina.com
-  port: 8443
-  udp: true
-  type: hysteria2
-  password: HysTeria2026!Proxy
-  sni: mz.hkychina.com
-  skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 16 - jack
-  server: 119.246.1.143
-  port: 443
-  udp: true
-  type: trojan
-  password: BxceQaOe
-  sni: 119.246.1.143
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 17 - jack
+- name: 🇭🇰 中国香港 (Hong Kong) 11 - jack
   server: 47.239.6.251
   port: 13779
   udp: true
@@ -170,6 +114,29 @@ proxies:
     public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
     short-id: af1bdd293097b664
   servername: tesla.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 12 - jack
+  server: nas.aizhzo.com
+  port: 5010
+  udp: true
+  type: hysteria2
+  password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ
+  sni: 127.0.0.1
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
+- name: 🇭🇰 中国香港 (Hong Kong) 13 - jack
+  server: 212.192.13.233
+  port: 443
+  udp: true
+  type: vless
+  uuid: d742752c-4231-4695-801e-f06d77f0f277
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: O8Av8GXWVqj7FOxUyStmrTLWv5EtvQ1ZnMOVVLb1V3s
+    short-id: 1bc2c1ef1c
+  servername: www.cathaypacific.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -189,10 +156,6 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 11 - jack
   - 🇭🇰 中国香港 (Hong Kong) 12 - jack
   - 🇭🇰 中国香港 (Hong Kong) 13 - jack
-  - 🇭🇰 中国香港 (Hong Kong) 14 - jack
-  - 🇭🇰 中国香港 (Hong Kong) 15 - jack
-  - 🇭🇰 中国香港 (Hong Kong) 16 - jack
-  - 🇭🇰 中国香港 (Hong Kong) 17 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -211,9 +174,5 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 11 - jack
   - 🇭🇰 中国香港 (Hong Kong) 12 - jack
   - 🇭🇰 中国香港 (Hong Kong) 13 - jack
-  - 🇭🇰 中国香港 (Hong Kong) 14 - jack
-  - 🇭🇰 中国香港 (Hong Kong) 15 - jack
-  - 🇭🇰 中国香港 (Hong Kong) 16 - jack
-  - 🇭🇰 中国香港 (Hong Kong) 17 - jack
 rules:
 - MATCH,PROXIES

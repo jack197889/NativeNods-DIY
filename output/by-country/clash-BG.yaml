@@ -5,34 +5,22 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇧🇬 保加利亚 (Bulgaria) 01 - jack
-  server: 213.183.63.60
-  port: 9049
+  server: 192.145.31.5
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: PRBf4BS2HvJqtWxY
+  type: vless
+  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
+  network: ws
+  ws-opts:
+    path: /
 - name: 🇧🇬 保加利亚 (Bulgaria) 02 - jack
   server: 213.183.63.60
-  port: 9064
+  port: 9066
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: cp8pRSUAyLhTfVWH
+  password: 2KUaE2a8NWTvuCZ3
 - name: 🇧🇬 保加利亚 (Bulgaria) 03 - jack
-  server: 213.183.63.60
-  port: 9061
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 4R3hUfZ2FHhDmNcP
-- name: 🇧🇬 保加利亚 (Bulgaria) 04 - jack
-  server: 213.183.63.60
-  port: 9098
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: aLpQtfEZe445QyHk
-- name: 🇧🇬 保加利亚 (Bulgaria) 05 - jack
   server: 192.145.31.5
   port: 8443
   udp: true
@@ -42,7 +30,14 @@ proxies:
   servername: neth9.lunariai.ru
   skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🇧🇬 保加利亚 (Bulgaria) 06 - jack
+- name: 🇧🇬 保加利亚 (Bulgaria) 04 - jack
+  server: 213.183.63.60
+  port: 9064
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: cp8pRSUAyLhTfVWH
+- name: 🇧🇬 保加利亚 (Bulgaria) 05 - jack
   server: 193.148.59.178
   port: 443
   udp: true
@@ -55,17 +50,8 @@ proxies:
     short-id: e3daad69
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇧🇬 保加利亚 (Bulgaria) 07 - jack
-  server: 192.145.31.5
-  port: 443
-  udp: true
-  type: vless
-  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇧🇬 保加利亚 (Bulgaria) 08 - jack
-  server: prep.wwwinternetvideo.click
+- name: 🇧🇬 保加利亚 (Bulgaria) 06 - jack
+  server: 144.31.50.236
   port: 443
   udp: true
   type: vless
@@ -88,8 +74,6 @@ proxy-groups:
   - 🇧🇬 保加利亚 (Bulgaria) 04 - jack
   - 🇧🇬 保加利亚 (Bulgaria) 05 - jack
   - 🇧🇬 保加利亚 (Bulgaria) 06 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 07 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 08 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -101,7 +85,5 @@ proxy-groups:
   - 🇧🇬 保加利亚 (Bulgaria) 04 - jack
   - 🇧🇬 保加利亚 (Bulgaria) 05 - jack
   - 🇧🇬 保加利亚 (Bulgaria) 06 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 07 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 08 - jack
 rules:
 - MATCH,PROXIES
