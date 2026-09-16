@@ -12,48 +12,36 @@
       "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     },
     {
-      "type": "vless",
-      "tag": "🇮🇹 意大利 (Italy) 02 - jack",
-      "server": "31.77.154.14",
-      "server_port": 8443,
-      "uuid": "75079a7f-75b5-418b-8a65-f7b2f438cd4a",
-      "tls": {
-        "enabled": true,
-        "server_name": "swscan.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "3O__mdy-whzI07V-QEyR6GQnag1FNwtHijDxt2_jkDQ",
-          "short_id": ""
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
       "type": "shadowsocks",
-      "tag": "🇮🇹 意大利 (Italy) 03 - jack",
+      "tag": "🇮🇹 意大利 (Italy) 02 - jack",
       "server": "57.131.48.45",
       "server_port": 8388,
       "method": "aes-256-gcm",
       "password": "itzvpn@321"
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇮🇹 意大利 (Italy) 04 - jack",
-      "server": "91.201.65.122",
-      "server_port": 9070,
-      "method": "aes-256-cfb",
-      "password": "bf7v334KKDV3YDhH"
+      "type": "vless",
+      "tag": "🇮🇹 意大利 (Italy) 03 - jack",
+      "server": "57.131.38.163",
+      "server_port": 2053,
+      "uuid": "d4b08cd6-0903-411a-9dac-45dbdf5c9712",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc",
+          "short_id": "5b8a942318178e7b"
+        }
+      }
     },
     {
       "type": "vless",
-      "tag": "🇮🇹 意大利 (Italy) 05 - jack",
+      "tag": "🇮🇹 意大利 (Italy) 04 - jack",
       "server": "82.118.16.187",
       "server_port": 443,
       "uuid": "dc2259c4-388e-4285-ba18-df619b6672b6",
@@ -73,24 +61,8 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇮🇹 意大利 (Italy) 06 - jack",
-      "server": "91.201.65.122",
-      "server_port": 9092,
-      "method": "aes-256-cfb",
-      "password": "TyNkGmp9hs6eGpDK"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇮🇹 意大利 (Italy) 07 - jack",
-      "server": "91.201.65.122",
-      "server_port": 9002,
-      "method": "aes-256-cfb",
-      "password": "b8KkNDjEd5QqFyRm"
-    },
-    {
       "type": "vless",
-      "tag": "🇮🇹 意大利 (Italy) 08 - jack",
+      "tag": "🇮🇹 意大利 (Italy) 05 - jack",
       "server": "82.118.16.189",
       "server_port": 443,
       "uuid": "d5e5f5a1-0f23-4c49-af9f-4be445bf9d8e",
@@ -110,38 +82,23 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇮🇹 意大利 (Italy) 09 - jack",
-      "server": "91.201.65.122",
-      "server_port": 9065,
-      "method": "aes-256-cfb",
-      "password": "PeHSHm5SqEjBuEXE"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇮🇹 意大利 (Italy) 10 - jack",
-      "server": "91.201.65.122",
-      "server_port": 9053,
-      "method": "aes-256-cfb",
-      "password": "SBM7R883jBmnqe6C"
-    },
-    {
       "type": "vless",
-      "tag": "🇮🇹 意大利 (Italy) 11 - jack",
-      "server": "57.131.38.163",
-      "server_port": 2053,
-      "uuid": "d4b08cd6-0903-411a-9dac-45dbdf5c9712",
+      "tag": "🇮🇹 意大利 (Italy) 06 - jack",
+      "server": "172.238.232.239",
+      "server_port": 32833,
+      "uuid": "167ed405-7de9-4bff-b1ea-6e3d49c76b0b",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "www.intel.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc",
-          "short_id": "5b8a942318178e7b"
+          "public_key": "PaTDdYBrlh1xBixdI0igvRRkf0vnUwMRzi-4oDyfS20",
+          "short_id": "a0a305ccc8e94aa8"
         }
       }
     },
@@ -155,12 +112,7 @@
         "🇮🇹 意大利 (Italy) 03 - jack",
         "🇮🇹 意大利 (Italy) 04 - jack",
         "🇮🇹 意大利 (Italy) 05 - jack",
-        "🇮🇹 意大利 (Italy) 06 - jack",
-        "🇮🇹 意大利 (Italy) 07 - jack",
-        "🇮🇹 意大利 (Italy) 08 - jack",
-        "🇮🇹 意大利 (Italy) 09 - jack",
-        "🇮🇹 意大利 (Italy) 10 - jack",
-        "🇮🇹 意大利 (Italy) 11 - jack"
+        "🇮🇹 意大利 (Italy) 06 - jack"
       ]
     },
     {
@@ -172,12 +124,7 @@
         "🇮🇹 意大利 (Italy) 03 - jack",
         "🇮🇹 意大利 (Italy) 04 - jack",
         "🇮🇹 意大利 (Italy) 05 - jack",
-        "🇮🇹 意大利 (Italy) 06 - jack",
-        "🇮🇹 意大利 (Italy) 07 - jack",
-        "🇮🇹 意大利 (Italy) 08 - jack",
-        "🇮🇹 意大利 (Italy) 09 - jack",
-        "🇮🇹 意大利 (Italy) 10 - jack",
-        "🇮🇹 意大利 (Italy) 11 - jack"
+        "🇮🇹 意大利 (Italy) 06 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

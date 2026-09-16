@@ -5,34 +5,26 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - jack
-  server: 195.133.5.102
-  port: 9011
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 895b4b796a357570
-- name: 🇷🇺 俄罗斯 (Russia) 02 - jack
   server: 194.87.196.13
   port: 9011
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: 4938e975724d0ed1
-- name: 🇷🇺 俄罗斯 (Russia) 03 - jack
-  server: 193.17.92.57
-  port: 2053
+- name: 🇷🇺 俄罗斯 (Russia) 02 - jack
+  server: 195.133.5.102
+  port: 9011
   udp: true
-  type: vless
-  uuid: 1cbb3702-b434-45cf-8520-3e32d860fd83
-  tls: true
-  reality-opts:
-    public-key: G7VlRXdpKKaZ_33pA0Zsii70uiYkeoBiVYgAD_tL_28
-    short-id: 76f9d74c385ae618
-  servername: vk.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-fd03cd54
+  type: ss
+  cipher: aes-256-gcm
+  password: 895b4b796a357570
+- name: 🇷🇺 俄罗斯 (Russia) 03 - jack
+  server: 130.49.189.158
+  port: 43558
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: /QFycb02d87cByC9+5ZRSygI1avHiPXkgYG2yc+TnGA=
 - name: 🇷🇺 俄罗斯 (Russia) 04 - jack
   server: 91.240.86.70
   port: 22443
@@ -40,34 +32,8 @@ proxies:
   type: hysteria2
   password: 3f63c86c-ac4a-4900-85cf-4fedf93c2ca5
   sni: hy.quattro-tech.ru
-  skip-cert-verify: false
+  skip-cert-verify: true
 - name: 🇷🇺 俄罗斯 (Russia) 05 - jack
-  server: 45.12.75.242
-  port: 26424
-  udp: true
-  type: vless
-  uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
-  tls: true
-  reality-opts:
-    public-key: l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0
-    short-id: 23103e1e
-  servername: ya.ru
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 06 - jack
-  server: 46.8.200.91
-  port: 443
-  udp: true
-  type: vless
-  uuid: b8201bab-fa6c-4f6e-b289-b5da660c6f69
-  tls: true
-  servername: cf3.rumedia-cdn.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /cdn/v3/live
-    headers:
-      Host: cf3.rumedia-cdn.com
-- name: 🇷🇺 俄罗斯 (Russia) 07 - jack
   server: 195.58.48.137
   port: 9019
   udp: true
@@ -84,8 +50,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03 - jack
   - 🇷🇺 俄罗斯 (Russia) 04 - jack
   - 🇷🇺 俄罗斯 (Russia) 05 - jack
-  - 🇷🇺 俄罗斯 (Russia) 06 - jack
-  - 🇷🇺 俄罗斯 (Russia) 07 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -96,7 +60,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03 - jack
   - 🇷🇺 俄罗斯 (Russia) 04 - jack
   - 🇷🇺 俄罗斯 (Russia) 05 - jack
-  - 🇷🇺 俄罗斯 (Russia) 06 - jack
-  - 🇷🇺 俄罗斯 (Russia) 07 - jack
 rules:
 - MATCH,PROXIES

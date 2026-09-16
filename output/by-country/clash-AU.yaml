@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇺 澳大利亚 (Australia) 01 - jack
-  server: 82.198.246.37
+  server: 82.198.246.97
   port: 180
   udp: true
   type: vmess
@@ -13,28 +13,14 @@ proxies:
   alterId: 0
   cipher: auto
 - name: 🇦🇺 澳大利亚 (Australia) 02 - jack
-  server: 103.75.119.126
-  port: 2087
+  server: vpn-au-002.fastervpn.world
+  port: 443
   udp: true
-  type: vless
-  uuid: 731f177e-00aa-480c-b935-661456139a32
-  network: ws
-  ws-opts:
-    path: /7586c69d3dc9
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-au-002.fastervpn.world
+  skip-cert-verify: true
 - name: 🇦🇺 澳大利亚 (Australia) 03 - jack
-  server: au1.gsafevpnapi.com
-  port: 20270
-  udp: true
-  type: vless
-  uuid: 7647b321-4bfe-43f3-b21f-926c5de8f9b6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: RHLiKldLu3DONcQoX4Kjs7Xmd2K25ndVbw4pwxe45XE
-    short-id: e6a5a4a9115456de
-  servername: www.yahoo.com
-  client-fingerprint: chrome
-- name: 🇦🇺 澳大利亚 (Australia) 04 - jack
   server: 152.67.115.203
   port: 443
   udp: true
@@ -52,7 +38,6 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 01 - jack
   - 🇦🇺 澳大利亚 (Australia) 02 - jack
   - 🇦🇺 澳大利亚 (Australia) 03 - jack
-  - 🇦🇺 澳大利亚 (Australia) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -61,6 +46,5 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 01 - jack
   - 🇦🇺 澳大利亚 (Australia) 02 - jack
   - 🇦🇺 澳大利亚 (Australia) 03 - jack
-  - 🇦🇺 澳大利亚 (Australia) 04 - jack
 rules:
 - MATCH,PROXIES
