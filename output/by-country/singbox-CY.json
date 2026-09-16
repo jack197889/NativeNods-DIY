@@ -50,6 +50,45 @@
     {
       "type": "vless",
       "tag": "🇨🇾 塞浦路斯 (Cyprus) 03 - jack",
+      "server": "45.9.2.171",
+      "server_port": 8443,
+      "uuid": "8fe31772-a4b7-4a70-9fa2-34124c7284ca",
+      "tls": {
+        "enabled": true,
+        "server_name": "torr.wlrus.cfd",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇾 塞浦路斯 (Cyprus) 04 - jack",
+      "server": "194.76.154.31",
+      "server_port": 40443,
+      "uuid": "9f0baff8-bdee-4de9-9515-bcc4932b41fa",
+      "tls": {
+        "enabled": true,
+        "server_name": "deepl.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ",
+          "short_id": "a8ae"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇾 塞浦路斯 (Cyprus) 05 - jack",
       "server": "194.76.155.80",
       "server_port": 40443,
       "uuid": "588456a5-f724-46a7-a08b-5d336d9f8f56",
@@ -70,68 +109,8 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇾 塞浦路斯 (Cyprus) 04 - jack",
-      "server": "45.9.2.171",
-      "server_port": 8443,
-      "uuid": "167610e4-bcaf-4074-bc2d-0c08dc4ea294",
-      "tls": {
-        "enabled": true,
-        "server_name": "torr.wlrus.cfd",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇾 塞浦路斯 (Cyprus) 05 - jack",
-      "server": "194.76.154.31",
-      "server_port": 40443,
-      "uuid": "9f0baff8-bdee-4de9-9515-bcc4932b41fa",
-      "tls": {
-        "enabled": true,
-        "server_name": "deepl.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ",
-          "short_id": "a8ae"
-        }
-      }
-    },
-    {
-      "type": "vless",
       "tag": "🇨🇾 塞浦路斯 (Cyprus) 06 - jack",
-      "server": "5.253.28.218",
-      "server_port": 40443,
-      "uuid": "405b964e-a2d2-454f-aaaa-711cc218897c",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "deepl.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0",
-          "short_id": "88b6"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇾 塞浦路斯 (Cyprus) 07 - jack",
-      "server": "5.253.28.218",
+      "server": "hydra.yokkastars.com",
       "server_port": 2443,
       "uuid": "5e679ccd-1586-4d5f-b87b-48251046cad8",
       "tls": {
@@ -139,7 +118,7 @@
         "server_name": "deepl.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
@@ -150,6 +129,27 @@
       "transport": {
         "type": "grpc",
         "service_name": "rex-eb0bf76b710ce763"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇾 塞浦路斯 (Cyprus) 07 - jack",
+      "server": "5.253.30.99",
+      "server_port": 40443,
+      "uuid": "511c1563-2cb6-4064-abc6-a59ee49818a8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "deepl.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0",
+          "short_id": "88b6"
+        }
       }
     },
     {
@@ -174,6 +174,48 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇨🇾 塞浦路斯 (Cyprus) 09 - jack",
+      "server": "5.253.42.164",
+      "server_port": 40443,
+      "uuid": "e99ba96d-dec8-42eb-be53-19e71eef7cab",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "deepl.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw",
+          "short_id": "68a8"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇾 塞浦路斯 (Cyprus) 10 - jack",
+      "server": "2.56.124.241",
+      "server_port": 443,
+      "uuid": "eec2f6a7-c10f-43b0-b133-61f9bf9bbc27",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.amazon.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "bPbAdn6ogLbiv5cRe5d12EL7FhooAIVrC3-fg90P-Bw",
+          "short_id": "72104d27a0f5f62e"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -185,7 +227,9 @@
         "🇨🇾 塞浦路斯 (Cyprus) 05 - jack",
         "🇨🇾 塞浦路斯 (Cyprus) 06 - jack",
         "🇨🇾 塞浦路斯 (Cyprus) 07 - jack",
-        "🇨🇾 塞浦路斯 (Cyprus) 08 - jack"
+        "🇨🇾 塞浦路斯 (Cyprus) 08 - jack",
+        "🇨🇾 塞浦路斯 (Cyprus) 09 - jack",
+        "🇨🇾 塞浦路斯 (Cyprus) 10 - jack"
       ]
     },
     {
@@ -199,7 +243,9 @@
         "🇨🇾 塞浦路斯 (Cyprus) 05 - jack",
         "🇨🇾 塞浦路斯 (Cyprus) 06 - jack",
         "🇨🇾 塞浦路斯 (Cyprus) 07 - jack",
-        "🇨🇾 塞浦路斯 (Cyprus) 08 - jack"
+        "🇨🇾 塞浦路斯 (Cyprus) 08 - jack",
+        "🇨🇾 塞浦路斯 (Cyprus) 09 - jack",
+        "🇨🇾 塞浦路斯 (Cyprus) 10 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

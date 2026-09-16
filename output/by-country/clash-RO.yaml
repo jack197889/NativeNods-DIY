@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01 - jack
-  server: 205.237.109.174
+  server: 205.237.109.164
   port: 8443
   udp: true
   type: hysteria2
@@ -13,39 +13,14 @@ proxies:
   sni: hopp-netherland-new.dynuddns.net
   skip-cert-verify: true
 - name: 🇷🇴 罗马尼亚 (Romania) 02 - jack
-  server: 162.249.126.2
+  server: 162.249.126.6
   port: 8443
   udp: true
   type: hysteria2
   password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
   sni: hopp-germany-new.ddnsguru.com
-  skip-cert-verify: true
-- name: 🇷🇴 罗马尼亚 (Romania) 03 - jack
-  server: 85.204.107.185
-  port: 8443
-  udp: true
-  type: hysteria2
-  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
-  sni: hopp-romania-new.roxa.org
-  skip-cert-verify: true
-- name: 🇷🇴 罗马尼亚 (Romania) 04 - jack
-  server: bogging-eyeteeth-fly.freesocks.work
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
-- name: 🇷🇴 罗马尼亚 (Romania) 05 - jack
-  server: 162.249.125.133
-  port: 443
-  udp: true
-  type: hysteria2
-  password: QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s
-  sni: hy2-new.aspidnet.xyz
   skip-cert-verify: false
-  obfs: salamander
-  obfs-password: c1b4086fea89914496c7e10967a419216566
-- name: 🇷🇴 罗马尼亚 (Romania) 06 - jack
+- name: 🇷🇴 罗马尼亚 (Romania) 03 - jack
   server: 185.156.44.99
   port: 443
   udp: true
@@ -53,30 +28,15 @@ proxies:
   password: gf1:gfhysteria2024
   sni: www.amazon.com
   skip-cert-verify: true
-- name: 🇷🇴 罗马尼亚 (Romania) 07 - jack
-  server: hy2.aspidnet.xyz
-  port: 443
+- name: 🇷🇴 罗马尼亚 (Romania) 04 - jack
+  server: 85.204.107.175
+  port: 8443
   udp: true
   type: hysteria2
-  password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
-  sni: hy2.aspidnet.xyz
-  skip-cert-verify: false
-  obfs: salamander
-  obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
-- name: 🇷🇴 罗马尼亚 (Romania) 08 - jack
-  server: 193.163.203.253
-  port: 443
-  udp: true
-  type: vless
-  uuid: 441afe11-a180-4516-bb80-80a8a6b38705
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: gE8LUmGFXik94SoDXNiAG5KprGyhjoRwDuhGebgAVWk
-    short-id: 5ee019e02e6ed99a
-  servername: yandex.ru
-  client-fingerprint: firefox
-- name: 🇷🇴 罗马尼亚 (Romania) 09 - jack
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+  sni: hopp-romania-new.roxa.org
+  skip-cert-verify: true
+- name: 🇷🇴 罗马尼亚 (Romania) 05 - jack
   server: 46.28.67.55
   port: 443
   udp: true
@@ -89,6 +49,46 @@ proxies:
     short-id: d06d78e974491b6e
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇷🇴 罗马尼亚 (Romania) 06 - jack
+  server: hy2-new.aspidnet.xyz
+  port: 443
+  udp: true
+  type: hysteria2
+  password: QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s
+  sni: hy2-new.aspidnet.xyz
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: c1b4086fea89914496c7e10967a419216566
+- name: 🇷🇴 罗马尼亚 (Romania) 07 - jack
+  server: hy2.aspidnet.xyz
+  port: 443
+  udp: true
+  type: hysteria2
+  password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
+  sni: hy2.aspidnet.xyz
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
+- name: 🇷🇴 罗马尼亚 (Romania) 08 - jack
+  server: bl3fk52.sysopnova.art
+  port: 443
+  udp: true
+  type: vless
+  uuid: 441afe11-a180-4516-bb80-80a8a6b38705
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: gE8LUmGFXik94SoDXNiAG5KprGyhjoRwDuhGebgAVWk
+    short-id: 5ee019e02e6ed99a
+  servername: yandex.ru
+  client-fingerprint: chrome
+- name: 🇷🇴 罗马尼亚 (Romania) 09 - jack
+  server: 154.46.31.106
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
 proxy-groups:
 - name: PROXIES
   type: select

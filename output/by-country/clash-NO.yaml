@@ -12,6 +12,18 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
 - name: 🇳🇴 挪威 (Norway) 02 - jack
+  server: 46.29.238.88
+  port: 40443
+  udp: true
+  type: vless
+  uuid: db320947-adfb-400d-b60b-383b8324bffe
+  tls: true
+  reality-opts:
+    public-key: aZOpodpnifoxDqTzWgxJRffgsiGnG9-h-EZd4SvOImc
+    short-id: f7b2
+  servername: deepl.com
+  client-fingerprint: chrome
+- name: 🇳🇴 挪威 (Norway) 03 - jack
   server: 151.242.168.125
   port: 390
   udp: true
@@ -24,18 +36,6 @@ proxies:
     short-id: b545fe8c5e22f92d
   servername: bowandbead.com
   client-fingerprint: ios
-- name: 🇳🇴 挪威 (Norway) 03 - jack
-  server: 46.29.238.88
-  port: 40443
-  udp: true
-  type: vless
-  uuid: db320947-adfb-400d-b60b-383b8324bffe
-  tls: true
-  reality-opts:
-    public-key: aZOpodpnifoxDqTzWgxJRffgsiGnG9-h-EZd4SvOImc
-    short-id: f7b2
-  servername: deepl.com
-  client-fingerprint: qq
 - name: 🇳🇴 挪威 (Norway) 04 - jack
   server: aldebaran.yokkastars.com
   port: 40443
@@ -47,22 +47,7 @@ proxies:
     public-key: dvx6zPztKbgHpYaW6J4OZQC74Uy0JS6HUVdDfbjG5V4
     short-id: '7606'
   servername: deepl.com
-  client-fingerprint: chrome
-- name: 🇳🇴 挪威 (Norway) 05 - jack
-  server: 185.125.171.128
-  port: 8443
-  udp: true
-  type: vless
-  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
-  tls: true
-  servername: kkkk-xcd.pages.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: kkkk-xcd.pages.dev
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
@@ -72,7 +57,6 @@ proxy-groups:
   - 🇳🇴 挪威 (Norway) 02 - jack
   - 🇳🇴 挪威 (Norway) 03 - jack
   - 🇳🇴 挪威 (Norway) 04 - jack
-  - 🇳🇴 挪威 (Norway) 05 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -82,6 +66,5 @@ proxy-groups:
   - 🇳🇴 挪威 (Norway) 02 - jack
   - 🇳🇴 挪威 (Norway) 03 - jack
   - 🇳🇴 挪威 (Norway) 04 - jack
-  - 🇳🇴 挪威 (Norway) 05 - jack
 rules:
 - MATCH,PROXIES
