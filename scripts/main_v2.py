@@ -53,28 +53,30 @@ except ImportError as e:
 # ══════════════════════════════════════════════════════════════════
 
 SOURCE_URLS = [
-    # ========== 1. 原作者核心 CF Worker 动态聚合源（必备，质量极高）==========
+    # ========== 1. 大佬私藏与原作者 CF Worker 动态源（最高优先级、高质量） ==========
+    "https://sub.445569.xyz/",
     "https://open.heleimail.workers.dev/",
     "https://wild-cloud-9893.heleimail.workers.dev",
 
-    # ========== 2. 10ium 顶级 TG 爬虫与 Hysteria/TLS 专项源 ==========
+    # ========== 2. 10ium 地区定向与协议专源（美 / 澳 / 荷 重点覆盖） ==========
+    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/countries/us/mixed",
+    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/countries/au/mixed",
+    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/countries/nl/mixed",
     "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/mix",
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/hysteria",
+    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/trojan",
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/security/tls",
 
-    # ========== 3. 高频 Telegram 动态抓取源（家宽/住宅 IP 主要来源）==========
+    # ========== 3. 高频 Telegram 动态抓取源（家宽/住宅 IP 补充） ==========
     "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/Config_jo.txt",
     "https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/merged.txt",
     "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/base64/mix",
 
-    # ========== 4. 精选自动化去重与定向源 ==========
+    # ========== 4. 定向与自动化去重源 ==========
     "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt",
+    "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-US.txt",
     "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-TW.txt",
-    "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",
-    "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub1.txt",
-    "https://raw.githubusercontent.com/roosterkiev/optimus/main/sub.txt",
-    "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
-    "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/best.txt"
+    "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt"
 ]
 
 OUTPUT_DIR = "output"
