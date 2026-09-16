@@ -6,48 +6,20 @@ log-level: info
 proxies:
 - name: 🇱🇹 立陶宛 (Lithuania) 01 - jack
   server: 195.238.126.20
-  port: 9002
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: b8KkNDjEd5QqFyRm
-- name: 🇱🇹 立陶宛 (Lithuania) 02 - jack
-  server: 195.238.126.20
   port: 9008
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: y9VURyNzJWNRYEGQ
-- name: 🇱🇹 立陶宛 (Lithuania) 03 - jack
-  server: 195.238.126.20
-  port: 9086
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 37Z4TFCYhfxcpc9Q
-- name: 🇱🇹 立陶宛 (Lithuania) 04 - jack
-  server: 195.238.126.20
-  port: 9045
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: Lp27rqyJq72bZsqX
-- name: 🇱🇹 立陶宛 (Lithuania) 05 - jack
-  server: 195.238.126.20
-  port: 9011
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: M3t2ZEQcMGRWBjRa
-- name: 🇱🇹 立陶宛 (Lithuania) 06 - jack
+- name: 🇱🇹 立陶宛 (Lithuania) 02 - jack
   server: 195.238.126.20
   port: 9078
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: JCJpbRbQZNw9XFZG
-- name: 🇱🇹 立陶宛 (Lithuania) 07 - jack
-  server: 84.32.215.117
+- name: 🇱🇹 立陶宛 (Lithuania) 03 - jack
+  server: lt.aether-runet.top
   port: 443
   udp: true
   type: vless
@@ -58,14 +30,32 @@ proxies:
     public-key: vrcsm8L_tY7sNbnCEdLCEjOthh_w9bdWS3wFPgsIomk
     short-id: 4fa44664f6a566d3
   servername: lt.aether-runet.top
-  client-fingerprint: ios
-- name: 🇱🇹 立陶宛 (Lithuania) 08 - jack
-  server: 195.238.126.20
-  port: 9068
+  client-fingerprint: firefox
+- name: 🇱🇹 立陶宛 (Lithuania) 04 - jack
+  server: 181.214.147.216
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: mwgRg9hRq3b4Qnwb
+  type: vless
+  uuid: 8e403675-d020-4801-9520-9cba4bbfda0e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 66DIn_CbsE4-fWeWpy3vrRLP-XN8D-axun3jbZzuPmk
+  servername: lith.2clash.ru
+  client-fingerprint: firefox
+- name: 🇱🇹 立陶宛 (Lithuania) 05 - jack
+  server: 144.31.243.220
+  port: 443
+  udp: true
+  type: vless
+  uuid: c09cfd91-b234-4998-9bed-a0211b7f5c3c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: -qLezG1nUEtvOJi-Ra7WRYv-aHkv3PSefEuXpWV2G04
+    short-id: abcd1234
+  servername: lt.yservice.help
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -76,9 +66,6 @@ proxy-groups:
   - 🇱🇹 立陶宛 (Lithuania) 03 - jack
   - 🇱🇹 立陶宛 (Lithuania) 04 - jack
   - 🇱🇹 立陶宛 (Lithuania) 05 - jack
-  - 🇱🇹 立陶宛 (Lithuania) 06 - jack
-  - 🇱🇹 立陶宛 (Lithuania) 07 - jack
-  - 🇱🇹 立陶宛 (Lithuania) 08 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -89,8 +76,5 @@ proxy-groups:
   - 🇱🇹 立陶宛 (Lithuania) 03 - jack
   - 🇱🇹 立陶宛 (Lithuania) 04 - jack
   - 🇱🇹 立陶宛 (Lithuania) 05 - jack
-  - 🇱🇹 立陶宛 (Lithuania) 06 - jack
-  - 🇱🇹 立陶宛 (Lithuania) 07 - jack
-  - 🇱🇹 立陶宛 (Lithuania) 08 - jack
 rules:
 - MATCH,PROXIES

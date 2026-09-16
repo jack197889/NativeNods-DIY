@@ -5,6 +5,43 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - jack
+  server: 188.114.98.16
+  port: 2082
+  udp: true
+  type: vless
+  uuid: a22bff60-a40a-4250-bde2-4c660e363b47
+  network: ws
+  ws-opts:
+    path: /rry8le3tt8f3g5j7kr
+    headers:
+      Host: index.harmonica02.workers.dev
+- name: 🇹🇷 土耳其 (Turkey) 02 - jack
+  server: 104.20.6.153
+  port: 8880
+  udp: true
+  type: vless
+  uuid: a22bff60-a40a-4250-bde2-4c660e363b47
+  network: ws
+  ws-opts:
+    path: /j100sy9wn073cxbvir
+    headers:
+      Host: index.harmonica02.workers.dev
+- name: 🇹🇷 土耳其 (Turkey) 03 - jack
+  server: 104.17.147.22
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5ef04ae8-8d7c-0a66-13f4-6e3f00000003
+  tls: true
+  servername: relay.lunetcloud.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /lunetnetwork
+    headers:
+      Host: relay.lunetcloud.ir
+- name: 🇹🇷 土耳其 (Turkey) 04 - jack
   server: 156.67.63.231
   port: 443
   udp: true
@@ -17,7 +54,7 @@ proxies:
     short-id: 5606d4a25c99e7af
   servername: sync-bridge.org
   client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 02 - jack
+- name: 🇹🇷 土耳其 (Turkey) 05 - jack
   server: 107.161.174.26
   port: 443
   udp: true
@@ -29,20 +66,32 @@ proxies:
     public-key: N8tPKh6gTyc6L5GOmBn_3wIy707a-5QYB0FrF2HigUc
   servername: books.blackbigdog.com
   client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 03 - jack
-  server: config-turkey.zelnora.ir
-  port: 2296
+- name: 🇹🇷 土耳其 (Turkey) 06 - jack
+  server: me17.msjia8844.site
+  port: 7443
   udp: true
-  type: vmess
-  uuid: e4bbe685-a287-4a59-8dbc-02c18b1265df
-  alterId: 0
-  cipher: auto
+  type: hysteria2
+  password: M8LP9DztTr3znqCkmf-r08CQLBLLFK1r
+  sni: me17.msjia8844.site
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: u3Soh9_Ui0UmcuY6vk0ug8Lq
+- name: 🇹🇷 土耳其 (Turkey) 07 - jack
+  server: 93.114.98.212
+  port: 443
+  udp: true
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  tls: true
+  servername: kkkk-xcd.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
+    path: /?ed=2048
     headers:
-      Host: config-turkey.zelnora.ir
-- name: 🇹🇷 土耳其 (Turkey) 04 - jack
+      Host: kkkk-xcd.pages.dev
+- name: 🇹🇷 土耳其 (Turkey) 08 - jack
   server: 151.241.226.201
   port: 2053
   udp: true
@@ -54,7 +103,7 @@ proxies:
     short-id: 9e419c0759b54d6f
   servername: www.apple.com
   client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 05 - jack
+- name: 🇹🇷 土耳其 (Turkey) 09 - jack
   server: 13.143.137.164
   port: 9443
   udp: true
@@ -67,6 +116,20 @@ proxies:
     short-id: e336c9a786fae301
   servername: plaincanvas.videoclothing.xyz
   client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 10 - jack
+  server: 172.67.134.170
+  port: 443
+  udp: true
+  type: vless
+  uuid: 50414e45-4c5f-5a45-5553-635698a6bb9c
+  tls: true
+  servername: jdzit4e4urks.xwzohsebujps.workers.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /stream/PANEL_ZEUS/635698a6bb9c/loc-0
+    headers:
+      Host: jdzit4e4urks.xwzohsebujps.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -77,6 +140,11 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 03 - jack
   - 🇹🇷 土耳其 (Turkey) 04 - jack
   - 🇹🇷 土耳其 (Turkey) 05 - jack
+  - 🇹🇷 土耳其 (Turkey) 06 - jack
+  - 🇹🇷 土耳其 (Turkey) 07 - jack
+  - 🇹🇷 土耳其 (Turkey) 08 - jack
+  - 🇹🇷 土耳其 (Turkey) 09 - jack
+  - 🇹🇷 土耳其 (Turkey) 10 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -87,5 +155,10 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 03 - jack
   - 🇹🇷 土耳其 (Turkey) 04 - jack
   - 🇹🇷 土耳其 (Turkey) 05 - jack
+  - 🇹🇷 土耳其 (Turkey) 06 - jack
+  - 🇹🇷 土耳其 (Turkey) 07 - jack
+  - 🇹🇷 土耳其 (Turkey) 08 - jack
+  - 🇹🇷 土耳其 (Turkey) 09 - jack
+  - 🇹🇷 土耳其 (Turkey) 10 - jack
 rules:
 - MATCH,PROXIES

@@ -6,15 +6,31 @@
     {
       "type": "shadowsocks",
       "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
-      "server": "36.224.152.189",
+      "server": "61.231.15.229",
       "server_port": 50099,
       "method": "chacha20-ietf-poly1305",
       "password": "b1ae0fce-9340-4f2e-882d-fdb2218e2e2b"
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
-      "server": "hinet1.2yly.com",
+      "server": "r3mrcg001287h3p.cybervena.com",
+      "server_port": 50099,
+      "method": "chacha20-ietf-poly1305",
+      "password": "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
+      "server": "r3mrcg001286ek2.cybervena.com",
+      "server_port": 50099,
+      "method": "chacha20-ietf-poly1305",
+      "password": "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
+      "server": "118.167.212.163",
       "server_port": 24215,
       "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
       "tls": {
@@ -22,7 +38,7 @@
         "server_name": "addons.mozilla.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -37,7 +53,9 @@
       "outbounds": [
         "auto",
         "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack"
+        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack"
       ]
     },
     {
@@ -45,7 +63,9 @@
       "tag": "auto",
       "outbounds": [
         "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack"
+        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

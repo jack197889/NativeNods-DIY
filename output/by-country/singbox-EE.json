@@ -4,8 +4,122 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
+      "type": "vless",
       "tag": "🇪🇪 爱沙尼亚 (Estonia) 01 - jack",
+      "server": "172.67.67.178",
+      "server_port": 443,
+      "uuid": "aebe5a70-0ca3-46ce-8208-8b5bab1346ce",
+      "tls": {
+        "enabled": true,
+        "server_name": "rAyAn-007.nAsTaRaN.DpDnS.OrG",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "rayan-007.nastaran.dpdns.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇪 爱沙尼亚 (Estonia) 02 - jack",
+      "server": "94.183.170.147",
+      "server_port": 8443,
+      "uuid": "5edbcb44-8d04-4fa7-a587-bc5d60c24ca1",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "s2uiu3GQA2SlZzsr86Z5Dav97eAFTPf7Nvr-zqzzRgg",
+          "short_id": "72ccd4a7563c2953"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "9d30d49278"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇪 爱沙尼亚 (Estonia) 03 - jack",
+      "server": "94.183.170.135",
+      "server_port": 8443,
+      "uuid": "06c4e938-2954-478f-a870-ca1b163e30e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "estproxy4.lockdwn.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇪 爱沙尼亚 (Estonia) 04 - jack",
+      "server": "94.183.170.135",
+      "server_port": 443,
+      "uuid": "06c4e938-2954-478f-a870-ca1b163e30e9",
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇪🇪 爱沙尼亚 (Estonia) 05 - jack",
+      "server": "ee1.sferavpn.pro",
+      "server_port": 443,
+      "password": "cd74c0a406664a5bc0bac098220a2468",
+      "tls": {
+        "enabled": true,
+        "server_name": "ee1.sferavpn.pro",
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "44f1c1e2f8b99e792ceed574627a1eb0"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇪 爱沙尼亚 (Estonia) 06 - jack",
+      "server": "185.174.135.250",
+      "server_port": 443,
+      "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY",
+          "short_id": ""
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "TunService"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇪🇪 爱沙尼亚 (Estonia) 07 - jack",
       "server": "109.206.241.10",
       "server_port": 449,
       "password": "oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1",
@@ -20,36 +134,17 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇪🇪 爱沙尼亚 (Estonia) 02 - jack",
-      "server": "185.174.135.250",
-      "server_port": 443,
-      "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.google.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY",
-          "short_id": ""
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "TunService"
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇪🇪 爱沙尼亚 (Estonia) 01 - jack",
-        "🇪🇪 爱沙尼亚 (Estonia) 02 - jack"
+        "🇪🇪 爱沙尼亚 (Estonia) 02 - jack",
+        "🇪🇪 爱沙尼亚 (Estonia) 03 - jack",
+        "🇪🇪 爱沙尼亚 (Estonia) 04 - jack",
+        "🇪🇪 爱沙尼亚 (Estonia) 05 - jack",
+        "🇪🇪 爱沙尼亚 (Estonia) 06 - jack",
+        "🇪🇪 爱沙尼亚 (Estonia) 07 - jack"
       ]
     },
     {
@@ -57,7 +152,12 @@
       "tag": "auto",
       "outbounds": [
         "🇪🇪 爱沙尼亚 (Estonia) 01 - jack",
-        "🇪🇪 爱沙尼亚 (Estonia) 02 - jack"
+        "🇪🇪 爱沙尼亚 (Estonia) 02 - jack",
+        "🇪🇪 爱沙尼亚 (Estonia) 03 - jack",
+        "🇪🇪 爱沙尼亚 (Estonia) 04 - jack",
+        "🇪🇪 爱沙尼亚 (Estonia) 05 - jack",
+        "🇪🇪 爱沙尼亚 (Estonia) 06 - jack",
+        "🇪🇪 爱沙尼亚 (Estonia) 07 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -5,76 +5,96 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01 - jack
-  server: 217.30.10.44
-  port: 9062
+  server: 104.25.22.24
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: tkhHVxxfM2QErBWe
+  type: vless
+  uuid: e6cc4788-3c45-4df1-94f3-8303504a65bf
+  tls: true
+  servername: khoda.ak-khoda.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: khoda.ak-khoda.workers.dev
 - name: 🇵🇱 波兰 (Poland) 02 - jack
-  server: 217.30.10.44
-  port: 9076
+  server: 188.114.97.6
+  port: 8080
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: S2zDyyPcmZN2h8EC
+  type: vless
+  uuid: e6cc4788-3c45-4df1-94f3-8303504a65bf
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: khoda.ak-khoda.workers.dev
 - name: 🇵🇱 波兰 (Poland) 03 - jack
-  server: 217.30.10.44
-  port: 9099
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 7heRqkPG3hg4UnRm
-- name: 🇵🇱 波兰 (Poland) 04 - jack
-  server: 217.30.10.44
-  port: 9052
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: jt2ekBNc9HuVtm2a
-- name: 🇵🇱 波兰 (Poland) 05 - jack
-  server: 217.30.10.44
-  port: 9095
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: N7j3pdTYkKmsy8CR
-- name: 🇵🇱 波兰 (Poland) 06 - jack
   server: 217.30.10.44
   port: 9006
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: FAdUvMJUq5vDgKEq
-- name: 🇵🇱 波兰 (Poland) 07 - jack
-  server: 217.30.10.44
-  port: 9071
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: mENfxTFQpRKKh4As
-- name: 🇵🇱 波兰 (Poland) 08 - jack
-  server: 217.30.10.44
-  port: 9063
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: aQqJbtwFGcCCaeL3
-- name: 🇵🇱 波兰 (Poland) 09 - jack
+- name: 🇵🇱 波兰 (Poland) 04 - jack
   server: 217.30.10.44
   port: 9041
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: U6qnYRhfyDmn8sgn
-- name: 🇵🇱 波兰 (Poland) 10 - jack
-  server: 64.176.64.194
-  port: 25585
+- name: 🇵🇱 波兰 (Poland) 05 - jack
+  server: 217.30.10.44
+  port: 9071
   udp: true
-  type: vless
-  uuid: 8b84bbec-9a55-47c2-ac2e-03c41065e572
+  type: ss
+  cipher: aes-256-cfb
+  password: mENfxTFQpRKKh4As
+- name: 🇵🇱 波兰 (Poland) 06 - jack
+  server: 217.30.10.44
+  port: 9099
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 7heRqkPG3hg4UnRm
+- name: 🇵🇱 波兰 (Poland) 07 - jack
+  server: 217.30.10.44
+  port: 9052
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: jt2ekBNc9HuVtm2a
+- name: 🇵🇱 波兰 (Poland) 08 - jack
+  server: 217.30.10.44
+  port: 9095
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: N7j3pdTYkKmsy8CR
+- name: 🇵🇱 波兰 (Poland) 09 - jack
+  server: 217.30.10.44
+  port: 9063
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: aQqJbtwFGcCCaeL3
+- name: 🇵🇱 波兰 (Poland) 10 - jack
+  server: 217.30.10.44
+  port: 9076
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: S2zDyyPcmZN2h8EC
 - name: 🇵🇱 波兰 (Poland) 11 - jack
-  server: 185.223.57.16
+  server: 217.30.10.44
+  port: 9062
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: tkhHVxxfM2QErBWe
+- name: 🇵🇱 波兰 (Poland) 12 - jack
+  server: 185.223.57.10
   port: 33743
   udp: true
   type: vless
@@ -83,11 +103,11 @@ proxies:
   reality-opts:
     public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
   servername: www.google.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: TunService
-- name: 🇵🇱 波兰 (Poland) 12 - jack
+- name: 🇵🇱 波兰 (Poland) 13 - jack
   server: 45.192.12.93
   port: 443
   udp: true
@@ -95,25 +115,26 @@ proxies:
   password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
   sni: admin.wwwinternetvideo.click
   skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 13 - jack
-  server: 50.7.249.172
+- name: 🇵🇱 波兰 (Poland) 14 - jack
+  server: 144.31.5.64
   port: 443
   udp: true
   type: vless
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
   flow: xtls-rprx-vision
   tls: true
-  servername: pl-dedic-3.failspace.top
+  servername: pl6.moritech.net
   skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🇵🇱 波兰 (Poland) 14 - jack
-  server: 194.61.121.93
-  port: 7538
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: U9YAoqBgg5VyGBc6vQv1sN
+  client-fingerprint: chrome
 - name: 🇵🇱 波兰 (Poland) 15 - jack
+  server: 217.60.33.215
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01
+  sni: streambox.wwwinternetvideo.click
+  skip-cert-verify: true
+- name: 🇵🇱 波兰 (Poland) 16 - jack
   server: 150.251.113.34
   port: 443
   udp: true
@@ -126,28 +147,17 @@ proxies:
     short-id: 150a627d15154cf2
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 16 - jack
-  server: 144.31.5.3
-  port: 443
-  udp: true
-  type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: pl4.moritech.net
-  skip-cert-verify: false
-  client-fingerprint: chrome
 - name: 🇵🇱 波兰 (Poland) 17 - jack
-  server: 144.31.5.64
+  server: 50.7.249.181
   port: 443
   udp: true
   type: vless
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
   flow: xtls-rprx-vision
   tls: true
-  servername: pl6.moritech.net
+  servername: pl-dedic-2.failspace.top
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🇵🇱 波兰 (Poland) 18 - jack
   server: 82.118.22.161
   port: 443
@@ -160,6 +170,106 @@ proxies:
     public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
     short-id: fa3ea655619a3e78
   servername: www.cloudflare.com
+  client-fingerprint: safari
+- name: 🇵🇱 波兰 (Poland) 19 - jack
+  server: 94.183.157.243
+  port: 8090
+  udp: true
+  type: vless
+  uuid: 818eaf39-544f-4d1d-977e-87be7e33eecf
+  tls: true
+  servername: askuhgfdsg.space.coupons
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: askuhgfdsg.space.coupons
+- name: 🇵🇱 波兰 (Poland) 20 - jack
+  server: 50.7.248.237
+  port: 443
+  udp: true
+  type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  flow: xtls-rprx-vision
+  tls: true
+  servername: pl-new-dedic.failspace.top
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇵🇱 波兰 (Poland) 21 - jack
+  server: 94.183.157.174
+  port: 8090
+  udp: true
+  type: vless
+  uuid: 818eaf39-544f-4d1d-977e-87be7e33eecf
+  tls: true
+  servername: askuhgfdsg.space.coupons
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: askuhgfdsg.space.coupons
+- name: 🇵🇱 波兰 (Poland) 22 - jack
+  server: 103.167.234.26
+  port: 443
+  udp: true
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  tls: true
+  servername: kkkk-8oc.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: kkkk-8oc.pages.dev
+- name: 🇵🇱 波兰 (Poland) 23 - jack
+  server: 94.183.157.223
+  port: 8090
+  udp: true
+  type: vless
+  uuid: 818eaf39-544f-4d1d-977e-87be7e33eecf
+  tls: true
+  servername: askuhgfdsg.space.coupons
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: askuhgfdsg.space.coupons
+- name: 🇵🇱 波兰 (Poland) 24 - jack
+  server: 194.61.121.93
+  port: 7538
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: U9YAoqBgg5VyGBc6vQv1sN
+- name: 🇵🇱 波兰 (Poland) 25 - jack
+  server: 144.31.2.33
+  port: 443
+  udp: true
+  type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  flow: xtls-rprx-vision
+  tls: true
+  servername: pl3.moritech.net
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇵🇱 波兰 (Poland) 26 - jack
+  server: pl4.moritech.net
+  port: 443
+  udp: true
+  type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  flow: xtls-rprx-vision
+  tls: true
+  servername: pl4.moritech.net
+  skip-cert-verify: false
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -184,6 +294,14 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 16 - jack
   - 🇵🇱 波兰 (Poland) 17 - jack
   - 🇵🇱 波兰 (Poland) 18 - jack
+  - 🇵🇱 波兰 (Poland) 19 - jack
+  - 🇵🇱 波兰 (Poland) 20 - jack
+  - 🇵🇱 波兰 (Poland) 21 - jack
+  - 🇵🇱 波兰 (Poland) 22 - jack
+  - 🇵🇱 波兰 (Poland) 23 - jack
+  - 🇵🇱 波兰 (Poland) 24 - jack
+  - 🇵🇱 波兰 (Poland) 25 - jack
+  - 🇵🇱 波兰 (Poland) 26 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -207,5 +325,13 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 16 - jack
   - 🇵🇱 波兰 (Poland) 17 - jack
   - 🇵🇱 波兰 (Poland) 18 - jack
+  - 🇵🇱 波兰 (Poland) 19 - jack
+  - 🇵🇱 波兰 (Poland) 20 - jack
+  - 🇵🇱 波兰 (Poland) 21 - jack
+  - 🇵🇱 波兰 (Poland) 22 - jack
+  - 🇵🇱 波兰 (Poland) 23 - jack
+  - 🇵🇱 波兰 (Poland) 24 - jack
+  - 🇵🇱 波兰 (Poland) 25 - jack
+  - 🇵🇱 波兰 (Poland) 26 - jack
 rules:
 - MATCH,PROXIES

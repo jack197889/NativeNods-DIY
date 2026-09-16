@@ -15,17 +15,17 @@
       "type": "shadowsocks",
       "tag": "🇱🇻 拉脱维亚 (Latvia) 02 - jack",
       "server": "185.135.86.175",
-      "server_port": 9068,
+      "server_port": 9094,
       "method": "aes-256-cfb",
-      "password": "mwgRg9hRq3b4Qnwb"
+      "password": "rpgbNnU9rDDU4aWZ"
     },
     {
       "type": "shadowsocks",
       "tag": "🇱🇻 拉脱维亚 (Latvia) 03 - jack",
       "server": "185.135.86.175",
-      "server_port": 9036,
+      "server_port": 9068,
       "method": "aes-256-cfb",
-      "password": "hbtvgUz5uNYyB3Rf"
+      "password": "mwgRg9hRq3b4Qnwb"
     },
     {
       "type": "shadowsocks",
@@ -39,17 +39,17 @@
       "type": "shadowsocks",
       "tag": "🇱🇻 拉脱维亚 (Latvia) 05 - jack",
       "server": "185.135.86.175",
-      "server_port": 9094,
+      "server_port": 9036,
       "method": "aes-256-cfb",
-      "password": "rpgbNnU9rDDU4aWZ"
+      "password": "hbtvgUz5uNYyB3Rf"
     },
     {
       "type": "shadowsocks",
       "tag": "🇱🇻 拉脱维亚 (Latvia) 06 - jack",
       "server": "185.135.86.175",
-      "server_port": 9034,
+      "server_port": 9033,
       "method": "aes-256-cfb",
-      "password": "Yg4MbdXFQ9HFFVY6"
+      "password": "UTJA57ypk2XKQpnm"
     },
     {
       "type": "shadowsocks",
@@ -63,30 +63,17 @@
       "type": "shadowsocks",
       "tag": "🇱🇻 拉脱维亚 (Latvia) 08 - jack",
       "server": "185.135.86.175",
-      "server_port": 9033,
+      "server_port": 9034,
       "method": "aes-256-cfb",
-      "password": "UTJA57ypk2XKQpnm"
+      "password": "Yg4MbdXFQ9HFFVY6"
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇱🇻 拉脱维亚 (Latvia) 09 - jack",
-      "server": "195.123.213.28",
-      "server_port": 443,
-      "uuid": "02fcc1a4-ee90-4970-8bbb-4ffaa8109d24",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo",
-          "short_id": "5c256336e3b673fa"
-        }
-      }
+      "server": "185.135.86.175",
+      "server_port": 9007,
+      "method": "aes-256-cfb",
+      "password": "kSPmvwdFzGMMW5pY"
     },
     {
       "type": "vless",
@@ -100,7 +87,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,

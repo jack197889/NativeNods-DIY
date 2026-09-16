@@ -5,6 +5,47 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01 - jack
+  server: 188.114.97.6
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 893096ae-ed76-4440-bc34-f77c4872540f
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoieE1zSFhYR2hkcHZGUHI3cSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: masterserver1-vsh.kalleh.workers.dev
+- name: 🇨🇿 捷克 (Czech) 02 - jack
+  server: 188.114.97.3
+  port: 443
+  udp: true
+  type: vless
+  uuid: daf485ba-60fc-4166-a72c-8d2a5407cbc5
+  tls: true
+  servername: KIeVH9yXcGg14-GY4wXqCAV0pegKd.D-0EZpK5xP5wk8ltDgb6EVLPGC-jin.WORkeRS.Dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/zM8ELyqEIYeZ3ijacV9kuK?ed
+    headers:
+      Host: kievh9yxcgg14-gy4wxqcav0pegkd.d-0ezpk5xp5wk8ltdgb6evlpgc-jin.workers.dev
+- name: 🇨🇿 捷克 (Czech) 03 - jack
+  server: www.speedtest.net
+  port: 443
+  udp: true
+  type: vless
+  uuid: b19419fa-8009-455b-b059-765e2856883a
+  tls: true
+  servername: akbarian34.j9z65ce2uyks.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/3Qe9Fv1V2cqEtXyBQApZYi?ed=2560
+    headers:
+      Host: akbarian34.j9z65ce2uyks.workers.dev
+- name: 🇨🇿 捷克 (Czech) 04 - jack
   server: 194.87.59.6
   port: 2085
   udp: true
@@ -19,11 +60,17 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇨🇿 捷克 (Czech) 01 - jack
+  - 🇨🇿 捷克 (Czech) 02 - jack
+  - 🇨🇿 捷克 (Czech) 03 - jack
+  - 🇨🇿 捷克 (Czech) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇿 捷克 (Czech) 01 - jack
+  - 🇨🇿 捷克 (Czech) 02 - jack
+  - 🇨🇿 捷克 (Czech) 03 - jack
+  - 🇨🇿 捷克 (Czech) 04 - jack
 rules:
 - MATCH,PROXIES

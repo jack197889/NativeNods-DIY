@@ -6,6 +6,74 @@
     {
       "type": "vless",
       "tag": "🇨🇿 捷克 (Czech) 01 - jack",
+      "server": "188.114.97.6",
+      "server_port": 8080,
+      "uuid": "893096ae-ed76-4440-bc34-f77c4872540f",
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoieE1zSFhYR2hkcHZGUHI3cSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
+        "headers": {
+          "Host": "masterserver1-vsh.kalleh.workers.dev"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 02 - jack",
+      "server": "188.114.97.3",
+      "server_port": 443,
+      "uuid": "daf485ba-60fc-4166-a72c-8d2a5407cbc5",
+      "tls": {
+        "enabled": true,
+        "server_name": "KIeVH9yXcGg14-GY4wXqCAV0pegKd.D-0EZpK5xP5wk8ltDgb6EVLPGC-jin.WORkeRS.Dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/zM8ELyqEIYeZ3ijacV9kuK?ed",
+        "headers": {
+          "Host": "kievh9yxcgg14-gy4wxqcav0pegkd.d-0ezpk5xp5wk8ltdgb6evlpgc-jin.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 03 - jack",
+      "server": "www.speedtest.net",
+      "server_port": 443,
+      "uuid": "b19419fa-8009-455b-b059-765e2856883a",
+      "tls": {
+        "enabled": true,
+        "server_name": "akbarian34.j9z65ce2uyks.workers.dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/3Qe9Fv1V2cqEtXyBQApZYi?ed=2560",
+        "headers": {
+          "Host": "akbarian34.j9z65ce2uyks.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 04 - jack",
       "server": "194.87.59.6",
       "server_port": 2085,
       "uuid": "ffa722c8-da3f-4371-a0e0-6afcc9f3f93b",
@@ -19,14 +87,20 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇿 捷克 (Czech) 01 - jack"
+        "🇨🇿 捷克 (Czech) 01 - jack",
+        "🇨🇿 捷克 (Czech) 02 - jack",
+        "🇨🇿 捷克 (Czech) 03 - jack",
+        "🇨🇿 捷克 (Czech) 04 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇿 捷克 (Czech) 01 - jack"
+        "🇨🇿 捷克 (Czech) 01 - jack",
+        "🇨🇿 捷克 (Czech) 02 - jack",
+        "🇨🇿 捷克 (Czech) 03 - jack",
+        "🇨🇿 捷克 (Czech) 04 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

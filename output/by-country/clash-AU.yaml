@@ -5,36 +5,55 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇺 澳大利亚 (Australia) 01 - jack
-  server: 82.198.246.250
+  server: 188.114.97.6
+  port: 80
+  udp: true
+  type: vless
+  uuid: e51453d3-7972-44d7-a657-ed89520f48b6
+  network: ws
+  ws-opts:
+    path: /au-do
+    headers:
+      Host: web.whatsapp.com.r3xxe.eu.cc
+- name: 🇦🇺 澳大利亚 (Australia) 02 - jack
+  server: 104.18.155.229
+  port: 443
+  udp: true
+  type: vless
+  uuid: 42026ed0-7d74-4585-8e46-0fe6aa4d665a
+  tls: true
+  servername: www.genflix.co.id.r3xxe.eu.cc
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /au-do
+    headers:
+      Host: www.genflix.co.id.r3xxe.eu.cc
+- name: 🇦🇺 澳大利亚 (Australia) 03 - jack
+  server: 208.103.161.5
+  port: 443
+  udp: true
+  type: vless
+  uuid: d042a74a-c305-4eec-a89f-39a348022c92
+  tls: true
+  servername: dry-butterfly-8eb9.tmpgnacio83.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: dry-butterfly-8eb9.tmpgnacio83.workers.dev
+- name: 🇦🇺 澳大利亚 (Australia) 04 - jack
+  server: 82.198.246.97
   port: 180
   udp: true
   type: vmess
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   alterId: 0
   cipher: auto
-- name: 🇦🇺 澳大利亚 (Australia) 02 - jack
-  server: 103.75.119.126
-  port: 2087
-  udp: true
-  type: vless
-  uuid: 731f177e-00aa-480c-b935-661456139a32
-  network: ws
-  ws-opts:
-    path: /7586c69d3dc9
-- name: 🇦🇺 澳大利亚 (Australia) 03 - jack
-  server: au1.gsafevpnapi.com
-  port: 20270
-  udp: true
-  type: vless
-  uuid: 5416ef6f-b8e5-48e9-87e4-3d5649b2e3e0
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: RHLiKldLu3DONcQoX4Kjs7Xmd2K25ndVbw4pwxe45XE
-    short-id: e6a5a4a9115456de
-  servername: www.yahoo.com
-  client-fingerprint: safari
-- name: 🇦🇺 澳大利亚 (Australia) 04 - jack
+- name: 🇦🇺 澳大利亚 (Australia) 05 - jack
   server: 152.67.115.203
   port: 443
   udp: true
@@ -44,6 +63,28 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: 850a3fb1cd33a28f12d837578ae1a2e7
+- name: 🇦🇺 澳大利亚 (Australia) 06 - jack
+  server: au1.gsafevpnapi.com
+  port: 20270
+  udp: true
+  type: vless
+  uuid: e0755aab-3f9c-4d27-a643-645a4d2753d3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: RHLiKldLu3DONcQoX4Kjs7Xmd2K25ndVbw4pwxe45XE
+    short-id: e6a5a4a9115456de
+  servername: www.yahoo.com
+  client-fingerprint: chrome
+- name: 🇦🇺 澳大利亚 (Australia) 07 - jack
+  server: 103.75.119.126
+  port: 2087
+  udp: true
+  type: vless
+  uuid: 731f177e-00aa-480c-b935-661456139a32
+  network: ws
+  ws-opts:
+    path: /7586c69d3dc9
 proxy-groups:
 - name: PROXIES
   type: select
@@ -53,6 +94,9 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 02 - jack
   - 🇦🇺 澳大利亚 (Australia) 03 - jack
   - 🇦🇺 澳大利亚 (Australia) 04 - jack
+  - 🇦🇺 澳大利亚 (Australia) 05 - jack
+  - 🇦🇺 澳大利亚 (Australia) 06 - jack
+  - 🇦🇺 澳大利亚 (Australia) 07 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -62,5 +106,8 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 02 - jack
   - 🇦🇺 澳大利亚 (Australia) 03 - jack
   - 🇦🇺 澳大利亚 (Australia) 04 - jack
+  - 🇦🇺 澳大利亚 (Australia) 05 - jack
+  - 🇦🇺 澳大利亚 (Australia) 06 - jack
+  - 🇦🇺 澳大利亚 (Australia) 07 - jack
 rules:
 - MATCH,PROXIES
