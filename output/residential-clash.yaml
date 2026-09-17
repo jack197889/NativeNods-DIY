@@ -5,45 +5,70 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 (家宽) - jack
-  server: 162.159.38.127
-  port: 2082
+  server: 155.117.19.17
+  port: 443
   udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: '/?ed=2560security=tls '
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  type: hysteria2
+  password: 5fa748137b6d822308eea4611f474ad5
+  sni: www.bing.com
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: a39ca173b57ac7021b08bf3e3de9f1f6
 - name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
-  server: 61.231.21.17
-  port: 50099
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-- name: 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
-  server: 61.231.15.229
-  port: 50099
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: b1ae0fce-9340-4f2e-882d-fdb2218e2e2b
-- name: 🇺🇸 美国 (United States) 04 (家宽) - jack
-  server: 23.252.104.131
-  port: 54321
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: Proxy2024
-- name: 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack
   server: r3mrcg001286ek2.cybervena.com
   port: 50099
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+- name: 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
+  server: r3mrcg00129437x.cybervena.com
+  port: 50099
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: b1ae0fce-9340-4f2e-882d-fdb2218e2e2b
+- name: 🇯🇵 日本 (Japan) 04 (家宽) - jack
+  server: 57.129.130.200
+  port: 52014
+  udp: true
+  type: vless
+  uuid: c8b0617e-010f-43a8-b3d0-d5358febf0c9
+  tls: true
+  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+- name: 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack
+  server: 118.167.212.163
+  port: 24215
+  udp: true
+  type: vless
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+  tls: true
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  servername: addons.mozilla.org
+  client-fingerprint: firefox
 - name: 🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack
+  server: 7dba81fc3a0b.oylfmxz.cn
+  port: 443
+  udp: true
+  type: vmess
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: 7dba81fc3a0b.oylfmxz.cn
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack
   server: 82259754d625.oylfmxz.cn
   port: 443
   udp: true
@@ -57,8 +82,6 @@ proxies:
   network: ws
   ws-opts:
     path: /
-    headers:
-      Host: 82259754d625.oylfmxz.cn
 proxy-groups:
 - name: PROXIES
   type: select
@@ -67,9 +90,10 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 01 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
-  - 🇺🇸 美国 (United States) 04 (家宽) - jack
+  - 🇯🇵 日本 (Japan) 04 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -78,8 +102,9 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 01 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
-  - 🇺🇸 美国 (United States) 04 (家宽) - jack
+  - 🇯🇵 日本 (Japan) 04 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack
 rules:
 - MATCH,PROXIES

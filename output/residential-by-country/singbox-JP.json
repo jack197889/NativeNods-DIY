@@ -5,21 +5,24 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇦🇱 AL 01 - jack",
-      "server": "gyh.manliclouc.ir",
-      "server_port": 44811,
-      "uuid": "89418511-64f9-4e74-ac6b-ffc1b828106f",
+      "tag": "🇯🇵 日本 (Japan) 01 (家宽) - jack",
+      "server": "57.129.130.200",
+      "server_port": 52014,
+      "uuid": "c8b0617e-010f-43a8-b3d0-d5358febf0c9",
       "tls": {
         "enabled": true,
-        "server_name": "app.stiga.com",
+        "server_name": "ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "5V9UBM3WxVbCvEwW-FOxiBKlQTdMR9aScIfy53zefzM",
-          "short_id": "b53a4597ec327aec"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev"
         }
       }
     },
@@ -28,14 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇱 AL 01 - jack"
+        "🇯🇵 日本 (Japan) 01 (家宽) - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇱 AL 01 - jack"
+        "🇯🇵 日本 (Japan) 01 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
