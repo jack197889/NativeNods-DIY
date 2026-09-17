@@ -6,22 +6,6 @@ log-level: info
 proxies:
 - name: 🇧🇬 保加利亚 (Bulgaria) 01 - jack
   server: 192.145.31.5
-  port: 443
-  udp: true
-  type: vless
-  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇧🇬 保加利亚 (Bulgaria) 02 - jack
-  server: 213.183.63.60
-  port: 9066
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 2KUaE2a8NWTvuCZ3
-- name: 🇧🇬 保加利亚 (Bulgaria) 03 - jack
-  server: 192.145.31.5
   port: 8443
   udp: true
   type: vless
@@ -30,28 +14,23 @@ proxies:
   servername: neth9.lunariai.ru
   skip-cert-verify: false
   client-fingerprint: chrome
+- name: 🇧🇬 保加利亚 (Bulgaria) 02 - jack
+  server: 213.183.63.60
+  port: 9064
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: cp8pRSUAyLhTfVWH
+- name: 🇧🇬 保加利亚 (Bulgaria) 03 - jack
+  server: 192.145.31.5
+  port: 443
+  udp: true
+  type: vless
+  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
+  network: ws
+  ws-opts:
+    path: /
 - name: 🇧🇬 保加利亚 (Bulgaria) 04 - jack
-  server: 213.183.63.60
-  port: 9028
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 9eeJ2fwnZA5Fxgz8
-- name: 🇧🇬 保加利亚 (Bulgaria) 05 - jack
-  server: 213.183.63.60
-  port: 9098
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: aLpQtfEZe445QyHk
-- name: 🇧🇬 保加利亚 (Bulgaria) 06 - jack
-  server: 213.183.63.60
-  port: 9085
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 9ej82EKe2gq7gLAM
-- name: 🇧🇬 保加利亚 (Bulgaria) 07 - jack
   server: 193.148.59.178
   port: 443
   udp: true
@@ -64,36 +43,7 @@ proxies:
     short-id: e3daad69
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇧🇬 保加利亚 (Bulgaria) 08 - jack
-  server: 213.183.63.60
-  port: 9064
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: cp8pRSUAyLhTfVWH
-- name: 🇧🇬 保加利亚 (Bulgaria) 09 - jack
-  server: 213.183.63.60
-  port: 9061
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 4R3hUfZ2FHhDmNcP
-- name: 🇧🇬 保加利亚 (Bulgaria) 10 - jack
-  server: 108.165.233.223
-  port: 443
-  udp: true
-  type: vless
-  uuid: 2388e166-3890-33ae-f77e-efac00000001
-  tls: true
-  servername: netlivpn4813.ddhshhshs.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN
-    headers:
-      Host: netlivpn4813.ddhshhshs.workers.dev
-- name: 🇧🇬 保加利亚 (Bulgaria) 11 - jack
+- name: 🇧🇬 保加利亚 (Bulgaria) 05 - jack
   server: 144.31.50.236
   port: 443
   udp: true
@@ -116,12 +66,6 @@ proxy-groups:
   - 🇧🇬 保加利亚 (Bulgaria) 03 - jack
   - 🇧🇬 保加利亚 (Bulgaria) 04 - jack
   - 🇧🇬 保加利亚 (Bulgaria) 05 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 06 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 07 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 08 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 09 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 10 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 11 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -132,11 +76,5 @@ proxy-groups:
   - 🇧🇬 保加利亚 (Bulgaria) 03 - jack
   - 🇧🇬 保加利亚 (Bulgaria) 04 - jack
   - 🇧🇬 保加利亚 (Bulgaria) 05 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 06 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 07 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 08 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 09 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 10 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 11 - jack
 rules:
 - MATCH,PROXIES

@@ -4,25 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇨🇴 哥伦比亚 (Colombia) 01 - jack",
-      "server": "157.137.226.173",
-      "server_port": 62145,
-      "uuid": "8fb65472-5957-4f64-ba2d-b5812b2f155a"
+      "type": "shadowsocks",
+      "tag": "🇨🇱 智利 (Chile) 01 - jack",
+      "server": "64.176.2.21",
+      "server_port": 8388,
+      "method": "aes-256-gcm",
+      "password": "xBStBEVqvGwHPocc"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇴 哥伦比亚 (Colombia) 01 - jack"
+        "🇨🇱 智利 (Chile) 01 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇴 哥伦比亚 (Colombia) 01 - jack"
+        "🇨🇱 智利 (Chile) 01 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

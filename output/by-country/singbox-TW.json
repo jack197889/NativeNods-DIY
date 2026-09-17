@@ -4,12 +4,16 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "hysteria2",
       "tag": "🇹🇼 中国台湾 (Taiwan) 01 - jack",
-      "server": "165.154.195.38",
-      "server_port": 35034,
-      "uuid": "959a8caf-4cea-43d0-a548-3628e7ddfafc",
-      "security": "auto"
+      "server": "103.115.109.49",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "https://t.me/oneclickvpnkeys",
+        "insecure": true
+      }
     },
     {
       "type": "hysteria2",
@@ -19,7 +23,7 @@
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "160.187.100.109",
+        "server_name": "127.0.0.1",
         "insecure": true
       }
     },
@@ -45,53 +49,29 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 04 - jack",
-      "server": "85.237.207.49",
-      "server_port": 50160,
-      "password": "a56619e2bed91121eabb97d20be207c3",
-      "tls": {
-        "enabled": true,
-        "server_name": "85-237-207-49.liao.kdns.fr",
-        "insecure": false
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 05 - jack",
-      "server": "104.199.219.172",
-      "server_port": 40800,
-      "uuid": "5859f6a7-cda1-47c2-8353-fcdee281f31d",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 04 - jack",
+      "server": "35.229.136.113",
+      "server_port": 35412,
+      "uuid": "5d3cbdb2-b82d-4078-82b8-5dd413cca82b",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.intel.com",
+        "server_name": "www.amd.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "zohUbvPLKVBwzuDmZNsaXXFYZSKA9_xEhdUyURChrgo",
-          "short_id": "186e4c2732d61a3d"
+          "public_key": "eg6DfbLnWtz7PubkXRYvSuQx6QWIRxUsn4l7QEO3Cg4",
+          "short_id": "0630b874d595"
         }
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 06 - jack",
-      "server": "103.115.109.49",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "https://t.me/wangcai2",
-        "insecure": true
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 07 - jack",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 05 - jack",
       "server": "60.248.219.78",
       "server_port": 443,
       "uuid": "c1c04450-bf71-4049-ad0c-9cf6d94d9f1f",
@@ -110,22 +90,21 @@
     },
     {
       "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 08 - jack",
-      "server": "104.199.134.231",
-      "server_port": 28364,
-      "uuid": "3a62a0c2-ba80-43a9-b757-9aca88b0552e",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 06 - jack",
+      "server": "118.167.212.163",
+      "server_port": 24215,
+      "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
       "tls": {
         "enabled": true,
-        "server_name": "www.sony.com",
+        "server_name": "addons.mozilla.org",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "NPhCET0GkjSZuKg4vWsPHLvjYGHW9w99Ucxvavu0-1I",
-          "short_id": "7241c359c2dfab"
+          "public_key": "mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE",
+          "short_id": ""
         }
       }
     },
@@ -139,9 +118,7 @@
         "🇹🇼 中国台湾 (Taiwan) 03 - jack",
         "🇹🇼 中国台湾 (Taiwan) 04 - jack",
         "🇹🇼 中国台湾 (Taiwan) 05 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 06 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 07 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 08 - jack"
+        "🇹🇼 中国台湾 (Taiwan) 06 - jack"
       ]
     },
     {
@@ -153,9 +130,7 @@
         "🇹🇼 中国台湾 (Taiwan) 03 - jack",
         "🇹🇼 中国台湾 (Taiwan) 04 - jack",
         "🇹🇼 中国台湾 (Taiwan) 05 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 06 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 07 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 08 - jack"
+        "🇹🇼 中国台湾 (Taiwan) 06 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
