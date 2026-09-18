@@ -4,22 +4,111 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "vless",
       "tag": "🇦🇺 澳大利亚 (Australia) 01 - jack",
-      "server": "82.198.246.97",
+      "server": "188.114.97.6",
+      "server_port": 80,
+      "uuid": "6faeb6a0-5055-4e4b-8fb1-ffd77e57aefa",
+      "transport": {
+        "type": "ws",
+        "path": "/au-do",
+        "headers": {
+          "Host": "somersby.pt.r3xxe.eu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇺 澳大利亚 (Australia) 02 - jack",
+      "server": "72.167.230.30",
+      "server_port": 8880,
+      "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "vms.lifetime51.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇺 澳大利亚 (Australia) 03 - jack",
+      "server": "208.103.161.5",
+      "server_port": 443,
+      "uuid": "d042a74a-c305-4eec-a89f-39a348022c92",
+      "tls": {
+        "enabled": true,
+        "server_name": "dry-butterfly-8eb9.tmpgnacio83.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "dry-butterfly-8eb9.tmpgnacio83.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇺 澳大利亚 (Australia) 04 - jack",
+      "server": "23.227.39.30",
+      "server_port": 8880,
+      "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "vms.lifetime17.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇦🇺 澳大利亚 (Australia) 05 - jack",
+      "server": "82.198.246.250",
       "server_port": 180,
       "uuid": "d13fc2f5-3e05-4795-81eb-44143a09e552",
       "security": "auto"
     },
     {
       "type": "vless",
-      "tag": "🇦🇺 澳大利亚 (Australia) 02 - jack",
-      "server": "103.75.119.126",
-      "server_port": 2087,
-      "uuid": "731f177e-00aa-480c-b935-661456139a32",
+      "tag": "🇦🇺 澳大利亚 (Australia) 06 - jack",
+      "server": "104.18.155.229",
+      "server_port": 443,
+      "uuid": "42026ed0-7d74-4585-8e46-0fe6aa4d665a",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.genflix.co.id.r3xxe.eu.cc",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
       "transport": {
         "type": "ws",
-        "path": "/7586c69d3dc9"
+        "path": "/au-do",
+        "headers": {
+          "Host": "www.genflix.co.id.r3xxe.eu.cc"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇦🇺 澳大利亚 (Australia) 07 - jack",
+      "server": "vpn-au-002.fastervpn.world",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.com",
+        "insecure": true
       }
     },
     {
@@ -28,7 +117,12 @@
       "outbounds": [
         "auto",
         "🇦🇺 澳大利亚 (Australia) 01 - jack",
-        "🇦🇺 澳大利亚 (Australia) 02 - jack"
+        "🇦🇺 澳大利亚 (Australia) 02 - jack",
+        "🇦🇺 澳大利亚 (Australia) 03 - jack",
+        "🇦🇺 澳大利亚 (Australia) 04 - jack",
+        "🇦🇺 澳大利亚 (Australia) 05 - jack",
+        "🇦🇺 澳大利亚 (Australia) 06 - jack",
+        "🇦🇺 澳大利亚 (Australia) 07 - jack"
       ]
     },
     {
@@ -36,7 +130,12 @@
       "tag": "auto",
       "outbounds": [
         "🇦🇺 澳大利亚 (Australia) 01 - jack",
-        "🇦🇺 澳大利亚 (Australia) 02 - jack"
+        "🇦🇺 澳大利亚 (Australia) 02 - jack",
+        "🇦🇺 澳大利亚 (Australia) 03 - jack",
+        "🇦🇺 澳大利亚 (Australia) 04 - jack",
+        "🇦🇺 澳大利亚 (Australia) 05 - jack",
+        "🇦🇺 澳大利亚 (Australia) 06 - jack",
+        "🇦🇺 澳大利亚 (Australia) 07 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

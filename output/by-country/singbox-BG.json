@@ -7,16 +7,30 @@
       "type": "vless",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 01 - jack",
       "server": "192.145.31.5",
+      "server_port": 443,
+      "uuid": "9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a",
+      "transport": {
+        "type": "ws"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 02 - jack",
+      "server": "213.183.63.60",
+      "server_port": 9049,
+      "method": "aes-256-cfb",
+      "password": "PRBf4BS2HvJqtWxY"
+    },
+    {
+      "type": "vless",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 03 - jack",
+      "server": "192.145.31.5",
       "server_port": 8443,
       "uuid": "9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a",
       "tls": {
         "enabled": true,
         "server_name": "neth9.lunariai.ru",
         "insecure": false,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -25,26 +39,31 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇧🇬 保加利亚 (Bulgaria) 02 - jack",
-      "server": "213.183.63.60",
-      "server_port": 9064,
-      "method": "aes-256-cfb",
-      "password": "cp8pRSUAyLhTfVWH"
-    },
-    {
-      "type": "vless",
-      "tag": "🇧🇬 保加利亚 (Bulgaria) 03 - jack",
-      "server": "192.145.31.5",
-      "server_port": 443,
-      "uuid": "9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a",
-      "transport": {
-        "type": "ws",
-        "path": "/"
-      }
-    },
-    {
-      "type": "vless",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 04 - jack",
+      "server": "213.183.63.60",
+      "server_port": 9066,
+      "method": "aes-256-cfb",
+      "password": "2KUaE2a8NWTvuCZ3"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 05 - jack",
+      "server": "213.183.63.60",
+      "server_port": 9061,
+      "method": "aes-256-cfb",
+      "password": "4R3hUfZ2FHhDmNcP"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 06 - jack",
+      "server": "213.183.63.60",
+      "server_port": 9085,
+      "method": "aes-256-cfb",
+      "password": "9ej82EKe2gq7gLAM"
+    },
+    {
+      "type": "vless",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 07 - jack",
       "server": "193.148.59.178",
       "server_port": 443,
       "uuid": "20d7c485-5d24-49b5-a5cc-bb7a7daf9908",
@@ -64,8 +83,68 @@
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 08 - jack",
+      "server": "213.183.63.60",
+      "server_port": 9064,
+      "method": "aes-256-cfb",
+      "password": "cp8pRSUAyLhTfVWH"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 09 - jack",
+      "server": "213.183.63.60",
+      "server_port": 9028,
+      "method": "aes-256-cfb",
+      "password": "9eeJ2fwnZA5Fxgz8"
+    },
+    {
       "type": "vless",
-      "tag": "🇧🇬 保加利亚 (Bulgaria) 05 - jack",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 10 - jack",
+      "server": "108.165.233.223",
+      "server_port": 443,
+      "uuid": "2388e166-3890-33ae-f77e-efac00000001",
+      "tls": {
+        "enabled": true,
+        "server_name": "netlivpn4813.ddhshhshs.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN",
+        "headers": {
+          "Host": "netlivpn4813.ddhshhshs.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 11 - jack",
+      "server": "q7xfjcd5.danqela.ir",
+      "server_port": 5054,
+      "uuid": "b2ee150f-58eb-4125-8fae-b0f79544bd25",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "android.clients.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "K-ra5wYRignlacUglfdjgTJOf4C4_oxKVm_T6YdgsTM",
+          "short_id": "8509f205ecd87e17"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 12 - jack",
       "server": "144.31.50.236",
       "server_port": 443,
       "uuid": "1c332eae-7e02-4acd-996d-4eb3e652401c",
@@ -93,7 +172,14 @@
         "🇧🇬 保加利亚 (Bulgaria) 02 - jack",
         "🇧🇬 保加利亚 (Bulgaria) 03 - jack",
         "🇧🇬 保加利亚 (Bulgaria) 04 - jack",
-        "🇧🇬 保加利亚 (Bulgaria) 05 - jack"
+        "🇧🇬 保加利亚 (Bulgaria) 05 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 06 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 07 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 08 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 09 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 10 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 11 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 12 - jack"
       ]
     },
     {
@@ -104,7 +190,14 @@
         "🇧🇬 保加利亚 (Bulgaria) 02 - jack",
         "🇧🇬 保加利亚 (Bulgaria) 03 - jack",
         "🇧🇬 保加利亚 (Bulgaria) 04 - jack",
-        "🇧🇬 保加利亚 (Bulgaria) 05 - jack"
+        "🇧🇬 保加利亚 (Bulgaria) 05 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 06 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 07 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 08 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 09 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 10 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 11 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 12 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

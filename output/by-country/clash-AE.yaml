@@ -9,7 +9,7 @@ proxies:
   port: 8443
   udp: true
   type: vless
-  uuid: e580657d-c9b2-4bff-98c2-e63c5563d4b7
+  uuid: 2eea435c-8c8f-45e3-8907-956a0c6b0182
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
@@ -17,6 +17,19 @@ proxies:
   servername: tradingview.com
   client-fingerprint: firefox
 - name: 🇦🇪 阿联酋 (UAE) 02 - jack
+  server: 31.56.189.27
+  port: 2087
+  udp: true
+  type: vless
+  uuid: df9f5aca-eda0-428f-a752-e53866153d12
+  tls: true
+  servername: srv-21bac9.vless.monster
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: freegrpc
+- name: 🇦🇪 阿联酋 (UAE) 03 - jack
   server: 130.49.161.70
   port: 443
   udp: true
@@ -26,7 +39,7 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
-- name: 🇦🇪 阿联酋 (UAE) 03 - jack
+- name: 🇦🇪 阿联酋 (UAE) 04 - jack
   server: 89.47.55.8
   port: 8443
   udp: true
@@ -40,34 +53,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: TunService
-- name: 🇦🇪 阿联酋 (UAE) 04 - jack
-  server: 31.56.189.27
-  port: 2087
-  udp: true
-  type: vless
-  uuid: df9f5aca-eda0-428f-a752-e53866153d12
-  tls: true
-  servername: srv-21bac9.vless.monster
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: freegrpc
 - name: 🇦🇪 阿联酋 (UAE) 05 - jack
-  server: 207.148.112.220
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /discuss?ed=2560
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇦🇪 阿联酋 (UAE) 06 - jack
   server: 78.40.195.140
   port: 443
   udp: true
@@ -80,8 +66,23 @@ proxies:
     short-id: 98096455d963bdbb
   servername: www.booking.com
   client-fingerprint: firefox
+- name: 🇦🇪 阿联酋 (UAE) 06 - jack
+  server: 104.17.147.22
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5ef04ae8-8d7c-0a66-13f4-6e3f00000005
+  tls: true
+  servername: relay.lunetcloud.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /lunetnetwork
+    headers:
+      Host: relay.lunetcloud.ir
 - name: 🇦🇪 阿联酋 (UAE) 07 - jack
-  server: 85.204.107.174
+  server: 85.204.107.183
   port: 8080
   udp: true
   type: hysteria2
@@ -89,7 +90,7 @@ proxies:
   sni: hopp-romania-new.roxa.org
   skip-cert-verify: true
 - name: 🇦🇪 阿联酋 (UAE) 08 - jack
-  server: uae.unixzone.us
+  server: 84.235.244.108
   port: 22573
   udp: true
   type: vless

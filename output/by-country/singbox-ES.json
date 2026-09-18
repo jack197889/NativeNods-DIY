@@ -4,24 +4,29 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇪🇸 西班牙 (Spain) 01 - jack",
-      "server": "140.174.184.5",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "qItG8SueYQcP"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇪🇸 西班牙 (Spain) 02 - jack",
-      "server": "108.181.121.226",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "WSyL4XTwNsdv"
+      "server": "185.174.137.209",
+      "server_port": 443,
+      "uuid": "57e2a48b-0cc2-4b60-aacd-b36358fcba96",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "4pda.to",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "hlCgGFDYAbecFvJHFs-U0Zbuvk47lcsVVrF1y23Axlc",
+          "short_id": "dc"
+        }
+      }
     },
     {
       "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 03 - jack",
+      "tag": "🇪🇸 西班牙 (Spain) 02 - jack",
       "server": "212.227.235.66",
       "server_port": 2053,
       "uuid": "ead0dd61-d398-40ad-80d6-a0e1e516d7d3",
@@ -30,7 +35,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -40,29 +45,16 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 04 - jack",
-      "server": "46.28.71.247",
-      "server_port": 443,
-      "uuid": "12c53e32-e589-47d6-b857-e4132294f767",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE",
-          "short_id": "0dfc23fe80778c00"
-        }
-      }
+      "type": "shadowsocks",
+      "tag": "🇪🇸 西班牙 (Spain) 03 - jack",
+      "server": "140.174.184.5",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "qItG8SueYQcP"
     },
     {
       "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 05 - jack",
+      "tag": "🇪🇸 西班牙 (Spain) 04 - jack",
       "server": "83.147.18.3",
       "server_port": 443,
       "uuid": "9f61cdf4-810d-4052-bbc7-2da0c8e20104",
@@ -82,6 +74,35 @@
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇪🇸 西班牙 (Spain) 05 - jack",
+      "server": "108.181.121.226",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "WSyL4XTwNsdv"
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇸 西班牙 (Spain) 06 - jack",
+      "server": "46.28.71.247",
+      "server_port": 443,
+      "uuid": "12c53e32-e589-47d6-b857-e4132294f767",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE",
+          "short_id": "0dfc23fe80778c00"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -90,7 +111,8 @@
         "🇪🇸 西班牙 (Spain) 02 - jack",
         "🇪🇸 西班牙 (Spain) 03 - jack",
         "🇪🇸 西班牙 (Spain) 04 - jack",
-        "🇪🇸 西班牙 (Spain) 05 - jack"
+        "🇪🇸 西班牙 (Spain) 05 - jack",
+        "🇪🇸 西班牙 (Spain) 06 - jack"
       ]
     },
     {
@@ -101,7 +123,8 @@
         "🇪🇸 西班牙 (Spain) 02 - jack",
         "🇪🇸 西班牙 (Spain) 03 - jack",
         "🇪🇸 西班牙 (Spain) 04 - jack",
-        "🇪🇸 西班牙 (Spain) 05 - jack"
+        "🇪🇸 西班牙 (Spain) 05 - jack",
+        "🇪🇸 西班牙 (Spain) 06 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

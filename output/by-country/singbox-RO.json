@@ -6,26 +6,22 @@
     {
       "type": "hysteria2",
       "tag": "🇷🇴 罗马尼亚 (Romania) 01 - jack",
-      "server": "205.237.109.168",
-      "server_port": 8443,
-      "password": "Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s",
-      "tls": {
-        "enabled": true,
-        "server_name": "hopp-netherland-new.dynuddns.net",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 02 - jack",
-      "server": "162.249.126.6",
+      "server": "162.249.126.7",
       "server_port": 8443,
       "password": "9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z",
       "tls": {
         "enabled": true,
         "server_name": "hopp-germany-new.ddnsguru.com",
-        "insecure": false
+        "insecure": true
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 02 - jack",
+      "server": "154.46.31.106",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QFWzCw2uX9B9i6qAYeFBIE"
     },
     {
       "type": "hysteria2",
@@ -47,13 +43,108 @@
       "password": "gf1:gfhysteria2024",
       "tls": {
         "enabled": true,
-        "server_name": "t.me",
+        "server_name": "whatsapp.com",
         "insecure": true
       }
     },
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇷🇴 罗马尼亚 (Romania) 05 - jack",
+      "server": "hy2-new.aspidnet.xyz",
+      "server_port": 443,
+      "password": "QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s",
+      "tls": {
+        "enabled": true,
+        "server_name": "hy2-new.aspidnet.xyz",
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "c1b4086fea89914496c7e10967a419216566"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 06 - jack",
+      "server": "162.249.125.133",
+      "server_port": 443,
+      "password": "QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s",
+      "tls": {
+        "enabled": true,
+        "server_name": "hy2-new.aspidnet.xyz",
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "c1b4086fea89914496c7e10967a419216566"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 07 - jack",
+      "server": "46.28.67.55",
+      "server_port": 443,
+      "uuid": "d1a6a033-fdbd-46a6-a177-3370ba042b9f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU",
+          "short_id": "d06d78e974491b6e"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 08 - jack",
+      "server": "45.43.166.56",
+      "server_port": 443,
+      "uuid": "4CD55C5_trial",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "travel.yandex.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "sEzXu5KZcPPaT5ZKj8gBIOa4ana3Jq75-iZSMQPW9BY",
+          "short_id": "8c3f17a4d92be560"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 09 - jack",
+      "server": "146.70.124.85",
+      "server_port": 443,
+      "uuid": "40abbe13-f02e-4da2-9b19-966c2c3eb4ee",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.datadoghq.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "byzvlw97wjAAAfHs5AZRV0P0H6_JKBEZ4yfLS0HNewE",
+          "short_id": "fe24f8a0a560056e"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 10 - jack",
       "server": "193.163.203.253",
       "server_port": 443,
       "uuid": "441afe11-a180-4516-bb80-80a8a6b38705",
@@ -63,7 +154,7 @@
         "server_name": "yandex.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -81,7 +172,12 @@
         "🇷🇴 罗马尼亚 (Romania) 02 - jack",
         "🇷🇴 罗马尼亚 (Romania) 03 - jack",
         "🇷🇴 罗马尼亚 (Romania) 04 - jack",
-        "🇷🇴 罗马尼亚 (Romania) 05 - jack"
+        "🇷🇴 罗马尼亚 (Romania) 05 - jack",
+        "🇷🇴 罗马尼亚 (Romania) 06 - jack",
+        "🇷🇴 罗马尼亚 (Romania) 07 - jack",
+        "🇷🇴 罗马尼亚 (Romania) 08 - jack",
+        "🇷🇴 罗马尼亚 (Romania) 09 - jack",
+        "🇷🇴 罗马尼亚 (Romania) 10 - jack"
       ]
     },
     {
@@ -92,7 +188,12 @@
         "🇷🇴 罗马尼亚 (Romania) 02 - jack",
         "🇷🇴 罗马尼亚 (Romania) 03 - jack",
         "🇷🇴 罗马尼亚 (Romania) 04 - jack",
-        "🇷🇴 罗马尼亚 (Romania) 05 - jack"
+        "🇷🇴 罗马尼亚 (Romania) 05 - jack",
+        "🇷🇴 罗马尼亚 (Romania) 06 - jack",
+        "🇷🇴 罗马尼亚 (Romania) 07 - jack",
+        "🇷🇴 罗马尼亚 (Romania) 08 - jack",
+        "🇷🇴 罗马尼亚 (Romania) 09 - jack",
+        "🇷🇴 罗马尼亚 (Romania) 10 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
