@@ -5,20 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇲 亚美尼亚 (Armenia) 01 - jack
-  server: 104.24.31.89
+  server: aotocon.ggisopi.su
   port: 443
   udp: true
   type: vless
-  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  flow: xtls-rprx-vision
   tls: true
-  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
-  skip-cert-verify: true
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: rayan-007.nastaran.dpdns.org
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: aotocon.ggisopi.su
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select

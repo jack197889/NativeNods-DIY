@@ -5,6 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇭 泰国 (Thailand) 01 - jack
+  server: 140.245.38.33
+  port: 2096
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /class/season?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇹🇭 泰国 (Thailand) 02 - jack
   server: 103.86.49.57
   port: 80
   udp: true
@@ -15,32 +30,6 @@ proxies:
     path: /ws
     headers:
       Host: aIs.SpEeDtEsT.nEt
-- name: 🇹🇭 泰国 (Thailand) 02 - jack
-  server: tg.zhujue.us
-  port: 11000
-  udp: true
-  type: vless
-  uuid: 0e46345c-f33b-4f9b-b8ec-90e7c986af7e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: sFRyah8EOSGcab8TfIdkq53c5HBSwAVfYQCyvZ0_BG4
-  servername: s0.awsstatic.com
-  client-fingerprint: chrome
-- name: 🇹🇭 泰国 (Thailand) 03 - jack
-  server: 104.18.26.90
-  port: 443
-  udp: true
-  type: vless
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-  tls: true
-  servername: v2ray.simspeedup.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: v2ray.simspeedup.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -48,7 +37,6 @@ proxy-groups:
   - AUTO
   - 🇹🇭 泰国 (Thailand) 01 - jack
   - 🇹🇭 泰国 (Thailand) 02 - jack
-  - 🇹🇭 泰国 (Thailand) 03 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -56,6 +44,5 @@ proxy-groups:
   proxies:
   - 🇹🇭 泰国 (Thailand) 01 - jack
   - 🇹🇭 泰国 (Thailand) 02 - jack
-  - 🇹🇭 泰国 (Thailand) 03 - jack
 rules:
 - MATCH,PROXIES

@@ -4,8 +4,41 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🇹🇼 中国台湾 (Taiwan) 01 - jack",
+      "server": "35.201.230.136",
+      "server_port": 443,
+      "uuid": "18eef0d3-35b3-4a5f-97a1-7b5264530dd8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Uq9Q8VXK9VkVOJ1M5PfORTqMhjjGoIS40-V0tAG_1FM",
+          "short_id": "5e13a6d43d0644c9"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 02 - jack",
+      "server": "103.115.109.49",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "https://t.me/oneclickvpnkeys",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 03 - jack",
       "server": "160.187.100.109",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
@@ -16,81 +49,13 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 02 - jack",
-      "server": "85.237.207.49",
-      "server_port": 50160,
-      "password": "a56619e2bed91121eabb97d20be207c3",
-      "tls": {
-        "enabled": true,
-        "server_name": "85-237-207-49.liao.kdns.fr",
-        "insecure": false
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 03 - jack",
-      "server": "103.115.109.49",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "https",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 04 - jack",
-      "server": "35.201.230.136",
-      "server_port": 443,
-      "uuid": "18eef0d3-35b3-4a5f-97a1-7b5264530dd8",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Uq9Q8VXK9VkVOJ1M5PfORTqMhjjGoIS40-V0tAG_1FM",
-          "short_id": "5e13a6d43d0644c9"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 05 - jack",
-      "server": "104.199.219.172",
-      "server_port": 40800,
-      "uuid": "5859f6a7-cda1-47c2-8353-fcdee281f31d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.intel.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "zohUbvPLKVBwzuDmZNsaXXFYZSKA9_xEhdUyURChrgo",
-          "short_id": "186e4c2732d61a3d"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇹🇼 中国台湾 (Taiwan) 01 - jack",
         "🇹🇼 中国台湾 (Taiwan) 02 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 05 - jack"
+        "🇹🇼 中国台湾 (Taiwan) 03 - jack"
       ]
     },
     {
@@ -99,9 +64,7 @@
       "outbounds": [
         "🇹🇼 中国台湾 (Taiwan) 01 - jack",
         "🇹🇼 中国台湾 (Taiwan) 02 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 05 - jack"
+        "🇹🇼 中国台湾 (Taiwan) 03 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

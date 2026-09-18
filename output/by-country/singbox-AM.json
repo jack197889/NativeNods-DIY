@@ -6,26 +6,22 @@
     {
       "type": "vless",
       "tag": "🇦🇲 亚美尼亚 (Armenia) 01 - jack",
-      "server": "104.24.31.89",
+      "server": "aotocon.ggisopi.su",
       "server_port": 443,
-      "uuid": "aebe5a70-0ca3-46ce-8208-8b5bab1346ce",
+      "uuid": "d0f0a880-0df1-48c9-bdf1-5669fb9483ce",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "rAyAn-007.nAsTaRaN.DpDnS.OrG",
-        "insecure": true,
+        "server_name": "aotocon.ggisopi.su",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "rayan-007.nastaran.dpdns.org"
+          "fingerprint": "firefox"
         },
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
+        "reality": {
+          "enabled": true,
+          "public_key": "SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I",
+          "short_id": ""
+        }
       }
     },
     {

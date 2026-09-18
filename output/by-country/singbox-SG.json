@@ -6,239 +6,68 @@
     {
       "type": "vless",
       "tag": "🇸🇬 新加坡 (Singapore) 01 - jack",
-      "server": "104.17.3.81",
-      "server_port": 443,
-      "uuid": "fc60147e-76b8-4bc5-b691-90b2da79e3d2",
-      "tls": {
-        "enabled": true,
-        "server_name": "nautica-cff.kloningstrife002.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
+      "server": "108.162.198.178",
+      "server_port": 2095,
+      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
-        "path": "/138.2.74.219-28616",
+        "path": "/",
         "headers": {
-          "Host": "nautica-cff.kloningstrife002.workers.dev"
+          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
         }
       }
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇸🇬 新加坡 (Singapore) 02 - jack",
-      "server": "104.25.178.92",
-      "server_port": 443,
-      "uuid": "d9abc6e3-83bf-4c28-ae68-72465e2abe39",
-      "tls": {
-        "enabled": true,
-        "server_name": "ikT-KKC25F27k-3Tehr8MC.ADE-1007.WOrKErS.DEV",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/vl/xQhNe7rLrdM0emZlaW5LMsNwcoIgnT?ed=2560",
-        "headers": {
-          "Host": "ikt-kkc25f27k-3tehr8mc.ade-1007.workers.dev"
-        }
-      }
+      "server": "168.138.185.221",
+      "server_port": 56927,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "Yaz8LJBSJ12nY56yI3YkTXbN/C7BiGBRQurrUwREhvs="
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇸🇬 新加坡 (Singapore) 03 - jack",
-      "server": "104.21.70.21",
-      "server_port": 8080,
-      "uuid": "fc60147e-76b8-4bc5-b691-90b2da79e3d2",
-      "transport": {
-        "type": "ws",
-        "path": "/138.2.74.219-28616",
-        "headers": {
-          "Host": "nautica-cff.kloningstrife002.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 04 - jack",
-      "server": "104.21.70.21",
-      "server_port": 8080,
-      "uuid": "d8c14c5c-a80a-4f6f-a5fb-52071849c443",
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoiZTFWRGJFS0NUd2F2NkRmIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==",
-        "headers": {
-          "Host": "cgxgqcheiamna-jks01fidlsnqojwf-s.aliama.workers.dev"
-        },
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 05 - jack",
-      "server": "to6r63-kkchighqm2.vxz0dduq7to7su0cdqf.workers.dev",
-      "server_port": 443,
-      "uuid": "4ccf70f9-7632-4b5a-9557-10d2dd347bb2",
-      "tls": {
-        "enabled": true,
-        "server_name": "To6R63-kKChiGHqm2.vxz0Dduq7to7Su0CDQf.worKERs.DEV",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/vl/zhlUKkHT4SNWHmPFOf4cu6?ed=2560",
-        "headers": {
-          "Host": "to6r63-kkchighqm2.vxz0dduq7to7su0cdqf.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 06 - jack",
-      "server": "soskeynets-base-fe24.alirezahabibi20009.workers.dev",
-      "server_port": 443,
-      "uuid": "4908acbe-485f-4e1c-bb11-5dd04b9f7e88",
-      "tls": {
-        "enabled": true,
-        "server_name": "restless-base-fe24.alirezahabibi20009.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoiRjhycEV5WUpJTGZpQSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
-        "headers": {
-          "Host": "restless-base-fe24.alirezahabibi20009.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇸🇬 新加坡 (Singapore) 07 - jack",
-      "server": "vless.herogoing.top",
-      "server_port": 443,
-      "password": "bpb-trojan",
-      "tls": {
-        "enabled": true,
-        "server_name": "vless.herogoing.top",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/tr?ed=2560"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 08 - jack",
-      "server": "128.241.25.3",
-      "server_port": 30021,
-      "uuid": "9b3382ec-3207-414b-9711-6ede64ac56a6",
-      "tls": {
-        "enabled": true,
-        "server_name": "mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/@Marisa_kristi",
-        "headers": {
-          "Host": "mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 09 - jack",
-      "server": "57.129.130.57",
-      "server_port": 52014,
-      "uuid": "d4453a50-3fdf-465b-9dd3-5f2eed97ddd5",
-      "tls": {
-        "enabled": true,
-        "server_name": "ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/@Marisa_kristi",
-        "headers": {
-          "Host": "ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 10 - jack",
-      "server": "116.204.164.27",
-      "server_port": 7443,
-      "uuid": "3e438472-0f1e-4bbf-be5a-67d034afd8c0",
-      "tls": {
-        "enabled": true,
-        "server_name": "ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/@Marisa_kristi",
-        "headers": {
-          "Host": "ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇸🇬 新加坡 (Singapore) 11 - jack",
-      "server": "139.180.220.175",
-      "server_port": 8388,
-      "method": "aes-256-gcm",
-      "password": "qpSevKaUXYQKvSjp"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇸🇬 新加坡 (Singapore) 12 - jack",
       "server": "167.150.100.115",
       "server_port": 27755,
       "method": "2022-blake3-aes-256-gcm",
       "password": "fnvo82p9y4AKykZXyIFtnodFy6fQmWnVlI2SvGleOB0="
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇸🇬 新加坡 (Singapore) 04 - jack",
+      "server": "168.107.65.209",
+      "server_port": 56927,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "jzbveBTs+YuJotZVNhD1uM6abJDkpkxoV/ZPZTYTaSs="
+    },
+    {
       "type": "vmess",
-      "tag": "🇸🇬 新加坡 (Singapore) 13 - jack",
+      "tag": "🇸🇬 新加坡 (Singapore) 05 - jack",
+      "server": "149.88.23.207",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇸🇬 新加坡 (Singapore) 06 - jack",
+      "server": "161.118.242.116",
+      "server_port": 56927,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "O8NAGBdB4ptCXObiSU8J/Gf38K8gnGNG6Bj6QU6/1WI="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇸🇬 新加坡 (Singapore) 07 - jack",
+      "server": "152.69.222.209",
+      "server_port": 56927,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "aRK/1nmhuEH5nuNCChQnkiJcgsrKb13Vcj7xA2Q/LQY="
+    },
+    {
+      "type": "vmess",
+      "tag": "🇸🇬 新加坡 (Singapore) 08 - jack",
       "server": "149.88.23.202",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
@@ -246,7 +75,7 @@
     },
     {
       "type": "tuic",
-      "tag": "🇸🇬 新加坡 (Singapore) 14 - jack",
+      "tag": "🇸🇬 新加坡 (Singapore) 09 - jack",
       "server": "sg2-8sb.6121999.dpdns.org",
       "server_port": 33738,
       "uuid": "2d1ad594-80a4-4bfb-87a6-038e39701f51",
@@ -263,84 +92,66 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 15 - jack",
-      "server": "210.152.85.154",
-      "server_port": 19364,
-      "uuid": "78c438e1-417d-49a9-a883-f89e06737887",
-      "tls": {
-        "enabled": true,
-        "server_name": "woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/@Marisa_kristi",
-        "headers": {
-          "Host": "woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇸🇬 新加坡 (Singapore) 16 - jack",
-      "server": "ww11.levikogjgfdd.ir",
-      "server_port": 18000,
-      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-      "security": "auto"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇸🇬 新加坡 (Singapore) 17 - jack",
-      "server": "13.212.32.171",
-      "server_port": 443,
-      "password": "qQe1z5kU8kN6SlKnDt9Ru3Qp",
-      "tls": {
-        "enabled": true,
-        "server_name": "vpn-sg-001.fastervpn.world",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇸🇬 新加坡 (Singapore) 18 - jack",
-      "server": "13.212.83.43",
-      "server_port": 443,
-      "password": "qQe1z5kU8kN6SlKnDt9Ru3Qp",
-      "tls": {
-        "enabled": true,
-        "server_name": "vpn-sg-001.fastervpn.world",
-        "insecure": true
-      }
+      "type": "shadowsocks",
+      "tag": "🇸🇬 新加坡 (Singapore) 10 - jack",
+      "server": "194.233.74.160",
+      "server_port": 2342,
+      "method": "chacha20-ietf-poly1305",
+      "password": "XV4bvaJIWoxl3IYEC1e6W7"
     },
     {
       "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 19 - jack",
-      "server": "8.219.144.195",
-      "server_port": 443,
-      "uuid": "867e835d-b5a8-4ab2-aa93-ab8a7cc80470",
+      "tag": "🇸🇬 新加坡 (Singapore) 11 - jack",
+      "server": "146.235.16.130",
+      "server_port": 19825,
+      "uuid": "2d1ad594-80a4-4bfb-87a6-038e39701f51",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.nvidia.com",
+        "server_name": "sg2-8sb.6121999.dpdns.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": ""
         },
         "reality": {
           "enabled": true,
-          "public_key": "qbsLW0C_w5YhxXuCO42VQU3wjmJu93mpAGBBbcfMLSM",
-          "short_id": "0c09d9bb1f10bc4d"
+          "public_key": "GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI",
+          "short_id": "6ba85179e30d4fc2"
         }
       }
     },
     {
+      "type": "vless",
+      "tag": "🇸🇬 新加坡 (Singapore) 12 - jack",
+      "server": "206.206.76.75",
+      "server_port": 443,
+      "uuid": "1e3d3634-36ac-43ac-a439-9665d885238f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "TqIFzUEEI1pIOR8BEpkNKEXcJ6cPfE5EzHb5joIivig",
+          "short_id": "9930177816ab09da"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇸🇬 新加坡 (Singapore) 13 - jack",
+      "server": "139.180.220.175",
+      "server_port": 8388,
+      "method": "aes-256-gcm",
+      "password": "qpSevKaUXYQKvSjp"
+    },
+    {
       "type": "hysteria2",
-      "tag": "🇸🇬 新加坡 (Singapore) 20 - jack",
+      "tag": "🇸🇬 新加坡 (Singapore) 14 - jack",
       "server": "138.2.89.249",
       "server_port": 443,
       "password": "d042d150716709bb778cc73889cddb02",
@@ -355,27 +166,35 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇸🇬 新加坡 (Singapore) 21 - jack",
-      "server": "47.129.189.148",
-      "server_port": 443,
-      "password": "qQe1z5kU8kN6SlKnDt9Ru3Qp",
+      "type": "vless",
+      "tag": "🇸🇬 新加坡 (Singapore) 15 - jack",
+      "server": "217.217.254.126",
+      "server_port": 2053,
+      "uuid": "cb15cce9-73ed-4928-b38c-462f0732cbe9",
       "tls": {
         "enabled": true,
-        "server_name": "vpn-sg-001.fastervpn.world",
-        "insecure": true
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw",
+          "short_id": "87829de0e2bb82cb"
+        }
       }
     },
     {
       "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 22 - jack",
-      "server": "140.235.38.206",
+      "tag": "🇸🇬 新加坡 (Singapore) 16 - jack",
+      "server": "109.66.88.158",
       "server_port": 443,
       "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
       "tls": {
         "enabled": true,
         "server_name": "cdn8848.776676.xyz",
-        "insecure": false,
+        "insecure": true,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -383,7 +202,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/channels/act?ed=2560",
+        "path": "/details?ed=2560",
         "headers": {
           "Host": "cdn8848.776676.xyz"
         }
@@ -391,7 +210,25 @@
     },
     {
       "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 23 - jack",
+      "tag": "🇸🇬 新加坡 (Singapore) 17 - jack",
+      "server": "45.202.247.152",
+      "server_port": 443,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn8848.776676.xyz",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "cdn8848.776676.xyz"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 新加坡 (Singapore) 18 - jack",
       "server": "103.137.22.71",
       "server_port": 443,
       "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
@@ -409,197 +246,8 @@
       }
     },
     {
-      "type": "trojan",
-      "tag": "🇸🇬 新加坡 (Singapore) 24 - jack",
-      "server": "cloud.lakshan.us",
-      "server_port": 119,
-      "password": "skynet",
-      "tls": {
-        "enabled": true,
-        "server_name": "cloud.lakshan.us",
-        "insecure": true
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 25 - jack",
-      "server": "46.137.202.178",
-      "server_port": 12512,
-      "uuid": "2a6c617d-98e4-49c3-95ab-76f02fcf0150",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.intel.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "sO0RBMr_l8TLtZaYBX8n3NdI9AtaugUqJpCR1szNsyA",
-          "short_id": "e692a8250d2e2fd0"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 26 - jack",
-      "server": "217.217.254.126",
-      "server_port": 2053,
-      "uuid": "cb15cce9-73ed-4928-b38c-462f0732cbe9",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw",
-          "short_id": "87829de0e2bb82cb"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 27 - jack",
-      "server": "109.66.88.158",
-      "server_port": 443,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn8848.776676.xyz",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/details",
-        "headers": {
-          "Host": "cdn8848.776676.xyz"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 28 - jack",
-      "server": "146.235.16.130",
-      "server_port": 19825,
-      "uuid": "2d1ad594-80a4-4bfb-87a6-038e39701f51",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "sg2-8sb.6121999.dpdns.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI",
-          "short_id": "6ba85179e30d4fc2"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 29 - jack",
-      "server": "209.33.167.234",
-      "server_port": 443,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn8848.776676.xyz",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "cdn8848.776676.xyz"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 30 - jack",
-      "server": "152.67.101.72",
-      "server_port": 23010,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn8848.776676.xyz",
-        "insecure": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/books?ed=2560",
-        "headers": {
-          "Host": "cdn8848.776676.xyz"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 31 - jack",
-      "server": "43.175.131.30",
-      "server_port": 443,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn8848.776676.xyz",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "cdn8848.776676.xyz"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇸🇬 新加坡 (Singapore) 32 - jack",
-      "server": "194.233.74.160",
-      "server_port": 2342,
-      "method": "chacha20-ietf-poly1305",
-      "password": "XV4bvaJIWoxl3IYEC1e6W7"
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 33 - jack",
-      "server": "45.77.241.190",
-      "server_port": 8441,
-      "uuid": "35325935-2cd2-4c62-aee1-4797dde0fae3",
-      "tls": {
-        "enabled": true,
-        "server_name": "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/@Marisa_kristi",
-        "headers": {
-          "Host": "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 34 - jack",
+      "tag": "🇸🇬 新加坡 (Singapore) 19 - jack",
       "server": "23.249.18.144",
       "server_port": 8581,
       "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
@@ -621,68 +269,20 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 35 - jack",
-      "server": "3.0.111.82",
-      "server_port": 10574,
-      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
-      "flow": "xtls-rprx-vision",
+      "type": "hysteria2",
+      "tag": "🇸🇬 新加坡 (Singapore) 20 - jack",
+      "server": "msjp.mangshe.xyz",
+      "server_port": 20562,
+      "password": "5d0a6445-a30d-4522-bb1f-94f1d3ad63be",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
-          "short_id": "48050fab"
-        }
+        "server_name": "www.microsoft.com",
+        "insecure": true
       }
     },
     {
       "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 36 - jack",
-      "server": "45.77.241.190",
-      "server_port": 8441,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn8848.776676.xyz",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/act/company/intro",
-        "headers": {
-          "Host": "cdn8848.776676.xyz"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 37 - jack",
-      "server": "18.138.81.224",
-      "server_port": 8686,
-      "uuid": "1a17b19d-4896-4531-af79-6e91d8ef8228",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw",
-          "short_id": "628b3c90c98ead4f"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 38 - jack",
+      "tag": "🇸🇬 新加坡 (Singapore) 21 - jack",
       "server": "159.65.8.14",
       "server_port": 443,
       "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
@@ -705,108 +305,57 @@
     },
     {
       "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 39 - jack",
-      "server": "45.77.241.190",
-      "server_port": 8441,
-      "uuid": "8b19a6cb-a86c-41ef-a06b-747f2595574e",
+      "tag": "🇸🇬 新加坡 (Singapore) 22 - jack",
+      "server": "sg2-8sb.6121999.dpdns.org",
+      "server_port": 19825,
+      "uuid": "2d1ad594-80a4-4bfb-87a6-038e39701f51",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev",
-        "insecure": false,
+        "server_name": "sg2-8sb.6121999.dpdns.org",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/@Marisa_kristi",
-        "headers": {
-          "Host": "wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇸🇬 新加坡 (Singapore) 40 - jack",
-      "server": "138.2.73.238",
-      "server_port": 50160,
-      "password": "f87376e17da040ed04c9665ce8972930",
-      "tls": {
-        "enabled": true,
-        "server_name": "138.2.73.238",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 41 - jack",
-      "server": "140.245.38.33",
-      "server_port": 2096,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn8848.776676.xyz",
-        "insecure": true
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/class/season",
-        "headers": {
-          "Host": "cdn8848.776676.xyz"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 42 - jack",
-      "server": "45.202.247.152",
-      "server_port": 443,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn8848.776676.xyz",
-        "insecure": true
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "cdn8848.776676.xyz"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 43 - jack",
-      "server": "43.160.220.86",
-      "server_port": 443,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn8848.776676.xyz",
-        "insecure": false,
-        "utls": {
+        },
+        "reality": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/buy/uploads?ed=2560",
-        "headers": {
-          "Host": "cdn8848.776676.xyz"
+          "public_key": "GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI",
+          "short_id": "6ba85179e30d4fc2"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 44 - jack",
+      "tag": "🇸🇬 新加坡 (Singapore) 23 - jack",
       "server": "43.159.4.80",
       "server_port": 443,
       "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
       "tls": {
         "enabled": true,
         "server_name": "cdn8848.776676.xyz",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/episode/files?ed=2560",
+        "headers": {
+          "Host": "cdn8848.776676.xyz"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 新加坡 (Singapore) 24 - jack",
+      "server": "152.67.101.72",
+      "server_port": 23010,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn8848.776676.xyz",
         "insecure": true
       },
       "transport": {
@@ -818,44 +367,162 @@
     },
     {
       "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 45 - jack",
-      "server": "3.0.111.82",
-      "server_port": 17623,
-      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇸🇬 新加坡 (Singapore) 25 - jack",
+      "server": "43.175.131.30",
+      "server_port": 443,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "cdn8848.776676.xyz",
+        "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
-          "short_id": "48050fab"
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/article?ed=2560",
+        "headers": {
+          "Host": "cdn8848.776676.xyz"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇸🇬 新加坡 (Singapore) 46 - jack",
-      "server": "3.0.111.82",
-      "server_port": 12972,
-      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇸🇬 新加坡 (Singapore) 26 - jack",
+      "server": "104.16.3.98",
+      "server_port": 443,
+      "uuid": "b8d8a5b0-867f-4491-b4e4-30edc04bb10e",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "u.srilankangrill.online",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
-          "short_id": "48050fab"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "u.srilankangrill.online"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 新加坡 (Singapore) 27 - jack",
+      "server": "8.222.70.238",
+      "server_port": 443,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn8848.776676.xyz",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/mall/china/doc?ed=2560",
+        "headers": {
+          "Host": "cdn8848.776676.xyz"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 新加坡 (Singapore) 28 - jack",
+      "server": "170.114.45.6",
+      "server_port": 80,
+      "uuid": "6aa028bc-08a9-41d1-a397-d60ce65df081",
+      "transport": {
+        "type": "ws",
+        "path": "/shalana",
+        "headers": {
+          "Host": "shalana.xyz"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇸🇬 新加坡 (Singapore) 29 - jack",
+      "server": "cloud.lakshan.us",
+      "server_port": 119,
+      "password": "skynet",
+      "tls": {
+        "enabled": true,
+        "server_name": "cloud.lakshan.us",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇸🇬 新加坡 (Singapore) 30 - jack",
+      "server": "13.212.83.43",
+      "server_port": 443,
+      "password": "qQe1z5kU8kN6SlKnDt9Ru3Qp",
+      "tls": {
+        "enabled": true,
+        "server_name": "vpn-sg-001.fastervpn.world",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 新加坡 (Singapore) 31 - jack",
+      "server": "support.zoom.us",
+      "server_port": 80,
+      "uuid": "b8d8a5b0-867f-4491-b4e4-30edc04bb10e",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "u.srilankangrill.online"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 新加坡 (Singapore) 32 - jack",
+      "server": "141.193.213.21",
+      "server_port": 8443,
+      "uuid": "29c3dd6b-b164-40ca-a0d5-f06aca52a8b2",
+      "tls": {
+        "enabled": true,
+        "server_name": "u.srilankangrill.online",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "u.srilankangrill.online"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇸🇬 新加坡 (Singapore) 33 - jack",
+      "server": "sg1.xiaoliyu.us",
+      "server_port": 2052,
+      "password": "b8949dae-cb53-4b5a-ad9c-50f58c4656fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "sg1.xiaoliyu.us",
+        "insecure": true
       }
     },
     {
@@ -895,20 +562,7 @@
         "🇸🇬 新加坡 (Singapore) 30 - jack",
         "🇸🇬 新加坡 (Singapore) 31 - jack",
         "🇸🇬 新加坡 (Singapore) 32 - jack",
-        "🇸🇬 新加坡 (Singapore) 33 - jack",
-        "🇸🇬 新加坡 (Singapore) 34 - jack",
-        "🇸🇬 新加坡 (Singapore) 35 - jack",
-        "🇸🇬 新加坡 (Singapore) 36 - jack",
-        "🇸🇬 新加坡 (Singapore) 37 - jack",
-        "🇸🇬 新加坡 (Singapore) 38 - jack",
-        "🇸🇬 新加坡 (Singapore) 39 - jack",
-        "🇸🇬 新加坡 (Singapore) 40 - jack",
-        "🇸🇬 新加坡 (Singapore) 41 - jack",
-        "🇸🇬 新加坡 (Singapore) 42 - jack",
-        "🇸🇬 新加坡 (Singapore) 43 - jack",
-        "🇸🇬 新加坡 (Singapore) 44 - jack",
-        "🇸🇬 新加坡 (Singapore) 45 - jack",
-        "🇸🇬 新加坡 (Singapore) 46 - jack"
+        "🇸🇬 新加坡 (Singapore) 33 - jack"
       ]
     },
     {
@@ -947,20 +601,7 @@
         "🇸🇬 新加坡 (Singapore) 30 - jack",
         "🇸🇬 新加坡 (Singapore) 31 - jack",
         "🇸🇬 新加坡 (Singapore) 32 - jack",
-        "🇸🇬 新加坡 (Singapore) 33 - jack",
-        "🇸🇬 新加坡 (Singapore) 34 - jack",
-        "🇸🇬 新加坡 (Singapore) 35 - jack",
-        "🇸🇬 新加坡 (Singapore) 36 - jack",
-        "🇸🇬 新加坡 (Singapore) 37 - jack",
-        "🇸🇬 新加坡 (Singapore) 38 - jack",
-        "🇸🇬 新加坡 (Singapore) 39 - jack",
-        "🇸🇬 新加坡 (Singapore) 40 - jack",
-        "🇸🇬 新加坡 (Singapore) 41 - jack",
-        "🇸🇬 新加坡 (Singapore) 42 - jack",
-        "🇸🇬 新加坡 (Singapore) 43 - jack",
-        "🇸🇬 新加坡 (Singapore) 44 - jack",
-        "🇸🇬 新加坡 (Singapore) 45 - jack",
-        "🇸🇬 新加坡 (Singapore) 46 - jack"
+        "🇸🇬 新加坡 (Singapore) 33 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
