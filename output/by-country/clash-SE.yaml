@@ -5,30 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - jack
-  server: 143.246.194.60
-  port: 8081
-  udp: true
-  type: vless
-  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
-  network: ws
-  ws-opts:
-    path: /vless-test
-- name: 🇸🇪 瑞典 (Sweden) 02 - jack
-  server: 31.77.111.11
-  port: 43439
-  udp: true
-  type: vless
-  uuid: 428e923f-e608-412b-9e51-3b09ffab551f
-  tls: true
-  reality-opts:
-    public-key: b4n1pcO8ST3JkGtj8YymXVrW17LEe2EHec5wY7hMMR4
-    short-id: 39ad36226f3abec8
-  servername: cdn.higames.ru
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: streaming
-- name: 🇸🇪 瑞典 (Sweden) 03 - jack
   server: 193.42.39.10
   port: 33743
   udp: true
@@ -38,10 +14,35 @@ proxies:
   reality-opts:
     public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
   servername: www.google.com
-  client-fingerprint: ''
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: TunService
+- name: 🇸🇪 瑞典 (Sweden) 02 - jack
+  server: 34.51.231.250
+  port: 443
+  udp: true
+  type: vless
+  uuid: e4be912f-68e8-4d51-80a4-1342b646f8e0
+  tls: true
+  reality-opts:
+    public-key: fV003yDr_sb_Wkgz6MxnIUJMgD15osWhzU-HZ5fLPFg
+    short-id: 79ff7d51e3c56323
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 03 - jack
+  server: 5.157.10.147
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: x6p656szvu_3CKLsJ4NtkooRvdTVGx7IoPca_p58_jA
+    short-id: fb442438e2223836
+  servername: svvedko.nxxzxaw.beer
+  client-fingerprint: firefox
 - name: 🇸🇪 瑞典 (Sweden) 04 - jack
   server: 91.193.17.156
   port: 9458
@@ -57,26 +58,15 @@ proxies:
   grpc-opts:
     grpc-service-name: TunService
 - name: 🇸🇪 瑞典 (Sweden) 05 - jack
-  server: se-node.rumedia-cdn.com
-  port: 25443
-  udp: true
-  type: hysteria2
-  password: 29ffde49-e1d6-4dcd-a135-352920f9f0b8
-  sni: cf2.rumedia-cdn.com
-  skip-cert-verify: true
-- name: 🇸🇪 瑞典 (Sweden) 06 - jack
-  server: 34.51.231.250
-  port: 443
+  server: 143.246.194.60
+  port: 8081
   udp: true
   type: vless
-  uuid: e4be912f-68e8-4d51-80a4-1342b646f8e0
-  tls: true
-  reality-opts:
-    public-key: fV003yDr_sb_Wkgz6MxnIUJMgD15osWhzU-HZ5fLPFg
-    short-id: 79ff7d51e3c56323
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇸🇪 瑞典 (Sweden) 07 - jack
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+  network: ws
+  ws-opts:
+    path: /vless-test
+- name: 🇸🇪 瑞典 (Sweden) 06 - jack
   server: svip.skycon808.com
   port: 60005
   udp: true
@@ -84,21 +74,13 @@ proxies:
   password: 13f0acfa-38c1-4e82-a758-583aa31740df
   sni: xjp18.2uuzhe.com
   skip-cert-verify: true
-- name: 🇸🇪 瑞典 (Sweden) 08 - jack
-  server: 95.129.236.239
-  port: 443
+- name: 🇸🇪 瑞典 (Sweden) 07 - jack
+  server: 70.34.212.124
+  port: 8388
   udp: true
-  type: vless
-  uuid: ec8fff55-d3d1-4f10-88f9-b175b7a7da2c
-  tls: true
-  servername: wiki.solarinfra.net
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /stream/615428/socket
-    headers:
-      Host: wiki.solarinfra.net
+  type: ss
+  cipher: aes-256-gcm
+  password: AxIYWtskJWIIaefW
 proxy-groups:
 - name: PROXIES
   type: select
@@ -111,7 +93,6 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 05 - jack
   - 🇸🇪 瑞典 (Sweden) 06 - jack
   - 🇸🇪 瑞典 (Sweden) 07 - jack
-  - 🇸🇪 瑞典 (Sweden) 08 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -124,6 +105,5 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 05 - jack
   - 🇸🇪 瑞典 (Sweden) 06 - jack
   - 🇸🇪 瑞典 (Sweden) 07 - jack
-  - 🇸🇪 瑞典 (Sweden) 08 - jack
 rules:
 - MATCH,PROXIES

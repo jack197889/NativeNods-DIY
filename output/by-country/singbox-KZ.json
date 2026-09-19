@@ -6,30 +6,6 @@
     {
       "type": "vless",
       "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - jack",
-      "server": "89.106.88.6",
-      "server_port": 8443,
-      "uuid": "ad297a2b-ae17-4d2d-8fce-e2eafb89b145",
-      "tls": {
-        "enabled": true,
-        "server_name": "dest1.cdn-update.rutube.info",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "-AdhgMZeNHR2zAmGWa5peg7Ni0-e4IVMoSzydC9n7C4",
-          "short_id": "08"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - jack",
       "server": "109.248.170.119",
       "server_port": 13447,
       "uuid": "b573cefb-7bc7-4a42-b407-b8b534e66773",
@@ -52,16 +28,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - jack",
-        "🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - jack"
+        "🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - jack",
-        "🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - jack"
+        "🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

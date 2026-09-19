@@ -6,13 +6,72 @@ log-level: info
 proxies:
 - name: 🇱🇹 立陶宛 (Lithuania) 01 - jack
   server: 195.238.126.20
-  port: 9001
+  port: 9045
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: UkXRsXvR6buDMG2Y
+  password: Lp27rqyJq72bZsqX
 - name: 🇱🇹 立陶宛 (Lithuania) 02 - jack
-  server: 84.32.215.117
+  server: 195.238.126.20
+  port: 9012
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: xaupMUvhptwxdDUg
+- name: 🇱🇹 立陶宛 (Lithuania) 03 - jack
+  server: 103.139.51.31
+  port: 443
+  udp: true
+  type: vless
+  uuid: 71b91642-93ed-4923-8cab-877e19bfc2d6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: H5CXI4RvEWW0TFPvFrnF1iX-05Y57ZYMMngjmkMfv24
+    short-id: 711ad7f475c35e5e
+  servername: api.figmafound.org
+  client-fingerprint: firefox
+- name: 🇱🇹 立陶宛 (Lithuania) 04 - jack
+  server: 103.139.51.51
+  port: 443
+  udp: true
+  type: vless
+  uuid: 71b91642-93ed-4923-8cab-877e19bfc2d6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: H5CXI4RvEWW0TFPvFrnF1iX-05Y57ZYMMngjmkMfv24
+    short-id: 711ad7f475c35e5e
+  servername: cloud.figmafound.org
+  client-fingerprint: firefox
+- name: 🇱🇹 立陶宛 (Lithuania) 05 - jack
+  server: 103.139.51.21
+  port: 443
+  udp: true
+  type: vless
+  uuid: 71b91642-93ed-4923-8cab-877e19bfc2d6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: H5CXI4RvEWW0TFPvFrnF1iX-05Y57ZYMMngjmkMfv24
+    short-id: 711ad7f475c35e5e
+  servername: auth.figmafound.org
+  client-fingerprint: firefox
+- name: 🇱🇹 立陶宛 (Lithuania) 06 - jack
+  server: 103.139.51.41
+  port: 443
+  udp: true
+  type: vless
+  uuid: 71b91642-93ed-4923-8cab-877e19bfc2d6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: H5CXI4RvEWW0TFPvFrnF1iX-05Y57ZYMMngjmkMfv24
+    short-id: 711ad7f475c35e5e
+  servername: mail.figmafound.org
+  client-fingerprint: firefox
+- name: 🇱🇹 立陶宛 (Lithuania) 07 - jack
+  server: lt.aether-runet.top
   port: 443
   udp: true
   type: vless
@@ -23,7 +82,7 @@ proxies:
     public-key: vrcsm8L_tY7sNbnCEdLCEjOthh_w9bdWS3wFPgsIomk
     short-id: 4fa44664f6a566d3
   servername: lt.aether-runet.top
-  client-fingerprint: ios
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -31,6 +90,11 @@ proxy-groups:
   - AUTO
   - 🇱🇹 立陶宛 (Lithuania) 01 - jack
   - 🇱🇹 立陶宛 (Lithuania) 02 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 03 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 04 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 05 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 06 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 07 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -38,5 +102,10 @@ proxy-groups:
   proxies:
   - 🇱🇹 立陶宛 (Lithuania) 01 - jack
   - 🇱🇹 立陶宛 (Lithuania) 02 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 03 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 04 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 05 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 06 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 07 - jack
 rules:
 - MATCH,PROXIES
