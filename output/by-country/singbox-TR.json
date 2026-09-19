@@ -4,8 +4,61 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01 - jack",
+      "server": "172.67.192.84",
+      "server_port": 2095,
+      "uuid": "a22bff60-a40a-4250-bde2-4c660e363b47",
+      "transport": {
+        "type": "ws",
+        "path": "/juvsrnmgdu8i0179k5",
+        "headers": {
+          "Host": "index.harmonica02.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 02 - jack",
+      "server": "104.17.147.22",
+      "server_port": 443,
+      "uuid": "5ef04ae8-8d7c-0a66-13f4-6e3f00000003",
+      "tls": {
+        "enabled": true,
+        "server_name": "relay.lunetcloud.ir",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/lunetnetwork",
+        "headers": {
+          "Host": "relay.lunetcloud.ir"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇹🇷 土耳其 (Turkey) 03 - jack",
+      "server": "91.228.227.211",
+      "server_port": 23957,
+      "uuid": "92987ab8-0a53-4a16-8d6c-295d5df86404",
+      "security": "auto"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇹🇷 土耳其 (Turkey) 04 - jack",
+      "server": "139.28.240.68",
+      "server_port": 2086,
+      "uuid": "f6361af8-bb8f-4609-bf5d-3fc0f688f47b",
+      "security": "auto"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇹🇷 土耳其 (Turkey) 05 - jack",
       "server": "153.52.92.81",
       "server_port": 1080,
       "method": "chacha20-ietf-poly1305",
@@ -13,7 +66,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 02 - jack",
+      "tag": "🇹🇷 土耳其 (Turkey) 06 - jack",
       "server": "helixgaming.ir",
       "server_port": 80,
       "uuid": "c0e453eb-33ac-4206-8423-3e1286c2ba7a",
@@ -27,7 +80,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 03 - jack",
+      "tag": "🇹🇷 土耳其 (Turkey) 07 - jack",
       "server": "78.135.73.47",
       "server_port": 443,
       "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
@@ -48,7 +101,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 04 - jack",
+      "tag": "🇹🇷 土耳其 (Turkey) 08 - jack",
       "server": "151.241.226.201",
       "server_port": 2053,
       "uuid": "0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8",
@@ -67,6 +120,25 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 09 - jack",
+      "server": "172.67.151.109",
+      "server_port": 443,
+      "uuid": "50414e45-4c5f-5a45-5553-635698a6bb9c",
+      "tls": {
+        "enabled": true,
+        "server_name": "jdzit4e4urks.xwzohsebujps.workers.dev",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/stream/PANEL_ZEUS/635698a6bb9c/loc-0",
+        "headers": {
+          "Host": "jdzit4e4urks.xwzohsebujps.workers.dev"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -74,7 +146,12 @@
         "🇹🇷 土耳其 (Turkey) 01 - jack",
         "🇹🇷 土耳其 (Turkey) 02 - jack",
         "🇹🇷 土耳其 (Turkey) 03 - jack",
-        "🇹🇷 土耳其 (Turkey) 04 - jack"
+        "🇹🇷 土耳其 (Turkey) 04 - jack",
+        "🇹🇷 土耳其 (Turkey) 05 - jack",
+        "🇹🇷 土耳其 (Turkey) 06 - jack",
+        "🇹🇷 土耳其 (Turkey) 07 - jack",
+        "🇹🇷 土耳其 (Turkey) 08 - jack",
+        "🇹🇷 土耳其 (Turkey) 09 - jack"
       ]
     },
     {
@@ -84,7 +161,12 @@
         "🇹🇷 土耳其 (Turkey) 01 - jack",
         "🇹🇷 土耳其 (Turkey) 02 - jack",
         "🇹🇷 土耳其 (Turkey) 03 - jack",
-        "🇹🇷 土耳其 (Turkey) 04 - jack"
+        "🇹🇷 土耳其 (Turkey) 04 - jack",
+        "🇹🇷 土耳其 (Turkey) 05 - jack",
+        "🇹🇷 土耳其 (Turkey) 06 - jack",
+        "🇹🇷 土耳其 (Turkey) 07 - jack",
+        "🇹🇷 土耳其 (Turkey) 08 - jack",
+        "🇹🇷 土耳其 (Turkey) 09 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

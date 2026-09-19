@@ -4,11 +4,12 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇮🇹 意大利 (Italy) 01 - jack",
-      "server": "204.216.216.23",
-      "server_port": 10086,
-      "uuid": "9f0285ee-20ca-4953-bcdb-86a920652923"
+      "server": "185.164.175.81",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     },
     {
       "type": "shadowsocks",
@@ -19,37 +20,31 @@
       "password": "itzvpn@321"
     },
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇮🇹 意大利 (Italy) 03 - jack",
-      "server": "185.164.175.81",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+      "server": "204.216.216.23",
+      "server_port": 10086,
+      "uuid": "9f0285ee-20ca-4953-bcdb-86a920652923"
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇮🇹 意大利 (Italy) 04 - jack",
-      "server": "172.238.232.239",
-      "server_port": 32833,
-      "uuid": "167ed405-7de9-4bff-b1ea-6e3d49c76b0b",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.intel.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "PaTDdYBrlh1xBixdI0igvRRkf0vnUwMRzi-4oDyfS20",
-          "short_id": "a0a305ccc8e94aa8"
-        }
-      }
+      "server": "91.201.65.122",
+      "server_port": 9002,
+      "method": "aes-256-cfb",
+      "password": "b8KkNDjEd5QqFyRm"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇮🇹 意大利 (Italy) 05 - jack",
+      "server": "91.201.65.122",
+      "server_port": 9092,
+      "method": "aes-256-cfb",
+      "password": "TyNkGmp9hs6eGpDK"
     },
     {
       "type": "vless",
-      "tag": "🇮🇹 意大利 (Italy) 05 - jack",
+      "tag": "🇮🇹 意大利 (Italy) 06 - jack",
       "server": "57.131.38.163",
       "server_port": 2053,
       "uuid": "d4b08cd6-0903-411a-9dac-45dbdf5c9712",
@@ -58,7 +53,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -69,7 +64,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇮🇹 意大利 (Italy) 06 - jack",
+      "tag": "🇮🇹 意大利 (Italy) 07 - jack",
       "server": "82.118.16.187",
       "server_port": 443,
       "uuid": "dc2259c4-388e-4285-ba18-df619b6672b6",
@@ -90,39 +85,36 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇮🇹 意大利 (Italy) 07 - jack",
+      "tag": "🇮🇹 意大利 (Italy) 08 - jack",
       "server": "91.201.65.122",
       "server_port": 9059,
       "method": "aes-256-cfb",
       "password": "9XwYyZsK8SNzQDtY"
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇮🇹 意大利 (Italy) 08 - jack",
-      "server": "91.201.65.122",
-      "server_port": 9002,
-      "method": "aes-256-cfb",
-      "password": "b8KkNDjEd5QqFyRm"
-    },
-    {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇮🇹 意大利 (Italy) 09 - jack",
-      "server": "91.201.65.122",
-      "server_port": 9039,
-      "method": "aes-256-cfb",
-      "password": "qYEN5HX4JKeVCdEC"
+      "server": "172.238.232.239",
+      "server_port": 32833,
+      "uuid": "167ed405-7de9-4bff-b1ea-6e3d49c76b0b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.intel.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "PaTDdYBrlh1xBixdI0igvRRkf0vnUwMRzi-4oDyfS20",
+          "short_id": "a0a305ccc8e94aa8"
+        }
+      }
     },
     {
       "type": "shadowsocks",
       "tag": "🇮🇹 意大利 (Italy) 10 - jack",
-      "server": "91.201.65.122",
-      "server_port": 9092,
-      "method": "aes-256-cfb",
-      "password": "TyNkGmp9hs6eGpDK"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇮🇹 意大利 (Italy) 11 - jack",
       "server": "91.201.65.122",
       "server_port": 9053,
       "method": "aes-256-cfb",
@@ -130,7 +122,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇮🇹 意大利 (Italy) 12 - jack",
+      "tag": "🇮🇹 意大利 (Italy) 11 - jack",
       "server": "204.216.216.23",
       "server_port": 1114,
       "uuid": "6ba2eac6-0ec9-44ca-a42b-a8e23aafb530",
@@ -164,8 +156,7 @@
         "🇮🇹 意大利 (Italy) 08 - jack",
         "🇮🇹 意大利 (Italy) 09 - jack",
         "🇮🇹 意大利 (Italy) 10 - jack",
-        "🇮🇹 意大利 (Italy) 11 - jack",
-        "🇮🇹 意大利 (Italy) 12 - jack"
+        "🇮🇹 意大利 (Italy) 11 - jack"
       ]
     },
     {
@@ -182,8 +173,7 @@
         "🇮🇹 意大利 (Italy) 08 - jack",
         "🇮🇹 意大利 (Italy) 09 - jack",
         "🇮🇹 意大利 (Italy) 10 - jack",
-        "🇮🇹 意大利 (Italy) 11 - jack",
-        "🇮🇹 意大利 (Italy) 12 - jack"
+        "🇮🇹 意大利 (Italy) 11 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

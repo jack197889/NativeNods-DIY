@@ -5,39 +5,40 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - jack
-  server: 46.17.40.234
-  port: 10301
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: bdb313adf74c2ede
-- name: 🇭🇰 中国香港 (Hong Kong) 02 - jack
-  server: dog-hk.kunlun01dns.com
-  port: 21018
-  udp: true
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - jack
   server: 31.58.181.88
   port: 8443
   udp: true
   type: vless
-  uuid: ce57910d-b7a9-4eaa-9a94-a1dda0d08026
+  uuid: beed721d-73b6-47fc-a7b0-cac10e624b98
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
   servername: tradingview.com
   client-fingerprint: firefox
-- name: 🇭🇰 中国香港 (Hong Kong) 04 - jack
-  server: 176.32.35.44
-  port: 50111
+- name: 🇭🇰 中国香港 (Hong Kong) 02 - jack
+  server: 47.243.251.235
+  port: 9087
   udp: true
   type: ss
-  cipher: aes-256-gcm
-  password: 6b39ae3234dfd68b
+  cipher: 2022-blake3-aes-256-gcm
+  password: S7Cn18rOhJ0IijMltSh7/rrf2mrd/RsRjOEINjXteFQ=
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - jack
+  server: dog-hk.kunlun01dns.com
+  port: 21020
+  udp: true
+  type: vmess
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+- name: 🇭🇰 中国香港 (Hong Kong) 04 - jack
+  server: zfd-hkv2.kunlun01dns.com
+  port: 16115
+  udp: true
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
 - name: 🇭🇰 中国香港 (Hong Kong) 05 - jack
   server: 162.128.157.164
   port: 443
@@ -52,79 +53,48 @@ proxies:
   servername: www.bing.com
   client-fingerprint: firefox
 - name: 🇭🇰 中国香港 (Hong Kong) 06 - jack
-  server: 47.238.210.5
-  port: 13779
+  server: 47.240.80.220
+  port: 2052
+  udp: true
+  type: trojan
+  password: tFjD2X1F6i9FfWp2GDU5Vbi1conuaChDKIYbw9zMFrqvMoSz
+  sni: vpn.12169.top
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 07 - jack
+  server: 47.76.172.190
+  port: 443
   udp: true
   type: vless
-  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
+  uuid: 60baeb19-560d-402d-b9c9-c062c2350e0b
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
-    short-id: af1bdd293097b664
-  servername: tesla.com
+    public-key: 9nukDgL8dc3PWV07DAwi-_FFj3Y25ifYnnrIp7uV0SI
+    short-id: 92ddbafbf38306f5
+  servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 07 - jack
-  server: dog-hk.kunlun01dns.com
-  port: 21020
-  udp: true
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
 - name: 🇭🇰 中国香港 (Hong Kong) 08 - jack
   server: 202.146.222.174
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2
+  sni: https://t.me/wangcai2🇨🇳
   skip-cert-verify: true
 - name: 🇭🇰 中国香港 (Hong Kong) 09 - jack
-  server: 202.146.222.29
+  server: 47.238.126.123
   port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: css.rbxcdn.com
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 10 - jack
-  server: 202.146.222.89
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: t.me
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 11 - jack
-  server: dog-hk.kunlun01dns.com
-  port: 21041
-  udp: true
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 12 - jack
-  server: 47.239.6.251
-  port: 13779
   udp: true
   type: vless
-  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
+  uuid: bf41cc32-f0a2-4b27-ba9f-8026ce0aed84
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
-    short-id: af1bdd293097b664
-  servername: tesla.com
+    public-key: 4IeLDkxPTFecGeobLaxV9XaVW7oBgcqwW2dvfFtPQD4
+    short-id: 7771265f0b109528
+  servername: www.amazon.com
   client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 13 - jack
-  server: zfd-hkv2.kunlun01dns.com
-  port: 16113
-  udp: true
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 14 - jack
+- name: 🇭🇰 中国香港 (Hong Kong) 10 - jack
   server: 207.56.137.51
   port: 443
   udp: true
@@ -137,7 +107,7 @@ proxies:
     short-id: f713561d
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 15 - jack
+- name: 🇭🇰 中国香港 (Hong Kong) 11 - jack
   server: nas.aizhzo.com
   port: 5010
   udp: true
@@ -147,13 +117,70 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
+- name: 🇭🇰 中国香港 (Hong Kong) 12 - jack
+  server: 202.146.222.89
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https%3a%2f%2ft.me%2fclashv8%f0%9f%87%a8%f0%9f%87%b3
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 13 - jack
+  server: 47.238.210.5
+  port: 13779
+  udp: true
+  type: vless
+  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
+  tls: true
+  reality-opts:
+    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
+    short-id: af1bdd293097b664
+  servername: tesla.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 14 - jack
+  server: mz.hkychina.com
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: HysTeria2026!Proxy
+  sni: mz.hkychina.com
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 15 - jack
+  server: 47.239.6.251
+  port: 13779
+  udp: true
+  type: vless
+  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
+    short-id: af1bdd293097b664
+  servername: tesla.com
+  client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 16 - jack
+  server: nomino.11hi8itbaf.workers.dev
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 3aa71202-a099-49c1-99fc-6662f3335369
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: nomino.11hi8itbaf.workers.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /yoga-suggesting-recording-calls.trycloudflare.com/3aa71202-a099-49c1-99fc-6662f3335369-vm
+    headers:
+      Host: nomino.11hi8itbaf.workers.dev
+- name: 🇭🇰 中国香港 (Hong Kong) 17 - jack
   server: 119.246.1.143
   port: 443
   udp: true
   type: trojan
   password: BxceQaOe
-  sni: t.me/ripaojiedian
+  sni: 119.246.1.143
   skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
@@ -176,6 +203,7 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 14 - jack
   - 🇭🇰 中国香港 (Hong Kong) 15 - jack
   - 🇭🇰 中国香港 (Hong Kong) 16 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 17 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -197,5 +225,6 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 14 - jack
   - 🇭🇰 中国香港 (Hong Kong) 15 - jack
   - 🇭🇰 中国香港 (Hong Kong) 16 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 17 - jack
 rules:
 - MATCH,PROXIES

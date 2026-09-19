@@ -5,16 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 (家宽) - jack
-  server: 104.18.34.14
-  port: 2095
+  server: curly-night-6928.ggdhchjk.workers.dev
+  port: 443
   udp: true
   type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  uuid: 4ce7cb8a-f9b1-4bfa-a80d-9e168c61a633
+  tls: true
+  servername: curly-night-6928.ggdhchjk.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /sync
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+      Host: curly-night-6928.ggdhchjk.workers.dev
 - name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
   server: 36.224.185.173
   port: 50099
@@ -23,20 +27,52 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
 - name: 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
-  server: 36.224.185.143
+  server: r3mrcg001286ek2.cybervena.com
   port: 50099
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
-  server: 6ivh.pnuqcnp.cn
+- name: 🇯🇵 日本 (Japan) 04 (家宽) - jack
+  server: 91.186.218.227
+  port: 4443
+  udp: true
+  type: vless
+  uuid: 97423fab-93df-4061-be7a-e6ca8d7eb3d7
+  tls: true
+  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+- name: 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack
+  server: hinet1.2yly.com
+  port: 24215
+  udp: true
+  type: vless
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+  tls: true
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- name: 🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack
+  server: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
   port: 443
   udp: true
-  type: anytls
-  password: 9sK2mP8xQ7vL3nZ6
-  sni: images.ctfassets.net
-  skip-cert-verify: true
+  type: vmess
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
 proxy-groups:
 - name: PROXIES
   type: select
@@ -45,7 +81,9 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 01 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
+  - 🇯🇵 日本 (Japan) 04 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -54,6 +92,8 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 01 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
+  - 🇯🇵 日本 (Japan) 04 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack
 rules:
 - MATCH,PROXIES
