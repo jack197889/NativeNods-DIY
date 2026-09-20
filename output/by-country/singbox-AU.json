@@ -4,8 +4,22 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "vless",
       "tag": "🇦🇺 澳大利亚 (Australia) 01 - jack",
+      "server": "188.114.97.6",
+      "server_port": 80,
+      "uuid": "e51453d3-7972-44d7-a657-ed89520f48b6",
+      "transport": {
+        "type": "ws",
+        "path": "/au-do",
+        "headers": {
+          "Host": "web.whatsapp.com.r3xxe.eu.cc"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇦🇺 澳大利亚 (Australia) 02 - jack",
       "server": "82.198.246.233",
       "server_port": 180,
       "uuid": "d13fc2f5-3e05-4795-81eb-44143a09e552",
@@ -13,7 +27,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇦🇺 澳大利亚 (Australia) 02 - jack",
+      "tag": "🇦🇺 澳大利亚 (Australia) 03 - jack",
       "server": "51.161.204.244",
       "server_port": 443,
       "uuid": "36e89875-9c53-482b-bc41-d3890e9da176",
@@ -34,7 +48,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇦🇺 澳大利亚 (Australia) 03 - jack",
+      "tag": "🇦🇺 澳大利亚 (Australia) 04 - jack",
       "server": "103.75.119.126",
       "server_port": 2087,
       "uuid": "731f177e-00aa-480c-b935-661456139a32",
@@ -45,30 +59,27 @@
     },
     {
       "type": "vless",
-      "tag": "🇦🇺 澳大利亚 (Australia) 04 - jack",
-      "server": "144.31.28.106",
-      "server_port": 8443,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tag": "🇦🇺 澳大利亚 (Australia) 05 - jack",
+      "server": "34.87.229.148",
+      "server_port": 443,
+      "uuid": "4f865f35-cf47-4e7f-a7e6-8882511a1b36",
       "tls": {
         "enabled": true,
-        "server_name": "cdn8848.776676.xyz",
-        "insecure": false,
+        "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/trade?ed=2560",
-        "headers": {
-          "Host": "cdn8848.776676.xyz"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "OgTkmAQdLjipA9oLloxbU5BAX3hPjzbvkEGHF4aZ8z4",
+          "short_id": "8a7d5e0248cdb1b1"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇦🇺 澳大利亚 (Australia) 05 - jack",
+      "tag": "🇦🇺 澳大利亚 (Australia) 06 - jack",
       "server": "34.87.244.111",
       "server_port": 443,
       "uuid": "325bc1be-0cb7-4cf7-bd35-a79ded91bbbd",
@@ -77,7 +88,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -95,7 +106,8 @@
         "🇦🇺 澳大利亚 (Australia) 02 - jack",
         "🇦🇺 澳大利亚 (Australia) 03 - jack",
         "🇦🇺 澳大利亚 (Australia) 04 - jack",
-        "🇦🇺 澳大利亚 (Australia) 05 - jack"
+        "🇦🇺 澳大利亚 (Australia) 05 - jack",
+        "🇦🇺 澳大利亚 (Australia) 06 - jack"
       ]
     },
     {
@@ -106,7 +118,8 @@
         "🇦🇺 澳大利亚 (Australia) 02 - jack",
         "🇦🇺 澳大利亚 (Australia) 03 - jack",
         "🇦🇺 澳大利亚 (Australia) 04 - jack",
-        "🇦🇺 澳大利亚 (Australia) 05 - jack"
+        "🇦🇺 澳大利亚 (Australia) 05 - jack",
+        "🇦🇺 澳大利亚 (Australia) 06 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

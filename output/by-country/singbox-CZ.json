@@ -4,18 +4,29 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
+      "type": "vless",
       "tag": "🇨🇿 捷克 (Czech) 01 - jack",
-      "server": "199.232.78.160",
-      "server_port": 443,
-      "password": "mitivpn",
+      "server": "188.114.97.6",
+      "server_port": 8080,
+      "uuid": "33918b20-9e02-4dc6-8b30-79b2d4b2e0e6",
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiUjJBU3JkVlRwSWtnciIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0",
+        "headers": {
+          "Host": "auto-scale-238b2b.infra-core-1630dd.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 02 - jack",
+      "server": "172.67.208.235",
+      "server_port": 2096,
+      "uuid": "b9ede7a5-5b4b-4aee-ac37-2c307e587e47",
       "tls": {
         "enabled": true,
-        "server_name": "ssl.fastly.com",
+        "server_name": "courses.mftplus.qzz.io",
         "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -23,20 +34,10 @@
       },
       "transport": {
         "type": "ws",
+        "path": "/eyJqdW5rIjoidVkzQm1ROUg4dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
         "headers": {
-          "Host": "mitivpn---ss--s---mitivpn-55e.global.ssl.fastly.net"
+          "Host": "courses.mftplus.qzz.io"
         }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇿 捷克 (Czech) 02 - jack",
-      "server": "194.87.59.104",
-      "server_port": 2085,
-      "uuid": "7b07d862-b698-47c1-884b-3e7dd6c8b862",
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless"
       }
     },
     {
@@ -61,37 +62,13 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇨🇿 捷克 (Czech) 04 - jack",
-      "server": "84.32.217.120",
-      "server_port": 8443,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn8848.776676.xyz",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/channels/act",
-        "headers": {
-          "Host": "cdn8848.776676.xyz"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇨🇿 捷克 (Czech) 01 - jack",
         "🇨🇿 捷克 (Czech) 02 - jack",
-        "🇨🇿 捷克 (Czech) 03 - jack",
-        "🇨🇿 捷克 (Czech) 04 - jack"
+        "🇨🇿 捷克 (Czech) 03 - jack"
       ]
     },
     {
@@ -100,8 +77,7 @@
       "outbounds": [
         "🇨🇿 捷克 (Czech) 01 - jack",
         "🇨🇿 捷克 (Czech) 02 - jack",
-        "🇨🇿 捷克 (Czech) 03 - jack",
-        "🇨🇿 捷克 (Czech) 04 - jack"
+        "🇨🇿 捷克 (Czech) 03 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

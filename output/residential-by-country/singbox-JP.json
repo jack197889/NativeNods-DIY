@@ -5,21 +5,24 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇮🇩 印尼 (Indonesia) 01 - jack",
-      "server": "34.128.66.66",
-      "server_port": 443,
-      "uuid": "e440fa81-fe9d-4ca1-b711-f7b72c3d79ed",
+      "tag": "🇯🇵 日本 (Japan) 01 (家宽) - jack",
+      "server": "129.151.64.169",
+      "server_port": 31867,
+      "uuid": "031581a4-401e-4562-92a0-d22c2fddc7b1",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "-9nhbWBjFTNIE5q0kg76hjyzCS2giPfZ-fbd8xvmRX0",
-          "short_id": "409192cee72716d7"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev"
         }
       }
     },
@@ -28,14 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇩 印尼 (Indonesia) 01 - jack"
+        "🇯🇵 日本 (Japan) 01 (家宽) - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇩 印尼 (Indonesia) 01 - jack"
+        "🇯🇵 日本 (Japan) 01 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

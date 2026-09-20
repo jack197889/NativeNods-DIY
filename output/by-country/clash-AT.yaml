@@ -23,7 +23,22 @@ proxies:
     public-key: 10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc
     short-id: 43dcff53849b81e6
   servername: at.quattro-tech.ru
+  client-fingerprint: qq
+- name: 🇦🇹 奥地利 (Austria) 03 - jack
+  server: 91.186.218.227
+  port: 4443
+  udp: true
+  type: vless
+  uuid: 60dca33b-7804-41da-b158-ecf71d95ff85
+  tls: true
+  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+  skip-cert-verify: false
   client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -31,6 +46,7 @@ proxy-groups:
   - AUTO
   - 🇦🇹 奥地利 (Austria) 01 - jack
   - 🇦🇹 奥地利 (Austria) 02 - jack
+  - 🇦🇹 奥地利 (Austria) 03 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -38,5 +54,6 @@ proxy-groups:
   proxies:
   - 🇦🇹 奥地利 (Austria) 01 - jack
   - 🇦🇹 奥地利 (Austria) 02 - jack
+  - 🇦🇹 奥地利 (Austria) 03 - jack
 rules:
 - MATCH,PROXIES

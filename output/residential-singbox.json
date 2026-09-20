@@ -14,21 +14,64 @@
     {
       "type": "shadowsocks",
       "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
-      "server": "r3mrcg001286ek2.cybervena.com",
+      "server": "36.224.185.143",
       "server_port": 50099,
       "method": "chacha20-ietf-poly1305",
       "password": "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
     },
     {
-      "type": "vmess",
+      "type": "vless",
       "tag": "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
-      "server": "dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn",
+      "server": "hinet1.2yly.com",
+      "server_port": 24215,
+      "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
+      "tls": {
+        "enabled": true,
+        "server_name": "addons.mozilla.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 04 (家宽) - jack",
+      "server": "129.151.64.169",
+      "server_port": 31867,
+      "uuid": "031581a4-401e-4562-92a0-d22c2fddc7b1",
+      "tls": {
+        "enabled": true,
+        "server_name": "bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
+      "server": "dee2309db4944c248b6d4372c6641e25.oylfmxz.cn",
       "server_port": 443,
       "uuid": "d90e4077-bc7e-414d-a650-70bf1baae4d6",
       "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn",
+        "server_name": "dee2309db4944c248b6d4372c6641e25.oylfmxz.cn",
         "insecure": false
       },
       "transport": {
@@ -37,7 +80,7 @@
     },
     {
       "type": "vmess",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack",
       "server": "dee2309db4944c248b6d4672c6641e25.oylfmxz.cn",
       "server_port": 443,
       "uuid": "d90e4077-bc7e-414d-a650-70bf1baae4d6",
@@ -48,7 +91,28 @@
         "insecure": false
       },
       "transport": {
-        "type": "ws"
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "dee2309db4944c248b6d4672c6641e25.oylfmxz.cn"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack",
+      "server": "dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn",
+      "server_port": 443,
+      "uuid": "d90e4077-bc7e-414d-a650-70bf1baae4d6",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
       }
     },
     {
@@ -59,7 +123,10 @@
         "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
         "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
         "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack"
+        "🇯🇵 日本 (Japan) 04 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack"
       ]
     },
     {
@@ -69,7 +136,10 @@
         "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
         "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
         "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack"
+        "🇯🇵 日本 (Japan) 04 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

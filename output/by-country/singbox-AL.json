@@ -6,7 +6,28 @@
     {
       "type": "vless",
       "tag": "🇦🇱 AL 01 - jack",
-      "server": "85.155.228.24",
+      "server": "194.93.61.100",
+      "server_port": 443,
+      "uuid": "41e71ba7-d389-47aa-94f7-ed1f55fdbcdf",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdnjs.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "E1te_g9q6EWQVOCgjwI4PF-cml9qqW7OEAf33tYkUxQ",
+          "short_id": "17d334ad29b2ff40"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇱 AL 02 - jack",
+      "server": "alda1.thewalkingded.life",
       "server_port": 443,
       "uuid": "4bdeee92-97e8-414d-bef6-ec1d5e2ab73b",
       "flow": "xtls-rprx-vision",
@@ -15,7 +36,7 @@
         "server_name": "alda1.thewalkingded.life",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         },
         "reality": {
           "enabled": true,
@@ -29,14 +50,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇱 AL 01 - jack"
+        "🇦🇱 AL 01 - jack",
+        "🇦🇱 AL 02 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇱 AL 01 - jack"
+        "🇦🇱 AL 01 - jack",
+        "🇦🇱 AL 02 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

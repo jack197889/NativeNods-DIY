@@ -6,9 +6,9 @@
     {
       "type": "vless",
       "tag": "🇰🇷 韩国 (South Korea) 01 - jack",
-      "server": "34.47.78.159",
+      "server": "34.64.149.137",
       "server_port": 443,
-      "uuid": "cb2abff3-5fe6-4b5a-aa19-5739deb285b6",
+      "uuid": "700a7a0e-3f27-406c-81d1-aa1abe411af8",
       "tls": {
         "enabled": true,
         "server_name": "www.cloudflare.com",
@@ -18,26 +18,58 @@
         },
         "reality": {
           "enabled": true,
-          "public_key": "M0QKczb2MzOH45qDViIAbb9LPrVVyCp880D4HlwIKnA",
-          "short_id": "8685f8b4d9f4f51e"
+          "public_key": "kqIDhDhYFrXD-1GeurwjzFwbB0zWipgWmcbADXwmyy8",
+          "short_id": "3fd0a8ddef3ae5c6"
         }
       }
     },
     {
-      "type": "hysteria2",
+      "type": "vmess",
       "tag": "🇰🇷 韩国 (South Korea) 02 - jack",
-      "server": "3.36.93.74",
+      "server": "140.238.2.250",
       "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "uuid": "41a7089a-040b-4538-8b8d-010902405bde",
+      "security": "auto"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇰🇷 韩国 (South Korea) 03 - jack",
+      "server": "132.226.226.189",
+      "server_port": 50160,
+      "password": "1671a252e2a97dc2bda4e515475931da",
       "tls": {
         "enabled": true,
-        "server_name": "vk.com",
+        "server_name": "www.bing.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇰🇷 韩国 (South Korea) 04 - jack",
+      "server": "131.186.19.174",
+      "server_port": 50160,
+      "password": "7302ad33229de166d393cd56143a1e4c",
+      "tls": {
+        "enabled": true,
+        "server_name": "speedtest.tinkoff.ru",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇰🇷 韩国 (South Korea) 05 - jack",
+      "server": "152.70.237.123",
+      "server_port": 2053,
+      "password": "maintell",
+      "tls": {
+        "enabled": true,
+        "server_name": "bing.com",
         "insecure": true
       }
     },
     {
       "type": "vless",
-      "tag": "🇰🇷 韩国 (South Korea) 03 - jack",
+      "tag": "🇰🇷 韩国 (South Korea) 06 - jack",
       "server": "3.39.4.109",
       "server_port": 18967,
       "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
@@ -57,32 +89,8 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 04 - jack",
-      "server": "132.226.226.189",
-      "server_port": 50160,
-      "password": "1671a252e2a97dc2bda4e515475931da",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 05 - jack",
-      "server": "131.186.19.174",
-      "server_port": 50160,
-      "password": "7302ad33229de166d393cd56143a1e4c",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇰🇷 韩国 (South Korea) 06 - jack",
+      "tag": "🇰🇷 韩国 (South Korea) 07 - jack",
       "server": "3.39.4.109",
       "server_port": 13672,
       "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
@@ -102,27 +110,6 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇰🇷 韩国 (South Korea) 07 - jack",
-      "server": "47.80.14.8",
-      "server_port": 443,
-      "uuid": "581cb8c3-dadb-4e10-a18b-5e79bfe7bd93",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.samsung.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "OBIHAXdhfYJ0PWsZjy3QYPRjTfMQlvjmBsTf1CT671w",
-          "short_id": "71110d3f7ef57760"
-        }
-      }
-    },
-    {
       "type": "hysteria2",
       "tag": "🇰🇷 韩国 (South Korea) 08 - jack",
       "server": "vpn-kr-002.fastervpn.world",
@@ -137,6 +124,27 @@
     {
       "type": "vless",
       "tag": "🇰🇷 韩国 (South Korea) 09 - jack",
+      "server": "47.80.14.8",
+      "server_port": 443,
+      "uuid": "581cb8c3-dadb-4e10-a18b-5e79bfe7bd93",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.samsung.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "OBIHAXdhfYJ0PWsZjy3QYPRjTfMQlvjmBsTf1CT671w",
+          "short_id": "71110d3f7ef57760"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 韩国 (South Korea) 10 - jack",
       "server": "151.245.106.49",
       "server_port": 2053,
       "uuid": "a2de9567-9646-45a9-a410-7303a43bdb6c",
@@ -155,70 +163,88 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 10 - jack",
-      "server": "152.67.200.82",
-      "server_port": 50160,
-      "password": "3d7634af8cb2c6cb4bac1c0efad8b43d",
-      "tls": {
-        "enabled": true,
-        "server_name": "152.67.200.82",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 11 - jack",
-      "server": "152.70.237.123",
-      "server_port": 2053,
-      "password": "maintell",
-      "tls": {
-        "enabled": true,
-        "server_name": "bing.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇰🇷 韩国 (South Korea) 12 - jack",
-      "server": "34.64.149.137",
-      "server_port": 443,
-      "uuid": "700a7a0e-3f27-406c-81d1-aa1abe411af8",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "kqIDhDhYFrXD-1GeurwjzFwbB0zWipgWmcbADXwmyy8",
-          "short_id": "3fd0a8ddef3ae5c6"
-        }
-      }
-    },
-    {
       "type": "trojan",
-      "tag": "🇰🇷 韩国 (South Korea) 13 - jack",
+      "tag": "🇰🇷 韩国 (South Korea) 11 - jack",
       "server": "154.90.62.70",
       "server_port": 56127,
       "password": "p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B",
       "tls": {
         "enabled": true,
         "server_name": "154.90.62.70",
-        "insecure": true
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
       "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 14 - jack",
+      "tag": "🇰🇷 韩国 (South Korea) 12 - jack",
       "server": "152-69-231-175.liao.kdns.fr",
       "server_port": 50160,
       "password": "1beb216e3f60aea9555dae60d219a5ca",
       "tls": {
         "enabled": true,
         "server_name": "152-69-231-175.liao.kdns.fr",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 韩国 (South Korea) 13 - jack",
+      "server": "104.18.32.252",
+      "server_port": 443,
+      "uuid": "f5851a6e-72da-4e4e-99b2-c79629149503",
+      "tls": {
+        "enabled": true,
+        "server_name": "d24e02c6.69lover.site",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/api/v2/e916944b060a3543/stream",
+        "headers": {
+          "Host": "d24e02c6.69lover.site"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇰🇷 韩国 (South Korea) 14 - jack",
+      "server": "3.36.93.74",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "t.me",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇰🇷 韩国 (South Korea) 15 - jack",
+      "server": "146.56.112.110",
+      "server_port": 8888,
+      "uuid": "e7c302f3-90d6-42dd-9d7d-94a3683a3707",
+      "security": "auto"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇰🇷 韩国 (South Korea) 16 - jack",
+      "server": "152.67.200.82",
+      "server_port": 50160,
+      "password": "3d7634af8cb2c6cb4bac1c0efad8b43d",
+      "tls": {
+        "enabled": true,
+        "server_name": "152-67-200-82.liao.kdns.fr",
         "insecure": false
       }
     },
@@ -240,7 +266,9 @@
         "🇰🇷 韩国 (South Korea) 11 - jack",
         "🇰🇷 韩国 (South Korea) 12 - jack",
         "🇰🇷 韩国 (South Korea) 13 - jack",
-        "🇰🇷 韩国 (South Korea) 14 - jack"
+        "🇰🇷 韩国 (South Korea) 14 - jack",
+        "🇰🇷 韩国 (South Korea) 15 - jack",
+        "🇰🇷 韩国 (South Korea) 16 - jack"
       ]
     },
     {
@@ -260,7 +288,9 @@
         "🇰🇷 韩国 (South Korea) 11 - jack",
         "🇰🇷 韩国 (South Korea) 12 - jack",
         "🇰🇷 韩国 (South Korea) 13 - jack",
-        "🇰🇷 韩国 (South Korea) 14 - jack"
+        "🇰🇷 韩国 (South Korea) 14 - jack",
+        "🇰🇷 韩国 (South Korea) 15 - jack",
+        "🇰🇷 韩国 (South Korea) 16 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
