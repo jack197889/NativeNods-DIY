@@ -5,15 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇭 泰国 (Thailand) 01 - jack
-  server: v2ray.simspeedup.com
-  port: 80
-  udp: true
-  type: vless
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-  network: ws
-  ws-opts:
-    path: /ws
-- name: 🇹🇭 泰国 (Thailand) 02 - jack
   server: 34.15.162.1
   port: 443
   udp: true
@@ -24,49 +15,18 @@ proxies:
     public-key: LklWoqMQz_TWiuLCUNRwHAKX1adVRSGMhtbo98fbDxw
     short-id: ca672c53fbbac555
   servername: www.cloudflare.com
-  client-fingerprint: ios
-- name: 🇹🇭 泰国 (Thailand) 03 - jack
-  server: 104.19.32.166
-  port: 443
-  udp: true
-  type: vless
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-  tls: true
-  servername: v2ray.simspeedup.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: v2ray.simspeedup.com
-- name: 🇹🇭 泰国 (Thailand) 04 - jack
-  server: 118.193.57.167
-  port: 49667
-  udp: true
-  type: vmess
-  uuid: d46bf492-45f4-4c33-82d1-ea2a1cb54eb6
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /d46bf492
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇭 泰国 (Thailand) 01 - jack
-  - 🇹🇭 泰国 (Thailand) 02 - jack
-  - 🇹🇭 泰国 (Thailand) 03 - jack
-  - 🇹🇭 泰国 (Thailand) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇭 泰国 (Thailand) 01 - jack
-  - 🇹🇭 泰国 (Thailand) 02 - jack
-  - 🇹🇭 泰国 (Thailand) 03 - jack
-  - 🇹🇭 泰国 (Thailand) 04 - jack
 rules:
 - MATCH,PROXIES

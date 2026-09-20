@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - jack
-  server: 143.246.194.60
+  server: 143.246.195.98
   port: 8081
   udp: true
   type: vless
@@ -14,57 +14,7 @@ proxies:
   ws-opts:
     path: /vless-test
 - name: 🇸🇪 瑞典 (Sweden) 02 - jack
-  server: 185.231.103.20
-  port: 443
-  udp: true
-  type: vless
-  uuid: 89104901-966e-4c7e-8e83-99d8712c5417
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: dAywk2CpVoA14GcQBWxgkamea0yaLkF6jUmy4--vHAU
-    short-id: fd
-  servername: se.convexia.net
-  client-fingerprint: chrome
-- name: 🇸🇪 瑞典 (Sweden) 03 - jack
-  server: 193.42.39.10
-  port: 33743
-  udp: true
-  type: vless
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-  tls: true
-  reality-opts:
-    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
-  servername: www.google.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TunService
-- name: 🇸🇪 瑞典 (Sweden) 04 - jack
-  server: se-node.rumedia-cdn.com
-  port: 25443
-  udp: true
-  type: hysteria2
-  password: 29ffde49-e1d6-4dcd-a135-352920f9f0b8
-  sni: cf2.rumedia-cdn.com
-  skip-cert-verify: false
-- name: 🇸🇪 瑞典 (Sweden) 05 - jack
-  server: 84.32.217.120
-  port: 8443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /channels/act
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇸🇪 瑞典 (Sweden) 06 - jack
-  server: svvedko.nxxzxaw.beer
+  server: 5.157.10.147
   port: 443
   udp: true
   type: vless
@@ -75,18 +25,10 @@ proxies:
     public-key: x6p656szvu_3CKLsJ4NtkooRvdTVGx7IoPca_p58_jA
     short-id: fb442438e2223836
   servername: svvedko.nxxzxaw.beer
-  client-fingerprint: ios
-- name: 🇸🇪 瑞典 (Sweden) 07 - jack
-  server: svip.skycon808.com
-  port: 60005
-  udp: true
-  type: anytls
-  password: 13f0acfa-38c1-4e82-a758-583aa31740df
-  sni: xjp18.2uuzhe.com
-  skip-cert-verify: true
-- name: 🇸🇪 瑞典 (Sweden) 08 - jack
-  server: 91.193.17.156
-  port: 9458
+  client-fingerprint: random
+- name: 🇸🇪 瑞典 (Sweden) 03 - jack
+  server: 193.42.39.10
+  port: 33743
   udp: true
   type: vless
   uuid: b3a11068-1a7e-4643-85de-7c82cce46943
@@ -94,7 +36,7 @@ proxies:
   reality-opts:
     public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
   servername: www.google.com
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: TunService
@@ -106,11 +48,6 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 01 - jack
   - 🇸🇪 瑞典 (Sweden) 02 - jack
   - 🇸🇪 瑞典 (Sweden) 03 - jack
-  - 🇸🇪 瑞典 (Sweden) 04 - jack
-  - 🇸🇪 瑞典 (Sweden) 05 - jack
-  - 🇸🇪 瑞典 (Sweden) 06 - jack
-  - 🇸🇪 瑞典 (Sweden) 07 - jack
-  - 🇸🇪 瑞典 (Sweden) 08 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -119,10 +56,5 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 01 - jack
   - 🇸🇪 瑞典 (Sweden) 02 - jack
   - 🇸🇪 瑞典 (Sweden) 03 - jack
-  - 🇸🇪 瑞典 (Sweden) 04 - jack
-  - 🇸🇪 瑞典 (Sweden) 05 - jack
-  - 🇸🇪 瑞典 (Sweden) 06 - jack
-  - 🇸🇪 瑞典 (Sweden) 07 - jack
-  - 🇸🇪 瑞典 (Sweden) 08 - jack
 rules:
 - MATCH,PROXIES

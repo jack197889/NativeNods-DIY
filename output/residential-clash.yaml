@@ -4,21 +4,32 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack
-  server: 36.224.185.173
-  port: 50099
+- name: 🇺🇸 美国 (United States) 01 (家宽) - jack
+  server: 172.64.229.2
+  port: 8080
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
-  server: 36.224.185.143
+  server: r3mrcg00129437x.cybervena.com
   port: 50099
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
 - name: 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
+  server: r3mrcg001286ek2.cybervena.com
+  port: 50099
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
   server: hinet1.2yly.com
   port: 24215
   udp: true
@@ -29,21 +40,6 @@ proxies:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
   servername: addons.mozilla.org
   client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 04 (家宽) - jack
-  server: 129.151.64.169
-  port: 31867
-  udp: true
-  type: vless
-  uuid: 031581a4-401e-4562-92a0-d22c2fddc7b1
-  tls: true
-  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
 - name: 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack
   server: dee2309db4944c248b6d4372c6641e25.oylfmxz.cn
   port: 443
@@ -59,7 +55,7 @@ proxies:
   ws-opts:
     path: /
 - name: 🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack
-  server: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
+  server: dee2309db4se3g5sds35g4s3dg.oylfmxz.cn
   port: 443
   udp: true
   type: vmess
@@ -67,36 +63,30 @@ proxies:
   alterId: 0
   cipher: auto
   tls: true
-  servername: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
+  servername: dee2309db4se3g5sds35g4s3dg.oylfmxz.cn
   skip-cert-verify: false
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
+      Host: dee2309db4se3g5sds35g4s3dg.oylfmxz.cn
 - name: 🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack
-  server: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
+  server: 6ivh.pnuqcnp.cn
   port: 443
   udp: true
-  type: vmess
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
+  type: anytls
+  password: 9sK2mP8xQ7vL3nZ6
+  sni: images.ctfassets.net
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack
+  - 🇺🇸 美国 (United States) 01 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
-  - 🇯🇵 日本 (Japan) 04 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack
@@ -105,10 +95,10 @@ proxy-groups:
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack
+  - 🇺🇸 美国 (United States) 01 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
-  - 🇯🇵 日本 (Japan) 04 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack

@@ -5,24 +5,25 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇺 澳大利亚 (Australia) 01 - jack
-  server: 188.114.97.6
-  port: 80
-  udp: true
-  type: vless
-  uuid: e51453d3-7972-44d7-a657-ed89520f48b6
-  network: ws
-  ws-opts:
-    path: /au-do
-    headers:
-      Host: web.whatsapp.com.r3xxe.eu.cc
-- name: 🇦🇺 澳大利亚 (Australia) 02 - jack
-  server: 82.198.246.233
+  server: 82.198.246.97
   port: 180
   udp: true
   type: vmess
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   alterId: 0
   cipher: auto
+- name: 🇦🇺 澳大利亚 (Australia) 02 - jack
+  server: 34.87.244.111
+  port: 443
+  udp: true
+  type: vless
+  uuid: 325bc1be-0cb7-4cf7-bd35-a79ded91bbbd
+  tls: true
+  reality-opts:
+    public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
+    short-id: d725f0dd8cce210f
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 - name: 🇦🇺 澳大利亚 (Australia) 03 - jack
   server: 51.161.204.244
   port: 443
@@ -37,14 +38,19 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: firefox
 - name: 🇦🇺 澳大利亚 (Australia) 04 - jack
-  server: 103.75.119.126
-  port: 2087
+  server: 152.67.101.72
+  port: 23010
   udp: true
   type: vless
-  uuid: 731f177e-00aa-480c-b935-661456139a32
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /7586c69d3dc9
+    path: /
+    headers:
+      Host: cdn8848.776676.xyz
 - name: 🇦🇺 澳大利亚 (Australia) 05 - jack
   server: 34.87.229.148
   port: 443
@@ -57,18 +63,6 @@ proxies:
     short-id: 8a7d5e0248cdb1b1
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇦🇺 澳大利亚 (Australia) 06 - jack
-  server: 34.87.244.111
-  port: 443
-  udp: true
-  type: vless
-  uuid: 325bc1be-0cb7-4cf7-bd35-a79ded91bbbd
-  tls: true
-  reality-opts:
-    public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
-    short-id: d725f0dd8cce210f
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -79,7 +73,6 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 03 - jack
   - 🇦🇺 澳大利亚 (Australia) 04 - jack
   - 🇦🇺 澳大利亚 (Australia) 05 - jack
-  - 🇦🇺 澳大利亚 (Australia) 06 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -90,6 +83,5 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 03 - jack
   - 🇦🇺 澳大利亚 (Australia) 04 - jack
   - 🇦🇺 澳大利亚 (Australia) 05 - jack
-  - 🇦🇺 澳大利亚 (Australia) 06 - jack
 rules:
 - MATCH,PROXIES

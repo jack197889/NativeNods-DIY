@@ -6,7 +6,7 @@
     {
       "type": "vless",
       "tag": "🇸🇪 瑞典 (Sweden) 01 - jack",
-      "server": "143.246.194.60",
+      "server": "143.246.195.98",
       "server_port": 8081,
       "uuid": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
       "transport": {
@@ -17,21 +17,21 @@
     {
       "type": "vless",
       "tag": "🇸🇪 瑞典 (Sweden) 02 - jack",
-      "server": "185.231.103.20",
+      "server": "5.157.10.147",
       "server_port": 443,
-      "uuid": "89104901-966e-4c7e-8e83-99d8712c5417",
+      "uuid": "4bdeee92-97e8-414d-bef6-ec1d5e2ab73b",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "se.convexia.net",
+        "server_name": "svvedko.nxxzxaw.beer",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
-          "public_key": "dAywk2CpVoA14GcQBWxgkamea0yaLkF6jUmy4--vHAU",
-          "short_id": "fd"
+          "public_key": "x6p656szvu_3CKLsJ4NtkooRvdTVGx7IoPca_p58_jA",
+          "short_id": "fb442438e2223836"
         }
       }
     },
@@ -46,99 +46,7 @@
         "server_name": "www.google.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY",
-          "short_id": ""
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "TunService"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇸🇪 瑞典 (Sweden) 04 - jack",
-      "server": "se-node.rumedia-cdn.com",
-      "server_port": 25443,
-      "password": "29ffde49-e1d6-4dcd-a135-352920f9f0b8",
-      "tls": {
-        "enabled": true,
-        "server_name": "cf2.rumedia-cdn.com",
-        "insecure": false
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 05 - jack",
-      "server": "84.32.217.120",
-      "server_port": 8443,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn8848.776676.xyz",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/channels/act",
-        "headers": {
-          "Host": "cdn8848.776676.xyz"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 06 - jack",
-      "server": "svvedko.nxxzxaw.beer",
-      "server_port": 443,
-      "uuid": "4bdeee92-97e8-414d-bef6-ec1d5e2ab73b",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "svvedko.nxxzxaw.beer",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "x6p656szvu_3CKLsJ4NtkooRvdTVGx7IoPca_p58_jA",
-          "short_id": "fb442438e2223836"
-        }
-      }
-    },
-    {
-      "type": "anytls",
-      "tag": "🇸🇪 瑞典 (Sweden) 07 - jack",
-      "server": "svip.skycon808.com",
-      "server_port": 60005,
-      "password": "13f0acfa-38c1-4e82-a758-583aa31740df",
-      "tls": {
-        "enabled": true,
-        "server_name": "xjp18.2uuzhe.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 08 - jack",
-      "server": "91.193.17.156",
-      "server_port": 9458,
-      "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.google.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -158,12 +66,7 @@
         "auto",
         "🇸🇪 瑞典 (Sweden) 01 - jack",
         "🇸🇪 瑞典 (Sweden) 02 - jack",
-        "🇸🇪 瑞典 (Sweden) 03 - jack",
-        "🇸🇪 瑞典 (Sweden) 04 - jack",
-        "🇸🇪 瑞典 (Sweden) 05 - jack",
-        "🇸🇪 瑞典 (Sweden) 06 - jack",
-        "🇸🇪 瑞典 (Sweden) 07 - jack",
-        "🇸🇪 瑞典 (Sweden) 08 - jack"
+        "🇸🇪 瑞典 (Sweden) 03 - jack"
       ]
     },
     {
@@ -172,12 +75,7 @@
       "outbounds": [
         "🇸🇪 瑞典 (Sweden) 01 - jack",
         "🇸🇪 瑞典 (Sweden) 02 - jack",
-        "🇸🇪 瑞典 (Sweden) 03 - jack",
-        "🇸🇪 瑞典 (Sweden) 04 - jack",
-        "🇸🇪 瑞典 (Sweden) 05 - jack",
-        "🇸🇪 瑞典 (Sweden) 06 - jack",
-        "🇸🇪 瑞典 (Sweden) 07 - jack",
-        "🇸🇪 瑞典 (Sweden) 08 - jack"
+        "🇸🇪 瑞典 (Sweden) 03 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

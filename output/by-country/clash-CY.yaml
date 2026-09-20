@@ -5,18 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇾 塞浦路斯 (Cyprus) 01 - jack
-  server: 194.59.245.250
-  port: 40443
-  udp: true
-  type: vless
-  uuid: e4371581-c418-4770-b09a-d630f18290a6
-  tls: true
-  reality-opts:
-    public-key: WFvn-RRJzpt2qV4xwj_R93gDr6dduIjkQKO3De3Y2Hc
-    short-id: 5d96
-  servername: deepl.com
-  client-fingerprint: chrome
-- name: 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
   server: 194.76.154.31
   port: 40443
   udp: true
@@ -27,23 +15,8 @@ proxies:
     public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
     short-id: a8ae
   servername: deepl.com
-  client-fingerprint: qq
-- name: 🇨🇾 塞浦路斯 (Cyprus) 03 - jack
-  server: 5.253.28.218
-  port: 2443
-  udp: true
-  type: vless
-  uuid: 5e679ccd-1586-4d5f-b87b-48251046cad8
-  tls: true
-  reality-opts:
-    public-key: h85e28MxBgNyT9d9cNeOLVtWfHq6cT_1_oxZOTajtTg
-    short-id: 92c32de179e5d908
-  servername: deepl.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: rex-eb0bf76b710ce763
-- name: 🇨🇾 塞浦路斯 (Cyprus) 04 - jack
+  client-fingerprint: chrome
+- name: 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
   server: 2.56.124.241
   port: 443
   udp: true
@@ -56,20 +29,7 @@ proxies:
     short-id: 72104d27a0f5f62e
   servername: www.amazon.com
   client-fingerprint: chrome
-- name: 🇨🇾 塞浦路斯 (Cyprus) 05 - jack
-  server: 5.253.28.242
-  port: 40443
-  udp: true
-  type: vless
-  uuid: af5eac96-e478-488a-bc8c-45269d7e8847
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
-    short-id: 68a8
-  servername: deepl.com
-  client-fingerprint: chrome
-- name: 🇨🇾 塞浦路斯 (Cyprus) 06 - jack
+- name: 🇨🇾 塞浦路斯 (Cyprus) 03 - jack
   server: 5.253.28.218
   port: 40443
   udp: true
@@ -82,6 +42,18 @@ proxies:
     short-id: 88b6
   servername: deepl.com
   client-fingerprint: firefox
+- name: 🇨🇾 塞浦路斯 (Cyprus) 04 - jack
+  server: 194.59.245.250
+  port: 40443
+  udp: true
+  type: vless
+  uuid: e4371581-c418-4770-b09a-d630f18290a6
+  tls: true
+  reality-opts:
+    public-key: WFvn-RRJzpt2qV4xwj_R93gDr6dduIjkQKO3De3Y2Hc
+    short-id: 5d96
+  servername: deepl.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -91,8 +63,6 @@ proxy-groups:
   - 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
   - 🇨🇾 塞浦路斯 (Cyprus) 03 - jack
   - 🇨🇾 塞浦路斯 (Cyprus) 04 - jack
-  - 🇨🇾 塞浦路斯 (Cyprus) 05 - jack
-  - 🇨🇾 塞浦路斯 (Cyprus) 06 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -102,7 +72,5 @@ proxy-groups:
   - 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
   - 🇨🇾 塞浦路斯 (Cyprus) 03 - jack
   - 🇨🇾 塞浦路斯 (Cyprus) 04 - jack
-  - 🇨🇾 塞浦路斯 (Cyprus) 05 - jack
-  - 🇨🇾 塞浦路斯 (Cyprus) 06 - jack
 rules:
 - MATCH,PROXIES
