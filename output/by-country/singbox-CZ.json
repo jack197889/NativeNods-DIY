@@ -4,11 +4,37 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "trojan",
       "tag": "🇨🇿 捷克 (Czech) 01 - jack",
-      "server": "153.76.185.144",
+      "server": "188.114.96.8",
+      "server_port": 443,
+      "password": "Telegram_healer_config",
+      "tls": {
+        "enabled": true,
+        "server_name": "y9p34JPJmQJazaYpf.pIIwDDIlxJcQEHr17af22U7XK-yu.workeRS.Dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/1nWXnOaq1ajP7PKxbRS7Sdck48oy?ed=2560",
+        "headers": {
+          "Host": "y9p34jpjmqjazaypf.piiwddilxjcqehr17af22u7xk-yu.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 02 - jack",
+      "server": "153.76.185.189",
       "server_port": 3090,
-      "uuid": "a9a813b7-13ea-45f4-b8de-922b9bdd2db2",
+      "uuid": "5ebdc9ee-8b41-4487-93af-231cb0b47d60",
       "transport": {
         "type": "grpc",
         "service_name": "vless"
@@ -16,7 +42,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇿 捷克 (Czech) 02 - jack",
+      "tag": "🇨🇿 捷克 (Czech) 03 - jack",
       "server": "95.85.230.35",
       "server_port": 443,
       "uuid": "bbfd1f68-ec64-452f-8404-9e2bcf1df951",
@@ -26,7 +52,7 @@
         "server_name": "de.oblaco.bet",
         "utls": {
           "enabled": true,
-          "fingerprint": ""
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -36,12 +62,33 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 04 - jack",
+      "server": "132.243.203.207",
+      "server_port": 8443,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn8848.776676.xyz",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/lives",
+        "headers": {
+          "Host": "cdn8848.776676.xyz"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇨🇿 捷克 (Czech) 01 - jack",
-        "🇨🇿 捷克 (Czech) 02 - jack"
+        "🇨🇿 捷克 (Czech) 02 - jack",
+        "🇨🇿 捷克 (Czech) 03 - jack",
+        "🇨🇿 捷克 (Czech) 04 - jack"
       ]
     },
     {
@@ -49,7 +96,9 @@
       "tag": "auto",
       "outbounds": [
         "🇨🇿 捷克 (Czech) 01 - jack",
-        "🇨🇿 捷克 (Czech) 02 - jack"
+        "🇨🇿 捷克 (Czech) 02 - jack",
+        "🇨🇿 捷克 (Czech) 03 - jack",
+        "🇨🇿 捷克 (Czech) 04 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

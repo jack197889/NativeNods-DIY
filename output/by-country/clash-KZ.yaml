@@ -5,28 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - jack
-  server: 104.18.47.113
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - jack
-  server: 162.159.48.32
-  port: 80
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 03 - jack
   server: 38.107.234.57
   port: 80
   udp: true
@@ -39,18 +17,19 @@ proxies:
     path: /vmess/
     headers:
       Host: 38.107.234.57
-- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 04 - jack
-  server: 151.101.1.194
-  port: 80
+- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - jack
+  server: 83.222.23.81
+  port: 38065
   udp: true
   type: vless
-  uuid: 2bff0b26-c183-4240-8556-5b3f80bf69a2
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: simorghfr.global.ssl.fastly.net
-- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 05 - jack
+  uuid: 4b9063e0-3288-44e9-9aac-80fbfce323a0
+  tls: true
+  reality-opts:
+    public-key: dSSDPTK6AHfAdRAXD9i4rzqcNIY65RxlF25UyCKdiyo
+    short-id: fa
+  servername: yahoo.com
+  client-fingerprint: chrome
+- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 03 - jack
   server: 109.248.170.119
   port: 13447
   udp: true
@@ -62,6 +41,18 @@ proxies:
     short-id: '83'
   servername: yahoo.com
   client-fingerprint: chrome
+- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 04 - jack
+  server: 178.236.16.98
+  port: 35728
+  udp: true
+  type: vless
+  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
+  tls: true
+  reality-opts:
+    public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
+    short-id: 69a2
+  servername: yahoo.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -71,7 +62,6 @@ proxy-groups:
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - jack
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 03 - jack
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 04 - jack
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 05 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -81,6 +71,5 @@ proxy-groups:
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - jack
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 03 - jack
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 04 - jack
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 05 - jack
 rules:
 - MATCH,PROXIES

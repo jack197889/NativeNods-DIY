@@ -6,8 +6,8 @@
     {
       "type": "vless",
       "tag": "🇸🇨 塞舌尔 (Seychelles) 01 - jack",
-      "server": "89.110.66.154",
-      "server_port": 443,
+      "server": "164.92.147.213",
+      "server_port": 2087,
       "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
       "tls": {
         "enabled": true,
@@ -16,6 +16,7 @@
       },
       "transport": {
         "type": "ws",
+        "path": "/city/my",
         "headers": {
           "Host": "cdn8848.776676.xyz"
         }
@@ -24,7 +25,7 @@
     {
       "type": "vless",
       "tag": "🇸🇨 塞舌尔 (Seychelles) 02 - jack",
-      "server": "130.17.27.204",
+      "server": "144.31.200.207",
       "server_port": 443,
       "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
       "tls": {
@@ -34,7 +35,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/player/shop?ed=2560fp=chrome",
+        "path": "/code/directory/ads?ed=2560fp=chrome",
         "headers": {
           "Host": "cdn8848.776676.xyz"
         }
@@ -43,32 +44,7 @@
     {
       "type": "vless",
       "tag": "🇸🇨 塞舌尔 (Seychelles) 03 - jack",
-      "server": "2.27.244.164",
-      "server_port": 8443,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn8848.776676.xyz",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/channels/act",
-        "headers": {
-          "Host": "cdn8848.776676.xyz"
-        },
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇨 塞舌尔 (Seychelles) 04 - jack",
-      "server": "hk3n.wxgqlfx.vip",
+      "server": "156.226.168.221",
       "server_port": 35193,
       "uuid": "35cbae61-ee10-4cb9-abb8-4950b35e9851",
       "flow": "xtls-rprx-vision",
@@ -77,7 +53,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         },
         "reality": {
           "enabled": true,
@@ -93,8 +69,7 @@
         "auto",
         "🇸🇨 塞舌尔 (Seychelles) 01 - jack",
         "🇸🇨 塞舌尔 (Seychelles) 02 - jack",
-        "🇸🇨 塞舌尔 (Seychelles) 03 - jack",
-        "🇸🇨 塞舌尔 (Seychelles) 04 - jack"
+        "🇸🇨 塞舌尔 (Seychelles) 03 - jack"
       ]
     },
     {
@@ -103,8 +78,7 @@
       "outbounds": [
         "🇸🇨 塞舌尔 (Seychelles) 01 - jack",
         "🇸🇨 塞舌尔 (Seychelles) 02 - jack",
-        "🇸🇨 塞舌尔 (Seychelles) 03 - jack",
-        "🇸🇨 塞舌尔 (Seychelles) 04 - jack"
+        "🇸🇨 塞舌尔 (Seychelles) 03 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

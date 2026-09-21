@@ -6,8 +6,8 @@
     {
       "type": "vless",
       "tag": "🇺🇸 美国 (United States) 01 (家宽) - jack",
-      "server": "172.64.229.2",
-      "server_port": 8080,
+      "server": "172.64.53.55",
+      "server_port": 2095,
       "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
@@ -18,25 +18,116 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
-      "server": "r3mrcg00129437x.cybervena.com",
-      "server_port": 50099,
-      "method": "chacha20-ietf-poly1305",
-      "password": "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
-      "server": "r3mrcg001286ek2.cybervena.com",
-      "server_port": 50099,
-      "method": "chacha20-ietf-poly1305",
-      "password": "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 02 (家宽) - jack",
+      "server": "185.125.103.62",
+      "server_port": 8082,
+      "uuid": "3dbf58d7-53fc-4fad-8779-1c867e024fd0",
+      "tls": {
+        "enabled": true,
+        "server_name": "wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev"
+        }
+      }
     },
     {
       "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
-      "server": "hinet1.2yly.com",
+      "tag": "🇩🇪 德国 (Germany) 03 (家宽) - jack",
+      "server": "129.151.64.169",
+      "server_port": 31867,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn8848.776676.xyz",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/files",
+        "headers": {
+          "Host": "cdn8848.776676.xyz"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 04 (家宽) - jack",
+      "server": "xgnhxwnqjcqscqqn.cfooov.xyz",
+      "server_port": 47554,
+      "uuid": "17ab31f7-c021-4aec-83b2-ab48de8886bd",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "nbIa7R7_-I8T24U2C1Q3-wuiQVUmAahxdSo33AjKYiA",
+          "short_id": "63bdbd0662a3da"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 05 (家宽) - jack",
+      "server": "xgwhcrqwlhfaqqn.cfooov.xyz",
+      "server_port": 48712,
+      "uuid": "17ab31f7-c021-4aec-83b2-ab48de8886bd",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.lamer.com.hk",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "gNL3X6L6kuclvSmA0qXWHKZCIFW1wGYr4AF0YN6uKkg",
+          "short_id": "28e1ea46d658"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 06 (家宽) - jack",
+      "server": "wzxydnnzmsycrqwxnh.jiedddym.com",
+      "server_port": 38819,
+      "uuid": "17ab31f7-c021-4aec-83b2-ab48de8886bd",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "7s-ve59v99UPmZT4MOth5PloFy3ytSU4uuh6Oa7lPkU",
+          "short_id": "85eced9b6394"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack",
+      "server": "118.167.246.43",
       "server_port": 24215,
       "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
       "tls": {
@@ -44,7 +135,7 @@
         "server_name": "addons.mozilla.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -54,8 +145,62 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇰🇷 韩国 (South Korea) 08 (家宽) - jack",
+      "server": "jpzzqqnzdbgwhbhzsrgh.cfooov.xyz",
+      "server_port": 48179,
+      "uuid": "17ab31f7-c021-4aec-83b2-ab48de8886bd",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "addons.mozilla.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "PhXLfJ4s8EPauWaeRpzAjSuZibhmMiZFEMr8h8qU6iI",
+          "short_id": "d1f38c0f15ed22"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 09 (家宽) - jack",
+      "server": "clhkzzzdbgwxxndnlm.cfooov.xyz",
+      "server_port": 41341,
+      "uuid": "17ab31f7-c021-4aec-83b2-ab48de8886bd",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "HGk0MQ7l4mWgJo1-7PctGx5pf88HECBpLRUtBSemkzY",
+          "short_id": "b93f2026953855c5"
+        }
+      }
+    },
+    {
+      "type": "anytls",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 10 (家宽) - jack",
+      "server": "ac7548f3ebe045b39a90288ff1e97528.pnuqcnp.cn",
+      "server_port": 443,
+      "password": "9sK2mP8xQ7vL3nZ6",
+      "tls": {
+        "enabled": true,
+        "server_name": "ac7548f3ebe045b39a90288ff1e97528.lwdnxf.cn",
+        "insecure": true
+      }
+    },
+    {
       "type": "vmess",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 11 (家宽) - jack",
       "server": "dee2309db4944c248b6d4372c6641e25.oylfmxz.cn",
       "server_port": 443,
       "uuid": "d90e4077-bc7e-414d-a650-70bf1baae4d6",
@@ -66,12 +211,16 @@
         "insecure": false
       },
       "transport": {
-        "type": "ws"
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "dee2309db4944c248b6d4372c6641e25.oylfmxz.cn"
+        }
       }
     },
     {
       "type": "vmess",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 12 (家宽) - jack",
       "server": "dee2309db4se3g5sds35g4s3dg.oylfmxz.cn",
       "server_port": 443,
       "uuid": "d90e4077-bc7e-414d-a650-70bf1baae4d6",
@@ -90,29 +239,22 @@
       }
     },
     {
-      "type": "anytls",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack",
-      "server": "6ivh.pnuqcnp.cn",
-      "server_port": 443,
-      "password": "9sK2mP8xQ7vL3nZ6",
-      "tls": {
-        "enabled": true,
-        "server_name": "images.ctfassets.net",
-        "insecure": true
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇺🇸 美国 (United States) 01 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack"
+        "🇯🇵 日本 (Japan) 02 (家宽) - jack",
+        "🇩🇪 德国 (Germany) 03 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 04 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 05 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 06 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack",
+        "🇰🇷 韩国 (South Korea) 08 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 09 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 10 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 11 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 12 (家宽) - jack"
       ]
     },
     {
@@ -120,12 +262,17 @@
       "tag": "auto",
       "outbounds": [
         "🇺🇸 美国 (United States) 01 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack"
+        "🇯🇵 日本 (Japan) 02 (家宽) - jack",
+        "🇩🇪 德国 (Germany) 03 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 04 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 05 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 06 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack",
+        "🇰🇷 韩国 (South Korea) 08 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 09 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 10 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 11 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 12 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

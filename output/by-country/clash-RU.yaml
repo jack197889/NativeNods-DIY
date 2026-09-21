@@ -5,22 +5,92 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - jack
-  server: 91.196.32.163
+  server: 162.159.38.127
+  port: 2095
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇷🇺 俄罗斯 (Russia) 02 - jack
+  server: soskeynets-project-4c7950.ez-dc9bbb.workers.dev
   port: 443
   udp: true
-  type: hysteria2
-  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
-  sni: germany3.h2corp.local
-  skip-cert-verify: true
-- name: 🇷🇺 俄罗斯 (Russia) 02 - jack
+  type: vless
+  uuid: 96e341a7-3077-4613-b482-41bd9c90cc4d
+  tls: true
+  servername: eZaCCesS-proJEcT-4C7950.Ez-dC9bBB.WorKErs.dEV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiN2w4dDlRNVV5NkZ5NU1aeSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: ezaccess-project-4c7950.ez-dc9bbb.workers.dev
+- name: 🇷🇺 俄罗斯 (Russia) 03 - jack
+  server: 162.159.0.169
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: '/?ed=2560security=tls '
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇷🇺 俄罗斯 (Russia) 04 - jack
+  server: 188.114.97.6
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 813cd228-ebf6-0e21-481a-ba4af8f85b82
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: odd-disk-98c5.assassincreed4048.workers.dev
+- name: 🇷🇺 俄罗斯 (Russia) 05 - jack
+  server: 94.249.187.46
+  port: 2086
+  udp: true
+  type: vmess
+  uuid: f6361af8-bb8f-4609-bf5d-3fc0f688f47b
+  alterId: 0
+  cipher: auto
+- name: 🇷🇺 俄罗斯 (Russia) 06 - jack
+  server: 62.113.41.228
+  port: 2055
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 7nzDcoQQxUYU35N5ngbSAg
+- name: 🇷🇺 俄罗斯 (Russia) 07 - jack
+  server: 172.64.80.1
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4ce7cb8a-f9b1-4bfa-a80d-9e168c61a633
+  tls: true
+  servername: curly-night-6928.ggdhchjk.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: curly-night-6928.ggdhchjk.workers.dev
+- name: 🇷🇺 俄罗斯 (Russia) 08 - jack
   server: 91.240.86.70
   port: 22443
   udp: true
   type: hysteria2
   password: 3f63c86c-ac4a-4900-85cf-4fedf93c2ca5
-  sni: itsallproxy.quattro-tech.ru
-  skip-cert-verify: false
-- name: 🇷🇺 俄罗斯 (Russia) 03 - jack
+  sni: hy.quattro-tech.ru
+  skip-cert-verify: true
+- name: 🇷🇺 俄罗斯 (Russia) 09 - jack
   server: msk.frkn.org
   port: 443
   udp: true
@@ -28,19 +98,7 @@ proxies:
   password: f317b5d6-d399-4d3d-a051-89d674ae953c
   sni: msk.frkn.org
   skip-cert-verify: false
-- name: 🇷🇺 俄罗斯 (Russia) 04 - jack
-  server: 45.12.75.242
-  port: 26424
-  udp: true
-  type: vless
-  uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
-  tls: true
-  reality-opts:
-    public-key: l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0
-    short-id: 23103e1e
-  servername: ya.ru
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 05 - jack
+- name: 🇷🇺 俄罗斯 (Russia) 10 - jack
   server: 46.8.200.91
   port: 443
   udp: true
@@ -64,6 +122,11 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03 - jack
   - 🇷🇺 俄罗斯 (Russia) 04 - jack
   - 🇷🇺 俄罗斯 (Russia) 05 - jack
+  - 🇷🇺 俄罗斯 (Russia) 06 - jack
+  - 🇷🇺 俄罗斯 (Russia) 07 - jack
+  - 🇷🇺 俄罗斯 (Russia) 08 - jack
+  - 🇷🇺 俄罗斯 (Russia) 09 - jack
+  - 🇷🇺 俄罗斯 (Russia) 10 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -74,5 +137,10 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03 - jack
   - 🇷🇺 俄罗斯 (Russia) 04 - jack
   - 🇷🇺 俄罗斯 (Russia) 05 - jack
+  - 🇷🇺 俄罗斯 (Russia) 06 - jack
+  - 🇷🇺 俄罗斯 (Russia) 07 - jack
+  - 🇷🇺 俄罗斯 (Russia) 08 - jack
+  - 🇷🇺 俄罗斯 (Russia) 09 - jack
+  - 🇷🇺 俄罗斯 (Russia) 10 - jack
 rules:
 - MATCH,PROXIES

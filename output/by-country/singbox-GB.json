@@ -4,51 +4,82 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇬🇧 英国 (United Kingdom) 01 - jack",
-      "server": "149.102.149.207",
-      "server_port": 80,
-      "method": "aes-256-gcm",
-      "password": "LXchLsIwtCeUAUgu"
+      "server": "188.114.97.6",
+      "server_port": 8080,
+      "uuid": "b69b43d1-091d-4d7c-90b2-7a8bbad9d6a9",
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiY0U2T212Y21yeEhUZHRKYSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0",
+        "headers": {
+          "Host": "BItter-CreDIT-61b8.b76EbA0aBb.wORkerS.dEv"
+        }
+      }
     },
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇬🇧 英国 (United Kingdom) 02 - jack",
-      "server": "149.102.132.184",
+      "server": "172.67.203.158",
       "server_port": 443,
-      "method": "aes-256-gcm",
-      "password": "g5h5jleTRSyO3Rk4"
+      "uuid": "911b84e1-d046-4fbf-bfc0-c168791115ef",
+      "tls": {
+        "enabled": true,
+        "server_name": "12YGbaE0K3gN0z0f.mEhrsHADHaDdadI8.WorkerS.DEv",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/YCNmDFbqMu7cgTzgsfEWGtBD8kR",
+        "headers": {
+          "Host": "12ygbae0k3gn0z0f.mehrshadhaddadi8.workers.dev"
+        }
+      }
     },
     {
       "type": "vless",
       "tag": "🇬🇧 英国 (United Kingdom) 03 - jack",
-      "server": "66.90.104.42",
-      "server_port": 2083,
-      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+      "server": "188.114.96.8",
+      "server_port": 443,
+      "uuid": "513beae3-56e7-4954-a17e-930e06237b27",
+      "tls": {
+        "enabled": true,
+        "server_name": "Cfoi-2FX16G3-8Ry2KdXmCJ.WjESV2ILa3rxBUHpc2NsUGRaChgaWk.WOrkeRS.dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
       "transport": {
-        "type": "grpc",
-        "service_name": "vless"
+        "type": "ws",
+        "path": "/vl/piIRdE9WUi24Sn3bb2oSJ?ed=2560",
+        "headers": {
+          "Host": "cfoi-2fx16g3-8ry2kdxmcj.wjesv2ila3rxbuhpc2nsugrachgawk.workers.dev"
+        }
       }
     },
     {
       "type": "shadowsocks",
       "tag": "🇬🇧 英国 (United Kingdom) 04 - jack",
-      "server": "51.77.225.200",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "zRZNBszYyWo5"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 05 - jack",
-      "server": "149.102.149.207",
-      "server_port": 443,
-      "method": "aes-256-gcm",
-      "password": "LXchLsIwtCeUAUgu"
+      "server": "51.38.71.51",
+      "server_port": 2083,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:2tFqykGqZ101XW11f6iRiERnPycFAjjYq0y2zUYhKho="
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 06 - jack",
+      "tag": "🇬🇧 英国 (United Kingdom) 05 - jack",
       "server": "66.90.105.210",
       "server_port": 2083,
       "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
@@ -59,68 +90,69 @@
     },
     {
       "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 06 - jack",
+      "server": "51.77.225.200",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "zRZNBszYyWo5"
+    },
+    {
+      "type": "vless",
       "tag": "🇬🇧 英国 (United Kingdom) 07 - jack",
-      "server": "129.151.86.235",
-      "server_port": 61312,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "Vy4lRpLwy1/ZUJF58f+SpzYRBJCwQpwztiwtHcOtReI="
+      "server": "66.90.104.42",
+      "server_port": 2083,
+      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless"
+      }
     },
     {
       "type": "shadowsocks",
       "tag": "🇬🇧 英国 (United Kingdom) 08 - jack",
+      "server": "149.102.149.207",
+      "server_port": 80,
+      "method": "aes-256-gcm",
+      "password": "LXchLsIwtCeUAUgu"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 09 - jack",
+      "server": "149.102.132.184",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "g5h5jleTRSyO3Rk4"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 10 - jack",
       "server": "149.102.132.184",
       "server_port": 80,
       "method": "aes-256-gcm",
       "password": "g5h5jleTRSyO3Rk4"
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 09 - jack",
-      "server": "144.24.226.127",
-      "server_port": 61312,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "J7cXNcIXneBAD5a5hk6nXD68z5BcJtIMepdH646KjtI="
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 10 - jack",
-      "server": "141.98.101.181",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
       "type": "vless",
       "tag": "🇬🇧 英国 (United Kingdom) 11 - jack",
-      "server": "87.117.234.19",
+      "server": "186.190.211.188",
       "server_port": 443,
-      "uuid": "4d583b2c-2f5a-47d0-8181-e95217fe8cd9",
-      "flow": "xtls-rprx-vision",
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
       "tls": {
         "enabled": true,
-        "server_name": "strapi.io",
+        "server_name": "186.190.211.188",
+        "insecure": true,
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY",
-          "short_id": "fd55b698ee8c3629"
         }
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 12 - jack",
-      "server": "51.38.71.51",
-      "server_port": 2083,
-      "method": "2022-blake3-aes-256-gcm",
-      "password": "cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:2tFqykGqZ101XW11f6iRiERnPycFAjjYq0y2zUYhKho="
-    },
-    {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 13 - jack",
+      "tag": "🇬🇧 英国 (United Kingdom) 12 - jack",
       "server": "78.129.208.44",
       "server_port": 421,
       "uuid": "a3c861cb-e1e7-4ad6-8be2-7c2314ec6f18",
@@ -141,31 +173,7 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 14 - jack",
-      "server": "134.65.62.82",
-      "server_port": 61312,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "rqzhd6WZ9TbYEozhRmDCezccPKZBpFV5MrF1l6sxiIw="
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 15 - jack",
-      "server": "129.151.77.36",
-      "server_port": 61312,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "JAIIG6N6KLuM33ZbMh0jk1fVcDM3qTVfUoXhQr6tiYM="
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 16 - jack",
-      "server": "146.70.61.18",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 17 - jack",
+      "tag": "🇬🇧 英国 (United Kingdom) 13 - jack",
       "server": "158.173.221.214",
       "server_port": 11001,
       "method": "chacha20-ietf-poly1305",
@@ -173,28 +181,36 @@
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 18 - jack",
-      "server": "5.152.223.97",
+      "tag": "🇬🇧 英国 (United Kingdom) 14 - jack",
+      "server": "87.117.234.19",
       "server_port": 443,
-      "uuid": "be5b6ad6-8184-4b63-82ac-3bc00c09c98c",
+      "uuid": "4d583b2c-2f5a-47d0-8181-e95217fe8cd9",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "strapi.io",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "IFEZmwpGK7VCuDj3kmVdyMn7vUIG8Sntc6TG4eIS3xs",
-          "short_id": "1aa9f3c9021280c0"
+          "public_key": "SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY",
+          "short_id": "fd55b698ee8c3629"
         }
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 15 - jack",
+      "server": "134.65.62.82",
+      "server_port": 61312,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "rqzhd6WZ9TbYEozhRmDCezccPKZBpFV5MrF1l6sxiIw="
+    },
+    {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 19 - jack",
+      "tag": "🇬🇧 英国 (United Kingdom) 16 - jack",
       "server": "95.154.196.61",
       "server_port": 443,
       "uuid": "e5d917f5-fc78-455e-bbb5-81d08715f3d6",
@@ -204,7 +220,7 @@
         "server_name": "strapi.io",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -215,58 +231,83 @@
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 20 - jack",
-      "server": "164.37.100.194",
+      "tag": "🇬🇧 英国 (United Kingdom) 17 - jack",
+      "server": "5.152.223.97",
       "server_port": 443,
-      "uuid": "4bdeee92-97e8-414d-bef6-ec1d5e2ab73b",
+      "uuid": "be5b6ad6-8184-4b63-82ac-3bc00c09c98c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "14ang88.snusoed.baby",
+        "server_name": "strapi.io",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "s0ypPx0AL3k2KOk74tbm-aE-i7eIR_MYVzfLHZeLaUk",
-          "short_id": "2e124af254a65e7c"
+          "public_key": "IFEZmwpGK7VCuDj3kmVdyMn7vUIG8Sntc6TG4eIS3xs",
+          "short_id": "1aa9f3c9021280c0"
         }
       }
     },
     {
-      "type": "vmess",
-      "tag": "🇬🇧 英国 (United Kingdom) 21 - jack",
-      "server": "57.129.132.223",
-      "server_port": 80,
-      "uuid": "a25cbf11-2908-4a1b-a3a8-9a571777dca3",
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/vmess/",
-        "headers": {
-          "Host": "google.com"
+      "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 18 - jack",
+      "server": "141.98.101.181",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 19 - jack",
+      "server": "138.124.125.236",
+      "server_port": 443,
+      "uuid": "6dff8e33-b201-4cbb-8f89-b9418702bff2",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cisco.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "nMPuuTmls3qzDHMaTShhGHili6756Jy5NMOvZ4wufho",
+          "short_id": "75adf1"
         }
       }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇬🇧 英国 (United Kingdom) 20 - jack",
+      "server": "95.133.242.213",
+      "server_port": 30443,
+      "password": "1e6fed5b-5edc-4ddb-a268-79d7fae4365c",
+      "tls": {
+        "enabled": true,
+        "server_name": "filesconvert.org",
+        "insecure": false
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 21 - jack",
+      "server": "94.156.250.148",
+      "server_port": 7001,
+      "method": "aes-256-gcm",
+      "password": "RexnBgU7EV5ADxG"
     },
     {
       "type": "vless",
       "tag": "🇬🇧 英国 (United Kingdom) 22 - jack",
-      "server": "46.250.250.149",
-      "server_port": 2053,
-      "uuid": "b4caaf57-ad77-4948-a6f5-51b3513799bf",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M",
-          "short_id": "9922313fffed1c63"
-        }
+      "server": "2.27.205.59",
+      "server_port": 443,
+      "uuid": "c21631d5-36c9-4664-b575-97eca17456be",
+      "transport": {
+        "type": "ws",
+        "path": "/"
       }
     },
     {
@@ -291,8 +332,72 @@
       }
     },
     {
-      "type": "vless",
+      "type": "vmess",
       "tag": "🇬🇧 英国 (United Kingdom) 24 - jack",
+      "server": "57.129.132.223",
+      "server_port": 80,
+      "uuid": "a25cbf11-2908-4a1b-a3a8-9a571777dca3",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/vmess/",
+        "headers": {
+          "Host": "google.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 25 - jack",
+      "server": "85.208.86.91",
+      "server_port": 9872,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": ""
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "sm3E3hjmT6_Gmg_O9rBz4nfXYrHpnl6-LvcCp6T6_xc",
+          "short_id": ""
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 26 - jack",
+      "server": "roskaa6.api3-max.ru",
+      "server_port": 443,
+      "uuid": "cdd6bfce-781a-4454-b7d5-4778abb5c24f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "roskaa6.api3-max.ru",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇬🇧 英国 (United Kingdom) 27 - jack",
+      "server": "66.163.117.58",
+      "server_port": 22324,
+      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 28 - jack",
       "server": "31.76.88.10",
       "server_port": 443,
       "uuid": "03c48eca-e0aa-4e18-998c-1f53f1de293c",
@@ -317,123 +422,70 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 25 - jack",
-      "server": "94.156.250.148",
-      "server_port": 7001,
-      "method": "aes-256-gcm",
-      "password": "RexnBgU7EV5ADxG"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇬🇧 英国 (United Kingdom) 26 - jack",
-      "server": "labs.frkn.org",
-      "server_port": 443,
-      "password": "3b8c82ed-fe66-472d-915e-034ccb57103f",
-      "tls": {
-        "enabled": true,
-        "server_name": "labs.frkn.org",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 27 - jack",
-      "server": "144.31.57.48",
-      "server_port": 4143,
-      "uuid": "37cec958-22ac-4d99-aee2-48facd8d84d7",
-      "tls": {
-        "enabled": true,
-        "server_name": "yandex.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "EB4Ay55d7wUDYVTfDNXg2sX2PxWqNqsyivR4fGcELDo",
-          "short_id": "ad63"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "google.android.location.SyncService"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 28 - jack",
-      "server": "31.77.7.122",
-      "server_port": 2053,
-      "uuid": "36cd557b-2b3d-46d3-8071-c77dd9cf7623",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.nokia.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "TqsHQWg0oFULyLiaXe9vuwYXmLR6mRLiL376GJbX2Cs",
-          "short_id": "407f4d9be75efc56"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
       "type": "vless",
       "tag": "🇬🇧 英国 (United Kingdom) 29 - jack",
-      "server": "2.26.9.243",
-      "server_port": 3454,
-      "uuid": "5adaf80e-2347-481f-84cb-46109d582c95",
+      "server": "46.250.250.149",
+      "server_port": 2053,
+      "uuid": "b4caaf57-ad77-4948-a6f5-51b3513799bf",
       "tls": {
         "enabled": true,
-        "server_name": "yandex.ru",
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M",
+          "short_id": "9922313fffed1c63"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 30 - jack",
+      "server": "149.102.149.207",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "LXchLsIwtCeUAUgu"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇬🇧 英国 (United Kingdom) 31 - jack",
+      "server": "test-tun.armtech.ir",
+      "server_port": 443,
+      "uuid": "c4e24fd0-2194-44f5-a058-69df3dc035a0",
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 32 - jack",
+      "server": "91.186.218.227",
+      "server_port": 4443,
+      "uuid": "686c3936-3fac-42d2-96ee-ccbf873df459",
+      "tls": {
+        "enabled": true,
+        "server_name": "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Bz2EFAfox-uD9nn8qAVKy86A1kDKO2OpYQhMO4fCrCg",
-          "short_id": "159b4efc"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "google.android.location.SyncService"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 30 - jack",
-      "server": "31.77.7.122",
-      "server_port": 443,
-      "uuid": "36cd557b-2b3d-46d3-8071-c77dd9cf7623",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.nokia.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "TqsHQWg0oFULyLiaXe9vuwYXmLR6mRLiL376GJbX2Cs",
-          "short_id": "407f4d9be75efc56"
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 31 - jack",
+      "tag": "🇬🇧 英国 (United Kingdom) 33 - jack",
       "server": "107.181.151.241",
       "server_port": 443,
-      "uuid": "594d466e-8ac3-4fda-b1d1-eeb817853518",
+      "uuid": "106d20f6-d70a-40e2-b69b-8e82baf8d117",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -445,20 +497,20 @@
         "reality": {
           "enabled": true,
           "public_key": "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg",
-          "short_id": "5a018643df03"
+          "short_id": "60500a63ad12"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 32 - jack",
+      "tag": "🇬🇧 英国 (United Kingdom) 34 - jack",
       "server": "107.181.151.39",
       "server_port": 443,
-      "uuid": "b60cab55-e7a1-413d-a297-ddd7bad3fb62",
+      "uuid": "13aef2e0-b3fb-4322-a0e9-c10b908ce6b5",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.microsoft.com",
+        "server_name": "www.techradar.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -466,33 +518,13 @@
         "reality": {
           "enabled": true,
           "public_key": "J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk",
-          "short_id": "bbcab8fa80a3"
+          "short_id": "87f895f23064"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 33 - jack",
-      "server": "46.250.240.80",
-      "server_port": 2053,
-      "uuid": "948df76f-505d-4608-9c76-a933ee3ccc76",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "CYFeysLf--_IVhxQOCd3ZxLrAVWFFOkJzvIGHOVXN3E",
-          "short_id": "4cc9dc65f7770115"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 34 - jack",
+      "tag": "🇬🇧 英国 (United Kingdom) 35 - jack",
       "server": "87.239.249.137",
       "server_port": 443,
       "uuid": "67eb6b17-7797-4ded-bf52-423c4c5f6cbd",
@@ -513,62 +545,23 @@
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 35 - jack",
-      "server": "2.27.205.218",
-      "server_port": 443,
-      "uuid": "57e2a48b-0cc2-4b60-aacd-b36358fcba96",
+      "tag": "🇬🇧 英国 (United Kingdom) 36 - jack",
+      "server": "46.250.240.80",
+      "server_port": 2053,
+      "uuid": "948df76f-505d-4608-9c76-a933ee3ccc76",
       "tls": {
         "enabled": true,
-        "server_name": "4pda.to",
+        "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "DiJo9V7cQ2_dIPXjFjAEFMeLUemQmWpcbTs6ARNh7gg",
-          "short_id": "9f3a1c7b"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 36 - jack",
-      "server": "134.65.59.15",
-      "server_port": 61312,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "r5ic6K6vlgFjNKuR9W7uPVRtSuzCYAjM78oW3RYK0bA="
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 37 - jack",
-      "server": "186.190.211.188",
-      "server_port": 443,
-      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
-      "tls": {
-        "enabled": true,
-        "server_name": "186.190.211.188",
-        "insecure": true,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
+          "public_key": "CYFeysLf--_IVhxQOCd3ZxLrAVWFFOkJzvIGHOVXN3E",
+          "short_id": "4cc9dc65f7770115"
         }
       }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇬🇧 英国 (United Kingdom) 38 - jack",
-      "server": "66.163.117.58",
-      "server_port": 22324,
-      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
-      "security": "auto"
     },
     {
       "type": "selector",
@@ -610,9 +603,7 @@
         "🇬🇧 英国 (United Kingdom) 33 - jack",
         "🇬🇧 英国 (United Kingdom) 34 - jack",
         "🇬🇧 英国 (United Kingdom) 35 - jack",
-        "🇬🇧 英国 (United Kingdom) 36 - jack",
-        "🇬🇧 英国 (United Kingdom) 37 - jack",
-        "🇬🇧 英国 (United Kingdom) 38 - jack"
+        "🇬🇧 英国 (United Kingdom) 36 - jack"
       ]
     },
     {
@@ -654,9 +645,7 @@
         "🇬🇧 英国 (United Kingdom) 33 - jack",
         "🇬🇧 英国 (United Kingdom) 34 - jack",
         "🇬🇧 英国 (United Kingdom) 35 - jack",
-        "🇬🇧 英国 (United Kingdom) 36 - jack",
-        "🇬🇧 英国 (United Kingdom) 37 - jack",
-        "🇬🇧 英国 (United Kingdom) 38 - jack"
+        "🇬🇧 英国 (United Kingdom) 36 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

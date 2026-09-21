@@ -5,22 +5,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇦🇲 亚美尼亚 (Armenia) 01 - jack",
-      "server": "87.121.47.179",
-      "server_port": 443,
-      "uuid": "d0f0a880-0df1-48c9-bdf1-5669fb9483ce",
+      "tag": "🇻🇳 越南 (Vietnam) 01 - jack",
+      "server": "jpzzqqnzdbgwhbhzsrgh.cfooov.xyz",
+      "server_port": 48737,
+      "uuid": "17ab31f7-c021-4aec-83b2-ab48de8886bd",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "aotocon.ggisopi.su",
+        "server_name": "addons.mozilla.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I",
-          "short_id": ""
+          "public_key": "GnLh9Cc0jj9BMW81u6stEYKe1xu6pf8DDpXHI9AmvFk",
+          "short_id": "545525c503fd5b"
         }
       }
     },
@@ -29,14 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇲 亚美尼亚 (Armenia) 01 - jack"
+        "🇻🇳 越南 (Vietnam) 01 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇲 亚美尼亚 (Armenia) 01 - jack"
+        "🇻🇳 越南 (Vietnam) 01 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

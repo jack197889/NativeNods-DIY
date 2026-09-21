@@ -5,13 +5,33 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - jack
+  server: 46.17.44.112
+  port: 10301
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: bdb313adf74c2ede
+- name: 🇭🇰 中国香港 (Hong Kong) 02 - jack
   server: 103.136.150.119
   port: 10081
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: 72553320ae6bcc8f
-- name: 🇭🇰 中国香港 (Hong Kong) 02 - jack
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - jack
+  server: 47.238.126.123
+  port: 443
+  udp: true
+  type: vless
+  uuid: bf41cc32-f0a2-4b27-ba9f-8026ce0aed84
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 4IeLDkxPTFecGeobLaxV9XaVW7oBgcqwW2dvfFtPQD4
+    short-id: 7771265f0b109528
+  servername: www.amazon.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 04 - jack
   server: 119.246.1.143
   port: 443
   udp: true
@@ -19,7 +39,118 @@ proxies:
   password: BxceQaOe
   sni: t.me
   skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - jack
+- name: 🇭🇰 中国香港 (Hong Kong) 05 - jack
+  server: 162.128.157.164
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5e8e81ac-a1c4-4543-b81e-651bf9872b54
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: TP_bpIPUtjdxxGA9j7mpsHtSDfM2HMSZFNWW9MtDPT0
+    short-id: 14156e3ac23212cc
+  servername: www.bing.com
+  client-fingerprint: random
+- name: 🇭🇰 中国香港 (Hong Kong) 06 - jack
+  server: bbaqqnbgwoxxnmxdnlmchg.jiedddym.com
+  port: 55323
+  udp: true
+  type: vless
+  uuid: 17ab31f7-c021-4aec-83b2-ab48de8886bd
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 8cgMAdLKLmCfDMPqPjjmF-Bc6uMLUvLZq2CFEQTFoCc
+    short-id: e691f6e47b9db28a
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 07 - jack
+  server: 202.146.222.89
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 202.146.222.89
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 08 - jack
+  server: 207.57.135.42
+  port: 30852
+  udp: true
+  type: vless
+  uuid: 10fdf9ce-3304-47cf-874b-9a3be30d5030
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: HN9gCD2plpOr5jSNJfv9Xcl2Zjj-AKvfbNmLBNYWcUc
+  servername: www.paypal.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 09 - jack
+  server: 47.83.4.146
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8952ecb7-4b85-4aa5-8b22-adc9aa4d3591
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ID53PilNajhqBP3PTJJxurZOFnZfKVs-CU5buNOaKBQ
+    short-id: e40b98d40e53b8b9
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 10 - jack
+  server: 68.64.183.115
+  port: 27684
+  udp: true
+  type: vless
+  uuid: ff7fecdc-f816-4ff7-9447-65ecbae25ec2
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: CTB0zNN-oslyk5a3NfliC_nUakFUn94QH8X_rN5ZvlQ
+  servername: dash.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 11 - jack
+  server: 202.146.222.174
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https%3a%2f%2ft.me%2fwangcai2
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 12 - jack
+  server: 47.240.80.220
+  port: 2052
+  udp: true
+  type: trojan
+  password: tFjD2X1F6i9FfWp2GDU5Vbi1conuaChDKIYbw9zMFrqvMoSz
+  sni: vpn.12169.top
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 13 - jack
+  server: 195.58.144.56
+  port: 11907
+  udp: true
+  type: vless
+  uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
+  tls: true
+  servername: 195.58.144.56
+  skip-cert-verify: false
+- name: 🇭🇰 中国香港 (Hong Kong) 14 - jack
+  server: 68.64.178.52
+  port: 443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /downloads/posts/programs?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇭🇰 中国香港 (Hong Kong) 15 - jack
   server: 47.239.6.251
   port: 13779
   udp: true
@@ -32,59 +163,15 @@ proxies:
     short-id: af1bdd293097b664
   servername: tesla.com
   client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 04 - jack
-  server: 162.128.157.164
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5e8e81ac-a1c4-4543-b81e-651bf9872b54
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: TP_bpIPUtjdxxGA9j7mpsHtSDfM2HMSZFNWW9MtDPT0
-    short-id: 14156e3ac23212cc
-  servername: www.bing.com
-  client-fingerprint: firefox
-- name: 🇭🇰 中国香港 (Hong Kong) 05 - jack
-  server: sth.free-outline.giize.com
-  port: 1081
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: r6tptrwvddxap6al
-- name: 🇭🇰 中国香港 (Hong Kong) 06 - jack
-  server: 202.146.222.29
-  port: 443
+- name: 🇭🇰 中国香港 (Hong Kong) 16 - jack
+  server: mz.hkychina.com
+  port: 8443
   udp: true
   type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: speedtest.tinkoff.ru
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 07 - jack
-  server: 202.146.222.174
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/oneclickvpnkeys
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 08 - jack
-  server: 202.146.222.89
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/clashv8
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 09 - jack
-  server: api.meituan88.com
-  port: 7008
-  udp: true
-  type: anytls
-  password: dCwrni
-  sni: globalnetworktraffic.com
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 10 - jack
+  password: HysTeria2026!Proxy
+  sni: mz.hkychina.com
+  skip-cert-verify: false
+- name: 🇭🇰 中国香港 (Hong Kong) 17 - jack
   server: 47.238.210.5
   port: 13779
   udp: true
@@ -95,8 +182,50 @@ proxies:
     public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
     short-id: af1bdd293097b664
   servername: tesla.com
+  client-fingerprint: ios
+- name: 🇭🇰 中国香港 (Hong Kong) 18 - jack
+  server: 47.76.172.190
+  port: 443
+  udp: true
+  type: vless
+  uuid: 60baeb19-560d-402d-b9c9-c062c2350e0b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 9nukDgL8dc3PWV07DAwi-_FFj3Y25ifYnnrIp7uV0SI
+    short-id: 92ddbafbf38306f5
+  servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 11 - jack
+- name: 🇭🇰 中国香港 (Hong Kong) 19 - jack
+  server: www.shopify.com
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 3aa71202-a099-49c1-99fc-6662f3335369
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: yoga-suggesting-recording-calls.trycloudflare.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /3aa71202-a099-49c1-99fc-6662f3335369-vm
+    headers:
+      Host: yoga-suggesting-recording-calls.trycloudflare.com
+- name: 🇭🇰 中国香港 (Hong Kong) 20 - jack
+  server: 47.83.173.110
+  port: 443
+  udp: true
+  type: vless
+  uuid: bca6f15f-89db-40e2-a955-19d084229234
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: BqFbrSSosM7RAVvUGTRmCrZlHY6aGwq9HEJs0fMdK0s
+    short-id: 8144589880395fa1
+  servername: www.samsung.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 21 - jack
   server: 104.16.60.10
   port: 443
   udp: true
@@ -111,48 +240,18 @@ proxies:
     path: /api/v2/e2fe4e52a165854d/stream
     headers:
       Host: hk1.69lover.my
-- name: 🇭🇰 中国香港 (Hong Kong) 12 - jack
-  server: 31.58.181.88
-  port: 8443
+- name: 🇭🇰 中国香港 (Hong Kong) 22 - jack
+  server: 45.152.65.68
+  port: 37574
   udp: true
   type: vless
-  uuid: c86f3ea2-4594-4966-a14a-8c7a45051b69
+  uuid: e2353f83-9a40-4b46-82e1-666b1652d479
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
-  servername: tradingview.com
-  client-fingerprint: firefox
-- name: 🇭🇰 中国香港 (Hong Kong) 13 - jack
-  server: mz.hkychina.com
-  port: 8443
-  udp: true
-  type: hysteria2
-  password: HysTeria2026!Proxy
-  sni: mz.hkychina.com
-  skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 14 - jack
-  server: 47.83.173.110
-  port: 443
-  udp: true
-  type: vless
-  uuid: bca6f15f-89db-40e2-a955-19d084229234
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: BqFbrSSosM7RAVvUGTRmCrZlHY6aGwq9HEJs0fMdK0s
-    short-id: 8144589880395fa1
-  servername: www.samsung.com
+    public-key: Pu-3VzlM8PPRnOTVZOC8HVGr4WwG5yOYiIrbVJYU5RI
+  servername: www.amazon.com
   client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 15 - jack
-  server: 195.58.144.56
-  port: 11907
-  udp: true
-  type: vless
-  uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
-  tls: true
-  servername: 195.58.144.56
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -173,6 +272,13 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 13 - jack
   - 🇭🇰 中国香港 (Hong Kong) 14 - jack
   - 🇭🇰 中国香港 (Hong Kong) 15 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 16 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 17 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 18 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 19 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 20 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 21 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 22 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -193,5 +299,12 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 13 - jack
   - 🇭🇰 中国香港 (Hong Kong) 14 - jack
   - 🇭🇰 中国香港 (Hong Kong) 15 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 16 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 17 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 18 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 19 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 20 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 21 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 22 - jack
 rules:
 - MATCH,PROXIES
