@@ -5,23 +5,24 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 01 (家宽) - jack",
-      "server": "129.151.64.169",
-      "server_port": 31867,
+      "tag": "🇧🇷 巴西 (Brazil) 01 - jack",
+      "server": "176.124.220.173",
+      "server_port": 8443,
       "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
       "tls": {
         "enabled": true,
         "server_name": "cdn8848.776676.xyz",
-        "insecure": true
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
-        "path": "/files",
         "headers": {
           "Host": "cdn8848.776676.xyz"
-        },
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
+        }
       }
     },
     {
@@ -29,14 +30,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 德国 (Germany) 01 (家宽) - jack"
+        "🇧🇷 巴西 (Brazil) 01 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 德国 (Germany) 01 (家宽) - jack"
+        "🇧🇷 巴西 (Brazil) 01 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

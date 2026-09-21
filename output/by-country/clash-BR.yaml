@@ -4,18 +4,19 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇩🇪 德国 (Germany) 01 (家宽) - jack
-  server: 129.151.64.169
-  port: 31867
+- name: 🇧🇷 巴西 (Brazil) 01 - jack
+  server: 176.124.220.173
+  port: 8443
   udp: true
   type: vless
   uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   tls: true
   servername: cdn8848.776676.xyz
   skip-cert-verify: true
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /files
+    path: /
     headers:
       Host: cdn8848.776676.xyz
 proxy-groups:
@@ -23,12 +24,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇩🇪 德国 (Germany) 01 (家宽) - jack
+  - 🇧🇷 巴西 (Brazil) 01 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪 德国 (Germany) 01 (家宽) - jack
+  - 🇧🇷 巴西 (Brazil) 01 - jack
 rules:
 - MATCH,PROXIES

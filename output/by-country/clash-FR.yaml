@@ -5,137 +5,40 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - jack
-  server: 104.21.32.142
-  port: 443
+  server: 13.39.139.162
+  port: 22223
   udp: true
   type: vless
-  uuid: 5934b979-e128-4c90-a600-744b97bffc8c
-  tls: true
-  servername: 5dktcuajb2a1jxix7csnrmeucg.mahrademami.workers.dev
-  skip-cert-verify: true
-  client-fingerprint: ios
-  network: ws
-  ws-opts:
-    path: /vl/Fi3kP8cNjBoo8UPv?ed=2560
-    headers:
-      Host: 5dktcuajb2a1jxix7csnrmeucg.mahrademami.workers.dev
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
 - name: 🇫🇷 法国 (France) 02 - jack
-  server: 15.188.103.174
-  port: 22223
+  server: 35.180.105.155
+  port: 22222
   udp: true
   type: vless
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
 - name: 🇫🇷 法国 (France) 03 - jack
-  server: 15.224.194.93
-  port: 22224
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 04 - jack
-  server: 13.36.1.52
-  port: 22224
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 05 - jack
-  server: 13.36.1.52
-  port: 22223
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 06 - jack
-  server: 15.188.103.174
-  port: 22222
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 07 - jack
-  server: 13.36.1.52
-  port: 22222
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 08 - jack
-  server: 34.155.10.226
+  server: 54.36.174.134
   port: 443
-  udp: true
-  type: vless
-  uuid: d619964d-26d6-452d-9860-6f058f03ba8e
-  tls: true
-  reality-opts:
-    public-key: 6tH_NDFcxWn60B3s-MgrkBTU2yUUBY42ZG1av50Ywhk
-    short-id: ae682368818bd6c5
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 09 - jack
-  server: 51.255.13.232
-  port: 8388
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: BqnqToih0PbU
-- name: 🇫🇷 法国 (France) 10 - jack
-  server: 15.224.194.93
-  port: 22222
+  password: mrs2e9a
+- name: 🇫🇷 法国 (France) 04 - jack
+  server: 151.247.197.253
+  port: 36723
   udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 11 - jack
-  server: 57.128.177.218
-  port: 30963
-  udp: true
-  type: vless
-  uuid: aabcb69e-9f17-44bd-aaac-552dd23e9691
-  tls: true
-  reality-opts:
-    public-key: XxNAqnYJDizM_4_ycJxyaa9xbx29hpDfwAtCv1Wga1M
-    short-id: c776352067
-  servername: us.vrzn.download.nvidia.com
-  client-fingerprint: edge
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc_common1
-- name: 🇫🇷 法国 (France) 12 - jack
-  server: 15.224.194.93
-  port: 22223
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 13 - jack
-  server: 185.18.250.245
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
+  type: hysteria2
+  password: Krab9Hyst2_Rk7pQ2xL
+  sni: 151.247.197.253
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 14 - jack
+- name: 🇫🇷 法国 (France) 05 - jack
   server: 54.36.174.140
   port: 443
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: mrs2e9a
-- name: 🇫🇷 法国 (France) 15 - jack
-  server: 62.210.7.139
-  port: 60111
-  udp: true
-  type: hysteria2
-  password: github.com/Alvin9999-newpac/fanqiang
-  sni: bing.com
-  skip-cert-verify: true
-- name: 🇫🇷 法国 (France) 16 - jack
-  server: vpn-fr-002.fastervpn.world
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 127.0.0.1
-  skip-cert-verify: true
-- name: 🇫🇷 法国 (France) 17 - jack
+- name: 🇫🇷 法国 (France) 06 - jack
   server: 62.210.124.146
   port: 22000
   udp: true
@@ -143,118 +46,14 @@ proxies:
   password: dongtaiwang.com
   sni: www.microsoft.com
   skip-cert-verify: true
-- name: 🇫🇷 法国 (France) 18 - jack
-  server: 45.95.96.236
-  port: 443
-  udp: true
-  type: vless
-  uuid: c5694dc5-39fd-4a92-8430-3837baa522a3
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: rCkSHJ7goy7ZvSlau4LfXF-QLloOJMNeMxpeeQtwtVs
-    short-id: 4fa44664f6a566d3
-  servername: gesmankos.sadiepinki.com
-  client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 19 - jack
-  server: 35.181.166.40
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 35.181.166.40
-  skip-cert-verify: true
-- name: 🇫🇷 法国 (France) 20 - jack
-  server: 62.210.91.10
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: ''
-- name: 🇫🇷 法国 (France) 21 - jack
-  server: 152.228.139.33
-  port: 51671
-  udp: true
-  type: vless
-  uuid: 75cc7568-abb0-46a8-88be-8137d3c647d4
-  tls: true
-  reality-opts:
-    public-key: -5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU
-    short-id: 2fed44d8c59f7e71
-  servername: www.sony.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc_common3
-- name: 🇫🇷 法国 (France) 22 - jack
-  server: 199.232.78.170
-  port: 443
-  udp: true
-  type: vless
-  uuid: XpnTeam-13
-  tls: true
-  servername: ssl.fastly.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: Appxdn.global.ssl.fastly.net
-- name: 🇫🇷 法国 (France) 23 - jack
-  server: 54.36.174.134
-  port: 443
+- name: 🇫🇷 法国 (France) 07 - jack
+  server: 51.255.13.232
+  port: 8388
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: mrs2e9a
-- name: 🇫🇷 法国 (France) 24 - jack
-  server: 173.212.201.85
-  port: 443
-  udp: true
-  type: hysteria2
-  password: gf1:gfhysteria2024
-  sni: www.docker.com
-  skip-cert-verify: true
-- name: 🇫🇷 法国 (France) 25 - jack
-  server: 54.37.136.194
-  port: 2053
-  udp: true
-  type: vless
-  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
-  tls: true
-  reality-opts:
-    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
-    short-id: 50ba05992b05c1c3
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 26 - jack
-  server: 151.247.197.253
-  port: 36723
-  udp: true
-  type: hysteria2
-  password: Krab9Hyst2_Rk7pQ2xL
-  sni: www.cloudflare.com
-  skip-cert-verify: true
-- name: 🇫🇷 法国 (France) 27 - jack
-  server: 51.77.217.70
-  port: 2053
-  udp: true
-  type: vless
-  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
-  tls: true
-  reality-opts:
-    public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
-    short-id: bfe58beb41f1d09f
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 28 - jack
+  password: BqnqToih0PbU
+- name: 🇫🇷 法国 (France) 08 - jack
   server: 62.210.91.2
   port: 23576
   udp: true
@@ -267,7 +66,121 @@ proxies:
     short-id: '01'
   servername: fuck.rkn
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 29 - jack
+- name: 🇫🇷 法国 (France) 09 - jack
+  server: 62.210.147.2
+  port: 43115
+  udp: true
+  type: hysteria2
+  password: github.com/Alvin9999-newpac/fanqiang
+  sni: www.microsoft.com
+  skip-cert-verify: true
+- name: 🇫🇷 法国 (France) 10 - jack
+  server: 34.155.10.226
+  port: 443
+  udp: true
+  type: vless
+  uuid: d619964d-26d6-452d-9860-6f058f03ba8e
+  tls: true
+  reality-opts:
+    public-key: 6tH_NDFcxWn60B3s-MgrkBTU2yUUBY42ZG1av50Ywhk
+    short-id: ae682368818bd6c5
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 11 - jack
+  server: 51.77.217.70
+  port: 2053
+  udp: true
+  type: vless
+  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
+  tls: true
+  reality-opts:
+    public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
+    short-id: bfe58beb41f1d09f
+  servername: www.apple.com
+  client-fingerprint: firefox
+- name: 🇫🇷 法国 (France) 12 - jack
+  server: 57.128.177.218
+  port: 30963
+  udp: true
+  type: vless
+  uuid: aabcb69e-9f17-44bd-aaac-552dd23e9691
+  tls: true
+  reality-opts:
+    public-key: XxNAqnYJDizM_4_ycJxyaa9xbx29hpDfwAtCv1Wga1M
+    short-id: c776352067
+  servername: us.vrzn.download.nvidia.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc_common1
+- name: 🇫🇷 法国 (France) 13 - jack
+  server: 35.181.166.40
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 35.181.166.40
+  skip-cert-verify: true
+- name: 🇫🇷 法国 (France) 14 - jack
+  server: 107.161.160.23
+  port: 443
+  udp: true
+  type: vless
+  uuid: cdd6bfce-781a-4454-b7d5-4778abb5c24f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: kama2.api3-max.ru
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 15 - jack
+  server: 173.212.201.85
+  port: 443
+  udp: true
+  type: hysteria2
+  password: gf1:gfhysteria2024
+  sni: www.docker.com
+  skip-cert-verify: true
+- name: 🇫🇷 法国 (France) 16 - jack
+  server: 54.37.136.194
+  port: 2053
+  udp: true
+  type: vless
+  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
+  tls: true
+  reality-opts:
+    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
+    short-id: 50ba05992b05c1c3
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇫🇷 法国 (France) 17 - jack
+  server: 62.210.7.139
+  port: 60111
+  udp: true
+  type: hysteria2
+  password: github.com/Alvin9999-newpac/fanqiang
+  sni: bing.com
+  skip-cert-verify: true
+- name: 🇫🇷 法国 (France) 18 - jack
+  server: assets-fra.pleiades.codes
+  port: 443
+  udp: true
+  type: vless
+  uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b
+  tls: true
+  servername: assets-fra.pleiades.codes
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cdn.v1.AssetService
+- name: 🇫🇷 法国 (France) 19 - jack
+  server: vpn-fr-002.fastervpn.world
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 127.0.0.1
+  skip-cert-verify: true
+- name: 🇫🇷 法国 (France) 20 - jack
   server: 152.228.139.33
   port: 35108
   udp: true
@@ -278,39 +191,52 @@ proxies:
     public-key: X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg
     short-id: 52add08b86a5ccea
   servername: www.nvidia.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: grpc-common3
-- name: 🇫🇷 法国 (France) 30 - jack
-  server: 62.210.147.2
-  port: 43115
-  udp: true
-  type: hysteria2
-  password: github.com/Alvin9999-newpac/fanqiang
-  sni: www.microsoft.com
-  skip-cert-verify: true
-- name: 🇫🇷 法国 (France) 31 - jack
-  server: 152.228.162.19
-  port: 80
-  udp: true
-  type: vless
-  uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0
-  network: ws
-  ws-opts:
-    path: /vless/
-- name: 🇫🇷 法国 (France) 32 - jack
-  server: 185.255.179.166
+- name: 🇫🇷 法国 (France) 21 - jack
+  server: 195.58.140.146
   port: 443
   udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
+  type: vless
+  uuid: d7790b85-9659-4558-a405-e0ab57d32984
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: lRuJPDrUb0b32-47hl4BgDoQutqmkuW31N4qVxbDgmI
+    short-id: dc927a04e8572c61
+  servername: d1-fr.cloud-cdn.xyz
+  client-fingerprint: firefox
+- name: 🇫🇷 法国 (France) 22 - jack
+  server: 199.232.78.160
+  port: 443
+  udp: true
+  type: vless
+  uuid: XpnTeam-16
+  tls: true
+  servername: ssl.fastly.com
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 33 - jack
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+- name: 🇫🇷 法国 (France) 23 - jack
+  server: 62.210.91.10
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 24 - jack
   server: milan.adaspoloandco.com
   port: 8443
   udp: true
@@ -323,33 +249,7 @@ proxies:
   network: ws
   ws-opts:
     path: /RoBeRt
-    headers:
-      Host: milan.adaspoloandco.com
-- name: 🇫🇷 法国 (France) 34 - jack
-  server: siennacedarantler.tealbutton.one
-  port: 443
-  udp: true
-  type: vless
-  uuid: f07d9192-9d39-49fc-ba70-610fcb7fb176
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: VE90NqtKCg1Kqc8XCYjLIFmcpOnQDtbMIjtBHbtfHwQ
-    short-id: 9c4a1ec4ae97eb29
-  servername: siennacedarantler.tealbutton.one
-  client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 35 - jack
-  server: 185.220.100.168
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 36 - jack
+- name: 🇫🇷 法国 (France) 25 - jack
   server: 188.114.96.19
   port: 80
   udp: true
@@ -362,65 +262,16 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
-- name: 🇫🇷 法国 (France) 37 - jack
-  server: kama2.api3-max.ru
-  port: 443
+- name: 🇫🇷 法国 (France) 26 - jack
+  server: 143.246.209.46
+  port: 8081
   udp: true
   type: vless
-  uuid: cdd6bfce-781a-4454-b7d5-4778abb5c24f
-  flow: xtls-rprx-vision
-  tls: true
-  servername: kama2.api3-max.ru
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 38 - jack
-  server: 193.233.87.41
-  port: 8443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
   network: ws
   ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 39 - jack
-  server: 88.99.189.60
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 40 - jack
-  server: 188.114.97.6
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 50414e45-4c5f-5a45-5553-ef859652a80e
-  network: ws
-  ws-opts:
-    path: /stream/TrexBridge/ef859652a80e
-    headers:
-      Host: trex-panel-nubj0s.samifakor.workers.dev
-- name: 🇫🇷 法国 (France) 41 - jack
-  server: 172.67.193.182
-  port: 443
-  udp: true
-  type: vless
-  uuid: 50414e45-4c5f-5a45-5553-ef859652a80e
-  tls: true
-  servername: trex-panel-nubj0s.samifakor.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /stream/TrexBridge/ef859652a80e
-    headers:
-      Host: trex-panel-nubj0s.samifakor.workers.dev
-- name: 🇫🇷 法国 (France) 42 - jack
+    path: /vless-test
+- name: 🇫🇷 法国 (France) 27 - jack
   server: 145.223.68.58
   port: 443
   udp: true
@@ -433,31 +284,19 @@ proxies:
     short-id: a44ff7d2e80213c2
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 43 - jack
-  server: 149.202.58.99
+- name: 🇫🇷 法国 (France) 28 - jack
+  server: 45.95.96.236
   port: 443
   udp: true
   type: vless
-  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
-  tls: true
-  servername: bab-6.site
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vws/
-    headers:
-      Host: bab-6.site
-- name: 🇫🇷 法国 (France) 44 - jack
-  server: nasnet-162191099-direct.mbghalibaf.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
+  uuid: c5694dc5-39fd-4a92-8430-3837baa522a3
   flow: xtls-rprx-vision
   tls: true
-  servername: nasnet-162191099-direct.mbghalibaf.com
-  skip-cert-verify: false
+  reality-opts:
+    public-key: rCkSHJ7goy7ZvSlau4LfXF-QLloOJMNeMxpeeQtwtVs
+    short-id: 4fa44664f6a566d3
+  servername: gesmankos.sadiepinki.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -491,22 +330,6 @@ proxy-groups:
   - 🇫🇷 法国 (France) 26 - jack
   - 🇫🇷 法国 (France) 27 - jack
   - 🇫🇷 法国 (France) 28 - jack
-  - 🇫🇷 法国 (France) 29 - jack
-  - 🇫🇷 法国 (France) 30 - jack
-  - 🇫🇷 法国 (France) 31 - jack
-  - 🇫🇷 法国 (France) 32 - jack
-  - 🇫🇷 法国 (France) 33 - jack
-  - 🇫🇷 法国 (France) 34 - jack
-  - 🇫🇷 法国 (France) 35 - jack
-  - 🇫🇷 法国 (France) 36 - jack
-  - 🇫🇷 法国 (France) 37 - jack
-  - 🇫🇷 法国 (France) 38 - jack
-  - 🇫🇷 法国 (France) 39 - jack
-  - 🇫🇷 法国 (France) 40 - jack
-  - 🇫🇷 法国 (France) 41 - jack
-  - 🇫🇷 法国 (France) 42 - jack
-  - 🇫🇷 法国 (France) 43 - jack
-  - 🇫🇷 法国 (France) 44 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -540,21 +363,5 @@ proxy-groups:
   - 🇫🇷 法国 (France) 26 - jack
   - 🇫🇷 法国 (France) 27 - jack
   - 🇫🇷 法国 (France) 28 - jack
-  - 🇫🇷 法国 (France) 29 - jack
-  - 🇫🇷 法国 (France) 30 - jack
-  - 🇫🇷 法国 (France) 31 - jack
-  - 🇫🇷 法国 (France) 32 - jack
-  - 🇫🇷 法国 (France) 33 - jack
-  - 🇫🇷 法国 (France) 34 - jack
-  - 🇫🇷 法国 (France) 35 - jack
-  - 🇫🇷 法国 (France) 36 - jack
-  - 🇫🇷 法国 (France) 37 - jack
-  - 🇫🇷 法国 (France) 38 - jack
-  - 🇫🇷 法国 (France) 39 - jack
-  - 🇫🇷 法国 (France) 40 - jack
-  - 🇫🇷 法国 (France) 41 - jack
-  - 🇫🇷 法国 (France) 42 - jack
-  - 🇫🇷 法国 (France) 43 - jack
-  - 🇫🇷 法国 (France) 44 - jack
 rules:
 - MATCH,PROXIES
