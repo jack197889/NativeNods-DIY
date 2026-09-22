@@ -6,70 +6,51 @@
     {
       "type": "vless",
       "tag": "🇮🇳 印度 (India) 01 - jack",
-      "server": "194.61.31.126",
-      "server_port": 2053,
-      "uuid": "1d4e18bd-1f26-4915-b35a-7ace4826e76a",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU",
-          "short_id": "9980e0609b0d3891"
+      "server": "188.114.97.6",
+      "server_port": 80,
+      "uuid": "44098455-565c-4c45-9f9a-7aaeb350990c",
+      "transport": {
+        "type": "ws",
+        "path": "/in-do",
+        "headers": {
+          "Host": "zaintest.vuclip.com.r3xxe.eu.cc"
         }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇮🇳 印度 (India) 02 - jack",
-      "server": "35.154.58.87",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "vpn-in-001.fastervpn.world",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇮🇳 印度 (India) 03 - jack",
-      "server": "13.207.151.141",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "vpn-in-001.fastervpn.world",
-        "insecure": true
       }
     },
     {
       "type": "vless",
-      "tag": "🇮🇳 印度 (India) 04 - jack",
-      "server": "34.47.245.203",
+      "tag": "🇮🇳 印度 (India) 02 - jack",
+      "server": "104.21.69.118",
       "server_port": 443,
-      "uuid": "3fed34dc-2fe6-4fe0-86e7-a80213f9b7cc",
+      "uuid": "1443b7a1-7ba9-4ec9-b904-2e867367b5d7",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "odd-violet-5440.asdgrweeee13.workers.dev",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "dB68n-Vyph0_KBtBIe45b5GCB4F1IqpBF_ohlN-KpkY",
-          "short_id": "50440423703c945f"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/sync",
+        "headers": {
+          "Host": "odd-violet-5440.asdgrweeee13.workers.dev"
         }
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇮🇳 印度 (India) 03 - jack",
+      "server": "139.84.166.47",
+      "server_port": 8388,
+      "method": "aes-256-gcm",
+      "password": "GEdoeeqLZtkJRgSa"
+    },
+    {
       "type": "trojan",
-      "tag": "🇮🇳 印度 (India) 05 - jack",
+      "tag": "🇮🇳 印度 (India) 04 - jack",
       "server": "35.244.28.130",
       "server_port": 443,
       "password": "M7v%w11Se*",
@@ -84,28 +65,20 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇮🇳 印度 (India) 06 - jack",
-      "server": "34.93.188.70",
+      "type": "hysteria2",
+      "tag": "🇮🇳 印度 (India) 05 - jack",
+      "server": "35.154.58.87",
       "server_port": 443,
-      "uuid": "5004e3d7-a9bd-4a7c-a6d5-58aa5e1be9ed",
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "97C6O3repofpoaJzvu1d4o7amhJGA8hF_yJls7SNIgU",
-          "short_id": "b9299afa0dcac824"
-        }
+        "server_name": "vpn-in-001.fastervpn.world",
+        "insecure": true
       }
     },
     {
       "type": "vless",
-      "tag": "🇮🇳 印度 (India) 07 - jack",
+      "tag": "🇮🇳 印度 (India) 06 - jack",
       "server": "148.113.5.44",
       "server_port": 443,
       "uuid": "72ea5a91-ffcc-43d2-9297-5993c3abf186",
@@ -125,8 +98,80 @@
       }
     },
     {
-      "type": "vmess",
+      "type": "vless",
+      "tag": "🇮🇳 印度 (India) 07 - jack",
+      "server": "34.93.188.70",
+      "server_port": 443,
+      "uuid": "5004e3d7-a9bd-4a7c-a6d5-58aa5e1be9ed",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "97C6O3repofpoaJzvu1d4o7amhJGA8hF_yJls7SNIgU",
+          "short_id": "b9299afa0dcac824"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
       "tag": "🇮🇳 印度 (India) 08 - jack",
+      "server": "13.207.151.141",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "vpn-in-001.fastervpn.world",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇳 印度 (India) 09 - jack",
+      "server": "34.47.245.203",
+      "server_port": 443,
+      "uuid": "3fed34dc-2fe6-4fe0-86e7-a80213f9b7cc",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "dB68n-Vyph0_KBtBIe45b5GCB4F1IqpBF_ohlN-KpkY",
+          "short_id": "50440423703c945f"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇳 印度 (India) 10 - jack",
+      "server": "194.61.31.126",
+      "server_port": 2053,
+      "uuid": "1d4e18bd-1f26-4915-b35a-7ace4826e76a",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU",
+          "short_id": "9980e0609b0d3891"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇮🇳 印度 (India) 11 - jack",
       "server": "152.67.8.205",
       "server_port": 80,
       "uuid": "9db4c708-aef8-4359-821b-38e47990be0d",
@@ -147,7 +192,10 @@
         "🇮🇳 印度 (India) 05 - jack",
         "🇮🇳 印度 (India) 06 - jack",
         "🇮🇳 印度 (India) 07 - jack",
-        "🇮🇳 印度 (India) 08 - jack"
+        "🇮🇳 印度 (India) 08 - jack",
+        "🇮🇳 印度 (India) 09 - jack",
+        "🇮🇳 印度 (India) 10 - jack",
+        "🇮🇳 印度 (India) 11 - jack"
       ]
     },
     {
@@ -161,7 +209,10 @@
         "🇮🇳 印度 (India) 05 - jack",
         "🇮🇳 印度 (India) 06 - jack",
         "🇮🇳 印度 (India) 07 - jack",
-        "🇮🇳 印度 (India) 08 - jack"
+        "🇮🇳 印度 (India) 08 - jack",
+        "🇮🇳 印度 (India) 09 - jack",
+        "🇮🇳 印度 (India) 10 - jack",
+        "🇮🇳 印度 (India) 11 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -23,7 +23,7 @@
         "server_name": "at.quattro-tech.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
@@ -33,12 +33,34 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇦🇹 奥地利 (Austria) 03 - jack",
+      "server": "eat8xny7.selqora.ir",
+      "server_port": 51595,
+      "uuid": "d9826bd9-1023-4a3b-895e-3ba9d64061f2",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.aparat.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "2r94D7GhoZK4inffwafDlMW23Rqj1YVR5871e8EHADs",
+          "short_id": "155e0ffd717f90d8"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇦🇹 奥地利 (Austria) 01 - jack",
-        "🇦🇹 奥地利 (Austria) 02 - jack"
+        "🇦🇹 奥地利 (Austria) 02 - jack",
+        "🇦🇹 奥地利 (Austria) 03 - jack"
       ]
     },
     {
@@ -46,7 +68,8 @@
       "tag": "auto",
       "outbounds": [
         "🇦🇹 奥地利 (Austria) 01 - jack",
-        "🇦🇹 奥地利 (Austria) 02 - jack"
+        "🇦🇹 奥地利 (Austria) 02 - jack",
+        "🇦🇹 奥地利 (Austria) 03 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

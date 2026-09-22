@@ -6,54 +6,73 @@ log-level: info
 proxies:
 - name: 🇱🇻 拉脱维亚 (Latvia) 01 - jack
   server: 185.135.86.175
-  port: 9033
+  port: 9034
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: UTJA57ypk2XKQpnm
+  password: Yg4MbdXFQ9HFFVY6
 - name: 🇱🇻 拉脱维亚 (Latvia) 02 - jack
-  server: 185.135.86.175
-  port: 9086
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 37Z4TFCYhfxcpc9Q
-- name: 🇱🇻 拉脱维亚 (Latvia) 03 - jack
   server: 185.135.86.175
   port: 9017
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: HAVAdE3nXhqA5nHp
-- name: 🇱🇻 拉脱维亚 (Latvia) 04 - jack
-  server: 185.135.86.175
-  port: 9034
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: Yg4MbdXFQ9HFFVY6
-- name: 🇱🇻 拉脱维亚 (Latvia) 05 - jack
-  server: 185.135.86.175
-  port: 9082
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 45xgMgm386pjWjTx
-- name: 🇱🇻 拉脱维亚 (Latvia) 06 - jack
+- name: 🇱🇻 拉脱维亚 (Latvia) 03 - jack
   server: 185.135.86.175
   port: 9068
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: mwgRg9hRq3b4Qnwb
-- name: 🇱🇻 拉脱维亚 (Latvia) 07 - jack
+- name: 🇱🇻 拉脱维亚 (Latvia) 04 - jack
+  server: 185.135.86.175
+  port: 9082
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 45xgMgm386pjWjTx
+- name: 🇱🇻 拉脱维亚 (Latvia) 05 - jack
   server: 185.135.86.175
   port: 9007
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: kSPmvwdFzGMMW5pY
+- name: 🇱🇻 拉脱维亚 (Latvia) 06 - jack
+  server: 185.135.86.175
+  port: 9086
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 37Z4TFCYhfxcpc9Q
+- name: 🇱🇻 拉脱维亚 (Latvia) 07 - jack
+  server: 185.135.86.175
+  port: 9033
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: UTJA57ypk2XKQpnm
 - name: 🇱🇻 拉脱维亚 (Latvia) 08 - jack
+  server: 185.135.86.175
+  port: 9036
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: hbtvgUz5uNYyB3Rf
+- name: 🇱🇻 拉脱维亚 (Latvia) 09 - jack
+  server: 72.56.52.248
+  port: 443
+  udp: true
+  type: vless
+  uuid: add59713-f5c6-4442-83a3-6bc9281f5c90
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
+  servername: lv.dexlen.cc
+  client-fingerprint: firefox
+- name: 🇱🇻 拉脱维亚 (Latvia) 10 - jack
   server: 138.124.180.137
   port: 443
   udp: true
@@ -79,6 +98,8 @@ proxy-groups:
   - 🇱🇻 拉脱维亚 (Latvia) 06 - jack
   - 🇱🇻 拉脱维亚 (Latvia) 07 - jack
   - 🇱🇻 拉脱维亚 (Latvia) 08 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 09 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 10 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -92,5 +113,7 @@ proxy-groups:
   - 🇱🇻 拉脱维亚 (Latvia) 06 - jack
   - 🇱🇻 拉脱维亚 (Latvia) 07 - jack
   - 🇱🇻 拉脱维亚 (Latvia) 08 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 09 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 10 - jack
 rules:
 - MATCH,PROXIES

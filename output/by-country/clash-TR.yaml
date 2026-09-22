@@ -5,19 +5,31 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - jack
-  server: 31.214.152.140
+  server: 206.1.97.61
   port: 443
   udp: true
   type: vless
-  uuid: ad297a2b-ae17-4d2d-8fce-e2eafb89b145
+  uuid: 416cea75-4802-43b1-8f31-c7fa1e211a6a
+  tls: true
+  reality-opts:
+    public-key: GFREEsH4rFLnXKDLKXk0iTZNP5_d1zfKTj8DUE0L6RE
+    short-id: d7397feef49deef9
+  servername: Miro.com
+  client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 02 - jack
+  server: 78.135.73.47
+  port: 443
+  udp: true
+  type: vless
+  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: bjqOUjqNQMF6NZ2kRis0NTNTcpdLBrr7CvZjFATrhg8
-    short-id: 08
-  servername: dw.b-cdn.net
+    public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
+    short-id: f46cd3ea3d1eb72d
+  servername: www.datadoghq.com
   client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 02 - jack
+- name: 🇹🇷 土耳其 (Turkey) 03 - jack
   server: 151.241.226.201
   port: 2053
   udp: true
@@ -29,6 +41,12 @@ proxies:
     short-id: 9e419c0759b54d6f
   servername: www.apple.com
   client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 04 - jack
+  server: 144.225.65.177
+  port: 443
+  udp: true
+  type: vless
+  uuid: 443b2e33-8e9c-4f7b-a48a-383a93895d1e
 proxy-groups:
 - name: PROXIES
   type: select
@@ -36,6 +54,8 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 - jack
   - 🇹🇷 土耳其 (Turkey) 02 - jack
+  - 🇹🇷 土耳其 (Turkey) 03 - jack
+  - 🇹🇷 土耳其 (Turkey) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -43,5 +63,7 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 - jack
   - 🇹🇷 土耳其 (Turkey) 02 - jack
+  - 🇹🇷 土耳其 (Turkey) 03 - jack
+  - 🇹🇷 土耳其 (Turkey) 04 - jack
 rules:
 - MATCH,PROXIES

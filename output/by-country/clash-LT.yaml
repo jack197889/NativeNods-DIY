@@ -6,12 +6,19 @@ log-level: info
 proxies:
 - name: 🇱🇹 立陶宛 (Lithuania) 01 - jack
   server: 195.238.126.20
-  port: 9086
+  port: 9002
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: 37Z4TFCYhfxcpc9Q
+  password: b8KkNDjEd5QqFyRm
 - name: 🇱🇹 立陶宛 (Lithuania) 02 - jack
+  server: 195.238.126.20
+  port: 9068
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: mwgRg9hRq3b4Qnwb
+- name: 🇱🇹 立陶宛 (Lithuania) 03 - jack
   server: 84.32.215.94
   port: 443
   udp: true
@@ -24,6 +31,19 @@ proxies:
     short-id: 4fa44664f6a566d3
   servername: lt.aether-runet.top
   client-fingerprint: firefox
+- name: 🇱🇹 立陶宛 (Lithuania) 04 - jack
+  server: ltu.accessgate.link
+  port: 2096
+  udp: true
+  type: vless
+  uuid: 38eb3e71-4349-4bd6-9baf-9740e1896495
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko
+    short-id: b0d8c9a285c70f6f
+  servername: unpkg.com
+  client-fingerprint: edge
 proxy-groups:
 - name: PROXIES
   type: select
@@ -31,6 +51,8 @@ proxy-groups:
   - AUTO
   - 🇱🇹 立陶宛 (Lithuania) 01 - jack
   - 🇱🇹 立陶宛 (Lithuania) 02 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 03 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -38,5 +60,7 @@ proxy-groups:
   proxies:
   - 🇱🇹 立陶宛 (Lithuania) 01 - jack
   - 🇱🇹 立陶宛 (Lithuania) 02 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 03 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 04 - jack
 rules:
 - MATCH,PROXIES
