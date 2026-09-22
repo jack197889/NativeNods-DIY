@@ -24,19 +24,6 @@ proxies:
     short-id: 43dcff53849b81e6
   servername: at.quattro-tech.ru
   client-fingerprint: qq
-- name: 🇦🇹 奥地利 (Austria) 03 - jack
-  server: eat8xny7.selqora.ir
-  port: 51595
-  udp: true
-  type: vless
-  uuid: d9826bd9-1023-4a3b-895e-3ba9d64061f2
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 2r94D7GhoZK4inffwafDlMW23Rqj1YVR5871e8EHADs
-    short-id: 155e0ffd717f90d8
-  servername: ads.aparat.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -44,7 +31,6 @@ proxy-groups:
   - AUTO
   - 🇦🇹 奥地利 (Austria) 01 - jack
   - 🇦🇹 奥地利 (Austria) 02 - jack
-  - 🇦🇹 奥地利 (Austria) 03 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -52,6 +38,5 @@ proxy-groups:
   proxies:
   - 🇦🇹 奥地利 (Austria) 01 - jack
   - 🇦🇹 奥地利 (Austria) 02 - jack
-  - 🇦🇹 奥地利 (Austria) 03 - jack
 rules:
 - MATCH,PROXIES

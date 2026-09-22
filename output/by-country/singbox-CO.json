@@ -5,31 +5,24 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇱🇰 斯里兰卡 (Sri Lanka) 01 - jack",
-      "server": "support.zoom.us",
-      "server_port": 80,
-      "uuid": "684f9a2e-4f96-497f-bfd9-ff1e34637952",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "free.sahanwickramasinghe.me"
-        }
-      }
+      "tag": "🇨🇴 哥伦比亚 (Colombia) 01 - jack",
+      "server": "157.137.212.178",
+      "server_port": 62145,
+      "uuid": "8fb65472-5957-4f64-ba2d-b5812b2f155a"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇰 斯里兰卡 (Sri Lanka) 01 - jack"
+        "🇨🇴 哥伦比亚 (Colombia) 01 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇰 斯里兰卡 (Sri Lanka) 01 - jack"
+        "🇨🇴 哥伦比亚 (Colombia) 01 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

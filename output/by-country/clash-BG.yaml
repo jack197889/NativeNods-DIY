@@ -6,38 +6,19 @@ log-level: info
 proxies:
 - name: 🇧🇬 保加利亚 (Bulgaria) 01 - jack
   server: 213.183.63.60
-  port: 9064
+  port: 9061
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: cp8pRSUAyLhTfVWH
+  password: 4R3hUfZ2FHhDmNcP
 - name: 🇧🇬 保加利亚 (Bulgaria) 02 - jack
   server: 213.183.63.60
-  port: 9085
+  port: 9054
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: 9ej82EKe2gq7gLAM
+  password: VcFuyXvND2yQWSFY
 - name: 🇧🇬 保加利亚 (Bulgaria) 03 - jack
-  server: 192.145.31.5
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
-  tls: true
-  servername: neth9.lunariai.ru
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇧🇬 保加利亚 (Bulgaria) 04 - jack
-  server: 192.145.31.5
-  port: 443
-  udp: true
-  type: vless
-  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇧🇬 保加利亚 (Bulgaria) 05 - jack
   server: 193.148.59.178
   port: 443
   udp: true
@@ -50,8 +31,24 @@ proxies:
     short-id: e3daad69
   servername: www.apple.com
   client-fingerprint: chrome
+- name: 🇧🇬 保加利亚 (Bulgaria) 04 - jack
+  server: 213.183.63.60
+  port: 9085
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 9ej82EKe2gq7gLAM
+- name: 🇧🇬 保加利亚 (Bulgaria) 05 - jack
+  server: 131.123.37.199
+  port: 8081
+  udp: true
+  type: vless
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+  network: ws
+  ws-opts:
+    path: /vless-test
 - name: 🇧🇬 保加利亚 (Bulgaria) 06 - jack
-  server: 131.123.39.29
+  server: 131.123.41.177
   port: 8081
   udp: true
   type: vless
@@ -60,18 +57,18 @@ proxies:
   ws-opts:
     path: /vless-test
 - name: 🇧🇬 保加利亚 (Bulgaria) 07 - jack
-  server: 136.175.82.85
-  port: 18775
+  server: 144.31.50.236
+  port: 443
   udp: true
   type: vless
-  uuid: 9ae5940b-0278-403d-a1e1-9dddc47bdcf6
+  uuid: 1c332eae-7e02-4acd-996d-4eb3e652401c
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: oR75S6pg_RDAKIuzv_WrCiwaUqqFoek2iuo5N22llQQ
-    short-id: 6ba85179e30d4fc2
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
+    public-key: uitO4Z8t9TplwwYaqwLqh5rfxDh_X8bOBiNuPbzvaEM
+    short-id: bbe46bd8f6b96839
+  servername: yandex.ru
+  client-fingerprint: firefox
 - name: 🇧🇬 保加利亚 (Bulgaria) 08 - jack
   server: 131.123.41.18
   port: 443
@@ -84,47 +81,6 @@ proxies:
     public-key: pX9uknHGLC9I26TT5kq4bIAljtX2AGWLK23EMgn6xFo
     short-id: 84be686ea1d16478
   servername: sheetpeek.com
-  client-fingerprint: chrome
-- name: 🇧🇬 保加利亚 (Bulgaria) 09 - jack
-  server: 131.123.39.29
-  port: 443
-  udp: true
-  type: vless
-  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: pX9uknHGLC9I26TT5kq4bIAljtX2AGWLK23EMgn6xFo
-    short-id: 84be686ea1d16478
-  servername: sheetpeek.com
-  client-fingerprint: firefox
-- name: 🇧🇬 保加利亚 (Bulgaria) 10 - jack
-  server: 108.165.233.223
-  port: 443
-  udp: true
-  type: vless
-  uuid: 2388e166-3890-33ae-f77e-efac00000001
-  tls: true
-  servername: netlivpn4813.ddhshhshs.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: netlivpn4813.ddhshhshs.workers.dev
-- name: 🇧🇬 保加利亚 (Bulgaria) 11 - jack
-  server: 144.31.50.236
-  port: 443
-  udp: true
-  type: vless
-  uuid: 1c332eae-7e02-4acd-996d-4eb3e652401c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: uitO4Z8t9TplwwYaqwLqh5rfxDh_X8bOBiNuPbzvaEM
-    short-id: bbe46bd8f6b96839
-  servername: yandex.ru
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -139,9 +95,6 @@ proxy-groups:
   - 🇧🇬 保加利亚 (Bulgaria) 06 - jack
   - 🇧🇬 保加利亚 (Bulgaria) 07 - jack
   - 🇧🇬 保加利亚 (Bulgaria) 08 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 09 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 10 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 11 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -155,8 +108,5 @@ proxy-groups:
   - 🇧🇬 保加利亚 (Bulgaria) 06 - jack
   - 🇧🇬 保加利亚 (Bulgaria) 07 - jack
   - 🇧🇬 保加利亚 (Bulgaria) 08 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 09 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 10 - jack
-  - 🇧🇬 保加利亚 (Bulgaria) 11 - jack
 rules:
 - MATCH,PROXIES

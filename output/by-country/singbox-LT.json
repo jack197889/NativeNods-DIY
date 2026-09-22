@@ -7,22 +7,14 @@
       "type": "shadowsocks",
       "tag": "🇱🇹 立陶宛 (Lithuania) 01 - jack",
       "server": "195.238.126.20",
-      "server_port": 9002,
+      "server_port": 9045,
       "method": "aes-256-cfb",
-      "password": "b8KkNDjEd5QqFyRm"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇱🇹 立陶宛 (Lithuania) 02 - jack",
-      "server": "195.238.126.20",
-      "server_port": 9068,
-      "method": "aes-256-cfb",
-      "password": "mwgRg9hRq3b4Qnwb"
+      "password": "Lp27rqyJq72bZsqX"
     },
     {
       "type": "vless",
-      "tag": "🇱🇹 立陶宛 (Lithuania) 03 - jack",
-      "server": "84.32.215.94",
+      "tag": "🇱🇹 立陶宛 (Lithuania) 02 - jack",
+      "server": "84.32.215.5",
       "server_port": 443,
       "uuid": "c5694dc5-39fd-4a92-8430-3837baa522a3",
       "flow": "xtls-rprx-vision",
@@ -31,7 +23,7 @@
         "server_name": "lt.aether-runet.top",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -41,35 +33,12 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇱🇹 立陶宛 (Lithuania) 04 - jack",
-      "server": "ltu.accessgate.link",
-      "server_port": 2096,
-      "uuid": "38eb3e71-4349-4bd6-9baf-9740e1896495",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "unpkg.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
-          "short_id": "b0d8c9a285c70f6f"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇱🇹 立陶宛 (Lithuania) 01 - jack",
-        "🇱🇹 立陶宛 (Lithuania) 02 - jack",
-        "🇱🇹 立陶宛 (Lithuania) 03 - jack",
-        "🇱🇹 立陶宛 (Lithuania) 04 - jack"
+        "🇱🇹 立陶宛 (Lithuania) 02 - jack"
       ]
     },
     {
@@ -77,9 +46,7 @@
       "tag": "auto",
       "outbounds": [
         "🇱🇹 立陶宛 (Lithuania) 01 - jack",
-        "🇱🇹 立陶宛 (Lithuania) 02 - jack",
-        "🇱🇹 立陶宛 (Lithuania) 03 - jack",
-        "🇱🇹 立陶宛 (Lithuania) 04 - jack"
+        "🇱🇹 立陶宛 (Lithuania) 02 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
