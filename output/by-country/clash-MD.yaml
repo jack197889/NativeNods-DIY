@@ -5,19 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇲🇩 摩尔多瓦 (Moldova) 01 - jack
-  server: moldova.cdn-europe.org
-  port: 4443
-  udp: true
-  type: vless
-  uuid: d7c94b82-657a-4bb7-9b24-2ae566669835
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: cYwrRCz_hKgT_JE8WywuLE3XOkAEqCTuBiUvXAaEjn8
-    short-id: 694ee64512cfcbef
-  servername: moldova.cdn-europe.org
-  client-fingerprint: chrome
-- name: 🇲🇩 摩尔多瓦 (Moldova) 02 - jack
   server: 143.246.219.51
   port: 8081
   udp: true
@@ -32,13 +19,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇲🇩 摩尔多瓦 (Moldova) 01 - jack
-  - 🇲🇩 摩尔多瓦 (Moldova) 02 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇲🇩 摩尔多瓦 (Moldova) 01 - jack
-  - 🇲🇩 摩尔多瓦 (Moldova) 02 - jack
 rules:
 - MATCH,PROXIES

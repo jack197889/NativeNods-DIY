@@ -14,6 +14,29 @@
     {
       "type": "vless",
       "tag": "🇦🇹 奥地利 (Austria) 02 - jack",
+      "server": "195.74.90.115",
+      "server_port": 9443,
+      "uuid": "d9d0f208-d582-41d5-bb7b-742671402810",
+      "tls": {
+        "enabled": true,
+        "server_name": "hub-vie-01.hanvpn.cc",
+        "insecure": false,
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vie01-grpc-8e47a"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇹 奥地利 (Austria) 03 - jack",
       "server": "152.53.1.40",
       "server_port": 443,
       "uuid": "edde565e-41f5-400e-84ea-7b87a3e84488",
@@ -38,7 +61,8 @@
       "outbounds": [
         "auto",
         "🇦🇹 奥地利 (Austria) 01 - jack",
-        "🇦🇹 奥地利 (Austria) 02 - jack"
+        "🇦🇹 奥地利 (Austria) 02 - jack",
+        "🇦🇹 奥地利 (Austria) 03 - jack"
       ]
     },
     {
@@ -46,7 +70,8 @@
       "tag": "auto",
       "outbounds": [
         "🇦🇹 奥地利 (Austria) 01 - jack",
-        "🇦🇹 奥地利 (Austria) 02 - jack"
+        "🇦🇹 奥地利 (Austria) 02 - jack",
+        "🇦🇹 奥地利 (Austria) 03 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

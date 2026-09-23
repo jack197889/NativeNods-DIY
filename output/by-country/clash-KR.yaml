@@ -17,6 +17,30 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: chrome
 - name: 🇰🇷 韩国 (South Korea) 02 - jack
+  server: 131.186.19.174
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 7302ad33229de166d393cd56143a1e4c
+  sni: google.com
+  skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 03 - jack
+  server: 152.69.231.175
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 1beb216e3f60aea9555dae60d219a5ca
+  sni: 152-69-231-175.liao.kdns.fr
+  skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 04 - jack
+  server: vpn-kr-003.fastervpn.world
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-kr-003.fastervpn.world
+  skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 05 - jack
   server: 152.70.237.123
   port: 2053
   udp: true
@@ -24,15 +48,7 @@ proxies:
   password: maintell
   sni: bing.com
   skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 03 - jack
-  server: vpn-kr-002.fastervpn.world
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ9wR5tF6vB3z
-  sni: vpn-kr-002.fastervpn.world
-  skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 04 - jack
+- name: 🇰🇷 韩国 (South Korea) 06 - jack
   server: 47.80.62.71
   port: 443
   udp: true
@@ -45,34 +61,7 @@ proxies:
     short-id: 0b674631d5fc6b93
   servername: www.nvidia.com
   client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 05 - jack
-  server: 131.186.19.174
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: 7302ad33229de166d393cd56143a1e4c
-  sni: speedtest.tinkoff.ru
-  skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 06 - jack
-  server: 132.145.80.230
-  port: 80
-  udp: true
-  type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /cctv13.m3u8
 - name: 🇰🇷 韩国 (South Korea) 07 - jack
-  server: 3.36.93.74
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-kr-003.fastervpn.world
-  skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 08 - jack
   server: 3.39.4.109
   port: 18967
   udp: true
@@ -84,16 +73,36 @@ proxies:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
   servername: www.apple.com
-  client-fingerprint: edge
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 08 - jack
+  server: vpn-kr-002.fastervpn.world
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ9wR5tF6vB3z
+  sni: vpn-kr-002.fastervpn.world
+  skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 09 - jack
-  server: 132.226.226.189
+  server: 152.67.200.82
   port: 50160
   udp: true
   type: hysteria2
-  password: 1671a252e2a97dc2bda4e515475931da
-  sni: www.bing.com
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  sni: 152.67.200.82
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 10 - jack
+  server: 34.22.64.72
+  port: 443
+  udp: true
+  type: vless
+  uuid: cb2abff3-5fe6-4b5a-aa19-5739deb285b6
+  tls: true
+  reality-opts:
+    public-key: M0QKczb2MzOH45qDViIAbb9LPrVVyCp880D4HlwIKnA
+    short-id: 8685f8b4d9f4f51e
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 11 - jack
   server: 3.39.4.109
   port: 13672
   udp: true
@@ -106,26 +115,13 @@ proxies:
     short-id: 48050fab
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 11 - jack
-  server: 47.80.14.8
-  port: 443
-  udp: true
-  type: vless
-  uuid: 581cb8c3-dadb-4e10-a18b-5e79bfe7bd93
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: OBIHAXdhfYJ0PWsZjy3QYPRjTfMQlvjmBsTf1CT671w
-    short-id: 71110d3f7ef57760
-  servername: www.samsung.com
-  client-fingerprint: chrome
 - name: 🇰🇷 韩国 (South Korea) 12 - jack
-  server: 152.67.200.82
+  server: 132.226.226.189
   port: 50160
   udp: true
   type: hysteria2
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  sni: 152.67.200.82
+  password: 1671a252e2a97dc2bda4e515475931da
+  sni: www.bing.com
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 13 - jack
   server: 151.245.106.49
@@ -140,22 +136,14 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: firefox
 - name: 🇰🇷 韩国 (South Korea) 14 - jack
-  server: 152.69.231.175
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: 1beb216e3f60aea9555dae60d219a5ca
-  sni: 152-69-231-175.liao.kdns.fr
-  skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 15 - jack
   server: 150-230-252-217.liao.kdns.fr
   port: 50160
   udp: true
   type: hysteria2
   password: 9cfc9458e48c028ec03ff86ebc71c744
-  sni: 127.0.0.1
-  skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 16 - jack
+  sni: 150-230-252-217.liao.kdns.fr
+  skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 15 - jack
   server: 154.90.62.70
   port: 56127
   udp: true
@@ -163,9 +151,17 @@ proxies:
   password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
   sni: 154.90.62.70
   skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 16 - jack
+  server: 140.238.2.250
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+  alterId: 0
+  cipher: auto
 - name: 🇰🇷 韩国 (South Korea) 17 - jack
-  server: 211.178.105.134
-  port: 6123
+  server: 218.237.185.230
+  port: 4652
   udp: true
   type: ss
   cipher: aes-256-cfb

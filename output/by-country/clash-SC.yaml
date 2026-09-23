@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇱 AL 01 - jack
-  server: 194.93.61.86
+- name: 🇸🇨 塞舌尔 (Seychelles) 01 - jack
+  server: 144.31.50.236
   port: 443
   udp: true
   type: vless
-  uuid: 41e71ba7-d389-47aa-94f7-ed1f55fdbcdf
+  uuid: 1c332eae-7e02-4acd-996d-4eb3e652401c
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: E1te_g9q6EWQVOCgjwI4PF-cml9qqW7OEAf33tYkUxQ
-    short-id: 17d334ad29b2ff40
-  servername: cdnjs.com
-  client-fingerprint: qq
+    public-key: uitO4Z8t9TplwwYaqwLqh5rfxDh_X8bOBiNuPbzvaEM
+    short-id: bbe46bd8f6b96839
+  servername: yandex.ru
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇱 AL 01 - jack
+  - 🇸🇨 塞舌尔 (Seychelles) 01 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇱 AL 01 - jack
+  - 🇸🇨 塞舌尔 (Seychelles) 01 - jack
 rules:
 - MATCH,PROXIES

@@ -5,42 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - jack
-  server: 2.27.175.71
-  port: 443
-  udp: true
-  type: vless
-  uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b
-  tls: true
-  servername: assets-fi.pleiades.codes
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: cdn.v1.AssetService
-- name: 🇫🇮 芬兰 (Finland) 02 - jack
-  server: 104.16.72.101
-  port: 80
-  udp: true
-  type: vless
-  uuid: d5598622-46b8-b017-3af3-232500000001
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: nahan-core.netizo09.workers.dev
-- name: 🇫🇮 芬兰 (Finland) 03 - jack
-  server: 83.219.97.26
-  port: 443
-  udp: true
-  type: vless
-  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
-  servername: est1313.ggisopi.su
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 04 - jack
   server: 95.217.24.236
   port: 2087
   udp: true
@@ -53,30 +17,20 @@ proxies:
     short-id: a32cfb5deca913ad
   servername: 62.238.41.21
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 05 - jack
-  server: 193.23.201.65
-  port: 5432
+- name: 🇫🇮 芬兰 (Finland) 02 - jack
+  server: 2.27.175.71
+  port: 443
   udp: true
   type: vless
-  uuid: e84e0918-68ca-4fcc-a1d1-b566fd9ac7ee
-  flow: xtls-rprx-vision
+  uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b
   tls: true
-  servername: 193.23.201.65
+  servername: assets-fi.pleiades.codes
   skip-cert-verify: false
-  client-fingerprint: safari
-- name: 🇫🇮 芬兰 (Finland) 06 - jack
-  server: 95.216.27.15
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
-  tls: true
-  reality-opts:
-    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
-    short-id: d368b94e275ab080
-  servername: www.google.com
   client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 07 - jack
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cdn.v1.AssetService
+- name: 🇫🇮 芬兰 (Finland) 03 - jack
   server: 185.79.138.71
   port: 448
   udp: true
@@ -88,7 +42,66 @@ proxies:
     short-id: cd21e552537c7c0b
   servername: www.samsung.com
   client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 04 - jack
+  server: 37.143.129.244
+  port: 443
+  udp: true
+  type: vless
+  uuid: 0e6de971-69e8-4536-b06d-8b6eae57021b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 5HArul2NDXfFUxijHj1xiPCfH-77zuuRxylT1vWIvUY
+    short-id: 48fd192dc4e46bc0
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 05 - jack
+  server: fi.snobvpn.online
+  port: 80
+  udp: true
+  type: vless
+  uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
+  network: ws
+  ws-opts:
+    path: /snob-ws
+- name: 🇫🇮 芬兰 (Finland) 06 - jack
+  server: est1313.ggisopi.su
+  port: 443
+  udp: true
+  type: vless
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: est1313.ggisopi.su
+  client-fingerprint: edge
+- name: 🇫🇮 芬兰 (Finland) 07 - jack
+  server: 95.216.27.15
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
+  tls: true
+  reality-opts:
+    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
+    short-id: d368b94e275ab080
+  servername: www.google.com
+  client-fingerprint: firefox
 - name: 🇫🇮 芬兰 (Finland) 08 - jack
+  server: 31.77.199.147
+  port: 4443
+  udp: true
+  type: vless
+  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GvkQwcZWiXQBLzEhTVfQkyPpdgo6Opc3RtLsED9sA0A
+    short-id: 7da2eae792187ab9
+  servername: images.unsplash.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 09 - jack
   server: 212.193.18.183
   port: 8446
   udp: true
@@ -103,7 +116,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: snob-grpc
-- name: 🇫🇮 芬兰 (Finland) 09 - jack
+- name: 🇫🇮 芬兰 (Finland) 10 - jack
   server: 212.193.18.183
   port: 8443
   udp: true
@@ -115,66 +128,18 @@ proxies:
     short-id: a1b2c3d4e5f6
   servername: maps.apple.com
   client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 10 - jack
-  server: fi.snobvpn.online
-  port: 80
-  udp: true
-  type: vless
-  uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
-  network: ws
-  ws-opts:
-    path: /snob-ws
 - name: 🇫🇮 芬兰 (Finland) 11 - jack
-  server: 37.143.129.244
-  port: 443
+  server: 193.23.201.65
+  port: 5432
   udp: true
   type: vless
-  uuid: 0e6de971-69e8-4536-b06d-8b6eae57021b
+  uuid: e84e0918-68ca-4fcc-a1d1-b566fd9ac7ee
   flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: 5HArul2NDXfFUxijHj1xiPCfH-77zuuRxylT1vWIvUY
-    short-id: 48fd192dc4e46bc0
-  servername: gateway.icloud.com
+  servername: 193.23.201.65
+  skip-cert-verify: false
   client-fingerprint: chrome
 - name: 🇫🇮 芬兰 (Finland) 12 - jack
-  server: 62.60.229.124
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 5b754a1a-11aa-4df9-a8ba-44af9a579fe1
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: MjRaYQ5TjfU2rfHxVQ2Sa4nXRHHvsMvi3DW-x09n8Ts
-  servername: finland.b2ai.top
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 13 - jack
-  server: 31.76.80.230
-  port: 8443
-  udp: true
-  type: vless
-  uuid: d544c858-b1ba-45b2-8868-8197daf2a6ee
-  tls: true
-  servername: fin.luxes.network
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assets
-- name: 🇫🇮 芬兰 (Finland) 14 - jack
-  server: 185.255.179.11
-  port: 9443
-  udp: true
-  type: vless
-  uuid: d9d0f208-d582-41d5-bb7b-742671402810
-  tls: true
-  servername: hub-fi-02.hanvpn.cc
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: fi02-grpc-8e47a
-- name: 🇫🇮 芬兰 (Finland) 15 - jack
   server: 193.23.201.133
   port: 5432
   udp: true
@@ -185,27 +150,6 @@ proxies:
   servername: 193.23.201.133
   skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 16 - jack
-  server: 31.77.199.147
-  port: 4443
-  udp: true
-  type: vless
-  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GvkQwcZWiXQBLzEhTVfQkyPpdgo6Opc3RtLsED9sA0A
-    short-id: 7da2eae792187ab9
-  servername: images.unsplash.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 17 - jack
-  server: iq5ny.pleiades.codes
-  port: 8443
-  udp: true
-  type: hysteria2
-  password: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b
-  sni: iq5ny.pleiades.codes
-  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -223,11 +167,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 10 - jack
   - 🇫🇮 芬兰 (Finland) 11 - jack
   - 🇫🇮 芬兰 (Finland) 12 - jack
-  - 🇫🇮 芬兰 (Finland) 13 - jack
-  - 🇫🇮 芬兰 (Finland) 14 - jack
-  - 🇫🇮 芬兰 (Finland) 15 - jack
-  - 🇫🇮 芬兰 (Finland) 16 - jack
-  - 🇫🇮 芬兰 (Finland) 17 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -245,10 +184,5 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 10 - jack
   - 🇫🇮 芬兰 (Finland) 11 - jack
   - 🇫🇮 芬兰 (Finland) 12 - jack
-  - 🇫🇮 芬兰 (Finland) 13 - jack
-  - 🇫🇮 芬兰 (Finland) 14 - jack
-  - 🇫🇮 芬兰 (Finland) 15 - jack
-  - 🇫🇮 芬兰 (Finland) 16 - jack
-  - 🇫🇮 芬兰 (Finland) 17 - jack
 rules:
 - MATCH,PROXIES

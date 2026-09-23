@@ -6,30 +6,23 @@
     {
       "type": "vless",
       "tag": "🌐 其他地区 (Other) 01 - jack",
-      "server": "188.114.97.6",
-      "server_port": 2082,
-      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
+      "server": "104.18.14.103",
+      "server_port": 443,
+      "uuid": "3c6d1933-b22a-484b-ac8a-63e24f5fba75",
+      "tls": {
+        "enabled": true,
+        "server_name": "server9.9966338.xyz",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
       "transport": {
         "type": "ws",
-        "path": "/",
+        "path": "/imnotarealherox",
         "headers": {
-          "Host": "zb1zi.s3nx.dyz.hh.vavava.kdns.fr"
-        },
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🌐 其他地区 (Other) 02 - jack",
-      "server": "188.114.97.6",
-      "server_port": 2082,
-      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2560",
-        "headers": {
-          "Host": "zb1zi.s3nx.dyz.hh.vavava.kdns.fr"
+          "Host": "server9.9966338.xyz"
         }
       }
     },
@@ -38,16 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 其他地区 (Other) 01 - jack",
-        "🌐 其他地区 (Other) 02 - jack"
+        "🌐 其他地区 (Other) 01 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 其他地区 (Other) 01 - jack",
-        "🌐 其他地区 (Other) 02 - jack"
+        "🌐 其他地区 (Other) 01 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

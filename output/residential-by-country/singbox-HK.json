@@ -4,23 +4,15 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "anytls",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - jack",
-      "server": "dee2309db4944c248b6d4372c6641e7b.oylfmxz.cn",
+      "server": "ac7548f3ebe045b39a90288ff1e97528.pnuqcnp.cn",
       "server_port": 443,
-      "uuid": "d90e4077-bc7e-414d-a650-70bf1baae4d6",
-      "security": "auto",
+      "password": "9sK2mP8xQ7vL3nZ6",
       "tls": {
         "enabled": true,
-        "server_name": "dee2309db4944c248b6d4372c6641e7b.oylfmxz.cn",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "dee2309db4944c248b6d4372c6641e7b.oylfmxz.cn"
-        }
+        "server_name": "ac7548f3ebe045b39a90288ff1e97528.lwdnxf.cn",
+        "insecure": true
       }
     },
     {

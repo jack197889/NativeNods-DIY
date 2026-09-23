@@ -4,72 +4,36 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇦🇺 澳大利亚 (Australia) 01 - jack",
-      "server": "188.114.97.6",
-      "server_port": 80,
-      "uuid": "e51453d3-7972-44d7-a657-ed89520f48b6",
-      "transport": {
-        "type": "ws",
-        "path": "/au-do",
-        "headers": {
-          "Host": "web.whatsapp.com.r3xxe.eu.cc"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇦🇺 澳大利亚 (Australia) 02 - jack",
-      "server": "104.18.155.229",
-      "server_port": 443,
-      "uuid": "42026ed0-7d74-4585-8e46-0fe6aa4d665a",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.genflix.co.id.r3xxe.eu.cc",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/au-do",
-        "headers": {
-          "Host": "www.genflix.co.id.r3xxe.eu.cc"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇦🇺 澳大利亚 (Australia) 03 - jack",
-      "server": "185.18.250.252",
-      "server_port": 443,
-      "password": "74480619-b6a8-4ab8-94e1-1132fc18b2fa",
-      "tls": {
-        "enabled": true,
-        "server_name": "unnes.ac.id.r3xxe.eu.cc",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/au-mt",
-        "headers": {
-          "Host": "unnes.ac.id.r3xxe.eu.cc"
-        }
-      }
-    },
-    {
       "type": "vmess",
-      "tag": "🇦🇺 澳大利亚 (Australia) 04 - jack",
-      "server": "82.198.246.250",
+      "tag": "🇦🇺 澳大利亚 (Australia) 01 - jack",
+      "server": "82.198.246.233",
       "server_port": 180,
       "uuid": "d13fc2f5-3e05-4795-81eb-44143a09e552",
       "security": "auto"
     },
     {
       "type": "vless",
-      "tag": "🇦🇺 澳大利亚 (Australia) 05 - jack",
+      "tag": "🇦🇺 澳大利亚 (Australia) 02 - jack",
+      "server": "34.87.229.148",
+      "server_port": 443,
+      "uuid": "4f865f35-cf47-4e7f-a7e6-8882511a1b36",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "OgTkmAQdLjipA9oLloxbU5BAX3hPjzbvkEGHF4aZ8z4",
+          "short_id": "8a7d5e0248cdb1b1"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇺 澳大利亚 (Australia) 03 - jack",
       "server": "51.161.204.244",
       "server_port": 443,
       "uuid": "36e89875-9c53-482b-bc41-d3890e9da176",
@@ -90,7 +54,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇦🇺 澳大利亚 (Australia) 06 - jack",
+      "tag": "🇦🇺 澳大利亚 (Australia) 04 - jack",
       "server": "34.87.244.111",
       "server_port": 443,
       "uuid": "325bc1be-0cb7-4cf7-bd35-a79ded91bbbd",
@@ -99,7 +63,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "ios"
         },
         "reality": {
           "enabled": true,
@@ -110,46 +74,33 @@
     },
     {
       "type": "vless",
-      "tag": "🇦🇺 澳大利亚 (Australia) 07 - jack",
-      "server": "34.87.229.148",
-      "server_port": 443,
-      "uuid": "4f865f35-cf47-4e7f-a7e6-8882511a1b36",
+      "tag": "🇦🇺 澳大利亚 (Australia) 05 - jack",
+      "server": "nova.freshnet.ir",
+      "server_port": 2082,
+      "uuid": "ce2bd817-7fb1-4b94-8125-d6161de31962",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "nova.freshnet.ir",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "OgTkmAQdLjipA9oLloxbU5BAX3hPjzbvkEGHF4aZ8z4",
-          "short_id": "8a7d5e0248cdb1b1"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/cats/FslNz",
+        "headers": {
+          "Host": "nova.freshnet.ir"
         }
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇦🇺 澳大利亚 (Australia) 08 - jack",
-      "server": "152.67.115.203",
-      "server_port": 443,
-      "password": "633bc3be486b646190661ac2387c150a",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "850a3fb1cd33a28f12d837578ae1a2e7"
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇦🇺 澳大利亚 (Australia) 09 - jack",
+      "tag": "🇦🇺 澳大利亚 (Australia) 06 - jack",
       "server": "au1.gsafevpnapi.com",
       "server_port": 20270,
-      "uuid": "3da32b09-10e5-4ef9-b422-2e476dd72d87",
+      "uuid": "6eef3a79-22bc-4086-b5e6-95e07db73016",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -175,10 +126,7 @@
         "🇦🇺 澳大利亚 (Australia) 03 - jack",
         "🇦🇺 澳大利亚 (Australia) 04 - jack",
         "🇦🇺 澳大利亚 (Australia) 05 - jack",
-        "🇦🇺 澳大利亚 (Australia) 06 - jack",
-        "🇦🇺 澳大利亚 (Australia) 07 - jack",
-        "🇦🇺 澳大利亚 (Australia) 08 - jack",
-        "🇦🇺 澳大利亚 (Australia) 09 - jack"
+        "🇦🇺 澳大利亚 (Australia) 06 - jack"
       ]
     },
     {
@@ -190,10 +138,7 @@
         "🇦🇺 澳大利亚 (Australia) 03 - jack",
         "🇦🇺 澳大利亚 (Australia) 04 - jack",
         "🇦🇺 澳大利亚 (Australia) 05 - jack",
-        "🇦🇺 澳大利亚 (Australia) 06 - jack",
-        "🇦🇺 澳大利亚 (Australia) 07 - jack",
-        "🇦🇺 澳大利亚 (Australia) 08 - jack",
-        "🇦🇺 澳大利亚 (Australia) 09 - jack"
+        "🇦🇺 澳大利亚 (Australia) 06 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

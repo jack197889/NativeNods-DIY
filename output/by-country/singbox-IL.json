@@ -6,6 +6,27 @@
     {
       "type": "vless",
       "tag": "🇮🇱 以色列 (Israel) 01 - jack",
+      "server": "185.95.231.156",
+      "server_port": 443,
+      "uuid": "1f8cf47a-b66a-4916-979f-26edfcf44eea",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To",
+          "short_id": "a3a578ab"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇱 以色列 (Israel) 02 - jack",
       "server": "185.95.231.233",
       "server_port": 443,
       "uuid": "1ffa8e68-3378-4cf4-b8f6-44bf3d46d106",
@@ -26,39 +47,8 @@
     },
     {
       "type": "vless",
-      "tag": "🇮🇱 以色列 (Israel) 02 - jack",
-      "server": "185.95.231.156",
-      "server_port": 443,
-      "uuid": "1f8cf47a-b66a-4916-979f-26edfcf44eea",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To",
-          "short_id": "a3a578ab"
-        }
-      }
-    },
-    {
-      "type": "vless",
       "tag": "🇮🇱 以色列 (Israel) 03 - jack",
-      "server": "176.65.151.205",
-      "server_port": 59052,
-      "uuid": "73d23177-ac12-4d04-b362-6004eff1c26a",
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇮🇱 以色列 (Israel) 04 - jack",
-      "server": "arcturus.yokkastars.com",
+      "server": "193.202.10.2",
       "server_port": 40443,
       "uuid": "bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54",
       "flow": "xtls-rprx-vision",
@@ -67,7 +57,7 @@
         "server_name": "deepl.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -83,8 +73,7 @@
         "auto",
         "🇮🇱 以色列 (Israel) 01 - jack",
         "🇮🇱 以色列 (Israel) 02 - jack",
-        "🇮🇱 以色列 (Israel) 03 - jack",
-        "🇮🇱 以色列 (Israel) 04 - jack"
+        "🇮🇱 以色列 (Israel) 03 - jack"
       ]
     },
     {
@@ -93,8 +82,7 @@
       "outbounds": [
         "🇮🇱 以色列 (Israel) 01 - jack",
         "🇮🇱 以色列 (Israel) 02 - jack",
-        "🇮🇱 以色列 (Israel) 03 - jack",
-        "🇮🇱 以色列 (Israel) 04 - jack"
+        "🇮🇱 以色列 (Israel) 03 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

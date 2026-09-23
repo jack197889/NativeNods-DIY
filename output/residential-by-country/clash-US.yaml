@@ -25,29 +25,6 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: a39ca173b57ac7021b08bf3e3de9f1f6
-- name: 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
-  server: r3mrcg001286ek2.cybervena.com
-  port: 50099
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
-  server: 6ivh.pnuqcnp.cn
-  port: 443
-  udp: true
-  type: anytls
-  password: 9sK2mP8xQ7vL3nZ6
-  sni: images.ctfassets.net
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 05 (家宽) - jack
-  server: ac7548f3ebe045b39a90288ff1e97528.pnuqcnp.cn
-  port: 443
-  udp: true
-  type: anytls
-  password: 9sK2mP8xQ7vL3nZ6
-  sni: ac7548f3ebe045b39a90288ff1e97528.lwdnxf.cn
-  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -55,9 +32,6 @@ proxy-groups:
   - AUTO
   - 🇺🇸 美国 (United States) 01 (家宽) - jack
   - 🇺🇸 美国 (United States) 02 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
-  - 🇭🇰 中国香港 (Hong Kong) 05 (家宽) - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -65,8 +39,5 @@ proxy-groups:
   proxies:
   - 🇺🇸 美国 (United States) 01 (家宽) - jack
   - 🇺🇸 美国 (United States) 02 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
-  - 🇭🇰 中国香港 (Hong Kong) 05 (家宽) - jack
 rules:
 - MATCH,PROXIES

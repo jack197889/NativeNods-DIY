@@ -5,49 +5,23 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01 - jack
-  server: 188.114.97.6
-  port: 8080
+  server: 153.76.185.180
+  port: 3090
   udp: true
   type: vless
-  uuid: 0432902e-6604-40cd-bbd0-57ab4e5d909f
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiOENNZnB6WTgiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119
-    headers:
-      Host: bpb-4dc4958b.hxjkcghchv.workers.dev
+  uuid: 7e3f65c0-d3d5-4d35-9ac8-26e8ee239796
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
 - name: 🇨🇿 捷克 (Czech) 02 - jack
-  server: 104.21.29.250
-  port: 443
-  udp: true
-  type: trojan
-  password: LcICDcp!jD9TFV$NbH
-  sni: dl2uF-iVdeZILZ3E86rK18.Hhvt37tjm2XBOsQL5HXogN-Y.woRKERS.dEv
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tr/pg4wM48V9O859nmqsJg22EOFKN4S570y
-- name: 🇨🇿 捷克 (Czech) 03 - jack
-  server: 104.21.70.21
-  port: 8080
+  server: 153.76.185.97
+  port: 3090
   udp: true
   type: vless
-  uuid: 8a36be1d-7c78-4885-8a1f-bedf5ba7db1c
-  network: ws
-  ws-opts:
-    path: /rN50nmm9L1DeY73C?ed=2560
-    headers:
-      Host: lucky-lab-ac6d.caveyi8071.workers.dev
-- name: 🇨🇿 捷克 (Czech) 04 - jack
-  server: 6m1rgyieclmrx9hef1.z6-0hlnubjibwzpa85.workers.dev
-  port: 443
-  udp: true
-  type: trojan
-  password: Telegram_healer_config
-  sni: 6m1rGyIEclMRx9HeF1.Z6-0hlNUbJIBwZPa85.wOrKerS.DEV
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tr/GaQvfFwT5sWgVxHig8YaXjtiuQPZNI?ed=2560
+  uuid: 7e3f65c0-d3d5-4d35-9ac8-26e8ee239796
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
 proxy-groups:
 - name: PROXIES
   type: select
@@ -55,8 +29,6 @@ proxy-groups:
   - AUTO
   - 🇨🇿 捷克 (Czech) 01 - jack
   - 🇨🇿 捷克 (Czech) 02 - jack
-  - 🇨🇿 捷克 (Czech) 03 - jack
-  - 🇨🇿 捷克 (Czech) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -64,7 +36,5 @@ proxy-groups:
   proxies:
   - 🇨🇿 捷克 (Czech) 01 - jack
   - 🇨🇿 捷克 (Czech) 02 - jack
-  - 🇨🇿 捷克 (Czech) 03 - jack
-  - 🇨🇿 捷克 (Czech) 04 - jack
 rules:
 - MATCH,PROXIES
