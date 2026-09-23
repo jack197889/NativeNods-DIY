@@ -5,14 +5,46 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - jack
+  server: 94.249.187.46
+  port: 1080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: IXa3ylzS_jBOAsQy071tIQ
+- name: 🇷🇺 俄罗斯 (Russia) 02 - jack
+  server: 94.228.171.159
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 5b754a1a-11aa-4df9-a8ba-44af9a579fe1
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: hcjZwWlIplwEKT-Ea-vTM2n4jwiTCeL9wTUZG0WgCj0
+  servername: de.b2ai.top
+  client-fingerprint: chrome
+- name: 🇷🇺 俄罗斯 (Russia) 03 - jack
   server: 91.240.86.70
   port: 22443
   udp: true
   type: hysteria2
   password: 3f63c86c-ac4a-4900-85cf-4fedf93c2ca5
-  sni: itsallproxy.quattro-tech.ru
-  skip-cert-verify: false
-- name: 🇷🇺 俄罗斯 (Russia) 02 - jack
+  sni: 91.240.86.70
+  skip-cert-verify: true
+- name: 🇷🇺 俄罗斯 (Russia) 04 - jack
+  server: 46.173.17.19
+  port: 443
+  udp: true
+  type: vless
+  uuid: fc47db0c-c6f2-4665-bdb2-8f717822ce9d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Hhp-DQNkUYOkbWR64BHWc7gGYfeqU8yYAwX6sTsqf3A
+    short-id: 4d5163ec7a1bf048
+  servername: 9f8hqeju.datahubfiles.com
+  client-fingerprint: chrome
+- name: 🇷🇺 俄罗斯 (Russia) 05 - jack
   server: 46.8.200.91
   port: 443
   udp: true
@@ -26,18 +58,6 @@ proxies:
     path: /cdn/v3/live
     headers:
       Host: cf3.rumedia-cdn.com
-- name: 🇷🇺 俄罗斯 (Russia) 03 - jack
-  server: 45.12.75.242
-  port: 26424
-  udp: true
-  type: vless
-  uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
-  tls: true
-  reality-opts:
-    public-key: l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0
-    short-id: 23103e1e
-  servername: ya.ru
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -46,6 +66,8 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01 - jack
   - 🇷🇺 俄罗斯 (Russia) 02 - jack
   - 🇷🇺 俄罗斯 (Russia) 03 - jack
+  - 🇷🇺 俄罗斯 (Russia) 04 - jack
+  - 🇷🇺 俄罗斯 (Russia) 05 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -54,5 +76,7 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01 - jack
   - 🇷🇺 俄罗斯 (Russia) 02 - jack
   - 🇷🇺 俄罗斯 (Russia) 03 - jack
+  - 🇷🇺 俄罗斯 (Russia) 04 - jack
+  - 🇷🇺 俄罗斯 (Russia) 05 - jack
 rules:
 - MATCH,PROXIES

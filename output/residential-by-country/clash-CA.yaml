@@ -1,0 +1,31 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇨🇦 加拿大 (Canada) 01 (家宽) - jack
+  server: aged-silence-8d7d.tahaggs.workers.dev
+  port: 443
+  udp: true
+  type: trojan
+  password: b0c94dd5-0c4c-6e1e-7ecf-84c386f7c748
+  sni: aged-silence-8d7d.tahaggs.workers.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /taha3
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇨🇦 加拿大 (Canada) 01 (家宽) - jack
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇨🇦 加拿大 (Canada) 01 (家宽) - jack
+rules:
+- MATCH,PROXIES

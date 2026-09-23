@@ -14,64 +14,38 @@
     {
       "type": "shadowsocks",
       "tag": "🇸🇪 瑞典 (Sweden) 02 - jack",
-      "server": "51.20.72.15",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "server": "172.238.244.13",
+      "server_port": 17000,
+      "method": "aes-256-gcm",
+      "password": "pX0uhU3ZjUcLWYs0Vez55BO3JoQrRlL"
     },
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇸🇪 瑞典 (Sweden) 03 - jack",
-      "server": "16.170.163.124",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇸🇪 瑞典 (Sweden) 04 - jack",
-      "server": "16.171.55.2",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 05 - jack",
-      "server": "143.246.195.138",
-      "server_port": 8081,
-      "uuid": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
-      "transport": {
-        "type": "ws",
-        "path": "/vless-test"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 06 - jack",
-      "server": "143.246.195.98",
-      "server_port": 8081,
-      "uuid": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
-      "transport": {
-        "type": "ws",
-        "path": "/vless-test"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇸🇪 瑞典 (Sweden) 07 - jack",
-      "server": "se-node.rumedia-cdn.com",
-      "server_port": 25443,
-      "password": "29ffde49-e1d6-4dcd-a135-352920f9f0b8",
+      "server": "79.141.174.147",
+      "server_port": 33743,
+      "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
       "tls": {
         "enabled": true,
-        "server_name": "cf2.rumedia-cdn.com",
-        "insecure": false
+        "server_name": "www.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY",
+          "short_id": ""
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "TunService"
       }
     },
     {
       "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 08 - jack",
+      "tag": "🇸🇪 瑞典 (Sweden) 04 - jack",
       "server": "31.207.7.104",
       "server_port": 443,
       "uuid": "12ee5833-c8f5-4534-94e7-6d5c338008df",
@@ -91,29 +65,28 @@
       }
     },
     {
-      "type": "anytls",
-      "tag": "🇸🇪 瑞典 (Sweden) 09 - jack",
-      "server": "svip.skycon808.com",
-      "server_port": 60005,
-      "password": "13f0acfa-38c1-4e82-a758-583aa31740df",
-      "tls": {
-        "enabled": true,
-        "server_name": "xjp18.2uuzhe.com",
-        "insecure": true
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 05 - jack",
+      "server": "143.246.194.60",
+      "server_port": 8081,
+      "uuid": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
+      "transport": {
+        "type": "ws",
+        "path": "/vless-test"
       }
     },
     {
       "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 10 - jack",
-      "server": "193.42.39.10",
-      "server_port": 33743,
+      "tag": "🇸🇪 瑞典 (Sweden) 06 - jack",
+      "server": "91.193.17.156",
+      "server_port": 9458,
       "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
       "tls": {
         "enabled": true,
         "server_name": "www.google.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         },
         "reality": {
           "enabled": true,
@@ -124,6 +97,120 @@
       "transport": {
         "type": "grpc",
         "service_name": "TunService"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 07 - jack",
+      "server": "143.246.195.138",
+      "server_port": 8081,
+      "uuid": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
+      "transport": {
+        "type": "ws",
+        "path": "/vless-test"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 08 - jack",
+      "server": "194.238.57.23",
+      "server_port": 443,
+      "uuid": "303c2140-19ff-4eea-b1b1-865d4160d261",
+      "tls": {
+        "enabled": true,
+        "server_name": "ai.android",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "uE1WBdW9se1rQnx8Vh-a1jjaehzK-iUmCVrPui5KU3g",
+          "short_id": "53499a662395"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 09 - jack",
+      "server": "143.246.195.98",
+      "server_port": 8081,
+      "uuid": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
+      "transport": {
+        "type": "ws",
+        "path": "/vless-test"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 10 - jack",
+      "server": "143.246.194.213",
+      "server_port": 443,
+      "uuid": "dc9e93bc-b53a-11f1-91d3-52540030ba36",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ikea.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "wSjV1yR_rhDUdoNbM9zIXNGLASLp9RorComnyoayo2c",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 11 - jack",
+      "server": "201.24.52.151",
+      "server_port": 443,
+      "uuid": "8c40bb2c-157a-4830-a2c3-0b35ef50c660",
+      "tls": {
+        "enabled": true,
+        "server_name": "hexagonicfield.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
+          "short_id": "3f8e2d1c9b4a7e6f"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "moktana.net.v1.StreamService"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇸🇪 瑞典 (Sweden) 12 - jack",
+      "server": "se-node.rumedia-cdn.com",
+      "server_port": 25443,
+      "password": "29ffde49-e1d6-4dcd-a135-352920f9f0b8",
+      "tls": {
+        "enabled": true,
+        "server_name": "cf2.rumedia-cdn.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "anytls",
+      "tag": "🇸🇪 瑞典 (Sweden) 13 - jack",
+      "server": "svip.skycon808.com",
+      "server_port": 60005,
+      "password": "13f0acfa-38c1-4e82-a758-583aa31740df",
+      "tls": {
+        "enabled": true,
+        "server_name": "xjp18.2uuzhe.com",
+        "insecure": true
       }
     },
     {
@@ -140,7 +227,10 @@
         "🇸🇪 瑞典 (Sweden) 07 - jack",
         "🇸🇪 瑞典 (Sweden) 08 - jack",
         "🇸🇪 瑞典 (Sweden) 09 - jack",
-        "🇸🇪 瑞典 (Sweden) 10 - jack"
+        "🇸🇪 瑞典 (Sweden) 10 - jack",
+        "🇸🇪 瑞典 (Sweden) 11 - jack",
+        "🇸🇪 瑞典 (Sweden) 12 - jack",
+        "🇸🇪 瑞典 (Sweden) 13 - jack"
       ]
     },
     {
@@ -156,7 +246,10 @@
         "🇸🇪 瑞典 (Sweden) 07 - jack",
         "🇸🇪 瑞典 (Sweden) 08 - jack",
         "🇸🇪 瑞典 (Sweden) 09 - jack",
-        "🇸🇪 瑞典 (Sweden) 10 - jack"
+        "🇸🇪 瑞典 (Sweden) 10 - jack",
+        "🇸🇪 瑞典 (Sweden) 11 - jack",
+        "🇸🇪 瑞典 (Sweden) 12 - jack",
+        "🇸🇪 瑞典 (Sweden) 13 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

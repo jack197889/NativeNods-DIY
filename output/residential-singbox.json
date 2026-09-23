@@ -5,68 +5,58 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 01 (家宽) - jack",
-      "server": "108.162.198.178",
-      "server_port": 2086,
-      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
+      "tag": "🇯🇵 日本 (Japan) 01 (家宽) - jack",
+      "server": "46.101.46.169",
+      "server_port": 486,
+      "uuid": "16bf3359-e7d8-4de6-86a0-6d65cf793b56",
+      "tls": {
+        "enabled": true,
+        "server_name": "9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
       "transport": {
         "type": "ws",
-        "path": "/",
+        "path": "/@Marisa_kristi",
         "headers": {
-          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
+          "Host": "9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev"
         }
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 02 (家宽) - jack",
-      "server": "155.117.19.17",
+      "type": "trojan",
+      "tag": "🇨🇦 加拿大 (Canada) 02 (家宽) - jack",
+      "server": "aged-silence-8d7d.tahaggs.workers.dev",
       "server_port": 443,
-      "password": "5fa748137b6d822308eea4611f474ad5",
+      "password": "b0c94dd5-0c4c-6e1e-7ecf-84c386f7c748",
       "tls": {
         "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true
+        "server_name": "aged-silence-8d7d.tahaggs.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
-      "obfs": {
-        "type": "salamander",
-        "password": "a39ca173b57ac7021b08bf3e3de9f1f6"
+      "transport": {
+        "type": "ws",
+        "path": "/taha3"
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
+      "server": "r3mrcg001286ek2.cybervena.com",
+      "server_port": 50099,
+      "method": "chacha20-ietf-poly1305",
+      "password": "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
     },
     {
       "type": "vless",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - jack",
-      "server": "191.223.217.68",
-      "server_port": 8443,
-      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
-      "tls": {
-        "enabled": true,
-        "server_name": "e34bq.oa9r.zl3.hh.vavava.kdns.fr",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2560",
-        "headers": {
-          "Host": "e34bq.oa9r.zl3.hh.vavava.kdns.fr"
-        }
-      }
-    },
-    {
-      "type": "anytls",
       "tag": "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
-      "server": "6ivh.pnuqcnp.cn",
-      "server_port": 443,
-      "password": "9sK2mP8xQ7vL3nZ6",
-      "tls": {
-        "enabled": true,
-        "server_name": "images.ctfassets.net",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
       "server": "hinet1.2yly.com",
       "server_port": 24215,
       "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
@@ -86,14 +76,34 @@
     },
     {
       "type": "anytls",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 06 (家宽) - jack",
-      "server": "ac7548f3ebe045b39a90288ff1e97528.pnuqcnp.cn",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
+      "server": "6ivh.pnuqcnp.cn",
       "server_port": 443,
       "password": "9sK2mP8xQ7vL3nZ6",
       "tls": {
         "enabled": true,
-        "server_name": "ac7548f3ebe045b39a90288ff1e97528.lwdnxf.cn",
+        "server_name": "images.ctfassets.net",
         "insecure": true
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 06 (家宽) - jack",
+      "server": "dee2309db4944c248b6d4372c6641e7b.oylfmxz.cn",
+      "server_port": 443,
+      "uuid": "d90e4077-bc7e-414d-a650-70bf1baae4d6",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "dee2309db4944c248b6d4372c6641e7b.oylfmxz.cn",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "dee2309db4944c248b6d4372c6641e7b.oylfmxz.cn"
+        }
       }
     },
     {
@@ -101,9 +111,9 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 美国 (United States) 01 (家宽) - jack",
-        "🇺🇸 美国 (United States) 02 (家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - jack",
+        "🇯🇵 日本 (Japan) 01 (家宽) - jack",
+        "🇨🇦 加拿大 (Canada) 02 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
         "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
         "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
         "🇭🇰 中国香港 (Hong Kong) 06 (家宽) - jack"
@@ -113,9 +123,9 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 美国 (United States) 01 (家宽) - jack",
-        "🇺🇸 美国 (United States) 02 (家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - jack",
+        "🇯🇵 日本 (Japan) 01 (家宽) - jack",
+        "🇨🇦 加拿大 (Canada) 02 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
         "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
         "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
         "🇭🇰 中国香港 (Hong Kong) 06 (家宽) - jack"

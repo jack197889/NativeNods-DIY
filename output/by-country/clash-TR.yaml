@@ -5,6 +5,50 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - jack
+  server: 172.67.192.84
+  port: 2095
+  udp: true
+  type: vless
+  uuid: a22bff60-a40a-4250-bde2-4c660e363b47
+  network: ws
+  ws-opts:
+    path: /juvsrnmgdu8i0179k5
+    headers:
+      Host: index.harmonica02.workers.dev
+- name: 🇹🇷 土耳其 (Turkey) 02 - jack
+  server: 188.114.98.16
+  port: 2082
+  udp: true
+  type: vless
+  uuid: a22bff60-a40a-4250-bde2-4c660e363b47
+  network: ws
+  ws-opts:
+    path: /rry8le3tt8f3g5j7kr
+    headers:
+      Host: index.harmonica02.workers.dev
+- name: 🇹🇷 土耳其 (Turkey) 03 - jack
+  server: 188.114.97.6
+  port: 8080
+  udp: true
+  type: vless
+  uuid: a22bff60-a40a-4250-bde2-4c660e363b47
+  network: ws
+  ws-opts:
+    path: /j100sy9wn073cxbvir
+    headers:
+      Host: index.harmonica02.workers.dev
+- name: 🇹🇷 土耳其 (Turkey) 04 - jack
+  server: 206.1.97.212
+  port: 28351
+  udp: true
+  type: vmess
+  uuid: Nitro_Skybot@
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇹🇷 土耳其 (Turkey) 05 - jack
   server: 78.135.73.47
   port: 443
   udp: true
@@ -17,7 +61,7 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 02 - jack
+- name: 🇹🇷 土耳其 (Turkey) 06 - jack
   server: 151.241.226.201
   port: 2053
   udp: true
@@ -28,7 +72,7 @@ proxies:
     public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
     short-id: 9e419c0759b54d6f
   servername: www.apple.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -36,6 +80,10 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 - jack
   - 🇹🇷 土耳其 (Turkey) 02 - jack
+  - 🇹🇷 土耳其 (Turkey) 03 - jack
+  - 🇹🇷 土耳其 (Turkey) 04 - jack
+  - 🇹🇷 土耳其 (Turkey) 05 - jack
+  - 🇹🇷 土耳其 (Turkey) 06 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -43,5 +91,9 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 - jack
   - 🇹🇷 土耳其 (Turkey) 02 - jack
+  - 🇹🇷 土耳其 (Turkey) 03 - jack
+  - 🇹🇷 土耳其 (Turkey) 04 - jack
+  - 🇹🇷 土耳其 (Turkey) 05 - jack
+  - 🇹🇷 土耳其 (Turkey) 06 - jack
 rules:
 - MATCH,PROXIES

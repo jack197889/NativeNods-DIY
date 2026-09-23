@@ -6,6 +6,60 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01 - jack",
+      "server": "172.67.192.84",
+      "server_port": 2095,
+      "uuid": "a22bff60-a40a-4250-bde2-4c660e363b47",
+      "transport": {
+        "type": "ws",
+        "path": "/juvsrnmgdu8i0179k5",
+        "headers": {
+          "Host": "index.harmonica02.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 02 - jack",
+      "server": "188.114.98.16",
+      "server_port": 2082,
+      "uuid": "a22bff60-a40a-4250-bde2-4c660e363b47",
+      "transport": {
+        "type": "ws",
+        "path": "/rry8le3tt8f3g5j7kr",
+        "headers": {
+          "Host": "index.harmonica02.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 03 - jack",
+      "server": "188.114.97.6",
+      "server_port": 8080,
+      "uuid": "a22bff60-a40a-4250-bde2-4c660e363b47",
+      "transport": {
+        "type": "ws",
+        "path": "/j100sy9wn073cxbvir",
+        "headers": {
+          "Host": "index.harmonica02.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇹🇷 土耳其 (Turkey) 04 - jack",
+      "server": "206.1.97.212",
+      "server_port": 28351,
+      "uuid": "Nitro_Skybot@",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 05 - jack",
       "server": "78.135.73.47",
       "server_port": 443,
       "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
@@ -26,7 +80,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 02 - jack",
+      "tag": "🇹🇷 土耳其 (Turkey) 06 - jack",
       "server": "151.241.226.201",
       "server_port": 2053,
       "uuid": "0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8",
@@ -35,7 +89,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -50,7 +104,11 @@
       "outbounds": [
         "auto",
         "🇹🇷 土耳其 (Turkey) 01 - jack",
-        "🇹🇷 土耳其 (Turkey) 02 - jack"
+        "🇹🇷 土耳其 (Turkey) 02 - jack",
+        "🇹🇷 土耳其 (Turkey) 03 - jack",
+        "🇹🇷 土耳其 (Turkey) 04 - jack",
+        "🇹🇷 土耳其 (Turkey) 05 - jack",
+        "🇹🇷 土耳其 (Turkey) 06 - jack"
       ]
     },
     {
@@ -58,7 +116,11 @@
       "tag": "auto",
       "outbounds": [
         "🇹🇷 土耳其 (Turkey) 01 - jack",
-        "🇹🇷 土耳其 (Turkey) 02 - jack"
+        "🇹🇷 土耳其 (Turkey) 02 - jack",
+        "🇹🇷 土耳其 (Turkey) 03 - jack",
+        "🇹🇷 土耳其 (Turkey) 04 - jack",
+        "🇹🇷 土耳其 (Turkey) 05 - jack",
+        "🇹🇷 土耳其 (Turkey) 06 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
