@@ -6,26 +6,21 @@
     {
       "type": "vless",
       "tag": "🇮🇶 IQ 01 - jack",
-      "server": "104.21.8.63",
-      "server_port": 443,
-      "uuid": "b19419fa-8009-455b-b059-765e2856883a",
+      "server": "193.56.135.212",
+      "server_port": 9543,
+      "uuid": "ff6d2dda-7b90-404e-9951-34b3124bfdfa",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "akbarian34.j9z65ce2uyks.workers.dev",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "storage.yandexcloud.net",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/vl/Q5xRgb8wfW3RTYFIfDA16PzboJrjLuZ9?ed=2560",
-        "headers": {
-          "Host": "akbarian34.j9z65ce2uyks.workers.dev"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc",
+          "short_id": "123abcde"
         }
       }
     },

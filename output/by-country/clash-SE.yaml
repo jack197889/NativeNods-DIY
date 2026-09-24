@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - jack
-  server: 16.171.55.2
+  server: 16.170.214.108
   port: 443
   udp: true
   type: ss
@@ -19,59 +19,29 @@ proxies:
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇸🇪 瑞典 (Sweden) 03 - jack
-  server: 13.61.0.108
+  server: 16.171.55.2
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇸🇪 瑞典 (Sweden) 04 - jack
-  server: 16.170.221.224
+  server: 13.61.0.108
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇸🇪 瑞典 (Sweden) 05 - jack
-  server: 16.170.214.108
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 06 - jack
-  server: 172.238.244.13
-  port: 17000
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: pX0uhU3ZjUcLWYs0Vez55BO3JoQrRlL
-- name: 🇸🇪 瑞典 (Sweden) 07 - jack
   server: 70.34.212.124
   port: 8388
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: AxIYWtskJWIIaefW
-- name: 🇸🇪 瑞典 (Sweden) 08 - jack
-  server: se1.auronvpn.site
-  port: 1443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: N2YzM
-- name: 🇸🇪 瑞典 (Sweden) 09 - jack
-  server: 143.246.194.60
-  port: 8081
-  udp: true
-  type: vless
-  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
-  network: ws
-  ws-opts:
-    path: /vless-test
-- name: 🇸🇪 瑞典 (Sweden) 10 - jack
-  server: 91.193.17.156
-  port: 9458
+- name: 🇸🇪 瑞典 (Sweden) 06 - jack
+  server: 193.42.39.10
+  port: 33743
   udp: true
   type: vless
   uuid: b3a11068-1a7e-4643-85de-7c82cce46943
@@ -79,11 +49,36 @@ proxies:
   reality-opts:
     public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
   servername: www.google.com
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: TunService
-- name: 🇸🇪 瑞典 (Sweden) 11 - jack
+- name: 🇸🇪 瑞典 (Sweden) 07 - jack
+  server: 143.246.195.98
+  port: 8081
+  udp: true
+  type: vless
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+  network: ws
+  ws-opts:
+    path: /vless-test
+- name: 🇸🇪 瑞典 (Sweden) 08 - jack
+  server: svip.skycon808.com
+  port: 60005
+  udp: true
+  type: anytls
+  password: 13f0acfa-38c1-4e82-a758-583aa31740df
+  sni: xjp18.2uuzhe.com
+  skip-cert-verify: true
+- name: 🇸🇪 瑞典 (Sweden) 09 - jack
+  server: se-node.rumedia-cdn.com
+  port: 25443
+  udp: true
+  type: hysteria2
+  password: 29ffde49-e1d6-4dcd-a135-352920f9f0b8
+  sni: cf2.rumedia-cdn.com
+  skip-cert-verify: false
+- name: 🇸🇪 瑞典 (Sweden) 10 - jack
   server: 5.157.10.148
   port: 443
   udp: true
@@ -96,22 +91,15 @@ proxies:
     short-id: fb442438e2223836
   servername: surstreming.vvzzkontaktezzvv.garden
   client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 11 - jack
+  server: 172.238.244.13
+  port: 17000
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: pX0uhU3ZjUcLWYs0Vez55BO3JoQrRlL
 - name: 🇸🇪 瑞典 (Sweden) 12 - jack
-  server: 193.42.39.10
-  port: 33743
-  udp: true
-  type: vless
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-  tls: true
-  reality-opts:
-    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
-  servername: www.google.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TunService
-- name: 🇸🇪 瑞典 (Sweden) 13 - jack
-  server: 143.246.195.98
+  server: 143.246.194.60
   port: 8081
   udp: true
   type: vless
@@ -119,31 +107,6 @@ proxies:
   network: ws
   ws-opts:
     path: /vless-test
-- name: 🇸🇪 瑞典 (Sweden) 14 - jack
-  server: 143.246.195.138
-  port: 8081
-  udp: true
-  type: vless
-  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
-  network: ws
-  ws-opts:
-    path: /vless-test
-- name: 🇸🇪 瑞典 (Sweden) 15 - jack
-  server: se-node.rumedia-cdn.com
-  port: 25443
-  udp: true
-  type: hysteria2
-  password: 29ffde49-e1d6-4dcd-a135-352920f9f0b8
-  sni: cf2.rumedia-cdn.com
-  skip-cert-verify: false
-- name: 🇸🇪 瑞典 (Sweden) 16 - jack
-  server: svip.skycon808.com
-  port: 60005
-  udp: true
-  type: anytls
-  password: 13f0acfa-38c1-4e82-a758-583aa31740df
-  sni: xjp18.2uuzhe.com
-  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -161,10 +124,6 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 10 - jack
   - 🇸🇪 瑞典 (Sweden) 11 - jack
   - 🇸🇪 瑞典 (Sweden) 12 - jack
-  - 🇸🇪 瑞典 (Sweden) 13 - jack
-  - 🇸🇪 瑞典 (Sweden) 14 - jack
-  - 🇸🇪 瑞典 (Sweden) 15 - jack
-  - 🇸🇪 瑞典 (Sweden) 16 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -182,9 +141,5 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 10 - jack
   - 🇸🇪 瑞典 (Sweden) 11 - jack
   - 🇸🇪 瑞典 (Sweden) 12 - jack
-  - 🇸🇪 瑞典 (Sweden) 13 - jack
-  - 🇸🇪 瑞典 (Sweden) 14 - jack
-  - 🇸🇪 瑞典 (Sweden) 15 - jack
-  - 🇸🇪 瑞典 (Sweden) 16 - jack
 rules:
 - MATCH,PROXIES

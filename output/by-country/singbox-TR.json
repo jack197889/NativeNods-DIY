@@ -4,75 +4,20 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "vmess",
       "tag": "🇹🇷 土耳其 (Turkey) 01 - jack",
-      "server": "104.20.6.153",
-      "server_port": 8880,
-      "uuid": "a22bff60-a40a-4250-bde2-4c660e363b47",
+      "server": "206.1.98.34",
+      "server_port": 26066,
+      "uuid": "Nitro_Skybot@",
+      "security": "auto",
       "transport": {
         "type": "ws",
-        "path": "/j100sy9wn073cxbvir",
-        "headers": {
-          "Host": "index.harmonica02.workers.dev"
-        }
+        "path": "/"
       }
     },
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 02 - jack",
-      "server": "188.114.97.6",
-      "server_port": 8080,
-      "uuid": "a22bff60-a40a-4250-bde2-4c660e363b47",
-      "transport": {
-        "type": "ws",
-        "path": "/axch1mttbxz2k55y01",
-        "headers": {
-          "Host": "index.harmonica01.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 03 - jack",
-      "server": "146.75.84.3",
-      "server_port": 443,
-      "uuid": "8abb648a-b004-42a4-aa05-49cdc2f94d4e",
-      "tls": {
-        "enabled": true,
-        "server_name": "ssl.fastly.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "BechBad.global.ssl.fastly.net"
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇹🇷 土耳其 (Turkey) 04 - jack",
-      "server": "me17.msjia8844.site",
-      "server_port": 7443,
-      "password": "M8LP9DztTr3znqCkmf-r08CQLBLLFK1r",
-      "tls": {
-        "enabled": true,
-        "server_name": "me17.msjia8844.site",
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "u3Soh9_Ui0UmcuY6vk0ug8Lq"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 05 - jack",
       "server": "78.135.73.47",
       "server_port": 443,
       "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
@@ -93,7 +38,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 06 - jack",
+      "tag": "🇹🇷 土耳其 (Turkey) 03 - jack",
       "server": "151.241.226.201",
       "server_port": 2053,
       "uuid": "0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8",
@@ -112,24 +57,13 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 07 - jack",
-      "server": "test.keoplentuio.xyz",
-      "server_port": 2053,
-      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇹🇷 土耳其 (Turkey) 01 - jack",
         "🇹🇷 土耳其 (Turkey) 02 - jack",
-        "🇹🇷 土耳其 (Turkey) 03 - jack",
-        "🇹🇷 土耳其 (Turkey) 04 - jack",
-        "🇹🇷 土耳其 (Turkey) 05 - jack",
-        "🇹🇷 土耳其 (Turkey) 06 - jack",
-        "🇹🇷 土耳其 (Turkey) 07 - jack"
+        "🇹🇷 土耳其 (Turkey) 03 - jack"
       ]
     },
     {
@@ -138,11 +72,7 @@
       "outbounds": [
         "🇹🇷 土耳其 (Turkey) 01 - jack",
         "🇹🇷 土耳其 (Turkey) 02 - jack",
-        "🇹🇷 土耳其 (Turkey) 03 - jack",
-        "🇹🇷 土耳其 (Turkey) 04 - jack",
-        "🇹🇷 土耳其 (Turkey) 05 - jack",
-        "🇹🇷 土耳其 (Turkey) 06 - jack",
-        "🇹🇷 土耳其 (Turkey) 07 - jack"
+        "🇹🇷 土耳其 (Turkey) 03 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

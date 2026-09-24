@@ -4,26 +4,25 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇧🇷 巴西 (Brazil) 01 - jack",
-      "server": "172.233.14.17",
-      "server_port": 22324,
-      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
-      "security": "auto"
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 01 (移动家宽) - jack",
+      "server": "test.keoplentuio.xyz",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇷 巴西 (Brazil) 01 - jack"
+        "🇹🇷 土耳其 (Turkey) 01 (移动家宽) - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇷 巴西 (Brazil) 01 - jack"
+        "🇹🇷 土耳其 (Turkey) 01 (移动家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

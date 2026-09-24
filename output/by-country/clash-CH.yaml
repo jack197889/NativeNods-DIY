@@ -5,81 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇭 瑞士 (Switzerland) 01 - jack
-  server: 104.238.68.30
-  port: 8880
+  server: 94.249.187.46
+  port: 1080
   udp: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime47.workers.dev
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: IXa3ylzS_jBOAsQy071tIQ
 - name: 🇨🇭 瑞士 (Switzerland) 02 - jack
-  server: 188.114.97.6
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 7074b9d7-2183-8919-fc11-ca5e00000000
-  network: ws
-  ws-opts:
-    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN
-    headers:
-      Host: netlivpn2584.vjvdgbc.workers.dev
-- name: 🇨🇭 瑞士 (Switzerland) 03 - jack
-  server: 152.67.75.161
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 3a702d4d1de4949005d8431220e040fb
-  sni: www.bing.com
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: c13f29db6a638ad2b211b9ce2669ef27
-- name: 🇨🇭 瑞士 (Switzerland) 04 - jack
-  server: 84.75.255.140
-  port: 443
-  udp: true
-  type: vless
-  uuid: 6c49576d-ea4a-4441-b8ef-ba78f11694d4
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: nilJ07r1KZ0-KhmRNYeICXGhM9HeG9uxnRaqjYz3fWg
-    short-id: c6ff7424cb12c5ed
-  servername: ch2.responsiblecare.uk
-  client-fingerprint: safari
-- name: 🇨🇭 瑞士 (Switzerland) 05 - jack
-  server: 104.21.200.243
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 7074b9d7-2183-8919-fc11-ca5e00000000
-  tls: true
-  servername: netlivpn2584.vjvdgbc.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN
-    headers:
-      Host: netlivpn2584.vjvdgbc.workers.dev
-- name: 🇨🇭 瑞士 (Switzerland) 06 - jack
-  server: 104.21.117.9
-  port: 443
-  udp: true
-  type: vless
-  uuid: bd9ff08b-d042-3650-48e4-c4b400000000
-  tls: true
-  servername: netlivpn2950.bbxff.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN
-    headers:
-      Host: netlivpn2950.bbxff.workers.dev
-- name: 🇨🇭 瑞士 (Switzerland) 07 - jack
   server: 140.238.213.114
   port: 50160
   udp: true
@@ -87,24 +19,7 @@ proxies:
   password: 84a506ca5aca505696a454d828420b3f
   sni: www.bing.com
   skip-cert-verify: true
-- name: 🇨🇭 瑞士 (Switzerland) 08 - jack
-  server: 131.123.34.145
-  port: 8081
-  udp: true
-  type: vless
-  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
-  network: ws
-  ws-opts:
-    path: /vless-test
-- name: 🇨🇭 瑞士 (Switzerland) 09 - jack
-  server: 82.38.64.229
-  port: 8443
-  udp: true
-  type: hysteria2
-  password: we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH
-  sni: hopp-swizland-new.mysynology.net
-  skip-cert-verify: false
-- name: 🇨🇭 瑞士 (Switzerland) 10 - jack
+- name: 🇨🇭 瑞士 (Switzerland) 03 - jack
   server: 45.90.59.15
   port: 443
   udp: true
@@ -117,39 +32,15 @@ proxies:
     short-id: 19253fae84102271
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🇨🇭 瑞士 (Switzerland) 11 - jack
-  server: 151.242.2.81
-  port: 443
+- name: 🇨🇭 瑞士 (Switzerland) 04 - jack
+  server: 131.123.34.145
+  port: 8081
   udp: true
   type: vless
-  uuid: 0a2dde28-70da-4863-a06f-35d007d94d35
-  tls: true
-  servername: cf9.rumedia-cdn.com
-  skip-cert-verify: false
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
   network: ws
   ws-opts:
-    path: /cdn/v3/live
-    headers:
-      Host: cf9.rumedia-cdn.com
-- name: 🇨🇭 瑞士 (Switzerland) 12 - jack
-  server: 34.65.54.139
-  port: 443
-  udp: true
-  type: vless
-  uuid: bd93a117-2e9d-4e1e-b9b9-69d8d7089bdb
-  tls: true
-  reality-opts:
-    public-key: DE-S0R0KYYTuBsuQmT-iip6rJ2QsuH6z3SJYlsNyUUI
-    short-id: 5214a92cad4ad90e
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇨🇭 瑞士 (Switzerland) 13 - jack
-  server: 132.243.175.144
-  port: 8388
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
+    path: /vless-test
 proxy-groups:
 - name: PROXIES
   type: select
@@ -159,15 +50,6 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 02 - jack
   - 🇨🇭 瑞士 (Switzerland) 03 - jack
   - 🇨🇭 瑞士 (Switzerland) 04 - jack
-  - 🇨🇭 瑞士 (Switzerland) 05 - jack
-  - 🇨🇭 瑞士 (Switzerland) 06 - jack
-  - 🇨🇭 瑞士 (Switzerland) 07 - jack
-  - 🇨🇭 瑞士 (Switzerland) 08 - jack
-  - 🇨🇭 瑞士 (Switzerland) 09 - jack
-  - 🇨🇭 瑞士 (Switzerland) 10 - jack
-  - 🇨🇭 瑞士 (Switzerland) 11 - jack
-  - 🇨🇭 瑞士 (Switzerland) 12 - jack
-  - 🇨🇭 瑞士 (Switzerland) 13 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -177,14 +59,5 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 02 - jack
   - 🇨🇭 瑞士 (Switzerland) 03 - jack
   - 🇨🇭 瑞士 (Switzerland) 04 - jack
-  - 🇨🇭 瑞士 (Switzerland) 05 - jack
-  - 🇨🇭 瑞士 (Switzerland) 06 - jack
-  - 🇨🇭 瑞士 (Switzerland) 07 - jack
-  - 🇨🇭 瑞士 (Switzerland) 08 - jack
-  - 🇨🇭 瑞士 (Switzerland) 09 - jack
-  - 🇨🇭 瑞士 (Switzerland) 10 - jack
-  - 🇨🇭 瑞士 (Switzerland) 11 - jack
-  - 🇨🇭 瑞士 (Switzerland) 12 - jack
-  - 🇨🇭 瑞士 (Switzerland) 13 - jack
 rules:
 - MATCH,PROXIES

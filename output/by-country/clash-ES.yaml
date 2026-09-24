@@ -5,14 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01 - jack
-  server: 85.90.217.42
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇪🇸 西班牙 (Spain) 02 - jack
   server: 66.163.118.73
   port: 22324
   udp: true
@@ -20,14 +12,7 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
-- name: 🇪🇸 西班牙 (Spain) 03 - jack
-  server: 108.181.121.226
-  port: 8388
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: WSyL4XTwNsdv
-- name: 🇪🇸 西班牙 (Spain) 04 - jack
+- name: 🇪🇸 西班牙 (Spain) 02 - jack
   server: 212.227.235.66
   port: 2053
   udp: true
@@ -39,14 +24,21 @@ proxies:
     short-id: 29e8dcd2b37aaa7f
   servername: www.apple.com
   client-fingerprint: firefox
-- name: 🇪🇸 西班牙 (Spain) 05 - jack
+- name: 🇪🇸 西班牙 (Spain) 03 - jack
+  server: 108.181.121.226
+  port: 8388
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: WSyL4XTwNsdv
+- name: 🇪🇸 西班牙 (Spain) 04 - jack
   server: 140.174.184.5
   port: 8388
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: qItG8SueYQcP
-- name: 🇪🇸 西班牙 (Spain) 06 - jack
+- name: 🇪🇸 西班牙 (Spain) 05 - jack
   server: 46.28.71.247
   port: 443
   udp: true
@@ -58,8 +50,8 @@ proxies:
     public-key: v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇪🇸 西班牙 (Spain) 07 - jack
+  client-fingerprint: ''
+- name: 🇪🇸 西班牙 (Spain) 06 - jack
   server: 87.76.179.117
   port: 7443
   udp: true
@@ -72,19 +64,7 @@ proxies:
     short-id: d2061bb1
   servername: www.samsung.com
   client-fingerprint: firefox
-- name: 🇪🇸 西班牙 (Spain) 08 - jack
-  server: 196.245.52.147
-  port: 25535
-  udp: true
-  type: vless
-  uuid: c379d8e4-c67d-42ec-a3ed-ca99d1ad0546
-  tls: true
-  reality-opts:
-    public-key: Jh7CocBJSA55VZcLfXwXwoQ_Hi5pV-L1vv1SY-IrSh4
-    short-id: 7642ce57308852e7
-  servername: www.microsoft.com
-  client-fingerprint: qq
-- name: 🇪🇸 西班牙 (Spain) 09 - jack
+- name: 🇪🇸 西班牙 (Spain) 07 - jack
   server: mygptagent.org
   port: 443
   udp: true
@@ -100,12 +80,6 @@ proxies:
     path: /linkvws
     headers:
       Host: mygptagent.org
-- name: 🇪🇸 西班牙 (Spain) 10 - jack
-  server: 31.56.222.61
-  port: 45286
-  udp: true
-  type: vless
-  uuid: ef6a9d5d-d50c-4d14-abda-e9178b9965ba
 proxy-groups:
 - name: PROXIES
   type: select
@@ -118,9 +92,6 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 05 - jack
   - 🇪🇸 西班牙 (Spain) 06 - jack
   - 🇪🇸 西班牙 (Spain) 07 - jack
-  - 🇪🇸 西班牙 (Spain) 08 - jack
-  - 🇪🇸 西班牙 (Spain) 09 - jack
-  - 🇪🇸 西班牙 (Spain) 10 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -133,8 +104,5 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 05 - jack
   - 🇪🇸 西班牙 (Spain) 06 - jack
   - 🇪🇸 西班牙 (Spain) 07 - jack
-  - 🇪🇸 西班牙 (Spain) 08 - jack
-  - 🇪🇸 西班牙 (Spain) 09 - jack
-  - 🇪🇸 西班牙 (Spain) 10 - jack
 rules:
 - MATCH,PROXIES

@@ -4,25 +4,23 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇷 巴西 (Brazil) 01 - jack
-  server: 172.233.14.17
-  port: 22324
+- name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽) - jack
+  server: test.keoplentuio.xyz
+  port: 2053
   udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇧🇷 巴西 (Brazil) 01 - jack
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽) - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇷 巴西 (Brazil) 01 - jack
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽) - jack
 rules:
 - MATCH,PROXIES

@@ -6,41 +6,21 @@
     {
       "type": "vless",
       "tag": "🇹🇭 泰国 (Thailand) 01 - jack",
-      "server": "103.86.49.57",
+      "server": "v2ray.simspeedup.com",
       "server_port": 80,
       "uuid": "3c52e091-6714-4915-949f-2149fe69951b",
       "transport": {
         "type": "ws",
         "path": "/ws",
         "headers": {
-          "Host": "aIs.SpEeDtEsT.nEt"
+          "Host": "v2ray.simspeedup.com"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇹🇭 泰国 (Thailand) 02 - jack",
-      "server": "34.15.176.240",
-      "server_port": 443,
-      "uuid": "742dc674-a491-4a42-a551-b3ea6dd2f447",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Euq607wb-KZNjbuOMQ1h646C3dm_Q-ntd7yxZ52jj0U",
-          "short_id": "856c0a3cd1426a5c"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇭 泰国 (Thailand) 03 - jack",
-      "server": "104.21.34.106",
+      "server": "104.16.10.2",
       "server_port": 443,
       "uuid": "3c52e091-6714-4915-949f-2149fe69951b",
       "tls": {
@@ -57,34 +37,12 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇹🇭 泰国 (Thailand) 04 - jack",
-      "server": "34.15.162.1",
-      "server_port": 443,
-      "uuid": "2b1d0c2a-9c80-4b72-892e-93d0500b9210",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "LklWoqMQz_TWiuLCUNRwHAKX1adVRSGMhtbo98fbDxw",
-          "short_id": "ca672c53fbbac555"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇹🇭 泰国 (Thailand) 01 - jack",
-        "🇹🇭 泰国 (Thailand) 02 - jack",
-        "🇹🇭 泰国 (Thailand) 03 - jack",
-        "🇹🇭 泰国 (Thailand) 04 - jack"
+        "🇹🇭 泰国 (Thailand) 02 - jack"
       ]
     },
     {
@@ -92,9 +50,7 @@
       "tag": "auto",
       "outbounds": [
         "🇹🇭 泰国 (Thailand) 01 - jack",
-        "🇹🇭 泰国 (Thailand) 02 - jack",
-        "🇹🇭 泰国 (Thailand) 03 - jack",
-        "🇹🇭 泰国 (Thailand) 04 - jack"
+        "🇹🇭 泰国 (Thailand) 02 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

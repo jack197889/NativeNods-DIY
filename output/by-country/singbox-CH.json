@@ -4,119 +4,16 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇨🇭 瑞士 (Switzerland) 01 - jack",
-      "server": "104.238.68.30",
-      "server_port": 8880,
-      "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "vms.lifetime47.workers.dev"
-        }
-      }
+      "server": "94.249.187.46",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "IXa3ylzS_jBOAsQy071tIQ"
     },
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇨🇭 瑞士 (Switzerland) 02 - jack",
-      "server": "188.114.97.6",
-      "server_port": 8080,
-      "uuid": "7074b9d7-2183-8919-fc11-ca5e00000000",
-      "transport": {
-        "type": "ws",
-        "path": "/NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN",
-        "headers": {
-          "Host": "netlivpn2584.vjvdgbc.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇨🇭 瑞士 (Switzerland) 03 - jack",
-      "server": "152.67.75.161",
-      "server_port": 443,
-      "password": "3a702d4d1de4949005d8431220e040fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "c13f29db6a638ad2b211b9ce2669ef27"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 04 - jack",
-      "server": "84.75.255.140",
-      "server_port": 443,
-      "uuid": "6c49576d-ea4a-4441-b8ef-ba78f11694d4",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ch2.responsiblecare.uk",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "nilJ07r1KZ0-KhmRNYeICXGhM9HeG9uxnRaqjYz3fWg",
-          "short_id": "c6ff7424cb12c5ed"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 05 - jack",
-      "server": "104.21.200.243",
-      "server_port": 2053,
-      "uuid": "7074b9d7-2183-8919-fc11-ca5e00000000",
-      "tls": {
-        "enabled": true,
-        "server_name": "netlivpn2584.vjvdgbc.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN",
-        "headers": {
-          "Host": "netlivpn2584.vjvdgbc.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 06 - jack",
-      "server": "104.21.117.9",
-      "server_port": 443,
-      "uuid": "bd9ff08b-d042-3650-48e4-c4b400000000",
-      "tls": {
-        "enabled": true,
-        "server_name": "netlivpn2950.bbxff.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN",
-        "headers": {
-          "Host": "netlivpn2950.bbxff.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇨🇭 瑞士 (Switzerland) 07 - jack",
       "server": "140.238.213.114",
       "server_port": 50160,
       "password": "84a506ca5aca505696a454d828420b3f",
@@ -128,30 +25,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 08 - jack",
-      "server": "131.123.34.145",
-      "server_port": 8081,
-      "uuid": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
-      "transport": {
-        "type": "ws",
-        "path": "/vless-test"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇨🇭 瑞士 (Switzerland) 09 - jack",
-      "server": "82.38.64.229",
-      "server_port": 8443,
-      "password": "we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH",
-      "tls": {
-        "enabled": true,
-        "server_name": "hopp-swizland-new.mysynology.net",
-        "insecure": false
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 10 - jack",
+      "tag": "🇨🇭 瑞士 (Switzerland) 03 - jack",
       "server": "45.90.59.15",
       "server_port": 443,
       "uuid": "3950b45e-740d-4dca-ac95-505ec8534592",
@@ -172,50 +46,14 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 11 - jack",
-      "server": "151.242.2.81",
-      "server_port": 443,
-      "uuid": "0a2dde28-70da-4863-a06f-35d007d94d35",
-      "tls": {
-        "enabled": true,
-        "server_name": "cf9.rumedia-cdn.com",
-        "insecure": false
-      },
+      "tag": "🇨🇭 瑞士 (Switzerland) 04 - jack",
+      "server": "131.123.34.145",
+      "server_port": 8081,
+      "uuid": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
       "transport": {
         "type": "ws",
-        "path": "/cdn/v3/live",
-        "headers": {
-          "Host": "cf9.rumedia-cdn.com"
-        }
+        "path": "/vless-test"
       }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 12 - jack",
-      "server": "34.65.54.139",
-      "server_port": 443,
-      "uuid": "bd93a117-2e9d-4e1e-b9b9-69d8d7089bdb",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "DE-S0R0KYYTuBsuQmT-iip6rJ2QsuH6z3SJYlsNyUUI",
-          "short_id": "5214a92cad4ad90e"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇨🇭 瑞士 (Switzerland) 13 - jack",
-      "server": "132.243.175.144",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3"
     },
     {
       "type": "selector",
@@ -225,16 +63,7 @@
         "🇨🇭 瑞士 (Switzerland) 01 - jack",
         "🇨🇭 瑞士 (Switzerland) 02 - jack",
         "🇨🇭 瑞士 (Switzerland) 03 - jack",
-        "🇨🇭 瑞士 (Switzerland) 04 - jack",
-        "🇨🇭 瑞士 (Switzerland) 05 - jack",
-        "🇨🇭 瑞士 (Switzerland) 06 - jack",
-        "🇨🇭 瑞士 (Switzerland) 07 - jack",
-        "🇨🇭 瑞士 (Switzerland) 08 - jack",
-        "🇨🇭 瑞士 (Switzerland) 09 - jack",
-        "🇨🇭 瑞士 (Switzerland) 10 - jack",
-        "🇨🇭 瑞士 (Switzerland) 11 - jack",
-        "🇨🇭 瑞士 (Switzerland) 12 - jack",
-        "🇨🇭 瑞士 (Switzerland) 13 - jack"
+        "🇨🇭 瑞士 (Switzerland) 04 - jack"
       ]
     },
     {
@@ -244,16 +73,7 @@
         "🇨🇭 瑞士 (Switzerland) 01 - jack",
         "🇨🇭 瑞士 (Switzerland) 02 - jack",
         "🇨🇭 瑞士 (Switzerland) 03 - jack",
-        "🇨🇭 瑞士 (Switzerland) 04 - jack",
-        "🇨🇭 瑞士 (Switzerland) 05 - jack",
-        "🇨🇭 瑞士 (Switzerland) 06 - jack",
-        "🇨🇭 瑞士 (Switzerland) 07 - jack",
-        "🇨🇭 瑞士 (Switzerland) 08 - jack",
-        "🇨🇭 瑞士 (Switzerland) 09 - jack",
-        "🇨🇭 瑞士 (Switzerland) 10 - jack",
-        "🇨🇭 瑞士 (Switzerland) 11 - jack",
-        "🇨🇭 瑞士 (Switzerland) 12 - jack",
-        "🇨🇭 瑞士 (Switzerland) 13 - jack"
+        "🇨🇭 瑞士 (Switzerland) 04 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
