@@ -4,28 +4,28 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇪🇸 西班牙 (Spain) 01 - jack",
-      "server": "140.174.184.5",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "qItG8SueYQcP"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇪🇸 西班牙 (Spain) 02 - jack",
-      "server": "108.181.121.226",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "WSyL4XTwNsdv"
-    },
-    {
       "type": "vmess",
-      "tag": "🇪🇸 西班牙 (Spain) 03 - jack",
+      "tag": "🇪🇸 西班牙 (Spain) 01 - jack",
       "server": "85.90.217.42",
       "server_port": 22324,
       "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
       "security": "auto"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇪🇸 西班牙 (Spain) 02 - jack",
+      "server": "66.163.118.73",
+      "server_port": 22324,
+      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
+      "security": "auto"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇪🇸 西班牙 (Spain) 03 - jack",
+      "server": "108.181.121.226",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "WSyL4XTwNsdv"
     },
     {
       "type": "vless",
@@ -38,7 +38,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -48,8 +48,16 @@
       }
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇪🇸 西班牙 (Spain) 05 - jack",
+      "server": "140.174.184.5",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "qItG8SueYQcP"
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇸 西班牙 (Spain) 06 - jack",
       "server": "46.28.71.247",
       "server_port": 443,
       "uuid": "12c53e32-e589-47d6-b857-e4132294f767",
@@ -59,7 +67,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": ""
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -70,7 +78,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 06 - jack",
+      "tag": "🇪🇸 西班牙 (Spain) 07 - jack",
       "server": "87.76.179.117",
       "server_port": 7443,
       "uuid": "cb15d1b0-e48b-4c4c-b98a-fa1103aa3723",
@@ -91,7 +99,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 07 - jack",
+      "tag": "🇪🇸 西班牙 (Spain) 08 - jack",
       "server": "196.245.52.147",
       "server_port": 25535,
       "uuid": "c379d8e4-c67d-42ec-a3ed-ca99d1ad0546",
@@ -110,6 +118,33 @@
       }
     },
     {
+      "type": "vmess",
+      "tag": "🇪🇸 西班牙 (Spain) 09 - jack",
+      "server": "mygptagent.org",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "mygptagent.org",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "mygptagent.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇸 西班牙 (Spain) 10 - jack",
+      "server": "31.56.222.61",
+      "server_port": 45286,
+      "uuid": "ef6a9d5d-d50c-4d14-abda-e9178b9965ba"
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -120,7 +155,10 @@
         "🇪🇸 西班牙 (Spain) 04 - jack",
         "🇪🇸 西班牙 (Spain) 05 - jack",
         "🇪🇸 西班牙 (Spain) 06 - jack",
-        "🇪🇸 西班牙 (Spain) 07 - jack"
+        "🇪🇸 西班牙 (Spain) 07 - jack",
+        "🇪🇸 西班牙 (Spain) 08 - jack",
+        "🇪🇸 西班牙 (Spain) 09 - jack",
+        "🇪🇸 西班牙 (Spain) 10 - jack"
       ]
     },
     {
@@ -133,7 +171,10 @@
         "🇪🇸 西班牙 (Spain) 04 - jack",
         "🇪🇸 西班牙 (Spain) 05 - jack",
         "🇪🇸 西班牙 (Spain) 06 - jack",
-        "🇪🇸 西班牙 (Spain) 07 - jack"
+        "🇪🇸 西班牙 (Spain) 07 - jack",
+        "🇪🇸 西班牙 (Spain) 08 - jack",
+        "🇪🇸 西班牙 (Spain) 09 - jack",
+        "🇪🇸 西班牙 (Spain) 10 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

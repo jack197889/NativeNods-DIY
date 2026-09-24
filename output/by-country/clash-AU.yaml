@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇺 澳大利亚 (Australia) 01 - jack
-  server: 82.198.246.233
+  server: 82.198.246.250
   port: 180
   udp: true
   type: vmess
@@ -13,18 +13,28 @@ proxies:
   alterId: 0
   cipher: auto
 - name: 🇦🇺 澳大利亚 (Australia) 02 - jack
-  server: 34.87.229.148
-  port: 443
+  server: 89.117.112.40
+  port: 8880
   udp: true
   type: vless
-  uuid: 4f865f35-cf47-4e7f-a7e6-8882511a1b36
-  tls: true
-  reality-opts:
-    public-key: OgTkmAQdLjipA9oLloxbU5BAX3hPjzbvkEGHF4aZ8z4
-    short-id: 8a7d5e0248cdb1b1
-  servername: www.cloudflare.com
-  client-fingerprint: random
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime11.workers.dev
 - name: 🇦🇺 澳大利亚 (Australia) 03 - jack
+  server: 185.18.250.252
+  port: 443
+  udp: true
+  type: trojan
+  password: 74480619-b6a8-4ab8-94e1-1132fc18b2fa
+  sni: unnes.ac.id.r3xxe.eu.cc
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /au-mt
+- name: 🇦🇺 澳大利亚 (Australia) 04 - jack
   server: 51.161.204.244
   port: 443
   udp: true
@@ -37,7 +47,7 @@ proxies:
     short-id: 0ad08b47f498efd2
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🇦🇺 澳大利亚 (Australia) 04 - jack
+- name: 🇦🇺 澳大利亚 (Australia) 05 - jack
   server: 34.87.244.111
   port: 443
   udp: true
@@ -48,8 +58,33 @@ proxies:
     public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
     short-id: d725f0dd8cce210f
   servername: www.cloudflare.com
-  client-fingerprint: ios
-- name: 🇦🇺 澳大利亚 (Australia) 05 - jack
+  client-fingerprint: firefox
+- name: 🇦🇺 澳大利亚 (Australia) 06 - jack
+  server: 34.87.229.148
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4f865f35-cf47-4e7f-a7e6-8882511a1b36
+  tls: true
+  reality-opts:
+    public-key: OgTkmAQdLjipA9oLloxbU5BAX3hPjzbvkEGHF4aZ8z4
+    short-id: 8a7d5e0248cdb1b1
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇦🇺 澳大利亚 (Australia) 07 - jack
+  server: au1.gsafevpnapi.com
+  port: 20270
+  udp: true
+  type: vless
+  uuid: 6eef3a79-22bc-4086-b5e6-95e07db73016
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: RHLiKldLu3DONcQoX4Kjs7Xmd2K25ndVbw4pwxe45XE
+    short-id: e6a5a4a9115456de
+  servername: www.yahoo.com
+  client-fingerprint: chrome
+- name: 🇦🇺 澳大利亚 (Australia) 08 - jack
   server: nova.freshnet.ir
   port: 2082
   udp: true
@@ -64,19 +99,6 @@ proxies:
     path: /cats/FslNz
     headers:
       Host: nova.freshnet.ir
-- name: 🇦🇺 澳大利亚 (Australia) 06 - jack
-  server: au1.gsafevpnapi.com
-  port: 20270
-  udp: true
-  type: vless
-  uuid: 6eef3a79-22bc-4086-b5e6-95e07db73016
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: RHLiKldLu3DONcQoX4Kjs7Xmd2K25ndVbw4pwxe45XE
-    short-id: e6a5a4a9115456de
-  servername: www.yahoo.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -88,6 +110,8 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 04 - jack
   - 🇦🇺 澳大利亚 (Australia) 05 - jack
   - 🇦🇺 澳大利亚 (Australia) 06 - jack
+  - 🇦🇺 澳大利亚 (Australia) 07 - jack
+  - 🇦🇺 澳大利亚 (Australia) 08 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -99,5 +123,7 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 04 - jack
   - 🇦🇺 澳大利亚 (Australia) 05 - jack
   - 🇦🇺 澳大利亚 (Australia) 06 - jack
+  - 🇦🇺 澳大利亚 (Australia) 07 - jack
+  - 🇦🇺 澳大利亚 (Australia) 08 - jack
 rules:
 - MATCH,PROXIES

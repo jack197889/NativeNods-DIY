@@ -5,54 +5,43 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - jack
-  server: 185.71.219.128
-  port: 80
+  server: 104.20.6.153
+  port: 8880
   udp: true
   type: vless
-  uuid: f4ade6db-3c64-4939-9f32-788b87a9392f
+  uuid: a22bff60-a40a-4250-bde2-4c660e363b47
+  network: ws
+  ws-opts:
+    path: /j100sy9wn073cxbvir
+    headers:
+      Host: index.harmonica02.workers.dev
+- name: 🇹🇷 土耳其 (Turkey) 02 - jack
+  server: 188.114.97.6
+  port: 8080
+  udp: true
+  type: vless
+  uuid: a22bff60-a40a-4250-bde2-4c660e363b47
+  network: ws
+  ws-opts:
+    path: /axch1mttbxz2k55y01
+    headers:
+      Host: index.harmonica01.workers.dev
+- name: 🇹🇷 土耳其 (Turkey) 03 - jack
+  server: 146.75.84.3
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8abb648a-b004-42a4-aa05-49cdc2f94d4e
+  tls: true
+  servername: ssl.fastly.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: play.google.com
-- name: 🇹🇷 土耳其 (Turkey) 02 - jack
-  server: 185.71.219.128
-  port: 2052
-  udp: true
-  type: vless
-  uuid: f4ade6db-3c64-4939-9f32-788b87a9392f
-  tls: true
-  servername: 185.71.219.128
-  skip-cert-verify: false
-  client-fingerprint: ios
-- name: 🇹🇷 土耳其 (Turkey) 03 - jack
-  server: 151.241.226.201
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  tls: true
-  reality-opts:
-    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
-    short-id: 9e419c0759b54d6f
-  servername: www.apple.com
-  client-fingerprint: chrome
+      Host: BechBad.global.ssl.fastly.net
 - name: 🇹🇷 土耳其 (Turkey) 04 - jack
-  server: 185.71.219.128
-  port: 2082
-  udp: true
-  type: vless
-  uuid: f4ade6db-3c64-4939-9f32-788b87a9392f
-  tls: true
-  servername: 185.71.219.128
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: httpupgrade
-  httpupgrade-opts:
-    path: /
-    headers:
-      Host: play.google.com
-- name: 🇹🇷 土耳其 (Turkey) 05 - jack
   server: me17.msjia8844.site
   port: 7443
   udp: true
@@ -62,7 +51,7 @@ proxies:
   skip-cert-verify: false
   obfs: salamander
   obfs-password: u3Soh9_Ui0UmcuY6vk0ug8Lq
-- name: 🇹🇷 土耳其 (Turkey) 06 - jack
+- name: 🇹🇷 土耳其 (Turkey) 05 - jack
   server: 78.135.73.47
   port: 443
   udp: true
@@ -75,6 +64,24 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 06 - jack
+  server: 151.241.226.201
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  tls: true
+  reality-opts:
+    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
+    short-id: 9e419c0759b54d6f
+  servername: www.apple.com
+  client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 07 - jack
+  server: test.keoplentuio.xyz
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
 proxy-groups:
 - name: PROXIES
   type: select
@@ -86,6 +93,7 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 04 - jack
   - 🇹🇷 土耳其 (Turkey) 05 - jack
   - 🇹🇷 土耳其 (Turkey) 06 - jack
+  - 🇹🇷 土耳其 (Turkey) 07 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -97,5 +105,6 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 04 - jack
   - 🇹🇷 土耳其 (Turkey) 05 - jack
   - 🇹🇷 土耳其 (Turkey) 06 - jack
+  - 🇹🇷 土耳其 (Turkey) 07 - jack
 rules:
 - MATCH,PROXIES

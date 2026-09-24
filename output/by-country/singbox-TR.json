@@ -6,85 +6,57 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01 - jack",
-      "server": "185.71.219.128",
-      "server_port": 80,
-      "uuid": "f4ade6db-3c64-4939-9f32-788b87a9392f",
+      "server": "104.20.6.153",
+      "server_port": 8880,
+      "uuid": "a22bff60-a40a-4250-bde2-4c660e363b47",
       "transport": {
         "type": "ws",
-        "path": "/",
+        "path": "/j100sy9wn073cxbvir",
         "headers": {
-          "Host": "play.google.com"
+          "Host": "index.harmonica02.workers.dev"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 02 - jack",
-      "server": "185.71.219.128",
-      "server_port": 2052,
-      "uuid": "f4ade6db-3c64-4939-9f32-788b87a9392f",
-      "tls": {
-        "enabled": true,
-        "server_name": "185.71.219.128",
-        "insecure": false,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
+      "server": "188.114.97.6",
+      "server_port": 8080,
+      "uuid": "a22bff60-a40a-4250-bde2-4c660e363b47",
+      "transport": {
+        "type": "ws",
+        "path": "/axch1mttbxz2k55y01",
+        "headers": {
+          "Host": "index.harmonica01.workers.dev"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 03 - jack",
-      "server": "151.241.226.201",
-      "server_port": 2053,
-      "uuid": "0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8",
+      "server": "146.75.84.3",
+      "server_port": 443,
+      "uuid": "8abb648a-b004-42a4-aa05-49cdc2f94d4e",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104",
-          "short_id": "9e419c0759b54d6f"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 04 - jack",
-      "server": "185.71.219.128",
-      "server_port": 2082,
-      "uuid": "f4ade6db-3c64-4939-9f32-788b87a9392f",
-      "tls": {
-        "enabled": true,
-        "server_name": "185.71.219.128",
+        "server_name": "ssl.fastly.com",
         "insecure": false,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
-        "type": "httpupgrade",
+        "type": "ws",
         "path": "/",
-        "host": "play.google.com"
+        "headers": {
+          "Host": "BechBad.global.ssl.fastly.net"
+        }
       }
     },
     {
       "type": "hysteria2",
-      "tag": "🇹🇷 土耳其 (Turkey) 05 - jack",
+      "tag": "🇹🇷 土耳其 (Turkey) 04 - jack",
       "server": "me17.msjia8844.site",
       "server_port": 7443,
       "password": "M8LP9DztTr3znqCkmf-r08CQLBLLFK1r",
@@ -100,7 +72,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 06 - jack",
+      "tag": "🇹🇷 土耳其 (Turkey) 05 - jack",
       "server": "78.135.73.47",
       "server_port": 443,
       "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
@@ -120,6 +92,33 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 06 - jack",
+      "server": "151.241.226.201",
+      "server_port": 2053,
+      "uuid": "0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104",
+          "short_id": "9e419c0759b54d6f"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 07 - jack",
+      "server": "test.keoplentuio.xyz",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -129,7 +128,8 @@
         "🇹🇷 土耳其 (Turkey) 03 - jack",
         "🇹🇷 土耳其 (Turkey) 04 - jack",
         "🇹🇷 土耳其 (Turkey) 05 - jack",
-        "🇹🇷 土耳其 (Turkey) 06 - jack"
+        "🇹🇷 土耳其 (Turkey) 06 - jack",
+        "🇹🇷 土耳其 (Turkey) 07 - jack"
       ]
     },
     {
@@ -141,7 +141,8 @@
         "🇹🇷 土耳其 (Turkey) 03 - jack",
         "🇹🇷 土耳其 (Turkey) 04 - jack",
         "🇹🇷 土耳其 (Turkey) 05 - jack",
-        "🇹🇷 土耳其 (Turkey) 06 - jack"
+        "🇹🇷 土耳其 (Turkey) 06 - jack",
+        "🇹🇷 土耳其 (Turkey) 07 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

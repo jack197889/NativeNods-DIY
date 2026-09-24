@@ -4,22 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 01 (家宽) - jack",
-      "server": "162.159.45.19",
-      "server_port": 2052,
-      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2560security=tls",
-        "headers": {
-          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
-        }
-      }
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 02 (家宽) - jack",
+      "tag": "🇺🇸 美国 (United States) 01 (家宽) - jack",
       "server": "155.117.19.17",
       "server_port": 443,
       "password": "5fa748137b6d822308eea4611f474ad5",
@@ -34,16 +20,74 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
-      "server": "r3mrcg001286ek2.cybervena.com",
-      "server_port": 50099,
-      "method": "chacha20-ietf-poly1305",
-      "password": "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
+      "type": "vless",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
+      "server": "118.167.206.152",
+      "server_port": 24215,
+      "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
+      "tls": {
+        "enabled": true,
+        "server_name": "addons.mozilla.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 03 (家宽) - jack",
+      "server": "91.186.218.227",
+      "server_port": 4443,
+      "uuid": "e6059f19-eb60-4165-9bb7-271750d2629e",
+      "tls": {
+        "enabled": true,
+        "server_name": "wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 04 (家宽) - jack",
+      "server": "45.77.241.190",
+      "server_port": 8441,
+      "uuid": "75f440b2-2cf8-45e7-9565-af7fde5bacc2",
+      "tls": {
+        "enabled": true,
+        "server_name": "3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev"
+        }
+      }
     },
     {
       "type": "anytls",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
       "server": "6ivh.pnuqcnp.cn",
       "server_port": 443,
       "password": "9sK2mP8xQ7vL3nZ6",
@@ -55,7 +99,7 @@
     },
     {
       "type": "anytls",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 05 (家宽) - jack",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 06 (家宽) - jack",
       "server": "ac7548f3ebe045b39a90288ff1e97528.pnuqcnp.cn",
       "server_port": 443,
       "password": "9sK2mP8xQ7vL3nZ6",
@@ -71,10 +115,11 @@
       "outbounds": [
         "auto",
         "🇺🇸 美国 (United States) 01 (家宽) - jack",
-        "🇺🇸 美国 (United States) 02 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 05 (家宽) - jack"
+        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
+        "🇯🇵 日本 (Japan) 03 (家宽) - jack",
+        "🇯🇵 日本 (Japan) 04 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 06 (家宽) - jack"
       ]
     },
     {
@@ -82,10 +127,11 @@
       "tag": "auto",
       "outbounds": [
         "🇺🇸 美国 (United States) 01 (家宽) - jack",
-        "🇺🇸 美国 (United States) 02 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 05 (家宽) - jack"
+        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
+        "🇯🇵 日本 (Japan) 03 (家宽) - jack",
+        "🇯🇵 日本 (Japan) 04 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 06 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
