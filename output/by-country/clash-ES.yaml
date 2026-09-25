@@ -5,6 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01 - jack
+  server: 5.188.181.201
+  port: 9025
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: XPtzA9sCug3SPR4c
+- name: 🇪🇸 西班牙 (Spain) 02 - jack
+  server: 140.174.184.5
+  port: 8388
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: qItG8SueYQcP
+- name: 🇪🇸 西班牙 (Spain) 03 - jack
   server: 66.163.118.73
   port: 22324
   udp: true
@@ -12,7 +26,7 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
-- name: 🇪🇸 西班牙 (Spain) 02 - jack
+- name: 🇪🇸 西班牙 (Spain) 04 - jack
   server: 212.227.235.66
   port: 2053
   udp: true
@@ -24,21 +38,27 @@ proxies:
     short-id: 29e8dcd2b37aaa7f
   servername: www.apple.com
   client-fingerprint: firefox
-- name: 🇪🇸 西班牙 (Spain) 03 - jack
+- name: 🇪🇸 西班牙 (Spain) 05 - jack
   server: 108.181.121.226
   port: 8388
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: WSyL4XTwNsdv
-- name: 🇪🇸 西班牙 (Spain) 04 - jack
-  server: 140.174.184.5
-  port: 8388
+- name: 🇪🇸 西班牙 (Spain) 06 - jack
+  server: 83.147.18.3
+  port: 443
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: qItG8SueYQcP
-- name: 🇪🇸 西班牙 (Spain) 05 - jack
+  type: vless
+  uuid: 9f61cdf4-810d-4052-bbc7-2da0c8e20104
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA
+    short-id: fd8cf7e1173f0edb
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇪🇸 西班牙 (Spain) 07 - jack
   server: 46.28.71.247
   port: 443
   udp: true
@@ -51,7 +71,7 @@ proxies:
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
   client-fingerprint: ''
-- name: 🇪🇸 西班牙 (Spain) 06 - jack
+- name: 🇪🇸 西班牙 (Spain) 08 - jack
   server: 87.76.179.117
   port: 7443
   udp: true
@@ -64,22 +84,6 @@ proxies:
     short-id: d2061bb1
   servername: www.samsung.com
   client-fingerprint: firefox
-- name: 🇪🇸 西班牙 (Spain) 07 - jack
-  server: mygptagent.org
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: mygptagent.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /linkvws
-    headers:
-      Host: mygptagent.org
 proxy-groups:
 - name: PROXIES
   type: select
@@ -92,6 +96,7 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 05 - jack
   - 🇪🇸 西班牙 (Spain) 06 - jack
   - 🇪🇸 西班牙 (Spain) 07 - jack
+  - 🇪🇸 西班牙 (Spain) 08 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -104,5 +109,6 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 05 - jack
   - 🇪🇸 西班牙 (Spain) 06 - jack
   - 🇪🇸 西班牙 (Spain) 07 - jack
+  - 🇪🇸 西班牙 (Spain) 08 - jack
 rules:
 - MATCH,PROXIES

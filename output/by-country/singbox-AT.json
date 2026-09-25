@@ -33,12 +33,47 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "🇦🇹 奥地利 (Austria) 03 - jack",
+      "server": "67.159.17.181",
+      "server_port": 30443,
+      "password": "0e1506b1-22a4-4b4f-8082-9ddd2efcd28e",
+      "tls": {
+        "enabled": true,
+        "server_name": "filesconvert.org",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇹 奥地利 (Austria) 04 - jack",
+      "server": "zcsagftt.selqora.ir",
+      "server_port": 51595,
+      "uuid": "82f2dfe6-4ef5-484f-8b7d-94f682a88b00",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "play.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "SAEWzHGGBsp8haTh34RoN5NwoxiCgZzzJo7jWi-DJXw",
+          "short_id": "913175efbe9ddb1d"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇦🇹 奥地利 (Austria) 01 - jack",
-        "🇦🇹 奥地利 (Austria) 02 - jack"
+        "🇦🇹 奥地利 (Austria) 02 - jack",
+        "🇦🇹 奥地利 (Austria) 03 - jack",
+        "🇦🇹 奥地利 (Austria) 04 - jack"
       ]
     },
     {
@@ -46,7 +81,9 @@
       "tag": "auto",
       "outbounds": [
         "🇦🇹 奥地利 (Austria) 01 - jack",
-        "🇦🇹 奥地利 (Austria) 02 - jack"
+        "🇦🇹 奥地利 (Austria) 02 - jack",
+        "🇦🇹 奥地利 (Austria) 03 - jack",
+        "🇦🇹 奥地利 (Austria) 04 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -4,28 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇨🇭 瑞士 (Switzerland) 01 - jack",
-      "server": "94.249.187.46",
-      "server_port": 1080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "IXa3ylzS_jBOAsQy071tIQ"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇨🇭 瑞士 (Switzerland) 02 - jack",
-      "server": "140.238.213.114",
-      "server_port": 50160,
-      "password": "84a506ca5aca505696a454d828420b3f",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 03 - jack",
+      "tag": "🇨🇭 瑞士 (Switzerland) 01 - jack",
       "server": "45.90.59.15",
       "server_port": 443,
       "uuid": "3950b45e-740d-4dca-ac95-505ec8534592",
@@ -45,8 +25,55 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "🇨🇭 瑞士 (Switzerland) 02 - jack",
+      "server": "140.238.213.114",
+      "server_port": 50160,
+      "password": "84a506ca5aca505696a454d828420b3f",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇨🇭 瑞士 (Switzerland) 03 - jack",
+      "server": "82.38.64.239",
+      "server_port": 8443,
+      "password": "we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH",
+      "tls": {
+        "enabled": true,
+        "server_name": "hopp-swizland-new.mysynology.net",
+        "insecure": false
+      }
+    },
+    {
       "type": "vless",
       "tag": "🇨🇭 瑞士 (Switzerland) 04 - jack",
+      "server": "151.242.2.81",
+      "server_port": 443,
+      "uuid": "0a2dde28-70da-4863-a06f-35d007d94d35",
+      "tls": {
+        "enabled": true,
+        "server_name": "cf9.rumedia-cdn.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/cdn/v3/live",
+        "headers": {
+          "Host": "cf9.rumedia-cdn.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇭 瑞士 (Switzerland) 05 - jack",
       "server": "131.123.34.145",
       "server_port": 8081,
       "uuid": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
@@ -63,7 +90,8 @@
         "🇨🇭 瑞士 (Switzerland) 01 - jack",
         "🇨🇭 瑞士 (Switzerland) 02 - jack",
         "🇨🇭 瑞士 (Switzerland) 03 - jack",
-        "🇨🇭 瑞士 (Switzerland) 04 - jack"
+        "🇨🇭 瑞士 (Switzerland) 04 - jack",
+        "🇨🇭 瑞士 (Switzerland) 05 - jack"
       ]
     },
     {
@@ -73,7 +101,8 @@
         "🇨🇭 瑞士 (Switzerland) 01 - jack",
         "🇨🇭 瑞士 (Switzerland) 02 - jack",
         "🇨🇭 瑞士 (Switzerland) 03 - jack",
-        "🇨🇭 瑞士 (Switzerland) 04 - jack"
+        "🇨🇭 瑞士 (Switzerland) 04 - jack",
+        "🇨🇭 瑞士 (Switzerland) 05 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

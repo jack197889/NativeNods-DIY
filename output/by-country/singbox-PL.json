@@ -7,13 +7,29 @@
       "type": "shadowsocks",
       "tag": "🇵🇱 波兰 (Poland) 01 - jack",
       "server": "217.30.10.44",
-      "server_port": 9042,
+      "server_port": 9063,
       "method": "aes-256-cfb",
-      "password": "S7KwUu7yBy58S3Ga"
+      "password": "aQqJbtwFGcCCaeL3"
     },
     {
       "type": "shadowsocks",
       "tag": "🇵🇱 波兰 (Poland) 02 - jack",
+      "server": "217.30.10.44",
+      "server_port": 9071,
+      "method": "aes-256-cfb",
+      "password": "mENfxTFQpRKKh4As"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇵🇱 波兰 (Poland) 03 - jack",
+      "server": "217.30.10.44",
+      "server_port": 9041,
+      "method": "aes-256-cfb",
+      "password": "U6qnYRhfyDmn8sgn"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇵🇱 波兰 (Poland) 04 - jack",
       "server": "217.30.10.44",
       "server_port": 9099,
       "method": "aes-256-cfb",
@@ -21,7 +37,15 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇵🇱 波兰 (Poland) 03 - jack",
+      "tag": "🇵🇱 波兰 (Poland) 05 - jack",
+      "server": "217.30.10.44",
+      "server_port": 9042,
+      "method": "aes-256-cfb",
+      "password": "S7KwUu7yBy58S3Ga"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇵🇱 波兰 (Poland) 06 - jack",
       "server": "217.30.10.44",
       "server_port": 9052,
       "method": "aes-256-cfb",
@@ -29,40 +53,16 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇵🇱 波兰 (Poland) 04 - jack",
-      "server": "217.30.10.44",
-      "server_port": 9062,
-      "method": "aes-256-cfb",
-      "password": "tkhHVxxfM2QErBWe"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇵🇱 波兰 (Poland) 05 - jack",
-      "server": "217.30.10.44",
-      "server_port": 9006,
-      "method": "aes-256-cfb",
-      "password": "FAdUvMJUq5vDgKEq"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇵🇱 波兰 (Poland) 06 - jack",
-      "server": "217.30.10.44",
-      "server_port": 9063,
-      "method": "aes-256-cfb",
-      "password": "aQqJbtwFGcCCaeL3"
-    },
-    {
-      "type": "shadowsocks",
       "tag": "🇵🇱 波兰 (Poland) 07 - jack",
       "server": "217.30.10.44",
-      "server_port": 9071,
+      "server_port": 9076,
       "method": "aes-256-cfb",
-      "password": "mENfxTFQpRKKh4As"
+      "password": "S2zDyyPcmZN2h8EC"
     },
     {
       "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 08 - jack",
-      "server": "185.223.57.16",
+      "server": "185.223.57.10",
       "server_port": 33743,
       "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
       "tls": {
@@ -84,32 +84,36 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇵🇱 波兰 (Poland) 09 - jack",
-      "server": "217.30.10.44",
-      "server_port": 9041,
-      "method": "aes-256-cfb",
-      "password": "U6qnYRhfyDmn8sgn"
-    },
-    {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 10 - jack",
-      "server": "2.59.253.251",
+      "tag": "🇵🇱 波兰 (Poland) 09 - jack",
+      "server": "144.31.131.38",
       "server_port": 443,
       "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "nvidia.com",
+        "server_name": "prod.pl-node-01.security-sbrf.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
           "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
           "short_id": "db04ce8bdb8900f1"
         }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇵🇱 波兰 (Poland) 10 - jack",
+      "server": "45.192.12.93",
+      "server_port": 443,
+      "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.wwwinternetvideo.click",
+        "insecure": false
       }
     },
     {
@@ -125,41 +129,16 @@
       }
     },
     {
-      "type": "hysteria2",
+      "type": "shadowsocks",
       "tag": "🇵🇱 波兰 (Poland) 12 - jack",
-      "server": "admin.wwwinternetvideo.click",
-      "server_port": 443,
-      "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.wwwinternetvideo.click",
-        "insecure": false
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 13 - jack",
-      "server": "pl1.chromevpn.cc",
-      "server_port": 8444,
-      "uuid": "02bd8b5a-170b-4a79-8e68-9cec710272c7",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "pl1.chromevpn.cc",
-        "utls": {
-          "enabled": true,
-          "fingerprint": ""
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ltHl15Wq549qC2JdAtesy-POs6Hwm_BbrlzuwDkWoUk",
-          "short_id": "93f5b0d1a8ce6247"
-        }
-      }
+      "server": "217.30.10.44",
+      "server_port": 9006,
+      "method": "aes-256-cfb",
+      "password": "FAdUvMJUq5vDgKEq"
     },
     {
       "type": "shadowsocks",
-      "tag": "🇵🇱 波兰 (Poland) 14 - jack",
+      "tag": "🇵🇱 波兰 (Poland) 13 - jack",
       "server": "146.59.116.19",
       "server_port": 17000,
       "method": "aes-256-gcm",
@@ -167,7 +146,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 15 - jack",
+      "tag": "🇵🇱 波兰 (Poland) 14 - jack",
       "server": "144.31.5.3",
       "server_port": 443,
       "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
@@ -186,84 +165,17 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 16 - jack",
-      "server": "144.31.2.33",
-      "server_port": 443,
-      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "pl3.moritech.net",
-        "insecure": false,
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 17 - jack",
-      "server": "144.31.5.64",
-      "server_port": 443,
-      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "pl6.moritech.net",
-        "insecure": false,
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 18 - jack",
-      "server": "82.118.22.161",
-      "server_port": 443,
-      "uuid": "05488656-d4bf-4634-8b2e-e4ff5a56c7e2",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E",
-          "short_id": "fa3ea655619a3e78"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 19 - jack",
-      "server": "45.198.0.98",
-      "server_port": 1337,
-      "uuid": "94dd5fa3-ce24-4b16-8534-2e6b64a97087",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.booking.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "tm-eZylkXA8308bx_Gik886Gfc2uMVrjs-4SVVZlMUI",
-          "short_id": "d774703ebee04d5f"
+      "type": "vmess",
+      "tag": "🇵🇱 波兰 (Poland) 15 - jack",
+      "server": "188.114.96.19",
+      "server_port": 80,
+      "uuid": "aed88e79-5762-4d2f-86fa-f438f32a7654",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "google.whatsapp.snapp.torob.basalam.hesanid8.ir."
         }
       }
     },
@@ -286,11 +198,7 @@
         "🇵🇱 波兰 (Poland) 12 - jack",
         "🇵🇱 波兰 (Poland) 13 - jack",
         "🇵🇱 波兰 (Poland) 14 - jack",
-        "🇵🇱 波兰 (Poland) 15 - jack",
-        "🇵🇱 波兰 (Poland) 16 - jack",
-        "🇵🇱 波兰 (Poland) 17 - jack",
-        "🇵🇱 波兰 (Poland) 18 - jack",
-        "🇵🇱 波兰 (Poland) 19 - jack"
+        "🇵🇱 波兰 (Poland) 15 - jack"
       ]
     },
     {
@@ -311,11 +219,7 @@
         "🇵🇱 波兰 (Poland) 12 - jack",
         "🇵🇱 波兰 (Poland) 13 - jack",
         "🇵🇱 波兰 (Poland) 14 - jack",
-        "🇵🇱 波兰 (Poland) 15 - jack",
-        "🇵🇱 波兰 (Poland) 16 - jack",
-        "🇵🇱 波兰 (Poland) 17 - jack",
-        "🇵🇱 波兰 (Poland) 18 - jack",
-        "🇵🇱 波兰 (Poland) 19 - jack"
+        "🇵🇱 波兰 (Poland) 15 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

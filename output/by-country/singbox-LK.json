@@ -7,16 +7,6 @@
       "type": "vless",
       "tag": "🇱🇰 斯里兰卡 (Sri Lanka) 01 - jack",
       "server": "free.sahanwickramasinghe.me",
-      "server_port": 80,
-      "uuid": "684f9a2e-4f96-497f-bfd9-ff1e34637952",
-      "transport": {
-        "type": "ws"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇱🇰 斯里兰卡 (Sri Lanka) 02 - jack",
-      "server": "free.sahanwickramasinghe.me",
       "server_port": 8443,
       "uuid": "c73ffa6e-a102-4984-9176-3e6242c1925e",
       "tls": {
@@ -31,6 +21,20 @@
       "transport": {
         "type": "ws",
         "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇱🇰 斯里兰卡 (Sri Lanka) 02 - jack",
+      "server": "support.zoom.us",
+      "server_port": 80,
+      "uuid": "684f9a2e-4f96-497f-bfd9-ff1e34637952",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "free.sahanwickramasinghe.me"
+        }
       }
     },
     {

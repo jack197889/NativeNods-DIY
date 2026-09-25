@@ -5,18 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01 - jack
-  server: 194.87.130.9
-  port: 443
+  server: 151.101.1.194
+  port: 80
   udp: true
   type: vless
-  uuid: 57a437c4-7eed-4ecf-bf50-5e4e35f71deb
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: pccR04wlWHqbXoRk19m56lzp3CdDFd6RqGEuWj5TrWk
-    short-id: 793bf4b257bbf247
-  servername: www.marktplaats.nl
-  client-fingerprint: safari
+  uuid: 18f1fe42-d1ec-484b-8699-6bd5116386f6
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: simorghfr.global.ssl.fastly.net
 proxy-groups:
 - name: PROXIES
   type: select

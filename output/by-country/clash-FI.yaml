@@ -5,6 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - jack
+  server: 83.219.97.26
+  port: 443
+  udp: true
+  type: vless
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: est1313.ggisopi.su
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 02 - jack
   server: 2.27.175.71
   port: 443
   udp: true
@@ -17,18 +29,6 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: cdn.v1.AssetService
-- name: 🇫🇮 芬兰 (Finland) 02 - jack
-  server: 83.219.97.26
-  port: 443
-  udp: true
-  type: vless
-  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
-  servername: est1313.ggisopi.su
-  client-fingerprint: chrome
 - name: 🇫🇮 芬兰 (Finland) 03 - jack
   server: 95.216.27.15
   port: 2053
@@ -42,64 +42,6 @@ proxies:
   servername: www.google.com
   client-fingerprint: firefox
 - name: 🇫🇮 芬兰 (Finland) 04 - jack
-  server: karo.rick313.dpdns.org
-  port: 2087
-  udp: true
-  type: vless
-  uuid: 2e4e6812-be87-415b-a2e8-b0e17e9f2da7
-  tls: true
-  servername: karo.rick313.dpdns.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 05 - jack
-  server: 2.26.3.81
-  port: 443
-  udp: true
-  type: vless
-  uuid: 607fbd26-4bd6-4e16-a74b-a0d9894866e7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: fkZTYNydTBVO-1LSiTvDcyBMx-zBP5Am780jECmUgg0
-  servername: fi03.mcloud.mov
-  client-fingerprint: safari
-- name: 🇫🇮 芬兰 (Finland) 06 - jack
-  server: 31.77.199.147
-  port: 4443
-  udp: true
-  type: vless
-  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GvkQwcZWiXQBLzEhTVfQkyPpdgo6Opc3RtLsED9sA0A
-    short-id: 7da2eae792187ab9
-  servername: images.unsplash.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 07 - jack
-  server: 185.79.138.71
-  port: 448
-  udp: true
-  type: vless
-  uuid: 0b0915d7-6800-4580-a44b-77d84f105e6a
-  tls: true
-  reality-opts:
-    public-key: CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8
-    short-id: cd21e552537c7c0b
-  servername: www.samsung.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 08 - jack
-  server: fi.snobvpn.online
-  port: 80
-  udp: true
-  type: vless
-  uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
-  network: ws
-  ws-opts:
-    path: /snob-ws
-    headers:
-      Host: fi.snobvpn.online
-- name: 🇫🇮 芬兰 (Finland) 09 - jack
   server: 37.143.129.244
   port: 443
   udp: true
@@ -112,14 +54,65 @@ proxies:
     short-id: 48fd192dc4e46bc0
   servername: gateway.icloud.com
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 10 - jack
-  server: p1tun4.greewebservices.ir
-  port: 1080
+- name: 🇫🇮 芬兰 (Finland) 05 - jack
+  server: 185.79.138.71
+  port: 448
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: cVvgP0Bz69hsErPBvqKbwQ
-- name: 🇫🇮 芬兰 (Finland) 11 - jack
+  type: vless
+  uuid: 0b0915d7-6800-4580-a44b-77d84f105e6a
+  tls: true
+  reality-opts:
+    public-key: CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8
+    short-id: cd21e552537c7c0b
+  servername: www.samsung.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 06 - jack
+  server: me6.movieseryalirani.ir
+  port: 57361
+  udp: true
+  type: vmess
+  uuid: ed815caa-bff1-4419-8c61-1d108eabaf1f
+  alterId: 0
+  cipher: auto
+- name: 🇫🇮 芬兰 (Finland) 07 - jack
+  server: 31.77.199.147
+  port: 4443
+  udp: true
+  type: vless
+  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GvkQwcZWiXQBLzEhTVfQkyPpdgo6Opc3RtLsED9sA0A
+    short-id: 7da2eae792187ab9
+  servername: images.unsplash.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 08 - jack
+  server: 144.31.27.215
+  port: 43000
+  udp: true
+  type: vless
+  uuid: 47f79fc1-0646-40e8-8a58-73e85d183d5a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: dxCQnOekn14riFxt3vdwDNydvW47FsmwFG6BJ2mUgEg
+    short-id: 568d87a47271344e
+  servername: 144.31.27.215
+  client-fingerprint: edge
+- name: 🇫🇮 芬兰 (Finland) 09 - jack
+  server: me1.movieseryalirani.ir
+  port: 443
+  udp: true
+  type: vless
+  uuid: 63aaea7f-2847-4f41-afab-0836b1cf79d9
+  tls: true
+  reality-opts:
+    public-key: CxRZ7oJWwR7okmOoqEEbVYCSfTaBlNA6ycf_UniyeEk
+    short-id: 8d814a
+  servername: matrix-client.matrix.org
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 10 - jack
   server: 212.193.18.183
   port: 8446
   udp: true
@@ -149,7 +142,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 08 - jack
   - 🇫🇮 芬兰 (Finland) 09 - jack
   - 🇫🇮 芬兰 (Finland) 10 - jack
-  - 🇫🇮 芬兰 (Finland) 11 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -165,6 +157,5 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 08 - jack
   - 🇫🇮 芬兰 (Finland) 09 - jack
   - 🇫🇮 芬兰 (Finland) 10 - jack
-  - 🇫🇮 芬兰 (Finland) 11 - jack
 rules:
 - MATCH,PROXIES

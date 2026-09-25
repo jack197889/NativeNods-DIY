@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇶 IQ 01 - jack
-  server: 193.56.135.212
-  port: 9543
+- name: 🇸🇮 斯洛文尼亚 (Slovenia) 01 - jack
+  server: node-slo01.rkitman.ru
+  port: 443
   udp: true
   type: vless
-  uuid: ff6d2dda-7b90-404e-9951-34b3124bfdfa
+  uuid: 322710c4-eef9-45ea-ad10-1efa1c6767d0
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
-    short-id: 123abcde
-  servername: storage.yandexcloud.net
+    public-key: 8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU
+    short-id: 88d9dc52ef39c8bd
+  servername: node-slo01.rkitman.ru
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇶 IQ 01 - jack
+  - 🇸🇮 斯洛文尼亚 (Slovenia) 01 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇶 IQ 01 - jack
+  - 🇸🇮 斯洛文尼亚 (Slovenia) 01 - jack
 rules:
 - MATCH,PROXIES

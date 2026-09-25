@@ -6,25 +6,25 @@ log-level: info
 proxies:
 - name: 🇱🇹 立陶宛 (Lithuania) 01 - jack
   server: 195.238.126.20
-  port: 9068
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: mwgRg9hRq3b4Qnwb
-- name: 🇱🇹 立陶宛 (Lithuania) 02 - jack
-  server: 195.238.126.20
-  port: 9012
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: xaupMUvhptwxdDUg
-- name: 🇱🇹 立陶宛 (Lithuania) 03 - jack
-  server: 195.238.126.20
   port: 9011
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: M3t2ZEQcMGRWBjRa
+- name: 🇱🇹 立陶宛 (Lithuania) 02 - jack
+  server: 195.238.126.20
+  port: 9086
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 37Z4TFCYhfxcpc9Q
+- name: 🇱🇹 立陶宛 (Lithuania) 03 - jack
+  server: 195.238.126.20
+  port: 9068
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: mwgRg9hRq3b4Qnwb
 - name: 🇱🇹 立陶宛 (Lithuania) 04 - jack
   server: 195.238.126.20
   port: 9002
@@ -33,7 +33,28 @@ proxies:
   cipher: aes-256-cfb
   password: b8KkNDjEd5QqFyRm
 - name: 🇱🇹 立陶宛 (Lithuania) 05 - jack
-  server: 84.32.215.5
+  server: 195.238.126.20
+  port: 9012
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: xaupMUvhptwxdDUg
+- name: 🇱🇹 立陶宛 (Lithuania) 06 - jack
+  server: 195.238.126.20
+  port: 9078
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: JCJpbRbQZNw9XFZG
+- name: 🇱🇹 立陶宛 (Lithuania) 07 - jack
+  server: 195.238.126.20
+  port: 9008
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: y9VURyNzJWNRYEGQ
+- name: 🇱🇹 立陶宛 (Lithuania) 08 - jack
+  server: 84.32.215.94
   port: 443
   udp: true
   type: vless
@@ -55,6 +76,9 @@ proxy-groups:
   - 🇱🇹 立陶宛 (Lithuania) 03 - jack
   - 🇱🇹 立陶宛 (Lithuania) 04 - jack
   - 🇱🇹 立陶宛 (Lithuania) 05 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 06 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 07 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 08 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -65,5 +89,8 @@ proxy-groups:
   - 🇱🇹 立陶宛 (Lithuania) 03 - jack
   - 🇱🇹 立陶宛 (Lithuania) 04 - jack
   - 🇱🇹 立陶宛 (Lithuania) 05 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 06 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 07 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 08 - jack
 rules:
 - MATCH,PROXIES

@@ -6,21 +6,14 @@
     {
       "type": "vless",
       "tag": "🇨🇿 捷克 (Czech) 01 - jack",
-      "server": "194.87.130.9",
-      "server_port": 443,
-      "uuid": "57a437c4-7eed-4ecf-bf50-5e4e35f71deb",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.marktplaats.nl",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "pccR04wlWHqbXoRk19m56lzp3CdDFd6RqGEuWj5TrWk",
-          "short_id": "793bf4b257bbf247"
+      "server": "151.101.1.194",
+      "server_port": 80,
+      "uuid": "18f1fe42-d1ec-484b-8699-6bd5116386f6",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "simorghfr.global.ssl.fastly.net"
         }
       }
     },

@@ -6,26 +6,6 @@
     {
       "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 01 - jack",
-      "server": "2.27.175.71",
-      "server_port": 443,
-      "uuid": "0dca2cfe-98eb-4f9d-9a47-cf87510c558b",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets-fi.pleiades.codes",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "cdn.v1.AssetService"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 02 - jack",
       "server": "83.219.97.26",
       "server_port": 443,
       "uuid": "d0f0a880-0df1-48c9-bdf1-5669fb9483ce",
@@ -42,6 +22,26 @@
           "public_key": "SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I",
           "short_id": ""
         }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 02 - jack",
+      "server": "2.27.175.71",
+      "server_port": 443,
+      "uuid": "0dca2cfe-98eb-4f9d-9a47-cf87510c558b",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets-fi.pleiades.codes",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "cdn.v1.AssetService"
       }
     },
     {
@@ -67,48 +67,55 @@
     {
       "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 04 - jack",
-      "server": "karo.rick313.dpdns.org",
-      "server_port": 2087,
-      "uuid": "2e4e6812-be87-415b-a2e8-b0e17e9f2da7",
+      "server": "37.143.129.244",
+      "server_port": 443,
+      "uuid": "0e6de971-69e8-4536-b06d-8b6eae57021b",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "karo.rick313.dpdns.org",
-        "insecure": false,
-        "alpn": [
-          "h2",
-          "http/1.1",
-          "h3"
-        ],
+        "server_name": "gateway.icloud.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "5HArul2NDXfFUxijHj1xiPCfH-77zuuRxylT1vWIvUY",
+          "short_id": "48fd192dc4e46bc0"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 05 - jack",
-      "server": "2.26.3.81",
-      "server_port": 443,
-      "uuid": "607fbd26-4bd6-4e16-a74b-a0d9894866e7",
-      "flow": "xtls-rprx-vision",
+      "server": "185.79.138.71",
+      "server_port": 448,
+      "uuid": "0b0915d7-6800-4580-a44b-77d84f105e6a",
       "tls": {
         "enabled": true,
-        "server_name": "fi03.mcloud.mov",
+        "server_name": "www.samsung.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "fkZTYNydTBVO-1LSiTvDcyBMx-zBP5Am780jECmUgg0",
-          "short_id": ""
+          "public_key": "CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8",
+          "short_id": "cd21e552537c7c0b"
         }
       }
     },
     {
-      "type": "vless",
+      "type": "vmess",
       "tag": "🇫🇮 芬兰 (Finland) 06 - jack",
+      "server": "me6.movieseryalirani.ir",
+      "server_port": 57361,
+      "uuid": "ed815caa-bff1-4419-8c61-1d108eabaf1f",
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 07 - jack",
       "server": "31.77.199.147",
       "server_port": 4443,
       "uuid": "20dd9433-389e-4573-ba7b-689619cf13da",
@@ -129,70 +136,48 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 07 - jack",
-      "server": "185.79.138.71",
-      "server_port": 448,
-      "uuid": "0b0915d7-6800-4580-a44b-77d84f105e6a",
+      "tag": "🇫🇮 芬兰 (Finland) 08 - jack",
+      "server": "144.31.27.215",
+      "server_port": 43000,
+      "uuid": "47f79fc1-0646-40e8-8a58-73e85d183d5a",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.samsung.com",
+        "server_name": "144.31.27.215",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         },
         "reality": {
           "enabled": true,
-          "public_key": "CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8",
-          "short_id": "cd21e552537c7c0b"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 08 - jack",
-      "server": "fi.snobvpn.online",
-      "server_port": 80,
-      "uuid": "246b101b-4e4a-451f-8e9c-5e8d3b64b4ef",
-      "transport": {
-        "type": "ws",
-        "path": "/snob-ws",
-        "headers": {
-          "Host": "fi.snobvpn.online"
+          "public_key": "dxCQnOekn14riFxt3vdwDNydvW47FsmwFG6BJ2mUgEg",
+          "short_id": "568d87a47271344e"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 09 - jack",
-      "server": "37.143.129.244",
+      "server": "me1.movieseryalirani.ir",
       "server_port": 443,
-      "uuid": "0e6de971-69e8-4536-b06d-8b6eae57021b",
-      "flow": "xtls-rprx-vision",
+      "uuid": "63aaea7f-2847-4f41-afab-0836b1cf79d9",
       "tls": {
         "enabled": true,
-        "server_name": "gateway.icloud.com",
+        "server_name": "matrix-client.matrix.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "5HArul2NDXfFUxijHj1xiPCfH-77zuuRxylT1vWIvUY",
-          "short_id": "48fd192dc4e46bc0"
+          "public_key": "CxRZ7oJWwR7okmOoqEEbVYCSfTaBlNA6ycf_UniyeEk",
+          "short_id": "8d814a"
         }
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇫🇮 芬兰 (Finland) 10 - jack",
-      "server": "p1tun4.greewebservices.ir",
-      "server_port": 1080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "cVvgP0Bz69hsErPBvqKbwQ"
-    },
-    {
       "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 11 - jack",
+      "tag": "🇫🇮 芬兰 (Finland) 10 - jack",
       "server": "212.193.18.183",
       "server_port": 8446,
       "uuid": "246b101b-4e4a-451f-8e9c-5e8d3b64b4ef",
@@ -228,8 +213,7 @@
         "🇫🇮 芬兰 (Finland) 07 - jack",
         "🇫🇮 芬兰 (Finland) 08 - jack",
         "🇫🇮 芬兰 (Finland) 09 - jack",
-        "🇫🇮 芬兰 (Finland) 10 - jack",
-        "🇫🇮 芬兰 (Finland) 11 - jack"
+        "🇫🇮 芬兰 (Finland) 10 - jack"
       ]
     },
     {
@@ -245,8 +229,7 @@
         "🇫🇮 芬兰 (Finland) 07 - jack",
         "🇫🇮 芬兰 (Finland) 08 - jack",
         "🇫🇮 芬兰 (Finland) 09 - jack",
-        "🇫🇮 芬兰 (Finland) 10 - jack",
-        "🇫🇮 芬兰 (Finland) 11 - jack"
+        "🇫🇮 芬兰 (Finland) 10 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

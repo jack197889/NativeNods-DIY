@@ -5,17 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - jack
-  server: 206.1.98.34
-  port: 26066
-  udp: true
-  type: vmess
-  uuid: Nitro_Skybot@
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇹🇷 土耳其 (Turkey) 02 - jack
   server: 78.135.73.47
   port: 443
   udp: true
@@ -28,7 +17,7 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 03 - jack
+- name: 🇹🇷 土耳其 (Turkey) 02 - jack
   server: 151.241.226.201
   port: 2053
   udp: true
@@ -39,7 +28,20 @@ proxies:
     public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
     short-id: 9e419c0759b54d6f
   servername: www.apple.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 03 - jack
+  server: aguguiucftgvbj.adidasm10.ir
+  port: 45000
+  udp: true
+  type: vless
+  uuid: 056e4454-3eb4-4796-9c1a-6fa52db383ab
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: K_eKlbzI4jFbOPiJV1GQDqF8y_Hqua0zw6ewf-cxJWc
+    short-id: c1ae335b825dd69e
+  servername: play.google.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

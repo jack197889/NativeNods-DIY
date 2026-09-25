@@ -5,57 +5,47 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - jack
-  server: 216.106.187.60
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇩🇪 德国 (Germany) 02 - jack
-  server: 213.202.208.199
-  port: 7001
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-- name: 🇩🇪 德国 (Germany) 03 - jack
   server: 8.209.74.72
   port: 20001
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: PWpjPo3tqhPN4yRZ
-- name: 🇩🇪 德国 (Germany) 04 - jack
-  server: 2.58.81.221
-  port: 80
+- name: 🇩🇪 德国 (Germany) 02 - jack
+  server: 209.46.102.22
+  port: 8388
   udp: true
   type: ss
-  cipher: aes-256-gcm
-  password: kKEd0rBrd56Furjz
-- name: 🇩🇪 德国 (Germany) 05 - jack
+  cipher: chacha20-ietf-poly1305
+  password: 1hhrqrokj3ag
+- name: 🇩🇪 德国 (Germany) 03 - jack
   server: 2.58.81.221
   port: 443
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: kKEd0rBrd56Furjz
-- name: 🇩🇪 德国 (Germany) 06 - jack
+- name: 🇩🇪 德国 (Germany) 04 - jack
   server: 51.195.126.38
   port: 8388
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 2YdE4lFOid5a
-- name: 🇩🇪 德国 (Germany) 07 - jack
-  server: dggg.wsone.icu
-  port: 443
+- name: 🇩🇪 德国 (Germany) 05 - jack
+  server: 77.91.76.156
+  port: 57160
   udp: true
-  type: trojan
-  password: M7v%w11Se*
-  sni: dggg.wsone.icu
-  skip-cert-verify: true
-- name: 🇩🇪 德国 (Germany) 08 - jack
+  type: vless
+  uuid: 68ad9a6d-2463-4c31-92a7-31547b9d4783
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Tbu7sr_pvHngDWFIa0ApL5UL9vEGxlHESd9g53KQehw
+    short-id: 77b5
+  servername: funpay.com
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 06 - jack
   server: 31.77.161.15
   port: 443
   udp: true
@@ -68,88 +58,26 @@ proxies:
     short-id: db04ce8bdb8900f1
   servername: nvidia.com
   client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 07 - jack
+  server: 141.95.29.163
+  port: 2083
+  udp: true
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:JTou+JSmZOAyrMLdvNBcXFm0Y9luZ/8u17ie48jQfVc=
+- name: 🇩🇪 德国 (Germany) 08 - jack
+  server: 162.55.242.208
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 659ffdfa-47d2-47d7-af40-5afe0907eead
+  tls: true
+  reality-opts:
+    public-key: jeS6Zu-p1Gf6GtraIAbpgQoSeT26Xq3GqgqVxccbVhY
+    short-id: 4d14da19b19cfc8c
+  servername: www.cloudflare.com
+  client-fingerprint: random
 - name: 🇩🇪 德国 (Germany) 09 - jack
-  server: 89.169.53.176
-  port: 4443
-  udp: true
-  type: vless
-  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: YIyohkkCU5kw6J5iZYZkhILyDwlfftFPDTkbITlrAUw
-    short-id: df3aff719526dc5a
-  servername: de.wvpn.one
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 10 - jack
-  server: 178.105.126.242
-  port: 443
-  udp: true
-  type: anytls
-  password: e70ec0f2ab60e8c22b316156bf9ac43fec98b45be6681401
-  sni: cn.bing.com
-  skip-cert-verify: true
-- name: 🇩🇪 德国 (Germany) 11 - jack
-  server: 144.31.159.86
-  port: 443
-  udp: true
-  type: vless
-  uuid: b5d6221d-e3ad-4453-b5c6-8bf7ccaa7aa5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: de3.duck-proxy.com
-  skip-cert-verify: false
-  client-fingerprint: safari
-- name: 🇩🇪 德国 (Germany) 12 - jack
-  server: 2.26.51.75
-  port: 443
-  udp: true
-  type: vless
-  uuid: 57e2a48b-0cc2-4b60-aacd-b36358fcba96
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 8q_xD5tfjZGDPsnq-3VqXWVV7-D03crExMBuL4xQNBM
-    short-id: d4f6a8c1b2e3f9aa
-  servername: 4pda.to
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 13 - jack
-  server: 91.107.170.161
-  port: 443
-  udp: true
-  type: vless
-  uuid: 24e71b66-87ab-4007-b1a6-6509c5f6500d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: qqq91FxhIoUtIA2kWHKJ_DvWA8Z5f76N5cE5motNpE0
-    short-id: 34ab0b62f9de3320
-  servername: storage.googleapis.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 14 - jack
-  server: 212.80.7.129
-  port: 6215
-  udp: true
-  type: vless
-  uuid: 2f2ae482-5a3e-455e-aad6-4ac28a82f64f
-  tls: true
-  servername: cdn.astranet.ignorelist.com
-  skip-cert-verify: false
-  network: grpc
-  grpc-opts:
-    grpc-service-name: api.v1.ApiService
-- name: 🇩🇪 德国 (Germany) 15 - jack
-  server: nasnet-571299667-direct.mbghalibaf.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
-  flow: xtls-rprx-vision
-  tls: true
-  servername: nasnet-571299667-direct.mbghalibaf.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 16 - jack
   server: 159.69.103.251
   port: 80
   udp: true
@@ -162,33 +90,19 @@ proxies:
     short-id: 253126232f9bb9be
   servername: www.yahoo.com
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 17 - jack
-  server: 64.188.79.106
-  port: 443
+- name: 🇩🇪 德国 (Germany) 10 - jack
+  server: 95.85.252.223
+  port: 8443
   udp: true
   type: vless
-  uuid: 94006a20-6cd6-4751-a14d-c5a0bacb68bb
+  uuid: 06765620-7fd9-4927-bf74-fa4b551f26b7
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: dBvFkg2zny545Ws6H_LXKEohOYV2MW_zACRrRQE1IUg
-    short-id: 992e5a9a
-  servername: yandex.ru
-  client-fingerprint: ''
-- name: 🇩🇪 德国 (Germany) 18 - jack
-  server: 144.31.168.95
-  port: 443
-  udp: true
-  type: vless
-  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
-    short-id: 00bca5982f82d083
-  servername: eu-central.cendora.ru
+    public-key: 4IFrK2mEJSNBJEqyiWLvPgXGNjV8vK49SxPI0RmheWg
+  servername: www.amazon.com
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 19 - jack
+- name: 🇩🇪 德国 (Germany) 11 - jack
   server: 146.103.43.8
   port: 9543
   udp: true
@@ -201,64 +115,8 @@ proxies:
     short-id: 123abcdf
   servername: storage.yandexcloud.net
   client-fingerprint: safari
-- name: 🇩🇪 德国 (Germany) 20 - jack
-  server: 188.114.97.3
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 51ff8dc9-6bc3-4d09-bf45-5def89e910eb
-  network: httpupgrade
-  httpupgrade-opts:
-    path: /wss
-    headers:
-      Host: nexoservice.zandix.ir
-- name: 🇩🇪 德国 (Germany) 21 - jack
-  server: 162.55.242.208
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 659ffdfa-47d2-47d7-af40-5afe0907eead
-  tls: true
-  reality-opts:
-    public-key: jeS6Zu-p1Gf6GtraIAbpgQoSeT26Xq3GqgqVxccbVhY
-    short-id: 4d14da19b19cfc8c
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 22 - jack
-  server: 82.39.171.12
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: random
-- name: 🇩🇪 德国 (Germany) 23 - jack
-  server: 82.118.19.153
-  port: 443
-  udp: true
-  type: vless
-  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE
-    short-id: 670ed9f350bd8ee0
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 24 - jack
-  server: 185.226.172.8
-  port: 8008
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: XKFKl2rULjIp74
-- name: 🇩🇪 德国 (Germany) 25 - jack
-  server: 57.129.41.216
+- name: 🇩🇪 德国 (Germany) 12 - jack
+  server: ov-germany1.09vpn.com
   port: 80
   udp: true
   type: vless
@@ -268,99 +126,47 @@ proxies:
     path: /vless/
     headers:
       Host: OV-Germany1.09vpn.com
-- name: 🇩🇪 德国 (Germany) 26 - jack
-  server: nasnet-571296497-direct.mbghalibaf.com
-  port: 443
+- name: 🇩🇪 德国 (Germany) 13 - jack
+  server: ov-germany1.09vpn.com
+  port: 80
   udp: true
   type: vless
-  uuid: nasnet
-  flow: xtls-rprx-vision
-  tls: true
-  servername: nasnet-571296497-direct.mbghalibaf.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 27 - jack
-  server: 64.118.158.56
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8af93649-403b-46d8-9966-923d4c58402c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: XTarABsaaFbjYNk6lRKnUzGavHzeqMIP7B8dZGNCvkE
-    short-id: 5c6481cdd4
-  servername: buckeye-retail-website.amazon.com
-  client-fingerprint: ''
-- name: 🇩🇪 德国 (Germany) 28 - jack
-  server: 209.46.102.22
-  port: 8388
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 1hhrqrokj3ag
-- name: 🇩🇪 德国 (Germany) 29 - jack
-  server: de1.apexvpn.space
-  port: 443
-  udp: true
-  type: hysteria2
-  password: af60078b-e956-4752-8728-ce7c9ef630a5
-  sni: de1.apexvpn.space
-  skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 30 - jack
-  server: 82.39.171.142
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 31 - jack
-  server: gesmankos.sadiepinki.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: c5694dc5-39fd-4a92-8430-3837baa522a3
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: rCkSHJ7goy7ZvSlau4LfXF-QLloOJMNeMxpeeQtwtVs
-    short-id: 4fa44664f6a566d3
-  servername: gesmankos.sadiepinki.com
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 32 - jack
-  server: 82.24.203.20
-  port: 2087
-  udp: true
-  type: vless
-  uuid: 5fcdc9b7-e70f-4a5c-85c3-e018ad818326
+  uuid: 7d90f043-ed7f-40c9-ac2f-352987904958
   network: ws
   ws-opts:
-    path: /fd5ba98a3970
+    path: /vless/
     headers:
-      Host: 82.24.203.20
-- name: 🇩🇪 德国 (Germany) 33 - jack
-  server: 216.106.187.60
-  port: 443
+      Host: ov-germany1.09vpn.com
+- name: 🇩🇪 德国 (Germany) 14 - jack
+  server: OV-Germany1.09vpn.com
+  port: 80
   udp: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: kentspark.org
-  skip-cert-verify: false
+  type: vless
+  uuid: 7d74eae4-8a06-4306-a923-ad686f30bf26
   network: ws
   ws-opts:
-    path: /linkvws
+    path: /vless/
+- name: 🇩🇪 德国 (Germany) 15 - jack
+  server: OV-Germany1.09vpn.com
+  port: 80
+  udp: true
+  type: vless
+  uuid: 7d90f043-ed7f-40c9-ac2f-352987904958
+  network: ws
+  ws-opts:
+    path: /vless/
+- name: 🇩🇪 德国 (Germany) 16 - jack
+  server: ov-germany1.09vpn.com
+  port: 80
+  udp: true
+  type: vless
+  uuid: 18535741-e8b3-4b43-9348-785b55936751
+  network: ws
+  ws-opts:
+    path: /vless/
     headers:
-      Host: kentspark.org
-- name: 🇩🇪 德国 (Germany) 34 - jack
+      Host: OV-Germany1.09vpn.com
+- name: 🇩🇪 德国 (Germany) 17 - jack
   server: kentspark.org
   port: 443
   udp: true
@@ -376,24 +182,169 @@ proxies:
     path: /linkvws
     headers:
       Host: kentspark.org
-- name: 🇩🇪 德国 (Germany) 35 - jack
-  server: 2.27.59.206
-  port: 443
+- name: 🇩🇪 德国 (Germany) 18 - jack
+  server: 95.85.252.47
+  port: 9443
   udp: true
   type: hysteria2
-  password: cd74c0a406664a5bc0bac098220a2468
-  sni: de1.sferavpn.pro
+  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  sni: 95.85.252.47
   skip-cert-verify: true
-  obfs: salamander
-  obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0
-- name: 🇩🇪 德国 (Germany) 36 - jack
-  server: 94.130.68.139
-  port: 2052
+- name: 🇩🇪 德国 (Germany) 19 - jack
+  server: 82.118.19.153
+  port: 443
+  udp: true
+  type: vless
+  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE
+    short-id: 670ed9f350bd8ee0
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 20 - jack
+  server: 185.226.172.8
+  port: 8008
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: XKFKl2rULjIp74
+- name: 🇩🇪 德国 (Germany) 21 - jack
+  server: 2.26.51.75
+  port: 443
+  udp: true
+  type: vless
+  uuid: 57e2a48b-0cc2-4b60-aacd-b36358fcba96
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 8q_xD5tfjZGDPsnq-3VqXWVV7-D03crExMBuL4xQNBM
+    short-id: d4f6a8c1b2e3f9aa
+  servername: 4pda.to
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 22 - jack
+  server: creativegermany.zanity.net
+  port: 5228
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: 7mVYfd9UxI5L57zutpJLxuotDKBvhrk1M8EnuT6qlN0=
-- name: 🇩🇪 德国 (Germany) 37 - jack
+  password: IdU1jzHh7ZszbUC5v2mA9W
+- name: 🇩🇪 德国 (Germany) 23 - jack
+  server: 89.169.53.176
+  port: 4443
+  udp: true
+  type: vless
+  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: YIyohkkCU5kw6J5iZYZkhILyDwlfftFPDTkbITlrAUw
+    short-id: df3aff719526dc5a
+  servername: de.wvpn.one
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 24 - jack
+  server: 144.31.159.86
+  port: 443
+  udp: true
+  type: vless
+  uuid: b5d6221d-e3ad-4453-b5c6-8bf7ccaa7aa5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: de3.duck-proxy.com
+  skip-cert-verify: false
+  client-fingerprint: safari
+- name: 🇩🇪 德国 (Germany) 25 - jack
+  server: 2.58.81.221
+  port: 80
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: kKEd0rBrd56Furjz
+- name: 🇩🇪 德国 (Germany) 26 - jack
+  server: TajO.Savfasf.ir
+  port: 19455
+  udp: true
+  type: vless
+  uuid: 7d5a38f6-b2d3-4d8d-acde-a30a74f3a9db
+  tls: true
+  reality-opts:
+    public-key: m3lDuk5uqq-XSa5dEun7kOaQGw5MpY3H_mOYkn5iDwg
+    short-id: cb9fcec6da38b4f9
+  servername: de1.prointerface.info
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 27 - jack
+  server: 57.129.41.216
+  port: 80
+  udp: true
+  type: vless
+  uuid: 7d74eae4-8a06-4306-a923-ad686f30bf26
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: OV-Germany1.09vpn.com
+- name: 🇩🇪 德国 (Germany) 28 - jack
+  server: 57.129.41.216
+  port: 80
+  udp: true
+  type: vless
+  uuid: 7d90f043-ed7f-40c9-ac2f-352987904958
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: ov-germany1.09vpn.com
+- name: 🇩🇪 德国 (Germany) 29 - jack
+  server: 57.129.41.216
+  port: 80
+  udp: true
+  type: vless
+  uuid: 7d74eae4-8a06-4306-a923-ad686f30bf26
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: OV-Germany1.09vpn.com
+- name: 🇩🇪 德国 (Germany) 30 - jack
+  server: 82.39.171.12
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 31 - jack
+  server: 82.39.171.142
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 32 - jack
+  server: content1.movieham.ir
+  port: 5494
+  udp: true
+  type: vless
+  uuid: ac76e123-d0e9-4448-8689-b6b984e73c40
+  tls: true
+  reality-opts:
+    public-key: SzDv43wbpLLk6ADfHa8P6lsHTEa1d3zf6BSzVtdsHSc
+    short-id: 6bc9cfb27889c65e
+  servername: play.google.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 33 - jack
   server: rubifen.adaspoloandco.com
   port: 443
   udp: true
@@ -406,25 +357,80 @@ proxies:
   network: ws
   ws-opts:
     path: /GOrbEh
-- name: 🇩🇪 德国 (Germany) 38 - jack
-  server: hikvision-plus.com
-  port: 2052
+- name: 🇩🇪 德国 (Germany) 34 - jack
+  server: 82.24.203.20
+  port: 2087
   udp: true
   type: vless
-  uuid: b1a8d1eb-dfb2-4dd3-afe6-cd0fff8177df
+  uuid: 5fcdc9b7-e70f-4a5c-85c3-e018ad818326
   network: ws
   ws-opts:
-    path: /@BlueKnight_net--@BlueKnight_net
+    path: /fd5ba98a3970
     headers:
-      Host: uwu.blueknightnet.qzz.io
-- name: 🇩🇪 德国 (Germany) 39 - jack
+      Host: 82.24.203.20
+- name: 🇩🇪 德国 (Germany) 35 - jack
+  server: defrnode.jumpernode.online
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8af93649-403b-46d8-9966-923d4c58402c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: XTarABsaaFbjYNk6lRKnUzGavHzeqMIP7B8dZGNCvkE
+    short-id: 5c6481cdd4
+  servername: buckeye-retail-website.amazon.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 36 - jack
   server: de1.xiaoliyu.cyou
   port: 4433
   udp: true
   type: hysteria2
   password: 6a3fe9d0-0d68-4f29-ae99-5771d4217a45
-  sni: de1.xiaoliyu.cyou
+  sni: 127.0.0.1
   skip-cert-verify: true
+- name: 🇩🇪 德国 (Germany) 37 - jack
+  server: 176.123.161.222
+  port: 9892
+  udp: true
+  type: vless
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  tls: true
+  reality-opts:
+    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+  servername: dl.google.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+- name: 🇩🇪 德国 (Germany) 38 - jack
+  server: 144.31.125.60
+  port: 443
+  udp: true
+  type: vless
+  uuid: 9015f0bc-2053-4ca1-9b9b-a018b97b32d2
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SVgtyuD9khylgHuB0treGekxVSHPOS-wPZTNHUf6zj8
+    short-id: 85c86a9863
+  servername: www.intel.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 39 - jack
+  server: 130.61.238.52
+  port: 59924
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: BO6mQRYPVN+LbfT/BQz06AmexVkBefyT2OPoIx32TXc=
+- name: 🇩🇪 德国 (Germany) 40 - jack
+  server: 216.106.187.60
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
@@ -469,6 +475,7 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 37 - jack
   - 🇩🇪 德国 (Germany) 38 - jack
   - 🇩🇪 德国 (Germany) 39 - jack
+  - 🇩🇪 德国 (Germany) 40 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -513,5 +520,6 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 37 - jack
   - 🇩🇪 德国 (Germany) 38 - jack
   - 🇩🇪 德国 (Germany) 39 - jack
+  - 🇩🇪 德国 (Germany) 40 - jack
 rules:
 - MATCH,PROXIES

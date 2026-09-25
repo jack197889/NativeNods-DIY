@@ -5,22 +5,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇮🇶 IQ 01 - jack",
-      "server": "193.56.135.212",
-      "server_port": 9543,
-      "uuid": "ff6d2dda-7b90-404e-9951-34b3124bfdfa",
+      "tag": "🇸🇮 斯洛文尼亚 (Slovenia) 01 - jack",
+      "server": "node-slo01.rkitman.ru",
+      "server_port": 443,
+      "uuid": "322710c4-eef9-45ea-ad10-1efa1c6767d0",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "storage.yandexcloud.net",
+        "server_name": "node-slo01.rkitman.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc",
-          "short_id": "123abcde"
+          "public_key": "8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU",
+          "short_id": "88d9dc52ef39c8bd"
         }
       }
     },
@@ -29,14 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇶 IQ 01 - jack"
+        "🇸🇮 斯洛文尼亚 (Slovenia) 01 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇶 IQ 01 - jack"
+        "🇸🇮 斯洛文尼亚 (Slovenia) 01 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

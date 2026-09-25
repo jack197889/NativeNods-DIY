@@ -5,13 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇳 印度 (India) 01 - jack
-  server: 35.154.58.87
-  port: 443
+  server: 194.61.31.126
+  port: 2053
   udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-in-001.fastervpn.world
-  skip-cert-verify: true
+  type: vless
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  tls: true
+  reality-opts:
+    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
+    short-id: 9980e0609b0d3891
+  servername: www.apple.com
+  client-fingerprint: firefox
 - name: 🇮🇳 印度 (India) 02 - jack
   server: 148.113.5.44
   port: 443
@@ -25,34 +29,6 @@ proxies:
     short-id: 221873918e0bb74d
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇮🇳 印度 (India) 03 - jack
-  server: 35.244.28.130
-  port: 443
-  udp: true
-  type: trojan
-  password: M7v%w11Se*
-  sni: tttyder.wsone.icu
-  skip-cert-verify: false
-- name: 🇮🇳 印度 (India) 04 - jack
-  server: 34.131.228.210
-  port: 443
-  udp: true
-  type: trojan
-  password: M7v%w11Se*
-  sni: hyfuuf6.wsone.icu
-  skip-cert-verify: false
-- name: 🇮🇳 印度 (India) 05 - jack
-  server: 194.61.31.126
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
-  tls: true
-  reality-opts:
-    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
-    short-id: 9980e0609b0d3891
-  servername: www.apple.com
-  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -60,9 +36,6 @@ proxy-groups:
   - AUTO
   - 🇮🇳 印度 (India) 01 - jack
   - 🇮🇳 印度 (India) 02 - jack
-  - 🇮🇳 印度 (India) 03 - jack
-  - 🇮🇳 印度 (India) 04 - jack
-  - 🇮🇳 印度 (India) 05 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -70,8 +43,5 @@ proxy-groups:
   proxies:
   - 🇮🇳 印度 (India) 01 - jack
   - 🇮🇳 印度 (India) 02 - jack
-  - 🇮🇳 印度 (India) 03 - jack
-  - 🇮🇳 印度 (India) 04 - jack
-  - 🇮🇳 印度 (India) 05 - jack
 rules:
 - MATCH,PROXIES
