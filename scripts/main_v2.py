@@ -77,8 +77,6 @@ SOURCE_URLS = [
     # 4. 其他精选与动态清洗 Worker 源
     "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/Config_jo.txt",
     "https://sub.445569.xyz/",
-    "https://open.heleimail.workers.dev/",
-    "https://wild-cloud-9893.heleimail.workers.dev/",
     "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",
     "https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/merged.txt"
 ]
@@ -1643,7 +1641,10 @@ def classify_network_type(ip: str, country: str, asn, org: str, ip_api_rec: dict
 def outbound_to_clash(node: dict, name: str) -> dict:
     """sing-box outbound → Clash (Meta/mihomo) proxy dict"""
     t = node.get("type")
-    server, port = node["server"], node["server_port"]
+   port = node.get("server_port") or node.get("port")
+server = node.get("server") or node.get("address")
+if not server or not port:
+    return None
     proxy = {"name": name, "server": server, "port": port, "udp": True}
 
     if t == "vless":
