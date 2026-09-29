@@ -1641,10 +1641,10 @@ def classify_network_type(ip: str, country: str, asn, org: str, ip_api_rec: dict
 def outbound_to_clash(node: dict, name: str) -> dict:
     """sing-box outbound → Clash (Meta/mihomo) proxy dict"""
     t = node.get("type")
-   port = node.get("server_port") or node.get("port")
-server = node.get("server") or node.get("address")
-if not server or not port:
-    return None
+    port = node.get("server_port") or node.get("port")
+    server = node.get("server") or node.get("address")
+    if not server or not port:
+        return None
     proxy = {"name": name, "server": server, "port": port, "udp": True}
 
     if t == "vless":
