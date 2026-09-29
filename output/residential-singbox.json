@@ -4,29 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 01 (移动家宽) - jack",
-      "server": "104.18.34.14",
-      "server_port": 2082,
-      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2560security=tls",
-        "headers": {
-          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack",
-      "server": "169.40.32.73",
-      "server_port": 2053,
-      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
-    },
-    {
       "type": "anytls",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
       "server": "ac7548f3ebe045b39a90288ff1e97526.pnuqcnp.cn",
       "server_port": 443,
       "password": "9sK2mP8xQ7vL3nZ6",
@@ -35,6 +14,25 @@
         "server_name": "ac7548f3ebe045b39a90288ff1e97526.lwdnxf.cn",
         "insecure": true
       }
+    },
+    {
+      "type": "anytls",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
+      "server": "ac7548f3ebe045b39a90288ff1e97528.pnuqcnp.cn",
+      "server_port": 443,
+      "password": "9sK2mP8xQ7vL3nZ6",
+      "tls": {
+        "enabled": true,
+        "server_name": "ac7548f3ebe045b39a90288ff1e97528.lwdnxf.cn",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack",
+      "server": "test.keoplentuio.xyz",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
     },
     {
       "type": "anytls",
@@ -49,38 +47,24 @@
       }
     },
     {
-      "type": "anytls",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 05 (家宽) - jack",
-      "server": "ac7548f3ebe045b39a90288ff1e97528.pnuqcnp.cn",
-      "server_port": 443,
-      "password": "9sK2mP8xQ7vL3nZ6",
-      "tls": {
-        "enabled": true,
-        "server_name": "ac7548f3ebe045b39a90288ff1e97528.lwdnxf.cn",
-        "insecure": true
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 美国 (United States) 01 (移动家宽) - jack",
-        "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 05 (家宽) - jack"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
+        "🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 美国 (United States) 01 (移动家宽) - jack",
-        "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 05 (家宽) - jack"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
+        "🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

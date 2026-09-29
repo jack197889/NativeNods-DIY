@@ -5,6 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇱🇰 斯里兰卡 (Sri Lanka) 01 - jack
+  server: 51.75.67.209
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3d08ed67-5a47-42d3-a948-ebc7d2eb21f7
+  tls: true
+  servername: free.sahanwickramasinghe.me
+  skip-cert-verify: true
+  client-fingerprint: firefox
+- name: 🇱🇰 斯里兰卡 (Sri Lanka) 02 - jack
   server: free.sahanwickramasinghe.me
   port: 80
   udp: true
@@ -15,16 +25,6 @@ proxies:
     path: /
     headers:
       Host: free.sahanwickramasinghe.me
-- name: 🇱🇰 斯里兰卡 (Sri Lanka) 02 - jack
-  server: free.sahanwickramasinghe.me
-  port: 443
-  udp: true
-  type: vless
-  uuid: 3d08ed67-5a47-42d3-a948-ebc7d2eb21f7
-  tls: true
-  servername: free.sahanwickramasinghe.me
-  skip-cert-verify: false
-  client-fingerprint: chrome
 - name: 🇱🇰 斯里兰卡 (Sri Lanka) 03 - jack
   server: free.sahanwickramasinghe.me
   port: 8443

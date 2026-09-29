@@ -6,14 +6,6 @@
     {
       "type": "shadowsocks",
       "tag": "🇸🇪 瑞典 (Sweden) 01 - jack",
-      "server": "13.48.104.64",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇸🇪 瑞典 (Sweden) 02 - jack",
       "server": "70.34.212.124",
       "server_port": 8388,
       "method": "aes-256-gcm",
@@ -21,32 +13,16 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇸🇪 瑞典 (Sweden) 03 - jack",
-      "server": "172.238.244.13",
-      "server_port": 17000,
-      "method": "aes-256-gcm",
-      "password": "pX0uhU3ZjUcLWYs0Vez55BO3JoQrRlL"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇸🇪 瑞典 (Sweden) 04 - jack",
-      "server": "51.20.86.152",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇸🇪 瑞典 (Sweden) 05 - jack",
-      "server": "13.60.213.145",
+      "tag": "🇸🇪 瑞典 (Sweden) 02 - jack",
+      "server": "13.48.104.64",
       "server_port": 443,
       "method": "aes-256-cfb",
       "password": "amazonskr05"
     },
     {
       "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 06 - jack",
-      "server": "79.141.174.147",
+      "tag": "🇸🇪 瑞典 (Sweden) 03 - jack",
+      "server": "193.42.39.10",
       "server_port": 33743,
       "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
       "tls": {
@@ -54,7 +30,7 @@
         "server_name": "www.google.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -69,8 +45,8 @@
     },
     {
       "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 07 - jack",
-      "server": "5.157.10.148",
+      "tag": "🇸🇪 瑞典 (Sweden) 04 - jack",
+      "server": "surstreming.vvzzkontaktezzvv.garden",
       "server_port": 443,
       "uuid": "4bdeee92-97e8-414d-bef6-ec1d5e2ab73b",
       "flow": "xtls-rprx-vision",
@@ -79,7 +55,7 @@
         "server_name": "surstreming.vvzzkontaktezzvv.garden",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -89,45 +65,8 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇸🇪 瑞典 (Sweden) 08 - jack",
-      "server": "13.49.76.55",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
       "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 09 - jack",
-      "server": "84.32.154.119",
-      "server_port": 443,
-      "uuid": "6efeb0bb-d938-4543-9d27-062148db8fad",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "fastsw.phantom.direct",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "wW4tZPP96i1H0NB4Ql1Qvqepf2ClQ9IsNhcxVdOVWkY",
-          "short_id": "018c7fb89aa975de"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇸🇪 瑞典 (Sweden) 10 - jack",
-      "server": "13.62.228.76",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 11 - jack",
+      "tag": "🇸🇪 瑞典 (Sweden) 05 - jack",
       "server": "62.60.159.81",
       "server_port": 2053,
       "uuid": "fc00adfb-232a-46ce-8b93-0c70e516aa8a",
@@ -136,7 +75,7 @@
         "server_name": "www.samsung.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         },
         "reality": {
           "enabled": true,
@@ -150,12 +89,16 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇸🇪 瑞典 (Sweden) 12 - jack",
-      "server": "51.20.72.15",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "type": "anytls",
+      "tag": "🇸🇪 瑞典 (Sweden) 06 - jack",
+      "server": "svip.skycon808.com",
+      "server_port": 60005,
+      "password": "13f0acfa-38c1-4e82-a758-583aa31740df",
+      "tls": {
+        "enabled": true,
+        "server_name": "xjp18.2uuzhe.com",
+        "insecure": true
+      }
     },
     {
       "type": "selector",
@@ -167,13 +110,7 @@
         "🇸🇪 瑞典 (Sweden) 03 - jack",
         "🇸🇪 瑞典 (Sweden) 04 - jack",
         "🇸🇪 瑞典 (Sweden) 05 - jack",
-        "🇸🇪 瑞典 (Sweden) 06 - jack",
-        "🇸🇪 瑞典 (Sweden) 07 - jack",
-        "🇸🇪 瑞典 (Sweden) 08 - jack",
-        "🇸🇪 瑞典 (Sweden) 09 - jack",
-        "🇸🇪 瑞典 (Sweden) 10 - jack",
-        "🇸🇪 瑞典 (Sweden) 11 - jack",
-        "🇸🇪 瑞典 (Sweden) 12 - jack"
+        "🇸🇪 瑞典 (Sweden) 06 - jack"
       ]
     },
     {
@@ -185,13 +122,7 @@
         "🇸🇪 瑞典 (Sweden) 03 - jack",
         "🇸🇪 瑞典 (Sweden) 04 - jack",
         "🇸🇪 瑞典 (Sweden) 05 - jack",
-        "🇸🇪 瑞典 (Sweden) 06 - jack",
-        "🇸🇪 瑞典 (Sweden) 07 - jack",
-        "🇸🇪 瑞典 (Sweden) 08 - jack",
-        "🇸🇪 瑞典 (Sweden) 09 - jack",
-        "🇸🇪 瑞典 (Sweden) 10 - jack",
-        "🇸🇪 瑞典 (Sweden) 11 - jack",
-        "🇸🇪 瑞典 (Sweden) 12 - jack"
+        "🇸🇪 瑞典 (Sweden) 06 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

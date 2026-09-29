@@ -20,17 +20,6 @@ proxies:
   grpc-opts:
     grpc-service-name: 9d30d49278
 - name: 🇪🇪 爱沙尼亚 (Estonia) 02 - jack
-  server: 94.183.170.135
-  port: 443
-  udp: true
-  type: vless
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: estproxy4.lockdwn.com
-- name: 🇪🇪 爱沙尼亚 (Estonia) 03 - jack
   server: 179.254.126.173
   port: 443
   udp: true
@@ -41,16 +30,17 @@ proxies:
   reality-opts:
     public-key: 9H_heZMEI3tShkb5pXRrlAzwGWIzGFCRX_HgyPdktnU
   servername: www.google.com
-  client-fingerprint: random
-- name: 🇪🇪 爱沙尼亚 (Estonia) 04 - jack
-  server: 109.206.241.10
-  port: 449
+  client-fingerprint: chrome
+- name: 🇪🇪 爱沙尼亚 (Estonia) 03 - jack
+  server: 94.183.170.135
+  port: 443
   udp: true
-  type: trojan
-  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
-  sni: russiapower.accesscam.org
-  skip-cert-verify: true
-- name: 🇪🇪 爱沙尼亚 (Estonia) 05 - jack
+  type: vless
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇪🇪 爱沙尼亚 (Estonia) 04 - jack
   server: 94.183.170.135
   port: 8443
   udp: true
@@ -59,7 +49,15 @@ proxies:
   tls: true
   servername: estproxy4.lockdwn.com
   skip-cert-verify: false
-  client-fingerprint: firefox
+  client-fingerprint: chrome
+- name: 🇪🇪 爱沙尼亚 (Estonia) 05 - jack
+  server: 109.206.241.10
+  port: 449
+  udp: true
+  type: trojan
+  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+  sni: russiapower.accesscam.org
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select

@@ -5,45 +5,51 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - jack
-  server: 130.49.189.158
-  port: 43558
+  server: 172.64.154.8
+  port: 2052
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: ziOeKejhhw+fmWet+xvuJsVJH7U9DvSWq1hlqtaKv+I=
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇷🇺 俄罗斯 (Russia) 02 - jack
-  server: 91.240.86.70
-  port: 22443
+  server: 172.64.154.8
+  port: 2086
   udp: true
-  type: hysteria2
-  password: 3f63c86c-ac4a-4900-85cf-4fedf93c2ca5
-  sni: itsallproxy.quattro-tech.ru
-  skip-cert-verify: false
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇷🇺 俄罗斯 (Russia) 03 - jack
-  server: 139.28.168.201
+  server: 162.159.48.32
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇷🇺 俄罗斯 (Russia) 04 - jack
+  server: china.letsconnectpoint.com
   port: 443
   udp: true
   type: vless
-  uuid: a368752a-32fc-42f3-980a-6b049218b23f
+  uuid: 914f3806-07a1-4158-9624-e183de065a38
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: 4ubYp4HaBJgn1qXwfo0hiejncurXCckII-O_FMDXTgI
     short-id: 3b74d85e
   servername: china.letsconnectpoint.com
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 04 - jack
-  server: 45.12.75.242
-  port: 26424
-  udp: true
-  type: vless
-  uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
-  tls: true
-  reality-opts:
-    public-key: l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0
-    short-id: 23103e1e
-  servername: ya.ru
-  client-fingerprint: chrome
+  client-fingerprint: ios
 - name: 🇷🇺 俄罗斯 (Russia) 05 - jack
   server: 176.109.106.182
   port: 9881
@@ -58,6 +64,51 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc-tunnel
+- name: 🇷🇺 俄罗斯 (Russia) 06 - jack
+  server: 91.240.86.70
+  port: 22443
+  udp: true
+  type: hysteria2
+  password: 3f63c86c-ac4a-4900-85cf-4fedf93c2ca5
+  sni: hy.quattro-tech.ru
+  skip-cert-verify: false
+- name: 🇷🇺 俄罗斯 (Russia) 07 - jack
+  server: ru-test.omuservice.tech
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 6db7ea14-ed33-4591-a9b1-f1e91b1c0ff5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: yyH7Fyfh1ULPH4L5mFVtqPf_rB1IY6jwDgOuIRY7-wA
+    short-id: 9409a3561ba49f30
+  servername: ozone.nl
+  client-fingerprint: ''
+- name: 🇷🇺 俄罗斯 (Russia) 08 - jack
+  server: 45.12.75.242
+  port: 26424
+  udp: true
+  type: vless
+  uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
+  tls: true
+  reality-opts:
+    public-key: l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0
+    short-id: 23103e1e
+  servername: ya.ru
+  client-fingerprint: chrome
+- name: 🇷🇺 俄罗斯 (Russia) 09 - jack
+  server: 95.215.108.36
+  port: 443
+  udp: true
+  type: vless
+  uuid: 84a3061b-3573-4a3c-a631-f26c31209268
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: bDAry75taTMaPJII9vRrJuXAjQglTJxCOVWraQ5BozY
+  servername: ru-02.vacvps.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -68,6 +119,10 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03 - jack
   - 🇷🇺 俄罗斯 (Russia) 04 - jack
   - 🇷🇺 俄罗斯 (Russia) 05 - jack
+  - 🇷🇺 俄罗斯 (Russia) 06 - jack
+  - 🇷🇺 俄罗斯 (Russia) 07 - jack
+  - 🇷🇺 俄罗斯 (Russia) 08 - jack
+  - 🇷🇺 俄罗斯 (Russia) 09 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -78,5 +133,9 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03 - jack
   - 🇷🇺 俄罗斯 (Russia) 04 - jack
   - 🇷🇺 俄罗斯 (Russia) 05 - jack
+  - 🇷🇺 俄罗斯 (Russia) 06 - jack
+  - 🇷🇺 俄罗斯 (Russia) 07 - jack
+  - 🇷🇺 俄罗斯 (Russia) 08 - jack
+  - 🇷🇺 俄罗斯 (Russia) 09 - jack
 rules:
 - MATCH,PROXIES

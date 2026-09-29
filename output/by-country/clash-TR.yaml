@@ -16,20 +16,8 @@ proxies:
     public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
     short-id: db04ce8bdb8900f1
   servername: nvidia.com
-  client-fingerprint: firefox
+  client-fingerprint: ''
 - name: 🇹🇷 土耳其 (Turkey) 02 - jack
-  server: 151.241.226.201
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  tls: true
-  reality-opts:
-    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
-    short-id: 9e419c0759b54d6f
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 03 - jack
   server: 78.135.73.47
   port: 443
   udp: true
@@ -42,6 +30,28 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 03 - jack
+  server: 151.241.226.201
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  tls: true
+  reality-opts:
+    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
+    short-id: 9e419c0759b54d6f
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 04 - jack
+  server: me17.msjia8844.site
+  port: 7443
+  udp: true
+  type: hysteria2
+  password: M8LP9DztTr3znqCkmf-r08CQLBLLFK1r
+  sni: me17.msjia8844.site
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: u3Soh9_Ui0UmcuY6vk0ug8Lq
 proxy-groups:
 - name: PROXIES
   type: select
@@ -50,6 +60,7 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01 - jack
   - 🇹🇷 土耳其 (Turkey) 02 - jack
   - 🇹🇷 土耳其 (Turkey) 03 - jack
+  - 🇹🇷 土耳其 (Turkey) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -58,5 +69,6 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01 - jack
   - 🇹🇷 土耳其 (Turkey) 02 - jack
   - 🇹🇷 土耳其 (Turkey) 03 - jack
+  - 🇹🇷 土耳其 (Turkey) 04 - jack
 rules:
 - MATCH,PROXIES
