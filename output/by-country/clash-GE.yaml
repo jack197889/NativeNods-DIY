@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇮 斯洛文尼亚 (Slovenia) 01 - jack
-  server: node-slo01.rkitman.ru
-  port: 443
+- name: 🇬🇪 格鲁吉亚 (Georgia) 01 - jack
+  server: 185.143.179.179
+  port: 25026
   udp: true
   type: vless
-  uuid: 322710c4-eef9-45ea-ad10-1efa1c6767d0
+  uuid: 441a29b2-d9aa-47d5-9209-0a9191479f9f
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU
-    short-id: 88d9dc52ef39c8bd
-  servername: node-slo01.rkitman.ru
+    public-key: RVh0D446O5pKnOqlNkJNxSGGbmzl8swn4YBXYce1HSw
+    short-id: 34c465417d7ebca0
+  servername: www.google.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇸🇮 斯洛文尼亚 (Slovenia) 01 - jack
+  - 🇬🇪 格鲁吉亚 (Georgia) 01 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇮 斯洛文尼亚 (Slovenia) 01 - jack
+  - 🇬🇪 格鲁吉亚 (Georgia) 01 - jack
 rules:
 - MATCH,PROXIES

@@ -25,25 +25,15 @@ proxies:
   servername: at.quattro-tech.ru
   client-fingerprint: qq
 - name: 🇦🇹 奥地利 (Austria) 03 - jack
-  server: 67.159.17.181
-  port: 30443
-  udp: true
-  type: hysteria2
-  password: 0e1506b1-22a4-4b4f-8082-9ddd2efcd28e
-  sni: filesconvert.org
-  skip-cert-verify: true
-- name: 🇦🇹 奥地利 (Austria) 04 - jack
-  server: zcsagftt.selqora.ir
-  port: 51595
+  server: 31.77.227.6
+  port: 52006
   udp: true
   type: vless
-  uuid: 82f2dfe6-4ef5-484f-8b7d-94f682a88b00
+  uuid: bc659d88-a1e0-076c-a49a-7b51b26a7a7f
   flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: SAEWzHGGBsp8haTh34RoN5NwoxiCgZzzJo7jWi-DJXw
-    short-id: 913175efbe9ddb1d
-  servername: play.google.com
+  servername: bigdick.gamegrow.ru
+  skip-cert-verify: false
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -53,7 +43,6 @@ proxy-groups:
   - 🇦🇹 奥地利 (Austria) 01 - jack
   - 🇦🇹 奥地利 (Austria) 02 - jack
   - 🇦🇹 奥地利 (Austria) 03 - jack
-  - 🇦🇹 奥地利 (Austria) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -62,6 +51,5 @@ proxy-groups:
   - 🇦🇹 奥地利 (Austria) 01 - jack
   - 🇦🇹 奥地利 (Austria) 02 - jack
   - 🇦🇹 奥地利 (Austria) 03 - jack
-  - 🇦🇹 奥地利 (Austria) 04 - jack
 rules:
 - MATCH,PROXIES

@@ -27,80 +27,6 @@
     {
       "type": "vless",
       "tag": "🇮🇱 以色列 (Israel) 02 - jack",
-      "server": "193.202.10.2",
-      "server_port": 40443,
-      "uuid": "bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "deepl.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4",
-          "short_id": "db46e2946fc466fd"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇮🇱 以色列 (Israel) 03 - jack",
-      "server": "platform115.golnamakcert.top",
-      "server_port": 80,
-      "uuid": "e13cf851-b4fd-413b-8d49-146e6eb8e5d4",
-      "transport": {
-        "type": "ws",
-        "path": "/platform115"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇮🇱 以色列 (Israel) 04 - jack",
-      "server": "platform113.golnamakcert.top",
-      "server_port": 80,
-      "uuid": "e13cf851-b4fd-413b-8d49-146e6eb8e5d4",
-      "transport": {
-        "type": "ws",
-        "path": "/platform113",
-        "headers": {
-          "Host": "platform113.halalkhor.info"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇮🇱 以色列 (Israel) 05 - jack",
-      "server": "platform118.golnamakcert.top",
-      "server_port": 80,
-      "uuid": "e13cf851-b4fd-413b-8d49-146e6eb8e5d4",
-      "transport": {
-        "type": "ws",
-        "path": "/platform118",
-        "headers": {
-          "Host": "platform118.halalkhor.info"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇮🇱 以色列 (Israel) 06 - jack",
-      "server": "platform117.golnamakcert.top",
-      "server_port": 80,
-      "uuid": "e13cf851-b4fd-413b-8d49-146e6eb8e5d4",
-      "transport": {
-        "type": "ws",
-        "path": "/platform117",
-        "headers": {
-          "Host": "platform117.halalkhor.info"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇮🇱 以色列 (Israel) 07 - jack",
       "server": "185.95.231.233",
       "server_port": 443,
       "uuid": "1ffa8e68-3378-4cf4-b8f6-44bf3d46d106",
@@ -120,16 +46,12 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇮🇱 以色列 (Israel) 08 - jack",
-      "server": "129.159.156.109",
-      "server_port": 50160,
-      "password": "f25f19f29ce3fb53a35bf1b35b452a43",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true
-      }
+      "type": "shadowsocks",
+      "tag": "🇮🇱 以色列 (Israel) 03 - jack",
+      "server": "nl-irancell3.xelfona.ir",
+      "server_port": 49548,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "zZ+k8UwdTQ9ZTnxEodTN2YI6KrFKEAcBWgCbLZIVUTE=:LbWEdFyjKcvZcv9agyGttSn0HNap+ecf50/UrlGMBCQ="
     },
     {
       "type": "selector",
@@ -138,12 +60,7 @@
         "auto",
         "🇮🇱 以色列 (Israel) 01 - jack",
         "🇮🇱 以色列 (Israel) 02 - jack",
-        "🇮🇱 以色列 (Israel) 03 - jack",
-        "🇮🇱 以色列 (Israel) 04 - jack",
-        "🇮🇱 以色列 (Israel) 05 - jack",
-        "🇮🇱 以色列 (Israel) 06 - jack",
-        "🇮🇱 以色列 (Israel) 07 - jack",
-        "🇮🇱 以色列 (Israel) 08 - jack"
+        "🇮🇱 以色列 (Israel) 03 - jack"
       ]
     },
     {
@@ -152,12 +69,7 @@
       "outbounds": [
         "🇮🇱 以色列 (Israel) 01 - jack",
         "🇮🇱 以色列 (Israel) 02 - jack",
-        "🇮🇱 以色列 (Israel) 03 - jack",
-        "🇮🇱 以色列 (Israel) 04 - jack",
-        "🇮🇱 以色列 (Israel) 05 - jack",
-        "🇮🇱 以色列 (Israel) 06 - jack",
-        "🇮🇱 以色列 (Israel) 07 - jack",
-        "🇮🇱 以色列 (Israel) 08 - jack"
+        "🇮🇱 以色列 (Israel) 03 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
