@@ -5,43 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇺 澳大利亚 (Australia) 01 - jack
-  server: 185.18.250.252
+  server: 152.67.115.203
   port: 443
   udp: true
-  type: trojan
-  password: 74480619-b6a8-4ab8-94e1-1132fc18b2fa
-  sni: unnes.ac.id.r3xxe.eu.cc
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /au-mt
+  type: hysteria2
+  password: 633bc3be486b646190661ac2387c150a
+  sni: www.bing.com
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: 850a3fb1cd33a28f12d837578ae1a2e7
 - name: 🇦🇺 澳大利亚 (Australia) 02 - jack
-  server: 104.18.155.229
-  port: 443
-  udp: true
-  type: vless
-  uuid: 42026ed0-7d74-4585-8e46-0fe6aa4d665a
-  tls: true
-  servername: www.genflix.co.id.r3xxe.eu.cc
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /au-do
-    headers:
-      Host: www.genflix.co.id.r3xxe.eu.cc
-- name: 🇦🇺 澳大利亚 (Australia) 03 - jack
-  server: 188.114.97.6
-  port: 80
-  udp: true
-  type: vless
-  uuid: 6faeb6a0-5055-4e4b-8fb1-ffd77e57aefa
-  network: ws
-  ws-opts:
-    path: /au-do
-    headers:
-      Host: somersby.pt.r3xxe.eu.cc
-- name: 🇦🇺 澳大利亚 (Australia) 04 - jack
   server: 51.161.204.244
   port: 443
   udp: true
@@ -54,16 +27,6 @@ proxies:
     short-id: 0ad08b47f498efd2
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🇦🇺 澳大利亚 (Australia) 05 - jack
-  server: 152.67.115.203
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 633bc3be486b646190661ac2387c150a
-  sni: www.bing.com
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: 850a3fb1cd33a28f12d837578ae1a2e7
 proxy-groups:
 - name: PROXIES
   type: select
@@ -71,9 +34,6 @@ proxy-groups:
   - AUTO
   - 🇦🇺 澳大利亚 (Australia) 01 - jack
   - 🇦🇺 澳大利亚 (Australia) 02 - jack
-  - 🇦🇺 澳大利亚 (Australia) 03 - jack
-  - 🇦🇺 澳大利亚 (Australia) 04 - jack
-  - 🇦🇺 澳大利亚 (Australia) 05 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -81,8 +41,5 @@ proxy-groups:
   proxies:
   - 🇦🇺 澳大利亚 (Australia) 01 - jack
   - 🇦🇺 澳大利亚 (Australia) 02 - jack
-  - 🇦🇺 澳大利亚 (Australia) 03 - jack
-  - 🇦🇺 澳大利亚 (Australia) 04 - jack
-  - 🇦🇺 澳大利亚 (Australia) 05 - jack
 rules:
 - MATCH,PROXIES

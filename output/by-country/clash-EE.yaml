@@ -24,43 +24,13 @@ proxies:
   skip-cert-verify: false
   client-fingerprint: firefox
 - name: 🇪🇪 爱沙尼亚 (Estonia) 03 - jack
-  server: 188.114.97.6
-  port: 8080
+  server: 109.206.241.10
+  port: 449
   udp: true
-  type: vless
-  uuid: a88e61a0-2b38-f6df-c5c7-d20600000000
-  network: ws
-  ws-opts:
-    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN
-    headers:
-      Host: netlivpn5002.whwbbb.workers.dev
-- name: 🇪🇪 爱沙尼亚 (Estonia) 04 - jack
-  server: 179.254.126.173
-  port: 443
-  udp: true
-  type: vless
-  uuid: 7013d889-14f4-4475-a5ff-a5ecd992b522
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 9H_heZMEI3tShkb5pXRrlAzwGWIzGFCRX_HgyPdktnU
-  servername: www.google.com
-  client-fingerprint: random
-- name: 🇪🇪 爱沙尼亚 (Estonia) 05 - jack
-  server: 104.17.148.22
-  port: 443
-  udp: true
-  type: vless
-  uuid: a88e61a0-2b38-f6df-c5c7-d20600000000
-  tls: true
-  servername: netlivpn5002.whwbbb.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN
-    headers:
-      Host: netlivpn5002.whwbbb.workers.dev
+  type: trojan
+  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+  sni: 109.206.241.10
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -69,8 +39,6 @@ proxy-groups:
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - jack
   - 🇪🇪 爱沙尼亚 (Estonia) 02 - jack
   - 🇪🇪 爱沙尼亚 (Estonia) 03 - jack
-  - 🇪🇪 爱沙尼亚 (Estonia) 04 - jack
-  - 🇪🇪 爱沙尼亚 (Estonia) 05 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -79,7 +47,5 @@ proxy-groups:
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - jack
   - 🇪🇪 爱沙尼亚 (Estonia) 02 - jack
   - 🇪🇪 爱沙尼亚 (Estonia) 03 - jack
-  - 🇪🇪 爱沙尼亚 (Estonia) 04 - jack
-  - 🇪🇪 爱沙尼亚 (Estonia) 05 - jack
 rules:
 - MATCH,PROXIES

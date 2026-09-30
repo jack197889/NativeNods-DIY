@@ -5,34 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇳 印度 (India) 01 - jack
-  server: odd-violet-5440.asdgrweeee13.workers.dev
-  port: 443
-  udp: true
-  type: vless
-  uuid: 1443b7a1-7ba9-4ec9-b904-2e867367b5d7
-  tls: true
-  servername: odd-violet-5440.asdgrweeee13.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: odd-violet-5440.asdgrweeee13.workers.dev
-- name: 🇮🇳 印度 (India) 02 - jack
-  server: 152.67.8.205
-  port: 80
-  udp: true
-  type: vmess
-  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 152.67.8.205
-- name: 🇮🇳 印度 (India) 03 - jack
   server: 194.61.31.126
   port: 2053
   udp: true
@@ -44,6 +16,14 @@ proxies:
     short-id: 9980e0609b0d3891
   servername: www.apple.com
   client-fingerprint: chrome
+- name: 🇮🇳 印度 (India) 02 - jack
+  server: 34.131.228.210
+  port: 443
+  udp: true
+  type: trojan
+  password: M7v%w11Se*
+  sni: hyfuuf6.wsone.icu
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -51,7 +31,6 @@ proxy-groups:
   - AUTO
   - 🇮🇳 印度 (India) 01 - jack
   - 🇮🇳 印度 (India) 02 - jack
-  - 🇮🇳 印度 (India) 03 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -59,6 +38,5 @@ proxy-groups:
   proxies:
   - 🇮🇳 印度 (India) 01 - jack
   - 🇮🇳 印度 (India) 02 - jack
-  - 🇮🇳 印度 (India) 03 - jack
 rules:
 - MATCH,PROXIES

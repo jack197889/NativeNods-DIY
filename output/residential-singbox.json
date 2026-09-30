@@ -5,48 +5,45 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 01 (移动家宽) - jack",
-      "server": "summer-meadow-af5b.woowoorrrkk.workers.dev",
-      "server_port": 443,
-      "uuid": "a8890c1b-3622-3106-c4be-d8671be32d2b",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
+      "server": "hinet1.2yly.com",
+      "server_port": 24215,
+      "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
       "tls": {
         "enabled": true,
-        "server_name": "summer-meadow-af5b.woowoorrrkk.workers.dev",
-        "insecure": false,
+        "server_name": "addons.mozilla.org",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/sync",
-        "headers": {
-          "Host": "summer-meadow-af5b.woowoorrrkk.workers.dev"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE",
+          "short_id": ""
         }
       }
     },
     {
       "type": "anytls",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
-      "server": "ac7548f3ebe045b39a90288ff1e97526.pnuqcnp.cn",
-      "server_port": 443,
-      "password": "9sK2mP8xQ7vL3nZ6",
-      "tls": {
-        "enabled": true,
-        "server_name": "ac7548f3ebe045b39a90288ff1e97526.lwdnxf.cn",
-        "insecure": true
-      }
-    },
-    {
-      "type": "anytls",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - jack",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
       "server": "ac7548f3ebe045b39a90288ff1e97528.pnuqcnp.cn",
       "server_port": 443,
       "password": "9sK2mP8xQ7vL3nZ6",
       "tls": {
         "enabled": true,
         "server_name": "ac7548f3ebe045b39a90288ff1e97528.lwdnxf.cn",
+        "insecure": true
+      }
+    },
+    {
+      "type": "anytls",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
+      "server": "ac7548f3ebe045b39a90288ff1e97526.pnuqcnp.cn",
+      "server_port": 443,
+      "password": "9sK2mP8xQ7vL3nZ6",
+      "tls": {
+        "enabled": true,
+        "server_name": "127.0.0.1",
         "insecure": true
       }
     },
@@ -67,9 +64,9 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 美国 (United States) 01 (移动家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
         "🇸🇬 新加坡 (Singapore) 04 (家宽) - jack"
       ]
     },
@@ -77,9 +74,9 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 美国 (United States) 01 (移动家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
         "🇸🇬 新加坡 (Singapore) 04 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"

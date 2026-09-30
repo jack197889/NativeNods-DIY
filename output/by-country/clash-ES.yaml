@@ -5,13 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01 - jack
-  server: 85.90.217.42
-  port: 22324
+  server: 140.174.184.5
+  port: 8388
   udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: qItG8SueYQcP
 - name: 🇪🇸 西班牙 (Spain) 02 - jack
   server: 83.147.18.3
   port: 443
@@ -26,20 +25,20 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: chrome
 - name: 🇪🇸 西班牙 (Spain) 03 - jack
-  server: 140.174.184.5
+  server: 108.181.121.226
   port: 8388
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: qItG8SueYQcP
+  password: WSyL4XTwNsdv
 - name: 🇪🇸 西班牙 (Spain) 04 - jack
-  server: 66.163.118.73
-  port: 22324
+  server: 185.174.137.172
+  port: 8446
   udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
+  type: hysteria2
+  password: e9dc02d400b67c727aca1620
+  sni: 185.174.137.172
+  skip-cert-verify: true
 - name: 🇪🇸 西班牙 (Spain) 05 - jack
   server: 212.227.235.66
   port: 2053
@@ -53,14 +52,58 @@ proxies:
   servername: www.apple.com
   client-fingerprint: firefox
 - name: 🇪🇸 西班牙 (Spain) 06 - jack
-  server: 108.181.121.226
-  port: 8388
+  server: 196.245.52.146
+  port: 25535
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: WSyL4XTwNsdv
+  type: vless
+  uuid: c379d8e4-c67d-42ec-a3ed-ca99d1ad0546
+  tls: true
+  reality-opts:
+    public-key: Jh7CocBJSA55VZcLfXwXwoQ_Hi5pV-L1vv1SY-IrSh4
+    short-id: 7642ce57308852e7
+  servername: www.microsoft.com
+  client-fingerprint: firefox
 - name: 🇪🇸 西班牙 (Spain) 07 - jack
-  server: 66.163.118.73
+  server: 193.238.154.5
+  port: 443
+  udp: true
+  type: vless
+  uuid: e0b9fb0f-1bbd-478b-9580-c2294778338b
+  tls: true
+  servername: assets-es.pleiades.codes
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cdn.v1.AssetService
+- name: 🇪🇸 西班牙 (Spain) 08 - jack
+  server: 196.245.52.146
+  port: 25185
+  udp: true
+  type: vless
+  uuid: ab0d6441-912b-4ddd-b769-2199e1d4be7d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: mOn332qJ19UmQnNbIb7x8fljpahQLrKYSJOj2Ox9p24
+    short-id: 4af6a8bd159ccb50
+  servername: www.samsung.com
+  client-fingerprint: firefox
+- name: 🇪🇸 西班牙 (Spain) 09 - jack
+  server: 46.28.71.247
+  port: 443
+  udp: true
+  type: vless
+  uuid: 12c53e32-e589-47d6-b857-e4132294f767
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE
+    short-id: 0dfc23fe80778c00
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇪🇸 西班牙 (Spain) 10 - jack
+  server: mygptagent.org
   port: 443
   udp: true
   type: vmess
@@ -75,44 +118,14 @@ proxies:
     path: /linkvws
     headers:
       Host: mygptagent.org
-- name: 🇪🇸 西班牙 (Spain) 08 - jack
-  server: 46.28.71.247
-  port: 443
+- name: 🇪🇸 西班牙 (Spain) 11 - jack
+  server: 66.163.118.73
+  port: 22324
   udp: true
-  type: vless
-  uuid: 12c53e32-e589-47d6-b857-e4132294f767
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE
-    short-id: 0dfc23fe80778c00
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇪🇸 西班牙 (Spain) 09 - jack
-  server: es2.h1cloud.net
-  port: 25535
-  udp: true
-  type: vless
-  uuid: c379d8e4-c67d-42ec-a3ed-ca99d1ad0546
-  tls: true
-  reality-opts:
-    public-key: Jh7CocBJSA55VZcLfXwXwoQ_Hi5pV-L1vv1SY-IrSh4
-    short-id: 7642ce57308852e7
-  servername: www.microsoft.com
-  client-fingerprint: firefox
-- name: 🇪🇸 西班牙 (Spain) 10 - jack
-  server: 193.238.154.5
-  port: 443
-  udp: true
-  type: vless
-  uuid: e0b9fb0f-1bbd-478b-9580-c2294778338b
-  tls: true
-  servername: assets-es.pleiades.codes
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: cdn.v1.AssetService
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
@@ -128,6 +141,7 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 08 - jack
   - 🇪🇸 西班牙 (Spain) 09 - jack
   - 🇪🇸 西班牙 (Spain) 10 - jack
+  - 🇪🇸 西班牙 (Spain) 11 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -143,5 +157,6 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 08 - jack
   - 🇪🇸 西班牙 (Spain) 09 - jack
   - 🇪🇸 西班牙 (Spain) 10 - jack
+  - 🇪🇸 西班牙 (Spain) 11 - jack
 rules:
 - MATCH,PROXIES
