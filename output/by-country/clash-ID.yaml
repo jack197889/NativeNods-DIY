@@ -5,18 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇩 印尼 (Indonesia) 01 - jack
-  server: 172.235.246.215
-  port: 443
-  udp: true
-  type: vless
-  uuid: d90087c3-54f5-4283-a13f-615260c8b0c7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: hTweFDvbSucrGERtiiwDfoqD3vo_Z9cuaqboff3FTXQ
-  servername: googleapis.com
-  client-fingerprint: firefox
-- name: 🇮🇩 印尼 (Indonesia) 02 - jack
   server: 103.172.197.3
   port: 16006
   udp: true
@@ -27,8 +15,8 @@ proxies:
   reality-opts:
     public-key: ll7JTP628PuBMZJvx6fuhGSmCRSURnReAetmhCEL8GU
   servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇮🇩 印尼 (Indonesia) 03 - jack
+  client-fingerprint: firefox
+- name: 🇮🇩 印尼 (Indonesia) 02 - jack
   server: 103.172.197.2
   port: 29172
   udp: true
@@ -40,7 +28,7 @@ proxies:
     public-key: pff94OJwuKXnF7_3SJ8KKJuAN4GJtInBlR-kg-4mwzQ
   servername: aws.amazon.com
   client-fingerprint: chrome
-- name: 🇮🇩 印尼 (Indonesia) 04 - jack
+- name: 🇮🇩 印尼 (Indonesia) 03 - jack
   server: 104.18.32.87
   port: 443
   udp: true
@@ -59,7 +47,6 @@ proxy-groups:
   - 🇮🇩 印尼 (Indonesia) 01 - jack
   - 🇮🇩 印尼 (Indonesia) 02 - jack
   - 🇮🇩 印尼 (Indonesia) 03 - jack
-  - 🇮🇩 印尼 (Indonesia) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -68,6 +55,5 @@ proxy-groups:
   - 🇮🇩 印尼 (Indonesia) 01 - jack
   - 🇮🇩 印尼 (Indonesia) 02 - jack
   - 🇮🇩 印尼 (Indonesia) 03 - jack
-  - 🇮🇩 印尼 (Indonesia) 04 - jack
 rules:
 - MATCH,PROXIES

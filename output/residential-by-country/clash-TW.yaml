@@ -12,27 +12,17 @@ proxies:
   password: 9sK2mP8xQ7vL3nZ6
   sni: ac7548f3ebe045b39a90288ff1e97526.lwdnxf.cn
   skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
-  server: 6ivh.pnuqcnp.cn
-  port: 443
-  udp: true
-  type: anytls
-  password: 9sK2mP8xQ7vL3nZ6
-  sni: images.ctfassets.net
-  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
 rules:
 - MATCH,PROXIES

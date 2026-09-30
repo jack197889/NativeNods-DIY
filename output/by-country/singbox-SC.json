@@ -25,27 +25,8 @@
       }
     },
     {
-      "type": "trojan",
-      "tag": "🇸🇨 塞舌尔 (Seychelles) 02 - jack",
-      "server": "45.130.125.75",
-      "server_port": 443,
-      "password": "humanity",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.calmlunch.com",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.calmlunch.com"
-        }
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇸🇨 塞舌尔 (Seychelles) 03 - jack",
+      "tag": "🇸🇨 塞舌尔 (Seychelles) 02 - jack",
       "server": "144.31.50.236",
       "server_port": 443,
       "uuid": "1c332eae-7e02-4acd-996d-4eb3e652401c",
@@ -63,6 +44,14 @@
           "short_id": "bbe46bd8f6b96839"
         }
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇸🇨 塞舌尔 (Seychelles) 03 - jack",
+      "server": "45.207.207.25",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "gj1+XKulKV0nmw6IThckOkkJh5DSM7+C"
     },
     {
       "type": "selector",

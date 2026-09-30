@@ -6,25 +6,25 @@ log-level: info
 proxies:
 - name: 🇱🇹 立陶宛 (Lithuania) 01 - jack
   server: 195.238.126.20
+  port: 9002
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: b8KkNDjEd5QqFyRm
+- name: 🇱🇹 立陶宛 (Lithuania) 02 - jack
+  server: 195.238.126.20
   port: 9012
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: xaupMUvhptwxdDUg
-- name: 🇱🇹 立陶宛 (Lithuania) 02 - jack
+- name: 🇱🇹 立陶宛 (Lithuania) 03 - jack
   server: 195.238.126.20
   port: 9078
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: JCJpbRbQZNw9XFZG
-- name: 🇱🇹 立陶宛 (Lithuania) 03 - jack
-  server: 195.238.126.20
-  port: 9068
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: mwgRg9hRq3b4Qnwb
 - name: 🇱🇹 立陶宛 (Lithuania) 04 - jack
   server: 195.238.126.20
   port: 9086
@@ -34,11 +34,11 @@ proxies:
   password: 37Z4TFCYhfxcpc9Q
 - name: 🇱🇹 立陶宛 (Lithuania) 05 - jack
   server: 195.238.126.20
-  port: 9002
+  port: 9068
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: b8KkNDjEd5QqFyRm
+  password: mwgRg9hRq3b4Qnwb
 - name: 🇱🇹 立陶宛 (Lithuania) 06 - jack
   server: 195.238.126.20
   port: 9011
@@ -47,25 +47,38 @@ proxies:
   cipher: aes-256-cfb
   password: M3t2ZEQcMGRWBjRa
 - name: 🇱🇹 立陶宛 (Lithuania) 07 - jack
+  server: 144.31.243.240
+  port: 443
+  udp: true
+  type: vless
+  uuid: d72f05b0-b182-4783-a6f2-21cecc7d841a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SibLV5WBGdljTiUCmKx77KhHQfErCwjDMD_ZLoha3js
+    short-id: a1b2c3d4e5f67890
+  servername: dzen.ru
+  client-fingerprint: firefox
+- name: 🇱🇹 立陶宛 (Lithuania) 08 - jack
   server: 195.238.126.20
   port: 9008
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: y9VURyNzJWNRYEGQ
-- name: 🇱🇹 立陶宛 (Lithuania) 08 - jack
-  server: lithuania-2.kochvpn.pw
+- name: 🇱🇹 立陶宛 (Lithuania) 09 - jack
+  server: 94.176.234.161
   port: 443
   udp: true
   type: vless
-  uuid: 2923fef2-3b52-a9c2-cde4-c2343eb74a2c
+  uuid: d448490d-4ee6-442f-80e1-5e1c186c4ce1
+  flow: xtls-rprx-vision
   tls: true
-  servername: lithuania-2.kochvpn.pw
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /stream/ws
+  reality-opts:
+    public-key: UpI0XKNUsMJ24XawPQ8g7br1faEsO7BOvmIIGg9Wrm8
+    short-id: dbb2ef1c7c
+  servername: www.intel.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -79,6 +92,7 @@ proxy-groups:
   - 🇱🇹 立陶宛 (Lithuania) 06 - jack
   - 🇱🇹 立陶宛 (Lithuania) 07 - jack
   - 🇱🇹 立陶宛 (Lithuania) 08 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 09 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -92,5 +106,6 @@ proxy-groups:
   - 🇱🇹 立陶宛 (Lithuania) 06 - jack
   - 🇱🇹 立陶宛 (Lithuania) 07 - jack
   - 🇱🇹 立陶宛 (Lithuania) 08 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 09 - jack
 rules:
 - MATCH,PROXIES

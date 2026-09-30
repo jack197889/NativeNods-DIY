@@ -5,6 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - jack
+  server: 104.16.72.101
+  port: 80
+  udp: true
+  type: vless
+  uuid: d5598622-46b8-b017-3af3-232500000001
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: nahan-core.netizo09.workers.dev
+- name: 🇫🇮 芬兰 (Finland) 02 - jack
   server: 45.149.147.97
   port: 443
   udp: true
@@ -17,41 +28,7 @@ proxies:
     short-id: d345ad4657adeef9
   servername: google.com
   client-fingerprint: ''
-- name: 🇫🇮 芬兰 (Finland) 02 - jack
-  server: 95.216.27.15
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
-  tls: true
-  reality-opts:
-    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
-    short-id: d368b94e275ab080
-  servername: www.google.com
-  client-fingerprint: firefox
 - name: 🇫🇮 芬兰 (Finland) 03 - jack
-  server: 31.77.199.147
-  port: 4443
-  udp: true
-  type: vless
-  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GvkQwcZWiXQBLzEhTVfQkyPpdgo6Opc3RtLsED9sA0A
-    short-id: 7da2eae792187ab9
-  servername: images.unsplash.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 04 - jack
-  server: 65.109.249.114
-  port: 80
-  udp: true
-  type: vless
-  uuid: 794990ea-dc34-4eff-8a43-020a92fec381
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇫🇮 芬兰 (Finland) 05 - jack
   server: 65.109.199.174
   port: 443
   udp: true
@@ -64,6 +41,31 @@ proxies:
     short-id: 7a0300af51a1c4cf
   servername: Miro.com
   client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 04 - jack
+  server: 95.216.27.15
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
+  tls: true
+  reality-opts:
+    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
+    short-id: d368b94e275ab080
+  servername: www.google.com
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 05 - jack
+  server: 65.109.28.164
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
+    short-id: 90ec9bba2019
+  servername: web.eitaa.com
+  client-fingerprint: firefox
 - name: 🇫🇮 芬兰 (Finland) 06 - jack
   server: 185.79.138.71
   port: 448
@@ -77,17 +79,17 @@ proxies:
   servername: www.samsung.com
   client-fingerprint: chrome
 - name: 🇫🇮 芬兰 (Finland) 07 - jack
-  server: 65.109.28.164
+  server: 89.125.114.9
   port: 443
   udp: true
   type: vless
-  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
+  uuid: 6db7ea14-ed33-4591-a9b1-f1e91b1c0ff5
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
-    short-id: 90ec9bba2019
-  servername: web.eitaa.com
+    public-key: KEoz-uTjqCGwtNakCD-XewbDk_8Vwm_nFv0zg3c2Syg
+    short-id: 67a4fe46bbf783cc
+  servername: ozone.nl
   client-fingerprint: firefox
 - name: 🇫🇮 芬兰 (Finland) 08 - jack
   server: 144.31.27.215
@@ -102,6 +104,19 @@ proxies:
     short-id: 568d87a47271344e
   servername: 144.31.27.215
   client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 09 - jack
+  server: 31.77.199.147
+  port: 4443
+  udp: true
+  type: vless
+  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GvkQwcZWiXQBLzEhTVfQkyPpdgo6Opc3RtLsED9sA0A
+    short-id: 7da2eae792187ab9
+  servername: images.unsplash.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -115,6 +130,7 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 06 - jack
   - 🇫🇮 芬兰 (Finland) 07 - jack
   - 🇫🇮 芬兰 (Finland) 08 - jack
+  - 🇫🇮 芬兰 (Finland) 09 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -128,5 +144,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 06 - jack
   - 🇫🇮 芬兰 (Finland) 07 - jack
   - 🇫🇮 芬兰 (Finland) 08 - jack
+  - 🇫🇮 芬兰 (Finland) 09 - jack
 rules:
 - MATCH,PROXIES

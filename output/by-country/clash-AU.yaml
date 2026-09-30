@@ -5,19 +5,43 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇺 澳大利亚 (Australia) 01 - jack
-  server: 194.195.123.60
-  port: 22368
+  server: 185.18.250.252
+  port: 443
+  udp: true
+  type: trojan
+  password: 74480619-b6a8-4ab8-94e1-1132fc18b2fa
+  sni: unnes.ac.id.r3xxe.eu.cc
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /au-mt
+- name: 🇦🇺 澳大利亚 (Australia) 02 - jack
+  server: 104.18.155.229
+  port: 443
   udp: true
   type: vless
-  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
-  flow: xtls-rprx-vision
+  uuid: 42026ed0-7d74-4585-8e46-0fe6aa4d665a
   tls: true
-  reality-opts:
-    public-key: JJsjBS60tj6uZp-x2tMJ_ioblXRcru_apACEkMJYnBM
-    short-id: b5a3
-  servername: www.cloudflare.com
+  servername: www.genflix.co.id.r3xxe.eu.cc
+  skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🇦🇺 澳大利亚 (Australia) 02 - jack
+  network: ws
+  ws-opts:
+    path: /au-do
+    headers:
+      Host: www.genflix.co.id.r3xxe.eu.cc
+- name: 🇦🇺 澳大利亚 (Australia) 03 - jack
+  server: 188.114.97.6
+  port: 80
+  udp: true
+  type: vless
+  uuid: 6faeb6a0-5055-4e4b-8fb1-ffd77e57aefa
+  network: ws
+  ws-opts:
+    path: /au-do
+    headers:
+      Host: somersby.pt.r3xxe.eu.cc
+- name: 🇦🇺 澳大利亚 (Australia) 04 - jack
   server: 51.161.204.244
   port: 443
   udp: true
@@ -30,27 +54,6 @@ proxies:
     short-id: 0ad08b47f498efd2
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🇦🇺 澳大利亚 (Australia) 03 - jack
-  server: vpn-au-001.fastervpn.world
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-au-001.fastervpn.world
-  skip-cert-verify: true
-- name: 🇦🇺 澳大利亚 (Australia) 04 - jack
-  server: 143.42.46.37
-  port: 25605
-  udp: true
-  type: vless
-  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: trh3vhKtu_iAKb6E2GuUvloJDZ8tN0jtzyj4kpV5IQA
-    short-id: 6df42a2c
-  servername: www.cloudflare.com
-  client-fingerprint: random
 - name: 🇦🇺 澳大利亚 (Australia) 05 - jack
   server: 152.67.115.203
   port: 443

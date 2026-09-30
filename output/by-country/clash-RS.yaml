@@ -5,20 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇸 塞尔维亚 (Serbia) 01 - jack
-  server: 213.171.25.29
-  port: 9889
+  server: 45.131.4.30
+  port: 8880
   udp: true
   type: vless
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
-  tls: true
-  reality-opts:
-    public-key: ycPIUcY6ci2yi7YA_OHc20e4gzxEdJTqpmeShxSuHRU
-    short-id: aabb
-  servername: dl.google.com
-  client-fingerprint: qq
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime59.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
