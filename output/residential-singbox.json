@@ -4,8 +4,50 @@
   },
   "outbounds": [
     {
+      "type": "hysteria2",
+      "tag": "🇺🇸 美国 (United States) 01 (家宽) - jack",
+      "server": "155.117.19.17",
+      "server_port": 443,
+      "password": "5fa748137b6d822308eea4611f474ad5",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "a39ca173b57ac7021b08bf3e3de9f1f6"
+      }
+    },
+    {
       "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
+      "tag": "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack",
+      "server": "178.83.46.216",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack",
+      "server": "104.21.41.247",
+      "server_port": 2053,
+      "uuid": "0da0a073-a5b0-4229-bf11-24592f6290b9",
+      "tls": {
+        "enabled": true,
+        "server_name": "tcdnu.azad0namah.ir",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tucdn/",
+        "headers": {
+          "Host": "tcdnu.azad0namah.ir"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
       "server": "hinet1.2yly.com",
       "server_port": 24215,
       "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
@@ -25,7 +67,7 @@
     },
     {
       "type": "anytls",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 05 (家宽) - jack",
       "server": "ac7548f3ebe045b39a90288ff1e97528.pnuqcnp.cn",
       "server_port": 443,
       "password": "9sK2mP8xQ7vL3nZ6",
@@ -37,7 +79,7 @@
     },
     {
       "type": "anytls",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack",
       "server": "ac7548f3ebe045b39a90288ff1e97526.pnuqcnp.cn",
       "server_port": 443,
       "password": "9sK2mP8xQ7vL3nZ6",
@@ -49,7 +91,7 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇸🇬 新加坡 (Singapore) 04 (家宽) - jack",
+      "tag": "🇸🇬 新加坡 (Singapore) 07 (家宽) - jack",
       "server": "s3.huhiuh.space",
       "server_port": 18642,
       "password": "user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2",
@@ -64,20 +106,26 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
-        "🇸🇬 新加坡 (Singapore) 04 (家宽) - jack"
+        "🇺🇸 美国 (United States) 01 (家宽) - jack",
+        "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack",
+        "🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 05 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack",
+        "🇸🇬 新加坡 (Singapore) 07 (家宽) - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
-        "🇸🇬 新加坡 (Singapore) 04 (家宽) - jack"
+        "🇺🇸 美国 (United States) 01 (家宽) - jack",
+        "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack",
+        "🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 05 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack",
+        "🇸🇬 新加坡 (Singapore) 07 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

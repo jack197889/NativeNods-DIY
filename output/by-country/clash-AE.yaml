@@ -5,6 +5,30 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01 - jack
+  server: 151.241.166.178
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4abdfe42-aec7-4b66-974d-3f891e2e8184
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SoMfQzFhE5QfKWMZA7ZNkYP63P5hiyWEbE9fsPIP4Go
+  servername: pl.gaz-service.shop
+  client-fingerprint: firefox
+- name: 🇦🇪 阿联酋 (UAE) 02 - jack
+  server: 151.241.166.72
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4abdfe42-aec7-4b66-974d-3f891e2e8184
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SoMfQzFhE5QfKWMZA7ZNkYP63P5hiyWEbE9fsPIP4Go
+  servername: pl.gaz-service.shop
+  client-fingerprint: firefox
+- name: 🇦🇪 阿联酋 (UAE) 03 - jack
   server: 78.40.195.140
   port: 443
   udp: true
@@ -17,24 +41,6 @@ proxies:
     short-id: 98096455d963bdbb
   servername: www.booking.com
   client-fingerprint: firefox
-- name: 🇦🇪 阿联酋 (UAE) 02 - jack
-  server: 130.49.161.70
-  port: 443
-  udp: true
-  type: hysteria2
-  password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
-  sni: hy2.aspidnet.xyz
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
-- name: 🇦🇪 阿联酋 (UAE) 03 - jack
-  server: 85.204.107.173
-  port: 8080
-  udp: true
-  type: hysteria2
-  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
-  sni: hopp-romania-new.roxa.org
-  skip-cert-verify: false
 - name: 🇦🇪 阿联酋 (UAE) 04 - jack
   server: 84.235.244.108
   port: 22573
@@ -59,19 +65,6 @@ proxies:
     short-id: 002fb4ec7b3088cc
   servername: www.datadoghq.com
   client-fingerprint: firefox
-- name: 🇦🇪 阿联酋 (UAE) 06 - jack
-  server: 139.185.44.42
-  port: 8443
-  udp: true
-  type: vless
-  uuid: b0fa80ad-d759-4bcc-a0fd-f802d53b5a88
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: VlWMFvYxwGIsctI7BfOgC4PCG3EMToD7_H8vWcRB42w
-    short-id: 855834d3b002ad21
-  servername: www.microsoft.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -82,7 +75,6 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 03 - jack
   - 🇦🇪 阿联酋 (UAE) 04 - jack
   - 🇦🇪 阿联酋 (UAE) 05 - jack
-  - 🇦🇪 阿联酋 (UAE) 06 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -93,6 +85,5 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 03 - jack
   - 🇦🇪 阿联酋 (UAE) 04 - jack
   - 🇦🇪 阿联酋 (UAE) 05 - jack
-  - 🇦🇪 阿联酋 (UAE) 06 - jack
 rules:
 - MATCH,PROXIES

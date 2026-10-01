@@ -46,13 +46,34 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇦🇹 奥地利 (Austria) 04 - jack",
+      "server": "g4.haxat.bestvbest.ir",
+      "server_port": 56126,
+      "uuid": "ce4b2104-f1fe-4216-ad67-8c21869b9118",
+      "tls": {
+        "enabled": true,
+        "server_name": "play.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "oNv1vk-DHPrbFy__k2B7Am2lTtKfW4dXM7shzi7VFyk",
+          "short_id": "228b68f87a662053"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇦🇹 奥地利 (Austria) 01 - jack",
         "🇦🇹 奥地利 (Austria) 02 - jack",
-        "🇦🇹 奥地利 (Austria) 03 - jack"
+        "🇦🇹 奥地利 (Austria) 03 - jack",
+        "🇦🇹 奥地利 (Austria) 04 - jack"
       ]
     },
     {
@@ -61,7 +82,8 @@
       "outbounds": [
         "🇦🇹 奥地利 (Austria) 01 - jack",
         "🇦🇹 奥地利 (Austria) 02 - jack",
-        "🇦🇹 奥地利 (Austria) 03 - jack"
+        "🇦🇹 奥地利 (Austria) 03 - jack",
+        "🇦🇹 奥地利 (Austria) 04 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

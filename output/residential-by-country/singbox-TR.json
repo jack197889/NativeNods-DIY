@@ -1,0 +1,59 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 01 (移动家宽) - jack",
+      "server": "178.83.46.216",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack",
+      "server": "104.21.41.247",
+      "server_port": 2053,
+      "uuid": "0da0a073-a5b0-4229-bf11-24592f6290b9",
+      "tls": {
+        "enabled": true,
+        "server_name": "tcdnu.azad0namah.ir",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tucdn/",
+        "headers": {
+          "Host": "tcdnu.azad0namah.ir"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇹🇷 土耳其 (Turkey) 01 (移动家宽) - jack",
+        "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇹🇷 土耳其 (Turkey) 01 (移动家宽) - jack",
+        "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

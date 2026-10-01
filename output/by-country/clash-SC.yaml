@@ -16,20 +16,14 @@ proxies:
     public-key: EHQEopoNqm2q8R2uu8ffAIpI-k2q-9Z5RUWafETWVGs
     short-id: b7e4a1c9d3f60528
   servername: www.universityofcalifornia.edu
-  client-fingerprint: chrome
+  client-fingerprint: random
 - name: 🇸🇨 塞舌尔 (Seychelles) 02 - jack
-  server: prep.wwwinternetvideo.click
+  server: 45.207.207.25
   port: 443
   udp: true
-  type: vless
-  uuid: 1c332eae-7e02-4acd-996d-4eb3e652401c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: uitO4Z8t9TplwwYaqwLqh5rfxDh_X8bOBiNuPbzvaEM
-    short-id: bbe46bd8f6b96839
-  servername: yandex.ru
-  client-fingerprint: chrome
+  type: ss
+  cipher: aes-256-gcm
+  password: gj1+XKulKV0nmw6IThckOkkJh5DSM7+C
 proxy-groups:
 - name: PROXIES
   type: select

@@ -5,64 +5,76 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 - jack
-  server: 104.18.34.14
+  server: 104.17.3.81
+  port: 443
+  udp: true
+  type: vless
+  uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+  tls: true
+  servername: nautica-cff.kloningstrife002.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /138.2.74.219-28616
+    headers:
+      Host: nautica-cff.kloningstrife002.workers.dev
+- name: 🇸🇬 新加坡 (Singapore) 02 - jack
+  server: 104.21.70.21
   port: 8080
   udp: true
   type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /138.2.74.219-28616
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇸🇬 新加坡 (Singapore) 02 - jack
-  server: 172.64.154.8
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: '/?ed=2560security=tls '
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+      Host: nautica-cff.kloningstrife002.workers.dev
 - name: 🇸🇬 新加坡 (Singapore) 03 - jack
-  server: 198.41.194.162
-  port: 443
+  server: 129.153.71.28
+  port: 28863
   udp: true
   type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  uuid: 12ad647b-fa22-4bad-b27f-f54cb92f962b
   tls: true
-  servername: 05agj.gkef.zhs.hh.vavava.kdns.fr
+  servername: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?ed=2560
+    path: /@Marisa_kristi
     headers:
-      Host: 05agj.gkef.zhs.hh.vavava.kdns.fr
+      Host: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
 - name: 🇸🇬 新加坡 (Singapore) 04 - jack
-  server: 172.67.251.117
-  port: 443
+  server: 80.240.18.227
+  port: 10051
   udp: true
   type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  uuid: 711b6476-63fc-4f01-b4e0-d44e17d79383
   tls: true
-  servername: 05agj.gkef.zhs.hh.vavava.kdns.fr
+  servername: o-85ley6knn8ut.6nvkygqh144t7xtdyvh0y3o4gzo3ujhnk8n.workers.dev
   skip-cert-verify: false
+  client-fingerprint: firefox
   network: ws
   ws-opts:
-    path: /?ed=2560
+    path: /@Marisa_kristi
     headers:
-      Host: 05agj.gkef.zhs.hh.vavava.kdns.fr
+      Host: o-85ley6knn8ut.6nvkygqh144t7xtdyvh0y3o4gzo3ujhnk8n.workers.dev
 - name: 🇸🇬 新加坡 (Singapore) 05 - jack
-  server: 149.88.23.202
-  port: 18000
+  server: 68.183.227.236
+  port: 8080
   udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
 - name: 🇸🇬 新加坡 (Singapore) 06 - jack
+  server: 168.107.88.238
+  port: 56927
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: QYtvxQOIkEwTQip+UgO3xOoB0+bygHjHku84F9QYGEo=
+- name: 🇸🇬 新加坡 (Singapore) 07 - jack
   server: 149.88.23.207
   port: 18000
   udp: true
@@ -70,21 +82,21 @@ proxies:
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: auto
-- name: 🇸🇬 新加坡 (Singapore) 07 - jack
-  server: 139.180.220.175
-  port: 8388
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: qpSevKaUXYQKvSjp
 - name: 🇸🇬 新加坡 (Singapore) 08 - jack
-  server: 168.107.88.238
+  server: 129.150.57.198
   port: 56927
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: QYtvxQOIkEwTQip+UgO3xOoB0+bygHjHku84F9QYGEo=
+  password: 3vkiRCxBVuoIaNr1JDwI2U5J8NdF0xUQG9aCerKc6jM=
 - name: 🇸🇬 新加坡 (Singapore) 09 - jack
+  server: 128.199.172.224
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 10 - jack
   server: 146.235.16.130
   port: 33738
   udp: true
@@ -97,28 +109,63 @@ proxies:
   udp-relay-mode: quic
   alpn:
   - h3
-- name: 🇸🇬 新加坡 (Singapore) 10 - jack
+- name: 🇸🇬 新加坡 (Singapore) 11 - jack
+  server: sg2-8sb.6121999.dpdns.org
+  port: 33738
+  udp: true
+  type: tuic
+  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
+  password: 2d1ad594-80a4-4bfb-87a6-038e39701f51
+  sni: sg2-8sb.6121999.dpdns.org
+  skip-cert-verify: false
+  congestion-controller: bbr
+  udp-relay-mode: quic
+  alpn:
+  - h3
+- name: 🇸🇬 新加坡 (Singapore) 12 - jack
   server: 68.183.235.122
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 11 - jack
-  server: 68.183.227.4
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 12 - jack
-  server: 128.199.172.224
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
 - name: 🇸🇬 新加坡 (Singapore) 13 - jack
+  server: 5.223.41.32
+  port: 80
+  udp: true
+  type: vless
+  uuid: 230c7bf3-f069-470a-a4e8-cd526c39f6b4
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇸🇬 新加坡 (Singapore) 14 - jack
+  server: 5.223.41.119
+  port: 80
+  udp: true
+  type: vless
+  uuid: 31ae842f-a16e-4d94-8d72-776a5b78bc11
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇸🇬 新加坡 (Singapore) 15 - jack
+  server: 5.223.41.5
+  port: 80
+  udp: true
+  type: vless
+  uuid: 180252b0-8c59-475c-a3b8-6c33c2ed2359
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇸🇬 新加坡 (Singapore) 16 - jack
+  server: 5.223.41.179
+  port: 80
+  udp: true
+  type: vless
+  uuid: ff642d7a-9a24-4078-a031-f8c656f4554e
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇸🇬 新加坡 (Singapore) 17 - jack
   server: 5.223.41.93
   port: 80
   udp: true
@@ -127,7 +174,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇸🇬 新加坡 (Singapore) 14 - jack
+- name: 🇸🇬 新加坡 (Singapore) 18 - jack
   server: 5.223.41.218
   port: 80
   udp: true
@@ -136,14 +183,63 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇸🇬 新加坡 (Singapore) 15 - jack
+- name: 🇸🇬 新加坡 (Singapore) 19 - jack
+  server: 5.223.41.188
+  port: 80
+  udp: true
+  type: vless
+  uuid: 8afe27ac-aac9-4ff3-933f-7a12682adb70
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇸🇬 新加坡 (Singapore) 20 - jack
+  server: 5.223.41.164
+  port: 80
+  udp: true
+  type: vless
+  uuid: ef24e9b9-e7b2-4e01-b335-f289612d2d7a
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇸🇬 新加坡 (Singapore) 21 - jack
+  server: 5.223.41.121
+  port: 80
+  udp: true
+  type: vless
+  uuid: 0f7996b1-3ef7-4274-b612-0310270d2a41
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇸🇬 新加坡 (Singapore) 22 - jack
   server: 68.183.227.45
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 16 - jack
+- name: 🇸🇬 新加坡 (Singapore) 23 - jack
+  server: 5.223.41.51
+  port: 80
+  udp: true
+  type: vless
+  uuid: 80c38933-9747-443d-9d87-15c80f8663ea
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇸🇬 新加坡 (Singapore) 24 - jack
+  server: 146.235.16.130
+  port: 19825
+  udp: true
+  type: vless
+  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
+    short-id: 6ba85179e30d4fc2
+  servername: sg2-8sb.6121999.dpdns.org
+  client-fingerprint: firefox
+- name: 🇸🇬 新加坡 (Singapore) 25 - jack
   server: 206.206.78.36
   port: 443
   udp: true
@@ -156,7 +252,14 @@ proxies:
     short-id: 133a3f10a1581047
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🇸🇬 新加坡 (Singapore) 17 - jack
+- name: 🇸🇬 新加坡 (Singapore) 26 - jack
+  server: 68.183.227.4
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 27 - jack
   server: 5.223.41.76
   port: 80
   udp: true
@@ -165,32 +268,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇸🇬 新加坡 (Singapore) 18 - jack
-  server: 5.223.41.32
-  port: 80
-  udp: true
-  type: vless
-  uuid: 230c7bf3-f069-470a-a4e8-cd526c39f6b4
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇸🇬 新加坡 (Singapore) 19 - jack
-  server: 68.183.227.236
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 20 - jack
-  server: 5.223.41.83
-  port: 80
-  udp: true
-  type: vless
-  uuid: 790b8505-6f06-432a-8c63-f6c5b9343496
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇸🇬 新加坡 (Singapore) 21 - jack
+- name: 🇸🇬 新加坡 (Singapore) 28 - jack
   server: 5.223.41.31
   port: 80
   udp: true
@@ -199,98 +277,45 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇸🇬 新加坡 (Singapore) 22 - jack
-  server: 5.223.41.164
-  port: 80
+- name: 🇸🇬 新加坡 (Singapore) 29 - jack
+  server: 86.38.247.109
+  port: 2087
   udp: true
-  type: vless
-  uuid: ef24e9b9-e7b2-4e01-b335-f289612d2d7a
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇸🇬 新加坡 (Singapore) 23 - jack
-  server: sg2-8sb.6121999.dpdns.org
-  port: 19825
-  udp: true
-  type: vless
-  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
-    short-id: 6ba85179e30d4fc2
-  servername: sg2-8sb.6121999.dpdns.org
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 24 - jack
-  server: 217.217.254.126
-  port: 2053
-  udp: true
-  type: vless
-  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
-  tls: true
-  reality-opts:
-    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
-    short-id: 87829de0e2bb82cb
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 25 - jack
-  server: 5.223.41.179
-  port: 80
-  udp: true
-  type: vless
-  uuid: ff642d7a-9a24-4078-a031-f8c656f4554e
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇸🇬 新加坡 (Singapore) 26 - jack
-  server: 170.114.45.6
-  port: 80
-  udp: true
-  type: vless
-  uuid: cac6ec8f-99f0-44c5-814f-2f3f65e4db74
-  network: ws
-  ws-opts:
-    path: /dula
-    headers:
-      Host: speed.dulacloud.store
-- name: 🇸🇬 新加坡 (Singapore) 27 - jack
-  server: sg4.dexlos.com
-  port: 20654
-  udp: true
-  type: hysteria2
-  password: 8A9905B7-801B-41AF-BFC9-2034212770F6
-  sni: sg4.dexlos.com
+  type: trojan
+  password: sshs8_6481354771
+  sni: ul-singapore1.09vpn.com
   skip-cert-verify: false
-  obfs: salamander
-  obfs-password: xK9mN2pLq5vR8wB3
-- name: 🇸🇬 新加坡 (Singapore) 28 - jack
-  server: 54.169.200.246
-  port: 41688
+- name: 🇸🇬 新加坡 (Singapore) 30 - jack
+  server: 5.223.41.83
+  port: 80
   udp: true
   type: vless
-  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
+  uuid: 790b8505-6f06-432a-8c63-f6c5b9343496
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇸🇬 新加坡 (Singapore) 31 - jack
+  server: 54.251.9.130
+  port: 24146
+  udp: true
+  type: vless
+  uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
-    short-id: 7f342137c20387
+    public-key: VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo
+    short-id: 7205d9079521832c
   servername: www.intel.com
   client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 29 - jack
-  server: free-server.techsonic.dev
-  port: 2096
+- name: 🇸🇬 新加坡 (Singapore) 32 - jack
+  server: vpn-sg-001.fastervpn.world
+  port: 443
   udp: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  tls: true
-  servername: free-server.techsonic.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /free-server.techsonic.dev
-    headers:
-      Host: free-server.techsonic.dev
-- name: 🇸🇬 新加坡 (Singapore) 30 - jack
+  type: hysteria2
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  sni: vpn-sg-001.fastervpn.world
+  skip-cert-verify: true
+- name: 🇸🇬 新加坡 (Singapore) 33 - jack
   server: 3.0.111.82
   port: 10574
   udp: true
@@ -303,7 +328,29 @@ proxies:
     short-id: 48050fab
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 31 - jack
+- name: 🇸🇬 新加坡 (Singapore) 34 - jack
+  server: 5.223.41.47
+  port: 80
+  udp: true
+  type: vless
+  uuid: e81daee0-e509-4983-a14a-763d3951c94d
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇸🇬 新加坡 (Singapore) 35 - jack
+  server: 54.169.200.246
+  port: 41688
+  udp: true
+  type: vless
+  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
+    short-id: 7f342137c20387
+  servername: www.intel.com
+  client-fingerprint: edge
+- name: 🇸🇬 新加坡 (Singapore) 36 - jack
   server: 3.0.111.82
   port: 17623
   udp: true
@@ -315,8 +362,136 @@ proxies:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
   servername: www.apple.com
+  client-fingerprint: firefox
+- name: 🇸🇬 新加坡 (Singapore) 37 - jack
+  server: 216.195.196.86
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 7c973569-71da-4d18-8c80-aa4c8ee2f257
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 5wGgDloyck_L25Y5rkWorpV3IK00pK0Lki7LR0VY0io
+    short-id: 4fba6fd2c74fd18f
+  servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 32 - jack
+- name: 🇸🇬 新加坡 (Singapore) 38 - jack
+  server: 46.137.202.178
+  port: 12512
+  udp: true
+  type: vless
+  uuid: 2a6c617d-98e4-49c3-95ab-76f02fcf0150
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: sO0RBMr_l8TLtZaYBX8n3NdI9AtaugUqJpCR1szNsyA
+    short-id: e692a8250d2e2fd0
+  servername: www.intel.com
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 (Singapore) 39 - jack
+  server: 217.217.254.126
+  port: 2053
+  udp: true
+  type: vless
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  tls: true
+  reality-opts:
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+    short-id: 87829de0e2bb82cb
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇸🇬 新加坡 (Singapore) 40 - jack
+  server: support.zoom.us
+  port: 80
+  udp: true
+  type: vless
+  uuid: cac6ec8f-99f0-44c5-814f-2f3f65e4db74
+  network: ws
+  ws-opts:
+    path: /dula
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬 新加坡 (Singapore) 41 - jack
+  server: 173.234.14.105
+  port: 59615
+  udp: true
+  type: vless
+  uuid: e2632874-614e-4261-af62-52aca3358e4e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 7PB-58vYXFLNhK6kY8bJJO3-fPOXTPQJ0UqDlhSOH3M
+    short-id: 6b
+  servername: biosmod.partners.nvidia.com
+  client-fingerprint: ios
+- name: 🇸🇬 新加坡 (Singapore) 42 - jack
+  server: 45.80.111.45
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 5ffd914e-9594-4198-8327-145f096f8e4c
+  network: ws
+  ws-opts:
+    path: /cdn/assets/stream
+    headers:
+      Host: cnd.singapure.mygold.stream
+- name: 🇸🇬 新加坡 (Singapore) 43 - jack
+  server: 138.2.89.249
+  port: 443
+  udp: true
+  type: hysteria2
+  password: d042d150716709bb778cc73889cddb02
+  sni: www.bing.com
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: 309502c4a8df10b46fb976d4a8c43f42
+- name: 🇸🇬 新加坡 (Singapore) 44 - jack
+  server: support.zoom.us
+  port: 80
+  udp: true
+  type: vless
+  uuid: 9b0025a3-3a36-4915-b4e1-89c5cd65c9cb
+  network: ws
+  ws-opts:
+    path: /shalana
+    headers:
+      Host: onhit.shalana.shop
+- name: 🇸🇬 新加坡 (Singapore) 45 - jack
+  server: 139.162.51.49
+  port: 2096
+  udp: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  tls: true
+  servername: free-server.techsonic.dev
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /free-server.techsonic.dev
+    headers:
+      Host: free-server.techsonic.dev
+- name: 🇸🇬 新加坡 (Singapore) 46 - jack
+  server: 149.88.23.202
+  port: 18000
+  udp: true
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+- name: 🇸🇬 新加坡 (Singapore) 47 - jack
+  server: support.zoom.us
+  port: 80
+  udp: true
+  type: vless
+  uuid: a57223c7-3581-4fec-9bc4-ad5c30900efb
+  network: ws
+  ws-opts:
+    path: /free-server.techsonic.dev
+    headers:
+      Host: free-server.techsonic.dev
+- name: 🇸🇬 新加坡 (Singapore) 48 - jack
   server: 141.193.213.20
   port: 8443
   udp: true
@@ -331,17 +506,22 @@ proxies:
     path: /dula
     headers:
       Host: speed.dulacloud.store
-- name: 🇸🇬 新加坡 (Singapore) 33 - jack
-  server: 138.2.89.249
+- name: 🇸🇬 新加坡 (Singapore) 49 - jack
+  server: 116.251.217.65
   port: 443
   udp: true
-  type: hysteria2
-  password: d042d150716709bb778cc73889cddb02
-  sni: www.bing.com
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: 309502c4a8df10b46fb976d4a8c43f42
-- name: 🇸🇬 新加坡 (Singapore) 34 - jack
+  type: vless
+  uuid: 2388e166-3890-33ae-f77e-efac00000002
+  tls: true
+  servername: netlivpn4813.ddhshhshs.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN
+    headers:
+      Host: netlivpn4813.ddhshhshs.workers.dev
+- name: 🇸🇬 新加坡 (Singapore) 50 - jack
   server: 3.0.111.82
   port: 12972
   udp: true
@@ -353,15 +533,19 @@ proxies:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
   servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 35 - jack
-  server: 138.2.73.238
-  port: 50160
+  client-fingerprint: qq
+- name: 🇸🇬 新加坡 (Singapore) 51 - jack
+  server: 136.85.2.50
+  port: 443
   udp: true
-  type: hysteria2
-  password: f87376e17da040ed04c9665ce8972930
-  sni: 138.2.73.238
-  skip-cert-verify: true
+  type: vless
+  uuid: 5567cac6-2a32-4318-83cd-7df3a9eebbd7
+  tls: true
+  reality-opts:
+    public-key: hJCcmOf_ECJ3GUfHUjsgfcFKcgGb22H7cz_m_FvcVm4
+    short-id: eb97ce837da2f6ad
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -402,6 +586,22 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 33 - jack
   - 🇸🇬 新加坡 (Singapore) 34 - jack
   - 🇸🇬 新加坡 (Singapore) 35 - jack
+  - 🇸🇬 新加坡 (Singapore) 36 - jack
+  - 🇸🇬 新加坡 (Singapore) 37 - jack
+  - 🇸🇬 新加坡 (Singapore) 38 - jack
+  - 🇸🇬 新加坡 (Singapore) 39 - jack
+  - 🇸🇬 新加坡 (Singapore) 40 - jack
+  - 🇸🇬 新加坡 (Singapore) 41 - jack
+  - 🇸🇬 新加坡 (Singapore) 42 - jack
+  - 🇸🇬 新加坡 (Singapore) 43 - jack
+  - 🇸🇬 新加坡 (Singapore) 44 - jack
+  - 🇸🇬 新加坡 (Singapore) 45 - jack
+  - 🇸🇬 新加坡 (Singapore) 46 - jack
+  - 🇸🇬 新加坡 (Singapore) 47 - jack
+  - 🇸🇬 新加坡 (Singapore) 48 - jack
+  - 🇸🇬 新加坡 (Singapore) 49 - jack
+  - 🇸🇬 新加坡 (Singapore) 50 - jack
+  - 🇸🇬 新加坡 (Singapore) 51 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -442,5 +642,21 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 33 - jack
   - 🇸🇬 新加坡 (Singapore) 34 - jack
   - 🇸🇬 新加坡 (Singapore) 35 - jack
+  - 🇸🇬 新加坡 (Singapore) 36 - jack
+  - 🇸🇬 新加坡 (Singapore) 37 - jack
+  - 🇸🇬 新加坡 (Singapore) 38 - jack
+  - 🇸🇬 新加坡 (Singapore) 39 - jack
+  - 🇸🇬 新加坡 (Singapore) 40 - jack
+  - 🇸🇬 新加坡 (Singapore) 41 - jack
+  - 🇸🇬 新加坡 (Singapore) 42 - jack
+  - 🇸🇬 新加坡 (Singapore) 43 - jack
+  - 🇸🇬 新加坡 (Singapore) 44 - jack
+  - 🇸🇬 新加坡 (Singapore) 45 - jack
+  - 🇸🇬 新加坡 (Singapore) 46 - jack
+  - 🇸🇬 新加坡 (Singapore) 47 - jack
+  - 🇸🇬 新加坡 (Singapore) 48 - jack
+  - 🇸🇬 新加坡 (Singapore) 49 - jack
+  - 🇸🇬 新加坡 (Singapore) 50 - jack
+  - 🇸🇬 新加坡 (Singapore) 51 - jack
 rules:
 - MATCH,PROXIES

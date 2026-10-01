@@ -34,6 +34,18 @@ proxies:
   tls: true
   servername: bigdick.gamegrow.ru
   skip-cert-verify: false
+- name: 🇦🇹 奥地利 (Austria) 04 - jack
+  server: g4.haxat.bestvbest.ir
+  port: 56126
+  udp: true
+  type: vless
+  uuid: ce4b2104-f1fe-4216-ad67-8c21869b9118
+  tls: true
+  reality-opts:
+    public-key: oNv1vk-DHPrbFy__k2B7Am2lTtKfW4dXM7shzi7VFyk
+    short-id: 228b68f87a662053
+  servername: play.google.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -42,6 +54,7 @@ proxy-groups:
   - 🇦🇹 奥地利 (Austria) 01 - jack
   - 🇦🇹 奥地利 (Austria) 02 - jack
   - 🇦🇹 奥地利 (Austria) 03 - jack
+  - 🇦🇹 奥地利 (Austria) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -50,5 +63,6 @@ proxy-groups:
   - 🇦🇹 奥地利 (Austria) 01 - jack
   - 🇦🇹 奥地利 (Austria) 02 - jack
   - 🇦🇹 奥地利 (Austria) 03 - jack
+  - 🇦🇹 奥地利 (Austria) 04 - jack
 rules:
 - MATCH,PROXIES
