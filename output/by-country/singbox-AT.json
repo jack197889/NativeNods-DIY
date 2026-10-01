@@ -33,47 +33,12 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇦🇹 奥地利 (Austria) 03 - jack",
-      "server": "31.77.227.6",
-      "server_port": 52006,
-      "uuid": "bc659d88-a1e0-076c-a49a-7b51b26a7a7f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "bigdick.gamegrow.ru",
-        "insecure": false
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇦🇹 奥地利 (Austria) 04 - jack",
-      "server": "g4.haxat.bestvbest.ir",
-      "server_port": 56126,
-      "uuid": "ce4b2104-f1fe-4216-ad67-8c21869b9118",
-      "tls": {
-        "enabled": true,
-        "server_name": "play.google.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "oNv1vk-DHPrbFy__k2B7Am2lTtKfW4dXM7shzi7VFyk",
-          "short_id": "228b68f87a662053"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇦🇹 奥地利 (Austria) 01 - jack",
-        "🇦🇹 奥地利 (Austria) 02 - jack",
-        "🇦🇹 奥地利 (Austria) 03 - jack",
-        "🇦🇹 奥地利 (Austria) 04 - jack"
+        "🇦🇹 奥地利 (Austria) 02 - jack"
       ]
     },
     {
@@ -81,9 +46,7 @@
       "tag": "auto",
       "outbounds": [
         "🇦🇹 奥地利 (Austria) 01 - jack",
-        "🇦🇹 奥地利 (Austria) 02 - jack",
-        "🇦🇹 奥地利 (Austria) 03 - jack",
-        "🇦🇹 奥地利 (Austria) 04 - jack"
+        "🇦🇹 奥地利 (Austria) 02 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

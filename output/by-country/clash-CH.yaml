@@ -12,17 +12,13 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
 - name: 🇨🇭 瑞士 (Switzerland) 02 - jack
-  server: 208.69.78.217
-  port: 2053
+  server: 140.238.213.114
+  port: 50160
   udp: true
-  type: vless
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  tls: true
-  reality-opts:
-    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
-    short-id: ad86e2d52ff40ebd
-  servername: www.apple.com
-  client-fingerprint: firefox
+  type: hysteria2
+  password: 84a506ca5aca505696a454d828420b3f
+  sni: 140.238.213.114
+  skip-cert-verify: true
 - name: 🇨🇭 瑞士 (Switzerland) 03 - jack
   server: 179.237.103.152
   port: 443
@@ -50,13 +46,13 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: firefox
 - name: 🇨🇭 瑞士 (Switzerland) 05 - jack
-  server: 82.38.64.235
+  server: 82.38.64.229
   port: 8443
   udp: true
   type: hysteria2
   password: we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH
   sni: hopp-swizland-new.mysynology.net
-  skip-cert-verify: true
+  skip-cert-verify: false
 - name: 🇨🇭 瑞士 (Switzerland) 06 - jack
   server: 152.67.75.161
   port: 443
@@ -68,55 +64,30 @@ proxies:
   obfs: salamander
   obfs-password: c13f29db6a638ad2b211b9ce2669ef27
 - name: 🇨🇭 瑞士 (Switzerland) 07 - jack
-  server: 140.238.213.114
-  port: 50160
+  server: 208.69.78.217
+  port: 2053
   udp: true
-  type: hysteria2
-  password: 84a506ca5aca505696a454d828420b3f
-  sni: 140.238.213.114
-  skip-cert-verify: true
+  type: vless
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  tls: true
+  reality-opts:
+    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
+    short-id: ad86e2d52ff40ebd
+  servername: www.apple.com
+  client-fingerprint: firefox
 - name: 🇨🇭 瑞士 (Switzerland) 08 - jack
-  server: ch.zango.tech
+  server: 176.65.144.84
   port: 443
   udp: true
   type: vless
-  uuid: 0b21158e-00f5-4a2f-b242-e3e5574f68a0
+  uuid: 0f4081e7-612b-425f-8def-eebf144aedba
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: B-q_vYkpKjiiaHyUfr7NutnusdvsmoWEeyr0QJfTfmw
-    short-id: 447abeb4fb111a9c
-  servername: bunny.net
-  client-fingerprint: qq
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ''
-- name: 🇨🇭 瑞士 (Switzerland) 09 - jack
-  server: 176.65.144.45
-  port: 2096
-  udp: true
-  type: vless
-  uuid: e3e9805a-6c8b-4edd-8ee8-621df79806eb
-  tls: true
-  servername: ch.aksay.pro
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-- name: 🇨🇭 瑞士 (Switzerland) 10 - jack
-  server: 176.108.241.226
-  port: 9882
-  udp: true
-  type: vless
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
-  tls: true
-  reality-opts:
-    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-  servername: dl.google.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
+    public-key: ITd6cmCxudmTvGcwnAzpd0VRe8jS9KJAQ1tmtVN3mCM
+    short-id: 9e15546f267baa64
+  servername: indigo.clouderiux.com
+  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
@@ -130,8 +101,6 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 06 - jack
   - 🇨🇭 瑞士 (Switzerland) 07 - jack
   - 🇨🇭 瑞士 (Switzerland) 08 - jack
-  - 🇨🇭 瑞士 (Switzerland) 09 - jack
-  - 🇨🇭 瑞士 (Switzerland) 10 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -145,7 +114,5 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 06 - jack
   - 🇨🇭 瑞士 (Switzerland) 07 - jack
   - 🇨🇭 瑞士 (Switzerland) 08 - jack
-  - 🇨🇭 瑞士 (Switzerland) 09 - jack
-  - 🇨🇭 瑞士 (Switzerland) 10 - jack
 rules:
 - MATCH,PROXIES

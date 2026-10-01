@@ -5,18 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇳 印度 (India) 01 - jack
-  server: 148.113.5.44
-  port: 443
+  server: 172.105.39.124
+  port: 7002
   udp: true
-  type: vless
-  uuid: 72ea5a91-ffcc-43d2-9297-5993c3abf186
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: QLjTpkXRB453R9fXhJzKkc_q_gSm2MZrIOuxW4uW-mI
-    short-id: 221873918e0bb74d
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  type: ss
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
 - name: 🇮🇳 印度 (India) 02 - jack
   server: 194.61.31.126
   port: 2053
@@ -40,21 +34,21 @@ proxies:
   network: ws
   ws-opts:
     path: /
+    headers:
+      Host: 152.67.8.205
 - name: 🇮🇳 印度 (India) 04 - jack
-  server: 34.131.228.210
+  server: 148.113.5.44
   port: 443
   udp: true
-  type: trojan
-  password: M7v%w11Se*
-  sni: hyfuuf6.wsone.icu
-  skip-cert-verify: false
-- name: 🇮🇳 印度 (India) 05 - jack
-  server: 172.105.39.124
-  port: 7002
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
+  type: vless
+  uuid: 72ea5a91-ffcc-43d2-9297-5993c3abf186
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: QLjTpkXRB453R9fXhJzKkc_q_gSm2MZrIOuxW4uW-mI
+    short-id: 221873918e0bb74d
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -64,7 +58,6 @@ proxy-groups:
   - 🇮🇳 印度 (India) 02 - jack
   - 🇮🇳 印度 (India) 03 - jack
   - 🇮🇳 印度 (India) 04 - jack
-  - 🇮🇳 印度 (India) 05 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -74,6 +67,5 @@ proxy-groups:
   - 🇮🇳 印度 (India) 02 - jack
   - 🇮🇳 印度 (India) 03 - jack
   - 🇮🇳 印度 (India) 04 - jack
-  - 🇮🇳 印度 (India) 05 - jack
 rules:
 - MATCH,PROXIES

@@ -4,16 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇮🇩 印尼 (Indonesia) 01 - jack",
-      "server": "103.160.63.199",
-      "server_port": 31348,
-      "method": "chacha20-ietf-poly1305",
-      "password": "8C5valhOd8vfwaTXUSZ6Zyb0Ip34lRR5z7P8az"
-    },
-    {
       "type": "vless",
-      "tag": "🇮🇩 印尼 (Indonesia) 02 - jack",
+      "tag": "🇮🇩 印尼 (Indonesia) 01 - jack",
       "server": "103.172.197.2",
       "server_port": 29172,
       "uuid": "3977434d-6a9b-4858-8ced-80326ba5e367",
@@ -34,7 +26,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇮🇩 印尼 (Indonesia) 03 - jack",
+      "tag": "🇮🇩 印尼 (Indonesia) 02 - jack",
       "server": "103.172.197.3",
       "server_port": 16006,
       "uuid": "f8c9d2a1-da40-4f90-b671-11772a0b13d6",
@@ -44,7 +36,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -55,8 +47,8 @@
     },
     {
       "type": "trojan",
-      "tag": "🇮🇩 印尼 (Indonesia) 04 - jack",
-      "server": "188.114.97.6",
+      "tag": "🇮🇩 印尼 (Indonesia) 03 - jack",
+      "server": "104.18.32.87",
       "server_port": 443,
       "password": "018b8e7b-7813-4dcb-84a5-3c98f1521e00",
       "tls": {
@@ -79,8 +71,7 @@
         "auto",
         "🇮🇩 印尼 (Indonesia) 01 - jack",
         "🇮🇩 印尼 (Indonesia) 02 - jack",
-        "🇮🇩 印尼 (Indonesia) 03 - jack",
-        "🇮🇩 印尼 (Indonesia) 04 - jack"
+        "🇮🇩 印尼 (Indonesia) 03 - jack"
       ]
     },
     {
@@ -89,8 +80,7 @@
       "outbounds": [
         "🇮🇩 印尼 (Indonesia) 01 - jack",
         "🇮🇩 印尼 (Indonesia) 02 - jack",
-        "🇮🇩 印尼 (Indonesia) 03 - jack",
-        "🇮🇩 印尼 (Indonesia) 04 - jack"
+        "🇮🇩 印尼 (Indonesia) 03 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

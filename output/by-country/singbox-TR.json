@@ -6,27 +6,6 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01 - jack",
-      "server": "85.192.48.142",
-      "server_port": 443,
-      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "nvidia.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": ""
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "short_id": "db04ce8bdb8900f1"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 02 - jack",
       "server": "45.74.158.103",
       "server_port": 443,
       "uuid": "46e62b9b-f9db-4310-8f18-7d6e449cfd5c",
@@ -47,48 +26,21 @@
     },
     {
       "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 02 - jack",
+      "server": "178.83.46.216",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
+    },
+    {
+      "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 03 - jack",
-      "server": "83.217.9.140",
-      "server_port": 43000,
-      "uuid": "85163fd9-6f73-4eea-b1df-3b327dacbabf",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "83.217.9.140",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ptE_QnAka3pXNEf8BYKpA9CHdgj4U4xXTixjYWOji0U",
-          "short_id": "68d2eb23"
-        }
-      }
+      "server": "109.230.196.66",
+      "server_port": 208,
+      "uuid": "8d89622f-3150-424e-8446-06866a3d6b66"
     },
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 04 - jack",
-      "server": "151.241.226.201",
-      "server_port": 2053,
-      "uuid": "0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104",
-          "short_id": "9e419c0759b54d6f"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 05 - jack",
       "server": "78.135.73.47",
       "server_port": 443,
       "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
@@ -108,41 +60,57 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇹🇷 土耳其 (Turkey) 06 - jack",
-      "server": "me17.msjia8844.site",
-      "server_port": 7443,
-      "password": "M8LP9DztTr3znqCkmf-r08CQLBLLFK1r",
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 05 - jack",
+      "server": "151.241.226.201",
+      "server_port": 2053,
+      "uuid": "0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8",
       "tls": {
         "enabled": true,
-        "server_name": "me17.msjia8844.site",
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "u3Soh9_Ui0UmcuY6vk0ug8Lq"
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104",
+          "short_id": "9e419c0759b54d6f"
+        }
       }
     },
     {
       "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 07 (移动家宽) - jack",
-      "server": "tcdnu.azad0namah.ir",
-      "server_port": 8443,
-      "uuid": "0da0a073-a5b0-4229-bf11-24592f6290b9",
+      "tag": "🇹🇷 土耳其 (Turkey) 06 - jack",
+      "server": "85.192.48.142",
+      "server_port": 443,
+      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "tcdnu.azad0namah.ir",
-        "insecure": false,
+        "server_name": "nvidia.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": ""
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
+          "short_id": "db04ce8bdb8900f1"
         }
-      },
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 07 - jack",
+      "server": "www.asamping.ir",
+      "server_port": 2052,
+      "uuid": "5f424b45-29e5-4cbe-b752-88ac535c11b7",
       "transport": {
         "type": "ws",
-        "path": "/tuws/",
+        "path": "/",
         "headers": {
-          "Host": "tcdnu.azad0namah.ir"
+          "Host": "www.asamping.ir"
         }
       }
     },
@@ -157,7 +125,7 @@
         "🇹🇷 土耳其 (Turkey) 04 - jack",
         "🇹🇷 土耳其 (Turkey) 05 - jack",
         "🇹🇷 土耳其 (Turkey) 06 - jack",
-        "🇹🇷 土耳其 (Turkey) 07 (移动家宽) - jack"
+        "🇹🇷 土耳其 (Turkey) 07 - jack"
       ]
     },
     {
@@ -170,7 +138,7 @@
         "🇹🇷 土耳其 (Turkey) 04 - jack",
         "🇹🇷 土耳其 (Turkey) 05 - jack",
         "🇹🇷 土耳其 (Turkey) 06 - jack",
-        "🇹🇷 土耳其 (Turkey) 07 (移动家宽) - jack"
+        "🇹🇷 土耳其 (Turkey) 07 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

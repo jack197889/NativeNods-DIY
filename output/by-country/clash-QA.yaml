@@ -4,16 +4,16 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇽 墨西哥 (Mexico) 01 - jack
-  server: 34.51.119.243
+- name: 🇶🇦 卡塔尔 (Qatar) 01 - jack
+  server: 34.18.31.5
   port: 443
   udp: true
   type: vless
-  uuid: 79bc7b01-6e4e-4365-a120-fefac8182bd9
+  uuid: bd82d5e7-4395-40e1-b34e-2974eb0c8555
   tls: true
   reality-opts:
-    public-key: vFcM44RcbcO5jcrSWHLd_0exXAnnJLhpCNnMrWCwlzI
-    short-id: 65f01b4b99e52015
+    public-key: ZRWl48Ahw4vlnPSTMkNs6xcCEDd9Qq4AsChUp-mg7A4
+    short-id: 9c8748aa3f7d4219
   servername: www.cloudflare.com
   client-fingerprint: chrome
 proxy-groups:
@@ -21,12 +21,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇲🇽 墨西哥 (Mexico) 01 - jack
+  - 🇶🇦 卡塔尔 (Qatar) 01 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇽 墨西哥 (Mexico) 01 - jack
+  - 🇶🇦 卡塔尔 (Qatar) 01 - jack
 rules:
 - MATCH,PROXIES
