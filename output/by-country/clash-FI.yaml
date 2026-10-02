@@ -5,12 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - jack
-  server: 77.42.20.51
-  port: 1085
-  udp: true
-  type: vless
-  uuid: 0c1b7949-fe09-43d9-863f-2c031f66bfc1
-- name: 🇫🇮 芬兰 (Finland) 02 - jack
   server: 45.149.147.97
   port: 443
   udp: true
@@ -23,15 +17,15 @@ proxies:
     short-id: d345ad4657adeef9
   servername: google.com
   client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 03 - jack
-  server: 144.31.212.253
+- name: 🇫🇮 芬兰 (Finland) 02 - jack
+  server: 144.31.232.216
   port: 443
   udp: true
   type: hysteria2
-  password: cf83b611-6cba-4535-adcb-8da06c6a9146
-  sni: vps155-edge.kermemehori.ru
+  password: 06e88dd6-e264-4981-8c26-d7ab17348ab2
+  sni: fi01.clgate.network
   skip-cert-verify: false
-- name: 🇫🇮 芬兰 (Finland) 04 - jack
+- name: 🇫🇮 芬兰 (Finland) 03 - jack
   server: 95.216.27.15
   port: 2053
   udp: true
@@ -43,8 +37,8 @@ proxies:
     short-id: d368b94e275ab080
   servername: www.google.com
   client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 05 - jack
-  server: 35.228.61.63
+- name: 🇫🇮 芬兰 (Finland) 04 - jack
+  server: 34.88.172.173
   port: 443
   udp: true
   type: vless
@@ -55,20 +49,7 @@ proxies:
     short-id: d4b34bc6b3d2b5ab
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 06 - jack
-  server: 144.31.150.185
-  port: 443
-  udp: true
-  type: vless
-  uuid: 49c8e76e-7e52-426a-8669-51d93c7a6d12
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Z1_596gzjw7TiPAhowugetKeotIJzLGHA41Fu5Re3WE
-    short-id: 410a04029b24
-  servername: start.ru
-  client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 07 - jack
+- name: 🇫🇮 芬兰 (Finland) 05 - jack
   server: 144.31.27.215
   port: 43000
   udp: true
@@ -81,6 +62,14 @@ proxies:
     short-id: 568d87a47271344e
   servername: 144.31.27.215
   client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 06 - jack
+  server: 144.31.212.253
+  port: 443
+  udp: true
+  type: hysteria2
+  password: cf83b611-6cba-4535-adcb-8da06c6a9146
+  sni: vps155-edge.kermemehori.ru
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -92,7 +81,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 04 - jack
   - 🇫🇮 芬兰 (Finland) 05 - jack
   - 🇫🇮 芬兰 (Finland) 06 - jack
-  - 🇫🇮 芬兰 (Finland) 07 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -104,6 +92,5 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 04 - jack
   - 🇫🇮 芬兰 (Finland) 05 - jack
   - 🇫🇮 芬兰 (Finland) 06 - jack
-  - 🇫🇮 芬兰 (Finland) 07 - jack
 rules:
 - MATCH,PROXIES

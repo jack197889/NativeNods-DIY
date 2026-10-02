@@ -15,18 +15,6 @@ proxies:
   obfs: salamander
   obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
 - name: 🇦🇪 阿联酋 (UAE) 02 - jack
-  server: 31.59.150.11
-  port: 443
-  udp: true
-  type: vless
-  uuid: cc4d63e2-3a86-49b3-9598-328bbe93e56c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: yI6maXxTQ8zRHg39X8YMQtKW-IVfNIn0_OCUIQKmcXw
-  servername: google.com
-  client-fingerprint: qq
-- name: 🇦🇪 阿联酋 (UAE) 03 - jack
   server: 78.40.195.140
   port: 443
   udp: true
@@ -39,6 +27,14 @@ proxies:
     short-id: 98096455d963bdbb
   servername: www.booking.com
   client-fingerprint: firefox
+- name: 🇦🇪 阿联酋 (UAE) 03 - jack
+  server: streambox.wwwinternetvideo.click
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01
+  sni: streambox.wwwinternetvideo.click
+  skip-cert-verify: true
 - name: 🇦🇪 阿联酋 (UAE) 04 - jack
   server: 151.241.137.132
   port: 443
@@ -52,13 +48,17 @@ proxies:
   servername: finland.ali-bard.online
   client-fingerprint: firefox
 - name: 🇦🇪 阿联酋 (UAE) 05 - jack
-  server: streambox.wwwinternetvideo.click
+  server: node-nl.shtormvpn.shop
   port: 443
   udp: true
-  type: hysteria2
-  password: 865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01
-  sni: streambox.wwwinternetvideo.click
-  skip-cert-verify: true
+  type: vless
+  uuid: cc4d63e2-3a86-49b3-9598-328bbe93e56c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: yI6maXxTQ8zRHg39X8YMQtKW-IVfNIn0_OCUIQKmcXw
+  servername: google.com
+  client-fingerprint: edge
 - name: 🇦🇪 阿联酋 (UAE) 06 - jack
   server: 144.31.49.47
   port: 443
@@ -68,7 +68,7 @@ proxies:
   sni: admin.wwwinternetvideo.click
   skip-cert-verify: true
 - name: 🇦🇪 阿联酋 (UAE) 07 - jack
-  server: 84.235.244.108
+  server: uae.unixzone.us
   port: 22573
   udp: true
   type: vless

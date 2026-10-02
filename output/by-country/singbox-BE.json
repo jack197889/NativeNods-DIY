@@ -6,28 +6,40 @@
     {
       "type": "vless",
       "tag": "🇧🇪 比利时 (Belgium) 01 - jack",
-      "server": "172.67.155.136",
-      "server_port": 2086,
-      "uuid": "73796e63-0000-4000-8000-000000000007",
-      "transport": {
-        "type": "ws",
-        "path": "/sync",
-        "headers": {
-          "Host": "vqrlof-pwa5a7-onfjlv.zedbazi061.workers.dev"
+      "server": "34.156.242.126",
+      "server_port": 443,
+      "uuid": "d4d1b597-2769-465b-b7fa-c2b84393d3ee",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "OQ0MKzP5TYtlJCteckb25tD6USBH__D1z28Y8BOcdG4",
+          "short_id": "b4f2c0e3d8668c2f"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇧🇪 比利时 (Belgium) 02 - jack",
-      "server": "104.21.64.198",
-      "server_port": 2095,
-      "uuid": "73796e63-0000-4000-8000-000000000008",
-      "transport": {
-        "type": "ws",
-        "path": "/sync",
-        "headers": {
-          "Host": "vqrlof-pwa5a7-onfjlv.zedbazi061.workers.dev"
+      "server": "34.38.82.200",
+      "server_port": 443,
+      "uuid": "6d341f6e-7b9d-4ae3-999b-00333de7bdfb",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "v6QpErcVOVKIYLm53R3bAP8zIKCFr4HAJWW0VwBKtws",
+          "short_id": "31f187650d9530bb"
         }
       }
     },
