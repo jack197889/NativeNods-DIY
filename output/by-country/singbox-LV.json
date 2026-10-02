@@ -15,7 +15,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -25,8 +25,20 @@
       }
     },
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇱🇻 拉脱维亚 (Latvia) 02 - jack",
+      "server": "91.240.86.70",
+      "server_port": 24443,
+      "password": "3f63c86c-ac4a-4900-85cf-4fedf93c2ca5",
+      "tls": {
+        "enabled": true,
+        "server_name": "hy.quattro-tech.ru",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 03 - jack",
       "server": "104.252.19.114",
       "server_port": 8443,
       "uuid": "40cba749-bca9-4089-9c02-84a357244ce0",
@@ -51,7 +63,8 @@
       "outbounds": [
         "auto",
         "🇱🇻 拉脱维亚 (Latvia) 01 - jack",
-        "🇱🇻 拉脱维亚 (Latvia) 02 - jack"
+        "🇱🇻 拉脱维亚 (Latvia) 02 - jack",
+        "🇱🇻 拉脱维亚 (Latvia) 03 - jack"
       ]
     },
     {
@@ -59,7 +72,8 @@
       "tag": "auto",
       "outbounds": [
         "🇱🇻 拉脱维亚 (Latvia) 01 - jack",
-        "🇱🇻 拉脱维亚 (Latvia) 02 - jack"
+        "🇱🇻 拉脱维亚 (Latvia) 02 - jack",
+        "🇱🇻 拉脱维亚 (Latvia) 03 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

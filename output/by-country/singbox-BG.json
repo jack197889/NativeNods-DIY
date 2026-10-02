@@ -4,12 +4,18 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 01 - jack",
-      "server": "213.183.63.60",
-      "server_port": 9061,
-      "method": "aes-256-cfb",
-      "password": "4R3hUfZ2FHhDmNcP"
+      "server": "172.64.150.28",
+      "server_port": 8880,
+      "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "vms.lifetime29.workers.dev"
+        }
+      }
     },
     {
       "type": "shadowsocks",
@@ -23,29 +29,13 @@
       "type": "shadowsocks",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 03 - jack",
       "server": "213.183.63.60",
-      "server_port": 9064,
+      "server_port": 9098,
       "method": "aes-256-cfb",
-      "password": "cp8pRSUAyLhTfVWH"
+      "password": "aLpQtfEZe445QyHk"
     },
     {
       "type": "shadowsocks",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 04 - jack",
-      "server": "213.183.63.60",
-      "server_port": 9066,
-      "method": "aes-256-cfb",
-      "password": "2KUaE2a8NWTvuCZ3"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇧🇬 保加利亚 (Bulgaria) 05 - jack",
-      "server": "213.183.63.60",
-      "server_port": 9085,
-      "method": "aes-256-cfb",
-      "password": "9ej82EKe2gq7gLAM"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇧🇬 保加利亚 (Bulgaria) 06 - jack",
       "server": "213.183.63.60",
       "server_port": 9049,
       "method": "aes-256-cfb",
@@ -53,11 +43,27 @@
     },
     {
       "type": "shadowsocks",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 05 - jack",
+      "server": "213.183.63.60",
+      "server_port": 9066,
+      "method": "aes-256-cfb",
+      "password": "2KUaE2a8NWTvuCZ3"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 06 - jack",
+      "server": "213.183.63.60",
+      "server_port": 9085,
+      "method": "aes-256-cfb",
+      "password": "9ej82EKe2gq7gLAM"
+    },
+    {
+      "type": "shadowsocks",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 07 - jack",
       "server": "213.183.63.60",
-      "server_port": 9098,
+      "server_port": 9061,
       "method": "aes-256-cfb",
-      "password": "aLpQtfEZe445QyHk"
+      "password": "4R3hUfZ2FHhDmNcP"
     },
     {
       "type": "shadowsocks",
@@ -68,8 +74,16 @@
       "password": "9eeJ2fwnZA5Fxgz8"
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 09 - jack",
+      "server": "213.183.63.60",
+      "server_port": 9064,
+      "method": "aes-256-cfb",
+      "password": "cp8pRSUAyLhTfVWH"
+    },
+    {
+      "type": "vless",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 10 - jack",
       "server": "193.148.59.178",
       "server_port": 443,
       "uuid": "20d7c485-5d24-49b5-a5cc-bb7a7daf9908",
@@ -90,7 +104,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇧🇬 保加利亚 (Bulgaria) 10 - jack",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 11 - jack",
       "server": "136.175.82.85",
       "server_port": 18775,
       "uuid": "9ae5940b-0278-403d-a1e1-9dddc47bdcf6",
@@ -123,7 +137,8 @@
         "🇧🇬 保加利亚 (Bulgaria) 07 - jack",
         "🇧🇬 保加利亚 (Bulgaria) 08 - jack",
         "🇧🇬 保加利亚 (Bulgaria) 09 - jack",
-        "🇧🇬 保加利亚 (Bulgaria) 10 - jack"
+        "🇧🇬 保加利亚 (Bulgaria) 10 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 11 - jack"
       ]
     },
     {
@@ -139,7 +154,8 @@
         "🇧🇬 保加利亚 (Bulgaria) 07 - jack",
         "🇧🇬 保加利亚 (Bulgaria) 08 - jack",
         "🇧🇬 保加利亚 (Bulgaria) 09 - jack",
-        "🇧🇬 保加利亚 (Bulgaria) 10 - jack"
+        "🇧🇬 保加利亚 (Bulgaria) 10 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 11 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

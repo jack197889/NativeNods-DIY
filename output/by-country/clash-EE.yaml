@@ -10,9 +10,20 @@ proxies:
   udp: true
   type: trojan
   password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
-  sni: 109.206.241.10
+  sni: russiapower.accesscam.org
   skip-cert-verify: true
 - name: 🇪🇪 爱沙尼亚 (Estonia) 02 - jack
+  server: 94.183.170.135
+  port: 443
+  udp: true
+  type: vless
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: estproxy4.lockdwn.com
+- name: 🇪🇪 爱沙尼亚 (Estonia) 03 - jack
   server: 94.183.170.135
   port: 8443
   udp: true
@@ -22,30 +33,60 @@ proxies:
   servername: estproxy4.lockdwn.com
   skip-cert-verify: false
   client-fingerprint: firefox
-- name: 🇪🇪 爱沙尼亚 (Estonia) 03 - jack
-  server: 94.183.170.135
+- name: 🇪🇪 爱沙尼亚 (Estonia) 04 - jack
+  server: 93.89.220.37
   port: 443
   udp: true
   type: vless
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇪🇪 爱沙尼亚 (Estonia) 04 - jack
-  server: 194.26.141.148
-  port: 8443
+  uuid: 185e2bb3-2934-48d0-bbd5-dd20d16e83ee
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: lwKaUQ81wJUJRsqAPsfTPj5V_f9N50UYEwzRI_nuq2g
+    short-id: e88cb983f3c97528
+  servername: ibm.com
+  client-fingerprint: edge
+- name: 🇪🇪 爱沙尼亚 (Estonia) 05 - jack
+  server: 185.91.52.139
+  port: 443
+  udp: true
+  type: trojan
+  password: ymk9eBP4Ams3-ncYCV4kDAezUzBfkR8x
+  sni: isq.ichost.cloud
+  skip-cert-verify: false
+- name: 🇪🇪 爱沙尼亚 (Estonia) 06 - jack
+  server: ee174.mech-pro.online
+  port: 443
   udp: true
   type: vless
-  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+  uuid: a15d1b88-e3f4-4f4d-9c04-462a2965a60a
+  flow: xtls-rprx-vision
   tls: true
-  servername: fdghyt.com
-  skip-cert-verify: false
+  reality-opts:
+    public-key: jbiddtGRgeBvlkjbuA3aU-WPjKgEX87tOVh1mFfvOUI
+    short-id: 16e0f049
+  servername: ee174.mech-pro.online
   client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /vpn-wss/fluxor/59011/
-    headers:
-      Host: fdghyt.com
+- name: 🇪🇪 爱沙尼亚 (Estonia) 07 - jack
+  server: es1.xt-game.top
+  port: 443
+  udp: true
+  type: vless
+  uuid: 49c8e76e-7e52-426a-8669-51d93c7a6d12
+  flow: xtls-rprx-vision
+  tls: true
+  servername: es1.xt-game.top
+  skip-cert-verify: false
+- name: 🇪🇪 爱沙尼亚 (Estonia) 08 - jack
+  server: lat2.xt-game.top
+  port: 443
+  udp: true
+  type: vless
+  uuid: 49c8e76e-7e52-426a-8669-51d93c7a6d12
+  flow: xtls-rprx-vision
+  tls: true
+  servername: lat2.xt-game.top
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -55,6 +96,10 @@ proxy-groups:
   - 🇪🇪 爱沙尼亚 (Estonia) 02 - jack
   - 🇪🇪 爱沙尼亚 (Estonia) 03 - jack
   - 🇪🇪 爱沙尼亚 (Estonia) 04 - jack
+  - 🇪🇪 爱沙尼亚 (Estonia) 05 - jack
+  - 🇪🇪 爱沙尼亚 (Estonia) 06 - jack
+  - 🇪🇪 爱沙尼亚 (Estonia) 07 - jack
+  - 🇪🇪 爱沙尼亚 (Estonia) 08 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -64,5 +109,9 @@ proxy-groups:
   - 🇪🇪 爱沙尼亚 (Estonia) 02 - jack
   - 🇪🇪 爱沙尼亚 (Estonia) 03 - jack
   - 🇪🇪 爱沙尼亚 (Estonia) 04 - jack
+  - 🇪🇪 爱沙尼亚 (Estonia) 05 - jack
+  - 🇪🇪 爱沙尼亚 (Estonia) 06 - jack
+  - 🇪🇪 爱沙尼亚 (Estonia) 07 - jack
+  - 🇪🇪 爱沙尼亚 (Estonia) 08 - jack
 rules:
 - MATCH,PROXIES

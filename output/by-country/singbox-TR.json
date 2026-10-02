@@ -6,56 +6,61 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01 - jack",
-      "server": "45.74.158.103",
+      "server": "85.192.48.142",
       "server_port": 443,
-      "uuid": "46e62b9b-f9db-4310-8f18-7d6e449cfd5c",
+      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "tr2.gigobingo.ru",
+        "server_name": "nvidia.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "Aj6Op88j_eYXxoBw095KS_NnKCBm5uwa874uumXdiDQ",
-          "short_id": "ef7c4e4302bd52d7"
+          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
+          "short_id": "db04ce8bdb8900f1"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 02 - jack",
-      "server": "178.83.46.216",
-      "server_port": 2053,
-      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 03 - jack",
       "server": "109.230.196.66",
       "server_port": 208,
       "uuid": "8d89622f-3150-424e-8446-06866a3d6b66"
     },
     {
+      "type": "vmess",
+      "tag": "🇹🇷 土耳其 (Turkey) 03 - jack",
+      "server": "206.1.99.160",
+      "server_port": 443,
+      "uuid": "Nitro_Skybot@",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 04 - jack",
-      "server": "78.135.73.47",
-      "server_port": 443,
-      "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
+      "server": "83.217.9.140",
+      "server_port": 43000,
+      "uuid": "85163fd9-6f73-4eea-b1df-3b327dacbabf",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.datadoghq.com",
+        "server_name": "83.217.9.140",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8",
-          "short_id": "f46cd3ea3d1eb72d"
+          "public_key": "ptE_QnAka3pXNEf8BYKpA9CHdgj4U4xXTixjYWOji0U",
+          "short_id": "68d2eb23"
         }
       }
     },
@@ -82,35 +87,21 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 06 - jack",
-      "server": "85.192.48.142",
+      "server": "78.135.73.47",
       "server_port": 443,
-      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
+      "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "nvidia.com",
+        "server_name": "www.datadoghq.com",
         "utls": {
           "enabled": true,
-          "fingerprint": ""
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "short_id": "db04ce8bdb8900f1"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 07 - jack",
-      "server": "www.asamping.ir",
-      "server_port": 2052,
-      "uuid": "5f424b45-29e5-4cbe-b752-88ac535c11b7",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "www.asamping.ir"
+          "public_key": "sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8",
+          "short_id": "f46cd3ea3d1eb72d"
         }
       }
     },
@@ -124,8 +115,7 @@
         "🇹🇷 土耳其 (Turkey) 03 - jack",
         "🇹🇷 土耳其 (Turkey) 04 - jack",
         "🇹🇷 土耳其 (Turkey) 05 - jack",
-        "🇹🇷 土耳其 (Turkey) 06 - jack",
-        "🇹🇷 土耳其 (Turkey) 07 - jack"
+        "🇹🇷 土耳其 (Turkey) 06 - jack"
       ]
     },
     {
@@ -137,8 +127,7 @@
         "🇹🇷 土耳其 (Turkey) 03 - jack",
         "🇹🇷 土耳其 (Turkey) 04 - jack",
         "🇹🇷 土耳其 (Turkey) 05 - jack",
-        "🇹🇷 土耳其 (Turkey) 06 - jack",
-        "🇹🇷 土耳其 (Turkey) 07 - jack"
+        "🇹🇷 土耳其 (Turkey) 06 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

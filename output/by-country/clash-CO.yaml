@@ -5,12 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇴 哥伦比亚 (Colombia) 01 - jack
-  server: 158.247.125.162
-  port: 62145
-  udp: true
-  type: vless
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
-- name: 🇨🇴 哥伦比亚 (Colombia) 02 - jack
   server: 149.104.107.41
   port: 8090
   udp: true
@@ -23,13 +17,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇨🇴 哥伦比亚 (Colombia) 01 - jack
-  - 🇨🇴 哥伦比亚 (Colombia) 02 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇴 哥伦比亚 (Colombia) 01 - jack
-  - 🇨🇴 哥伦比亚 (Colombia) 02 - jack
 rules:
 - MATCH,PROXIES

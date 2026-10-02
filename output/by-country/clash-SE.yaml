@@ -5,14 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - jack
-  server: 13.48.104.64
+  server: 51.20.143.248
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇸🇪 瑞典 (Sweden) 02 - jack
-  server: 51.20.122.188
+  server: 13.60.213.145
   port: 443
   udp: true
   type: ss
@@ -26,46 +26,33 @@ proxies:
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇸🇪 瑞典 (Sweden) 04 - jack
-  server: 51.20.72.15
+  server: 13.48.104.64
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇸🇪 瑞典 (Sweden) 05 - jack
-  server: 13.49.76.55
+  server: 51.20.72.15
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇸🇪 瑞典 (Sweden) 06 - jack
-  server: 79.141.174.147
-  port: 33743
-  udp: true
-  type: vless
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-  tls: true
-  reality-opts:
-    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
-  servername: www.google.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TunService
-- name: 🇸🇪 瑞典 (Sweden) 07 - jack
-  server: 143.246.194.213
+  server: 132.243.231.22
   port: 443
   udp: true
   type: vless
-  uuid: dc9e93bc-b53a-11f1-91d3-52540030ba36
+  uuid: 4496d9fb-37da-4c7f-98bb-eb1ccf110c4d
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: wSjV1yR_rhDUdoNbM9zIXNGLASLp9RorComnyoayo2c
-  servername: www.ikea.com
+    public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
+    short-id: 2d6d073dc88f22a8
+  servername: nordic.global-cdn.org
   client-fingerprint: chrome
-- name: 🇸🇪 瑞典 (Sweden) 08 - jack
+- name: 🇸🇪 瑞典 (Sweden) 07 - jack
   server: 5.157.10.148
   port: 443
   udp: true
@@ -77,8 +64,43 @@ proxies:
     public-key: x6p656szvu_3CKLsJ4NtkooRvdTVGx7IoPca_p58_jA
     short-id: fb442438e2223836
   servername: surstreming.vvzzkontaktezzvv.garden
-  client-fingerprint: ios
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 08 - jack
+  server: 81.90.21.168
+  port: 443
+  udp: true
+  type: vless
+  uuid: 30dab345-4de9-4b70-ad9f-8ebd5c66686f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GRxGFwibgoUjG9OL5Dl1OLyK56yw8WaG5BdFP8ifVgQ
+    short-id: 26f7082dd0e36ca1
+  servername: cdn.jsdelivr.net
+  client-fingerprint: firefox
 - name: 🇸🇪 瑞典 (Sweden) 09 - jack
+  server: 185.91.53.251
+  port: 8443
+  udp: true
+  type: trojan
+  password: ymk9eBP4Ams3-ncYCV4kDAezUzBfkR8x
+  sni: sw-one.quickgo.cc
+  skip-cert-verify: false
+- name: 🇸🇪 瑞典 (Sweden) 10 - jack
+  server: 176.108.246.110
+  port: 9830
+  udp: true
+  type: vless
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  tls: true
+  reality-opts:
+    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+  servername: dl.google.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+- name: 🇸🇪 瑞典 (Sweden) 11 - jack
   server: 62.60.159.81
   port: 2053
   udp: true
@@ -89,10 +111,25 @@ proxies:
     public-key: ygmJxS-Mc7g0buNSUTVGhazT-FoBjyYtLLfUYIQxFTw
     short-id: d0ea1847066af5a6
   servername: www.samsung.com
-  client-fingerprint: safari
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: grpce5bb9e71
+- name: 🇸🇪 瑞典 (Sweden) 12 - jack
+  server: 51.20.122.188
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇸🇪 瑞典 (Sweden) 13 - jack
+  server: svip.skycon808.com
+  port: 60005
+  udp: true
+  type: anytls
+  password: 13f0acfa-38c1-4e82-a758-583aa31740df
+  sni: xjp18.2uuzhe.com
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -107,6 +144,10 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 07 - jack
   - 🇸🇪 瑞典 (Sweden) 08 - jack
   - 🇸🇪 瑞典 (Sweden) 09 - jack
+  - 🇸🇪 瑞典 (Sweden) 10 - jack
+  - 🇸🇪 瑞典 (Sweden) 11 - jack
+  - 🇸🇪 瑞典 (Sweden) 12 - jack
+  - 🇸🇪 瑞典 (Sweden) 13 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -121,5 +162,9 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 07 - jack
   - 🇸🇪 瑞典 (Sweden) 08 - jack
   - 🇸🇪 瑞典 (Sweden) 09 - jack
+  - 🇸🇪 瑞典 (Sweden) 10 - jack
+  - 🇸🇪 瑞典 (Sweden) 11 - jack
+  - 🇸🇪 瑞典 (Sweden) 12 - jack
+  - 🇸🇪 瑞典 (Sweden) 13 - jack
 rules:
 - MATCH,PROXIES

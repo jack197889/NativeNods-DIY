@@ -16,8 +16,16 @@ proxies:
     public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
     short-id: 33acba1b
   servername: www.apple.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇱🇻 拉脱维亚 (Latvia) 02 - jack
+  server: 91.240.86.70
+  port: 24443
+  udp: true
+  type: hysteria2
+  password: 3f63c86c-ac4a-4900-85cf-4fedf93c2ca5
+  sni: hy.quattro-tech.ru
+  skip-cert-verify: false
+- name: 🇱🇻 拉脱维亚 (Latvia) 03 - jack
   server: 104.252.19.114
   port: 8443
   udp: true
@@ -36,6 +44,7 @@ proxy-groups:
   - AUTO
   - 🇱🇻 拉脱维亚 (Latvia) 01 - jack
   - 🇱🇻 拉脱维亚 (Latvia) 02 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 03 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -43,5 +52,6 @@ proxy-groups:
   proxies:
   - 🇱🇻 拉脱维亚 (Latvia) 01 - jack
   - 🇱🇻 拉脱维亚 (Latvia) 02 - jack
+  - 🇱🇻 拉脱维亚 (Latvia) 03 - jack
 rules:
 - MATCH,PROXIES

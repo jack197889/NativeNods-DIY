@@ -13,14 +13,6 @@ proxies:
   sni: e6b91583-tm96o0-tnhquc-1j0a4.hk3.hyhuawei.com
   skip-cert-verify: true
 - name: 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack
-  server: 0499fc3f-tmkao0-tnnrly-g43g.nw4.hyhuawei.com
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 6ddb6a68-d5f5-ca30-3943-cf0c9876d50c
-  sni: 0499fc3f-tmkao0-tnnrly-g43g.nw4.hyhuawei.com
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - jack
   server: ac7548f3ebe045b39a90288ff1e97528.pnuqcnp.cn
   port: 443
   udp: true
@@ -35,7 +27,6 @@ proxy-groups:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - jack
   - 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack
-  - 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -43,6 +34,5 @@ proxy-groups:
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - jack
   - 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack
-  - 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - jack
 rules:
 - MATCH,PROXIES
