@@ -26,7 +26,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": ""
         },
         "reality": {
           "enabled": true,
@@ -36,12 +36,34 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇬🇷 希腊 (Greece) 03 - jack",
+      "server": "greeeeeek.pumpkinpie.study",
+      "server_port": 443,
+      "uuid": "8f6e49e6-7f03-4f10-9da9-1716158d80ed",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "greeeeeek.pumpkinpie.study",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "lza1anie-lqVSKrFdfSzq4XLd8Ge2qyCDkgZb1xr1k0",
+          "short_id": "9fa5c0092361b848"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇬🇷 希腊 (Greece) 01 - jack",
-        "🇬🇷 希腊 (Greece) 02 - jack"
+        "🇬🇷 希腊 (Greece) 02 - jack",
+        "🇬🇷 希腊 (Greece) 03 - jack"
       ]
     },
     {
@@ -49,7 +71,8 @@
       "tag": "auto",
       "outbounds": [
         "🇬🇷 希腊 (Greece) 01 - jack",
-        "🇬🇷 希腊 (Greece) 02 - jack"
+        "🇬🇷 希腊 (Greece) 02 - jack",
+        "🇬🇷 希腊 (Greece) 03 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

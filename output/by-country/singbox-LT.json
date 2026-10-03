@@ -7,13 +7,21 @@
       "type": "shadowsocks",
       "tag": "🇱🇹 立陶宛 (Lithuania) 01 - jack",
       "server": "195.238.126.20",
-      "server_port": 9045,
+      "server_port": 9012,
       "method": "aes-256-cfb",
-      "password": "Lp27rqyJq72bZsqX"
+      "password": "xaupMUvhptwxdDUg"
     },
     {
       "type": "shadowsocks",
       "tag": "🇱🇹 立陶宛 (Lithuania) 02 - jack",
+      "server": "195.238.126.20",
+      "server_port": 9086,
+      "method": "aes-256-cfb",
+      "password": "37Z4TFCYhfxcpc9Q"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇱🇹 立陶宛 (Lithuania) 03 - jack",
       "server": "195.238.126.20",
       "server_port": 9068,
       "method": "aes-256-cfb",
@@ -21,35 +29,27 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇱🇹 立陶宛 (Lithuania) 03 - jack",
-      "server": "195.238.126.20",
-      "server_port": 9012,
-      "method": "aes-256-cfb",
-      "password": "xaupMUvhptwxdDUg"
-    },
-    {
-      "type": "shadowsocks",
       "tag": "🇱🇹 立陶宛 (Lithuania) 04 - jack",
-      "server": "195.238.126.20",
-      "server_port": 9008,
+      "server": "195.238.126.84",
+      "server_port": 9039,
       "method": "aes-256-cfb",
-      "password": "y9VURyNzJWNRYEGQ"
+      "password": "qYEN5HX4JKeVCdEC"
     },
     {
       "type": "shadowsocks",
       "tag": "🇱🇹 立陶宛 (Lithuania) 05 - jack",
       "server": "195.238.126.20",
-      "server_port": 9078,
+      "server_port": 9002,
       "method": "aes-256-cfb",
-      "password": "JCJpbRbQZNw9XFZG"
+      "password": "b8KkNDjEd5QqFyRm"
     },
     {
       "type": "shadowsocks",
       "tag": "🇱🇹 立陶宛 (Lithuania) 06 - jack",
       "server": "195.238.126.20",
-      "server_port": 9002,
+      "server_port": 9045,
       "method": "aes-256-cfb",
-      "password": "b8KkNDjEd5QqFyRm"
+      "password": "Lp27rqyJq72bZsqX"
     },
     {
       "type": "shadowsocks",
@@ -71,9 +71,70 @@
       "type": "shadowsocks",
       "tag": "🇱🇹 立陶宛 (Lithuania) 09 - jack",
       "server": "195.238.126.20",
-      "server_port": 9086,
+      "server_port": 9008,
       "method": "aes-256-cfb",
-      "password": "37Z4TFCYhfxcpc9Q"
+      "password": "y9VURyNzJWNRYEGQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇱🇹 立陶宛 (Lithuania) 10 - jack",
+      "server": "195.238.126.20",
+      "server_port": 9078,
+      "method": "aes-256-cfb",
+      "password": "JCJpbRbQZNw9XFZG"
+    },
+    {
+      "type": "vless",
+      "tag": "🇱🇹 立陶宛 (Lithuania) 11 - jack",
+      "server": "litva1.ali-bard.online",
+      "server_port": 443,
+      "uuid": "4643976f-85fa-40cf-9e58-ea28b50f253b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "litva1.ali-bard.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇱🇹 立陶宛 (Lithuania) 12 - jack",
+      "server": "49.13.231.249",
+      "server_port": 33483,
+      "uuid": "758a691a-45d2-4462-a0e8-991248a6994e",
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇱🇹 立陶宛 (Lithuania) 13 - jack",
+      "server": "62.77.158.1",
+      "server_port": 443,
+      "uuid": "2eceaf2b-a775-5a9c-9990-dad2b3660fb6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "online.1c.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "sVhkyiMXvpofflCdSszxQmsqOXV1kg1Ldxq1a9mOPjs",
+          "short_id": "6a"
+        }
+      }
     },
     {
       "type": "selector",
@@ -88,7 +149,11 @@
         "🇱🇹 立陶宛 (Lithuania) 06 - jack",
         "🇱🇹 立陶宛 (Lithuania) 07 - jack",
         "🇱🇹 立陶宛 (Lithuania) 08 - jack",
-        "🇱🇹 立陶宛 (Lithuania) 09 - jack"
+        "🇱🇹 立陶宛 (Lithuania) 09 - jack",
+        "🇱🇹 立陶宛 (Lithuania) 10 - jack",
+        "🇱🇹 立陶宛 (Lithuania) 11 - jack",
+        "🇱🇹 立陶宛 (Lithuania) 12 - jack",
+        "🇱🇹 立陶宛 (Lithuania) 13 - jack"
       ]
     },
     {
@@ -103,7 +168,11 @@
         "🇱🇹 立陶宛 (Lithuania) 06 - jack",
         "🇱🇹 立陶宛 (Lithuania) 07 - jack",
         "🇱🇹 立陶宛 (Lithuania) 08 - jack",
-        "🇱🇹 立陶宛 (Lithuania) 09 - jack"
+        "🇱🇹 立陶宛 (Lithuania) 09 - jack",
+        "🇱🇹 立陶宛 (Lithuania) 10 - jack",
+        "🇱🇹 立陶宛 (Lithuania) 11 - jack",
+        "🇱🇹 立陶宛 (Lithuania) 12 - jack",
+        "🇱🇹 立陶宛 (Lithuania) 13 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

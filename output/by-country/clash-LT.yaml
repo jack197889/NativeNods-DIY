@@ -6,46 +6,46 @@ log-level: info
 proxies:
 - name: 🇱🇹 立陶宛 (Lithuania) 01 - jack
   server: 195.238.126.20
-  port: 9045
+  port: 9012
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: Lp27rqyJq72bZsqX
+  password: xaupMUvhptwxdDUg
 - name: 🇱🇹 立陶宛 (Lithuania) 02 - jack
+  server: 195.238.126.20
+  port: 9086
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 37Z4TFCYhfxcpc9Q
+- name: 🇱🇹 立陶宛 (Lithuania) 03 - jack
   server: 195.238.126.20
   port: 9068
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: mwgRg9hRq3b4Qnwb
-- name: 🇱🇹 立陶宛 (Lithuania) 03 - jack
-  server: 195.238.126.20
-  port: 9012
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: xaupMUvhptwxdDUg
 - name: 🇱🇹 立陶宛 (Lithuania) 04 - jack
-  server: 195.238.126.20
-  port: 9008
+  server: 195.238.126.84
+  port: 9039
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: y9VURyNzJWNRYEGQ
+  password: qYEN5HX4JKeVCdEC
 - name: 🇱🇹 立陶宛 (Lithuania) 05 - jack
-  server: 195.238.126.20
-  port: 9078
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: JCJpbRbQZNw9XFZG
-- name: 🇱🇹 立陶宛 (Lithuania) 06 - jack
   server: 195.238.126.20
   port: 9002
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: b8KkNDjEd5QqFyRm
+- name: 🇱🇹 立陶宛 (Lithuania) 06 - jack
+  server: 195.238.126.20
+  port: 9045
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: Lp27rqyJq72bZsqX
 - name: 🇱🇹 立陶宛 (Lithuania) 07 - jack
   server: 195.238.126.20
   port: 9001
@@ -62,11 +62,52 @@ proxies:
   password: M3t2ZEQcMGRWBjRa
 - name: 🇱🇹 立陶宛 (Lithuania) 09 - jack
   server: 195.238.126.20
-  port: 9086
+  port: 9008
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: 37Z4TFCYhfxcpc9Q
+  password: y9VURyNzJWNRYEGQ
+- name: 🇱🇹 立陶宛 (Lithuania) 10 - jack
+  server: 195.238.126.20
+  port: 9078
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: JCJpbRbQZNw9XFZG
+- name: 🇱🇹 立陶宛 (Lithuania) 11 - jack
+  server: litva1.ali-bard.online
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4643976f-85fa-40cf-9e58-ea28b50f253b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: litva1.ali-bard.online
+  client-fingerprint: firefox
+- name: 🇱🇹 立陶宛 (Lithuania) 12 - jack
+  server: 49.13.231.249
+  port: 33483
+  udp: true
+  type: vless
+  uuid: 758a691a-45d2-4462-a0e8-991248a6994e
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇱🇹 立陶宛 (Lithuania) 13 - jack
+  server: 62.77.158.1
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2eceaf2b-a775-5a9c-9990-dad2b3660fb6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: sVhkyiMXvpofflCdSszxQmsqOXV1kg1Ldxq1a9mOPjs
+    short-id: 6a
+  servername: online.1c.ru
+  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
@@ -81,6 +122,10 @@ proxy-groups:
   - 🇱🇹 立陶宛 (Lithuania) 07 - jack
   - 🇱🇹 立陶宛 (Lithuania) 08 - jack
   - 🇱🇹 立陶宛 (Lithuania) 09 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 10 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 11 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 12 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 13 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -95,5 +140,9 @@ proxy-groups:
   - 🇱🇹 立陶宛 (Lithuania) 07 - jack
   - 🇱🇹 立陶宛 (Lithuania) 08 - jack
   - 🇱🇹 立陶宛 (Lithuania) 09 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 10 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 11 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 12 - jack
+  - 🇱🇹 立陶宛 (Lithuania) 13 - jack
 rules:
 - MATCH,PROXIES

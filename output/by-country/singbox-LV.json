@@ -12,32 +12,37 @@
       "password": "kSPmvwdFzGMMW5pY"
     },
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇱🇻 拉脱维亚 (Latvia) 02 - jack",
+      "server": "138.124.180.137",
+      "server_port": 443,
+      "uuid": "5234b2b7-5e07-422c-8159-d62a676c00c6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c",
+          "short_id": "33acba1b"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 03 - jack",
       "server": "185.135.86.175",
       "server_port": 9082,
       "method": "aes-256-cfb",
       "password": "45xgMgm386pjWjTx"
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 03 - jack",
-      "server": "185.135.86.175",
-      "server_port": 9017,
-      "method": "aes-256-cfb",
-      "password": "HAVAdE3nXhqA5nHp"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 04 - jack",
-      "server": "185.135.86.175",
-      "server_port": 9036,
-      "method": "aes-256-cfb",
-      "password": "hbtvgUz5uNYyB3Rf"
-    },
-    {
       "type": "vless",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 05 - jack",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 04 - jack",
       "server": "195.123.213.28",
       "server_port": 443,
       "uuid": "02fcc1a4-ee90-4970-8bbb-4ffaa8109d24",
@@ -58,23 +63,34 @@
     },
     {
       "type": "vless",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 06 - jack",
-      "server": "138.124.180.137",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 05 - jack",
+      "server": "85.159.228.223",
       "server_port": 443,
-      "uuid": "5234b2b7-5e07-422c-8159-d62a676c00c6",
-      "flow": "xtls-rprx-vision",
+      "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "example.org",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c",
-          "short_id": "33acba1b"
+          "public_key": "aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU",
+          "short_id": ""
         }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 06 - jack",
+      "server": "91.240.86.70",
+      "server_port": 24443,
+      "password": "3f63c86c-ac4a-4900-85cf-4fedf93c2ca5",
+      "tls": {
+        "enabled": true,
+        "server_name": "hy.quattro-tech.ru",
+        "insecure": false
       }
     },
     {
@@ -99,18 +115,6 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 08 - jack",
-      "server": "91.240.86.70",
-      "server_port": 24443,
-      "password": "3f63c86c-ac4a-4900-85cf-4fedf93c2ca5",
-      "tls": {
-        "enabled": true,
-        "server_name": "hy.quattro-tech.ru",
-        "insecure": false
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -121,8 +125,7 @@
         "🇱🇻 拉脱维亚 (Latvia) 04 - jack",
         "🇱🇻 拉脱维亚 (Latvia) 05 - jack",
         "🇱🇻 拉脱维亚 (Latvia) 06 - jack",
-        "🇱🇻 拉脱维亚 (Latvia) 07 - jack",
-        "🇱🇻 拉脱维亚 (Latvia) 08 - jack"
+        "🇱🇻 拉脱维亚 (Latvia) 07 - jack"
       ]
     },
     {
@@ -135,8 +138,7 @@
         "🇱🇻 拉脱维亚 (Latvia) 04 - jack",
         "🇱🇻 拉脱维亚 (Latvia) 05 - jack",
         "🇱🇻 拉脱维亚 (Latvia) 06 - jack",
-        "🇱🇻 拉脱维亚 (Latvia) 07 - jack",
-        "🇱🇻 拉脱维亚 (Latvia) 08 - jack"
+        "🇱🇻 拉脱维亚 (Latvia) 07 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

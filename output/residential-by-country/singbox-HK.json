@@ -6,18 +6,22 @@
     {
       "type": "vmess",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - jack",
-      "server": "dog-hk.kunlun01dns.com",
-      "server_port": 21022,
-      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "server": "zfd-hkv1.kunlun01dns.com",
+      "server_port": 16115,
+      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
       "security": "auto"
     },
     {
-      "type": "vmess",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽) - jack",
-      "server": "dog-hk.kunlun01dns.com",
-      "server_port": 21020,
-      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
-      "security": "auto"
+      "type": "hysteria2",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
+      "server": "57fa706e-tmm5c0-tn5bnx-19xg1.nw4.hyhuawei.com",
+      "server_port": 443,
+      "password": "e1dee7c0-cff7-11eb-a8bf-f23c91cfbbc9",
+      "tls": {
+        "enabled": true,
+        "server_name": "57fa706e-tmm5c0-tn5bnx-19xg1.nw4.hyhuawei.com",
+        "insecure": true
+      }
     },
     {
       "type": "anytls",
@@ -37,7 +41,7 @@
       "outbounds": [
         "auto",
         "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
         "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - jack"
       ]
     },
@@ -46,7 +50,7 @@
       "tag": "auto",
       "outbounds": [
         "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
         "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
