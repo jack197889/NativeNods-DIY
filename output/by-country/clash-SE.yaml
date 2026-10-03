@@ -12,7 +12,7 @@ proxies:
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇸🇪 瑞典 (Sweden) 02 - jack
-  server: 51.20.86.152
+  server: 13.49.76.55
   port: 443
   udp: true
   type: ss
@@ -26,60 +26,38 @@ proxies:
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇸🇪 瑞典 (Sweden) 04 - jack
-  server: 13.49.21.155
+  server: 13.62.228.76
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇸🇪 瑞典 (Sweden) 05 - jack
-  server: 13.49.76.55
+  server: 132.243.231.4
   port: 443
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
+  type: vless
+  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zWDvtTWK-cWWwHDMHMXcOpQy4k3EKp7yw-5e0wTZAUM
+    short-id: 5efa80b939612291
+  servername: d3-se1.cloud-cdn.xyz
+  client-fingerprint: chrome
 - name: 🇸🇪 瑞典 (Sweden) 06 - jack
-  server: 51.20.143.248
+  server: 143.246.196.207
   port: 443
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
+  type: vless
+  uuid: ac0c2945-b758-11f1-8181-54db13ea7d40
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: wSjV1yR_rhDUdoNbM9zIXNGLASLp9RorComnyoayo2c
+  servername: www.blocket.se
+  client-fingerprint: ''
 - name: 🇸🇪 瑞典 (Sweden) 07 - jack
-  server: 5.157.10.148
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: x6p656szvu_3CKLsJ4NtkooRvdTVGx7IoPca_p58_jA
-    short-id: fb442438e2223836
-  servername: surstreming.vvzzkontaktezzvv.garden
-  client-fingerprint: firefox
-- name: 🇸🇪 瑞典 (Sweden) 08 - jack
-  server: 31.207.7.74
-  port: 443
-  udp: true
-  type: vless
-  uuid: 2412bd96-925b-43f2-81d1-0ed4f0793699
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: RDL0RVmgFM3fdqXRSHBF2A53YF9TPFu2aeJQhMTaY3s
-    short-id: 457ae5b8bef4d1b3
-  servername: pkg.go.dev
-  client-fingerprint: firefox
-- name: 🇸🇪 瑞典 (Sweden) 09 - jack
-  server: 13.61.185.249
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 10 - jack
   server: swed4.o4ka-internet.com
   port: 443
   udp: true
@@ -92,18 +70,30 @@ proxies:
     short-id: 5629431325884ff0
   servername: swed4.o4ka-internet.com
   client-fingerprint: random
-- name: 🇸🇪 瑞典 (Sweden) 11 - jack
-  server: 199.68.198.13
+- name: 🇸🇪 瑞典 (Sweden) 08 - jack
+  server: 94.143.231.146
   port: 443
   udp: true
   type: vless
-  uuid: 454431fc-71e2-42b1-b375-5b55dd06666a
+  uuid: 6e05822a-e9da-4135-a9db-71aa07a944af
   tls: true
-  reality-opts:
-    public-key: aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU
-  servername: example.org
-  client-fingerprint: firefox
-- name: 🇸🇪 瑞典 (Sweden) 12 - jack
+  servername: sub.merky.top
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /merky-connect/de6/
+    headers:
+      Host: sub.merky.top
+- name: 🇸🇪 瑞典 (Sweden) 09 - jack
+  server: svip.skycon808.com
+  port: 60005
+  udp: true
+  type: anytls
+  password: 13f0acfa-38c1-4e82-a758-583aa31740df
+  sni: xjp18.2uuzhe.com
+  skip-cert-verify: true
+- name: 🇸🇪 瑞典 (Sweden) 10 - jack
   server: 62.60.159.81
   port: 2053
   udp: true
@@ -118,26 +108,19 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpce5bb9e71
-- name: 🇸🇪 瑞典 (Sweden) 13 - jack
-  server: 34.51.231.250
+- name: 🇸🇪 瑞典 (Sweden) 11 - jack
+  server: 132.243.231.12
   port: 443
   udp: true
   type: vless
-  uuid: e4be912f-68e8-4d51-80a4-1342b646f8e0
+  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: fV003yDr_sb_Wkgz6MxnIUJMgD15osWhzU-HZ5fLPFg
-    short-id: 79ff7d51e3c56323
-  servername: www.cloudflare.com
+    public-key: zWDvtTWK-cWWwHDMHMXcOpQy4k3EKp7yw-5e0wTZAUM
+    short-id: 5efa80b939612291
+  servername: d3-se1.cloud-cdn.xyz
   client-fingerprint: firefox
-- name: 🇸🇪 瑞典 (Sweden) 14 - jack
-  server: svip.skycon808.com
-  port: 60005
-  udp: true
-  type: anytls
-  password: 13f0acfa-38c1-4e82-a758-583aa31740df
-  sni: xjp18.2uuzhe.com
-  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -154,9 +137,6 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 09 - jack
   - 🇸🇪 瑞典 (Sweden) 10 - jack
   - 🇸🇪 瑞典 (Sweden) 11 - jack
-  - 🇸🇪 瑞典 (Sweden) 12 - jack
-  - 🇸🇪 瑞典 (Sweden) 13 - jack
-  - 🇸🇪 瑞典 (Sweden) 14 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -173,8 +153,5 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 09 - jack
   - 🇸🇪 瑞典 (Sweden) 10 - jack
   - 🇸🇪 瑞典 (Sweden) 11 - jack
-  - 🇸🇪 瑞典 (Sweden) 12 - jack
-  - 🇸🇪 瑞典 (Sweden) 13 - jack
-  - 🇸🇪 瑞典 (Sweden) 14 - jack
 rules:
 - MATCH,PROXIES

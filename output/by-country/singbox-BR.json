@@ -4,28 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇧🇷 巴西 (Brazil) 01 - jack",
-      "server": "147.45.116.19",
-      "server_port": 443,
-      "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
-      "tls": {
-        "enabled": true,
-        "server_name": "br.monkora.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU",
-          "short_id": ""
-        }
-      }
-    },
-    {
       "type": "vmess",
-      "tag": "🇧🇷 巴西 (Brazil) 02 - jack",
+      "tag": "🇧🇷 巴西 (Brazil) 01 - jack",
       "server": "89.39.161.157",
       "server_port": 443,
       "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
@@ -48,16 +28,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇷 巴西 (Brazil) 01 - jack",
-        "🇧🇷 巴西 (Brazil) 02 - jack"
+        "🇧🇷 巴西 (Brazil) 01 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇷 巴西 (Brazil) 01 - jack",
-        "🇧🇷 巴西 (Brazil) 02 - jack"
+        "🇧🇷 巴西 (Brazil) 01 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -5,32 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - jack
-  server: 169.40.32.73
+  server: 151.241.226.201
   port: 2053
   udp: true
   type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-- name: 🇹🇷 土耳其 (Turkey) 02 - jack
-  server: 85.192.48.142
-  port: 443
-  udp: true
-  type: vless
-  uuid: adc11f30-e4cb-4985-bf5e-f9ded69c019f
-  flow: xtls-rprx-vision
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
   tls: true
   reality-opts:
-    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
-    short-id: db04ce8bdb8900f1
-  servername: nvidia.com
-  client-fingerprint: ''
-- name: 🇹🇷 土耳其 (Turkey) 03 - jack
-  server: bale.xv98.ir
-  port: 5051
+    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
+    short-id: 9e419c0759b54d6f
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 02 - jack
+  server: me17.msjia8844.site
+  port: 7443
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 68mL2QkZEBlxWa3hcslGDw
-- name: 🇹🇷 土耳其 (Turkey) 04 - jack
+  type: hysteria2
+  password: M8LP9DztTr3znqCkmf-r08CQLBLLFK1r
+  sni: me17.msjia8844.site
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: u3Soh9_Ui0UmcuY6vk0ug8Lq
+- name: 🇹🇷 土耳其 (Turkey) 03 - jack
   server: 78.135.73.47
   port: 443
   udp: true
@@ -43,52 +39,6 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 05 - jack
-  server: me17.msjia8844.site
-  port: 7443
-  udp: true
-  type: hysteria2
-  password: M8LP9DztTr3znqCkmf-r08CQLBLLFK1r
-  sni: me17.msjia8844.site
-  skip-cert-verify: false
-  obfs: salamander
-  obfs-password: u3Soh9_Ui0UmcuY6vk0ug8Lq
-- name: 🇹🇷 土耳其 (Turkey) 06 - jack
-  server: 151.241.226.201
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  tls: true
-  reality-opts:
-    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
-    short-id: 9e419c0759b54d6f
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 07 - jack
-  server: 176.96.131.251
-  port: 1280
-  udp: true
-  type: vless
-  uuid: c0e8fb58-a60f-4c15-9444-4e7c109797a8
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇹🇷 土耳其 (Turkey) 08 - jack
-  server: 155.103.70.53
-  port: 30303
-  udp: true
-  type: vless
-  uuid: d18c6897-2849-456a-8c46-d7ecece47c20
-  tls: true
-  servername: wzs.echo.net.eu.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HAAQNCV1EClxZAgMWAlBZXRlKXU4aTV8WGRQRQkoXFgweUABdHg==
-    headers:
-      Host: wzs.echo.net.eu.org
 proxy-groups:
 - name: PROXIES
   type: select
@@ -97,11 +47,6 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01 - jack
   - 🇹🇷 土耳其 (Turkey) 02 - jack
   - 🇹🇷 土耳其 (Turkey) 03 - jack
-  - 🇹🇷 土耳其 (Turkey) 04 - jack
-  - 🇹🇷 土耳其 (Turkey) 05 - jack
-  - 🇹🇷 土耳其 (Turkey) 06 - jack
-  - 🇹🇷 土耳其 (Turkey) 07 - jack
-  - 🇹🇷 土耳其 (Turkey) 08 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -110,10 +55,5 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01 - jack
   - 🇹🇷 土耳其 (Turkey) 02 - jack
   - 🇹🇷 土耳其 (Turkey) 03 - jack
-  - 🇹🇷 土耳其 (Turkey) 04 - jack
-  - 🇹🇷 土耳其 (Turkey) 05 - jack
-  - 🇹🇷 土耳其 (Turkey) 06 - jack
-  - 🇹🇷 土耳其 (Turkey) 07 - jack
-  - 🇹🇷 土耳其 (Turkey) 08 - jack
 rules:
 - MATCH,PROXIES
