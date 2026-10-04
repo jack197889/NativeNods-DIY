@@ -4,26 +4,22 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - jack",
-      "server": "8a85c177-tmm5c0-tvgkxc-hrtf.hk3.hyhuawei.com",
-      "server_port": 443,
-      "password": "0da8651e-e1f6-11ec-bd7c-f23c913c8d2b",
-      "tls": {
-        "enabled": true,
-        "server_name": "8a85c177-tmm5c0-tvgkxc-hrtf.hk3.hyhuawei.com",
-        "insecure": true
-      }
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - jack",
+      "server": "dog-hk.kunlun01dns.com",
+      "server_port": 21020,
+      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "security": "auto"
     },
     {
       "type": "hysteria2",
       "tag": "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
-      "server": "d0f180c2-tmm5c0-tphvvu-gacy.nw4.hyhuawei.com",
+      "server": "05a33aa3-tmm5c0-tzzpok-1sllg.hk3.hyhuawei.com",
       "server_port": 443,
-      "password": "20f87b02-0eaa-11eb-8684-f23c913c8d2b",
+      "password": "d6e1207c-f41a-11ef-9495-f23c91cfbbc9",
       "tls": {
         "enabled": true,
-        "server_name": "d0f180c2-tmm5c0-tphvvu-gacy.nw4.hyhuawei.com",
+        "server_name": "05a33aa3-tmm5c0-tzzpok-1sllg.hk3.hyhuawei.com",
         "insecure": true
       }
     },
@@ -44,7 +40,7 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - jack",
         "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
         "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - jack"
       ]
@@ -53,7 +49,7 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - jack",
         "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
         "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - jack"
       ],

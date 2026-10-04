@@ -4,28 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇧🇷 巴西 (Brazil) 01 - jack",
-      "server": "34.151.245.65",
-      "server_port": 443,
-      "uuid": "e9c2ed7f-79ab-40a8-8910-24468f5da712",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "0WXz3PJQnr-KprrwiO5BlKVRdqA4ZS6U5jGHc_aeJnw",
-          "short_id": "4b414f69a06e1e81"
-        }
-      }
-    },
-    {
       "type": "vmess",
-      "tag": "🇧🇷 巴西 (Brazil) 02 - jack",
+      "tag": "🇧🇷 巴西 (Brazil) 01 - jack",
       "server": "89.39.161.157",
       "server_port": 443,
       "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
@@ -48,16 +28,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇷 巴西 (Brazil) 01 - jack",
-        "🇧🇷 巴西 (Brazil) 02 - jack"
+        "🇧🇷 巴西 (Brazil) 01 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇷 巴西 (Brazil) 01 - jack",
-        "🇧🇷 巴西 (Brazil) 02 - jack"
+        "🇧🇷 巴西 (Brazil) 01 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -4,73 +4,15 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇦🇪 阿联酋 (UAE) 01 - jack",
-      "server": "23.227.39.30",
-      "server_port": 8880,
-      "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "vms.lifetime17.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇦🇪 阿联酋 (UAE) 02 - jack",
-      "server": "novantunnel.tech",
-      "server_port": 443,
-      "uuid": "ee556a4f-d9f6-44de-af02-42c51659416a",
-      "tls": {
-        "enabled": true,
-        "server_name": "novantunnel.tech",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/Novan-AE9",
-        "headers": {
-          "Host": "novantunnel.tech"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇦🇪 阿联酋 (UAE) 03 - jack",
-      "server": "31.59.150.11",
-      "server_port": 443,
-      "uuid": "cc4d63e2-3a86-49b3-9598-328bbe93e56c",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "google.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "yI6maXxTQ8zRHg39X8YMQtKW-IVfNIn0_OCUIQKmcXw",
-          "short_id": ""
-        }
-      }
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇦🇪 阿联酋 (UAE) 04 - jack",
-      "server": "130.49.161.70",
+      "tag": "🇦🇪 阿联酋 (UAE) 01 - jack",
+      "server": "hy2.aspidnet.xyz",
       "server_port": 443,
       "password": "p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR",
       "tls": {
         "enabled": true,
         "server_name": "hy2.aspidnet.xyz",
-        "insecure": true
+        "insecure": false
       },
       "obfs": {
         "type": "salamander",
@@ -79,19 +21,19 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇦🇪 阿联酋 (UAE) 05 - jack",
-      "server": "144.31.49.47",
+      "tag": "🇦🇪 阿联酋 (UAE) 02 - jack",
+      "server": "admin.wwwinternetvideo.click",
       "server_port": 443,
       "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
       "tls": {
         "enabled": true,
         "server_name": "admin.wwwinternetvideo.click",
-        "insecure": true
+        "insecure": false
       }
     },
     {
       "type": "vless",
-      "tag": "🇦🇪 阿联酋 (UAE) 06 - jack",
+      "tag": "🇦🇪 阿联酋 (UAE) 03 - jack",
       "server": "84.235.244.108",
       "server_port": 22573,
       "uuid": "39947382-3212-41c9-bc3a-589574ac8b23",
@@ -105,7 +47,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇦🇪 阿联酋 (UAE) 07 - jack",
+      "tag": "🇦🇪 阿联酋 (UAE) 04 - jack",
       "server": "146.70.102.82",
       "server_port": 443,
       "uuid": "31fd2fde-ca69-450e-8c03-eaad819b06b9",
@@ -125,6 +67,30 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇦🇪 阿联酋 (UAE) 05 - jack",
+      "server": "122.8.45.4",
+      "server_port": 8443,
+      "uuid": "2d24e797-ec6c-0808-dd31-9cd22b5dfdc7",
+      "tls": {
+        "enabled": true,
+        "server_name": "download.nvidia.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "WtLZK1KyhSpI3K-R4M3sLAHWPOgGPMgkL6RneL0OfCY",
+          "short_id": ""
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "TunService"
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -133,9 +99,7 @@
         "🇦🇪 阿联酋 (UAE) 02 - jack",
         "🇦🇪 阿联酋 (UAE) 03 - jack",
         "🇦🇪 阿联酋 (UAE) 04 - jack",
-        "🇦🇪 阿联酋 (UAE) 05 - jack",
-        "🇦🇪 阿联酋 (UAE) 06 - jack",
-        "🇦🇪 阿联酋 (UAE) 07 - jack"
+        "🇦🇪 阿联酋 (UAE) 05 - jack"
       ]
     },
     {
@@ -146,9 +110,7 @@
         "🇦🇪 阿联酋 (UAE) 02 - jack",
         "🇦🇪 阿联酋 (UAE) 03 - jack",
         "🇦🇪 阿联酋 (UAE) 04 - jack",
-        "🇦🇪 阿联酋 (UAE) 05 - jack",
-        "🇦🇪 阿联酋 (UAE) 06 - jack",
-        "🇦🇪 阿联酋 (UAE) 07 - jack"
+        "🇦🇪 阿联酋 (UAE) 05 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
