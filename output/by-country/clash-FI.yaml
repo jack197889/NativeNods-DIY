@@ -5,6 +5,23 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - jack
+  server: 65.109.208.97
+  port: 47851
+  udp: true
+  type: vless
+  uuid: 1240607b-86ed-4ef1-9123-8061144cbdbf
+  network: h2
+  h2-opts:
+    host: []
+    path: /
+- name: 🇫🇮 芬兰 (Finland) 02 - jack
+  server: foodal.color-shop.ir
+  port: 5566
+  udp: true
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: olF2/aNyAxEBf0CHoFlkGlAXUdw+ap1CzFd3AL4WuuM=:d8C1FciKoaFD6xRFbCYyFYlT44MV3zYlXvD6DfhsSqo=
+- name: 🇫🇮 芬兰 (Finland) 03 - jack
   server: 95.216.27.15
   port: 2053
   udp: true
@@ -16,7 +33,20 @@ proxies:
     short-id: d368b94e275ab080
   servername: www.google.com
   client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 02 - jack
+- name: 🇫🇮 芬兰 (Finland) 04 - jack
+  server: 65.108.3.59
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
+    short-id: 90ec9bba2019
+  servername: web.eitaa.com
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 05 - jack
   server: 151.241.137.132
   port: 443
   udp: true
@@ -28,21 +58,20 @@ proxies:
     public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
   servername: finland.ali-bard.online
   client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 03 - jack
-  server: fast.jkerm.com
+- name: 🇫🇮 芬兰 (Finland) 06 - jack
+  server: 2.27.207.30
   port: 443
   udp: true
   type: vless
-  uuid: 1fcb913a-8739-4f96-ae07-b9baf68faf37
+  uuid: a5dd2dd9-0995-449e-be67-4a409890dc42
+  flow: xtls-rprx-vision
   tls: true
-  servername: ssl.fastly.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: looazjboijji.global.ssl.fastly.net.
-- name: 🇫🇮 芬兰 (Finland) 04 - jack
+  reality-opts:
+    public-key: nG28Y1q-Ul2oBH-FegAkzGtvY6IRCIwras1k8CLwdGo
+    short-id: da4d87fa
+  servername: jdbdb.huinaduok.fans
+  client-fingerprint: random
+- name: 🇫🇮 芬兰 (Finland) 07 - jack
   server: 144.31.27.215
   port: 43000
   udp: true
@@ -55,32 +84,6 @@ proxies:
     short-id: 568d87a47271344e
   servername: 144.31.27.215
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 05 - jack
-  server: fi1.rovilo.ir
-  port: 443
-  udp: true
-  type: vless
-  uuid: 452f869f-7720-47c3-a175-b6673e31d3e8
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: i_cD6qpNHvE-j2vFGxEBmXNvX5U8PE4-lBkxcti8Ry8
-    short-id: 714369014b7679bf
-  servername: store.steampowered.com
-  client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 06 - jack
-  server: 65.108.3.59
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
-    short-id: 90ec9bba2019
-  servername: web.eitaa.com
-  client-fingerprint: ''
 proxy-groups:
 - name: PROXIES
   type: select
@@ -92,6 +95,7 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 04 - jack
   - 🇫🇮 芬兰 (Finland) 05 - jack
   - 🇫🇮 芬兰 (Finland) 06 - jack
+  - 🇫🇮 芬兰 (Finland) 07 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -103,5 +107,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 04 - jack
   - 🇫🇮 芬兰 (Finland) 05 - jack
   - 🇫🇮 芬兰 (Finland) 06 - jack
+  - 🇫🇮 芬兰 (Finland) 07 - jack
 rules:
 - MATCH,PROXIES

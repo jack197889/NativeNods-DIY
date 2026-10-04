@@ -7,25 +7,25 @@
       "type": "shadowsocks",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 01 - jack",
       "server": "213.183.63.60",
-      "server_port": 9066,
+      "server_port": 9085,
       "method": "aes-256-cfb",
-      "password": "2KUaE2a8NWTvuCZ3"
+      "password": "9ej82EKe2gq7gLAM"
     },
     {
       "type": "shadowsocks",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 02 - jack",
       "server": "213.183.63.60",
-      "server_port": 9064,
+      "server_port": 9049,
       "method": "aes-256-cfb",
-      "password": "cp8pRSUAyLhTfVWH"
+      "password": "PRBf4BS2HvJqtWxY"
     },
     {
       "type": "shadowsocks",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 03 - jack",
       "server": "213.183.63.60",
-      "server_port": 9049,
+      "server_port": 9064,
       "method": "aes-256-cfb",
-      "password": "PRBf4BS2HvJqtWxY"
+      "password": "cp8pRSUAyLhTfVWH"
     },
     {
       "type": "shadowsocks",
@@ -39,17 +39,17 @@
       "type": "shadowsocks",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 05 - jack",
       "server": "213.183.63.60",
-      "server_port": 9061,
+      "server_port": 9066,
       "method": "aes-256-cfb",
-      "password": "4R3hUfZ2FHhDmNcP"
+      "password": "2KUaE2a8NWTvuCZ3"
     },
     {
       "type": "shadowsocks",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 06 - jack",
       "server": "213.183.63.60",
-      "server_port": 9098,
+      "server_port": 9061,
       "method": "aes-256-cfb",
-      "password": "aLpQtfEZe445QyHk"
+      "password": "4R3hUfZ2FHhDmNcP"
     },
     {
       "type": "shadowsocks",
@@ -60,8 +60,16 @@
       "password": "VcFuyXvND2yQWSFY"
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 08 - jack",
+      "server": "213.183.63.60",
+      "server_port": 9098,
+      "method": "aes-256-cfb",
+      "password": "aLpQtfEZe445QyHk"
+    },
+    {
+      "type": "vless",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 09 - jack",
       "server": "193.148.59.178",
       "server_port": 443,
       "uuid": "20d7c485-5d24-49b5-a5cc-bb7a7daf9908",
@@ -71,7 +79,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -79,14 +87,6 @@
           "short_id": "e3daad69"
         }
       }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇧🇬 保加利亚 (Bulgaria) 09 - jack",
-      "server": "213.183.63.60",
-      "server_port": 9085,
-      "method": "aes-256-cfb",
-      "password": "9ej82EKe2gq7gLAM"
     },
     {
       "type": "vless",

@@ -4,24 +4,45 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🇦🇪 阿联酋 (UAE) 01 - jack",
-      "server": "130.49.161.70",
-      "server_port": 443,
-      "password": "p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR",
-      "tls": {
-        "enabled": true,
-        "server_name": "hy2.aspidnet.xyz",
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "rG07s3COMIEvdnQipRyWzx_H_2xygNC3"
+      "server": "23.227.39.30",
+      "server_port": 8880,
+      "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "vms.lifetime17.workers.dev"
+        }
       }
     },
     {
       "type": "vless",
       "tag": "🇦🇪 阿联酋 (UAE) 02 - jack",
+      "server": "novantunnel.tech",
+      "server_port": 443,
+      "uuid": "ee556a4f-d9f6-44de-af02-42c51659416a",
+      "tls": {
+        "enabled": true,
+        "server_name": "novantunnel.tech",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/Novan-AE9",
+        "headers": {
+          "Host": "novantunnel.tech"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇪 阿联酋 (UAE) 03 - jack",
       "server": "31.59.150.11",
       "server_port": 443,
       "uuid": "cc4d63e2-3a86-49b3-9598-328bbe93e56c",
@@ -41,36 +62,19 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇦🇪 阿联酋 (UAE) 03 - jack",
-      "server": "78.40.195.140",
-      "server_port": 443,
-      "uuid": "eec2f6a7-c10f-43b0-b133-61f9bf9bbc27",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.booking.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Rp0WaupRP9LtJ-dd4vjKwuvSzqo_ZqIZPZWDEbSoIAo",
-          "short_id": "98096455d963bdbb"
-        }
-      }
-    },
-    {
       "type": "hysteria2",
       "tag": "🇦🇪 阿联酋 (UAE) 04 - jack",
-      "server": "streambox.wwwinternetvideo.click",
+      "server": "130.49.161.70",
       "server_port": 443,
-      "password": "865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01",
+      "password": "p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR",
       "tls": {
         "enabled": true,
-        "server_name": "streambox.wwwinternetvideo.click",
+        "server_name": "hy2.aspidnet.xyz",
         "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "rG07s3COMIEvdnQipRyWzx_H_2xygNC3"
       }
     },
     {
@@ -88,7 +92,7 @@
     {
       "type": "vless",
       "tag": "🇦🇪 阿联酋 (UAE) 06 - jack",
-      "server": "uae.unixzone.us",
+      "server": "84.235.244.108",
       "server_port": 22573,
       "uuid": "39947382-3212-41c9-bc3a-589574ac8b23",
       "transport": {

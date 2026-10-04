@@ -5,17 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇱🇰 斯里兰卡 (Sri Lanka) 01 - jack
-  server: cdn.zoom.us
-  port: 80
-  udp: true
-  type: vless
-  uuid: 1eaed465-d720-400b-9f9f-439600a2d093
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: cloud.ghostdev.lk
-- name: 🇱🇰 斯里兰卡 (Sri Lanka) 02 - jack
   server: free.sahanwickramasinghe.me
   port: 80
   udp: true
@@ -26,7 +15,7 @@ proxies:
     path: /
     headers:
       Host: free.sahanwickramasinghe.me
-- name: 🇱🇰 斯里兰卡 (Sri Lanka) 03 - jack
+- name: 🇱🇰 斯里兰卡 (Sri Lanka) 02 - jack
   server: free.sahanwickramasinghe.me
   port: 8443
   udp: true
@@ -46,7 +35,6 @@ proxy-groups:
   - AUTO
   - 🇱🇰 斯里兰卡 (Sri Lanka) 01 - jack
   - 🇱🇰 斯里兰卡 (Sri Lanka) 02 - jack
-  - 🇱🇰 斯里兰卡 (Sri Lanka) 03 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -54,6 +42,5 @@ proxy-groups:
   proxies:
   - 🇱🇰 斯里兰卡 (Sri Lanka) 01 - jack
   - 🇱🇰 斯里兰卡 (Sri Lanka) 02 - jack
-  - 🇱🇰 斯里兰卡 (Sri Lanka) 03 - jack
 rules:
 - MATCH,PROXIES

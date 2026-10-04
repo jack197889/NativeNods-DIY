@@ -4,15 +4,23 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - jack
-  server: zfd-hkv2.kunlun01dns.com
-  port: 16115
+- name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - jack
+  server: 8a85c177-tmm5c0-tvgkxc-hrtf.hk3.hyhuawei.com
+  port: 443
   udp: true
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
+  type: hysteria2
+  password: 0da8651e-e1f6-11ec-bd7c-f23c913c8d2b
+  sni: 8a85c177-tmm5c0-tvgkxc-hrtf.hk3.hyhuawei.com
+  skip-cert-verify: true
 - name: 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack
+  server: d0f180c2-tmm5c0-tphvvu-gacy.nw4.hyhuawei.com
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 20f87b02-0eaa-11eb-8684-f23c913c8d2b
+  sni: d0f180c2-tmm5c0-tphvvu-gacy.nw4.hyhuawei.com
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - jack
   server: ac7548f3ebe045b39a90288ff1e97528.pnuqcnp.cn
   port: 443
   udp: true
@@ -25,14 +33,16 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - jack
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - jack
   - 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack
+  - 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - jack
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - jack
   - 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack
+  - 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - jack
 rules:
 - MATCH,PROXIES

@@ -6,21 +6,49 @@
     {
       "type": "vless",
       "tag": "🇨🇿 捷克 (Czech) 01 - jack",
-      "server": "85.117.235.50",
+      "server": "104.18.12.149",
       "server_port": 443,
-      "uuid": "f4d71fd6-1c25-4748-836b-1dbda9268039",
-      "flow": "xtls-rprx-vision",
+      "uuid": "36a857e4-f3d4-43aa-8b90-d7da849da989",
       "tls": {
         "enabled": true,
-        "server_name": "cz1.animeteka.info",
+        "server_name": "002.Inc-ElectROcElL-001-002.WoRKERS.DEV",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": ""
-        },
-        "reality": {
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoib0RnakxTZUZvOSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
+        "headers": {
+          "Host": "002.inc-electrocell-001-002.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 02 - jack",
+      "server": "go.inmobi.com",
+      "server_port": 8443,
+      "uuid": "656bb400-3b7a-47e3-94b0-0362f3865072",
+      "tls": {
+        "enabled": true,
+        "server_name": "socks5.revil-time3.workers.dev",
+        "insecure": false,
+        "utls": {
           "enabled": true,
-          "public_key": "PmdZ2ETkHc0zjYcs22xT_wyZk5fEpX7mg7RP396HBBc",
-          "short_id": "232b1b09e45325a4"
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/socks5://128.140.46.169:13482",
+        "headers": {
+          "Host": "socks5.revil-time3.workers.dev"
         }
       }
     },
@@ -29,14 +57,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇿 捷克 (Czech) 01 - jack"
+        "🇨🇿 捷克 (Czech) 01 - jack",
+        "🇨🇿 捷克 (Czech) 02 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇿 捷克 (Czech) 01 - jack"
+        "🇨🇿 捷克 (Czech) 01 - jack",
+        "🇨🇿 捷克 (Czech) 02 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

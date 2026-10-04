@@ -5,6 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - jack
+  server: 188.114.97.6
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 6cc29a05-4828-4e48-a34a-20b7ada60e85
+  network: ws
+  ws-opts:
+    path: /OAZko425kNFF0PpQ
+    headers:
+      Host: testmikonim.hydrymhmdamyn7.workers.dev
+- name: 🇷🇺 俄罗斯 (Russia) 02 - jack
+  server: 104.17.147.22
+  port: 80
+  udp: true
+  type: vless
+  uuid: 63f1ef69-92fd-427a-b3e4-98ffddf81ac6
+  network: ws
+  ws-opts:
+    path: /nPKoVRUdyuRZ6jpY/YnBiLnlvdXNlZi5pc2VnYXJvLmNvbSxwcm94eWlwLmNtbGl1c3Nzcy5uZXQsbmltYS5uc2NsLmlyLHR1cmsucmFkaWNhbGl6YXRpb24uaXI=
+    headers:
+      Host: young-rice-749e.heliy78750.workers.dev
+- name: 🇷🇺 俄罗斯 (Russia) 03 - jack
   server: 45.131.212.231
   port: 443
   udp: true
@@ -16,7 +38,7 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: sellflow.org
   client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 02 - jack
+- name: 🇷🇺 俄罗斯 (Russia) 04 - jack
   server: 45.128.78.84
   port: 443
   udp: true
@@ -28,7 +50,14 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: sellflow.org
   client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 03 - jack
+- name: 🇷🇺 俄罗斯 (Russia) 05 - jack
+  server: 130.49.189.158
+  port: 43558
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: mhXYDvaSfHzHZXBswC/zo/o8VqdU3XSBpwWx050Y6MU=
+- name: 🇷🇺 俄罗斯 (Russia) 06 - jack
   server: 194.113.235.66
   port: 443
   udp: true
@@ -41,20 +70,19 @@ proxies:
     short-id: 9e4eced6e98ed4d4
   servername: github.com
   client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 04 - jack
-  server: 201.51.11.117
+- name: 🇷🇺 俄罗斯 (Russia) 07 - jack
+  server: 31.76.34.216
   port: 443
   udp: true
   type: vless
-  uuid: 5d0e5029-061f-4d75-ac97-718dbf827957
+  uuid: 94def50e-5f3c-4e4c-9719-3325f42d2131
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 9eiEOSjRUJfWtjR5_h6qYOIIC7oihvCNtyFFvtu7MEM
-    short-id: ed07a0272e0123e0
-  servername: www.samsung.com
+    public-key: XrgbY2hKJQG8QOZO2J1pGmZsbvjSsSWoM9iULIMGK00
+  servername: ru-c-1.minzt.su
   client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 05 - jack
+- name: 🇷🇺 俄罗斯 (Russia) 08 - jack
   server: 81.177.215.175
   port: 443
   udp: true
@@ -67,19 +95,7 @@ proxies:
     short-id: 9e4eced6e98ed4d4
   servername: github.com
   client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 06 - jack
-  server: 31.76.34.216
-  port: 443
-  udp: true
-  type: vless
-  uuid: 94def50e-5f3c-4e4c-9719-3325f42d2131
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: XrgbY2hKJQG8QOZO2J1pGmZsbvjSsSWoM9iULIMGK00
-  servername: ru-c-1.minzt.su
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 07 - jack
+- name: 🇷🇺 俄罗斯 (Russia) 09 - jack
   server: 45.12.75.242
   port: 26424
   udp: true
@@ -91,14 +107,6 @@ proxies:
     short-id: 23103e1e
   servername: ya.ru
   client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 08 - jack
-  server: els.mangshe.xyz
-  port: 2060
-  udp: true
-  type: hysteria2
-  password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
-  sni: els.mangshe.xyz
-  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -112,6 +120,7 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 06 - jack
   - 🇷🇺 俄罗斯 (Russia) 07 - jack
   - 🇷🇺 俄罗斯 (Russia) 08 - jack
+  - 🇷🇺 俄罗斯 (Russia) 09 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -125,5 +134,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 06 - jack
   - 🇷🇺 俄罗斯 (Russia) 07 - jack
   - 🇷🇺 俄罗斯 (Russia) 08 - jack
+  - 🇷🇺 俄罗斯 (Russia) 09 - jack
 rules:
 - MATCH,PROXIES
