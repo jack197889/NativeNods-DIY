@@ -26,17 +26,24 @@
     {
       "type": "vless",
       "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
-      "server": "argo6.5671234.xyz",
+      "server": "45.192.201.140",
       "server_port": 443,
       "uuid": "08aaab35-a42d-4755-a03e-20c18cb1b3e8",
       "tls": {
         "enabled": true,
         "server_name": "argo6.5671234.xyz",
-        "insecure": false
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
-        "path": "/e8e2cecb6188f7fb"
+        "path": "/e8e2cecb6188f7fb",
+        "headers": {
+          "Host": "argo6.5671234.xyz"
+        }
       }
     },
     {

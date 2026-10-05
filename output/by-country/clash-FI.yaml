@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - jack
+  server: 185.103.110.68
+  port: 18283
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: f9300a9bf39ae0347c3a3bfbc4dd7754
+- name: 🇫🇮 芬兰 (Finland) 02 - jack
   server: 95.216.27.15
   port: 2053
   udp: true
@@ -16,7 +23,7 @@ proxies:
     short-id: d368b94e275ab080
   servername: www.google.com
   client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 02 - jack
+- name: 🇫🇮 芬兰 (Finland) 03 - jack
   server: 65.108.3.59
   port: 443
   udp: true
@@ -28,8 +35,28 @@ proxies:
     public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
     short-id: 90ec9bba2019
   servername: web.eitaa.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 03 - jack
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 04 - jack
+  server: 144.31.212.253
+  port: 443
+  udp: true
+  type: hysteria2
+  password: cf83b611-6cba-4535-adcb-8da06c6a9146
+  sni: vps155-edge.kermemehori.ru
+  skip-cert-verify: false
+- name: 🇫🇮 芬兰 (Finland) 05 - jack
+  server: 151.241.137.132
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5786d86f-7731-4174-b1a3-84297e54b015
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: finland.ali-bard.online
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 06 - jack
   server: 144.31.27.215
   port: 43000
   udp: true
@@ -42,26 +69,7 @@ proxies:
     short-id: 568d87a47271344e
   servername: 144.31.27.215
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 04 - jack
-  server: 151.241.137.132
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5786d86f-7731-4174-b1a3-84297e54b015
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
-  servername: finland.ali-bard.online
-  client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 05 - jack
-  server: 185.103.110.68
-  port: 18283
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: f9300a9bf39ae0347c3a3bfbc4dd7754
-- name: 🇫🇮 芬兰 (Finland) 06 - jack
+- name: 🇫🇮 芬兰 (Finland) 07 - jack
   server: 131.123.13.93
   port: 443
   udp: true
@@ -73,7 +81,7 @@ proxies:
     public-key: rj3rvl7AGOd0NOPrX6h2c1auXGnCBJTPMDeT86AMvBA
     short-id: 29455a3a790acbd0
   servername: 1mcfn.67resserv67.info
-  client-fingerprint: chrome
+  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
@@ -85,6 +93,7 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 04 - jack
   - 🇫🇮 芬兰 (Finland) 05 - jack
   - 🇫🇮 芬兰 (Finland) 06 - jack
+  - 🇫🇮 芬兰 (Finland) 07 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -96,5 +105,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 04 - jack
   - 🇫🇮 芬兰 (Finland) 05 - jack
   - 🇫🇮 芬兰 (Finland) 06 - jack
+  - 🇫🇮 芬兰 (Finland) 07 - jack
 rules:
 - MATCH,PROXIES

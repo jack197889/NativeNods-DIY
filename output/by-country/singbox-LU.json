@@ -24,27 +24,23 @@
       }
     },
     {
-      "type": "vless",
+      "type": "trojan",
       "tag": "🇱🇺 卢森堡 (Luxembourg) 02 - jack",
-      "server": "lbeiggdz.smart-cats.ru",
+      "server": "mfyousheng.nl.eu.org",
       "server_port": 443,
-      "uuid": "8325bd97-b77c-4917-acaa-2446e9e8cc03",
+      "password": "Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q",
       "tls": {
         "enabled": true,
-        "server_name": "vk.com",
+        "server_name": "mfyousheng.nl.eu.org",
+        "insecure": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY",
-          "short_id": "79651ae525860543"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "haknewhpjmv"
+        "type": "ws",
+        "path": "/tjwsLhx0SFASG4l9FERJ1g"
       }
     },
     {

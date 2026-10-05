@@ -4,28 +4,62 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - jack",
-      "server": "dog-hk.kunlun01dns.com",
-      "server_port": 21020,
-      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
-      "security": "auto"
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
-      "server": "05a33aa3-tmm5c0-tzzpok-1sllg.hk3.hyhuawei.com",
+      "tag": "🇺🇸 美国 (United States) 01 (家宽) - jack",
+      "server": "155.117.19.17",
       "server_port": 443,
-      "password": "d6e1207c-f41a-11ef-9495-f23c91cfbbc9",
+      "password": "5fa748137b6d822308eea4611f474ad5",
       "tls": {
         "enabled": true,
-        "server_name": "05a33aa3-tmm5c0-tzzpok-1sllg.hk3.hyhuawei.com",
+        "server_name": "www.bing.com",
         "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "a39ca173b57ac7021b08bf3e3de9f1f6"
       }
     },
     {
       "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
+      "tag": "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack",
+      "server": "212.74.39.235",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 03 (家宽) - jack",
+      "server": "210.152.85.154",
+      "server_port": 19364,
+      "uuid": "59b6ac03-2f22-490e-9f97-a6b942b49f60",
+      "tls": {
+        "enabled": true,
+        "server_name": "wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 04 (移动家宽) - jack",
+      "server": "dog-hk.kunlun01dns.com",
+      "server_port": 21022,
+      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
       "server": "hinet1.2yly.com",
       "server_port": 24215,
       "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
@@ -45,39 +79,42 @@
     },
     {
       "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
-      "server": "argo6.5671234.xyz",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack",
+      "server": "45.192.201.140",
       "server_port": 443,
       "uuid": "08aaab35-a42d-4755-a03e-20c18cb1b3e8",
       "tls": {
         "enabled": true,
         "server_name": "argo6.5671234.xyz",
-        "insecure": false
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
-        "path": "/e8e2cecb6188f7fb"
+        "path": "/e8e2cecb6188f7fb",
+        "headers": {
+          "Host": "argo6.5671234.xyz"
+        }
       }
     },
     {
       "type": "hysteria2",
-      "tag": "🇹🇷 土耳其 (Turkey) 05 (移动家宽) - jack",
-      "server": "me17.msjia8844.site",
-      "server_port": 7443,
-      "password": "M8LP9DztTr3znqCkmf-r08CQLBLLFK1r",
+      "tag": "🇸🇬 新加坡 (Singapore) 07 (家宽) - jack",
+      "server": "s3.huhiuh.space",
+      "server_port": 18642,
+      "password": "user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2",
       "tls": {
         "enabled": true,
-        "server_name": "me17.msjia8844.site",
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "u3Soh9_Ui0UmcuY6vk0ug8Lq"
+        "server_name": "www.bing.com",
+        "insecure": true
       }
     },
     {
       "type": "anytls",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 06 (家宽) - jack",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 08 (家宽) - jack",
       "server": "ac7548f3ebe045b39a90288ff1e97528.pnuqcnp.cn",
       "server_port": 443,
       "password": "9sK2mP8xQ7vL3nZ6",
@@ -89,7 +126,7 @@
     },
     {
       "type": "anytls",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 09 (家宽) - jack",
       "server": "ac7548f3ebe045b39a90288ff1e97526.pnuqcnp.cn",
       "server_port": 443,
       "password": "9sK2mP8xQ7vL3nZ6",
@@ -100,44 +137,34 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇸🇬 新加坡 (Singapore) 08 (家宽) - jack",
-      "server": "s3.huhiuh.space",
-      "server_port": 18642,
-      "password": "user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
-        "🇹🇷 土耳其 (Turkey) 05 (移动家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 06 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack",
-        "🇸🇬 新加坡 (Singapore) 08 (家宽) - jack"
+        "🇺🇸 美国 (United States) 01 (家宽) - jack",
+        "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack",
+        "🇯🇵 日本 (Japan) 03 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 04 (移动家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack",
+        "🇸🇬 新加坡 (Singapore) 07 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 08 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 09 (家宽) - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
-        "🇹🇷 土耳其 (Turkey) 05 (移动家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 06 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack",
-        "🇸🇬 新加坡 (Singapore) 08 (家宽) - jack"
+        "🇺🇸 美国 (United States) 01 (家宽) - jack",
+        "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack",
+        "🇯🇵 日本 (Japan) 03 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 04 (移动家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack",
+        "🇸🇬 新加坡 (Singapore) 07 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 08 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 09 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

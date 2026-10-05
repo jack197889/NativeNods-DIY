@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇱🇰 斯里兰卡 (Sri Lanka) 01 - jack
-  server: support.zoom.us
+  server: 51.75.67.209
   port: 80
   udp: true
   type: vless
@@ -13,24 +13,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-    headers:
-      Host: free.sahanwickramasinghe.me
 - name: 🇱🇰 斯里兰卡 (Sri Lanka) 02 - jack
-  server: 140.245.120.16
-  port: 443
-  udp: true
-  type: vless
-  uuid: 92d67828-4c56-4795-af5a-f387651380dc
-  tls: true
-  servername: trackydev.site
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: trackydev.site
-- name: 🇱🇰 斯里兰卡 (Sri Lanka) 03 - jack
   server: free.sahanwickramasinghe.me
   port: 8443
   udp: true
@@ -50,7 +33,6 @@ proxy-groups:
   - AUTO
   - 🇱🇰 斯里兰卡 (Sri Lanka) 01 - jack
   - 🇱🇰 斯里兰卡 (Sri Lanka) 02 - jack
-  - 🇱🇰 斯里兰卡 (Sri Lanka) 03 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -58,6 +40,5 @@ proxy-groups:
   proxies:
   - 🇱🇰 斯里兰卡 (Sri Lanka) 01 - jack
   - 🇱🇰 斯里兰卡 (Sri Lanka) 02 - jack
-  - 🇱🇰 斯里兰卡 (Sri Lanka) 03 - jack
 rules:
 - MATCH,PROXIES

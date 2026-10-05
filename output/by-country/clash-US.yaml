@@ -5,37 +5,66 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - jack
-  server: 54.226.151.202
+  server: 156.146.38.170
   port: 443
   udp: true
   type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
+  cipher: aes-128-gcm
+  password: shadowsocks
 - name: 🇺🇸 美国 (United States) 02 - jack
-  server: 172.64.32.103
-  port: 2086
+  server: 156.146.38.167
+  port: 443
   udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
 - name: 🇺🇸 美国 (United States) 03 - jack
-  server: 172.64.154.8
-  port: 2082
+  server: 156.146.38.168
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸 美国 (United States) 04 - jack
+  server: 156.146.38.169
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸 美国 (United States) 05 - jack
+  server: 167.88.62.124
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 🇺🇸 美国 (United States) 06 - jack
+  server: 104.17.148.22
+  port: 80
   udp: true
   type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  uuid: 63f1ef69-92fd-427a-b3e4-98ffddf81ac6
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /nPKoVRUdyuRZ6jpY/YnBiLnlvdXNlZi5pc2VnYXJvLmNvbSxwcm94eWlwLmNtbGl1c3Nzcy5uZXQsbmltYS5uc2NsLmlyLHR1cmsucmFkaWNhbGl6YXRpb24uaXI=
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 04 - jack
-  server: 108.162.198.178
-  port: 2082
+      Host: young-rice-749e.heliy78750.workers.dev
+- name: 🇺🇸 美国 (United States) 07 - jack
+  server: 38.107.232.36
+  port: 80
+  udp: true
+  type: vless
+  uuid: 18cf8db1-9f86-43f7-baa0-382efb7f2dfa
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: 3h-unitedstates1.09vpn.com
+- name: 🇺🇸 美国 (United States) 08 - jack
+  server: 104.18.46.46
+  port: 8080
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -44,16 +73,16 @@ proxies:
     path: /
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 05 - jack
-  server: 54.208.227.172
-  port: 443
+- name: 🇺🇸 美国 (United States) 09 - jack
+  server: 5.78.51.123
+  port: 1080
   udp: true
   type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇺🇸 美国 (United States) 06 - jack
-  server: 162.159.45.19
-  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: 8tmnvX5zYuWGVIDP2jglZw
+- name: 🇺🇸 美国 (United States) 10 - jack
+  server: 104.18.39.218
+  port: 80
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -62,8 +91,19 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 07 - jack
-  server: 162.159.48.32
+- name: 🇺🇸 美国 (United States) 11 - jack
+  server: 172.64.229.170
+  port: 80
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 12 - jack
+  server: 162.159.43.187
   port: 2095
   udp: true
   type: vless
@@ -73,18 +113,7 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 08 - jack
-  server: 172.64.52.6
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 09 - jack
+- name: 🇺🇸 美国 (United States) 13 - jack
   server: 172.64.32.103
   port: 80
   udp: true
@@ -95,52 +124,8 @@ proxies:
     path: '/?ed=2560security=tls '
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 10 - jack
-  server: 172.64.229.2
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 11 - jack
-  server: 172.64.158.146
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 12 - jack
-  server: 172.64.229.2
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: '/?ed=2560security=tls '
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 13 - jack
-  server: 172.64.32.108
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 14 - jack
-  server: 104.18.47.113
+  server: 162.159.0.169
   port: 2082
   udp: true
   type: vless
@@ -151,15 +136,19 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 15 - jack
-  server: 34.201.71.226
-  port: 443
+  server: 162.159.0.169
+  port: 80
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 16 - jack
-  server: 104.18.34.14
-  port: 2052
+  server: 162.159.43.187
+  port: 8080
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -169,8 +158,8 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 17 - jack
-  server: 162.159.48.32
-  port: 2052
+  server: 162.159.43.187
+  port: 2086
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -180,8 +169,8 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 18 - jack
-  server: 162.159.0.169
-  port: 2095
+  server: 104.18.34.14
+  port: 2052
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -191,19 +180,19 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 19 - jack
-  server: 104.18.39.218
-  port: 8880
+  server: 104.21.70.21
+  port: 8080
   udp: true
   type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  uuid: 518de0d4-6ce8-4404-80db-23c4a8806128
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /eyJqdW5rIjoiQkFLTnhqM2tZTSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+      Host: ez-5faafb.esmaoi.workers.dev
 - name: 🇺🇸 美国 (United States) 20 - jack
-  server: 162.159.0.169
-  port: 80
+  server: 162.159.24.131
+  port: 2052
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -213,58 +202,29 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 21 - jack
-  server: 162.159.0.53
+  server: 188.114.97.1
   port: 8080
   udp: true
   type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  uuid: 0fbe0c5e-b479-4d91-8b42-f194f781b6bb
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /vl/3geiGLehsIICudSdAJaTjji742k?ed=2560
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+      Host: z0ndd1onnp04unxjemim9lf8.abaravi51.workers.dev
 - name: 🇺🇸 美国 (United States) 22 - jack
-  server: 104.18.46.234
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 23 - jack
-  server: 198.98.53.130
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: eDfN7SODQceIOmIAbtJJtK
-- name: 🇺🇸 美国 (United States) 24 - jack
-  server: 172.64.52.6
+  server: 104.21.70.21
   port: 8080
   udp: true
   type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  uuid: 5934b979-e128-4c90-a600-744b97bffc8c
   network: ws
   ws-opts:
-    path: /
+    path: /vl/Fi3kP8cNjBoo8UPv?ed=2560
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 25 - jack
-  server: 162.159.0.53
-  port: 80
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 26 - jack
-  server: 172.64.229.2
+      Host: 5dktcuajb2a1jxix7csnrmeucg.mahrademami.workers.dev
+- name: 🇺🇸 美国 (United States) 23 - jack
+  server: 162.159.0.169
   port: 2052
   udp: true
   type: vless
@@ -274,9 +234,20 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 27 - jack
-  server: 104.18.34.14
-  port: 80
+- name: 🇺🇸 美国 (United States) 24 - jack
+  server: 104.18.47.113
+  port: 2095
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 25 - jack
+  server: 162.159.0.169
+  port: 2095
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -285,8 +256,38 @@ proxies:
     path: /
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 26 - jack
+  server: 192.0.54.30
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime35.workers.dev
+- name: 🇺🇸 美国 (United States) 27 - jack
+  server: 155.248.209.237
+  port: 33333
+  udp: true
+  type: hysteria2
+  password: bce6c821-200d-421f-bf3d-7159e5246ea0
+  sni: 155.248.209.2
+  skip-cert-verify: true
 - name: 🇺🇸 美国 (United States) 28 - jack
-  server: 162.159.39.218
+  server: 108.162.198.178
+  port: 2082
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 29 - jack
+  server: 162.159.24.131
   port: 80
   udp: true
   type: vless
@@ -296,42 +297,27 @@ proxies:
     path: '/?ed=2560security=tls '
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 29 - jack
-  server: 172.64.52.6
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 30 - jack
-  server: 162.159.24.131
-  port: 80
+  server: 66.23.204.210
+  port: 16995
   udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  type: ss
+  cipher: aes-128-gcm
+  password: 89d3a0375a279f6e743fea76e72952a8
 - name: 🇺🇸 美国 (United States) 31 - jack
-  server: 172.64.158.146
-  port: 80
+  server: 188.114.96.1
+  port: 8080
   udp: true
   type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  uuid: 335035e6-65f1-4a51-a8a7-10fb0a89b8e7
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /eyJqdW5rIjoiR2hXUTBnd2plYlhkIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMjYwMjpmYzU5OmIwOjY0OjpdIl19
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+      Host: shrill-lake-231c.jachhitachi69.workers.dev
 - name: 🇺🇸 美国 (United States) 32 - jack
-  server: 162.159.24.131
-  port: 2052
+  server: 172.64.229.170
+  port: 2082
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -341,8 +327,8 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 33 - jack
-  server: 172.64.158.146
-  port: 2095
+  server: 172.64.154.8
+  port: 2086
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -352,6 +338,28 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 34 - jack
+  server: 172.64.154.8
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 35 - jack
+  server: 172.67.131.114
+  port: 2086
+  udp: true
+  type: vless
+  uuid: 9ef1d60d-9e38-49c5-9405-131e11be1f9c
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiVGtvRGR4TXdHSzdseGpZWCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzI2MDI6ZmM1OTpiMDo2NDo6XSJdfQ==
+    headers:
+      Host: muddy-shadow-8905.qara-atayi-1.workers.dev
+- name: 🇺🇸 美国 (United States) 36 - jack
   server: 104.18.46.234
   port: 2082
   udp: true
@@ -362,41 +370,8 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 35 - jack
-  server: 162.159.38.127
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 36 - jack
-  server: 162.159.45.19
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 37 - jack
-  server: 172.64.53.55
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 38 - jack
-  server: 172.64.154.8
+  server: 162.159.0.169
   port: 8880
   udp: true
   type: vless
@@ -406,41 +381,23 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 38 - jack
+  server: 216.105.168.18
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: hCCWOcIsK5wrFz4OX70rWf
 - name: 🇺🇸 美国 (United States) 39 - jack
-  server: 108.162.198.178
-  port: 2052
+  server: 163.192.14.135
+  port: 50160
   udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  type: hysteria2
+  password: 099830134df5ac3a04a4b21d39b8c395
+  sni: 163.192.14.135
+  skip-cert-verify: true
 - name: 🇺🇸 美国 (United States) 40 - jack
-  server: 104.18.34.14
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 41 - jack
-  server: 172.64.158.146
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 42 - jack
-  server: 172.64.32.108
+  server: 162.159.48.32
   port: 8080
   udp: true
   type: vless
@@ -450,9 +407,9 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 43 - jack
-  server: 104.18.39.218
-  port: 80
+- name: 🇺🇸 美国 (United States) 41 - jack
+  server: 162.159.48.32
+  port: 2086
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -461,9 +418,31 @@ proxies:
     path: /
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 42 - jack
+  server: 188.114.97.1
+  port: 80
+  udp: true
+  type: vless
+  uuid: 0fbe0c5e-b479-4d91-8b42-f194f781b6bb
+  network: ws
+  ws-opts:
+    path: /vl/U9fwQG4SR615k2WR?ed=2560
+    headers:
+      Host: z0ndd1onnp04unxjemim9lf8.abaravi51.workers.dev
+- name: 🇺🇸 美国 (United States) 43 - jack
+  server: 104.18.47.113
+  port: 2086
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 44 - jack
-  server: 162.159.0.53
-  port: 2095
+  server: 104.18.46.46
+  port: 2052
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -473,8 +452,8 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 45 - jack
-  server: 162.159.38.127
-  port: 2082
+  server: 172.64.229.170
+  port: 8080
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -484,7 +463,7 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 46 - jack
-  server: 172.64.42.85
+  server: 172.64.32.103
   port: 8880
   udp: true
   type: vless
@@ -495,8 +474,8 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 47 - jack
-  server: 162.159.39.218
-  port: 2095
+  server: 104.18.47.113
+  port: 2052
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -506,8 +485,8 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 48 - jack
-  server: 162.159.0.53
-  port: 8880
+  server: 172.64.154.8
+  port: 80
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -517,30 +496,27 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 49 - jack
-  server: 162.159.39.218
-  port: 8080
+  server: 167.88.63.59
+  port: 22324
   udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: '/?ed=2560security=tls '
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
 - name: 🇺🇸 美国 (United States) 50 - jack
-  server: 162.159.45.19
-  port: 80
+  server: 172.64.52.6
+  port: 2095
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 51 - jack
-  server: 172.64.229.170
-  port: 8880
+  server: 172.64.154.8
+  port: 8080
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -550,8 +526,48 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 52 - jack
-  server: 172.64.42.85
-  port: 2086
+  server: 162.159.43.187
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 53 - jack
+  server: 172.64.229.170
+  port: 2095
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: '/?ed=2560security=tls '
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 54 - jack
+  server: www.speedtest.net
+  port: 80
+  udp: true
+  type: vless
+  uuid: 63f1ef69-92fd-427a-b3e4-98ffddf81ac6
+  network: ws
+  ws-opts:
+    path: /nPKoVRUdyuRZ6jpY/YnBiLnlvdXNlZi5pc2VnYXJvLmNvbSxwcm94eWlwLmNtbGl1c3Nzcy5uZXQsbmltYS5uc2NsLmlyLHR1cmsucmFkaWNhbGl6YXRpb24uaXI=
+    headers:
+      Host: young-rice-749e.heliy78750.workers.dev
+- name: 🇺🇸 美国 (United States) 55 - jack
+  server: 98.88.75.157
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇺🇸 美国 (United States) 56 - jack
+  server: 172.64.229.170
+  port: 8880
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -560,54 +576,9 @@ proxies:
     path: /
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 53 - jack
-  server: 172.64.154.8
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 54 - jack
-  server: 172.64.53.55
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 55 - jack
-  server: 172.64.229.170
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: ?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 56 - jack
-  server: 47.253.226.114
-  port: 443
-  udp: true
-  type: vless
-  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 - name: 🇺🇸 美国 (United States) 57 - jack
-  server: 172.64.32.108
-  port: 80
+  server: 162.159.0.53
+  port: 2052
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -617,29 +588,25 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 58 - jack
-  server: 172.64.154.8
-  port: 80
+  server: 34.229.138.196
+  port: 443
   udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
 - name: 🇺🇸 美国 (United States) 59 - jack
-  server: 162.159.43.187
+  server: 172.64.158.146
   port: 8080
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 60 - jack
-  server: 172.64.53.55
+  server: 162.159.0.53
   port: 80
   udp: true
   type: vless
@@ -650,54 +617,45 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 61 - jack
-  server: 104.18.46.234
-  port: 8080
+  server: 162.159.24.131
+  port: 8880
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /
+    path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 62 - jack
-  server: 104.18.46.234
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 63 - jack
-  server: 195.123.235.177
+  server: 43.173.90.202
   port: 443
   udp: true
-  type: vless
-  uuid: 729dd5f2-f5ff-4070-8c10-863eceded0b1
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 5B83otQ5ZQwtBFhR7xzsGJRXflkFKRJpQguYbE5JWGI
-    short-id: c85d029f5e8eb393
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 64 - jack
-  server: 104.18.46.46
-  port: 2052
+  type: trojan
+  password: sg-trojan-2026
+  sni: sg-proxy.local
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 63 - jack
+  server: 108.181.118.10
+  port: 8388
   udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: G5p6ww4o67HB
+- name: 🇺🇸 美国 (United States) 64 - jack
+  server: 172.67.150.22
+  port: 443
+  udp: true
+  type: trojan
+  password: LcICDcp!jD9TFV$NbH
+  sni: dl2uF-iVdeZILZ3E86rK18.Hhvt37tjm2XBOsQL5HXogN-Y.woRKERS.dEv
+  skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    path: /tr/pg4wM48V9O859nmqsJg22EOFKN4S570y?ed=2560
 - name: 🇺🇸 美国 (United States) 65 - jack
-  server: 162.159.38.127
-  port: 2095
+  server: 104.18.46.46
+  port: 80
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -707,8 +665,8 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 66 - jack
-  server: 162.159.38.127
-  port: 80
+  server: 172.64.52.6
+  port: 8080
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -718,1324 +676,21 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 67 - jack
-  server: 172.64.53.55
-  port: 2052
+  server: 188.114.96.3
+  port: 2087
   udp: true
   type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  uuid: 756e8f39-04e8-436d-b5c6-905d37d9562c
+  tls: true
+  servername: ez-98919a.motoricb.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /eyJqdW5rIjoiR1BxUFhYR0w1TlBLMTRsIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+      Host: ez-98919a.motoricb.workers.dev
 - name: 🇺🇸 美国 (United States) 68 - jack
-  server: 159.89.87.21
-  port: 28190
-  udp: true
-  type: vless
-  uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
-  servername: aws.amazon.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 69 - jack
-  server: 167.88.63.59
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇺🇸 美国 (United States) 70 - jack
-  server: 162.159.0.169
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 71 - jack
-  server: 172.111.38.100
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇺🇸 美国 (United States) 72 - jack
-  server: 162.159.48.32
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 73 - jack
-  server: 104.18.46.46
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 74 - jack
-  server: 104.18.34.14
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 75 - jack
-  server: 172.64.229.170
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 76 - jack
-  server: 162.159.45.19
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 77 - jack
-  server: 172.64.229.2
-  port: 80
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 78 - jack
-  server: ww9.levikogjgfdd.ir
-  port: 36925
-  udp: true
-  type: vless
-  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 79 - jack
-  server: 66.23.202.50
-  port: 13623
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: 50ce2ac177d8d8cdad6b4a68739e2ea0
-- name: 🇺🇸 美国 (United States) 80 - jack
-  server: 104.18.46.46
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 81 - jack
-  server: 104.18.46.46
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 82 - jack
-  server: 162.159.24.131
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 83 - jack
-  server: 104.18.46.46
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 84 - jack
-  server: 104.18.47.113
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 85 - jack
-  server: 162.159.48.32
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 86 - jack
-  server: 66.23.206.122
-  port: 16617
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: 2607008ac896b3443be9419d73d544d9
-- name: 🇺🇸 美国 (United States) 87 - jack
-  server: 162.159.38.127
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 88 - jack
-  server: 172.64.158.146
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: '/?ed=2560security=tls '
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 89 - jack
-  server: 172.64.42.85
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 90 - jack
-  server: 37.19.198.244
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 91 - jack
-  server: 172.64.32.103
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 92 - jack
-  server: 104.18.34.14
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 93 - jack
-  server: 104.18.47.113
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 94 - jack
-  server: 104.18.34.14
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 95 - jack
-  server: 104.18.39.218
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 96 - jack
-  server: 162.159.39.218
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 97 - jack
-  server: 188.114.97.6
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 98 - jack
-  server: 188.114.97.6
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 99 - jack
-  server: 162.159.39.218
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 100 - jack
-  server: 172.64.52.6
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 101 - jack
-  server: 37.19.198.243
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 102 - jack
-  server: 188.114.97.6
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 103 - jack
-  server: 169.40.42.168
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: ios
-- name: 🇺🇸 美国 (United States) 104 - jack
-  server: 169.40.42.202
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: ios
-- name: 🇺🇸 美国 (United States) 105 - jack
-  server: 104.18.47.113
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 106 - jack
-  server: 172.64.229.170
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 107 - jack
-  server: 34.229.138.196
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇺🇸 美国 (United States) 108 - jack
-  server: 162.159.24.131
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 109 - jack
-  server: 64.74.163.69
-  port: 18766
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: 4efe1af272e7292139b889f6a63ee071
-- name: 🇺🇸 美国 (United States) 110 - jack
-  server: 37.19.198.236
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 111 - jack
-  server: 66.23.204.210
-  port: 16995
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: 89d3a0375a279f6e743fea76e72952a8
-- name: 🇺🇸 美国 (United States) 112 - jack
-  server: 104.18.39.218
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 113 - jack
-  server: 162.159.0.169
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 114 - jack
-  server: 162.159.48.32
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 115 - jack
-  server: 162.159.0.169
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 116 - jack
-  server: 156.146.38.167
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 117 - jack
-  server: 104.18.47.113
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 118 - jack
-  server: 104.18.46.46
-  port: 80
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 119 - jack
-  server: 162.159.0.169
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: '/?ed=2560security=tls '
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 120 - jack
-  server: 104.18.46.46
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 121 - jack
-  server: 172.64.229.2
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 122 - jack
-  server: 162.159.39.218
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 123 - jack
-  server: 108.181.57.93
-  port: 8388
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: RSo52SbxW40r
-- name: 🇺🇸 美国 (United States) 124 - jack
-  server: 216.106.183.35
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: aksai.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /linkvws
-    headers:
-      Host: aksai.org
-- name: 🇺🇸 美国 (United States) 125 - jack
-  server: 37.19.198.160
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 126 - jack
-  server: 169.40.42.232
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 127 - jack
-  server: 172.64.229.170
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 128 - jack
-  server: 67.220.73.204
-  port: 16016
-  udp: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 129 - jack
-  server: 172.64.229.170
-  port: 80
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 130 - jack
-  server: 67.220.85.46
-  port: 18000
-  udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-- name: 🇺🇸 美国 (United States) 131 - jack
-  server: 156.146.38.168
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 132 - jack
-  server: 108.162.198.178
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 133 - jack
-  server: 138.199.42.68
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇺🇸 美国 (United States) 134 - jack
-  server: 172.64.32.108
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 135 - jack
-  server: 172.64.42.85
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 136 - jack
-  server: 104.18.39.218
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 137 - jack
-  server: 38.110.1.246
-  port: 18000
-  udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-- name: 🇺🇸 美国 (United States) 138 - jack
-  server: 172.64.32.103
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 139 - jack
-  server: 162.159.45.19
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 140 - jack
-  server: 15.204.246.132
-  port: 7307
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-- name: 🇺🇸 美国 (United States) 141 - jack
-  server: 172.64.229.2
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 142 - jack
-  server: 147.182.212.232
-  port: 56565
-  udp: true
-  type: vless
-  uuid: 7b188eea-b08f-42c2-bac7-d3b0e74218b8
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Td03Ae-cuYLq4xg7MSps58c_yRUcbbwtZLXm0ywabjY
-  servername: www.paypal.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 143 - jack
-  server: 108.162.198.178
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 144 - jack
-  server: 169.40.42.235
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: ios
-- name: 🇺🇸 美国 (United States) 145 - jack
-  server: 162.159.24.131
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 146 - jack
-  server: 169.40.42.74
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: ios
-- name: 🇺🇸 美国 (United States) 147 - jack
-  server: 69.48.201.136
-  port: 30016
-  udp: true
-  type: vless
-  uuid: 03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a
-  network: ws
-  ws-opts:
-    path: /usserver
-    headers:
-      Host: uspanel.unixzone.us
-- name: 🇺🇸 美国 (United States) 148 - jack
-  server: 172.64.42.85
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 149 - jack
-  server: 5.34.178.120
-  port: 443
-  udp: true
-  type: vless
-  uuid: 9063f9fb-e88a-4ee0-b4a4-a92ca7316a9f
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: EVhq2BxKuw2Cody1DmF_HPvUYKwzdXbHP47blUv-eRM
-    short-id: 55ab5559e3a6d10a
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 150 - jack
-  server: 169.40.42.52
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: ios
-- name: 🇺🇸 美国 (United States) 151 - jack
-  server: 156.146.38.170
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 152 - jack
-  server: 140.82.63.79
-  port: 8388
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: ZoZtfPOyVvmKARUN
-- name: 🇺🇸 美国 (United States) 153 - jack
-  server: us-2.srv.dvzh.net
-  port: 443
-  udp: true
-  type: vless
-  uuid: 91344c03-b37f-42c5-90f1-cbb95c5cf256
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 9GEc6lOjnGQyyE1951OZSBMWt4uCXsOjKyj9fysxHH0
-    short-id: d30f9d846a7c8cba
-  servername: us-2.srv.dvzh.net
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 154 - jack
-  server: 172.64.32.108
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 155 - jack
-  server: 2.24.124.64
-  port: 443
-  udp: true
-  type: vless
-  uuid: 719b9354-45e2-4718-8709-d965b64554db
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zpXR6Y36C8qUCIVk2p_j8C9KGeBk5xisLw66j3WFOls
-    short-id: 9f1fc5a631ef3126
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇺🇸 美国 (United States) 156 - jack
-  server: 98.88.75.157
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇺🇸 美国 (United States) 157 - jack
-  server: 172.64.154.8
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 158 - jack
-  server: 34.29.203.135
-  port: 443
-  udp: true
-  type: vless
-  uuid: 0106efd7-39bf-449d-b734-a4aa758d6480
-  tls: true
-  reality-opts:
-    public-key: VL1ZiaWxae8teZWJeBAIHadbo7z1Ezu1KA2kIA1TDmk
-    short-id: 7dfdbf323c4ef0a8
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 159 - jack
-  server: 195.211.98.43
-  port: 443
-  udp: true
-  type: vless
-  uuid: 1b4b11d5-4c2d-4533-9a55-636757cdee94
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
-    short-id: 9c56fddf237e8eaf
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇺🇸 美国 (United States) 160 - jack
-  server: 66.163.115.23
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: aidrivercat.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /linkvws
-    headers:
-      Host: aidrivercat.org
-- name: 🇺🇸 美国 (United States) 161 - jack
-  server: 173.244.56.6
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 162 - jack
-  server: 172.64.229.170
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 163 - jack
-  server: 38.91.107.49
-  port: 18000
-  udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-- name: 🇺🇸 美国 (United States) 164 - jack
-  server: vpn-us-001.fastervpn.world
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-us-001.fastervpn.world
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 165 - jack
-  server: 104.18.46.234
-  port: 80
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 166 - jack
-  server: 162.159.0.53
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: '/?ed=2560security=tls '
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 167 - jack
-  server: 15.204.247.206
-  port: 4444
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: pKEW8JPByTVTLtM
-- name: 🇺🇸 美国 (United States) 168 - jack
-  server: 169.40.42.15
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: ios
-- name: 🇺🇸 美国 (United States) 169 - jack
-  server: 169.40.42.89
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 170 - jack
-  server: 167.17.68.89
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇺🇸 美国 (United States) 171 - jack
-  server: 167.88.62.124
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇺🇸 美国 (United States) 172 - jack
-  server: 167.88.63.59
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: vspeedfast.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /linkvws
-- name: 🇺🇸 美国 (United States) 173 - jack
-  server: 216.227.161.95
-  port: 7443
-  udp: true
-  type: vless
-  uuid: 218fd696-e3a2-4c33-b397-a5f13a82969e
-  tls: true
-  reality-opts:
-    public-key: uNqGvaJEIFTFQvAxsTDhetPxkIWzJuBtxXsK0yFMYzM
-    short-id: 48d5cf47
-  servername: media3.abvphelp.cc
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-- name: 🇺🇸 美国 (United States) 174 - jack
-  server: 108.181.118.10
-  port: 8388
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: G5p6ww4o67HB
-- name: 🇺🇸 美国 (United States) 175 - jack
-  server: 173.244.56.9
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 176 - jack
-  server: 84.17.41.2
-  port: 18000
-  udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-- name: 🇺🇸 美国 (United States) 177 - jack
-  server: 198.251.78.29
-  port: 2053
-  udp: true
-  type: vless
-  uuid: c423cc1b-f88e-421c-9a16-c480d84da20f
-  tls: true
-  reality-opts:
-    public-key: Uk5b-Wh_uxeCc7R8NS9iWE40xc0h9wWC04rSB9yhgAw
-    short-id: b5d625695ec82c7e
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 178 - jack
-  server: 159.223.157.129
-  port: 8443
-  udp: true
-  type: hysteria2
-  password: suAmQS9LlInNq4Wumh-FUF4GGlpgmG_g
-  sni: 159.223.157.129
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 179 - jack
-  server: 23.191.200.207
-  port: 443
-  udp: true
-  type: vless
-  uuid: aa95ffcc-78b6-47a1-b713-631407e65524
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 7j3hmlHrEDk3Kjx-dFG3E3jf0c6PZF45trIPFsuKWmI
-  servername: dl.google.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 180 - jack
-  server: 53edf574-tmm5c0-tpftcp-13x18.los.hyhuawei.com
-  port: 443
-  udp: true
-  type: hysteria2
-  password: e4499a62-0cfe-11eb-ad8c-f23c9164ca5d
-  sni: 53edf574-tmm5c0-tpftcp-13x18.los.hyhuawei.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 181 - jack
-  server: c7cf6abc-tmm5c0-tpw4i4-1pckg.los.hyhuawei.com
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 526a1128-7487-11ee-9bca-f23c913c8d2b
-  sni: c7cf6abc-tmm5c0-tpw4i4-1pckg.los.hyhuawei.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 182 - jack
-  server: 172.64.53.55
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 183 - jack
-  server: 23.191.200.206
-  port: 443
-  udp: true
-  type: vless
-  uuid: 0deceb8d-9ac0-4be1-b23f-2a650ec94213
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 7j3hmlHrEDk3Kjx-dFG3E3jf0c6PZF45trIPFsuKWmI
-  servername: dl.google.com
-  client-fingerprint: firefox
-- name: 🇺🇸 美国 (United States) 184 - jack
-  server: 207.246.75.174
-  port: 443
-  udp: true
-  type: vless
-  uuid: d90087c3-54f5-4283-a13f-615260c8b0c7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: hTweFDvbSucrGERtiiwDfoqD3vo_Z9cuaqboff3FTXQ
-  servername: googleapis.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 185 - jack
-  server: hy2.561891.xyz
-  port: 44356
-  udp: true
-  type: hysteria2
-  password: dongtaiwang.com
-  sni: hy2.561891.xyz
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 186 - jack
-  server: 5333a31b-tmm5c0-tujecz-1qkeg.los.hyhuawei.com
-  port: 443
-  udp: true
-  type: hysteria2
-  password: a305ac08-d136-11ee-b6db-f23c91cfbbc9
-  sni: 5333a31b-tmm5c0-tujecz-1qkeg.los.hyhuawei.com
-  skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 187 - jack
-  server: vspeedfast.org
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: vspeedfast.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /linkvws
-    headers:
-      Host: vspeedfast.org
-- name: 🇺🇸 美国 (United States) 188 - jack
-  server: us-1.srv.dvzh.net
-  port: 443
-  udp: true
-  type: vless
-  uuid: 91344c03-b37f-42c5-90f1-cbb95c5cf256
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 9GEc6lOjnGQyyE1951OZSBMWt4uCXsOjKyj9fysxHH0
-    short-id: e4e77e76e6e49da7
-  servername: us-1.srv.dvzh.net
-  client-fingerprint: firefox
-- name: 🇺🇸 美国 (United States) 189 - jack
-  server: 216.106.185.141
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇺🇸 美国 (United States) 190 - jack
-  server: 169.197.143.116
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇺🇸 美国 (United States) 191 - jack
-  server: 15.204.97.198
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 192 - jack
-  server: 7498a61c-tmm5c0-u093mf-1mina.los.hyhuawei.com
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 367e233c-2f54-11ee-9ae1-f23c9164ca5d
-  sni: 7498a61c-tmm5c0-u093mf-1mina.los.hyhuawei.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 193 - jack
-  server: 138.199.43.159
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇺🇸 美国 (United States) 194 - jack
   server: 15.204.97.195
   port: 23576
   udp: true
@@ -2048,55 +703,78 @@ proxies:
     short-id: '01'
   servername: fuck.rkn
   client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 195 - jack
-  server: grimness-backlogs.cdn-content.com
-  port: 443
+- name: 🇺🇸 美国 (United States) 69 - jack
+  server: 162.159.24.131
+  port: 2086
   udp: true
   type: vless
-  uuid: 0097844e-b939-4d50-93f3-591debdceb55
-  tls: true
-  servername: grimness-backlogs.cdn-content.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /ws
+    path: /?ed=2560security=tls
     headers:
-      Host: grimness-backlogs.cdn-content.com
-- name: 🇺🇸 美国 (United States) 196 - jack
-  server: 47.251.108.158
-  port: 443
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 70 - jack
+  server: 162.159.39.218
+  port: 2052
   udp: true
   type: vless
-  uuid: 975fc322-6e38-434b-a53c-d39fed49b9a9
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SmgYcFIvvFXW3xh4gvGhIJuQsaZvWkAylcjB6TEddEs
-    short-id: 896f52ba2cfca903
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 197 - jack
-  server: 136.86.162.34
-  port: 443
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 71 - jack
+  server: 172.67.213.2
+  port: 8880
   udp: true
   type: vless
-  uuid: 9d0395c0-016f-453e-b0be-fc66f1ee1d80
-  tls: true
-  reality-opts:
-    public-key: aGm3egxU7SVqVw-oxqXbJ0u4ctldnmTjwaDh4Mao2EE
-    short-id: bd4aa541e5306ba2
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 198 - jack
-  server: 85e1018a-tmm5c0-tzzpok-1sllg.los.hyhuawei.com
-  port: 443
+  uuid: 335035e6-65f1-4a51-a8a7-10fb0a89b8e7
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiRTM3VE1ZeVFCbndDUElEIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMjYwMjpmYzU5OmIwOjY0OjpdIl19
+    headers:
+      Host: shrill-lake-231c.jachhitachi69.workers.dev
+- name: 🇺🇸 美国 (United States) 72 - jack
+  server: 129.146.143.80
+  port: 48111
   udp: true
-  type: hysteria2
-  password: d6e1207c-f41a-11ef-9495-f23c91cfbbc9
-  sni: 85e1018a-tmm5c0-tzzpok-1sllg.los.hyhuawei.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 199 - jack
+  type: vmess
+  uuid: d4603cc2-e0ee-4651-83f5-1db5b7168177
+  alterId: 0
+  cipher: auto
+- name: 🇺🇸 美国 (United States) 73 - jack
+  server: 188.114.97.6
+  port: 8080
+  udp: true
+  type: vless
+  uuid: fee1da7e-a258-4456-8e5e-8ecf6518ed12
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiemxGMEFDU1VDRyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    headers:
+      Host: ez-82c7e7.abobaba.workers.dev
+- name: 🇺🇸 美国 (United States) 74 - jack
+  server: 104.18.34.14
+  port: 80
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 75 - jack
+  server: 216.152.152.187
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 🇺🇸 美国 (United States) 76 - jack
   server: 15.204.97.197
   port: 23576
   udp: true
@@ -2106,268 +784,306 @@ proxies:
   tls: true
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 200 - jack
-  server: hy2.123266.xyz
-  port: 33333
-  udp: true
-  type: hysteria2
-  password: bce6c821-200d-421f-bf3d-7159e5246ea0
-  sni: hy2.123266.xyz
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 201 - jack
-  server: 15.204.97.214
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   servername: fuck.rkn
   client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 202 - jack
-  server: 129.146.77.248
-  port: 39495
-  udp: true
-  type: vmess
-  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /cctv13.m3u8
-- name: 🇺🇸 美国 (United States) 203 - jack
-  server: 137.175.82.40
-  port: 30556
-  udp: true
-  type: vless
-  uuid: 949d278e-6d98-4014-84e9-59f1c6c93e0e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: EcmNQqZxyW4GCEQF-7nH54w3qgBkLzsfqFSgafGjB0E
-    short-id: d082f567
-  servername: www.lovelive-anime.jp
-  client-fingerprint: ios
-- name: 🇺🇸 美国 (United States) 204 - jack
-  server: minimize-evenness.cdn-content.com
+- name: 🇺🇸 美国 (United States) 77 - jack
+  server: 139.64.235.123
   port: 443
   udp: true
   type: vless
-  uuid: 67f01888-2fe6-42c0-8b61-83beda540301
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
   tls: true
-  servername: minimize-evenness.cdn-content.com
+  servername: notls.lukongtou.eu.org
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /ws
+    path: /Telegram-WangCai2🇨🇳
     headers:
-      Host: minimize-evenness.cdn-content.com
-- name: 🇺🇸 美国 (United States) 205 - jack
-  server: 107.173.237.146
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 1d39f715-2740-4d99-bc3b-197cc48dcee7
-  tls: true
-  reality-opts:
-    public-key: D3ojIs3AUKP_tV0E4TEjh90HBVJp24Nq3qMfdxD30kc
-    short-id: df8611c07d
-  servername: updates.cdn-apple.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 206 - jack
-  server: 195.123.240.65
+      Host: notls.lukongtou.eu.org
+- name: 🇺🇸 美国 (United States) 78 - jack
+  server: 104.24.31.89
   port: 443
   udp: true
   type: vless
-  uuid: ce18d0eb-5c71-41f9-96e5-1632e22456e4
-  flow: xtls-rprx-vision
+  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
   tls: true
-  reality-opts:
-    public-key: StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE
-    short-id: 19296c9f1bf9c7b1
-  servername: www.cloudflare.com
-  client-fingerprint: ios
-- name: 🇺🇸 美国 (United States) 207 - jack
-  server: 15.204.97.206
-  port: 23576
+  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rayan-007.nastaran.dpdns.org
+- name: 🇺🇸 美国 (United States) 79 - jack
+  server: 104.21.69.37
+  port: 443
   udp: true
   type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
+  uuid: 911b84e1-d046-4fbf-bfc0-c168791115ef
   tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-  servername: fuck.rkn
+  servername: 12ygbae0k3gn0z0f.mehrshadhaddadi8.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/uWq9DFRgj8BwQiSXmZ46
+    headers:
+      Host: 12ygbae0k3gn0z0f.mehrshadhaddadi8.workers.dev
+- name: 🇺🇸 美国 (United States) 80 - jack
+  server: 104.18.46.234
+  port: 2086
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 81 - jack
+  server: 162.159.45.19
+  port: 2095
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 82 - jack
+  server: 162.159.43.187
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 83 - jack
+  server: 185.207.197.123
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  tls: true
+  servername: notls.lukongtou.eu.org
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /Telegram-WangCai2🇨🇳
+    headers:
+      Host: notls.lukongtou.eu.org
+- name: 🇺🇸 美国 (United States) 84 - jack
+  server: 173.244.56.9
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸 美国 (United States) 85 - jack
+  server: 172.67.161.104
+  port: 443
+  udp: true
+  type: vless
+  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
+  tls: true
+  servername: c7dabe95.proxy-978.pages.dev
+  skip-cert-verify: false
   client-fingerprint: random
-- name: 🇺🇸 美国 (United States) 208 - jack
-  server: 6143c1d7-tmm5c0-tr9h64-1f1f1.los.hyhuawei.com
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 61c4be90-6235-11ec-a8bf-f23c91cfbbc9
-  sni: 6143c1d7-tmm5c0-tr9h64-1f1f1.los.hyhuawei.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 209 - jack
-  server: 45.32.69.110
-  port: 443
-  udp: true
-  type: vless
-  uuid: 1572b9c5-d741-46eb-b4a2-a5d23958dfbe
-  tls: true
-  reality-opts:
-    public-key: 6l-Yq_zkVrnExw8AVv85VwoYnfNc8-dRSpoj_AA-fxY
-    short-id: c5cde18f
-  servername: itunes.apple.com
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /ws
+    path: /
     headers:
-      Host: itunes.apple.com
-- name: 🇺🇸 美国 (United States) 210 - jack
-  server: 23.95.222.127
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 352ff568-f971-4613-bf48-92997a5d44ed
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ribQDOlZ69PzvZ1EDF0EcmMvbq_T5RQrVRBSGUU2riU
-    short-id: 35cd899f8de04801
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 211 - jack
-  server: 169.40.42.35
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: ios
-- name: 🇺🇸 美国 (United States) 212 - jack
-  server: 169.40.42.133
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 213 - jack
-  server: 144.24.46.175
-  port: 8443
-  udp: true
-  type: hysteria2
-  password: pbgLTkd5276SN1sZ
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 214 - jack
-  server: 34.220.15.24
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: guided-ferret.rooster465.autos
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 215 - jack
-  server: 15.204.97.209
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 216 - jack
-  server: 15.204.97.216
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 217 - jack
-  server: 169.197.142.22
-  port: 18000
-  udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-- name: 🇺🇸 美国 (United States) 218 - jack
-  server: 104.160.44.203
-  port: 443
-  udp: true
-  type: trojan
-  password: 600421cf-11d7-429f-a65b-c30397f1bc03
-  sni: la14.freeguard.org
-  skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 219 - jack
-  server: ccs2g.pai50288.uk
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8be461cb-a0df-47cf-bc0d-4d9e6a22fa74
-  tls: true
-  servername: ccs2g.pai50288.uk
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /pai50288
-- name: 🇺🇸 美国 (United States) 220 - jack
-  server: 47.251.25.74
-  port: 443
-  udp: true
-  type: vless
-  uuid: 18805ff3-b420-45de-af18-93be14024ae8
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: H56cOJhw0xw76lDEpt7IuJJmVGemK6_CK34KtHwDMX8
-  servername: www.amazon.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 221 - jack
-  server: 79.110.53.169
+      Host: c7dabe95.proxy-978.pages.dev
+- name: 🇺🇸 美国 (United States) 86 - jack
+  server: 107.151.182.197
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇺🇸 美国 (United States) 222 - jack
-  server: us13.vipjiedian.sbs
-  port: 21333
+- name: 🇺🇸 美国 (United States) 87 - jack
+  server: 104.26.12.140
+  port: 8443
   udp: true
-  type: anytls
-  password: 2d7bda32-a8b5-4416-a1ea-4559ff98f86e
-  sni: apple.com
+  type: vless
+  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
+  tls: true
+  servername: c7dabe95.proxy-978.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: c7dabe95.proxy-978.pages.dev
+- name: 🇺🇸 美国 (United States) 88 - jack
+  server: 173.245.49.30
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime36.workers.dev
+- name: 🇺🇸 美国 (United States) 89 - jack
+  server: 104.21.70.21
+  port: 443
+  udp: true
+  type: vless
+  uuid: fee1da7e-a258-4456-8e5e-8ecf6518ed12
+  tls: true
+  servername: ez-82c7e7.abobaba.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiemxGMEFDU1VDRyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    headers:
+      Host: ez-82c7e7.abobaba.workers.dev
+- name: 🇺🇸 美国 (United States) 90 - jack
+  server: 104.17.147.22
+  port: 443
+  udp: true
+  type: vless
+  uuid: 518de0d4-6ce8-4404-80db-23c4a8806128
+  tls: true
+  servername: ez-5faafb.esmaoi.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiQkFLTnhqM2tZTSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    headers:
+      Host: ez-5faafb.esmaoi.workers.dev
+- name: 🇺🇸 美国 (United States) 91 - jack
+  server: 172.64.53.55
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: '/?ed=2560security=tls '
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 92 - jack
+  server: 162.159.38.127
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 93 - jack
+  server: 172.67.138.253
+  port: 443
+  udp: true
+  type: vless
+  uuid: d9f94532-c4d4-4f94-ba23-6eb6d35bfc7d
+  tls: true
+  servername: small-scene-f215.amiralizarefast1.workers.dev
   skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 223 - jack
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZW5GMjJSRmYiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0=
+    headers:
+      Host: small-scene-f215.amiralizarefast1.workers.dev
+- name: 🇺🇸 美国 (United States) 94 - jack
+  server: 188.114.97.6
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 33918b20-9e02-4dc6-8b30-79b2d4b2e0e6
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiUjJBU3JkVlRwSWtnciIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0
+    headers:
+      Host: aUto-scaLe-238B2B.inFra-coRE-1630dD.WorKerS.DeV
+- name: 🇺🇸 美国 (United States) 95 - jack
+  server: 45.135.235.123
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  tls: true
+  servername: notls.lukongtou.eu.org
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /Telegram-WangCai2🇨🇳
+    headers:
+      Host: notls.lukongtou.eu.org
+- name: 🇺🇸 美国 (United States) 96 - jack
+  server: 172.67.67.178
+  port: 443
+  udp: true
+  type: vless
+  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
+  tls: true
+  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rayan-007.nastaran.dpdns.org
+- name: 🇺🇸 美国 (United States) 97 - jack
+  server: 37.19.198.243
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸 美国 (United States) 98 - jack
+  server: 144.48.105.68
+  port: 11659
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: 14a1e160827dc81ecdd9d04e3e0a5593
+- name: 🇺🇸 美国 (United States) 99 - jack
+  server: 172.111.38.100
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 🇺🇸 美国 (United States) 100 - jack
+  server: 138.199.42.68
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇺🇸 美国 (United States) 101 - jack
+  server: 172.64.158.146
+  port: 2082
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 102 - jack
   server: 144.202.126.147
   port: 443
   udp: true
@@ -2384,40 +1100,784 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇺🇸 美国 (United States) 224 - jack
-  server: vpn-us-006.fastervpn.world
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-us-006.fastervpn.world
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 225 - jack
-  server: 154.9.241.170
+- name: 🇺🇸 美国 (United States) 103 - jack
+  server: 104.24.30.89
   port: 443
   udp: true
   type: vless
-  uuid: 30b98a28-ed4e-46eb-8548-54c25f4db53c
+  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
+  tls: true
+  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rayan-007.nastaran.dpdns.org
+- name: 🇺🇸 美国 (United States) 104 - jack
+  server: 162.159.39.218
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 105 - jack
+  server: 172.64.146.66
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
+  tls: true
+  servername: c7dabe95.proxy-978.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: c7dabe95.proxy-978.pages.dev
+- name: 🇺🇸 美国 (United States) 106 - jack
+  server: 173.244.56.6
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸 美国 (United States) 107 - jack
+  server: 162.159.39.218
+  port: 2082
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 108 - jack
+  server: 172.64.53.55
+  port: 2086
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 109 - jack
+  server: 172.64.53.55
+  port: 2095
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 110 - jack
+  server: 34.94.125.227
+  port: 443
+  udp: true
+  type: trojan
+  password: M7v%w11Se*
+  sni: mxlo.wsone.icu
+  skip-cert-verify: false
+- name: 🇺🇸 美国 (United States) 111 - jack
+  server: 37.19.198.244
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸 美国 (United States) 112 - jack
+  server: 172.64.32.103
+  port: 2082
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 113 - jack
+  server: 162.159.45.19
+  port: 2086
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 114 - jack
+  server: 67.220.73.204
+  port: 18662
+  udp: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: _E8d7s7B7xYfZImOkKmESW6MJDxwKxnsscu56jhE2EM
-    short-id: 3fb4e08c
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 115 - jack
+  server: 15.204.97.209
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 116 - jack
+  server: 188.42.145.123
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  tls: true
+  servername: notls.lukongtou.eu.org
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /Telegram-WangCai2🇨🇳
+    headers:
+      Host: notls.lukongtou.eu.org
+- name: 🇺🇸 美国 (United States) 117 - jack
+  server: 37.19.198.160
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸 美国 (United States) 118 - jack
+  server: 34.201.71.226
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇺🇸 美国 (United States) 119 - jack
+  server: 162.159.38.127
+  port: 80
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 120 - jack
+  server: 103.133.1.30
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime36.workers.dev
+- name: 🇺🇸 美国 (United States) 121 - jack
+  server: 47.251.108.158
+  port: 443
+  udp: true
+  type: vless
+  uuid: 975fc322-6e38-434b-a53c-d39fed49b9a9
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SmgYcFIvvFXW3xh4gvGhIJuQsaZvWkAylcjB6TEddEs
+    short-id: 896f52ba2cfca903
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 122 - jack
+  server: 104.21.90.210
+  port: 443
+  udp: true
+  type: vless
+  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
+  tls: true
+  servername: c7dabe95.proxy-978.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: c7dabe95.proxy-978.pages.dev
+- name: 🇺🇸 美国 (United States) 123 - jack
+  server: 172.67.75.52
+  port: 2083
+  udp: true
+  type: vless
+  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
+  tls: true
+  servername: c7dabe95.proxy-978.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: c7dabe95.proxy-978.pages.dev
+- name: 🇺🇸 美国 (United States) 124 - jack
+  server: 104.26.5.60
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
+  tls: true
+  servername: c7dabe95.proxy-978.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: c7dabe95.proxy-978.pages.dev
+- name: 🇺🇸 美国 (United States) 125 - jack
+  server: 108.165.152.30
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime61.workers.dev
+- name: 🇺🇸 美国 (United States) 126 - jack
+  server: 162.159.45.19
+  port: 2082
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 127 - jack
+  server: chat.openai.com
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime29.workers.dev
+- name: 🇺🇸 美国 (United States) 128 - jack
+  server: 162.159.45.19
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 129 - jack
+  server: 188.114.97.6
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 2db92da9-8ffb-491b-81d6-6e8d50876020
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiWlFRWlMwRDdLakVqMyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: bpb-01c11365.hjdbcvdbkv.workers.dev
+- name: 🇺🇸 美国 (United States) 130 - jack
+  server: 172.64.32.108
+  port: 80
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 131 - jack
+  server: 162.159.38.127
+  port: 2095
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 132 - jack
+  server: 104.21.22.180
+  port: 443
+  udp: true
+  type: vless
+  uuid: 33918b20-9e02-4dc6-8b30-79b2d4b2e0e6
+  tls: true
+  servername: auto-scale-238b2b.infra-core-1630dd.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiUjJBU3JkVlRwSWtnciIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0
+    headers:
+      Host: auto-scale-238b2b.infra-core-1630dd.workers.dev
+- name: 🇺🇸 美国 (United States) 133 - jack
+  server: 104.19.164.155
+  port: 2083
+  udp: true
+  type: vless
+  uuid: 532a9115-aee7-4d39-9638-1e5146de075b
+  tls: true
+  servername: muddy-math-c1fc.tmpnriqueau89.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /js/cHlpcC55Z2tray5kcGRucy5vcmc=/
+    headers:
+      Host: muddy-math-c1fc.tmpnriqueau89.workers.dev
+- name: 🇺🇸 美国 (United States) 134 - jack
+  server: 188.114.97.8
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 31aa0950-eb19-45ff-94a2-af416deb3b90
+  tls: true
+  servername: SquarE-saLaD-EbDe.ZDFGVcCfgUUYgGG.wOrKeRS.DEV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZm5INktPV0lGcHI1NjNSOSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: square-salad-ebde.zdfgvccfguuyggg.workers.dev
+- name: 🇺🇸 美国 (United States) 135 - jack
+  server: 195.211.98.43
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1b4b11d5-4c2d-4533-9a55-636757cdee94
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
+    short-id: 9c56fddf237e8eaf
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 136 - jack
+  server: 162.159.135.234
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime54.workers.dev
+- name: 🇺🇸 美国 (United States) 137 - jack
+  server: 140.82.63.79
+  port: 8388
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ZoZtfPOyVvmKARUN
+- name: 🇺🇸 美国 (United States) 138 - jack
+  server: 63.141.128.30
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime42.workers.dev
+- name: 🇺🇸 美国 (United States) 139 - jack
+  server: 129.146.77.248
+  port: 39495
+  udp: true
+  type: vmess
+  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+- name: 🇺🇸 美国 (United States) 140 - jack
+  server: 45.131.4.30
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime59.workers.dev
+- name: 🇺🇸 美国 (United States) 141 - jack
+  server: 162.159.38.127
+  port: 2086
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: ?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 142 - jack
+  server: 172.67.148.41
+  port: 80
+  udp: true
+  type: vless
+  uuid: 8be64379-08a5-4362-b8cf-234a65409bda
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiOW56N0hTRm9IS252IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ
+    headers:
+      Host: telegram4.freepersianland8.workers.dev
+- name: 🇺🇸 美国 (United States) 143 - jack
+  server: 185.193.29.123
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  tls: true
+  servername: notls.lukongtou.eu.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: Telegram-WangCai2🇨🇳
+    headers:
+      Host: notls.lukongtou.eu.org
+- name: 🇺🇸 美国 (United States) 144 - jack
+  server: 172.67.75.194
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
+  tls: true
+  servername: c7dabe95.proxy-978.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: c7dabe95.proxy-978.pages.dev
+- name: 🇺🇸 美国 (United States) 145 - jack
+  server: 104.18.0.1
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3ccba794-1c6d-48a8-acf2-f5caf0e69d86
+  tls: true
+  servername: all.speedtest03.ccwu.cc
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: all.speedtest03.ccwu.cc
+- name: 🇺🇸 美国 (United States) 146 - jack
+  server: 108.181.57.93
+  port: 8388
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: RSo52SbxW40r
+- name: 🇺🇸 美国 (United States) 147 - jack
+  server: 89.117.112.40
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime11.workers.dev
+- name: 🇺🇸 美国 (United States) 148 - jack
+  server: www.speedtest.net
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4ccf70f9-7632-4b5a-9557-10d2dd347bb2
+  tls: true
+  servername: TO6R63-KKChIGHQM2.VxZ0DDUq7tO7su0cDqF.WoRKeRs.DeV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/G4J8aNAVZt9KdOjjcfZDFDRI1Obr5E0?ed=2560
+    headers:
+      Host: to6r63-kkchighqm2.vxz0dduq7to7su0cdqf.workers.dev
+- name: 🇺🇸 美国 (United States) 149 - jack
+  server: 88.216.66.30
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime04.workers.dev
+- name: 🇺🇸 美国 (United States) 150 - jack
+  server: 162.159.45.19
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 151 - jack
+  server: 104.26.4.57
+  port: 2087
+  udp: true
+  type: vless
+  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
+  tls: true
+  servername: c7dabe95.proxy-978.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: c7dabe95.proxy-978.pages.dev
+- name: 🇺🇸 美国 (United States) 152 - jack
+  server: 216.106.183.35
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 1
+  cipher: auto
+- name: 🇺🇸 美国 (United States) 153 - jack
+  server: 104.18.42.54
+  port: 2083
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: newwk1.f1w.de5.net
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: newwk1.f1w.de5.net
+- name: 🇺🇸 美国 (United States) 154 - jack
+  server: 169.197.143.116
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 🇺🇸 美国 (United States) 155 - jack
+  server: 15.204.97.216
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 156 - jack
+  server: 188.114.97.6
+  port: 8080
+  udp: true
+  type: vless
+  uuid: d6828805-5608-44d7-a44b-976d4c3ac2d0
+  network: ws
+  ws-opts:
+    path: /vl/5ibXbgAYxWzwbOtkXJWUtvKMKOYjh?ed
+    headers:
+      Host: 0LG3u92i0exN577l3Mc637Ycba3.SfgsfgSfGFSGSf-4630.wOrkeRS.dEv
+- name: 🇺🇸 美国 (United States) 157 - jack
+  server: 67.220.73.204
+  port: 16016
+  udp: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 158 - jack
+  server: 15.204.97.219
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 159 - jack
+  server: vmess.a-amr79.workers.dev
+  port: 8880
+  udp: true
+  type: vless
+  uuid: abd3678b-f654-404c-adc7-1355865197e1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiNUZVWmdPNWNpTW5LOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzI2MDI6ZmM1OTpiMDo2NDo6XSJdfQ
+    headers:
+      Host: vless.a-amr79.workers.dev
+- name: 🇺🇸 美国 (United States) 160 - jack
+  server: 162.159.38.127
+  port: 2082
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 161 - jack
+  server: 45.63.53.81
+  port: 443
+  udp: true
+  type: vless
+  uuid: c512dcbd-1847-40a2-9c99-989c8bfe4717
+  tls: true
+  reality-opts:
+    public-key: 6nTROV2ELz-3vNUl0A00hp378QngpYABrPgjCpUknD0
+    short-id: f436f707
   servername: itunes.apple.com
-  client-fingerprint: ''
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇺🇸 美国 (United States) 226 - jack
-  server: 6f9a8496-tmm5c0-txkkcl-1fli7.los.hyhuawei.com
+- name: 🇺🇸 美国 (United States) 162 - jack
+  server: 104.26.5.157
+  port: 2083
+  udp: true
+  type: vless
+  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
+  tls: true
+  servername: c7dabe95.proxy-978.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: c7dabe95.proxy-978.pages.dev
+- name: 🇺🇸 美国 (United States) 163 - jack
+  server: 34.29.203.135
   port: 443
   udp: true
-  type: hysteria2
-  password: 0abd5d38-fdf1-11ed-bade-f23c91369f2d
-  sni: 6f9a8496-tmm5c0-txkkcl-1fli7.los.hyhuawei.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 227 - jack
+  type: vless
+  uuid: 0106efd7-39bf-449d-b734-a4aa758d6480
+  tls: true
+  reality-opts:
+    public-key: VL1ZiaWxae8teZWJeBAIHadbo7z1Ezu1KA2kIA1TDmk
+    short-id: 7dfdbf323c4ef0a8
+  servername: www.cloudflare.com
+  client-fingerprint: ''
+- name: 🇺🇸 美国 (United States) 164 - jack
+  server: 54.226.151.202
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇺🇸 美国 (United States) 165 - jack
+  server: 188.114.96.1
+  port: 443
+  udp: true
+  type: vless
+  uuid: af0db32b-2cb0-48c7-b04e-96003f8c2369
+  tls: true
+  servername: Dl2Uf-IVdEzILz3e86Rk18.hhVT37TJm2xbOSql5hxOgN-Y.woRKers.DeV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/WzJrIU8RBLiKEwHrtTJL2XpzurfIundt?ed=2560
+    headers:
+      Host: dl2uf-ivdezilz3e86rk18.hhvt37tjm2xbosql5hxogn-y.workers.dev
+- name: 🇺🇸 美国 (United States) 166 - jack
+  server: 162.159.45.19
+  port: 80
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 167 - jack
+  server: 135.84.79.30
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime35.workers.dev
+- name: 🇺🇸 美国 (United States) 168 - jack
+  server: 172.64.52.6
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 169 - jack
   server: 51.81.203.63
   port: 443
   udp: true
@@ -2430,7 +1890,256 @@ proxies:
     short-id: 4477382ff6d3d41c
   servername: www.icloud.com
   client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 228 - jack
+- name: 🇺🇸 美国 (United States) 170 - jack
+  server: 45.131.6.123
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  tls: true
+  servername: notls.lukongtou.eu.org
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /Telegram-WangCai2🇨🇳
+    headers:
+      Host: notls.lukongtou.eu.org
+- name: 🇺🇸 美国 (United States) 171 - jack
+  server: 162.159.39.218
+  port: 80
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 172 - jack
+  server: 15.204.97.206
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 173 - jack
+  server: 47.253.226.114
+  port: 443
+  udp: true
+  type: vless
+  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 174 - jack
+  server: 15.204.247.175
+  port: 8008
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: XKFKl2rULjIp74
+- name: 🇺🇸 美国 (United States) 175 - jack
+  server: 129.213.91.185
+  port: 35013
+  udp: true
+  type: hysteria2
+  password: 4291c983-c520-46ac-82cc-48f14bef573f
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 176 - jack
+  server: 67.220.85.46
+  port: 18000
+  udp: true
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+- name: 🇺🇸 美国 (United States) 177 - jack
+  server: 216.106.185.141
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 🇺🇸 美国 (United States) 178 - jack
+  server: 15.204.97.198
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 179 - jack
+  server: 167.17.68.89
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 🇺🇸 美国 (United States) 180 - jack
+  server: 107.173.237.146
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 1d39f715-2740-4d99-bc3b-197cc48dcee7
+  tls: true
+  reality-opts:
+    public-key: D3ojIs3AUKP_tV0E4TEjh90HBVJp24Nq3qMfdxD30kc
+    short-id: df8611c07d
+  servername: updates.cdn-apple.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 181 - jack
+  server: 79.110.53.169
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇺🇸 美国 (United States) 182 - jack
+  server: 66.23.206.122
+  port: 16617
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: 2607008ac896b3443be9419d73d544d9
+- name: 🇺🇸 美国 (United States) 183 - jack
+  server: 162.159.39.218
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: '/?ed=2560security=tls '
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 184 - jack
+  server: 162.159.38.127
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 185 - jack
+  server: 34.3.101.206
+  port: 443
+  udp: true
+  type: vless
+  uuid: c64a5cfa-0fd6-4978-b062-6e89da013260
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: C4ky4RduL1cfjZ3okHXDkpD2Ns4DViMkB-mDlisBrzc
+    short-id: 8a17287288cf25e5
+  servername: gateway.icloud.com
+  client-fingerprint: edge
+- name: 🇺🇸 美国 (United States) 186 - jack
+  server: 136.86.162.34
+  port: 443
+  udp: true
+  type: vless
+  uuid: 9d0395c0-016f-453e-b0be-fc66f1ee1d80
+  tls: true
+  reality-opts:
+    public-key: aGm3egxU7SVqVw-oxqXbJ0u4ctldnmTjwaDh4Mao2EE
+    short-id: bd4aa541e5306ba2
+  servername: www.cloudflare.com
+  client-fingerprint: ''
+- name: 🇺🇸 美国 (United States) 187 - jack
+  server: 162.159.39.218
+  port: 2086
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 188 - jack
+  server: 15.204.246.132
+  port: 7307
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: FoOiGlkAA9yPEGP
+- name: 🇺🇸 美国 (United States) 189 - jack
+  server: 84.17.41.2
+  port: 18000
+  udp: true
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+- name: 🇺🇸 美国 (United States) 190 - jack
+  server: www.speedtest.net
+  port: 443
+  udp: true
+  type: vless
+  uuid: fae09ec8-642b-4750-a019-27a97cd967fd
+  tls: true
+  servername: ez-3e9698.ezaccess1ec1f0c.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoib0FkbVU0Vm5ITkQiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119
+    headers:
+      Host: ez-3e9698.ezaccess1ec1f0c.workers.dev
+- name: 🇺🇸 美国 (United States) 191 - jack
+  server: 37.19.198.236
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸 美国 (United States) 192 - jack
+  server: 66.94.121.46
+  port: 443
+  udp: true
+  type: hysteria2
+  password: gf1:gfhysteria2024
+  sni: www.broadcom.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 193 - jack
+  server: 107.155.57.11
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇺🇸 美国 (United States) 194 - jack
+  server: 172.64.53.55
+  port: 80
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 195 - jack
   server: 154.29.145.196
   port: 443
   udp: true
@@ -2447,231 +2156,184 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇺🇸 美国 (United States) 229 - jack
-  server: 107.155.57.11
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇺🇸 美国 (United States) 230 - jack
-  server: 34.3.101.206
-  port: 443
+- name: 🇺🇸 美国 (United States) 196 - jack
+  server: 69.48.201.136
+  port: 30016
   udp: true
   type: vless
-  uuid: c64a5cfa-0fd6-4978-b062-6e89da013260
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: C4ky4RduL1cfjZ3okHXDkpD2Ns4DViMkB-mDlisBrzc
-    short-id: 8a17287288cf25e5
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 231 - jack
-  server: 5.78.51.123
-  port: 1080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 8tmnvX5zYuWGVIDP2jglZw
-- name: 🇺🇸 美国 (United States) 232 - jack
-  server: 66.94.121.46
-  port: 443
-  udp: true
-  type: hysteria2
-  password: gf1:gfhysteria2024
-  sni: www.broadcom.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 233 - jack
-  server: 34.94.125.227
-  port: 443
-  udp: true
-  type: trojan
-  password: M7v%w11Se*
-  sni: mxlo.wsone.icu
-  skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 234 - jack
-  server: 154.12.38.202
-  port: 443
-  udp: true
-  type: vless
-  uuid: 2a9ab69b-26e7-44d0-a325-e5056d849900
-  tls: true
-  reality-opts:
-    public-key: iJDZHJQcTGl2VIwbsRmlOG9JGbbmxNY5wmv1hc6OwQM
-    short-id: c31176b6
-  servername: itunes.apple.com
-  client-fingerprint: chrome
+  uuid: 03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a
   network: ws
   ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🇺🇸 美国 (United States) 235 - jack
-  server: 31.76.7.45
-  port: 443
-  udp: true
-  type: trojan
-  password: f8b-U5TxjNRYKLvU0Js_6YeMCdj_82km
-  sni: cz-musicc.moritech.net
-  skip-cert-verify: true
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpcbeast
-- name: 🇺🇸 美国 (United States) 236 - jack
-  server: 107.151.182.197
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇺🇸 美国 (United States) 237 - jack
-  server: 15.204.97.219
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 238 - jack
-  server: 167.17.68.89
-  port: 443
+    path: /usserver
+- name: 🇺🇸 美国 (United States) 197 - jack
+  server: 38.91.107.49
+  port: 18000
   udp: true
   type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: auto
-  tls: true
-  servername: vspeedfast.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /linkvws
-- name: 🇺🇸 美国 (United States) 239 - jack
-  server: 64.188.98.171
+- name: 🇺🇸 美国 (United States) 198 - jack
+  server: 172.64.146.116
   port: 443
   udp: true
-  type: hysteria2
-  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
-  sni: germany3.h2corp.local
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 240 - jack
-  server: 38.246.229.58
-  port: 47642
+  type: vless
+  uuid: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
+  tls: true
+  servername: support.zoom.us.blackshadow.dpdns.org
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /44.209.52.7-443
+    headers:
+      Host: support.zoom.us.blackshadow.dpdns.org
+- name: 🇺🇸 美国 (United States) 199 - jack
+  server: 172.67.132.85
+  port: 8080
   udp: true
   type: vless
-  uuid: c538c9dd-2e3f-488f-a8ca-ac5b7c0773f3
+  uuid: 3a701524-30c8-45f3-8922-d7af5d024af0
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiWDRPODRLWDd2IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    headers:
+      Host: server14.peekconf.workers.dev
+- name: 🇺🇸 美国 (United States) 200 - jack
+  server: 172.64.145.202
+  port: 2083
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   tls: true
-  reality-opts:
-    public-key: 9mg1QdPctekP9woKygHzBCxb8Hw2QTICXROQiiJB6Ag
-    short-id: 76ed3287
-  servername: sega.com
-  client-fingerprint: ios
-- name: 🇺🇸 美国 (United States) 241 - jack
-  server: ultimate-jaguar.rooster465.autos
+  servername: newwk1.f1w.de5.net
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: newwk1.f1w.de5.net
+- name: 🇺🇸 美国 (United States) 201 - jack
+  server: 34.220.15.24
   port: 443
   udp: true
   type: trojan
   password: UX82473651
-  sni: ultimate-jaguar.rooster465.autos
-  skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 242 - jack
+  sni: guided-ferret.rooster465.autos
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 202 - jack
   server: 23.251.121.242
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇺🇸 美国 (United States) 243 - jack
-  server: 156.146.38.169
+- name: 🇺🇸 美国 (United States) 203 - jack
+  server: 104.17.148.22
   port: 443
   udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 244 - jack
-  server: 64.188.126.56
-  port: 43000
+  type: vless
+  uuid: 518de0d4-6ce8-4404-80db-23c4a8806128
+  tls: true
+  servername: ez-5faafb.esmaoi.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiQkFLTnhqM2tZTSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    headers:
+      Host: ez-5faafb.esmaoi.workers.dev
+- name: 🇺🇸 美国 (United States) 204 - jack
+  server: 172.86.105.224
+  port: 443
   udp: true
   type: vless
-  uuid: 47f79fc1-0646-40e8-8a58-73e85d183d5a
+  uuid: 71e9e770-bfc6-11f1-8b5c-54db13ea7d40
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: jjbMUO41S9JE7ou_zbbDStzSYLzJVN_0O-j0f6b380E
-    short-id: bf4e20af99d3042d
-  servername: 64.188.126.56
+    public-key: n25FmewpAEsvLl9Vr0bRFcz044f4IE7orWeWOzu8rwk
+  servername: www.nvidia.com
+  client-fingerprint: safari
+- name: 🇺🇸 美国 (United States) 205 - jack
+  server: soskeynets-base-fe24.alirezahabibi20009.workers.dev
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4908acbe-485f-4e1c-bb11-5dd04b9f7e88
+  tls: true
+  servername: restless-base-fe24.alirezahabibi20009.workers.dev
+  skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 245 - jack
-  server: 172.64.52.6
-  port: 80
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiRjhycEV5WUpJTGZpQSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: restless-base-fe24.alirezahabibi20009.workers.dev
+- name: 🇺🇸 美国 (United States) 206 - jack
+  server: 169.197.142.22
+  port: 18000
+  udp: true
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+- name: 🇺🇸 美国 (United States) 207 - jack
+  server: 154.9.241.170
+  port: 443
+  udp: true
+  type: vless
+  uuid: 30b98a28-ed4e-46eb-8548-54c25f4db53c
+  tls: true
+  reality-opts:
+    public-key: _E8d7s7B7xYfZImOkKmESW6MJDxwKxnsscu56jhE2EM
+    short-id: 3fb4e08c
+  servername: itunes.apple.com
+  client-fingerprint: ''
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇺🇸 美国 (United States) 208 - jack
+  server: 162.159.48.32
+  port: 2095
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: '/?ed=2560security=tls '
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 246 - jack
-  server: 13.143.166.71
-  port: 443
+- name: 🇺🇸 美国 (United States) 209 - jack
+  server: russia.com
+  port: 2087
   udp: true
   type: vless
-  uuid: 0afdcc75-e449-418d-8eac-c5b657363443
-  flow: xtls-rprx-vision
+  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
   tls: true
-  reality-opts:
-    public-key: FuKGULeQ9xZMJN8hWz6J_49tDJKT9HA-nsAXOOVRmyM
-    short-id: ff867ed245c73f43
-  servername: cdn.jsdelivr.net
-  client-fingerprint: safari
-- name: 🇺🇸 美国 (United States) 247 - jack
-  server: 107.155.57.51
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇺🇸 美国 (United States) 248 - jack
-  server: 179.254.71.20
-  port: 52006
-  udp: true
-  type: vless
-  uuid: bc659d88-a1e0-4c65-a49a-7b51b26a7a7f
-  flow: xtls-rprx-vision
-  tls: true
-  servername: pl.setlisting.ru
+  servername: c7dabe95.proxy-978.pages.dev
   skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 249 - jack
-  server: 2.27.211.129
-  port: 443
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: c7dabe95.proxy-978.pages.dev
+- name: 🇺🇸 美国 (United States) 210 - jack
+  server: 172.64.52.6
+  port: 2086
   udp: true
   type: vless
-  uuid: 0afdcc75-e449-418d-8eac-c5b657363443
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: -YpJ_Xav7sUkd77sEZjg58Pn6dnNpj5himuUS-OFDh4
-    short-id: fd44fcf1c3afa0af
-  servername: www.icloud.com
-  client-fingerprint: safari
-- name: 🇺🇸 美国 (United States) 250 - jack
-  server: dedic-norw-new2.failspace.top
-  port: 443
-  udp: true
-  type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: dedic-norw-new2.failspace.top
-  skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 251 - jack
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: '/?ed=2560security=tls '
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 211 - jack
   server: 154.12.38.159
   port: 443
   udp: true
@@ -2688,7 +2350,385 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇺🇸 美国 (United States) 252 - jack
+- name: 🇺🇸 美国 (United States) 212 - jack
+  server: 88.216.69.30
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime06.workers.dev
+- name: 🇺🇸 美国 (United States) 213 - jack
+  server: 67.220.95.3
+  port: 18000
+  udp: true
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+- name: 🇺🇸 美国 (United States) 214 - jack
+  server: 172.64.32.108
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 215 - jack
+  server: 15.204.233.41
+  port: 8882
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
+- name: 🇺🇸 美国 (United States) 216 - jack
+  server: 15.204.247.244
+  port: 4444
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+- name: 🇺🇸 美国 (United States) 217 - jack
+  server: 15.204.247.206
+  port: 4444
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+- name: 🇺🇸 美国 (United States) 218 - jack
+  server: 38.110.1.246
+  port: 18000
+  udp: true
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+- name: 🇺🇸 美国 (United States) 219 - jack
+  server: 15.204.246.107
+  port: 8888
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: 🇺🇸 美国 (United States) 220 - jack
+  server: mybb.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
+  tls: true
+  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rayan-007.nastaran.dpdns.org
+- name: 🇺🇸 美国 (United States) 221 - jack
+  server: 44.255.123.205
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: happy-gibbon.rooster465.autos
+  skip-cert-verify: false
+- name: 🇺🇸 美国 (United States) 222 - jack
+  server: to6r63-kkchighqm2.vxz0dduq7to7su0cdqf.workers.dev
+  port: 443
+  udp: true
+  type: trojan
+  password: Telegram_healer_config
+  sni: To6R63-kKChiGHqm2.vxz0Dduq7to7Su0CDQf.worKERs.DEV
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /tr/xwtrOUcg21SS0Ega?ed=2560
+- name: 🇺🇸 美国 (United States) 223 - jack
+  server: 137.184.218.169
+  port: 36925
+  udp: true
+  type: vless
+  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 224 - jack
+  server: 5.34.178.120
+  port: 443
+  udp: true
+  type: vless
+  uuid: 9063f9fb-e88a-4ee0-b4a4-a92ca7316a9f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: EVhq2BxKuw2Cody1DmF_HPvUYKwzdXbHP47blUv-eRM
+    short-id: 55ab5559e3a6d10a
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 225 - jack
+  server: 154.12.38.202
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2a9ab69b-26e7-44d0-a325-e5056d849900
+  tls: true
+  reality-opts:
+    public-key: iJDZHJQcTGl2VIwbsRmlOG9JGbbmxNY5wmv1hc6OwQM
+    short-id: c31176b6
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇺🇸 美国 (United States) 226 - jack
+  server: 159.89.87.21
+  port: 28190
+  udp: true
+  type: vless
+  uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
+  servername: aws.amazon.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 227 - jack
+  server: 172.86.111.135
+  port: 443
+  udp: true
+  type: vless
+  uuid: 79ccb156-bfc6-11f1-9811-525400d1d4f7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: n25FmewpAEsvLl9Vr0bRFcz044f4IE7orWeWOzu8rwk
+  servername: www.nvidia.com
+  client-fingerprint: safari
+- name: 🇺🇸 美国 (United States) 228 - jack
+  server: vpn-us-004.fastervpn.world
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-us-004.fastervpn.world
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 229 - jack
+  server: 195.88.57.96
+  port: 443
+  udp: true
+  type: vless
+  uuid: 91344c03-b37f-42c5-90f1-cbb95c5cf256
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 9GEc6lOjnGQyyE1951OZSBMWt4uCXsOjKyj9fysxHH0
+    short-id: e4e77e76e6e49da7
+  servername: us-1.srv.dvzh.net
+  client-fingerprint: firefox
+- name: 🇺🇸 美国 (United States) 230 - jack
+  server: japan.com
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
+  tls: true
+  servername: c7dabe95.proxy-978.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: c7dabe95.proxy-978.pages.dev
+- name: 🇺🇸 美国 (United States) 231 - jack
+  server: 138.199.43.159
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇺🇸 美国 (United States) 232 - jack
+  server: ultimate-jaguar.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: ultimate-jaguar.rooster465.autos
+  skip-cert-verify: false
+- name: 🇺🇸 美国 (United States) 233 - jack
+  server: 172.67.215.39
+  port: 443
+  udp: true
+  type: vless
+  uuid: 532a9115-aee7-4d39-9638-1e5146de075b
+  tls: true
+  servername: muddy-math-c1fc.tmpnriqueau89.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /js/cHlpcC55Z2tray5kcGRucy5vcmc=/
+    headers:
+      Host: muddy-math-c1fc.tmpnriqueau89.workers.dev
+- name: 🇺🇸 美国 (United States) 234 - jack
+  server: 198.251.78.29
+  port: 2053
+  udp: true
+  type: vless
+  uuid: c423cc1b-f88e-421c-9a16-c480d84da20f
+  tls: true
+  reality-opts:
+    public-key: Uk5b-Wh_uxeCc7R8NS9iWE40xc0h9wWC04rSB9yhgAw
+    short-id: b5d625695ec82c7e
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇺🇸 美国 (United States) 235 - jack
+  server: 53edf574-tmm5c0-tpftcp-13x18.los.hyhuawei.com
+  port: 443
+  udp: true
+  type: hysteria2
+  password: e4499a62-0cfe-11eb-ad8c-f23c9164ca5d
+  sni: 53edf574-tmm5c0-tpftcp-13x18.los.hyhuawei.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 236 - jack
+  server: 63.141.128.22
+  port: 443
+  udp: true
+  type: vless
+  uuid: b8b01773-36b1-4b49-9bd0-6249f52345b4
+  tls: true
+  servername: MiSty-tooth-78cA.FoboGAH414-e7B.WoRKERs.DEv
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiTkNUaFg0ZnJNUjhhcyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: MiSty-tooth-78cA.FoboGAH414-e7B.WoRKERs.DEv
+- name: 🇺🇸 美国 (United States) 237 - jack
+  server: 172.64.53.55
+  port: 2082
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 238 - jack
+  server: hy2.561891.xyz
+  port: 44356
+  udp: true
+  type: hysteria2
+  password: dongtaiwang.com
+  sni: hy2.561891.xyz
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 239 - jack
+  server: 172.86.105.222
+  port: 443
+  udp: true
+  type: vless
+  uuid: 67a544a2-bfc6-11f1-9c3e-52540030ba36
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: n25FmewpAEsvLl9Vr0bRFcz044f4IE7orWeWOzu8rwk
+  servername: www.nvidia.com
+  client-fingerprint: safari
+- name: 🇺🇸 美国 (United States) 240 - jack
+  server: 195.123.235.177
+  port: 443
+  udp: true
+  type: vless
+  uuid: 729dd5f2-f5ff-4070-8c10-863eceded0b1
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 5B83otQ5ZQwtBFhR7xzsGJRXflkFKRJpQguYbE5JWGI
+    short-id: c85d029f5e8eb393
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 241 - jack
+  server: vpn-us-006.fastervpn.world
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-us-006.fastervpn.world
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 242 - jack
+  server: 167.17.68.89
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: vspeedfast.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: vspeedfast.org
+- name: 🇺🇸 美国 (United States) 243 - jack
+  server: 64.74.163.69
+  port: 18766
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: 4efe1af272e7292139b889f6a63ee071
+- name: 🇺🇸 美国 (United States) 244 - jack
+  server: 162.159.39.218
+  port: 2095
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: '/?ed=2560security=tls '
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 245 - jack
+  server: 169.40.42.184
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: ios
+- name: 🇺🇸 美国 (United States) 246 - jack
+  server: 23.95.222.127
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 352ff568-f971-4613-bf48-92997a5d44ed
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ribQDOlZ69PzvZ1EDF0EcmMvbq_T5RQrVRBSGUU2riU
+    short-id: 35cd899f8de04801
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 247 - jack
   server: tk1.high-speed-test-56424.me
   port: 443
   udp: true
@@ -2701,22 +2741,44 @@ proxies:
     short-id: 21270a66
   servername: aws.amazon.com
   client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 253 - jack
-  server: 38.107.236.166
-  port: 8443
+- name: 🇺🇸 美国 (United States) 248 - jack
+  server: 172.66.44.211
+  port: 2083
   udp: true
   type: vless
-  uuid: 48572af1-d091-457b-a86e-4a457e99927f
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   tls: true
-  servername: 3h-unitedstates3.09vpn.com
-  skip-cert-verify: true
+  servername: wk1.f1w.de5.net
+  skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /vless/
+    path: /
     headers:
-      Host: 3h-unitedstates3.09vpn.com
-- name: 🇺🇸 美国 (United States) 254 - jack
-  server: 169.40.42.225
+      Host: wk1.f1w.de5.net
+- name: 🇺🇸 美国 (United States) 249 - jack
+  server: vpn-us-001.fastervpn.world
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-us-001.fastervpn.world
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 250 - jack
+  server: 169.40.42.95
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 251 - jack
+  server: 169.40.42.232
   port: 443
   udp: true
   type: vless
@@ -2728,103 +2790,19 @@ proxies:
     short-id: c39cc7310a
   servername: yahoo.com
   client-fingerprint: ios
-- name: 🇺🇸 美国 (United States) 255 - jack
-  server: 163.192.14.135
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: 099830134df5ac3a04a4b21d39b8c395
-  sni: 163.192.14.135
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 256 - jack
-  server: 85.209.157.177
-  port: 8080
-  udp: true
-  type: hysteria2
-  password: dsmO0439gj_nX942GJRE_9j39fbcxv52_R
-  sni: hopp-transit.1cooldns.com
-  skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 257 - jack
-  server: happy-gibbon.rooster465.autos
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: happy-gibbon.rooster465.autos
-  skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 258 - jack
-  server: 104.21.13.77
+- name: 🇺🇸 美国 (United States) 252 - jack
+  server: ghosts-spasm.quick-cdn.net
   port: 443
   udp: true
   type: vless
-  uuid: 4b21fbc7-00c2-4665-9788-02153832f9e5
+  uuid: bc97af40-e59a-4d96-b0a3-349c35e45b48
   tls: true
-  servername: v2ray.aizgl.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /xray-ws
-    headers:
-      Host: v2ray.aizgl.com
-- name: 🇺🇸 美国 (United States) 259 - jack
-  server: guanwang.awsno.com
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: guanwang.awsno.com
+  servername: ghosts-spasm.quick-cdn.net
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /hls/cctv5phd.m3u8
-    headers:
-      Host: guanwang.awsno.com
-- name: 🇺🇸 美国 (United States) 260 - jack
-  server: 107.149.159.190
-  port: 8443
-  udp: true
-  type: hysteria2
-  password: 488b2611852407f03a681927cb91804b
-  sni: cf.shiranyu.xyz
-  skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 261 - jack
-  server: 15.204.233.41
-  port: 8882
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-- name: 🇺🇸 美国 (United States) 262 - jack
-  server: 172.93.122.4
-  port: 8443
-  udp: true
-  type: vless
-  uuid: b812a4e0-c90a-4864-8ffb-2af71d69d4f4
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: VDZdbh_RzDDZsHpYF58yUuuvXh93XnmkvpSqb50qG2U
-    short-id: 1be482b8e08aa0ef
-  servername: nl2.reddotcorp.org
-  client-fingerprint: safari
-- name: 🇺🇸 美国 (United States) 263 - jack
-  server: 150.241.101.17
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 47d9b534-8a0a-4bd2-90f1-1d6ade14427e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: 6ba85179e30d4fc2
-  servername: yandex.net
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 264 - jack
+    path: /ws
+- name: 🇺🇸 美国 (United States) 253 - jack
   server: 169.40.42.90
   port: 443
   udp: true
@@ -2837,39 +2815,40 @@ proxies:
     short-id: c39cc7310a
   servername: yahoo.com
   client-fingerprint: ios
-- name: 🇺🇸 美国 (United States) 265 - jack
-  server: 77.232.139.128
-  port: 11592
-  udp: true
-  type: hysteria2
-  password: 033dc6b532
-  sni: srv-8718e6.frd21.ru
-  skip-cert-verify: false
-  obfs: salamander
-  obfs-password: eba1b4766d2a26d6c167e2d2e9efabf4
-- name: 🇺🇸 美国 (United States) 266 - jack
-  server: starlink-ft.251313.xyz
-  port: 443
-  udp: true
-  type: hysteria2
-  password: https://xship.best
-  sni: xship.top
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 267 - jack
-  server: 201.34.159.221
+- name: 🇺🇸 美国 (United States) 254 - jack
+  server: 207.246.75.174
   port: 443
   udp: true
   type: vless
-  uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b
+  uuid: d90087c3-54f5-4283-a13f-615260c8b0c7
+  flow: xtls-rprx-vision
   tls: true
-  servername: us1.g4m1.biz
-  skip-cert-verify: true
-  client-fingerprint: random
-  network: grpc
-  grpc-opts:
-    grpc-service-name: cdn.v1.AssetService
-- name: 🇺🇸 美国 (United States) 268 - jack
-  server: 169.40.42.182
+  reality-opts:
+    public-key: hTweFDvbSucrGERtiiwDfoqD3vo_Z9cuaqboff3FTXQ
+  servername: googleapis.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 255 - jack
+  server: 107.155.57.51
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇺🇸 美国 (United States) 256 - jack
+  server: 2.24.124.64
+  port: 443
+  udp: true
+  type: vless
+  uuid: 719b9354-45e2-4718-8709-d965b64554db
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zpXR6Y36C8qUCIVk2p_j8C9KGeBk5xisLw66j3WFOls
+    short-id: 9f1fc5a631ef3126
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 257 - jack
+  server: 169.40.42.225
   port: 443
   udp: true
   type: vless
@@ -2881,245 +2860,73 @@ proxies:
     short-id: c39cc7310a
   servername: yahoo.com
   client-fingerprint: ios
-- name: 🇺🇸 美国 (United States) 269 - jack
-  server: 24.233.8.109
-  port: 443
+- name: 🇺🇸 美国 (United States) 258 - jack
+  server: 159.223.157.129
+  port: 8443
   udp: true
   type: hysteria2
-  password: 8294f130408299df8cab08c80bf6f819
-  sni: www.bing.com
+  password: suAmQS9LlInNq4Wumh-FUF4GGlpgmG_g
+  sni: 159.223.157.129
   skip-cert-verify: true
-  obfs: salamander
-  obfs-password: c8827ab99e316c5bd414e21afa915ddf
-- name: 🇺🇸 美国 (United States) 270 - jack
-  server: jumpernode.online
+- name: 🇺🇸 美国 (United States) 259 - jack
+  server: 23.191.200.206
   port: 443
   udp: true
   type: vless
-  uuid: ce7beb9a-5dc1-47b3-b3ff-94521430c446
+  uuid: 0deceb8d-9ac0-4be1-b23f-2a650ec94213
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: sDKrtAJk2VP_w1w7cFi2O86RdlvQ2E2An5xsRdJlgGE
-    short-id: 5ea30fc4
-  servername: yp.amazon.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 271 - jack
-  server: 31.76.5.137
-  port: 443
-  udp: true
-  type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: norw-mori-3.failspace.top
-  skip-cert-verify: true
+    public-key: 7j3hmlHrEDk3Kjx-dFG3E3jf0c6PZF45trIPFsuKWmI
+  servername: dl.google.com
   client-fingerprint: firefox
-- name: 🇺🇸 美国 (United States) 272 - jack
-  server: 169.40.42.229
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: ios
-- name: 🇺🇸 美国 (United States) 273 - jack
-  server: starlink-ft.251313.xyz
-  port: 443
-  udp: true
-  type: hysteria2
-  password: https://xship.2fa.cat
-  sni: www.cloudflare.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 274 - jack
-  server: 39.109.110.12
-  port: 21263
-  udp: true
-  type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: YinI5MijeZpRatg6QNDvP0qXEif-6VHC6gV5yoji4i4
-    short-id: 3d31326f95
-  servername: us1p1.xn--ghq880n3na965a.com
-  client-fingerprint: firefox
-- name: 🇺🇸 美国 (United States) 275 - jack
-  server: 169.40.42.223
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: ios
-- name: 🇺🇸 美国 (United States) 276 - jack
-  server: 77.91.68.70
-  port: 55983
-  udp: true
-  type: vless
-  uuid: f667a096-5231-4cfb-8759-92bb32473139
-  tls: true
-  reality-opts:
-    public-key: nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg
-    short-id: 0e
-  servername: yahoo.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 277 - jack
-  server: 98.89.22.134
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇺🇸 美国 (United States) 278 - jack
-  server: 107.149.159.190
-  port: 4433
-  udp: true
-  type: vless
-  uuid: 443d55c9-9b78-4ad4-ac34-5ada5b98e97e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ptrxM_lwiuXte-ynRSfM7AyayGbWrfCzkV1gQ5EgeSw
-    short-id: 0fa5bc397af019a2
-  servername: www.postgresql.org
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 279 - jack
-  server: 216.152.152.187
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇺🇸 美国 (United States) 280 - jack
-  server: 216.106.183.35
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇺🇸 美国 (United States) 281 - jack
-  server: 15.204.246.107
-  port: 8888
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-- name: 🇺🇸 美国 (United States) 282 - jack
-  server: 15.204.247.124
-  port: 2375
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: faBAoD54k87UJG7
-- name: 🇺🇸 美国 (United States) 283 - jack
-  server: 31.76.5.124
-  port: 443
-  udp: true
-  type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: norway-2.failspace.top
-  skip-cert-verify: true
-  client-fingerprint: firefox
-- name: 🇺🇸 美国 (United States) 284 - jack
-  server: awefd2313fefarg23fr24.pnuqcnp.cn
-  port: 443
+- name: 🇺🇸 美国 (United States) 260 - jack
+  server: 134.195.101.162
+  port: 21333
   udp: true
   type: anytls
-  password: 9sK2mP8xQ7vL3nZ6
-  sni: images.ctfassets.net
+  password: d7340868-b74c-455a-8ce0-17a52afa43b7
+  sni: apple.com
   skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 285 - jack
-  server: anytls2.864106.xyz
-  port: 19000
-  udp: true
-  type: anytls
-  password: github.com/Alvin9999-newpac/fanqiang
-  sni: anytls2.864106.xyz
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 286 - jack
-  server: 216.23.123.211
-  port: 30718
+- name: 🇺🇸 美国 (United States) 261 - jack
+  server: 169.40.42.202
+  port: 443
   udp: true
   type: vless
-  uuid: 88ee0e1e-a2a2-477e-88ce-4875c058aeba
-  tls: true
-  servername: 123.714542.xyz
-  skip-cert-verify: false
-  client-fingerprint: random
-  network: ws
-  ws-opts:
-    path: /Desi-vl
-    headers:
-      Host: 123.714542.xyz
-- name: 🇺🇸 美国 (United States) 287 - jack
-  server: 67.220.95.3
-  port: 18000
-  udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-- name: 🇺🇸 美国 (United States) 288 - jack
-  server: us1.xiaoliyu.us
-  port: 19512
-  udp: true
-  type: hysteria2
-  password: b8949dae-cb53-4b5a-ad9c-50f58c4656fb
-  sni: us1.xiaoliyu.us
-  skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 289 - jack
-  server: 186.246.19.79
-  port: 40443
-  udp: true
-  type: vless
-  uuid: 5e3f974b-06fc-4555-907a-6681391b7c17
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE
-    short-id: 2bc0
-  servername: deepl.com
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
   client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 290 - jack
-  server: goodus.zxmm.eu.org
-  port: 20002
+- name: 🇺🇸 美国 (United States) 262 - jack
+  server: 169.40.42.35
+  port: 443
   udp: true
-  type: trojan
-  password: 9da85a1b1b804a2a
-  sni: goodus.zxmm.eu.org
-  skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 291 - jack
-  server: 129.146.143.80
-  port: 48111
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: ios
+- name: 🇺🇸 美国 (United States) 263 - jack
+  server: xray2-direct-mci1-fs-ce.freesocks.work
+  port: 443
   udp: true
-  type: vmess
-  uuid: d4603cc2-e0ee-4651-83f5-1db5b7168177
-  alterId: 0
-  cipher: auto
-- name: 🇺🇸 美国 (United States) 292 - jack
-  server: 38.107.226.227
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇺🇸 美国 (United States) 293 - jack
+  type: vless
+  uuid: c8f7995a-1da3-4905-b499-d462738b57c1
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 7j3hmlHrEDk3Kjx-dFG3E3jf0c6PZF45trIPFsuKWmI
+  servername: dl.google.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 264 - jack
   server: 169.40.42.231
   port: 443
   udp: true
@@ -3132,8 +2939,295 @@ proxies:
     short-id: c39cc7310a
   servername: yahoo.com
   client-fingerprint: ios
-- name: 🇺🇸 美国 (United States) 294 - jack
-  server: www.nextkyc.com
+- name: 🇺🇸 美国 (United States) 265 - jack
+  server: 198.98.53.130
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: eDfN7SODQceIOmIAbtJJtK
+- name: 🇺🇸 美国 (United States) 266 - jack
+  server: 144.24.46.175
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: pbgLTkd5276SN1sZ
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 267 - jack
+  server: 66.163.115.23
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: aidrivercat.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: aidrivercat.org
+- name: 🇺🇸 美国 (United States) 268 - jack
+  server: 137.175.82.40
+  port: 30556
+  udp: true
+  type: vless
+  uuid: 949d278e-6d98-4014-84e9-59f1c6c93e0e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: EcmNQqZxyW4GCEQF-7nH54w3qgBkLzsfqFSgafGjB0E
+    short-id: d082f567
+  servername: www.lovelive-anime.jp
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 269 - jack
+  server: us-2.srv.dvzh.net
+  port: 443
+  udp: true
+  type: vless
+  uuid: 91344c03-b37f-42c5-90f1-cbb95c5cf256
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 9GEc6lOjnGQyyE1951OZSBMWt4uCXsOjKyj9fysxHH0
+    short-id: d30f9d846a7c8cba
+  servername: us-2.srv.dvzh.net
+  client-fingerprint: random
+- name: 🇺🇸 美国 (United States) 270 - jack
+  server: 128.241.25.72
+  port: 30021
+  udp: true
+  type: vless
+  uuid: 65f26a08-9a5e-4b28-9004-f98676cc1e49
+  tls: true
+  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+- name: 🇺🇸 美国 (United States) 271 - jack
+  server: 188.114.97.6
+  port: 2095
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 272 - jack
+  server: 169.40.42.15
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: firefox
+- name: 🇺🇸 美国 (United States) 273 - jack
+  server: 195.123.240.65
+  port: 443
+  udp: true
+  type: vless
+  uuid: ce18d0eb-5c71-41f9-96e5-1632e22456e4
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE
+    short-id: 19296c9f1bf9c7b1
+  servername: www.cloudflare.com
+  client-fingerprint: random
+- name: 🇺🇸 美国 (United States) 274 - jack
+  server: 169.40.42.223
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 275 - jack
+  server: 129.153.71.28
+  port: 28863
+  udp: true
+  type: vless
+  uuid: c87cdd8d-bc58-4e49-b8d9-7843098fe3be
+  tls: true
+  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+- name: 🇺🇸 美国 (United States) 276 - jack
+  server: 216.106.183.35
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: aksai.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: aksai.org
+- name: 🇺🇸 美国 (United States) 277 - jack
+  server: 45.159.79.71
+  port: 4443
+  udp: true
+  type: vless
+  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 321Ii2xbCoyll6WJ0Qm1Sh8qcC0kxXvUaZhe3kyasD8
+    short-id: a1b2c3d4e5f6a7b8
+  servername: sentry.io
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 278 - jack
+  server: 169.40.42.133
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 279 - jack
+  server: us13.vipjiedian.sbs
+  port: 21333
+  udp: true
+  type: anytls
+  password: 2d7bda32-a8b5-4416-a1ea-4559ff98f86e
+  sni: apple.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 280 - jack
+  server: 169.40.42.235
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: ios
+- name: 🇺🇸 美国 (United States) 281 - jack
+  server: 169.40.42.229
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: ios
+- name: 🇺🇸 美国 (United States) 282 - jack
+  server: 38.107.226.227
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: vspeedfast.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /linkvws
+- name: 🇺🇸 美国 (United States) 283 - jack
+  server: 169.40.42.182
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: ios
+- name: 🇺🇸 美国 (United States) 284 - jack
+  server: 169.40.42.224
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: random
+- name: 🇺🇸 美国 (United States) 285 - jack
+  server: ss.044.node-for-bigairport.win
+  port: 20006
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 792e0bdb-01db-450c-94c4-925151eb396e
+- name: 🇺🇸 美国 (United States) 286 - jack
+  server: 169.40.42.104
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 287 - jack
+  server: 104.21.70.21
+  port: 443
+  udp: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  tls: true
+  servername: a.cwvps.eu.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: a.cwvps.eu.org
+- name: 🇺🇸 美国 (United States) 288 - jack
+  server: 104.21.57.84
   port: 8443
   udp: true
   type: vmess
@@ -3148,13 +3242,558 @@ proxies:
     path: /lMnsZUN4/
     headers:
       Host: v2ray1.dozapp.xyz
-- name: 🇺🇸 美国 (United States) 295 - jack
-  server: 216.105.168.18
+- name: 🇺🇸 美国 (United States) 289 - jack
+  server: 15.204.97.214
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 290 - jack
+  server: adheres-scruple.quick-cdn.net
   port: 443
   udp: true
+  type: vless
+  uuid: 30141b47-419a-4338-9fae-4b10ec6bc24e
+  tls: true
+  servername: adheres-scruple.quick-cdn.net
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws
+- name: 🇺🇸 美国 (United States) 291 - jack
+  server: 169.40.42.74
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: ios
+- name: 🇺🇸 美国 (United States) 292 - jack
+  server: starlink-ft.251313.xyz
+  port: 443
+  udp: true
+  type: hysteria2
+  password: https://xship.top
+  sni: xship.top
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 293 - jack
+  server: ld.235231.xyz
+  port: 443
+  udp: true
+  type: vless
+  uuid: 65d3f9b3-d289-4a8e-9c87-90bba156de30
+  tls: true
+  servername: ld.235231.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇺🇸 美国 (United States) 294 - jack
+  server: 38.107.226.227
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 🇺🇸 美国 (United States) 295 - jack
+  server: www.shopify.com
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: guanwang.awsno.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /hls/cctv5phd.m3u8
+    headers:
+      Host: guanwang.awsno.com
+- name: 🇺🇸 美国 (United States) 296 - jack
+  server: 15.204.247.124
+  port: 2375
+  udp: true
   type: ss
-  cipher: chacha20-ietf-poly1305
-  password: bQZl7HDxSabr1FurTYQHFU
+  cipher: aes-256-gcm
+  password: faBAoD54k87UJG7
+- name: 🇺🇸 美国 (United States) 297 - jack
+  server: fu.baiproxy.us.ci
+  port: 2087
+  udp: true
+  type: vless
+  uuid: 55d9ec38-1b8a-454b-981a-6acfe8f56d8c
+  tls: true
+  servername: fu.baiproxy.us.ci
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇺🇸 美国 (United States) 298 - jack
+  server: 172.93.122.4
+  port: 8443
+  udp: true
+  type: vless
+  uuid: b812a4e0-c90a-4864-8ffb-2af71d69d4f4
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: VDZdbh_RzDDZsHpYF58yUuuvXh93XnmkvpSqb50qG2U
+    short-id: 1be482b8e08aa0ef
+  servername: nl2.reddotcorp.org
+  client-fingerprint: safari
+- name: 🇺🇸 美国 (United States) 299 - jack
+  server: 64.188.126.56
+  port: 43000
+  udp: true
+  type: vless
+  uuid: 47f79fc1-0646-40e8-8a58-73e85d183d5a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: jjbMUO41S9JE7ou_zbbDStzSYLzJVN_0O-j0f6b380E
+    short-id: bf4e20af99d3042d
+  servername: 64.188.126.56
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 300 - jack
+  server: 195.123.221.36
+  port: 443
+  udp: true
+  type: vless
+  uuid: 9c60369d-e5f9-4cec-9e63-1560e88e119a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: dIv6pPS-x6IzbiPyHX8nNdRrwI2yZl4y3YCeRWy9UgE
+    short-id: 3e67326f98ddb407
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 301 - jack
+  server: 31.76.7.45
+  port: 443
+  udp: true
+  type: trojan
+  password: f8b-U5TxjNRYKLvU0Js_6YeMCdj_82km
+  sni: cz-musicc.moritech.net
+  skip-cert-verify: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpcbeast
+- name: 🇺🇸 美国 (United States) 302 - jack
+  server: 31.77.227.10
+  port: 52006
+  udp: true
+  type: vless
+  uuid: bc659d88-a1e0-4c65-a49a-7b51b26a7a7f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fr.setlisting.ru
+  skip-cert-verify: false
+- name: 🇺🇸 美国 (United States) 303 - jack
+  server: 64.188.98.171
+  port: 443
+  udp: true
+  type: hysteria2
+  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
+  sni: germany3.h2corp.local
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 304 - jack
+  server: starlink-ft.251313.xyz
+  port: 443
+  udp: true
+  type: hysteria2
+  password: https://xship.2fa.cat
+  sni: www.cloudflare.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 305 - jack
+  server: app-q0zc4t.user-4gfyh5.workers.dev
+  port: 443
+  udp: true
+  type: vless
+  uuid: 07f9bc85-613f-4a33-8da1-191973c43c0a
+  tls: true
+  servername: app-q0zc4t.user-4gfyh5.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇺🇸 美国 (United States) 306 - jack
+  server: 31.76.5.137
+  port: 443
+  udp: true
+  type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  flow: xtls-rprx-vision
+  tls: true
+  servername: norw-mori-3.failspace.top
+  skip-cert-verify: true
+  client-fingerprint: firefox
+- name: 🇺🇸 美国 (United States) 307 - jack
+  server: 167.88.63.59
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: vspeedfast.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: vspeedfast.org
+- name: 🇺🇸 美国 (United States) 308 - jack
+  server: 104.21.70.21
+  port: 8080
+  udp: true
+  type: vless
+  uuid: a8b1d666-d3ba-4b17-90c4-ba7514c74f78
+  network: ws
+  ws-opts:
+    path: /xiron
+    headers:
+      Host: xstack.mahanfixe.workers.dev
+- name: 🇺🇸 美国 (United States) 309 - jack
+  server: 31.76.5.124
+  port: 443
+  udp: true
+  type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  flow: xtls-rprx-vision
+  tls: true
+  servername: norway-2.failspace.top
+  skip-cert-verify: true
+  client-fingerprint: firefox
+- name: 🇺🇸 美国 (United States) 310 - jack
+  server: 31.76.3.34
+  port: 443
+  udp: true
+  type: vless
+  uuid: 0d628b17-8ac4-49b9-a422-6b99077bfdf6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: CetY_ReGID1LBH275yWlxxOctI82PtgxR-fjYSRTKzM
+    short-id: 8a2b3c4d5e6f7012
+  servername: tradingview.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 311 - jack
+  server: 179.254.71.20
+  port: 52006
+  udp: true
+  type: vless
+  uuid: bc659d88-a1e0-4c65-a49a-7b51b26a7a7f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: pl.setlisting.ru
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 312 - jack
+  server: 72.56.41.33
+  port: 40443
+  udp: true
+  type: vless
+  uuid: 5be7fb02-b6a5-450f-b041-3243b98e8420
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Uvj5H9pDJP0HX2bN7NN7sCQwVCrC5N2NbKf-yuy1ikE
+    short-id: ee33
+  servername: deepl.com
+  client-fingerprint: firefox
+- name: 🇺🇸 美国 (United States) 313 - jack
+  server: 186.246.19.79
+  port: 40443
+  udp: true
+  type: vless
+  uuid: 5e3f974b-06fc-4555-907a-6681391b7c17
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE
+    short-id: 2bc0
+  servername: deepl.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 314 - jack
+  server: 85.209.157.177
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: dsmO0439gj_nX942GJRE_9j39fbcxv52_R
+  sni: hopp-transit.1cooldns.com
+  skip-cert-verify: false
+- name: 🇺🇸 美国 (United States) 315 - jack
+  server: 104.21.13.77
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4b21fbc7-00c2-4665-9788-02153832f9e5
+  tls: true
+  servername: v2ray.aizgl.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /xray-ws
+    headers:
+      Host: v2ray.aizgl.com
+- name: 🇺🇸 美国 (United States) 316 - jack
+  server: at-tati.failspace.top
+  port: 443
+  udp: true
+  type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  flow: xtls-rprx-vision
+  tls: true
+  servername: at-tati.failspace.top
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 317 - jack
+  server: xstack.mahanfixe.workers.dev
+  port: 443
+  udp: true
+  type: vless
+  uuid: a8b1d666-d3ba-4b17-90c4-ba7514c74f78
+  tls: true
+  servername: xstack.mahanfixe.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /xiron
+- name: 🇺🇸 美国 (United States) 318 - jack
+  server: 107.149.159.190
+  port: 4433
+  udp: true
+  type: vless
+  uuid: 443d55c9-9b78-4ad4-ac34-5ada5b98e97e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ptrxM_lwiuXte-ynRSfM7AyayGbWrfCzkV1gQ5EgeSw
+    short-id: 0fa5bc397af019a2
+  servername: www.postgresql.org
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 319 - jack
+  server: 107.149.159.190
+  port: 10443
+  udp: true
+  type: trojan
+  password: 8bdfa4e8dac99c57decdd8bf55d2da4c
+  sni: cf.shiranyu.xyz
+  skip-cert-verify: false
+- name: 🇺🇸 美国 (United States) 320 - jack
+  server: 104.16.72.30
+  port: 443
+  udp: true
+  type: vless
+  uuid: a8b1d666-d3ba-4b17-90c4-ba7514c74f78
+  tls: true
+  servername: xstack.mahanfixe.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /xiron
+    headers:
+      Host: xstack.mahanfixe.workers.dev
+- name: 🇺🇸 美国 (United States) 321 - jack
+  server: 150.241.101.17
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 47d9b534-8a0a-4bd2-90f1-1d6ade14427e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: 6ba85179e30d4fc2
+  servername: yandex.net
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 322 - jack
+  server: 107.149.159.190
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: 488b2611852407f03a681927cb91804b
+  sni: cf.shiranyu.xyz
+  skip-cert-verify: false
+- name: 🇺🇸 美国 (United States) 323 - jack
+  server: 188.114.97.6
+  port: 8080
+  udp: true
+  type: vless
+  uuid: a8b1d666-d3ba-4b17-90c4-ba7514c74f78
+  network: ws
+  ws-opts:
+    path: /xiron
+    headers:
+      Host: xstack.mahanfixe.workers.dev
+- name: 🇺🇸 美国 (United States) 324 - jack
+  server: 150.241.101.80
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 47d9b534-8a0a-4bd2-90f1-1d6ade14427e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: 6ba85179e30d4fc2
+  servername: yandex.net
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 325 - jack
+  server: 38.207.130.15
+  port: 443
+  udp: true
+  type: vless
+  uuid: ce7beb9a-5dc1-47b3-b3ff-94521430c446
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: sDKrtAJk2VP_w1w7cFi2O86RdlvQ2E2An5xsRdJlgGE
+    short-id: 5ea30fc4
+  servername: yp.amazon.com
+  client-fingerprint: firefox
+- name: 🇺🇸 美国 (United States) 326 - jack
+  server: us1.xiaoliyu.us
+  port: 19512
+  udp: true
+  type: hysteria2
+  password: b8949dae-cb53-4b5a-ad9c-50f58c4656fb
+  sni: us1.xiaoliyu.us
+  skip-cert-verify: false
+- name: 🇺🇸 美国 (United States) 327 - jack
+  server: 103.133.1.160
+  port: 80
+  udp: true
+  type: vless
+  uuid: eaf76557-2219-4799-8171-d7020adfefd0
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: soft-shadow-1e33.xicav73335.workers.dev
+- name: 🇺🇸 美国 (United States) 328 - jack
+  server: 24.233.8.109
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 8294f130408299df8cab08c80bf6f819
+  sni: www.bing.com
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: c8827ab99e316c5bd414e21afa915ddf
+- name: 🇺🇸 美国 (United States) 329 - jack
+  server: 77.232.139.128
+  port: 11592
+  udp: true
+  type: hysteria2
+  password: 033dc6b532
+  sni: srv-8718e6.frd21.ru
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: eba1b4766d2a26d6c167e2d2e9efabf4
+- name: 🇺🇸 美国 (United States) 330 - jack
+  server: polkadot03.failspace.top
+  port: 443
+  udp: true
+  type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  flow: xtls-rprx-vision
+  tls: true
+  servername: polkadot03.failspace.top
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 331 - jack
+  server: 43.255.156.101
+  port: 21263
+  udp: true
+  type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: YinI5MijeZpRatg6QNDvP0qXEif-6VHC6gV5yoji4i4
+    short-id: 3d31326f95
+  servername: us1p1.xn--ghq880n3na965a.com
+  client-fingerprint: random
+- name: 🇺🇸 美国 (United States) 332 - jack
+  server: anytls2.864106.xyz
+  port: 19000
+  udp: true
+  type: anytls
+  password: github.com/Alvin9999-newpac/fanqiang
+  sni: anytls2.864106.xyz
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 333 - jack
+  server: sbgfgov.vip22.wogacnmnagfwgov.com
+  port: 11222
+  udp: true
+  type: vmess
+  uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
+  alterId: 2
+  cipher: auto
+- name: 🇺🇸 美国 (United States) 334 - jack
+  server: 186.246.21.156
+  port: 40443
+  udp: true
+  type: vless
+  uuid: 17d29827-7cf1-4115-b40d-548e10ec355d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: bjOGTQ4xsiFbyCPM_WzoK53L130rW5vZJtuYDJx_pkM
+    short-id: aa3c
+  servername: deepl.com
+  client-fingerprint: qq
+- name: 🇺🇸 美国 (United States) 335 - jack
+  server: 77.91.68.70
+  port: 55983
+  udp: true
+  type: vless
+  uuid: f667a096-5231-4cfb-8759-92bb32473139
+  tls: true
+  reality-opts:
+    public-key: nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg
+    short-id: 0e
+  servername: yahoo.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 336 - jack
+  server: sbgfgov.vip21.wogacnmnagfwgov.com
+  port: 11221
+  udp: true
+  type: vmess
+  uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
+  alterId: 2
+  cipher: auto
+- name: 🇺🇸 美国 (United States) 337 - jack
+  server: awefd2313fefarg23fr24.pnuqcnp.cn
+  port: 443
+  udp: true
+  type: anytls
+  password: 9sK2mP8xQ7vL3nZ6
+  sni: images.ctfassets.net
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -3455,6 +4094,48 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 293 - jack
   - 🇺🇸 美国 (United States) 294 - jack
   - 🇺🇸 美国 (United States) 295 - jack
+  - 🇺🇸 美国 (United States) 296 - jack
+  - 🇺🇸 美国 (United States) 297 - jack
+  - 🇺🇸 美国 (United States) 298 - jack
+  - 🇺🇸 美国 (United States) 299 - jack
+  - 🇺🇸 美国 (United States) 300 - jack
+  - 🇺🇸 美国 (United States) 301 - jack
+  - 🇺🇸 美国 (United States) 302 - jack
+  - 🇺🇸 美国 (United States) 303 - jack
+  - 🇺🇸 美国 (United States) 304 - jack
+  - 🇺🇸 美国 (United States) 305 - jack
+  - 🇺🇸 美国 (United States) 306 - jack
+  - 🇺🇸 美国 (United States) 307 - jack
+  - 🇺🇸 美国 (United States) 308 - jack
+  - 🇺🇸 美国 (United States) 309 - jack
+  - 🇺🇸 美国 (United States) 310 - jack
+  - 🇺🇸 美国 (United States) 311 - jack
+  - 🇺🇸 美国 (United States) 312 - jack
+  - 🇺🇸 美国 (United States) 313 - jack
+  - 🇺🇸 美国 (United States) 314 - jack
+  - 🇺🇸 美国 (United States) 315 - jack
+  - 🇺🇸 美国 (United States) 316 - jack
+  - 🇺🇸 美国 (United States) 317 - jack
+  - 🇺🇸 美国 (United States) 318 - jack
+  - 🇺🇸 美国 (United States) 319 - jack
+  - 🇺🇸 美国 (United States) 320 - jack
+  - 🇺🇸 美国 (United States) 321 - jack
+  - 🇺🇸 美国 (United States) 322 - jack
+  - 🇺🇸 美国 (United States) 323 - jack
+  - 🇺🇸 美国 (United States) 324 - jack
+  - 🇺🇸 美国 (United States) 325 - jack
+  - 🇺🇸 美国 (United States) 326 - jack
+  - 🇺🇸 美国 (United States) 327 - jack
+  - 🇺🇸 美国 (United States) 328 - jack
+  - 🇺🇸 美国 (United States) 329 - jack
+  - 🇺🇸 美国 (United States) 330 - jack
+  - 🇺🇸 美国 (United States) 331 - jack
+  - 🇺🇸 美国 (United States) 332 - jack
+  - 🇺🇸 美国 (United States) 333 - jack
+  - 🇺🇸 美国 (United States) 334 - jack
+  - 🇺🇸 美国 (United States) 335 - jack
+  - 🇺🇸 美国 (United States) 336 - jack
+  - 🇺🇸 美国 (United States) 337 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -3755,5 +4436,47 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 293 - jack
   - 🇺🇸 美国 (United States) 294 - jack
   - 🇺🇸 美国 (United States) 295 - jack
+  - 🇺🇸 美国 (United States) 296 - jack
+  - 🇺🇸 美国 (United States) 297 - jack
+  - 🇺🇸 美国 (United States) 298 - jack
+  - 🇺🇸 美国 (United States) 299 - jack
+  - 🇺🇸 美国 (United States) 300 - jack
+  - 🇺🇸 美国 (United States) 301 - jack
+  - 🇺🇸 美国 (United States) 302 - jack
+  - 🇺🇸 美国 (United States) 303 - jack
+  - 🇺🇸 美国 (United States) 304 - jack
+  - 🇺🇸 美国 (United States) 305 - jack
+  - 🇺🇸 美国 (United States) 306 - jack
+  - 🇺🇸 美国 (United States) 307 - jack
+  - 🇺🇸 美国 (United States) 308 - jack
+  - 🇺🇸 美国 (United States) 309 - jack
+  - 🇺🇸 美国 (United States) 310 - jack
+  - 🇺🇸 美国 (United States) 311 - jack
+  - 🇺🇸 美国 (United States) 312 - jack
+  - 🇺🇸 美国 (United States) 313 - jack
+  - 🇺🇸 美国 (United States) 314 - jack
+  - 🇺🇸 美国 (United States) 315 - jack
+  - 🇺🇸 美国 (United States) 316 - jack
+  - 🇺🇸 美国 (United States) 317 - jack
+  - 🇺🇸 美国 (United States) 318 - jack
+  - 🇺🇸 美国 (United States) 319 - jack
+  - 🇺🇸 美国 (United States) 320 - jack
+  - 🇺🇸 美国 (United States) 321 - jack
+  - 🇺🇸 美国 (United States) 322 - jack
+  - 🇺🇸 美国 (United States) 323 - jack
+  - 🇺🇸 美国 (United States) 324 - jack
+  - 🇺🇸 美国 (United States) 325 - jack
+  - 🇺🇸 美国 (United States) 326 - jack
+  - 🇺🇸 美国 (United States) 327 - jack
+  - 🇺🇸 美国 (United States) 328 - jack
+  - 🇺🇸 美国 (United States) 329 - jack
+  - 🇺🇸 美国 (United States) 330 - jack
+  - 🇺🇸 美国 (United States) 331 - jack
+  - 🇺🇸 美国 (United States) 332 - jack
+  - 🇺🇸 美国 (United States) 333 - jack
+  - 🇺🇸 美国 (United States) 334 - jack
+  - 🇺🇸 美国 (United States) 335 - jack
+  - 🇺🇸 美国 (United States) 336 - jack
+  - 🇺🇸 美国 (United States) 337 - jack
 rules:
 - MATCH,PROXIES

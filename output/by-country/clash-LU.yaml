@@ -17,20 +17,16 @@ proxies:
   servername: www.apple.com
   client-fingerprint: chrome
 - name: 🇱🇺 卢森堡 (Luxembourg) 02 - jack
-  server: lbeiggdz.smart-cats.ru
+  server: mfyousheng.nl.eu.org
   port: 443
   udp: true
-  type: vless
-  uuid: 8325bd97-b77c-4917-acaa-2446e9e8cc03
-  tls: true
-  reality-opts:
-    public-key: mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY
-    short-id: 79651ae525860543
-  servername: vk.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: haknewhpjmv
+  type: trojan
+  password: Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q
+  sni: mfyousheng.nl.eu.org
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /tjwsLhx0SFASG4l9FERJ1g
 proxy-groups:
 - name: PROXIES
   type: select

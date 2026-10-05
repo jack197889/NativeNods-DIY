@@ -31,6 +31,19 @@ proxies:
   client-fingerprint: firefox
 - name: 🇨🇾 塞浦路斯 (Cyprus) 03 - jack
   server: 5.253.28.240
+  port: 40443
+  udp: true
+  type: vless
+  uuid: 405b964e-a2d2-454f-aaaa-711cc218897c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
+    short-id: 88b6
+  servername: deepl.com
+  client-fingerprint: firefox
+- name: 🇨🇾 塞浦路斯 (Cyprus) 04 - jack
+  server: 5.253.28.240
   port: 2443
   udp: true
   type: vless
@@ -52,6 +65,7 @@ proxy-groups:
   - 🇨🇾 塞浦路斯 (Cyprus) 01 - jack
   - 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
   - 🇨🇾 塞浦路斯 (Cyprus) 03 - jack
+  - 🇨🇾 塞浦路斯 (Cyprus) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -60,5 +74,6 @@ proxy-groups:
   - 🇨🇾 塞浦路斯 (Cyprus) 01 - jack
   - 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
   - 🇨🇾 塞浦路斯 (Cyprus) 03 - jack
+  - 🇨🇾 塞浦路斯 (Cyprus) 04 - jack
 rules:
 - MATCH,PROXIES

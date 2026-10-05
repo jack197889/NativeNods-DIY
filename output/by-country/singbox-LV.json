@@ -7,29 +7,37 @@
       "type": "shadowsocks",
       "tag": "🇱🇻 拉脱维亚 (Latvia) 01 - jack",
       "server": "185.135.86.175",
-      "server_port": 9036,
-      "method": "aes-256-cfb",
-      "password": "hbtvgUz5uNYyB3Rf"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 02 - jack",
-      "server": "185.135.86.175",
       "server_port": 9082,
       "method": "aes-256-cfb",
       "password": "45xgMgm386pjWjTx"
     },
     {
       "type": "shadowsocks",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 02 - jack",
+      "server": "185.135.86.175",
+      "server_port": 9034,
+      "method": "aes-256-cfb",
+      "password": "Yg4MbdXFQ9HFFVY6"
+    },
+    {
+      "type": "shadowsocks",
       "tag": "🇱🇻 拉脱维亚 (Latvia) 03 - jack",
       "server": "185.135.86.175",
-      "server_port": 9017,
+      "server_port": 9068,
       "method": "aes-256-cfb",
-      "password": "HAVAdE3nXhqA5nHp"
+      "password": "mwgRg9hRq3b4Qnwb"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 04 - jack",
+      "server": "185.135.86.175",
+      "server_port": 9036,
+      "method": "aes-256-cfb",
+      "password": "hbtvgUz5uNYyB3Rf"
     },
     {
       "type": "vless",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 04 - jack",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 05 - jack",
       "server": "138.124.180.137",
       "server_port": 443,
       "uuid": "5234b2b7-5e07-422c-8159-d62a676c00c6",
@@ -49,48 +57,6 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 05 - jack",
-      "server": "latinki.pumpkinpie.study",
-      "server_port": 443,
-      "uuid": "8f6e49e6-7f03-4f10-9da9-1716158d80ed",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "latinki.pumpkinpie.study",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "wHTq_owme8N6237B37GhneBcNJQtzRdIFouRkSscgnQ",
-          "short_id": "40fac5d64bc6a540"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 06 - jack",
-      "server": "104.252.19.114",
-      "server_port": 8443,
-      "uuid": "40cba749-bca9-4089-9c02-84a357244ce0",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "omvpn.info",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "cD8mVX41lqyVGCuPz0-tQWcNqkMxiPZxU7JJsyyNAEI",
-          "short_id": ""
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -99,8 +65,7 @@
         "🇱🇻 拉脱维亚 (Latvia) 02 - jack",
         "🇱🇻 拉脱维亚 (Latvia) 03 - jack",
         "🇱🇻 拉脱维亚 (Latvia) 04 - jack",
-        "🇱🇻 拉脱维亚 (Latvia) 05 - jack",
-        "🇱🇻 拉脱维亚 (Latvia) 06 - jack"
+        "🇱🇻 拉脱维亚 (Latvia) 05 - jack"
       ]
     },
     {
@@ -111,8 +76,7 @@
         "🇱🇻 拉脱维亚 (Latvia) 02 - jack",
         "🇱🇻 拉脱维亚 (Latvia) 03 - jack",
         "🇱🇻 拉脱维亚 (Latvia) 04 - jack",
-        "🇱🇻 拉脱维亚 (Latvia) 05 - jack",
-        "🇱🇻 拉脱维亚 (Latvia) 06 - jack"
+        "🇱🇻 拉脱维亚 (Latvia) 05 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

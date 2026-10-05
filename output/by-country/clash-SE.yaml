@@ -5,6 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - jack
+  server: 143.246.196.207
+  port: 443
+  udp: true
+  type: vless
+  uuid: ac0c2945-b758-11f1-8181-54db13ea7d40
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: wSjV1yR_rhDUdoNbM9zIXNGLASLp9RorComnyoayo2c
+  servername: www.blocket.se
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 02 - jack
   server: 132.243.231.4
   port: 443
   udp: true
@@ -17,7 +29,43 @@ proxies:
     short-id: 5efa80b939612291
   servername: d3-se1.cloud-cdn.xyz
   client-fingerprint: firefox
-- name: 🇸🇪 瑞典 (Sweden) 02 - jack
+- name: 🇸🇪 瑞典 (Sweden) 03 - jack
+  server: 143.246.199.124
+  port: 443
+  udp: true
+  type: vless
+  uuid: 79ccb156-bfc6-11f1-9811-525400d1d4f7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: wSjV1yR_rhDUdoNbM9zIXNGLASLp9RorComnyoayo2c
+  servername: www.blocket.se
+  client-fingerprint: chrome
+- name: 🇸🇪 瑞典 (Sweden) 04 - jack
+  server: 167.82.0.1
+  port: 80
+  udp: true
+  type: vless
+  uuid: 33016f3d-8509-493c-bd8b-d26447d48135
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: stigmata.ir
+- name: 🇸🇪 瑞典 (Sweden) 05 - jack
+  server: 132.243.231.12
+  port: 443
+  udp: true
+  type: vless
+  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zWDvtTWK-cWWwHDMHMXcOpQy4k3EKp7yw-5e0wTZAUM
+    short-id: 5efa80b939612291
+  servername: d3-se1.cloud-cdn.xyz
+  client-fingerprint: random
+- name: 🇸🇪 瑞典 (Sweden) 06 - jack
   server: 31.207.7.74
   port: 443
   udp: true
@@ -30,7 +78,7 @@ proxies:
     short-id: 457ae5b8bef4d1b3
   servername: pkg.go.dev
   client-fingerprint: firefox
-- name: 🇸🇪 瑞典 (Sweden) 03 - jack
+- name: 🇸🇪 瑞典 (Sweden) 07 - jack
   server: 62.60.159.81
   port: 2053
   udp: true
@@ -45,19 +93,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpce5bb9e71
-- name: 🇸🇪 瑞典 (Sweden) 04 - jack
-  server: 143.246.196.207
-  port: 443
-  udp: true
-  type: vless
-  uuid: ac0c2945-b758-11f1-8181-54db13ea7d40
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: wSjV1yR_rhDUdoNbM9zIXNGLASLp9RorComnyoayo2c
-  servername: www.blocket.se
-  client-fingerprint: firefox
-- name: 🇸🇪 瑞典 (Sweden) 05 - jack
+- name: 🇸🇪 瑞典 (Sweden) 08 - jack
   server: svip.skycon808.com
   port: 60005
   udp: true
@@ -65,43 +101,6 @@ proxies:
   password: 13f0acfa-38c1-4e82-a758-583aa31740df
   sni: xjp18.2uuzhe.com
   skip-cert-verify: true
-- name: 🇸🇪 瑞典 (Sweden) 06 - jack
-  server: 144.31.235.214
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8f6e49e6-7f03-4f10-9da9-1716158d80ed
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: V2JprbR_aJkS7uX6anyU3nrswGxdvDQT2HpY4WnzuC8
-    short-id: 5629431325884ff0
-  servername: swed4.o4ka-internet.com
-  client-fingerprint: firefox
-- name: 🇸🇪 瑞典 (Sweden) 07 - jack
-  server: 132.243.231.12
-  port: 443
-  udp: true
-  type: vless
-  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zWDvtTWK-cWWwHDMHMXcOpQy4k3EKp7yw-5e0wTZAUM
-    short-id: 5efa80b939612291
-  servername: d3-se1.cloud-cdn.xyz
-  client-fingerprint: chrome
-- name: 🇸🇪 瑞典 (Sweden) 08 - jack
-  server: psf-2.weedly.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: 33016f3d-8509-493c-bd8b-d26447d48135
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: stigmata.ir
 proxy-groups:
 - name: PROXIES
   type: select
