@@ -11,28 +11,41 @@ proxies:
   type: vless
   uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
 - name: 🇮🇹 意大利 (Italy) 02 - jack
-  server: 89.41.172.85
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇮🇹 意大利 (Italy) 03 - jack
-  server: 185.164.175.81
-  port: 19999
+  server: 57.131.48.45
+  port: 8388
   udp: true
   type: ss
   cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇮🇹 意大利 (Italy) 04 - jack
+  password: itzvpn@321
+- name: 🇮🇹 意大利 (Italy) 03 - jack
   server: 91.201.65.122
-  port: 9070
+  port: 9039
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: bf7v334KKDV3YDhH
+  password: qYEN5HX4JKeVCdEC
+- name: 🇮🇹 意大利 (Italy) 04 - jack
+  server: 91.201.65.122
+  port: 9074
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: p5wSkb2uM3pKSS3j
 - name: 🇮🇹 意大利 (Italy) 05 - jack
+  server: 91.201.65.122
+  port: 9065
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: PeHSHm5SqEjBuEXE
+- name: 🇮🇹 意大利 (Italy) 06 - jack
+  server: 91.201.65.122
+  port: 9002
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: b8KkNDjEd5QqFyRm
+- name: 🇮🇹 意大利 (Italy) 07 - jack
   server: 57.131.38.163
   port: 2053
   udp: true
@@ -43,29 +56,8 @@ proxies:
     public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
     short-id: 5b8a942318178e7b
   servername: www.apple.com
-  client-fingerprint: edge
-- name: 🇮🇹 意大利 (Italy) 06 - jack
-  server: 91.201.65.122
-  port: 9053
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: SBM7R883jBmnqe6C
-- name: 🇮🇹 意大利 (Italy) 07 - jack
-  server: 91.201.65.122
-  port: 9002
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: b8KkNDjEd5QqFyRm
+  client-fingerprint: firefox
 - name: 🇮🇹 意大利 (Italy) 08 - jack
-  server: 91.201.65.122
-  port: 9092
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: TyNkGmp9hs6eGpDK
-- name: 🇮🇹 意大利 (Italy) 09 - jack
   server: 82.118.16.187
   port: 443
   udp: true
@@ -78,65 +70,42 @@ proxies:
     short-id: cd6065902eea7a02
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇮🇹 意大利 (Italy) 10 - jack
-  server: 91.201.65.122
-  port: 9039
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: qYEN5HX4JKeVCdEC
-- name: 🇮🇹 意大利 (Italy) 11 - jack
+- name: 🇮🇹 意大利 (Italy) 09 - jack
   server: 91.201.65.122
   port: 9059
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: 9XwYyZsK8SNzQDtY
+- name: 🇮🇹 意大利 (Italy) 10 - jack
+  server: 91.201.65.122
+  port: 9053
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: SBM7R883jBmnqe6C
+- name: 🇮🇹 意大利 (Italy) 11 - jack
+  server: 91.201.65.122
+  port: 9070
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: bf7v334KKDV3YDhH
 - name: 🇮🇹 意大利 (Italy) 12 - jack
   server: 91.201.65.122
-  port: 9074
+  port: 9092
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: p5wSkb2uM3pKSS3j
+  password: TyNkGmp9hs6eGpDK
 - name: 🇮🇹 意大利 (Italy) 13 - jack
   server: 91.201.65.122
-  port: 9065
+  port: 9050
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: PeHSHm5SqEjBuEXE
+  password: FG5ddLsMPbV5CutE
 - name: 🇮🇹 意大利 (Italy) 14 - jack
-  server: 116.204.164.27
-  port: 7443
-  udp: true
-  type: vless
-  uuid: 00274dd7-7cee-420d-9942-b24d047611a7
-  tls: true
-  servername: 8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev
-- name: 🇮🇹 意大利 (Italy) 15 - jack
-  server: 116.204.164.5
-  port: 7443
-  udp: true
-  type: vless
-  uuid: 0f2765c2-1845-4545-987e-337c7cfb4e52
-  tls: true
-  servername: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
-- name: 🇮🇹 意大利 (Italy) 16 - jack
   server: 204.216.216.23
   port: 1114
   udp: true
@@ -149,26 +118,20 @@ proxies:
     short-id: 79a1e14b
   servername: yahoo.com
   client-fingerprint: chrome
-- name: 🇮🇹 意大利 (Italy) 17 - jack
-  server: 57.131.48.45
-  port: 8388
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: itzvpn@321
-- name: 🇮🇹 意大利 (Italy) 18 - jack
-  server: 82.118.16.189
+- name: 🇮🇹 意大利 (Italy) 15 - jack
+  server: 80.211.27.249
   port: 443
   udp: true
   type: vless
-  uuid: d5e5f5a1-0f23-4c49-af9f-4be445bf9d8e
-  flow: xtls-rprx-vision
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   tls: true
-  reality-opts:
-    public-key: SjGkzJQ9I6ZZjC3V73atcPMczhMm0oiTrB8mUQXz1HY
-    short-id: 37fbf155c7a9f3ff
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  servername: fzo5i.ir46.90k.hh.ov0.kdns.fr
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /glasspanel/guest000_0_5de14443985f/
+    headers:
+      Host: fzo5i.ir46.90k.hh.ov0.kdns.fr
 proxy-groups:
 - name: PROXIES
   type: select
@@ -189,9 +152,6 @@ proxy-groups:
   - 🇮🇹 意大利 (Italy) 13 - jack
   - 🇮🇹 意大利 (Italy) 14 - jack
   - 🇮🇹 意大利 (Italy) 15 - jack
-  - 🇮🇹 意大利 (Italy) 16 - jack
-  - 🇮🇹 意大利 (Italy) 17 - jack
-  - 🇮🇹 意大利 (Italy) 18 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -212,8 +172,5 @@ proxy-groups:
   - 🇮🇹 意大利 (Italy) 13 - jack
   - 🇮🇹 意大利 (Italy) 14 - jack
   - 🇮🇹 意大利 (Italy) 15 - jack
-  - 🇮🇹 意大利 (Italy) 16 - jack
-  - 🇮🇹 意大利 (Italy) 17 - jack
-  - 🇮🇹 意大利 (Italy) 18 - jack
 rules:
 - MATCH,PROXIES

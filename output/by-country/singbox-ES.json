@@ -4,29 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 01 - jack",
-      "server": "83.147.18.3",
-      "server_port": 443,
-      "uuid": "9f61cdf4-810d-4052-bbc7-2da0c8e20104",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA",
-          "short_id": "fd8cf7e1173f0edb"
-        }
-      }
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇪🇸 西班牙 (Spain) 02 - jack",
+      "tag": "🇪🇸 西班牙 (Spain) 01 - jack",
       "server": "185.174.137.172",
       "server_port": 8446,
       "password": "e9dc02d400b67c727aca1620",
@@ -37,12 +16,20 @@
       }
     },
     {
-      "type": "shadowsocks",
+      "type": "vmess",
+      "tag": "🇪🇸 西班牙 (Spain) 02 - jack",
+      "server": "66.163.118.73",
+      "server_port": 22324,
+      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
+      "security": "auto"
+    },
+    {
+      "type": "vmess",
       "tag": "🇪🇸 西班牙 (Spain) 03 - jack",
-      "server": "108.181.121.226",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "WSyL4XTwNsdv"
+      "server": "85.90.217.42",
+      "server_port": 22324,
+      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
+      "security": "auto"
     },
     {
       "type": "vless",
@@ -76,7 +63,7 @@
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -85,36 +72,16 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 06 - jack",
-      "server": "196.245.52.146",
-      "server_port": 25535,
-      "uuid": "c379d8e4-c67d-42ec-a3ed-ca99d1ad0546",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.microsoft.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Jh7CocBJSA55VZcLfXwXwoQ_Hi5pV-L1vv1SY-IrSh4",
-          "short_id": "7642ce57308852e7"
-        }
-      }
-    },
-    {
       "type": "shadowsocks",
-      "tag": "🇪🇸 西班牙 (Spain) 07 - jack",
-      "server": "140.174.184.5",
+      "tag": "🇪🇸 西班牙 (Spain) 06 - jack",
+      "server": "108.181.121.226",
       "server_port": 8388,
       "method": "chacha20-ietf-poly1305",
-      "password": "qItG8SueYQcP"
+      "password": "WSyL4XTwNsdv"
     },
     {
       "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 08 - jack",
+      "tag": "🇪🇸 西班牙 (Spain) 07 - jack",
       "server": "46.28.71.247",
       "server_port": 443,
       "uuid": "12c53e32-e589-47d6-b857-e4132294f767",
@@ -124,7 +91,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -132,6 +99,34 @@
           "short_id": "0dfc23fe80778c00"
         }
       }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇪🇸 西班牙 (Spain) 08 - jack",
+      "server": "66.163.118.73",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "mygptagent.org",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "mygptagent.org"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇪🇸 西班牙 (Spain) 09 - jack",
+      "server": "140.174.184.5",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "qItG8SueYQcP"
     },
     {
       "type": "selector",
@@ -145,7 +140,8 @@
         "🇪🇸 西班牙 (Spain) 05 - jack",
         "🇪🇸 西班牙 (Spain) 06 - jack",
         "🇪🇸 西班牙 (Spain) 07 - jack",
-        "🇪🇸 西班牙 (Spain) 08 - jack"
+        "🇪🇸 西班牙 (Spain) 08 - jack",
+        "🇪🇸 西班牙 (Spain) 09 - jack"
       ]
     },
     {
@@ -159,7 +155,8 @@
         "🇪🇸 西班牙 (Spain) 05 - jack",
         "🇪🇸 西班牙 (Spain) 06 - jack",
         "🇪🇸 西班牙 (Spain) 07 - jack",
-        "🇪🇸 西班牙 (Spain) 08 - jack"
+        "🇪🇸 西班牙 (Spain) 08 - jack",
+        "🇪🇸 西班牙 (Spain) 09 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
