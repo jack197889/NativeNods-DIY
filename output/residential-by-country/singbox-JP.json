@@ -5,20 +5,24 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇬🇪 格鲁吉亚 (Georgia) 01 - jack",
-      "server": "geo.shkola112.site",
-      "server_port": 443,
-      "uuid": "76ac91c5-ea82-4046-8ee7-2ffbb563ac94",
+      "tag": "🇯🇵 日本 (Japan) 01 (家宽) - jack",
+      "server": "210.152.85.154",
+      "server_port": 19364,
+      "uuid": "0c4f2fbc-df76-4320-bc6d-52e1df96ae25",
       "tls": {
         "enabled": true,
-        "server_name": "geo.shkola112.site",
-        "insecure": false
+        "server_name": "ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
-        "path": "/api-vless",
+        "path": "/@Marisa_kristi",
         "headers": {
-          "Host": "geo.shkola112.site"
+          "Host": "ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev"
         }
       }
     },
@@ -27,14 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇪 格鲁吉亚 (Georgia) 01 - jack"
+        "🇯🇵 日本 (Japan) 01 (家宽) - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇪 格鲁吉亚 (Georgia) 01 - jack"
+        "🇯🇵 日本 (Japan) 01 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

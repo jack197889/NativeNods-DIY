@@ -5,6 +5,69 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01 - jack
+  server: 217.30.10.44
+  port: 9006
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: FAdUvMJUq5vDgKEq
+- name: 🇵🇱 波兰 (Poland) 02 - jack
+  server: 217.30.10.44
+  port: 9062
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: tkhHVxxfM2QErBWe
+- name: 🇵🇱 波兰 (Poland) 03 - jack
+  server: 217.30.10.44
+  port: 9095
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: N7j3pdTYkKmsy8CR
+- name: 🇵🇱 波兰 (Poland) 04 - jack
+  server: 217.30.10.44
+  port: 9063
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: aQqJbtwFGcCCaeL3
+- name: 🇵🇱 波兰 (Poland) 05 - jack
+  server: 177.1.192.74
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: qC0g7Y0pwyLFTGAPG2zfZNuo64Cda695wdKgLU4KkF8
+    short-id: 770618b6
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 06 - jack
+  server: 144.31.131.38
+  port: 443
+  udp: true
+  type: vless
+  uuid: adc11f30-e4cb-4985-bf5e-f9ded69c019f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
+    short-id: db04ce8bdb8900f1
+  servername: prod.pl-node-01.security-sbrf.ru
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 07 - jack
+  server: 70.34.255.101
+  port: 80
+  udp: true
+  type: vless
+  uuid: a889262f-5fe3-4c93-9aaa-3721318dd389
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇵🇱 波兰 (Poland) 08 - jack
   server: 70.34.252.154
   port: 80
   udp: true
@@ -13,23 +76,15 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇵🇱 波兰 (Poland) 02 - jack
-  server: 45.192.12.93
+- name: 🇵🇱 波兰 (Poland) 09 - jack
+  server: 217.60.33.215
   port: 443
   udp: true
   type: hysteria2
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  sni: admin.wwwinternetvideo.click
-  skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 03 - jack
-  server: 202.78.163.237
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: cheerful-swan.rooster465.autos
-  skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 04 - jack
+  password: 865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01
+  sni: streambox.wwwinternetvideo.click
+  skip-cert-verify: true
+- name: 🇵🇱 波兰 (Poland) 10 - jack
   server: 81.90.20.200
   port: 443
   udp: true
@@ -40,7 +95,36 @@ proxies:
   servername: pl.pupoe.sbs
   skip-cert-verify: false
   client-fingerprint: firefox
-- name: 🇵🇱 波兰 (Poland) 05 - jack
+- name: 🇵🇱 波兰 (Poland) 11 - jack
+  server: cheerful-swan.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: cheerful-swan.rooster465.autos
+  skip-cert-verify: true
+- name: 🇵🇱 波兰 (Poland) 12 - jack
+  server: 177.1.192.72
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: y3YCXTqEVks0nGfiSwJ43ol4pY69-mWFUZsdmveoVDM
+    short-id: 46455ff0
+  servername: addons.mozilla.org
+  client-fingerprint: randomized
+- name: 🇵🇱 波兰 (Poland) 13 - jack
+  server: 45.192.12.93
+  port: 443
+  udp: true
+  type: hysteria2
+  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
+  sni: admin.wwwinternetvideo.click
+  skip-cert-verify: false
+- name: 🇵🇱 波兰 (Poland) 14 - jack
   server: 83.168.107.220
   port: 443
   udp: true
@@ -52,83 +136,29 @@ proxies:
     public-key: s0lbZ5BO3ctZjE8DzsXkNL0NvLl6FgLG6532NQzXigo
     short-id: c56d4f1c
   servername: google.com
-  client-fingerprint: safari
-- name: 🇵🇱 波兰 (Poland) 06 - jack
-  server: 70.34.255.101
-  port: 80
-  udp: true
-  type: vless
-  uuid: a889262f-5fe3-4c93-9aaa-3721318dd389
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇵🇱 波兰 (Poland) 07 - jack
-  server: 217.60.33.215
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01
-  sni: streambox.wwwinternetvideo.click
-  skip-cert-verify: true
-- name: 🇵🇱 波兰 (Poland) 08 - jack
-  server: go.wwwinternetvideo.click
-  port: 443
-  udp: true
-  type: hysteria2
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  sni: admin.wwwinternetvideo.click
-  skip-cert-verify: true
-- name: 🇵🇱 波兰 (Poland) 09 - jack
-  server: pl-waw.dontblockmepls.com
-  port: 2063
-  udp: true
-  type: vless
-  uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-  servername: rusbid.de
-  client-fingerprint: firefox
-- name: 🇵🇱 波兰 (Poland) 10 - jack
-  server: 144.31.93.231
-  port: 443
-  udp: true
-  type: vless
-  uuid: 3710fc0f-5f0c-4b9c-a5d4-40cb419e943a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: WKN5yaRN05O2WdCURXRmS-yBVYaabaFWOvGudX6ohWc
-    short-id: b97e7d4582b6fa6e
-  servername: yandex.ru
-  client-fingerprint: firefox
-- name: 🇵🇱 波兰 (Poland) 11 - jack
-  server: 78.17.109.97
-  port: 6443
-  udp: true
-  type: vless
-  uuid: dfe8ea9e-fd77-48e6-86ee-7bc1019de1e7
-  tls: true
-  reality-opts:
-    public-key: NP5_ymQeqYr_EP7aAPIl3YBRghX60zLq6m74Ht4bFUI
-    short-id: 2c043ed8
-  servername: ok.ru
   client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 12 - jack
-  server: 2.59.253.251
+- name: 🇵🇱 波兰 (Poland) 15 - jack
+  server: 82.118.22.161
   port: 443
   udp: true
   type: vless
-  uuid: adc11f30-e4cb-4985-bf5e-f9ded69c019f
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
-    short-id: db04ce8bdb8900f1
-  servername: nvidia.com
-  client-fingerprint: firefox
-- name: 🇵🇱 波兰 (Poland) 13 - jack
+    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
+    short-id: fa3ea655619a3e78
+  servername: www.cloudflare.com
+  client-fingerprint: safari
+- name: 🇵🇱 波兰 (Poland) 16 - jack
+  server: scrap.halyvanedorogo.ru
+  port: 35076
+  udp: true
+  type: hysteria2
+  password: b4c8ee9caa74b7ba0a61
+  sni: scrap.halyvanedorogo.ru
+  skip-cert-verify: true
+- name: 🇵🇱 波兰 (Poland) 17 - jack
   server: 179.198.49.99
   port: 443
   udp: true
@@ -141,7 +171,7 @@ proxies:
     short-id: 088b263ae349cc97
   servername: pl1.nztvpn.com
   client-fingerprint: safari
-- name: 🇵🇱 波兰 (Poland) 14 - jack
+- name: 🇵🇱 波兰 (Poland) 18 - jack
   server: 92.118.150.146
   port: 443
   udp: true
@@ -168,6 +198,10 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 12 - jack
   - 🇵🇱 波兰 (Poland) 13 - jack
   - 🇵🇱 波兰 (Poland) 14 - jack
+  - 🇵🇱 波兰 (Poland) 15 - jack
+  - 🇵🇱 波兰 (Poland) 16 - jack
+  - 🇵🇱 波兰 (Poland) 17 - jack
+  - 🇵🇱 波兰 (Poland) 18 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -187,5 +221,9 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 12 - jack
   - 🇵🇱 波兰 (Poland) 13 - jack
   - 🇵🇱 波兰 (Poland) 14 - jack
+  - 🇵🇱 波兰 (Poland) 15 - jack
+  - 🇵🇱 波兰 (Poland) 16 - jack
+  - 🇵🇱 波兰 (Poland) 17 - jack
+  - 🇵🇱 波兰 (Poland) 18 - jack
 rules:
 - MATCH,PROXIES

@@ -15,7 +15,7 @@
         "server_name": "d3-se1.cloud-cdn.xyz",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -25,20 +25,8 @@
       }
     },
     {
-      "type": "anytls",
-      "tag": "🇸🇪 瑞典 (Sweden) 02 - jack",
-      "server": "svip.skycon808.com",
-      "server_port": 60005,
-      "password": "13f0acfa-38c1-4e82-a758-583aa31740df",
-      "tls": {
-        "enabled": true,
-        "server_name": "xjp18.2uuzhe.com",
-        "insecure": true
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 03 - jack",
+      "tag": "🇸🇪 瑞典 (Sweden) 02 - jack",
       "server": "132.243.231.12",
       "server_port": 443,
       "uuid": "87fd990d-ca93-440a-bbd4-e8281c4a0910",
@@ -59,7 +47,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 04 - jack",
+      "tag": "🇸🇪 瑞典 (Sweden) 03 - jack",
       "server": "62.60.159.81",
       "server_port": 2053,
       "uuid": "fc00adfb-232a-46ce-8b93-0c70e516aa8a",
@@ -68,7 +56,7 @@
         "server_name": "www.samsung.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         },
         "reality": {
           "enabled": true,
@@ -82,6 +70,38 @@
       }
     },
     {
+      "type": "anytls",
+      "tag": "🇸🇪 瑞典 (Sweden) 04 - jack",
+      "server": "svip.skycon808.com",
+      "server_port": 60005,
+      "password": "13f0acfa-38c1-4e82-a758-583aa31740df",
+      "tls": {
+        "enabled": true,
+        "server_name": "xjp18.2uuzhe.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 05 - jack",
+      "server": "sub.merky.top",
+      "server_port": 443,
+      "uuid": "6e05822a-e9da-4135-a9db-71aa07a944af",
+      "tls": {
+        "enabled": true,
+        "server_name": "sub.merky.top",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/merky-connect/de6/"
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -89,7 +109,8 @@
         "🇸🇪 瑞典 (Sweden) 01 - jack",
         "🇸🇪 瑞典 (Sweden) 02 - jack",
         "🇸🇪 瑞典 (Sweden) 03 - jack",
-        "🇸🇪 瑞典 (Sweden) 04 - jack"
+        "🇸🇪 瑞典 (Sweden) 04 - jack",
+        "🇸🇪 瑞典 (Sweden) 05 - jack"
       ]
     },
     {
@@ -99,7 +120,8 @@
         "🇸🇪 瑞典 (Sweden) 01 - jack",
         "🇸🇪 瑞典 (Sweden) 02 - jack",
         "🇸🇪 瑞典 (Sweden) 03 - jack",
-        "🇸🇪 瑞典 (Sweden) 04 - jack"
+        "🇸🇪 瑞典 (Sweden) 04 - jack",
+        "🇸🇪 瑞典 (Sweden) 05 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

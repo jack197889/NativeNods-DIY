@@ -4,8 +4,20 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "vmess",
       "tag": "🇮🇳 印度 (India) 01 - jack",
+      "server": "152.67.8.205",
+      "server_port": 80,
+      "uuid": "9db4c708-aef8-4359-821b-38e47990be0d",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇳 印度 (India) 02 - jack",
       "server": "194.61.31.126",
       "server_port": 2053,
       "uuid": "1d4e18bd-1f26-4915-b35a-7ace4826e76a",
@@ -14,7 +26,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -24,28 +36,24 @@
       }
     },
     {
-      "type": "vmess",
-      "tag": "🇮🇳 印度 (India) 02 - jack",
-      "server": "185.67.125.90",
+      "type": "trojan",
+      "tag": "🇮🇳 印度 (India) 03 - jack",
+      "server": "hyfuuf6.wsone.icu",
       "server_port": 443,
-      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
-      "security": "auto",
+      "password": "M7v%w11Se*",
       "tls": {
         "enabled": true,
-        "server_name": "aksai.org",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/linkvws",
-        "headers": {
-          "Host": "aksai.org"
+        "server_name": "hyfuuf6.wsone.icu",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇮🇳 印度 (India) 03 - jack",
+      "tag": "🇮🇳 印度 (India) 04 - jack",
       "server": "148.113.5.44",
       "server_port": 443,
       "uuid": "72ea5a91-ffcc-43d2-9297-5993c3abf186",
@@ -65,17 +73,38 @@
       }
     },
     {
+      "type": "trojan",
+      "tag": "🇮🇳 印度 (India) 05 - jack",
+      "server": "tttyder.wsone.icu",
+      "server_port": 443,
+      "password": "M7v%w11Se*",
+      "tls": {
+        "enabled": true,
+        "server_name": "tttyder.wsone.icu",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
       "type": "vmess",
-      "tag": "🇮🇳 印度 (India) 04 - jack",
-      "server": "152.67.8.205",
-      "server_port": 80,
-      "uuid": "9db4c708-aef8-4359-821b-38e47990be0d",
+      "tag": "🇮🇳 印度 (India) 06 - jack",
+      "server": "185.67.125.90",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
       "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "aksai.org",
+        "insecure": false
+      },
       "transport": {
         "type": "ws",
-        "path": "/",
+        "path": "/linkvws",
         "headers": {
-          "Host": "152.67.8.205"
+          "Host": "aksai.org"
         }
       }
     },
@@ -87,7 +116,9 @@
         "🇮🇳 印度 (India) 01 - jack",
         "🇮🇳 印度 (India) 02 - jack",
         "🇮🇳 印度 (India) 03 - jack",
-        "🇮🇳 印度 (India) 04 - jack"
+        "🇮🇳 印度 (India) 04 - jack",
+        "🇮🇳 印度 (India) 05 - jack",
+        "🇮🇳 印度 (India) 06 - jack"
       ]
     },
     {
@@ -97,7 +128,9 @@
         "🇮🇳 印度 (India) 01 - jack",
         "🇮🇳 印度 (India) 02 - jack",
         "🇮🇳 印度 (India) 03 - jack",
-        "🇮🇳 印度 (India) 04 - jack"
+        "🇮🇳 印度 (India) 04 - jack",
+        "🇮🇳 印度 (India) 05 - jack",
+        "🇮🇳 印度 (India) 06 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

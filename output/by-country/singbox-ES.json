@@ -16,16 +16,24 @@
       }
     },
     {
-      "type": "vmess",
+      "type": "shadowsocks",
       "tag": "🇪🇸 西班牙 (Spain) 02 - jack",
-      "server": "66.163.118.73",
-      "server_port": 22324,
-      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
-      "security": "auto"
+      "server": "108.181.121.226",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "WSyL4XTwNsdv"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇪🇸 西班牙 (Spain) 03 - jack",
+      "server": "140.174.184.5",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "qItG8SueYQcP"
     },
     {
       "type": "vmess",
-      "tag": "🇪🇸 西班牙 (Spain) 03 - jack",
+      "tag": "🇪🇸 西班牙 (Spain) 04 - jack",
       "server": "85.90.217.42",
       "server_port": 22324,
       "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
@@ -33,7 +41,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 04 - jack",
+      "tag": "🇪🇸 西班牙 (Spain) 05 - jack",
       "server": "212.227.235.66",
       "server_port": 2053,
       "uuid": "ead0dd61-d398-40ad-80d6-a0e1e516d7d3",
@@ -42,7 +50,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -53,31 +61,23 @@
     },
     {
       "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 05 - jack",
-      "server": "193.238.154.5",
-      "server_port": 443,
-      "uuid": "e0b9fb0f-1bbd-478b-9580-c2294778338b",
+      "tag": "🇪🇸 西班牙 (Spain) 06 - jack",
+      "server": "es4.h1cloud.net",
+      "server_port": 25047,
+      "uuid": "55a2940a-ae07-40b4-ab32-4d3e0617731f",
       "tls": {
         "enabled": true,
-        "server_name": "assets-es.pleiades.codes",
-        "insecure": false,
+        "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "opG0oNW-PMHi8V4E0101eEqOqPlZVKCuRkF6dcWeqBU",
+          "short_id": "8b7227d48365dda9"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "cdn.v1.AssetService"
       }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇪🇸 西班牙 (Spain) 06 - jack",
-      "server": "108.181.121.226",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "WSyL4XTwNsdv"
     },
     {
       "type": "vless",
@@ -101,32 +101,16 @@
       }
     },
     {
-      "type": "vmess",
+      "type": "hysteria2",
       "tag": "🇪🇸 西班牙 (Spain) 08 - jack",
-      "server": "66.163.118.73",
-      "server_port": 443,
-      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
-      "security": "auto",
+      "server": "xby.mangshe.xyz",
+      "server_port": 2060,
+      "password": "5d0a6445-a30d-4522-bb1f-94f1d3ad63be",
       "tls": {
         "enabled": true,
-        "server_name": "mygptagent.org",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/linkvws",
-        "headers": {
-          "Host": "mygptagent.org"
-        }
+        "server_name": "xby.mangshe.xyz",
+        "insecure": true
       }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇪🇸 西班牙 (Spain) 09 - jack",
-      "server": "140.174.184.5",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "qItG8SueYQcP"
     },
     {
       "type": "selector",
@@ -140,8 +124,7 @@
         "🇪🇸 西班牙 (Spain) 05 - jack",
         "🇪🇸 西班牙 (Spain) 06 - jack",
         "🇪🇸 西班牙 (Spain) 07 - jack",
-        "🇪🇸 西班牙 (Spain) 08 - jack",
-        "🇪🇸 西班牙 (Spain) 09 - jack"
+        "🇪🇸 西班牙 (Spain) 08 - jack"
       ]
     },
     {
@@ -155,8 +138,7 @@
         "🇪🇸 西班牙 (Spain) 05 - jack",
         "🇪🇸 西班牙 (Spain) 06 - jack",
         "🇪🇸 西班牙 (Spain) 07 - jack",
-        "🇪🇸 西班牙 (Spain) 08 - jack",
-        "🇪🇸 西班牙 (Spain) 09 - jack"
+        "🇪🇸 西班牙 (Spain) 08 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
