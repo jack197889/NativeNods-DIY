@@ -15,7 +15,7 @@ proxies:
     public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
     short-id: 9e419c0759b54d6f
   servername: www.apple.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇹🇷 土耳其 (Turkey) 02 - jack
   server: 78.135.73.47
   port: 443
@@ -30,43 +30,14 @@ proxies:
   servername: www.datadoghq.com
   client-fingerprint: firefox
 - name: 🇹🇷 土耳其 (Turkey) 03 - jack
-  server: ststictr.hamiramkemax.ir
-  port: 1081
-  udp: true
-  type: vless
-  uuid: 250865f0-4a0f-4e2e-8d14-4c39a25d0bef
-  tls: true
-  reality-opts:
-    public-key: _UlBf1BRa52KM89xxvfbSHuLZWrvWuGuhvbsL3gx01A
-    short-id: daa22fbb023ab4a2
-  servername: www12.gameservice-iramn3.com
-  client-fingerprint: edge
-- name: 🇹🇷 土耳其 (Turkey) 04 - jack
-  server: 85.192.48.142
+  server: 87.120.106.133
   port: 443
   udp: true
   type: vless
-  uuid: adc11f30-e4cb-4985-bf5e-f9ded69c019f
-  flow: xtls-rprx-vision
+  uuid: d9fbf9a7-1f88-428b-bb3e-3074681e44c9
   tls: true
-  reality-opts:
-    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
-    short-id: db04ce8bdb8900f1
-  servername: nvidia.com
-  client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 05 - jack
-  server: 91.228.227.9
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8fc806fa-350b-4548-937a-2bf35f7fe7eb
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: _KTsOFhGnC0W28ZqO8_FApozMp7tJ9cVBTLKLAA_OR0
-    short-id: ae64c9b46bff174a
-  servername: tr1.sky-vault.top
-  client-fingerprint: chrome
+  servername: es3siwxee705.dx4x.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -75,8 +46,6 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01 - jack
   - 🇹🇷 土耳其 (Turkey) 02 - jack
   - 🇹🇷 土耳其 (Turkey) 03 - jack
-  - 🇹🇷 土耳其 (Turkey) 04 - jack
-  - 🇹🇷 土耳其 (Turkey) 05 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -85,7 +54,5 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01 - jack
   - 🇹🇷 土耳其 (Turkey) 02 - jack
   - 🇹🇷 土耳其 (Turkey) 03 - jack
-  - 🇹🇷 土耳其 (Turkey) 04 - jack
-  - 🇹🇷 土耳其 (Turkey) 05 - jack
 rules:
 - MATCH,PROXIES

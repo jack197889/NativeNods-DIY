@@ -25,15 +25,24 @@
       }
     },
     {
-      "type": "trojan",
+      "type": "vless",
       "tag": "🇸🇨 塞舌尔 (Seychelles) 02 - jack",
-      "server": "45.205.27.78",
-      "server_port": 10443,
-      "password": "dd65d47d-d31f-4407-9cac-89e20f1b816d",
+      "server": "45.142.31.21",
+      "server_port": 443,
+      "uuid": "2b781b4a-5942-48e0-a7f3-5a07b7b488c1",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "45.205.27.78",
-        "insecure": true
+        "server_name": "gr-root.sworkingvpn.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI",
+          "short_id": "15bcc0a77c3cacdf"
+        }
       }
     },
     {

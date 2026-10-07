@@ -4,44 +4,35 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "anytls",
       "tag": "🇸🇪 瑞典 (Sweden) 01 - jack",
-      "server": "132.243.231.4",
-      "server_port": 443,
-      "uuid": "87fd990d-ca93-440a-bbd4-e8281c4a0910",
-      "flow": "xtls-rprx-vision",
+      "server": "svip.skycon808.com",
+      "server_port": 60005,
+      "password": "13f0acfa-38c1-4e82-a758-583aa31740df",
       "tls": {
         "enabled": true,
-        "server_name": "d3-se1.cloud-cdn.xyz",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "zWDvtTWK-cWWwHDMHMXcOpQy4k3EKp7yw-5e0wTZAUM",
-          "short_id": "5efa80b939612291"
-        }
+        "server_name": "xjp18.2uuzhe.com",
+        "insecure": true
       }
     },
     {
       "type": "vless",
       "tag": "🇸🇪 瑞典 (Sweden) 02 - jack",
-      "server": "132.243.231.12",
+      "server": "31.207.7.74",
       "server_port": 443,
-      "uuid": "87fd990d-ca93-440a-bbd4-e8281c4a0910",
+      "uuid": "2412bd96-925b-43f2-81d1-0ed4f0793699",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "d3-se1.cloud-cdn.xyz",
+        "server_name": "pkg.go.dev",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "zWDvtTWK-cWWwHDMHMXcOpQy4k3EKp7yw-5e0wTZAUM",
-          "short_id": "5efa80b939612291"
+          "public_key": "RDL0RVmgFM3fdqXRSHBF2A53YF9TPFu2aeJQhMTaY3s",
+          "short_id": "457ae5b8bef4d1b3"
         }
       }
     },
@@ -56,7 +47,7 @@
         "server_name": "www.samsung.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -70,47 +61,13 @@
       }
     },
     {
-      "type": "anytls",
-      "tag": "🇸🇪 瑞典 (Sweden) 04 - jack",
-      "server": "svip.skycon808.com",
-      "server_port": 60005,
-      "password": "13f0acfa-38c1-4e82-a758-583aa31740df",
-      "tls": {
-        "enabled": true,
-        "server_name": "xjp18.2uuzhe.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 05 - jack",
-      "server": "sub.merky.top",
-      "server_port": 443,
-      "uuid": "6e05822a-e9da-4135-a9db-71aa07a944af",
-      "tls": {
-        "enabled": true,
-        "server_name": "sub.merky.top",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/merky-connect/de6/"
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇸🇪 瑞典 (Sweden) 01 - jack",
         "🇸🇪 瑞典 (Sweden) 02 - jack",
-        "🇸🇪 瑞典 (Sweden) 03 - jack",
-        "🇸🇪 瑞典 (Sweden) 04 - jack",
-        "🇸🇪 瑞典 (Sweden) 05 - jack"
+        "🇸🇪 瑞典 (Sweden) 03 - jack"
       ]
     },
     {
@@ -119,9 +76,7 @@
       "outbounds": [
         "🇸🇪 瑞典 (Sweden) 01 - jack",
         "🇸🇪 瑞典 (Sweden) 02 - jack",
-        "🇸🇪 瑞典 (Sweden) 03 - jack",
-        "🇸🇪 瑞典 (Sweden) 04 - jack",
-        "🇸🇪 瑞典 (Sweden) 05 - jack"
+        "🇸🇪 瑞典 (Sweden) 03 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

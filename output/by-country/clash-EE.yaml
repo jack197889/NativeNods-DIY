@@ -5,18 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇪 爱沙尼亚 (Estonia) 01 - jack
-  server: 89.125.13.202
+  server: 95.85.242.160
   port: 443
   udp: true
   type: vless
-  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
+  uuid: 2b781b4a-5942-48e0-a7f3-5a07b7b488c1
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ
-    short-id: ad6e08b22389abd2
-  servername: d3-ee1.cloud-cdn.xyz
-  client-fingerprint: ios
+    public-key: AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI
+    short-id: 15bcc0a77c3cacdf
+  servername: ee-root.sworkingvpn.com
+  client-fingerprint: firefox
 - name: 🇪🇪 爱沙尼亚 (Estonia) 02 - jack
   server: 94.183.170.135
   port: 443
@@ -26,25 +26,27 @@ proxies:
   network: ws
   ws-opts:
     path: /
+    headers:
+      Host: estproxy4.lockdwn.com
 - name: 🇪🇪 爱沙尼亚 (Estonia) 03 - jack
-  server: 93.89.220.37
+  server: 5.175.178.30
   port: 443
   udp: true
   type: vless
-  uuid: 185e2bb3-2934-48d0-bbd5-dd20d16e83ee
+  uuid: 8fc806fa-350b-4548-937a-2bf35f7fe7eb
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: lwKaUQ81wJUJRsqAPsfTPj5V_f9N50UYEwzRI_nuq2g
-    short-id: e88cb983f3c97528
-  servername: ibm.com
-  client-fingerprint: edge
+    public-key: _KTsOFhGnC0W28ZqO8_FApozMp7tJ9cVBTLKLAA_OR0
+    short-id: ae64c9b46bff174a
+  servername: ee1.sky-vault.top
+  client-fingerprint: firefox
 - name: 🇪🇪 爱沙尼亚 (Estonia) 04 - jack
-  server: 95.85.242.81
+  server: 95.85.242.166
   port: 443
   udp: true
   type: vless
-  uuid: 2b781b4a-5942-48e0-a7f3-5a07b7b488c1
+  uuid: 2b781b4a-5942-0018-a7f3-5a07b7b488c1
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
@@ -61,7 +63,7 @@ proxies:
   tls: true
   servername: estproxy4.lockdwn.com
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🇪🇪 爱沙尼亚 (Estonia) 06 - jack
   server: 194.26.141.148
   port: 8443
@@ -71,12 +73,25 @@ proxies:
   tls: true
   servername: fdghyt.com
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /vpn-wss/fluxor/59011/
     headers:
       Host: fdghyt.com
+- name: 🇪🇪 爱沙尼亚 (Estonia) 07 - jack
+  server: 93.89.220.37
+  port: 443
+  udp: true
+  type: vless
+  uuid: 185e2bb3-2934-48d0-bbd5-dd20d16e83ee
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: lwKaUQ81wJUJRsqAPsfTPj5V_f9N50UYEwzRI_nuq2g
+    short-id: e88cb983f3c97528
+  servername: ibm.com
+  client-fingerprint: edge
 proxy-groups:
 - name: PROXIES
   type: select
@@ -88,6 +103,7 @@ proxy-groups:
   - 🇪🇪 爱沙尼亚 (Estonia) 04 - jack
   - 🇪🇪 爱沙尼亚 (Estonia) 05 - jack
   - 🇪🇪 爱沙尼亚 (Estonia) 06 - jack
+  - 🇪🇪 爱沙尼亚 (Estonia) 07 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -99,5 +115,6 @@ proxy-groups:
   - 🇪🇪 爱沙尼亚 (Estonia) 04 - jack
   - 🇪🇪 爱沙尼亚 (Estonia) 05 - jack
   - 🇪🇪 爱沙尼亚 (Estonia) 06 - jack
+  - 🇪🇪 爱沙尼亚 (Estonia) 07 - jack
 rules:
 - MATCH,PROXIES

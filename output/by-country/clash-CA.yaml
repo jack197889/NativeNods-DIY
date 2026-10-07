@@ -12,28 +12,6 @@ proxies:
   cipher: aes-128-gcm
   password: shadowsocks
 - name: 🇨🇦 加拿大 (Canada) 02 - jack
-  server: 158.51.123.42
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇨🇦 加拿大 (Canada) 03 - jack
-  server: 158.51.123.42
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: khasav.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /linkvws
-- name: 🇨🇦 加拿大 (Canada) 04 - jack
   server: 134.195.196.211
   port: 18000
   udp: true
@@ -41,15 +19,7 @@ proxies:
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: auto
-- name: 🇨🇦 加拿大 (Canada) 05 - jack
-  server: 198.57.27.190
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇨🇦 加拿大 (Canada) 06 - jack
+- name: 🇨🇦 加拿大 (Canada) 03 - jack
   server: 158.51.121.63
   port: 22324
   udp: true
@@ -57,56 +27,21 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
-- name: 🇨🇦 加拿大 (Canada) 07 - jack
-  server: 51.222.107.43
-  port: 2083
-  udp: true
-  type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:HWFFJN19JkvbTKo/79AfnbRBK9uHUUaFNZJyLjEoJGs=
-- name: 🇨🇦 加拿大 (Canada) 08 - jack
-  server: 23.162.200.198
-  port: 18000
-  udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-- name: 🇨🇦 加拿大 (Canada) 09 - jack
-  server: 51.79.64.198
-  port: 8119
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: cdBIDV42DCwnfIN
-- name: 🇨🇦 加拿大 (Canada) 10 - jack
+- name: 🇨🇦 加拿大 (Canada) 04 - jack
   server: 138.197.141.58
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 11 - jack
+- name: 🇨🇦 加拿大 (Canada) 05 - jack
   server: 137.184.174.93
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 12 - jack
-  server: 209.200.246.148
-  port: 443
-  udp: true
-  type: vless
-  uuid: ca52e2b6-fb9f-4dac-b6dc-49da9923f251
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk
-    short-id: f98843107912e782
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇨🇦 加拿大 (Canada) 13 - jack
+- name: 🇨🇦 加拿大 (Canada) 06 - jack
   server: 66.70.179.198
   port: 2053
   udp: true
@@ -118,26 +53,65 @@ proxies:
     short-id: 83f8317a948bb769
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🇨🇦 加拿大 (Canada) 14 - jack
-  server: milo.rubinaz.xyz
-  port: 8080
+- name: 🇨🇦 加拿大 (Canada) 07 - jack
+  server: 45.148.103.85
+  port: 443
   udp: true
   type: vless
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-- name: 🇨🇦 加拿大 (Canada) 15 - jack
+  uuid: 2b781b4a-5942-48e0-a7f3-5a07b7b488c1
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI
+    short-id: 15bcc0a77c3cacdf
+  servername: ca-root.sworkingvpn.com
+  client-fingerprint: firefox
+- name: 🇨🇦 加拿大 (Canada) 08 - jack
+  server: 148.113.196.75
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 08f96221-9b7b-4e6f-8ffe-aee8b9c9b504
+  tls: true
+  servername: ov-canada1.09vpn.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless/
+- name: 🇨🇦 加拿大 (Canada) 09 - jack
+  server: 209.200.246.148
+  port: 443
+  udp: true
+  type: vless
+  uuid: ca52e2b6-fb9f-4dac-b6dc-49da9923f251
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk
+    short-id: f98843107912e782
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇨🇦 加拿大 (Canada) 10 - jack
   server: 51.222.200.165
   port: 5000
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: Y6R9pAtvxxzmGC
-- name: 🇨🇦 加拿大 (Canada) 16 - jack
-  server: 51.79.49.116
-  port: 8882
+- name: 🇨🇦 加拿大 (Canada) 11 - jack
+  server: milo.rubinaz.xyz
+  port: 8080
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
+  type: vless
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+- name: 🇨🇦 加拿大 (Canada) 12 - jack
+  server: 23.162.200.198
+  port: 18000
+  udp: true
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
@@ -155,10 +129,6 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 10 - jack
   - 🇨🇦 加拿大 (Canada) 11 - jack
   - 🇨🇦 加拿大 (Canada) 12 - jack
-  - 🇨🇦 加拿大 (Canada) 13 - jack
-  - 🇨🇦 加拿大 (Canada) 14 - jack
-  - 🇨🇦 加拿大 (Canada) 15 - jack
-  - 🇨🇦 加拿大 (Canada) 16 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -176,9 +146,5 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 10 - jack
   - 🇨🇦 加拿大 (Canada) 11 - jack
   - 🇨🇦 加拿大 (Canada) 12 - jack
-  - 🇨🇦 加拿大 (Canada) 13 - jack
-  - 🇨🇦 加拿大 (Canada) 14 - jack
-  - 🇨🇦 加拿大 (Canada) 15 - jack
-  - 🇨🇦 加拿大 (Canada) 16 - jack
 rules:
 - MATCH,PROXIES

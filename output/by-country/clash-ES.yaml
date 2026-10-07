@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01 - jack
+  server: 108.181.121.226
+  port: 8388
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: WSyL4XTwNsdv
+- name: 🇪🇸 西班牙 (Spain) 02 - jack
   server: 185.174.137.172
   port: 8446
   udp: true
@@ -12,13 +19,6 @@ proxies:
   password: e9dc02d400b67c727aca1620
   sni: 185.174.137.172
   skip-cert-verify: true
-- name: 🇪🇸 西班牙 (Spain) 02 - jack
-  server: 108.181.121.226
-  port: 8388
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: WSyL4XTwNsdv
 - name: 🇪🇸 西班牙 (Spain) 03 - jack
   server: 140.174.184.5
   port: 8388
@@ -27,13 +27,18 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: qItG8SueYQcP
 - name: 🇪🇸 西班牙 (Spain) 04 - jack
-  server: 85.90.217.42
-  port: 22324
+  server: 138.124.62.158
+  port: 443
   udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 2b781b4a-5942-48e0-a7f3-5a07b7b488c1
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI
+    short-id: 15bcc0a77c3cacdf
+  servername: es-root.sworkingvpn.com
+  client-fingerprint: firefox
 - name: 🇪🇸 西班牙 (Spain) 05 - jack
   server: 212.227.235.66
   port: 2053
@@ -47,18 +52,6 @@ proxies:
   servername: www.apple.com
   client-fingerprint: chrome
 - name: 🇪🇸 西班牙 (Spain) 06 - jack
-  server: es4.h1cloud.net
-  port: 25047
-  udp: true
-  type: vless
-  uuid: 55a2940a-ae07-40b4-ab32-4d3e0617731f
-  tls: true
-  reality-opts:
-    public-key: opG0oNW-PMHi8V4E0101eEqOqPlZVKCuRkF6dcWeqBU
-    short-id: 8b7227d48365dda9
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 07 - jack
   server: 46.28.71.247
   port: 443
   udp: true
@@ -71,14 +64,19 @@ proxies:
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 08 - jack
-  server: xby.mangshe.xyz
-  port: 2060
+- name: 🇪🇸 西班牙 (Spain) 07 - jack
+  server: 193.238.154.5
+  port: 443
   udp: true
-  type: hysteria2
-  password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
-  sni: xby.mangshe.xyz
-  skip-cert-verify: true
+  type: vless
+  uuid: e0b9fb0f-1bbd-478b-9580-c2294778338b
+  tls: true
+  servername: assets-es.pleiades.codes
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cdn.v1.AssetService
 proxy-groups:
 - name: PROXIES
   type: select
@@ -91,7 +89,6 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 05 - jack
   - 🇪🇸 西班牙 (Spain) 06 - jack
   - 🇪🇸 西班牙 (Spain) 07 - jack
-  - 🇪🇸 西班牙 (Spain) 08 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -104,6 +101,5 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 05 - jack
   - 🇪🇸 西班牙 (Spain) 06 - jack
   - 🇪🇸 西班牙 (Spain) 07 - jack
-  - 🇪🇸 西班牙 (Spain) 08 - jack
 rules:
 - MATCH,PROXIES
