@@ -5,81 +5,177 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - jack
+  server: 162.159.228.255
+  port: 443
+  udp: true
+  type: vless
+  uuid: b135a1e0-ebdb-4d46-b3fa-bd1e78580244
+  tls: true
+  servername: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+- name: 🇯🇵 日本 (Japan) 02 - jack
+  server: 128.241.25.3
+  port: 30021
+  udp: true
+  type: vless
+  uuid: 53339ee0-1412-4550-89c7-48d1cb71b390
+  tls: true
+  servername: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
+- name: 🇯🇵 日本 (Japan) 03 - jack
+  server: 128.241.25.3
+  port: 30021
+  udp: true
+  type: vless
+  uuid: afec813e-a5c7-432d-be48-2803c30eea4e
+  tls: true
+  servername: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+- name: 🇯🇵 日本 (Japan) 04 - jack
+  server: 128.241.25.72
+  port: 30021
+  udp: true
+  type: vless
+  uuid: 65f26a08-9a5e-4b28-9004-f98676cc1e49
+  tls: true
+  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+- name: 🇯🇵 日本 (Japan) 05 - jack
+  server: 128.241.25.11
+  port: 30021
+  udp: true
+  type: vless
+  uuid: fd9172bb-1a14-4052-8385-40de84e47495
+  tls: true
+  servername: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
+- name: 🇯🇵 日本 (Japan) 06 - jack
+  server: 128.241.25.3
+  port: 30021
+  udp: true
+  type: vless
+  uuid: 48de1831-a4a2-4eba-8723-8e0bb7a9da0d
+  tls: true
+  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+- name: 🇯🇵 日本 (Japan) 07 - jack
+  server: 128.241.25.3
+  port: 30021
+  udp: true
+  type: vless
+  uuid: e18901aa-2836-44ce-a1d7-af6b174ccae7
+  tls: true
+  servername: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+- name: 🇯🇵 日本 (Japan) 08 - jack
+  server: 128.241.25.11
+  port: 30021
+  udp: true
+  type: vless
+  uuid: 40ca0d8c-0641-4e2d-a701-9fd8330daf6d
+  tls: true
+  servername: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+- name: 🇯🇵 日本 (Japan) 09 - jack
+  server: 128.241.25.215
+  port: 30036
+  udp: true
+  type: vless
+  uuid: 196b7228-58df-4bcf-af2a-2e96608d5add
+  tls: true
+  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+- name: 🇯🇵 日本 (Japan) 10 - jack
+  server: 128.241.25.11
+  port: 30021
+  udp: true
+  type: vless
+  uuid: a4f907a1-b0fe-4306-a0fa-f05bea688879
+  tls: true
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+- name: 🇯🇵 日本 (Japan) 11 - jack
   server: 149.22.87.241
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇯🇵 日本 (Japan) 02 - jack
+- name: 🇯🇵 日本 (Japan) 12 - jack
   server: 149.22.87.204
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇯🇵 日本 (Japan) 03 - jack
-  server: 137.220.221.179
-  port: 443
-  udp: true
-  type: vless
-  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
-- name: 🇯🇵 日本 (Japan) 04 - jack
+- name: 🇯🇵 日本 (Japan) 13 - jack
   server: 149.22.87.240
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇯🇵 日本 (Japan) 05 - jack
-  server: 45.32.10.7
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 96ab5cd282733fd4c312a61f972f330a
-  sni: vp3.yysyy.online
-  skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 06 - jack
-  server: 132.226.14.77
-  port: 443
-  udp: true
-  type: hysteria2
-  password: my_super_password_123
-  sni: open.w2m.ink
-  skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 07 - jack
-  server: 158.101.148.79
-  port: 5443
-  udp: true
-  type: hysteria2
-  password: my_super_password_123
-  sni: open.2ml.bid
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 08 - jack
-  server: 138.3.208.26
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: 184cdec28da5a09450803c8debcd2cc9
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 09 - jack
-  server: concrete-aardvark.rooster465.autos
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: concrete-aardvark.rooster465.autos
-  skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 10 - jack
-  server: 138.2.21.246
-  port: 5443
-  udp: true
-  type: hysteria2
-  password: my_super_password_123
-  sni: open.2ml.cc.cd
-  skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 11 - jack
+- name: 🇯🇵 日本 (Japan) 14 - jack
   server: 45.32.52.173
   port: 8886
   udp: true
@@ -87,41 +183,100 @@ proxies:
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   sni: 45.32.52.173
   skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 12 - jack
+- name: 🇯🇵 日本 (Japan) 15 - jack
   server: 54.65.177.190
   port: 443
   udp: true
   type: trojan
   password: UX82473651
   sni: winning-marten.rooster465.autos
+  skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 16 - jack
+  server: 132.226.14.77
+  port: 443
+  udp: true
+  type: hysteria2
+  password: my_super_password_123
+  sni: open.w2m.ink
+  skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 17 - jack
+  server: 54.249.36.167
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: comic-poodle.rooster465.autos
+  skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 18 - jack
+  server: open.2ml.bid
+  port: 443
+  udp: true
+  type: hysteria2
+  password: my_super_password_123
+  sni: open.2ml.bid
+  skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 19 - jack
+  server: 13.231.247.130
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: concrete-aardvark.rooster465.autos
   skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 13 - jack
-  server: jpga01.jumpernode.site
+- name: 🇯🇵 日本 (Japan) 20 - jack
+  server: 3.112.245.255
   port: 443
   udp: true
+  type: trojan
+  password: UX82473651
+  sni: dynamic-imp.rooster465.autos
+  skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 21 - jack
+  server: 45.32.10.7
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 96ab5cd282733fd4c312a61f972f330a
+  sni: vp3.yysyy.online
+  skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 22 - jack
+  server: 154.31.114.248
+  port: 50159
+  udp: true
   type: vless
-  uuid: 05453546-201f-4e8d-97ae-fd70da0e951f
+  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: AgTktefiMM58y7f-KFgEtmVti_YJbd0GPSkxNeJ0RH4
-    short-id: c8e49965
-  servername: amzn.com
+    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
+    short-id: 091e1c5db8451757
+  servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 14 - jack
-  server: 153.121.36.102
-  port: 443
+- name: 🇯🇵 日本 (Japan) 23 - jack
+  server: 138.2.21.246
+  port: 5443
   udp: true
-  type: vless
-  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
-    short-id: 1a
-  servername: www.amazon.com
-  client-fingerprint: ios
-- name: 🇯🇵 日本 (Japan) 15 - jack
+  type: hysteria2
+  password: my_super_password_123
+  sni: open.2ml.cc.cd
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 24 - jack
+  server: 8.211.175.236
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: u63SxILNwtrQZ7Y1ZrFaZfsA
+  sni: bing.com
+  skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 25 - jack
+  server: 138.3.208.26
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 184cdec28da5a09450803c8debcd2cc9
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 26 - jack
   server: jumpernode.online
   port: 443
   udp: true
@@ -134,94 +289,62 @@ proxies:
     short-id: 6d962e8d8a0dce
   servername: amazon.com
   client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 16 - jack
-  server: open.2ml.bid
+- name: 🇯🇵 日本 (Japan) 27 - jack
+  server: 153.121.36.102
   port: 443
+  udp: true
+  type: vless
+  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
+    short-id: 1a
+  servername: www.amazon.com
+  client-fingerprint: ios
+- name: 🇯🇵 日本 (Japan) 28 - jack
+  server: jpga01.jumpernode.site
+  port: 443
+  udp: true
+  type: vless
+  uuid: 05453546-201f-4e8d-97ae-fd70da0e951f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: AgTktefiMM58y7f-KFgEtmVti_YJbd0GPSkxNeJ0RH4
+    short-id: c8e49965
+  servername: amzn.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 29 - jack
+  server: tyo-a-02.auuas.com
+  port: 1892
+  udp: true
+  type: anytls
+  password: 81c4547b-e5d8-4af8-baf0-91c5c0c05a9b
+  sni: images.apple.com
+  skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 30 - jack
+  server: open.2ml.bid
+  port: 5443
   udp: true
   type: hysteria2
   password: my_super_password_123
   sni: open.2ml.bid
-  skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 17 - jack
-  server: 54.249.36.167
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: comic-poodle.rooster465.autos
   skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 18 - jack
-  server: 52.192.217.187
+- name: 🇯🇵 日本 (Japan) 31 - jack
+  server: t14.qifei.app
   port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: evolving-platypus.rooster465.autos
-  skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 19 - jack
-  server: 43.207.89.91
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: organic-caribou.rooster465.autos
-  skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 20 - jack
-  server: 103.75.118.228
-  port: 12683
   udp: true
   type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 21 - jack
-  server: 13.230.139.12
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: brief-glider.rooster465.autos
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 22 - jack
-  server: 54.238.153.132
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: obliging-louse.rooster465.autos
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 23 - jack
-  server: 154.31.114.248
-  port: 50159
-  udp: true
-  type: vless
-  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
-    short-id: 091e1c5db8451757
-  servername: www.cloudflare.com
+    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
+    short-id: 1a
+  servername: www.amazon.com
   client-fingerprint: random
-- name: 🇯🇵 日本 (Japan) 24 - jack
-  server: 3.114.220.22
-  port: 18007
-  udp: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 25 - jack
+- name: 🇯🇵 日本 (Japan) 32 - jack
   server: 142.91.106.31
   port: 43000
   udp: true
@@ -234,65 +357,7 @@ proxies:
     short-id: 8d66106f
   servername: 142.91.106.31
   client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 26 - jack
-  server: 3.112.245.255
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: dynamic-imp.rooster465.autos
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 27 - jack
-  server: 13.230.91.226
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: musical-terrier.rooster465.autos
-  skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 28 - jack
-  server: 54.249.55.154
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: prime-corgi.rooster465.autos
-  skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 29 - jack
-  server: 18.183.215.124
-  port: 28573
-  udp: true
-  type: vless
-  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
-    short-id: 03653bc03be10c97
-  servername: www.sony.com
-  client-fingerprint: firefox
-- name: 🇯🇵 日本 (Japan) 30 - jack
-  server: 3.114.220.22
-  port: 10583
-  udp: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  servername: www.apple.com
-  client-fingerprint: random
-- name: 🇯🇵 日本 (Japan) 31 - jack
-  server: integral-rodent.rooster465.autos
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: integral-rodent.rooster465.autos
-  skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 32 - jack
+- name: 🇯🇵 日本 (Japan) 33 - jack
   server: 3.114.220.22
   port: 19645
   udp: true
@@ -304,40 +369,1154 @@ proxies:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
   servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 33 - jack
-  server: 132.226.14.77
-  port: 5443
-  udp: true
-  type: hysteria2
-  password: my_super_password_123
-  sni: open.w2m.ink
-  skip-cert-verify: true
+  client-fingerprint: firefox
 - name: 🇯🇵 日本 (Japan) 34 - jack
-  server: 54.250.237.143
+  server: 84.247.155.196
+  port: 80
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
+- name: 🇯🇵 日本 (Japan) 35 - jack
+  server: 52.192.217.187
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: evolving-platypus.rooster465.autos
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 36 - jack
+  server: 3.114.220.22
+  port: 18007
+  udp: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 37 - jack
+  server: 54.199.66.128
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: integral-rodent.rooster465.autos
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 38 - jack
+  server: 203.137.165.164
+  port: 57554
+  udp: true
+  type: vless
+  uuid: b80ea549-156d-4cc1-8683-3f53d5b335cb
+  tls: true
+  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+- name: 🇯🇵 日本 (Japan) 39 - jack
+  server: 203.137.165.164
+  port: 57554
+  udp: true
+  type: vless
+  uuid: 37d1f5ab-e83b-4a84-90bf-712a0b114a87
+  tls: true
+  servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+- name: 🇯🇵 日本 (Japan) 40 - jack
+  server: 203.137.165.164
+  port: 57554
+  udp: true
+  type: vless
+  uuid: 281be80c-6034-4db1-b456-5a5307c6edee
+  tls: true
+  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+- name: 🇯🇵 日本 (Japan) 41 - jack
+  server: 210.152.85.154
+  port: 19364
+  udp: true
+  type: vless
+  uuid: fbc881d2-505b-45e6-a57e-ac2003288e54
+  tls: true
+  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+- name: 🇯🇵 日本 (Japan) 42 - jack
+  server: 203.137.165.164
+  port: 57554
+  udp: true
+  type: vless
+  uuid: e113a561-c9bc-43c6-92da-fd9513f06a00
+  tls: true
+  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+- name: 🇯🇵 日本 (Japan) 43 - jack
+  server: 210.152.85.154
+  port: 19364
+  udp: true
+  type: vless
+  uuid: 90899e26-6c8d-46df-954d-14a86c0a1813
+  tls: true
+  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+- name: 🇯🇵 日本 (Japan) 44 - jack
+  server: 203.137.165.164
+  port: 57554
+  udp: true
+  type: vless
+  uuid: 9c7501fb-4e23-44d8-9a9e-973807ae4f35
+  tls: true
+  servername: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+- name: 🇯🇵 日本 (Japan) 45 - jack
+  server: 210.152.85.154
+  port: 19364
+  udp: true
+  type: vless
+  uuid: c16f8911-d921-4c34-95da-742dd3e1def5
+  tls: true
+  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+- name: 🇯🇵 日本 (Japan) 46 - jack
+  server: 203.137.165.164
+  port: 57554
+  udp: true
+  type: vless
+  uuid: fb4c1c39-2204-43bb-853c-f8579a77feb4
+  tls: true
+  servername: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
+- name: 🇯🇵 日本 (Japan) 47 - jack
+  server: 210.152.85.154
+  port: 19364
+  udp: true
+  type: vless
+  uuid: 2a731bb4-6c55-40ef-8c8d-80969db19e08
+  tls: true
+  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+- name: 🇯🇵 日本 (Japan) 48 - jack
+  server: 210.152.85.154
+  port: 19364
+  udp: true
+  type: vless
+  uuid: 2b1d61e5-6835-488a-a5fe-b91874a8c1a1
+  tls: true
+  servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+- name: 🇯🇵 日本 (Japan) 49 - jack
+  server: 203.137.165.164
+  port: 57554
+  udp: true
+  type: vless
+  uuid: 45b4cd4c-3bd3-4838-b61e-031f75551dd5
+  tls: true
+  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+- name: 🇯🇵 日本 (Japan) 50 - jack
+  server: 210.152.85.154
+  port: 19364
+  udp: true
+  type: vless
+  uuid: ceeab8e5-554a-4a62-af84-a398c73fbfd2
+  tls: true
+  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+- name: 🇯🇵 日本 (Japan) 51 - jack
+  server: 210.152.85.154
+  port: 19364
+  udp: true
+  type: vless
+  uuid: 4738dcaa-80c4-4d8b-9006-832692887bbb
+  tls: true
+  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+- name: 🇯🇵 日本 (Japan) 52 - jack
+  server: 203.137.165.164
+  port: 57554
+  udp: true
+  type: vless
+  uuid: 7fdb95f9-c758-486c-865a-7c1219823670
+  tls: true
+  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+- name: 🇯🇵 日本 (Japan) 53 - jack
+  server: 210.152.85.154
+  port: 19364
+  udp: true
+  type: vless
+  uuid: 2ba0576c-6c80-426d-8b74-ae435633a32b
+  tls: true
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+- name: 🇯🇵 日本 (Japan) 54 - jack
+  server: 203.137.165.164
+  port: 57554
+  udp: true
+  type: vless
+  uuid: 72a672a7-ad57-4083-a79a-66a856cecd12
+  tls: true
+  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+- name: 🇯🇵 日本 (Japan) 55 - jack
+  server: accurate-frog.rooster465.autos
   port: 443
   udp: true
   type: trojan
   password: UX82473651
   sni: accurate-frog.rooster465.autos
   skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 35 - jack
-  server: 176.34.5.100
+- name: 🇯🇵 日本 (Japan) 56 - jack
+  server: 57.129.130.57
+  port: 52014
+  udp: true
+  type: vless
+  uuid: 091ea5fd-4e8d-4459-90af-e4d10179efff
+  tls: true
+  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+- name: 🇯🇵 日本 (Japan) 57 - jack
+  server: 57.129.130.34
+  port: 52014
+  udp: true
+  type: vless
+  uuid: 4f9dd654-13c5-4cd8-b306-0593bde99e2f
+  tls: true
+  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+- name: 🇯🇵 日本 (Japan) 58 - jack
+  server: 57.129.130.57
+  port: 52014
+  udp: true
+  type: vless
+  uuid: 609b0d70-e2d0-4a48-95b1-02754e9b249a
+  tls: true
+  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+- name: 🇯🇵 日本 (Japan) 59 - jack
+  server: assuring-skink.rooster465.autos
   port: 443
   udp: true
   type: trojan
   password: UX82473651
   sni: assuring-skink.rooster465.autos
+  skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 60 - jack
+  server: 57.129.130.57
+  port: 52014
+  udp: true
+  type: vless
+  uuid: d6b5c6ad-481f-40fd-a068-8ab14a8d8c65
+  tls: true
+  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
   skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 36 - jack
-  server: 43.207.198.39
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+- name: 🇯🇵 日本 (Japan) 61 - jack
+  server: 57.129.130.57
+  port: 52014
+  udp: true
+  type: vless
+  uuid: 25708467-7c80-47ca-b134-4c79331c4d71
+  tls: true
+  servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+- name: 🇯🇵 日本 (Japan) 62 - jack
+  server: 57.129.130.57
+  port: 52014
+  udp: true
+  type: vless
+  uuid: 98286408-b683-4c0f-96c5-7e00da649d90
+  tls: true
+  servername: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
+- name: 🇯🇵 日本 (Japan) 63 - jack
+  server: 45.76.87.125
+  port: 14750
+  udp: true
+  type: vless
+  uuid: c2c94230-7075-4558-89f4-ddf74d7de107
+  tls: true
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+- name: 🇯🇵 日本 (Japan) 64 - jack
+  server: 57.129.130.57
+  port: 52014
+  udp: true
+  type: vless
+  uuid: eb9ee088-57d8-4d68-ad00-da4ce09daca3
+  tls: true
+  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+- name: 🇯🇵 日本 (Japan) 65 - jack
+  server: 37.120.222.70
+  port: 8082
+  udp: true
+  type: vless
+  uuid: 726263e7-3176-4efb-a519-fe9f4ea87f7d
+  tls: true
+  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+- name: 🇯🇵 日本 (Japan) 66 - jack
+  server: 3.114.220.22
+  port: 10583
+  udp: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  servername: www.apple.com
+  client-fingerprint: qq
+- name: 🇯🇵 日本 (Japan) 67 - jack
+  server: 54.249.55.154
   port: 443
   udp: true
   type: trojan
   password: UX82473651
-  sni: fancy-javelin.rooster465.autos
+  sni: prime-corgi.rooster465.autos
   skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 37 - jack
+- name: 🇯🇵 日本 (Japan) 68 - jack
+  server: 45.76.87.125
+  port: 14750
+  udp: true
+  type: vless
+  uuid: 432289de-8dec-46ef-9a3f-001a3af178a7
+  tls: true
+  servername: d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev
+- name: 🇯🇵 日本 (Japan) 69 - jack
+  server: 57.129.130.57
+  port: 52014
+  udp: true
+  type: vless
+  uuid: 5ce4c0b0-0fed-406c-b0f9-c71e76bebc2a
+  tls: true
+  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+- name: 🇯🇵 日本 (Japan) 70 - jack
+  server: 80.240.18.227
+  port: 10051
+  udp: true
+  type: vless
+  uuid: f4d859eb-abc6-4c57-9eee-8fe9e2ef0f94
+  tls: true
+  servername: d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev
+- name: 🇯🇵 日本 (Japan) 71 - jack
+  server: 57.129.52.47
+  port: 52014
+  udp: true
+  type: vless
+  uuid: ecc4675b-1607-4699-8b20-23af97b671af
+  tls: true
+  servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+- name: 🇯🇵 日本 (Japan) 72 - jack
+  server: 185.125.103.62
+  port: 8082
+  udp: true
+  type: vless
+  uuid: 041e1ba9-5d17-4e7c-baac-c5aa877da29b
+  tls: true
+  servername: ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev
+- name: 🇯🇵 日本 (Japan) 73 - jack
+  server: 57.129.52.47
+  port: 52014
+  udp: true
+  type: vless
+  uuid: b135a1e0-ebdb-4d46-b3fa-bd1e78580244
+  tls: true
+  servername: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+- name: 🇯🇵 日本 (Japan) 74 - jack
+  server: 185.125.103.62
+  port: 8082
+  udp: true
+  type: vless
+  uuid: 72af1965-ec91-4376-82b1-75be51885506
+  tls: true
+  servername: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
+- name: 🇯🇵 日本 (Japan) 75 - jack
+  server: 84.247.155.196
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
+- name: 🇯🇵 日本 (Japan) 76 - jack
+  server: 185.125.103.62
+  port: 8082
+  udp: true
+  type: vless
+  uuid: 3dbf58d7-53fc-4fad-8779-1c867e024fd0
+  tls: true
+  servername: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+- name: 🇯🇵 日本 (Japan) 77 - jack
+  server: 116.204.164.5
+  port: 7443
+  udp: true
+  type: vless
+  uuid: b303691b-d577-4465-93c8-dd6a33dc8c85
+  tls: true
+  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+- name: 🇯🇵 日本 (Japan) 78 - jack
+  server: 116.204.164.60
+  port: 7443
+  udp: true
+  type: vless
+  uuid: 48942ced-a272-41c1-98ac-75745d83bf93
+  tls: true
+  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+- name: 🇯🇵 日本 (Japan) 79 - jack
+  server: 188.245.191.19
+  port: 2040
+  udp: true
+  type: vless
+  uuid: d89b1691-e1ad-47c4-8cdb-5bbfe1171a8c
+  tls: true
+  servername: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+- name: 🇯🇵 日本 (Japan) 80 - jack
+  server: 116.204.164.27
+  port: 7443
+  udp: true
+  type: vless
+  uuid: 4e243073-f25c-4aab-b3ff-63b6e8ef7f4b
+  tls: true
+  servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+- name: 🇯🇵 日本 (Japan) 81 - jack
+  server: 116.204.164.27
+  port: 7443
+  udp: true
+  type: vless
+  uuid: 4c7480b2-d67b-4bb9-9f33-0700dfcbdee6
+  tls: true
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+- name: 🇯🇵 日本 (Japan) 82 - jack
+  server: 116.204.164.5
+  port: 7443
+  udp: true
+  type: vless
+  uuid: d430d61d-5404-4f5b-9eaf-3266b059969b
+  tls: true
+  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+- name: 🇯🇵 日本 (Japan) 83 - jack
+  server: 116.204.164.5
+  port: 7443
+  udp: true
+  type: vless
+  uuid: 6eb831ea-8829-457b-a5d1-52f640a97486
+  tls: true
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+- name: 🇯🇵 日本 (Japan) 84 - jack
+  server: 116.204.164.27
+  port: 7443
+  udp: true
+  type: vless
+  uuid: 67ad6de6-ac67-4af7-8209-98ba3bd88834
+  tls: true
+  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+- name: 🇯🇵 日本 (Japan) 85 - jack
+  server: 185.125.103.62
+  port: 8082
+  udp: true
+  type: vless
+  uuid: 0a27dc3c-4c39-497c-8753-92bff7a8e3a9
+  tls: true
+  servername: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
+- name: 🇯🇵 日本 (Japan) 86 - jack
+  server: 178.105.133.160
+  port: 4443
+  udp: true
+  type: vless
+  uuid: ae116b46-9f21-4079-91d1-6e19d8ea0d47
+  tls: true
+  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+- name: 🇯🇵 日本 (Japan) 87 - jack
+  server: 79.137.199.52
+  port: 21
+  udp: true
+  type: vless
+  uuid: 763e2ddd-c830-4f4f-801c-f6f2c3418d4f
+  tls: true
+  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+- name: 🇯🇵 日本 (Japan) 88 - jack
+  server: 85.192.42.29
+  port: 8444
+  udp: true
+  type: vless
+  uuid: 0342921f-1cad-4555-b9fa-7aa6caa4bfa6
+  tls: true
+  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+- name: 🇯🇵 日本 (Japan) 89 - jack
+  server: 175.195.149.58
+  port: 10280
+  udp: true
+  type: vless
+  uuid: 8638521a-7d64-4ad0-9112-83aa1fc19867
+  tls: true
+  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+- name: 🇯🇵 日本 (Japan) 90 - jack
+  server: 54.238.153.132
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: obliging-louse.rooster465.autos
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 91 - jack
+  server: 57.129.130.10
+  port: 52014
+  udp: true
+  type: vless
+  uuid: 395bab7e-302a-42b4-bac7-8acb7d36fdf3
+  tls: true
+  servername: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
+- name: 🇯🇵 日本 (Japan) 92 - jack
+  server: 57.129.130.57
+  port: 52014
+  udp: true
+  type: vless
+  uuid: 04d2aebd-246f-4348-805f-a8e6840365fc
+  tls: true
+  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+- name: 🇯🇵 日本 (Japan) 93 - jack
+  server: 79.137.199.52
+  port: 21
+  udp: true
+  type: vless
+  uuid: e7b1256f-aba7-460e-8246-8d6a5156972a
+  tls: true
+  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+- name: 🇯🇵 日本 (Japan) 94 - jack
+  server: 89.22.224.146
+  port: 43788
+  udp: true
+  type: vless
+  uuid: 49a6eeaf-7dbf-4aa5-ba21-b36cd47e724e
+  tls: true
+  servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+- name: 🇯🇵 日本 (Japan) 95 - jack
+  server: 57.129.130.57
+  port: 52014
+  udp: true
+  type: vless
+  uuid: 201e0019-2e79-4147-8a09-e510d630abeb
+  tls: true
+  servername: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+- name: 🇯🇵 日本 (Japan) 96 - jack
+  server: 45.77.241.190
+  port: 8441
+  udp: true
+  type: vless
+  uuid: 75f440b2-2cf8-45e7-9565-af7fde5bacc2
+  tls: true
+  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+- name: 🇯🇵 日本 (Japan) 97 - jack
+  server: 220.71.172.2
+  port: 16034
+  udp: true
+  type: vless
+  uuid: 5d740455-b2d1-4bb7-bca2-b31f8fbb0cb3
+  tls: true
+  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+- name: 🇯🇵 日本 (Japan) 98 - jack
+  server: 220.71.172.2
+  port: 16034
+  udp: true
+  type: vless
+  uuid: 169f3aa8-6b52-4f3e-83d2-f96bac71e503
+  tls: true
+  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+- name: 🇯🇵 日本 (Japan) 99 - jack
+  server: 83.147.216.223
+  port: 4433
+  udp: true
+  type: vless
+  uuid: 55889b09-e315-4640-9404-e10834e7728e
+  tls: true
+  servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+- name: 🇯🇵 日本 (Japan) 100 - jack
+  server: 43.207.89.91
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: organic-caribou.rooster465.autos
+  skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 101 - jack
+  server: 45.77.241.190
+  port: 8441
+  udp: true
+  type: vless
+  uuid: 3011e40c-228f-4f2e-9dbf-5b256887e071
+  tls: true
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+- name: 🇯🇵 日本 (Japan) 102 - jack
+  server: 45.77.241.190
+  port: 8441
+  udp: true
+  type: vless
+  uuid: 45deab47-28e0-4048-b7a2-1ab672f684f8
+  tls: true
+  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+- name: 🇯🇵 日本 (Japan) 103 - jack
+  server: 45.77.241.190
+  port: 8441
+  udp: true
+  type: vless
+  uuid: b3ddac6f-b2b7-43a6-bd69-413013f30040
+  tls: true
+  servername: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+- name: 🇯🇵 日本 (Japan) 104 - jack
+  server: 45.77.241.190
+  port: 8441
+  udp: true
+  type: vless
+  uuid: c7440b4c-99be-408a-a26d-a947eef94f7f
+  tls: true
+  servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+- name: 🇯🇵 日本 (Japan) 105 - jack
+  server: 45.77.241.190
+  port: 8441
+  udp: true
+  type: vless
+  uuid: f11eaecc-8e8e-4840-8d5a-cbc67cab4cef
+  tls: true
+  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+- name: 🇯🇵 日本 (Japan) 106 - jack
+  server: 84.22.150.39
+  port: 7443
+  udp: true
+  type: vless
+  uuid: 9d5cbb90-876b-448d-9874-27ab35bae6e7
+  tls: true
+  servername: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
+- name: 🇯🇵 日本 (Japan) 107 - jack
+  server: 45.77.241.190
+  port: 8441
+  udp: true
+  type: vless
+  uuid: c65d2504-f68e-4948-841d-0a2dc5d66fbe
+  tls: true
+  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+- name: 🇯🇵 日本 (Japan) 108 - jack
+  server: 109.120.155.155
+  port: 444
+  udp: true
+  type: vless
+  uuid: c325206e-0f0c-4472-9d76-43e9b9b2ef63
+  tls: true
+  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+- name: 🇯🇵 日本 (Japan) 109 - jack
+  server: 185.220.68.226
+  port: 20205
+  udp: true
+  type: vless
+  uuid: d7406afb-cbbc-4302-aa56-cbe72088ccaf
+  tls: true
+  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+- name: 🇯🇵 日本 (Japan) 110 - jack
+  server: 15.235.196.80
+  port: 52014
+  udp: true
+  type: vless
+  uuid: 7ebef7f5-ddd7-491a-b1d5-f550eef32ad4
+  tls: true
+  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+- name: 🇯🇵 日本 (Japan) 111 - jack
+  server: 13.230.91.226
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: musical-terrier.rooster465.autos
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 112 - jack
+  server: 142.91.101.39
+  port: 627
+  udp: true
+  type: vless
+  uuid: 23b385cf-02c3-4df8-8402-11f1916418cd
+  tls: true
+  servername: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+- name: 🇯🇵 日本 (Japan) 113 - jack
+  server: 13.230.139.12
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: brief-glider.rooster465.autos
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 114 - jack
+  server: 188.245.191.19
+  port: 2040
+  udp: true
+  type: vless
+  uuid: 17253e9d-483f-46d1-b425-749b45fee6c6
+  tls: true
+  servername: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+- name: 🇯🇵 日本 (Japan) 115 - jack
+  server: 142.91.101.39
+  port: 627
+  udp: true
+  type: vless
+  uuid: 30b40928-f431-4c83-bfed-44f1243d16ff
+  tls: true
+  servername: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+- name: 🇯🇵 日本 (Japan) 116 - jack
   server: intense-sole.rooster465.autos
   port: 443
   udp: true
@@ -345,68 +1524,28 @@ proxies:
   password: UX82473651
   sni: intense-sole.rooster465.autos
   skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 38 - jack
-  server: rb.mangshe.xyz
-  port: 2060
-  udp: true
-  type: hysteria2
-  password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
-  sni: rb.mangshe.xyz
-  skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 39 - jack
-  server: vpn-hk-004.fastervpn.world
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-hk-004.fastervpn.world
-  skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 40 - jack
-  server: 84.247.155.196
-  port: 80
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
-- name: 🇯🇵 日本 (Japan) 41 - jack
-  server: 168.138.43.75
-  port: 80
-  udp: true
-  type: vmess
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: 168.138.43.75
-- name: 🇯🇵 日本 (Japan) 42 - jack
-  server: 52.192.45.137
+- name: 🇯🇵 日本 (Japan) 117 - jack
+  server: promoted-rattler.rooster465.autos
   port: 443
   udp: true
   type: trojan
   password: UX82473651
   sni: promoted-rattler.rooster465.autos
   skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 43 - jack
-  server: 172.111.146.64
-  port: 80
-  udp: true
-  type: vmess
-  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmess/
-- name: 🇯🇵 日本 (Japan) 44 - jack
-  server: 84.247.155.196
+- name: 🇯🇵 日本 (Japan) 118 - jack
+  server: 43.207.198.39
   port: 443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
+  type: trojan
+  password: UX82473651
+  sni: fancy-javelin.rooster465.autos
+  skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 119 - jack
+  server: 137.220.221.179
+  port: 443
+  udp: true
+  type: vless
+  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
 proxy-groups:
 - name: PROXIES
   type: select
@@ -456,6 +1595,81 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 42 - jack
   - 🇯🇵 日本 (Japan) 43 - jack
   - 🇯🇵 日本 (Japan) 44 - jack
+  - 🇯🇵 日本 (Japan) 45 - jack
+  - 🇯🇵 日本 (Japan) 46 - jack
+  - 🇯🇵 日本 (Japan) 47 - jack
+  - 🇯🇵 日本 (Japan) 48 - jack
+  - 🇯🇵 日本 (Japan) 49 - jack
+  - 🇯🇵 日本 (Japan) 50 - jack
+  - 🇯🇵 日本 (Japan) 51 - jack
+  - 🇯🇵 日本 (Japan) 52 - jack
+  - 🇯🇵 日本 (Japan) 53 - jack
+  - 🇯🇵 日本 (Japan) 54 - jack
+  - 🇯🇵 日本 (Japan) 55 - jack
+  - 🇯🇵 日本 (Japan) 56 - jack
+  - 🇯🇵 日本 (Japan) 57 - jack
+  - 🇯🇵 日本 (Japan) 58 - jack
+  - 🇯🇵 日本 (Japan) 59 - jack
+  - 🇯🇵 日本 (Japan) 60 - jack
+  - 🇯🇵 日本 (Japan) 61 - jack
+  - 🇯🇵 日本 (Japan) 62 - jack
+  - 🇯🇵 日本 (Japan) 63 - jack
+  - 🇯🇵 日本 (Japan) 64 - jack
+  - 🇯🇵 日本 (Japan) 65 - jack
+  - 🇯🇵 日本 (Japan) 66 - jack
+  - 🇯🇵 日本 (Japan) 67 - jack
+  - 🇯🇵 日本 (Japan) 68 - jack
+  - 🇯🇵 日本 (Japan) 69 - jack
+  - 🇯🇵 日本 (Japan) 70 - jack
+  - 🇯🇵 日本 (Japan) 71 - jack
+  - 🇯🇵 日本 (Japan) 72 - jack
+  - 🇯🇵 日本 (Japan) 73 - jack
+  - 🇯🇵 日本 (Japan) 74 - jack
+  - 🇯🇵 日本 (Japan) 75 - jack
+  - 🇯🇵 日本 (Japan) 76 - jack
+  - 🇯🇵 日本 (Japan) 77 - jack
+  - 🇯🇵 日本 (Japan) 78 - jack
+  - 🇯🇵 日本 (Japan) 79 - jack
+  - 🇯🇵 日本 (Japan) 80 - jack
+  - 🇯🇵 日本 (Japan) 81 - jack
+  - 🇯🇵 日本 (Japan) 82 - jack
+  - 🇯🇵 日本 (Japan) 83 - jack
+  - 🇯🇵 日本 (Japan) 84 - jack
+  - 🇯🇵 日本 (Japan) 85 - jack
+  - 🇯🇵 日本 (Japan) 86 - jack
+  - 🇯🇵 日本 (Japan) 87 - jack
+  - 🇯🇵 日本 (Japan) 88 - jack
+  - 🇯🇵 日本 (Japan) 89 - jack
+  - 🇯🇵 日本 (Japan) 90 - jack
+  - 🇯🇵 日本 (Japan) 91 - jack
+  - 🇯🇵 日本 (Japan) 92 - jack
+  - 🇯🇵 日本 (Japan) 93 - jack
+  - 🇯🇵 日本 (Japan) 94 - jack
+  - 🇯🇵 日本 (Japan) 95 - jack
+  - 🇯🇵 日本 (Japan) 96 - jack
+  - 🇯🇵 日本 (Japan) 97 - jack
+  - 🇯🇵 日本 (Japan) 98 - jack
+  - 🇯🇵 日本 (Japan) 99 - jack
+  - 🇯🇵 日本 (Japan) 100 - jack
+  - 🇯🇵 日本 (Japan) 101 - jack
+  - 🇯🇵 日本 (Japan) 102 - jack
+  - 🇯🇵 日本 (Japan) 103 - jack
+  - 🇯🇵 日本 (Japan) 104 - jack
+  - 🇯🇵 日本 (Japan) 105 - jack
+  - 🇯🇵 日本 (Japan) 106 - jack
+  - 🇯🇵 日本 (Japan) 107 - jack
+  - 🇯🇵 日本 (Japan) 108 - jack
+  - 🇯🇵 日本 (Japan) 109 - jack
+  - 🇯🇵 日本 (Japan) 110 - jack
+  - 🇯🇵 日本 (Japan) 111 - jack
+  - 🇯🇵 日本 (Japan) 112 - jack
+  - 🇯🇵 日本 (Japan) 113 - jack
+  - 🇯🇵 日本 (Japan) 114 - jack
+  - 🇯🇵 日本 (Japan) 115 - jack
+  - 🇯🇵 日本 (Japan) 116 - jack
+  - 🇯🇵 日本 (Japan) 117 - jack
+  - 🇯🇵 日本 (Japan) 118 - jack
+  - 🇯🇵 日本 (Japan) 119 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -505,5 +1719,80 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 42 - jack
   - 🇯🇵 日本 (Japan) 43 - jack
   - 🇯🇵 日本 (Japan) 44 - jack
+  - 🇯🇵 日本 (Japan) 45 - jack
+  - 🇯🇵 日本 (Japan) 46 - jack
+  - 🇯🇵 日本 (Japan) 47 - jack
+  - 🇯🇵 日本 (Japan) 48 - jack
+  - 🇯🇵 日本 (Japan) 49 - jack
+  - 🇯🇵 日本 (Japan) 50 - jack
+  - 🇯🇵 日本 (Japan) 51 - jack
+  - 🇯🇵 日本 (Japan) 52 - jack
+  - 🇯🇵 日本 (Japan) 53 - jack
+  - 🇯🇵 日本 (Japan) 54 - jack
+  - 🇯🇵 日本 (Japan) 55 - jack
+  - 🇯🇵 日本 (Japan) 56 - jack
+  - 🇯🇵 日本 (Japan) 57 - jack
+  - 🇯🇵 日本 (Japan) 58 - jack
+  - 🇯🇵 日本 (Japan) 59 - jack
+  - 🇯🇵 日本 (Japan) 60 - jack
+  - 🇯🇵 日本 (Japan) 61 - jack
+  - 🇯🇵 日本 (Japan) 62 - jack
+  - 🇯🇵 日本 (Japan) 63 - jack
+  - 🇯🇵 日本 (Japan) 64 - jack
+  - 🇯🇵 日本 (Japan) 65 - jack
+  - 🇯🇵 日本 (Japan) 66 - jack
+  - 🇯🇵 日本 (Japan) 67 - jack
+  - 🇯🇵 日本 (Japan) 68 - jack
+  - 🇯🇵 日本 (Japan) 69 - jack
+  - 🇯🇵 日本 (Japan) 70 - jack
+  - 🇯🇵 日本 (Japan) 71 - jack
+  - 🇯🇵 日本 (Japan) 72 - jack
+  - 🇯🇵 日本 (Japan) 73 - jack
+  - 🇯🇵 日本 (Japan) 74 - jack
+  - 🇯🇵 日本 (Japan) 75 - jack
+  - 🇯🇵 日本 (Japan) 76 - jack
+  - 🇯🇵 日本 (Japan) 77 - jack
+  - 🇯🇵 日本 (Japan) 78 - jack
+  - 🇯🇵 日本 (Japan) 79 - jack
+  - 🇯🇵 日本 (Japan) 80 - jack
+  - 🇯🇵 日本 (Japan) 81 - jack
+  - 🇯🇵 日本 (Japan) 82 - jack
+  - 🇯🇵 日本 (Japan) 83 - jack
+  - 🇯🇵 日本 (Japan) 84 - jack
+  - 🇯🇵 日本 (Japan) 85 - jack
+  - 🇯🇵 日本 (Japan) 86 - jack
+  - 🇯🇵 日本 (Japan) 87 - jack
+  - 🇯🇵 日本 (Japan) 88 - jack
+  - 🇯🇵 日本 (Japan) 89 - jack
+  - 🇯🇵 日本 (Japan) 90 - jack
+  - 🇯🇵 日本 (Japan) 91 - jack
+  - 🇯🇵 日本 (Japan) 92 - jack
+  - 🇯🇵 日本 (Japan) 93 - jack
+  - 🇯🇵 日本 (Japan) 94 - jack
+  - 🇯🇵 日本 (Japan) 95 - jack
+  - 🇯🇵 日本 (Japan) 96 - jack
+  - 🇯🇵 日本 (Japan) 97 - jack
+  - 🇯🇵 日本 (Japan) 98 - jack
+  - 🇯🇵 日本 (Japan) 99 - jack
+  - 🇯🇵 日本 (Japan) 100 - jack
+  - 🇯🇵 日本 (Japan) 101 - jack
+  - 🇯🇵 日本 (Japan) 102 - jack
+  - 🇯🇵 日本 (Japan) 103 - jack
+  - 🇯🇵 日本 (Japan) 104 - jack
+  - 🇯🇵 日本 (Japan) 105 - jack
+  - 🇯🇵 日本 (Japan) 106 - jack
+  - 🇯🇵 日本 (Japan) 107 - jack
+  - 🇯🇵 日本 (Japan) 108 - jack
+  - 🇯🇵 日本 (Japan) 109 - jack
+  - 🇯🇵 日本 (Japan) 110 - jack
+  - 🇯🇵 日本 (Japan) 111 - jack
+  - 🇯🇵 日本 (Japan) 112 - jack
+  - 🇯🇵 日本 (Japan) 113 - jack
+  - 🇯🇵 日本 (Japan) 114 - jack
+  - 🇯🇵 日本 (Japan) 115 - jack
+  - 🇯🇵 日本 (Japan) 116 - jack
+  - 🇯🇵 日本 (Japan) 117 - jack
+  - 🇯🇵 日本 (Japan) 118 - jack
+  - 🇯🇵 日本 (Japan) 119 - jack
 rules:
 - MATCH,PROXIES

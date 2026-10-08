@@ -13,30 +13,12 @@ proxies:
   alterId: 0
   cipher: auto
 - name: 🇹🇭 泰国 (Thailand) 02 - jack
-  server: 104.16.10.2
-  port: 443
+  server: 103.107.52.106
+  port: 52351
   udp: true
-  type: vless
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-  tls: true
-  servername: v2ray.simspeedup.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: v2ray.simspeedup.com
-- name: 🇹🇭 泰国 (Thailand) 03 - jack
-  server: V2rAy.SiMsPeEdUp.CoM
-  port: 80
-  udp: true
-  type: vless
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: aIs.SpEeDtEsT.nEt
+  type: ss
+  cipher: aes-256-gcm
+  password: sxajCTwrlK0zl+zmHpX0p0jXIfatnzlLzWlSQ950L1c=
 proxy-groups:
 - name: PROXIES
   type: select
@@ -44,7 +26,6 @@ proxy-groups:
   - AUTO
   - 🇹🇭 泰国 (Thailand) 01 - jack
   - 🇹🇭 泰国 (Thailand) 02 - jack
-  - 🇹🇭 泰国 (Thailand) 03 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -52,6 +33,5 @@ proxy-groups:
   proxies:
   - 🇹🇭 泰国 (Thailand) 01 - jack
   - 🇹🇭 泰国 (Thailand) 02 - jack
-  - 🇹🇭 泰国 (Thailand) 03 - jack
 rules:
 - MATCH,PROXIES
