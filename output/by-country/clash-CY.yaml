@@ -16,32 +16,17 @@ proxies:
     short-id: a8ae
   servername: deepl.com
   client-fingerprint: qq
-- name: 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
-  server: 5.253.42.164
-  port: 40443
-  udp: true
-  type: vless
-  uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
-    short-id: 68a8
-  servername: deepl.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇾 塞浦路斯 (Cyprus) 01 - jack
-  - 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇾 塞浦路斯 (Cyprus) 01 - jack
-  - 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
 rules:
 - MATCH,PROXIES

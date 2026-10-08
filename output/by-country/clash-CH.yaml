@@ -4,31 +4,28 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇭 瑞士 (Switzerland) 01 - jack
-  server: 132.243.175.144
-  port: 8388
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
 - name: 🇨🇭 瑞士 (Switzerland) 02 - jack
-  server: 140.238.213.114
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: 84a506ca5aca505696a454d828420b3f
-  sni: 140.238.213.114
-  skip-cert-verify: true
-- name: 🇨🇭 瑞士 (Switzerland) 03 - jack
   server: 208.69.78.217
-  port: 8444
+  port: 2053
+  udp: true
+  type: vless
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  tls: true
+  reality-opts:
+    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
+    short-id: ad86e2d52ff40ebd
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇨🇭 瑞士 (Switzerland) 03 - jack
+  server: 152.67.75.161
+  port: 443
   udp: true
   type: hysteria2
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  sni: vpn.local
+  password: 3a702d4d1de4949005d8431220e040fb
+  sni: www.bing.com
   skip-cert-verify: true
   obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
+  obfs-password: c13f29db6a638ad2b211b9ce2669ef27
 - name: 🇨🇭 瑞士 (Switzerland) 04 - jack
   server: 82.38.64.235
   port: 8443
@@ -52,16 +49,14 @@ proxies:
   client-fingerprint: firefox
 - name: 🇨🇭 瑞士 (Switzerland) 06 - jack
   server: 208.69.78.217
-  port: 2053
+  port: 8444
   udp: true
-  type: vless
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  tls: true
-  reality-opts:
-    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
-    short-id: ad86e2d52ff40ebd
-  servername: www.apple.com
-  client-fingerprint: chrome
+  type: hysteria2
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
 - name: 🇨🇭 瑞士 (Switzerland) 07 - jack
   server: 138.124.63.93
   port: 443
@@ -80,7 +75,7 @@ proxies:
   port: 443
   udp: true
   type: vless
-  uuid: 2b781b4a-5942-0018-a7f3-5a07b7b488c1
+  uuid: 2b781b4a-5942-48e0-a7f3-5a07b7b488c1
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
@@ -89,15 +84,17 @@ proxies:
   servername: lv-root.sworkingvpn.com
   client-fingerprint: firefox
 - name: 🇨🇭 瑞士 (Switzerland) 09 - jack
-  server: 152.67.75.161
+  server: 179.255.191.86
   port: 443
   udp: true
-  type: hysteria2
-  password: 3a702d4d1de4949005d8431220e040fb
-  sni: www.bing.com
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: c13f29db6a638ad2b211b9ce2669ef27
+  type: vless
+  uuid: 15c9be2b-20f1-47b7-bf33-747ed1ff7fb7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: sweth.ali-bard.online
+  client-fingerprint: firefox
 - name: 🇨🇭 瑞士 (Switzerland) 10 - jack
   server: 104.165.205.42
   port: 8443
@@ -106,12 +103,26 @@ proxies:
   password: 52e3dd44-ed23-4030-b0cc-5b5a953f2d4d
   sni: speedtestmark.com
   skip-cert-verify: false
+- name: 🇨🇭 瑞士 (Switzerland) 11 - jack
+  server: 140.238.213.114
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 84a506ca5aca505696a454d828420b3f
+  sni: 140.238.213.114
+  skip-cert-verify: true
+- name: 🇨🇭 瑞士 (Switzerland) 12 - jack
+  server: 132.243.175.144
+  port: 8388
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇭 瑞士 (Switzerland) 01 - jack
   - 🇨🇭 瑞士 (Switzerland) 02 - jack
   - 🇨🇭 瑞士 (Switzerland) 03 - jack
   - 🇨🇭 瑞士 (Switzerland) 04 - jack
@@ -121,12 +132,13 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 08 - jack
   - 🇨🇭 瑞士 (Switzerland) 09 - jack
   - 🇨🇭 瑞士 (Switzerland) 10 - jack
+  - 🇨🇭 瑞士 (Switzerland) 11 - jack
+  - 🇨🇭 瑞士 (Switzerland) 12 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇭 瑞士 (Switzerland) 01 - jack
   - 🇨🇭 瑞士 (Switzerland) 02 - jack
   - 🇨🇭 瑞士 (Switzerland) 03 - jack
   - 🇨🇭 瑞士 (Switzerland) 04 - jack
@@ -136,5 +148,7 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 08 - jack
   - 🇨🇭 瑞士 (Switzerland) 09 - jack
   - 🇨🇭 瑞士 (Switzerland) 10 - jack
+  - 🇨🇭 瑞士 (Switzerland) 11 - jack
+  - 🇨🇭 瑞士 (Switzerland) 12 - jack
 rules:
 - MATCH,PROXIES

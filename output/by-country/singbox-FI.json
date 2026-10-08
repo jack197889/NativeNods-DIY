@@ -12,28 +12,20 @@
       "password": "f9300a9bf39ae0347c3a3bfbc4dd7754"
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇫🇮 芬兰 (Finland) 02 - jack",
-      "server": "185.103.110.68",
-      "server_port": 18283,
-      "method": "aes-128-gcm",
-      "password": "f9300a9bf39ae0347c3a3bfbc4dd7754"
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇫🇮 芬兰 (Finland) 03 - jack",
+      "tag": "🇫🇮 芬兰 (Finland) 02 - jack",
       "server": "144.31.212.253",
       "server_port": 443,
       "password": "cf83b611-6cba-4535-adcb-8da06c6a9146",
       "tls": {
         "enabled": true,
         "server_name": "vps155-edge.kermemehori.ru",
-        "insecure": true
+        "insecure": false
       }
     },
     {
       "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 04 - jack",
+      "tag": "🇫🇮 芬兰 (Finland) 03 - jack",
       "server": "95.216.27.15",
       "server_port": 2053,
       "uuid": "1c81f6d3-5771-4c5d-9fdd-1655eff50634",
@@ -53,49 +45,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 05 - jack",
-      "server": "65.108.3.59",
-      "server_port": 443,
-      "uuid": "8df2e661-6f46-471b-9133-7fc13a0daa35",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "web.eitaa.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no",
-          "short_id": "90ec9bba2019"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 06 - jack",
-      "server": "144.31.27.215",
-      "server_port": 43000,
-      "uuid": "47f79fc1-0646-40e8-8a58-73e85d183d5a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "144.31.27.215",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "dxCQnOekn14riFxt3vdwDNydvW47FsmwFG6BJ2mUgEg",
-          "short_id": "568d87a47271344e"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 07 - jack",
+      "tag": "🇫🇮 芬兰 (Finland) 04 - jack",
       "server": "151.241.137.132",
       "server_port": 443,
       "uuid": "5786d86f-7731-4174-b1a3-84297e54b015",
@@ -116,67 +66,32 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 08 - jack",
-      "server": "159.194.250.154",
-      "server_port": 443,
-      "uuid": "f0482c9d-ff67-4a43-af8e-76fc5d55c250",
+      "tag": "🇫🇮 芬兰 (Finland) 05 - jack",
+      "server": "144.31.27.215",
+      "server_port": 43000,
+      "uuid": "47f79fc1-0646-40e8-8a58-73e85d183d5a",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "x9yfMdHRe9ZAJJUF9kZnDnO3Y7otoyFBCS9RoaIG3Es",
-          "short_id": ""
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 09 - jack",
-      "server": "psf-3.weedly.top",
-      "server_port": 80,
-      "uuid": "b0fae3b7-02de-4002-b8ca-b7159fe33841",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "machinemag.ir"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 10 - jack",
-      "server": "cdn.bulkavpn.top",
-      "server_port": 443,
-      "uuid": "91d734be-a3d0-4d50-83ab-74cf7b6966fa",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn.bulkavpn.top",
+        "server_name": "144.31.27.215",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "bQZcMViJWXus9rMSTOa-ZAaUJC0mIlPx7XmzrLp8GQU",
-          "short_id": "94f32cfc"
+          "public_key": "dxCQnOekn14riFxt3vdwDNydvW47FsmwFG6BJ2mUgEg",
+          "short_id": "568d87a47271344e"
         }
       }
     },
     {
       "type": "shadowsocks",
-      "tag": "🇫🇮 芬兰 (Finland) 11 - jack",
-      "server": "45.149.114.171",
-      "server_port": 777,
-      "method": "chacha20-ietf-poly1305",
-      "password": "Jeoq8ujfkqZKKvACQhoqBQ1PA3uq4242"
+      "tag": "🇫🇮 芬兰 (Finland) 06 - jack",
+      "server": "185.103.110.68",
+      "server_port": 18283,
+      "method": "aes-128-gcm",
+      "password": "f9300a9bf39ae0347c3a3bfbc4dd7754"
     },
     {
       "type": "selector",
@@ -188,12 +103,7 @@
         "🇫🇮 芬兰 (Finland) 03 - jack",
         "🇫🇮 芬兰 (Finland) 04 - jack",
         "🇫🇮 芬兰 (Finland) 05 - jack",
-        "🇫🇮 芬兰 (Finland) 06 - jack",
-        "🇫🇮 芬兰 (Finland) 07 - jack",
-        "🇫🇮 芬兰 (Finland) 08 - jack",
-        "🇫🇮 芬兰 (Finland) 09 - jack",
-        "🇫🇮 芬兰 (Finland) 10 - jack",
-        "🇫🇮 芬兰 (Finland) 11 - jack"
+        "🇫🇮 芬兰 (Finland) 06 - jack"
       ]
     },
     {
@@ -205,12 +115,7 @@
         "🇫🇮 芬兰 (Finland) 03 - jack",
         "🇫🇮 芬兰 (Finland) 04 - jack",
         "🇫🇮 芬兰 (Finland) 05 - jack",
-        "🇫🇮 芬兰 (Finland) 06 - jack",
-        "🇫🇮 芬兰 (Finland) 07 - jack",
-        "🇫🇮 芬兰 (Finland) 08 - jack",
-        "🇫🇮 芬兰 (Finland) 09 - jack",
-        "🇫🇮 芬兰 (Finland) 10 - jack",
-        "🇫🇮 芬兰 (Finland) 11 - jack"
+        "🇫🇮 芬兰 (Finland) 06 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

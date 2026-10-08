@@ -14,55 +14,17 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: a39ca173b57ac7021b08bf3e3de9f1f6
-- name: 🇬🇧 英国 (United Kingdom) 02 (家宽) - jack
-  server: chat.openai.com
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime29.workers.dev
-- name: 🇹🇷 土耳其 (Turkey) 03 (移动家宽) R50 - jack
-  server: test.keoplentuio.xyz
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-- name: 🇯🇵 日本 (Japan) 04 (家宽) - jack
-  server: 83.147.216.223
-  port: 4433
-  udp: true
-  type: vless
-  uuid: b491331e-3be5-4097-8bc1-fa86de978c29
-  tls: true
-  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇺🇸 美国 (United States) 01 (家宽) - jack
-  - 🇬🇧 英国 (United Kingdom) 02 (家宽) - jack
-  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) R50 - jack
-  - 🇯🇵 日本 (Japan) 04 (家宽) - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇺🇸 美国 (United States) 01 (家宽) - jack
-  - 🇬🇧 英国 (United Kingdom) 02 (家宽) - jack
-  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) R50 - jack
-  - 🇯🇵 日本 (Japan) 04 (家宽) - jack
 rules:
 - MATCH,PROXIES

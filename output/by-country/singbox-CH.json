@@ -4,30 +4,9 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "hysteria2",
       "tag": "🇨🇭 瑞士 (Switzerland) 01 - jack",
-      "server": "132.243.175.144",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇨🇭 瑞士 (Switzerland) 02 - jack",
-      "server": "140.238.213.114",
-      "server_port": 50160,
-      "password": "84a506ca5aca505696a454d828420b3f",
-      "tls": {
-        "enabled": true,
-        "server_name": "140.238.213.114",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇨🇭 瑞士 (Switzerland) 03 - jack",
       "server": "208.69.78.217",
-      "server_port": 8444,
       "password": "capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw",
       "tls": {
         "enabled": true,
@@ -37,6 +16,46 @@
       "obfs": {
         "type": "salamander",
         "password": "mbQXP2ASuHbF6ZPq"
+      },
+      "server_ports": [
+        "21000:21199",
+        "33000:33199"
+      ]
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇭 瑞士 (Switzerland) 02 - jack",
+      "server": "208.69.78.217",
+      "server_port": 2053,
+      "uuid": "c0dd6d59-1573-43af-8b70-1470b2632a6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0",
+          "short_id": "ad86e2d52ff40ebd"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇨🇭 瑞士 (Switzerland) 03 - jack",
+      "server": "152.67.75.161",
+      "server_port": 443,
+      "password": "3a702d4d1de4949005d8431220e040fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "c13f29db6a638ad2b211b9ce2669ef27"
       }
     },
     {
@@ -73,23 +92,19 @@
       }
     },
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇨🇭 瑞士 (Switzerland) 06 - jack",
       "server": "208.69.78.217",
-      "server_port": 2053,
-      "uuid": "c0dd6d59-1573-43af-8b70-1470b2632a6d",
+      "server_port": 8444,
+      "password": "capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0",
-          "short_id": "ad86e2d52ff40ebd"
-        }
+        "server_name": "vpn.local",
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "mbQXP2ASuHbF6ZPq"
       }
     },
     {
@@ -118,7 +133,7 @@
       "tag": "🇨🇭 瑞士 (Switzerland) 08 - jack",
       "server": "138.124.63.94",
       "server_port": 443,
-      "uuid": "2b781b4a-5942-0018-a7f3-5a07b7b488c1",
+      "uuid": "2b781b4a-5942-48e0-a7f3-5a07b7b488c1",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -135,19 +150,24 @@
       }
     },
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🇨🇭 瑞士 (Switzerland) 09 - jack",
-      "server": "152.67.75.161",
+      "server": "179.255.191.86",
       "server_port": 443,
-      "password": "3a702d4d1de4949005d8431220e040fb",
+      "uuid": "15c9be2b-20f1-47b7-bf33-747ed1ff7fb7",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "c13f29db6a638ad2b211b9ce2669ef27"
+        "server_name": "sweth.ali-bard.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I",
+          "short_id": ""
+        }
       }
     },
     {
@@ -163,6 +183,26 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "🇨🇭 瑞士 (Switzerland) 11 - jack",
+      "server": "140.238.213.114",
+      "server_port": 50160,
+      "password": "84a506ca5aca505696a454d828420b3f",
+      "tls": {
+        "enabled": true,
+        "server_name": "140.238.213.114",
+        "insecure": true
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇨🇭 瑞士 (Switzerland) 12 - jack",
+      "server": "132.243.175.144",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3"
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -176,7 +216,9 @@
         "🇨🇭 瑞士 (Switzerland) 07 - jack",
         "🇨🇭 瑞士 (Switzerland) 08 - jack",
         "🇨🇭 瑞士 (Switzerland) 09 - jack",
-        "🇨🇭 瑞士 (Switzerland) 10 - jack"
+        "🇨🇭 瑞士 (Switzerland) 10 - jack",
+        "🇨🇭 瑞士 (Switzerland) 11 - jack",
+        "🇨🇭 瑞士 (Switzerland) 12 - jack"
       ]
     },
     {
@@ -192,7 +234,9 @@
         "🇨🇭 瑞士 (Switzerland) 07 - jack",
         "🇨🇭 瑞士 (Switzerland) 08 - jack",
         "🇨🇭 瑞士 (Switzerland) 09 - jack",
-        "🇨🇭 瑞士 (Switzerland) 10 - jack"
+        "🇨🇭 瑞士 (Switzerland) 10 - jack",
+        "🇨🇭 瑞士 (Switzerland) 11 - jack",
+        "🇨🇭 瑞士 (Switzerland) 12 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

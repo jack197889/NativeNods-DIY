@@ -5,20 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇪 爱尔兰 (Ireland) 01 - jack
-  server: 34.242.77.118
+  server: 3.255.76.207
+  port: 443
+  udp: true
+  type: trojan
+  password: Trojan@82164024
+  sni: ie.tronsg.com
+  skip-cert-verify: false
+- name: 🇮🇪 爱尔兰 (Ireland) 02 - jack
+  server: sacred-anemone.rooster465.autos
   port: 443
   udp: true
   type: trojan
   password: UX82473651
   sni: sacred-anemone.rooster465.autos
-  skip-cert-verify: true
-- name: 🇮🇪 爱尔兰 (Ireland) 02 - jack
-  server: 3.253.106.233
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: loved-shark.rooster465.autos
   skip-cert-verify: false
 - name: 🇮🇪 爱尔兰 (Ireland) 03 - jack
   server: 198.55.102.59
@@ -34,13 +34,13 @@ proxies:
   servername: vk.com
   client-fingerprint: chrome
 - name: 🇮🇪 爱尔兰 (Ireland) 04 - jack
-  server: 3.255.76.207
+  server: loved-shark.rooster465.autos
   port: 443
   udp: true
   type: trojan
-  password: Trojan@82164024
-  sni: ie.tronsg.com
-  skip-cert-verify: true
+  password: UX82473651
+  sni: loved-shark.rooster465.autos
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
