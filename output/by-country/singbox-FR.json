@@ -6,25 +6,29 @@
     {
       "type": "hysteria2",
       "tag": "🇫🇷 法国 (France) 01 - jack",
-      "server": "151.247.197.253",
-      "server_port": 36723,
-      "password": "Krab9Hyst2_Rk7pQ2xL",
+      "server": "13.36.234.11",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "off",
+        "server_name": "vpn-fr-001.fastervpn.world",
         "insecure": true
       }
     },
     {
       "type": "hysteria2",
       "tag": "🇫🇷 法国 (France) 02 - jack",
-      "server": "62.210.7.139",
-      "server_port": 60111,
-      "password": "github.com/Alvin9999-newpac/fanqiang",
+      "server": "51.77.217.70",
+      "server_port": 8446,
+      "password": "capadmbd5f18bd:jX4BuciLLIqLvzJZsHpoXtc2",
       "tls": {
         "enabled": true,
-        "server_name": "62.210.7.139",
+        "server_name": "vpn.local",
         "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "ChY5QQQT3ZtUdNT8"
       }
     },
     {
@@ -59,25 +63,32 @@
       ]
     },
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🇫🇷 法国 (France) 05 - jack",
-      "server": "51.77.217.70",
-      "server_port": 8446,
-      "password": "capadmbd5f18bd:jX4BuciLLIqLvzJZsHpoXtc2",
+      "server": "go.inmobi.com",
+      "server_port": 8443,
+      "uuid": "656bb400-3b7a-47e3-94b0-0362f3865072",
       "tls": {
         "enabled": true,
-        "server_name": "vpn.local",
-        "insecure": true
+        "server_name": "socks5.revil-time3.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
-      "obfs": {
-        "type": "salamander",
-        "password": "ChY5QQQT3ZtUdNT8"
+      "transport": {
+        "type": "ws",
+        "path": "/socks5://128.140.46.169:13482",
+        "headers": {
+          "Host": "socks5.revil-time3.workers.dev"
+        }
       }
     },
     {
       "type": "vless",
       "tag": "🇫🇷 法国 (France) 06 - jack",
-      "server": "62.210.91.10",
+      "server": "62.210.91.2",
       "server_port": 23576,
       "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
       "flow": "xtls-rprx-vision",
@@ -98,39 +109,61 @@
     {
       "type": "vless",
       "tag": "🇫🇷 法国 (France) 07 - jack",
-      "server": "152.228.139.33",
-      "server_port": 51671,
-      "uuid": "75cc7568-abb0-46a8-88be-8137d3c647d4",
+      "server": "OV-France1.09vpn.com",
+      "server_port": 80,
+      "uuid": "f5c47e9c-914a-4a91-a81e-a5a77bc10fc1",
+      "transport": {
+        "type": "ws",
+        "path": "/vless/",
+        "headers": {
+          "Host": "OV-France1.09vpn.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 08 - jack",
+      "server": "51.255.166.202",
+      "server_port": 443,
+      "uuid": "593bf46b-8316-5050-9357-d8a41e4db78b",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.sony.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "-5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU",
-          "short_id": "2fed44d8c59f7e71"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc_common3"
+        "server_name": "e3k67dwms3-51255166202-direct.tavafog.com",
+        "insecure": false
       }
     },
     {
       "type": "shadowsocks",
-      "tag": "🇫🇷 法国 (France) 08 - jack",
+      "tag": "🇫🇷 法国 (France) 09 - jack",
       "server": "51.255.13.232",
       "server_port": 8388,
       "method": "chacha20-ietf-poly1305",
       "password": "BqnqToih0PbU"
     },
     {
+      "type": "trojan",
+      "tag": "🇫🇷 法国 (France) 10 - jack",
+      "server": "172.67.231.254",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
+      }
+    },
+    {
       "type": "vless",
-      "tag": "🇫🇷 法国 (France) 09 - jack",
-      "server": "62.210.91.2",
+      "tag": "🇫🇷 法国 (France) 11 - jack",
+      "server": "62.210.91.10",
       "server_port": 23576,
       "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
       "flow": "xtls-rprx-vision",
@@ -139,7 +172,7 @@
         "server_name": "fuck.rkn",
         "utls": {
           "enabled": true,
-          "fingerprint": ""
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -150,23 +183,72 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇫🇷 法国 (France) 10 - jack",
-      "server": "51.77.217.70",
-      "server_port": 8447,
-      "password": "capadmbd5f18bd:jX4BuciLLIqLvzJZsHpoXtc2",
+      "tag": "🇫🇷 法国 (France) 12 - jack",
+      "server": "151.247.197.253",
+      "server_port": 36723,
+      "password": "Krab9Hyst2_Rk7pQ2xL",
       "tls": {
         "enabled": true,
-        "server_name": "vpn.local",
+        "server_name": "www.cloudflare.com",
         "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "ChY5QQQT3ZtUdNT8"
       }
     },
     {
       "type": "vless",
-      "tag": "🇫🇷 法国 (France) 11 - jack",
+      "tag": "🇫🇷 法国 (France) 13 - jack",
+      "server": "51.77.217.70",
+      "server_port": 2053,
+      "uuid": "bf16ee0c-8b3c-41e4-ab3a-8b48033c404e",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": ""
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w",
+          "short_id": "bfe58beb41f1d09f"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇫🇷 法国 (France) 14 - jack",
+      "server": "62.210.7.139",
+      "server_port": 60111,
+      "password": "github.com/Alvin9999-newpac/fanqiang",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 15 - jack",
+      "server": "137.74.16.237",
+      "server_port": 443,
+      "uuid": "aaec4e42-a095-44b6-a239-f16d234a0798",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.icloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I",
+          "short_id": "b390e0a721d242b0"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 16 - jack",
       "server": "152.228.139.33",
       "server_port": 35108,
       "uuid": "81dc0b61-f9fe-4ad6-8b4e-b8c067b73712",
@@ -189,22 +271,8 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇫🇷 法国 (France) 12 - jack",
-      "server": "OV-France1.09vpn.com",
-      "server_port": 80,
-      "uuid": "f5c47e9c-914a-4a91-a81e-a5a77bc10fc1",
-      "transport": {
-        "type": "ws",
-        "path": "/vless/",
-        "headers": {
-          "Host": "OV-France1.09vpn.com"
-        }
-      }
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇫🇷 法国 (France) 13 - jack",
+      "tag": "🇫🇷 法国 (France) 17 - jack",
       "server": "62.210.147.2",
       "server_port": 43115,
       "password": "github.com/Alvin9999-newpac/fanqiang",
@@ -215,41 +283,100 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇫🇷 法国 (France) 14 - jack",
-      "server": "51.255.166.202",
-      "server_port": 443,
-      "uuid": "593bf46b-8316-5050-9357-d8a41e4db78b",
-      "flow": "xtls-rprx-vision",
+      "type": "hysteria2",
+      "tag": "🇫🇷 法国 (France) 18 - jack",
+      "server": "51.77.217.70",
+      "server_port": 8447,
+      "password": "capadmbd5f18bd:jX4BuciLLIqLvzJZsHpoXtc2",
       "tls": {
         "enabled": true,
-        "server_name": "e3k67dwms3-51255166202-direct.tavafog.com",
-        "insecure": false
+        "server_name": "vpn.local",
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "ChY5QQQT3ZtUdNT8"
       }
     },
     {
       "type": "vless",
-      "tag": "🇫🇷 法国 (France) 15 - jack",
-      "server": "51.77.217.70",
-      "server_port": 2053,
-      "uuid": "bf16ee0c-8b3c-41e4-ab3a-8b48033c404e",
+      "tag": "🇫🇷 法国 (France) 19 - jack",
+      "server": "199.232.78.160",
+      "server_port": 443,
+      "uuid": "XpnTeam-6",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "ssl.fastly.com",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w",
-          "short_id": "bfe58beb41f1d09f"
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "Appxdn.global.ssl.fastly.net"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇫🇷 法国 (France) 16 - jack",
+      "tag": "🇫🇷 法国 (France) 20 - jack",
+      "server": "51.255.165.170",
+      "server_port": 443,
+      "uuid": "tyxyrytyro",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "tyxyrytyro-51255165170-direct.araghchy.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇫🇷 法国 (France) 21 - jack",
+      "server": "173.212.201.85",
+      "server_port": 443,
+      "password": "gf1:gfhysteria2024",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.docker.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 22 - jack",
+      "server": "ov-france1.09vpn.com",
+      "server_port": 80,
+      "uuid": "25f86cb1-2140-4085-abcb-c3a0ea7a4be0",
+      "transport": {
+        "type": "ws",
+        "path": "/vless/",
+        "headers": {
+          "Host": "ov-france1.09vpn.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 23 - jack",
+      "server": "ov-france1.09vpn.com",
+      "server_port": 80,
+      "uuid": "f5c47e9c-914a-4a91-a81e-a5a77bc10fc1"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 24 - jack",
       "server": "54.37.136.194",
       "server_port": 2053,
       "uuid": "e8a432c8-5d84-49a5-b822-67ed761a58f9",
@@ -268,21 +395,33 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇫🇷 法国 (France) 17 - jack",
-      "server": "173.212.201.85",
-      "server_port": 443,
-      "password": "gf1:gfhysteria2024",
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 25 - jack",
+      "server": "152.228.139.33",
+      "server_port": 51671,
+      "uuid": "75cc7568-abb0-46a8-88be-8137d3c647d4",
       "tls": {
         "enabled": true,
-        "server_name": "www.docker.com",
-        "insecure": true
+        "server_name": "www.sony.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "-5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU",
+          "short_id": "2fed44d8c59f7e71"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc_common3"
       }
     },
     {
       "type": "trojan",
-      "tag": "🇫🇷 法国 (France) 18 - jack",
-      "server": "141.193.213.172",
+      "tag": "🇫🇷 法国 (France) 26 - jack",
+      "server": "5.253.189.238",
       "server_port": 443,
       "password": "humanity",
       "tls": {
@@ -300,36 +439,75 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇷 法国 (France) 19 - jack",
-      "server": "www.large-files.info",
-      "server_port": 8443,
-      "uuid": "7c99dc89-bf49-45c9-acc5-e43f36657518",
+      "tag": "🇫🇷 法国 (France) 27 - jack",
+      "server": "188.114.97.6",
+      "server_port": 443,
+      "uuid": "33f13fd5-1553-4574-ac1a-432d2d762cbe",
       "tls": {
         "enabled": true,
-        "server_name": "www.large-files.info",
+        "server_name": "frc.navid.lat",
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         }
       },
       "transport": {
         "type": "ws",
-        "path": "/var/www/html/video/preview/download/i8o0la"
+        "path": "/webdl",
+        "headers": {
+          "Host": "frc.navid.lat"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 28 - jack",
+      "server": "152.228.162.19",
+      "server_port": 80,
+      "uuid": "25f86cb1-2140-4085-abcb-c3a0ea7a4be0",
+      "transport": {
+        "type": "ws",
+        "path": "/vless/"
       }
     },
     {
       "type": "vmess",
-      "tag": "🇫🇷 法国 (France) 20 - jack",
-      "server": "v35.hdacd.com",
-      "server_port": 30835,
-      "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
+      "tag": "🇫🇷 法国 (France) 29 - jack",
+      "server": "145.239.55.210",
+      "server_port": 80,
+      "uuid": "e5e563fb-cf72-4250-bfff-fa0385301061",
       "security": "auto",
-      "alter_id": 2
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "google.whatsapp.snapp.torob.basalam.fortresshost.ir."
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇫🇷 法国 (France) 30 - jack",
+      "server": "5.44.46.142",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
+      }
     },
     {
       "type": "vless",
-      "tag": "🇫🇷 法国 (France) 21 - jack",
+      "tag": "🇫🇷 法国 (France) 31 - jack",
       "server": "145.223.68.58",
       "server_port": 443,
       "uuid": "edb50d20-2d3e-4c1e-8a75-a17168a89aa5",
@@ -345,6 +523,64 @@
           "enabled": true,
           "public_key": "qc2DcqT9zPPZr6ePZ7ukxACWrYhRNIBjDIjCK7veyQg",
           "short_id": "a44ff7d2e80213c2"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 32 - jack",
+      "server": "104.21.84.30",
+      "server_port": 2053,
+      "uuid": "9d672694-c146-422e-b3b5-3717a38a0fcc",
+      "tls": {
+        "enabled": true,
+        "server_name": "fr.api-music-fa.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/api/voip/updates/static/fr2035",
+        "headers": {
+          "Host": "fr.api-music-fa.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 33 - jack",
+      "server": "www.large-files.info",
+      "server_port": 8443,
+      "uuid": "7c99dc89-bf49-45c9-acc5-e43f36657518",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.large-files.info",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/var/www/html/video/preview/download/i8o0la"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇫🇷 法国 (France) 34 - jack",
+      "server": "213.1.145.50",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
         }
       }
     },
@@ -373,7 +609,20 @@
         "🇫🇷 法国 (France) 18 - jack",
         "🇫🇷 法国 (France) 19 - jack",
         "🇫🇷 法国 (France) 20 - jack",
-        "🇫🇷 法国 (France) 21 - jack"
+        "🇫🇷 法国 (France) 21 - jack",
+        "🇫🇷 法国 (France) 22 - jack",
+        "🇫🇷 法国 (France) 23 - jack",
+        "🇫🇷 法国 (France) 24 - jack",
+        "🇫🇷 法国 (France) 25 - jack",
+        "🇫🇷 法国 (France) 26 - jack",
+        "🇫🇷 法国 (France) 27 - jack",
+        "🇫🇷 法国 (France) 28 - jack",
+        "🇫🇷 法国 (France) 29 - jack",
+        "🇫🇷 法国 (France) 30 - jack",
+        "🇫🇷 法国 (France) 31 - jack",
+        "🇫🇷 法国 (France) 32 - jack",
+        "🇫🇷 法国 (France) 33 - jack",
+        "🇫🇷 法国 (France) 34 - jack"
       ]
     },
     {
@@ -400,7 +649,20 @@
         "🇫🇷 法国 (France) 18 - jack",
         "🇫🇷 法国 (France) 19 - jack",
         "🇫🇷 法国 (France) 20 - jack",
-        "🇫🇷 法国 (France) 21 - jack"
+        "🇫🇷 法国 (France) 21 - jack",
+        "🇫🇷 法国 (France) 22 - jack",
+        "🇫🇷 法国 (France) 23 - jack",
+        "🇫🇷 法国 (France) 24 - jack",
+        "🇫🇷 法国 (France) 25 - jack",
+        "🇫🇷 法国 (France) 26 - jack",
+        "🇫🇷 法国 (France) 27 - jack",
+        "🇫🇷 法国 (France) 28 - jack",
+        "🇫🇷 法国 (France) 29 - jack",
+        "🇫🇷 法国 (France) 30 - jack",
+        "🇫🇷 法国 (France) 31 - jack",
+        "🇫🇷 法国 (France) 32 - jack",
+        "🇫🇷 法国 (France) 33 - jack",
+        "🇫🇷 法国 (France) 34 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
