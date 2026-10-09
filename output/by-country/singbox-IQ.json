@@ -4,31 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇮🇶 IQ 01 - jack",
-      "server": "6m1rgyieclmrx9hef1.z6-0hlnubjibwzpa85.workers.dev",
-      "server_port": 443,
-      "password": "Telegram_healer_config",
-      "tls": {
-        "enabled": true,
-        "server_name": "6m1rGyIEclMRx9HeF1.Z6-0hlNUbJIBwZPa85.wOrKerS.DEV",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/tr/GaQvfFwT5sWgVxHig8YaXjtiuQPZNI?ed=2560"
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇮🇶 IQ 02 - jack",
+      "tag": "🇮🇶 IQ 01 - jack",
       "server": "arcturus.yokkastars.com",
       "server_port": 40443,
       "uuid": "bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54",
@@ -38,7 +15,7 @@
         "server_name": "deepl.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -52,16 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇶 IQ 01 - jack",
-        "🇮🇶 IQ 02 - jack"
+        "🇮🇶 IQ 01 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇶 IQ 01 - jack",
-        "🇮🇶 IQ 02 - jack"
+        "🇮🇶 IQ 01 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

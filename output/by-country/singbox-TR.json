@@ -6,42 +6,45 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01 - jack",
-      "server": "85.192.48.142",
-      "server_port": 443,
-      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-      "flow": "xtls-rprx-vision",
+      "server": "62.60.233.157",
+      "server_port": 8444,
+      "uuid": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
       "tls": {
         "enabled": true,
-        "server_name": "nvidia.com",
+        "server_name": "github.com",
         "utls": {
           "enabled": true,
-          "fingerprint": ""
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "short_id": "db04ce8bdb8900f1"
+          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
+          "short_id": ""
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "GunService"
       }
     },
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 02 - jack",
-      "server": "78.135.73.47",
+      "server": "81.177.215.175",
       "server_port": 443,
-      "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
+      "uuid": "1c5ed2e1-56da-41ab-9a78-159d9892ec17",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.datadoghq.com",
+        "server_name": "github.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8",
-          "short_id": "f46cd3ea3d1eb72d"
+          "public_key": "lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q",
+          "short_id": "9e4eced6e98ed4d4"
         }
       }
     },
@@ -56,7 +59,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -66,8 +69,50 @@
       }
     },
     {
-      "type": "trojan",
+      "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 04 - jack",
+      "server": "78.135.73.47",
+      "server_port": 443,
+      "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.datadoghq.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8",
+          "short_id": "f46cd3ea3d1eb72d"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 05 - jack",
+      "server": "85.192.48.142",
+      "server_port": 443,
+      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "nvidia.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
+          "short_id": "db04ce8bdb8900f1"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇹🇷 土耳其 (Turkey) 06 - jack",
       "server": "104.21.48.18",
       "server_port": 2053,
       "password": "e309e031-991e-4656-9934-44d10deb8fd8",
@@ -92,7 +137,9 @@
         "🇹🇷 土耳其 (Turkey) 01 - jack",
         "🇹🇷 土耳其 (Turkey) 02 - jack",
         "🇹🇷 土耳其 (Turkey) 03 - jack",
-        "🇹🇷 土耳其 (Turkey) 04 - jack"
+        "🇹🇷 土耳其 (Turkey) 04 - jack",
+        "🇹🇷 土耳其 (Turkey) 05 - jack",
+        "🇹🇷 土耳其 (Turkey) 06 - jack"
       ]
     },
     {
@@ -102,7 +149,9 @@
         "🇹🇷 土耳其 (Turkey) 01 - jack",
         "🇹🇷 土耳其 (Turkey) 02 - jack",
         "🇹🇷 土耳其 (Turkey) 03 - jack",
-        "🇹🇷 土耳其 (Turkey) 04 - jack"
+        "🇹🇷 土耳其 (Turkey) 04 - jack",
+        "🇹🇷 土耳其 (Turkey) 05 - jack",
+        "🇹🇷 土耳其 (Turkey) 06 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

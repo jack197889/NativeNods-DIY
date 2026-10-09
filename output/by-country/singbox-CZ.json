@@ -16,36 +16,18 @@
       }
     },
     {
-      "type": "trojan",
-      "tag": "🇨🇿 捷克 (Czech) 02 - jack",
-      "server": "ger6.fytpn.com",
-      "server_port": 2097,
-      "password": "gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU",
-      "tls": {
-        "enabled": true,
-        "server_name": "ger6.fytpn.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇿 捷克 (Czech) 01 - jack",
-        "🇨🇿 捷克 (Czech) 02 - jack"
+        "🇨🇿 捷克 (Czech) 01 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇿 捷克 (Czech) 01 - jack",
-        "🇨🇿 捷克 (Czech) 02 - jack"
+        "🇨🇿 捷克 (Czech) 01 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

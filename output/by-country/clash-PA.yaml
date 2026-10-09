@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇪 比利时 (Belgium) 01 - jack
-  server: 113.30.152.2
+- name: 🇵🇦 PA 01 - jack
+  server: sql.popmintxo.cc
   port: 443
   udp: true
   type: vless
-  uuid: 2b781b4a-5942-48e0-a7f3-5a07b7b488c1
+  uuid: d806a58b-33aa-42e0-b170-395e49c16b37
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: cceRo0o9bFMlCNVahZCrQWRzMAsR5M6abWXADIapY0w
-    short-id: 15bcc0a77c3cacdf
-  servername: be-root.sworkingvpn.com
-  client-fingerprint: firefox
+    public-key: Y0noOXC8qHmbM0GmDpj-9BBwKSOtHs-uMbNfKU050GQ
+    short-id: b558b9305a0b
+  servername: www.microsoft.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇧🇪 比利时 (Belgium) 01 - jack
+  - 🇵🇦 PA 01 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇪 比利时 (Belgium) 01 - jack
+  - 🇵🇦 PA 01 - jack
 rules:
 - MATCH,PROXIES

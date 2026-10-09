@@ -4,7 +4,40 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack
+- name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - jack
+  server: 61.18.134.10
+  port: 443
+  udp: true
+  type: vless
+  uuid: e077d2c2-7dc5-4e6e-a44d-79c4e4d8b384
+  tls: true
+  servername: mswo-gy191m.zhiyuantech.cloud
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /e077d2c2-7dc5-4e6e-a44d-79c4e4d8b384
+    headers:
+      Host: mswo-gy191m.zhiyuantech.cloud
+- name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
+  server: 118.168.196.215
+  port: 8080
+  udp: true
+  type: tuic
+  uuid: 8A9905B7-801B-41AF-BFC9-2034212770F6
+  password: 8A9905B7-801B-41AF-BFC9-2034212770F6
+  sni: tw3.dexlos.com
+  skip-cert-verify: true
+  congestion-controller: bbr
+  udp-relay-mode: native
+  alpn:
+  - h3
+- name: 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack
+  server: test.keoplentuio.xyz
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
   server: hinet1.2yly.com
   port: 24215
   udp: true
@@ -20,12 +53,18 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
+  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
+  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
 rules:
 - MATCH,PROXIES

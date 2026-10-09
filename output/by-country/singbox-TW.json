@@ -6,24 +6,24 @@
     {
       "type": "hysteria2",
       "tag": "🇹🇼 中国台湾 (Taiwan) 01 - jack",
-      "server": "160.187.100.109",
+      "server": "103.115.109.49",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "160.187.100.109",
+        "server_name": "https://t.me/oneclickvpnkeys",
         "insecure": true
       }
     },
     {
       "type": "hysteria2",
       "tag": "🇹🇼 中国台湾 (Taiwan) 02 - jack",
-      "server": "103.115.109.49",
+      "server": "vpn-tw-002.fastervpn.world",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "https%3a%2f%2ft.me%2fwangcai2",
+        "server_name": "google.com",
         "insecure": true
       }
     },
@@ -47,32 +47,13 @@
       }
     },
     {
-      "type": "tuic",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 04 - jack",
-      "server": "118.168.196.215",
-      "server_port": 8080,
-      "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
-      "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
-      "congestion_control": "bbr",
-      "udp_relay_mode": "native",
-      "tls": {
-        "enabled": true,
-        "server_name": "tw3.dexlos.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇹🇼 中国台湾 (Taiwan) 01 - jack",
         "🇹🇼 中国台湾 (Taiwan) 02 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 - jack"
+        "🇹🇼 中国台湾 (Taiwan) 03 - jack"
       ]
     },
     {
@@ -81,8 +62,7 @@
       "outbounds": [
         "🇹🇼 中国台湾 (Taiwan) 01 - jack",
         "🇹🇼 中国台湾 (Taiwan) 02 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 - jack"
+        "🇹🇼 中国台湾 (Taiwan) 03 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -5,17 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇶 IQ 01 - jack
-  server: 6m1rgyieclmrx9hef1.z6-0hlnubjibwzpa85.workers.dev
-  port: 443
-  udp: true
-  type: trojan
-  password: Telegram_healer_config
-  sni: 6m1rGyIEclMRx9HeF1.Z6-0hlNUbJIBwZPa85.wOrKerS.DEV
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tr/GaQvfFwT5sWgVxHig8YaXjtiuQPZNI?ed=2560
-- name: 🇮🇶 IQ 02 - jack
   server: arcturus.yokkastars.com
   port: 40443
   udp: true
@@ -27,20 +16,18 @@ proxies:
     public-key: w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4
     short-id: db46e2946fc466fd
   servername: deepl.com
-  client-fingerprint: qq
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇮🇶 IQ 01 - jack
-  - 🇮🇶 IQ 02 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇶 IQ 01 - jack
-  - 🇮🇶 IQ 02 - jack
 rules:
 - MATCH,PROXIES

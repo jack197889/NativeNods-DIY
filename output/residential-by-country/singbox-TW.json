@@ -4,8 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "tuic",
       "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
+      "server": "118.168.196.215",
+      "server_port": 8080,
+      "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
+      "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "tls": {
+        "enabled": true,
+        "server_name": "tw3.dexlos.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
       "server": "hinet1.2yly.com",
       "server_port": 24215,
       "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
@@ -28,14 +46,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
