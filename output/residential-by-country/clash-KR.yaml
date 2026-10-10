@@ -4,24 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇱 智利 (Chile) 01 - jack
-  server: ruot.ayucloudservices.nl
-  port: 35032
+- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - jack
+  server: 218.237.185.234
+  port: 4652
   udp: true
   type: ss
-  cipher: aes-128-gcm
-  password: bd962c9a-d6f2-4561-bd80-34206c4d5279
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇱 智利 (Chile) 01 - jack
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇱 智利 (Chile) 01 - jack
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - jack
 rules:
 - MATCH,PROXIES

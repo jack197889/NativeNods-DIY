@@ -13,6 +13,18 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
 - name: 🇨🇭 瑞士 (Switzerland) 02 - jack
+  server: 208.69.78.217
+  port: 2053
+  udp: true
+  type: vless
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  tls: true
+  reality-opts:
+    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
+    short-id: ad86e2d52ff40ebd
+  servername: www.apple.com
+  client-fingerprint: firefox
+- name: 🇨🇭 瑞士 (Switzerland) 03 - jack
   server: 152.67.75.161
   port: 443
   udp: true
@@ -22,26 +34,14 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: c13f29db6a638ad2b211b9ce2669ef27
-- name: 🇨🇭 瑞士 (Switzerland) 03 - jack
-  server: 179.255.191.86
-  port: 443
-  udp: true
-  type: vless
-  uuid: 12e95f93-443c-45f0-9a2a-5b318b9124cf
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
-  servername: dobro.ali-bard.online
-  client-fingerprint: firefox
-- name: 🇨🇭 瑞士 (Switzerland) 05 - jack
-  server: 82.38.64.235
+- name: 🇨🇭 瑞士 (Switzerland) 04 - jack
+  server: 82.38.64.229
   port: 8443
   udp: true
   type: hysteria2
   password: we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH
   sni: hopp-swizland-new.mysynology.net
-  skip-cert-verify: true
+  skip-cert-verify: false
 - name: 🇨🇭 瑞士 (Switzerland) 06 - jack
   server: 208.69.78.217
   port: 8444
@@ -66,24 +66,24 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: firefox
 - name: 🇨🇭 瑞士 (Switzerland) 08 - jack
-  server: 208.69.78.217
-  port: 2053
-  udp: true
-  type: vless
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  tls: true
-  reality-opts:
-    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
-    short-id: ad86e2d52ff40ebd
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇨🇭 瑞士 (Switzerland) 09 - jack
   server: 132.243.175.144
   port: 8388
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
+- name: 🇨🇭 瑞士 (Switzerland) 09 - jack
+  server: 179.255.191.86
+  port: 443
+  udp: true
+  type: vless
+  uuid: 12e95f93-443c-45f0-9a2a-5b318b9124cf
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: dobro.ali-bard.online
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -92,7 +92,7 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 01 - jack
   - 🇨🇭 瑞士 (Switzerland) 02 - jack
   - 🇨🇭 瑞士 (Switzerland) 03 - jack
-  - 🇨🇭 瑞士 (Switzerland) 05 - jack
+  - 🇨🇭 瑞士 (Switzerland) 04 - jack
   - 🇨🇭 瑞士 (Switzerland) 06 - jack
   - 🇨🇭 瑞士 (Switzerland) 07 - jack
   - 🇨🇭 瑞士 (Switzerland) 08 - jack
@@ -105,7 +105,7 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 01 - jack
   - 🇨🇭 瑞士 (Switzerland) 02 - jack
   - 🇨🇭 瑞士 (Switzerland) 03 - jack
-  - 🇨🇭 瑞士 (Switzerland) 05 - jack
+  - 🇨🇭 瑞士 (Switzerland) 04 - jack
   - 🇨🇭 瑞士 (Switzerland) 06 - jack
   - 🇨🇭 瑞士 (Switzerland) 07 - jack
   - 🇨🇭 瑞士 (Switzerland) 08 - jack

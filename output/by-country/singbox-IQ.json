@@ -6,30 +6,13 @@
     {
       "type": "vless",
       "tag": "🇮🇶 IQ 01 - jack",
-      "server": "188.114.97.6",
-      "server_port": 8080,
-      "uuid": "2db92da9-8ffb-491b-81d6-6e8d50876020",
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoiWlFRWlMwRDdLakVqMyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
-        "headers": {
-          "Host": "bpb-01c11365.hjdbcvdbkv.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇮🇶 IQ 02 - jack",
-      "server": "188.114.96.3",
+      "server": "188.114.98.0",
       "server_port": 443,
-      "password": "pjg&JybcgFsca,+gQMa",
+      "uuid": "11e9eea1-b1a9-4f02-a1a1-b24f7664b1cf",
       "tls": {
         "enabled": true,
-        "server_name": "022XW1dMCzG0C6165Pcla6.tOMBORn69.WOrkErS.dev",
+        "server_name": "ancIEnt-HeaRt-60c5.dPccgIzieB.WoRKers.dEV",
         "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -37,30 +20,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/tr/TXGYPKAmg2T9agqYRDFm?ed=2560",
+        "path": "/eyJqdW5rIjoiYW1sczlYWkFHOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0",
         "headers": {
-          "Host": "022xw1dmczg0c6165pcla6.tomborn69.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇮🇶 IQ 03 - jack",
-      "server": "arcturus.yokkastars.com",
-      "server_port": 40443,
-      "uuid": "bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "deepl.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4",
-          "short_id": "db46e2946fc466fd"
+          "Host": "ancient-heart-60c5.dpccgizieb.workers.dev"
         }
       }
     },
@@ -69,18 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇶 IQ 01 - jack",
-        "🇮🇶 IQ 02 - jack",
-        "🇮🇶 IQ 03 - jack"
+        "🇮🇶 IQ 01 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇶 IQ 01 - jack",
-        "🇮🇶 IQ 02 - jack",
-        "🇮🇶 IQ 03 - jack"
+        "🇮🇶 IQ 01 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

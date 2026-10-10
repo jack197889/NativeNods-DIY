@@ -5,55 +5,31 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇶 IQ 01 - jack
-  server: 188.114.97.6
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 2db92da9-8ffb-491b-81d6-6e8d50876020
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiWlFRWlMwRDdLakVqMyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: bpb-01c11365.hjdbcvdbkv.workers.dev
-- name: 🇮🇶 IQ 02 - jack
-  server: 188.114.96.3
+  server: 188.114.98.0
   port: 443
   udp: true
-  type: trojan
-  password: pjg&JybcgFsca,+gQMa
-  sni: 022XW1dMCzG0C6165Pcla6.tOMBORn69.WOrkErS.dev
+  type: vless
+  uuid: 11e9eea1-b1a9-4f02-a1a1-b24f7664b1cf
+  tls: true
+  servername: ancIEnt-HeaRt-60c5.dPccgIzieB.WoRKers.dEV
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /tr/TXGYPKAmg2T9agqYRDFm?ed=2560
-- name: 🇮🇶 IQ 03 - jack
-  server: arcturus.yokkastars.com
-  port: 40443
-  udp: true
-  type: vless
-  uuid: bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4
-    short-id: db46e2946fc466fd
-  servername: deepl.com
-  client-fingerprint: chrome
+    path: /eyJqdW5rIjoiYW1sczlYWkFHOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    headers:
+      Host: ancient-heart-60c5.dpccgizieb.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇮🇶 IQ 01 - jack
-  - 🇮🇶 IQ 02 - jack
-  - 🇮🇶 IQ 03 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇶 IQ 01 - jack
-  - 🇮🇶 IQ 02 - jack
-  - 🇮🇶 IQ 03 - jack
 rules:
 - MATCH,PROXIES

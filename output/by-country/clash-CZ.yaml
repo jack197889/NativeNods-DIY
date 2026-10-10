@@ -5,31 +5,31 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01 - jack
-  server: 188.114.97.6
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 6cc29a05-4828-4e48-a34a-20b7ada60e85
-  network: ws
-  ws-opts:
-    path: /OAZko425kNFF0PpQ
-    headers:
-      Host: testmikonim.hydrymhmdamyn7.workers.dev
-- name: 🇨🇿 捷克 (Czech) 02 - jack
-  server: cz.h2.cleanersaz.help
+  server: dl2uf-ivdezilz3e86rk18.hhvt37tjm2xbosql5hxogn-y.workers.dev
   port: 443
   udp: true
-  type: hysteria2
-  password: c-E0lamG8OnEj9M_uh3oJPmIXqYIVGctO-NHELF1TmNYs7Jl
-  sni: cz.h2.cleanersaz.help
-  skip-cert-verify: true
-- name: 🇨🇿 捷克 (Czech) 03 - jack
+  type: trojan
+  password: LcICDcp!jD9TFV$NbH
+  sni: dl2uF-iVdeZILZ3E86rK18.Hhvt37tjm2XBOsQL5HXogN-Y.woRKERS.dEv
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /tr/pg4wM48V9O859nmqsJg22EOFKN4S570y?ed=2560
+- name: 🇨🇿 捷克 (Czech) 02 - jack
   server: ger6.fytpn.com
   port: 2097
   udp: true
   type: trojan
   password: gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU
   sni: ger6.fytpn.com
+  skip-cert-verify: false
+- name: 🇨🇿 捷克 (Czech) 03 - jack
+  server: cz.h2.cleanersaz.help
+  port: 443
+  udp: true
+  type: hysteria2
+  password: c-E0lamG8OnEj9M_uh3oJPmIXqYIVGctO-NHELF1TmNYs7Jl
+  sni: cz.h2.cleanersaz.help
   skip-cert-verify: false
 proxy-groups:
 - name: PROXIES

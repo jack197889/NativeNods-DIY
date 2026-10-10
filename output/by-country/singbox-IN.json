@@ -6,6 +6,26 @@
     {
       "type": "vless",
       "tag": "🇮🇳 印度 (India) 01 - jack",
+      "server": "194.61.31.126",
+      "server_port": 2053,
+      "uuid": "1d4e18bd-1f26-4915-b35a-7ace4826e76a",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU",
+          "short_id": "9980e0609b0d3891"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇳 印度 (India) 02 - jack",
       "server": "148.113.5.44",
       "server_port": 443,
       "uuid": "72ea5a91-ffcc-43d2-9297-5993c3abf186",
@@ -25,26 +45,6 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇮🇳 印度 (India) 02 - jack",
-      "server": "194.61.31.126",
-      "server_port": 2053,
-      "uuid": "1d4e18bd-1f26-4915-b35a-7ace4826e76a",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU",
-          "short_id": "9980e0609b0d3891"
-        }
-      }
-    },
-    {
       "type": "vmess",
       "tag": "🇮🇳 印度 (India) 03 - jack",
       "server": "152.67.8.205",
@@ -52,20 +52,40 @@
       "uuid": "9db4c708-aef8-4359-821b-38e47990be0d",
       "security": "auto",
       "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "152.67.8.205"
+        "type": "ws"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇮🇳 印度 (India) 04 - jack",
+      "server": "tttyder.wsone.icu",
+      "server_port": 443,
+      "password": "M7v%w11Se*",
+      "tls": {
+        "enabled": true,
+        "server_name": "tttyder.wsone.icu",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇮🇳 印度 (India) 04 - jack",
-      "server": "172.105.39.124",
-      "server_port": 7002,
-      "method": "aes-256-gcm",
-      "password": "RexnBgU7EV5ADxG"
+      "type": "trojan",
+      "tag": "🇮🇳 印度 (India) 05 - jack",
+      "server": "hyfuuf6.wsone.icu",
+      "server_port": 443,
+      "password": "M7v%w11Se*",
+      "tls": {
+        "enabled": true,
+        "server_name": "hyfuuf6.wsone.icu",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
       "type": "selector",
@@ -75,7 +95,8 @@
         "🇮🇳 印度 (India) 01 - jack",
         "🇮🇳 印度 (India) 02 - jack",
         "🇮🇳 印度 (India) 03 - jack",
-        "🇮🇳 印度 (India) 04 - jack"
+        "🇮🇳 印度 (India) 04 - jack",
+        "🇮🇳 印度 (India) 05 - jack"
       ]
     },
     {
@@ -85,7 +106,8 @@
         "🇮🇳 印度 (India) 01 - jack",
         "🇮🇳 印度 (India) 02 - jack",
         "🇮🇳 印度 (India) 03 - jack",
-        "🇮🇳 印度 (India) 04 - jack"
+        "🇮🇳 印度 (India) 04 - jack",
+        "🇮🇳 印度 (India) 05 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

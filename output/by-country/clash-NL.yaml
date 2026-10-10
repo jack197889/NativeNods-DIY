@@ -5,341 +5,186 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01 - jack
-  server: to6r63-kkchighqm2.vxz0dduq7to7su0cdqf.workers.dev
+  server: 188.114.97.6
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 20e295db-a6af-4006-bfd6-91453f169968
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiSFM1N0lLQmx2UU1qRzlnTiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: 057.electrocellco-cf-057.workers.dev
+- name: 🇳🇱 荷兰 (Netherlands) 02 - jack
+  server: 45.130.125.126
   port: 443
   udp: true
   type: vless
-  uuid: 4ccf70f9-7632-4b5a-9557-10d2dd347bb2
+  uuid: b69b43d1-091d-4d7c-90b2-7a8bbad9d6a9
   tls: true
-  servername: To6R63-kKChiGHqm2.vxz0Dduq7to7Su0CDQf.worKERs.DEV
+  servername: BItter-CreDIT-61b8.b76EbA0aBb.wORkerS.dEv
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiY0U2T212Y21yeEhUZHRKYSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    headers:
+      Host: BItter-CreDIT-61b8.b76EbA0aBb.wORkerS.dEv
+- name: 🇳🇱 荷兰 (Netherlands) 03 - jack
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  type: vless
+  uuid: 26168a04-a91c-48fc-b8d0-3ba5a4e719c4
+  tls: true
+  servername: 2yijonkovdic86iq5ebnd1moqqf.yyuz0mhr4awg8vw-wwycuu4.workers.dev
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /vl/zhlUKkHT4SNWHmPFOf4cu6?ed=2560
+    path: /vl/17NBgz64AfwQ4Dd6qdNR?ed=2560
     headers:
-      Host: to6r63-kkchighqm2.vxz0dduq7to7su0cdqf.workers.dev
-- name: 🇳🇱 荷兰 (Netherlands) 02 - jack
-  server: dl2uf-ivdezilz3e86rk18.hhvt37tjm2xbosql5hxogn-y.workers.dev
+      Host: 2yijonkovdic86iq5ebnd1moqqf.yyuz0mhr4awg8vw-wwycuu4.workers.dev
+- name: 🇳🇱 荷兰 (Netherlands) 04 - jack
+  server: 188.114.96.7
   port: 443
   udp: true
-  type: trojan
-  password: LcICDcp!jD9TFV$NbH
-  sni: dl2uF-iVdeZILZ3E86rK18.Hhvt37tjm2XBOsQL5HXogN-Y.woRKERS.dEv
+  type: vless
+  uuid: ba49d874-fe02-465d-82d3-ed981dc7694f
+  tls: true
+  servername: o94yv7lIF0-AnXiSd9EFeHVVS7mxn6Bh.z-ULe-IKA-d-e-Ne-k-E.WORKERs.DEv
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /tr/pg4wM48V9O859nmqsJg22EOFKN4S570y?ed=2560
-- name: 🇳🇱 荷兰 (Netherlands) 03 - jack
+    path: /dbJqwUHWfrXV0Z3Q?ed=2560
+    headers:
+      Host: o94yv7lif0-anxisd9efehvvs7mxn6bh.z-ule-ika-d-e-ne-k-e.workers.dev
+- name: 🇳🇱 荷兰 (Netherlands) 05 - jack
+  server: 104.21.87.238
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 8f53fce2-6c17-4e37-9ae9-d969fd85117c
+  network: ws
+  ws-opts:
+    path: /vl/Wp4FqWLcoYNYXCovu4?ed=2560
+    headers:
+      Host: ApI-hub-C9A393.ALiMiRZAi539-484.WOrKerS.DeV
+- name: 🇳🇱 荷兰 (Netherlands) 06 - jack
+  server: 172.67.155.222
+  port: 443
+  udp: true
+  type: vless
+  uuid: 82b279c6-5cba-3a96-f8bd-780a00000035
+  tls: true
+  servername: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
+- name: 🇳🇱 荷兰 (Netherlands) 07 - jack
   server: 158.173.20.208
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇳🇱 荷兰 (Netherlands) 04 - jack
-  server: 109.201.152.181
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-cfb
-  password: shadowsocks
-- name: 🇳🇱 荷兰 (Netherlands) 05 - jack
-  server: 82.38.31.39
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 06 - jack
-  server: 82.38.31.3
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 07 - jack
-  server: 82.38.31.171
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
 - name: 🇳🇱 荷兰 (Netherlands) 08 - jack
-  server: 82.38.31.9
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 09 - jack
-  server: 82.38.31.35
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 10 - jack
-  server: 82.38.31.178
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 11 - jack
-  server: 193.29.139.225
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 12 - jack
-  server: 82.38.31.157
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 13 - jack
-  server: 82.38.31.18
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 14 - jack
-  server: c3.nastuh.link
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: y7KeRTzmH0vXT2kp
-- name: 🇳🇱 荷兰 (Netherlands) 15 - jack
-  server: 82.38.31.198
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 16 - jack
-  server: 82.38.31.171
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 17 - jack
-  server: 82.38.31.62
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 18 - jack
-  server: 193.29.139.235
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 19 - jack
   server: 82.38.31.61
   port: 8080
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 20 - jack
-  server: 185.212.171.202
-  port: 18670
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: 59ded1591b0b45f0b1e9361334c0f7d9
-- name: 🇳🇱 荷兰 (Netherlands) 21 - jack
-  server: 82.38.31.34
+- name: 🇳🇱 荷兰 (Netherlands) 09 - jack
+  server: 82.38.31.3
   port: 8080
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 22 - jack
-  server: 82.38.31.207
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 23 - jack
-  server: 82.38.31.47
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 24 - jack
-  server: 82.38.31.42
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 25 - jack
-  server: 82.38.31.205
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 26 - jack
-  server: 193.29.139.132
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 27 - jack
-  server: 82.38.31.216
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 28 - jack
-  server: 82.38.31.149
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 29 - jack
-  server: 82.38.31.193
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 30 - jack
-  server: 193.29.139.204
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 31 - jack
-  server: 82.38.31.13
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 32 - jack
-  server: 82.38.31.213
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 33 - jack
-  server: 82.38.31.26
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 34 - jack
-  server: 82.38.31.162
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 35 - jack
-  server: 82.38.31.202
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 36 - jack
-  server: 82.38.31.174
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 37 - jack
-  server: 82.38.31.69
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 38 - jack
-  server: 82.38.31.175
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 39 - jack
-  server: 193.29.139.235
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 40 - jack
-  server: 82.38.31.149
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 41 - jack
+- name: 🇳🇱 荷兰 (Netherlands) 10 - jack
   server: 82.38.31.183
   port: 8080
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 42 - jack
-  server: 82.38.31.82
-  port: 8080
+- name: 🇳🇱 荷兰 (Netherlands) 11 - jack
+  server: 109.201.152.181
+  port: 443
   udp: true
   type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 43 - jack
-  server: 193.29.139.179
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 44 - jack
-  server: 193.29.139.151
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 45 - jack
-  server: 82.38.31.159
+  cipher: aes-128-cfb
+  password: shadowsocks
+- name: 🇳🇱 荷兰 (Netherlands) 12 - jack
+  server: 82.38.31.149
   port: 443
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 46 - jack
-  server: 82.38.31.66
+- name: 🇳🇱 荷兰 (Netherlands) 13 - jack
+  server: 82.38.31.179
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 14 - jack
+  server: 82.38.31.69
   port: 8080
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 47 - jack
-  server: 185.170.211.189
+- name: 🇳🇱 荷兰 (Netherlands) 15 - jack
+  server: 82.38.31.11
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 16 - jack
+  server: 82.38.31.170
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 17 - jack
+  server: 82.38.31.207
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 18 - jack
+  server: 82.38.31.155
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 19 - jack
+  server: 82.38.31.48
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 20 - jack
+  server: 82.38.31.198
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 21 - jack
+  server: 185.170.211.187
   port: 443
   udp: true
   type: vless
@@ -349,18 +194,158 @@ proxies:
     public-key: eztZ1H-OkkHao6d4FhX8Q728qN1UIeFcYH2jObRq1gc
     short-id: fbe9c012125d90d2
   servername: nl2.bbobr.win
-  client-fingerprint: firefox
+  client-fingerprint: ''
   network: grpc
   grpc-opts:
     grpc-service-name: api.v2.nl2e63a0c5
-- name: 🇳🇱 荷兰 (Netherlands) 48 - jack
-  server: 193.29.139.223
+- name: 🇳🇱 荷兰 (Netherlands) 22 - jack
+  server: 82.38.31.202
   port: 8080
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 49 - jack
+- name: 🇳🇱 荷兰 (Netherlands) 23 - jack
+  server: 82.38.31.10
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 24 - jack
+  server: 82.38.31.213
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 25 - jack
+  server: 193.29.139.151
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 26 - jack
+  server: 82.38.31.62
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 27 - jack
+  server: 82.38.31.34
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 28 - jack
+  server: 82.38.31.159
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 29 - jack
+  server: 82.38.31.39
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 30 - jack
+  server: 82.38.31.162
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 31 - jack
+  server: 82.38.31.204
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 32 - jack
+  server: 82.38.31.210
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 33 - jack
+  server: 82.38.31.193
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 34 - jack
+  server: 193.29.139.179
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 35 - jack
+  server: 82.38.31.18
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 36 - jack
+  server: 82.38.31.35
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 37 - jack
+  server: 82.38.31.149
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 38 - jack
+  server: 185.212.171.202
+  port: 18670
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: 59ded1591b0b45f0b1e9361334c0f7d9
+- name: 🇳🇱 荷兰 (Netherlands) 39 - jack
+  server: 82.38.31.42
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 40 - jack
+  server: 82.38.31.174
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 41 - jack
+  server: 193.29.139.204
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 42 - jack
+  server: 82.38.31.178
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 43 - jack
   server: 185.170.211.197
   port: 443
   udp: true
@@ -375,138 +360,28 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: api.v2.nl6d19f4b7
-- name: 🇳🇱 荷兰 (Netherlands) 50 - jack
-  server: 51.158.206.20
-  port: 23576
+- name: 🇳🇱 荷兰 (Netherlands) 44 - jack
+  server: 82.38.31.171
+  port: 8080
   udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 51 - jack
-  server: 51.158.206.93
-  port: 23576
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 45 - jack
+  server: 82.38.31.82
+  port: 8080
   udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 52 - jack
-  server: 138.16.141.59
-  port: 7443
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 46 - jack
+  server: 82.38.31.26
+  port: 8080
   udp: true
-  type: vless
-  uuid: a289a3d3-5833-4b28-8809-ae72898a98d0
-  tls: true
-  reality-opts:
-    public-key: RY7zkFQ01lI92jxNAyCa8T33UBW1fgpJgg8ZEqMA10k
-    short-id: a09ff9f8
-  servername: ibm.com
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 53 - jack
-  server: 86.54.28.75
-  port: 443
-  udp: true
-  type: vless
-  uuid: 44ae52b9-76fc-444d-8e43-186b4384b80a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU
-    short-id: 1d86d17709852910
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 54 - jack
-  server: 172.67.155.222
-  port: 443
-  udp: true
-  type: vless
-  uuid: 82b279c6-5cba-3a96-f8bd-780a00000035
-  tls: true
-  servername: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
-- name: 🇳🇱 荷兰 (Netherlands) 55 - jack
-  server: 31.77.114.114
-  port: 443
-  udp: true
-  type: vless
-  uuid: adc11f30-e4cb-4985-bf5e-f9ded69c019f
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
-    short-id: db04ce8bdb8900f1
-  servername: api.vk.me
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 56 - jack
-  server: 51.158.206.96
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 57 - jack
-  server: 51.158.206.97
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 58 - jack
-  server: 51.158.206.12
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 59 - jack
-  server: 51.158.206.8
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 60 - jack
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 47 - jack
   server: 185.200.199.75
   port: 8444
   udp: true
@@ -516,37 +391,11 @@ proxies:
   reality-opts:
     public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
   servername: github.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
-- name: 🇳🇱 荷兰 (Netherlands) 61 - jack
-  server: 51.158.206.98
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 62 - jack
-  server: 51.158.206.87
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 63 - jack
+- name: 🇳🇱 荷兰 (Netherlands) 48 - jack
   server: 94.237.124.252
   port: 443
   udp: true
@@ -555,148 +404,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: httpupgrade
-- name: 🇳🇱 荷兰 (Netherlands) 64 - jack
-  server: 72.56.85.221
-  port: 443
-  udp: true
-  type: vless
-  uuid: ca990a85-cb33-44af-bb17-61b30b43d51e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: uTOxHZkQuw_YnO3GEIV0jDkVNOsOPQrTIPdRb2Rk8DQ
-    short-id: 00353c
-  servername: apple.com
-  client-fingerprint: qq
-- name: 🇳🇱 荷兰 (Netherlands) 65 - jack
-  server: 51.15.19.206
-  port: 8443
-  udp: true
-  type: hysteria2
-  password: HowdyHysteria2023w0W
-  sni: sni-here.com
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: HysteriaHowdy
-- name: 🇳🇱 荷兰 (Netherlands) 66 - jack
-  server: 151.243.173.119
-  port: 33736
-  udp: true
-  type: vmess
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmess-ws
-- name: 🇳🇱 荷兰 (Netherlands) 67 - jack
-  server: 51.158.206.86
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 68 - jack
-  server: 51.158.206.34
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 69 - jack
-  server: 51.158.206.80
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 70 - jack
-  server: 51.158.206.103
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 71 - jack
-  server: 51.158.206.26
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 72 - jack
-  server: 51.158.206.19
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 73 - jack
-  server: 109.235.49.234
-  port: 443
-  udp: true
-  type: hysteria2
-  password: dd50a499-7e43-4589-8490-f3b9c2451473
-  sni: tcp-reset-club.net
-  skip-cert-verify: true
-- name: 🇳🇱 荷兰 (Netherlands) 74 - jack
-  server: 5.129.235.85
-  port: 443
-  udp: true
-  type: hysteria2
-  password: gf1:gfhysteria2024
-  sni: www.linux.com
-  skip-cert-verify: true
-- name: 🇳🇱 荷兰 (Netherlands) 75 - jack
-  server: 130.12.242.106
-  port: 443
-  udp: true
-  type: vless
-  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    short-id: 15affa0af66dfc79
-  servername: deepl.com
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 76 - jack
+- name: 🇳🇱 荷兰 (Netherlands) 49 - jack
   server: 185.200.199.199
   port: 8444
   udp: true
@@ -711,7 +419,93 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
-- name: 🇳🇱 荷兰 (Netherlands) 77 - jack
+- name: 🇳🇱 荷兰 (Netherlands) 50 - jack
+  server: 82.38.31.174
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 51 - jack
+  server: 82.38.31.66
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 52 - jack
+  server: 193.29.139.235
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 53 - jack
+  server: 51.158.206.20
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 54 - jack
+  server: 51.158.206.96
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 55 - jack
+  server: 51.158.206.25
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 56 - jack
+  server: free-amsterdam-node-1.cloudwidecdn.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: 44ae52b9-76fc-444d-8e43-186b4384b80a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU
+    short-id: 1d86d17709852910
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 57 - jack
+  server: 51.158.206.103
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 58 - jack
   server: 185.115.34.209
   port: 8444
   udp: true
@@ -721,11 +515,263 @@ proxies:
   reality-opts:
     public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
   servername: github.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
+- name: 🇳🇱 荷兰 (Netherlands) 59 - jack
+  server: 72.56.85.221
+  port: 443
+  udp: true
+  type: vless
+  uuid: ca990a85-cb33-44af-bb17-61b30b43d51e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: uTOxHZkQuw_YnO3GEIV0jDkVNOsOPQrTIPdRb2Rk8DQ
+    short-id: 00353c
+  servername: apple.com
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 60 - jack
+  server: 193.29.139.235
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 61 - jack
+  server: 82.38.31.219
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 62 - jack
+  server: 51.158.206.93
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 63 - jack
+  server: 51.158.206.26
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 64 - jack
+  server: 51.158.206.87
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 65 - jack
+  server: 51.158.206.80
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 66 - jack
+  server: 51.158.206.86
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 67 - jack
+  server: 51.158.206.97
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 68 - jack
+  server: 31.77.114.114
+  port: 443
+  udp: true
+  type: vless
+  uuid: adc11f30-e4cb-4985-bf5e-f9ded69c019f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
+    short-id: db04ce8bdb8900f1
+  servername: api.vk.me
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 69 - jack
+  server: hysteria.udpgw.com
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: HowdyHysteria2023w0W
+  sni: sni-here.com
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: HysteriaHowdy
+- name: 🇳🇱 荷兰 (Netherlands) 70 - jack
+  server: 138.16.141.59
+  port: 7443
+  udp: true
+  type: vless
+  uuid: a289a3d3-5833-4b28-8809-ae72898a98d0
+  tls: true
+  reality-opts:
+    public-key: RY7zkFQ01lI92jxNAyCa8T33UBW1fgpJgg8ZEqMA10k
+    short-id: a09ff9f8
+  servername: ibm.com
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 71 - jack
+  server: 5.129.235.85
+  port: 443
+  udp: true
+  type: hysteria2
+  password: gf1:gfhysteria2024
+  sni: www.linux.com
+  skip-cert-verify: true
+- name: 🇳🇱 荷兰 (Netherlands) 72 - jack
+  server: 51.158.206.12
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 73 - jack
+  server: 130.12.242.106
+  port: 443
+  udp: true
+  type: vless
+  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
+    short-id: 15affa0af66dfc79
+  servername: deepl.com
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 74 - jack
+  server: 2.27.71.53
+  port: 443
+  udp: true
+  type: vless
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 5tMM2VdgddmxOKhdNa3b7i_aXno1g-_61SzkppS2UXQ
+    short-id: f3c023cc
+  servername: addons.mozilla.org
+  client-fingerprint: randomized
+- name: 🇳🇱 荷兰 (Netherlands) 75 - jack
+  server: 185.192.22.159
+  port: 8444
+  udp: true
+  type: vless
+  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
+  tls: true
+  reality-opts:
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+    short-id: 457fab2ac885dbe0
+  servername: github.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: GunService
+- name: 🇳🇱 荷兰 (Netherlands) 76 - jack
+  server: 104.16.85.85
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.volumeroot.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇳🇱 荷兰 (Netherlands) 77 - jack
+  server: 51.158.206.8
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
 - name: 🇳🇱 荷兰 (Netherlands) 78 - jack
+  server: 51.158.206.29
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 79 - jack
+  server: 51.158.206.19
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 80 - jack
   server: 104.16.6.70
   port: 443
   udp: true
@@ -736,41 +782,7 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇳🇱 荷兰 (Netherlands) 79 - jack
-  server: 82.38.31.181
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 80 - jack
-  server: 185.253.96.117
-  port: 443
-  udp: true
-  type: vless
-  uuid: aa923621-7ac0-482b-9ae8-e5dbb2ecae26
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: KvA_7sxZDOMVLEvh64rAKk8jn5XiC-zV47zJIqny2nY
-    short-id: fbc37648292d5393
-  servername: www.datadoghq.com
-  client-fingerprint: firefox
 - name: 🇳🇱 荷兰 (Netherlands) 81 - jack
-  server: 82.38.31.194
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 82 - jack
-  server: 82.38.31.211
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 83 - jack
   server: 2.27.39.1
   port: 443
   udp: true
@@ -783,7 +795,20 @@ proxies:
     short-id: '10358810'
   servername: addons.mozilla.org
   client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 84 - jack
+- name: 🇳🇱 荷兰 (Netherlands) 82 - jack
+  server: 51.158.206.98
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 83 - jack
   server: 87.199.205.28
   port: 443
   udp: true
@@ -796,6 +821,13 @@ proxies:
     short-id: ef1d3554c652a436
   servername: vkvd754.okcdn.ru
   client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 84 - jack
+  server: 193.29.139.225
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
 - name: 🇳🇱 荷兰 (Netherlands) 85 - jack
   server: 2.27.71.48
   port: 443
@@ -810,30 +842,6 @@ proxies:
   servername: addons.mozilla.org
   client-fingerprint: chrome
 - name: 🇳🇱 荷兰 (Netherlands) 86 - jack
-  server: 188.42.145.180
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.volumeroot.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇳🇱 荷兰 (Netherlands) 87 - jack
-  server: 2.27.39.233
-  port: 443
-  udp: true
-  type: vless
-  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 5tMM2VdgddmxOKhdNa3b7i_aXno1g-_61SzkppS2UXQ
-    short-id: f3c023cc
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 88 - jack
   server: 31.15.19.199
   port: 443
   udp: true
@@ -844,7 +852,15 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇳🇱 荷兰 (Netherlands) 89 - jack
+- name: 🇳🇱 荷兰 (Netherlands) 87 - jack
+  server: 109.235.49.234
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 529f1911-04d5-4427-94b9-c851fd459a27
+  sni: tcp-reset-club.net
+  skip-cert-verify: false
+- name: 🇳🇱 荷兰 (Netherlands) 88 - jack
   server: 162.35.242.252
   port: 443
   udp: true
@@ -855,81 +871,76 @@ proxies:
     public-key: ClG6fvriBTK8donGsTlKusJ0dwRCgVDDTAGzAtZzJDY
     short-id: 82c2b7d5e70ff000
   servername: nl.aksay.pro
-  client-fingerprint: random
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 89 - jack
+  server: sc-thenetherlands1.09vpn.com
+  port: 80
+  udp: true
+  type: vless
+  uuid: 40cc9b52-25b8-4cd5-8b45-715ae26e6baf
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: SC-TheNetherlands1.09vpn.com
 - name: 🇳🇱 荷兰 (Netherlands) 90 - jack
-  server: 152.70.58.201
+  server: 185.253.96.117
   port: 443
   udp: true
   type: vless
-  uuid: 8892e34a-339b-4526-b88d-cf68c516231c
+  uuid: aa923621-7ac0-482b-9ae8-e5dbb2ecae26
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28
-    short-id: 52c723e0fad49689
-  servername: www.nvidia.com
+    public-key: KvA_7sxZDOMVLEvh64rAKk8jn5XiC-zV47zJIqny2nY
+    short-id: fbc37648292d5393
+  servername: www.datadoghq.com
   client-fingerprint: firefox
 - name: 🇳🇱 荷兰 (Netherlands) 91 - jack
-  server: 51.158.206.25
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 92 - jack
-  server: c20s5.portablesubmarines.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: 85fe968d-fbb5-40dc-8422-30635eccb149
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: BlSccfT5tvDIOS7v9VaPd0ulUNhUdvlMjGiNzDNDUHE
-    short-id: 051f20c2344a2dfd
-  servername: portal.citygrainla.com
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 93 - jack
-  server: 82.38.31.46
+  server: 82.38.31.216
   port: 8080
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 94 - jack
-  server: 108.61.164.217
-  port: 4443
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 92 - jack
+  server: 158.173.20.171
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇳🇱 荷兰 (Netherlands) 93 - jack
+  server: 163.172.213.174
+  port: 80
   udp: true
   type: vless
-  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: k9srkQedwHsZGJP-R-GGwDOGok05gk23s8d4mtidMC4
-    short-id: 835391010667297d
-  servername: www.samsung.com
-  client-fingerprint: chrome
+  uuid: e73df646-1f62-41bf-8c50-653497d603d0
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: SC-TheNetherlands2.09vpn.com
+- name: 🇳🇱 荷兰 (Netherlands) 94 - jack
+  server: c3.nastuh.link
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: y7KeRTzmH0vXT2kp
 - name: 🇳🇱 荷兰 (Netherlands) 95 - jack
-  server: 188.225.45.77
+  server: 185.112.59.210
   port: 443
   udp: true
   type: vless
-  uuid: 57284239-1ceb-439f-826e-cd25fcc1c1c5
+  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 5SjHShy0uFG9MmzFbZ21Ozg623ZXKwLf3pzC_QA8CBE
-    short-id: 5803463a64073dfc
-  servername: 5post-gate.x5.ru
+    public-key: MTYXgxLIK9PzmQGAjuCmhI1FikCNlvU66NKgQ5g14Bc
+    short-id: 0b135481ea1283fc
+  servername: nl2.nztvpn.com
   client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
 - name: 🇳🇱 荷兰 (Netherlands) 96 - jack
   server: 45.150.33.33
   port: 443
@@ -944,6 +955,52 @@ proxies:
   servername: amazon.de
   client-fingerprint: ios
 - name: 🇳🇱 荷兰 (Netherlands) 97 - jack
+  server: 51.158.206.34
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 98 - jack
+  server: c20s5.portablesubmarines.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: 85fe968d-fbb5-40dc-8422-30635eccb149
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: BlSccfT5tvDIOS7v9VaPd0ulUNhUdvlMjGiNzDNDUHE
+    short-id: 051f20c2344a2dfd
+  servername: portal.citygrainla.com
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 99 - jack
+  server: 82.38.31.46
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 100 - jack
+  server: 152.70.58.201
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8892e34a-339b-4526-b88d-cf68c516231c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28
+    short-id: 52c723e0fad49689
+  servername: www.nvidia.com
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 101 - jack
   server: 208.67.106.154
   port: 443
   udp: true
@@ -956,7 +1013,14 @@ proxies:
     short-id: c9677d3b7dea
   servername: www.microsoft.com
   client-fingerprint: firefox
-- name: 🇳🇱 荷兰 (Netherlands) 98 - jack
+- name: 🇳🇱 荷兰 (Netherlands) 102 - jack
+  server: 193.29.139.168
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: QCXDxuDlTTMD7jtgHUjIoj
+- name: 🇳🇱 荷兰 (Netherlands) 103 - jack
   server: 94.156.79.93
   port: 443
   udp: true
@@ -969,27 +1033,27 @@ proxies:
     short-id: f129dcdbf64f
   servername: www.microsoft.com
   client-fingerprint: firefox
-- name: 🇳🇱 荷兰 (Netherlands) 99 - jack
-  server: 82.38.31.185
+- name: 🇳🇱 荷兰 (Netherlands) 104 - jack
+  server: 147.45.61.213
+  port: 443
+  udp: true
+  type: vless
+  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: fiH8cNK7JlHGz6hHHjmsspRdnjpemaq1Q_xmP8a5FHo
+    short-id: a47d71c75bb8be07
+  servername: nl4.nztvpn.com
+  client-fingerprint: safari
+- name: 🇳🇱 荷兰 (Netherlands) 105 - jack
+  server: 82.38.31.190
   port: 8080
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 100 - jack
-  server: 147.45.213.54
-  port: 443
-  udp: true
-  type: vless
-  uuid: 741809be-e44e-0008-b411-bf66f0ae3860
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
-    short-id: 1c3e8241a8743df9
-  servername: diffoscope.com
-  client-fingerprint: ios
-- name: 🇳🇱 荷兰 (Netherlands) 101 - jack
+- name: 🇳🇱 荷兰 (Netherlands) 106 - jack
   server: 51.15.16.68
   port: 2053
   udp: true
@@ -1000,20 +1064,29 @@ proxies:
     public-key: Zotx4F9CI6_q9yeKCKIHDjwzCv_Aq7WSo7N0Zc1A6Sc
     short-id: 3c99c85cbb6b3b44
   servername: www.apple.com
-  client-fingerprint: random
-- name: 🇳🇱 荷兰 (Netherlands) 102 - jack
-  server: 51.158.206.29
-  port: 23576
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 107 - jack
+  server: 82.38.31.186
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 108 - jack
+  server: 188.225.45.77
+  port: 443
   udp: true
   type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
+  uuid: 57284239-1ceb-439f-826e-cd25fcc1c1c5
   tls: true
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
+    public-key: 5SjHShy0uFG9MmzFbZ21Ozg623ZXKwLf3pzC_QA8CBE
+    short-id: 5803463a64073dfc
+  servername: 5post-gate.x5.ru
   client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
 proxy-groups:
 - name: PROXIES
   type: select
@@ -1121,6 +1194,12 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 100 - jack
   - 🇳🇱 荷兰 (Netherlands) 101 - jack
   - 🇳🇱 荷兰 (Netherlands) 102 - jack
+  - 🇳🇱 荷兰 (Netherlands) 103 - jack
+  - 🇳🇱 荷兰 (Netherlands) 104 - jack
+  - 🇳🇱 荷兰 (Netherlands) 105 - jack
+  - 🇳🇱 荷兰 (Netherlands) 106 - jack
+  - 🇳🇱 荷兰 (Netherlands) 107 - jack
+  - 🇳🇱 荷兰 (Netherlands) 108 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -1228,5 +1307,11 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 100 - jack
   - 🇳🇱 荷兰 (Netherlands) 101 - jack
   - 🇳🇱 荷兰 (Netherlands) 102 - jack
+  - 🇳🇱 荷兰 (Netherlands) 103 - jack
+  - 🇳🇱 荷兰 (Netherlands) 104 - jack
+  - 🇳🇱 荷兰 (Netherlands) 105 - jack
+  - 🇳🇱 荷兰 (Netherlands) 106 - jack
+  - 🇳🇱 荷兰 (Netherlands) 107 - jack
+  - 🇳🇱 荷兰 (Netherlands) 108 - jack
 rules:
 - MATCH,PROXIES

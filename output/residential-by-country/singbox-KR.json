@@ -5,25 +5,25 @@
   "outbounds": [
     {
       "type": "shadowsocks",
-      "tag": "🇨🇱 智利 (Chile) 01 - jack",
-      "server": "ruot.ayucloudservices.nl",
-      "server_port": 35032,
-      "method": "aes-128-gcm",
-      "password": "bd962c9a-d6f2-4561-bd80-34206c4d5279"
+      "tag": "🇰🇷 韩国 (South Korea) 01 (家宽) - jack",
+      "server": "218.237.185.234",
+      "server_port": 4652,
+      "method": "aes-256-cfb",
+      "password": "qwerREWQ@@"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇱 智利 (Chile) 01 - jack"
+        "🇰🇷 韩国 (South Korea) 01 (家宽) - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇱 智利 (Chile) 01 - jack"
+        "🇰🇷 韩国 (South Korea) 01 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
