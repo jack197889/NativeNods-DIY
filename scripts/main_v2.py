@@ -65,9 +65,9 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/security/tls",
 
     # 2. ShatakVPN 定向源 (US / NL / AU 专属库 - 修正大小写)
-    "https://raw.githubusercontent.com/shatakvpn/ConfigForge-V2Ray/main/configs/us/all.txt",
-    "https://raw.githubusercontent.com/shatakvpn/ConfigForge-V2Ray/main/configs/nl/all.txt",
-    "https://raw.githubusercontent.com/shatakvpn/ConfigForge-V2Ray/main/configs/au/all.txt",
+    "https://raw.githubusercontent.com/shatakvp/ConfigForge-V2Ray/main/configs/us/all.txt",
+    "https://raw.githubusercontent.com/shatakvp/ConfigForge-V2Ray/main/configs/nl/all.txt",
+    "https://raw.githubusercontent.com/shatakvp/ConfigForge-V2Ray/main/configs/au/all.txt",
 
     # 3. Au1rxx 优质定向与Base64源
     "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt",
@@ -78,7 +78,12 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/Config_jo.txt",
     "https://sub.445569.xyz/",
     "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",
-    "https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/merged.txt"
+    "https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/merged.txt",
+
+    # 5. 增补源：进一步扩充台湾、美国及澳洲节点基数
+    "https://raw.githubusercontent.com/telegram-configs-collector/main/countries/tw/mixed",
+    "https://raw.githubusercontent.com/telegram-configs-collector/main/countries/us/mixed",
+    "https://raw.githubusercontent.com/telegram-configs-collector/main/countries/au/mixed"
 ]
 
 OUTPUT_DIR = "output"
