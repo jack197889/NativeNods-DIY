@@ -53,37 +53,38 @@ except ImportError as e:
 # ══════════════════════════════════════════════════════════════════
 
 SOURCE_URLS = [
-    # 1. 10ium 专项与协议源 (Hysteria2 / TUIC / Mixed)
+    # 1. 原作者内置经典与动态分发源 (恢复高存活基础盘)
+    "https://wild-cloud-9893.heleimail.workers.dev",
+    "https://open.heleimail.workers.dev/",
+    "https://raw.githubusercontent.com/freefq/free/master/v2",
+    "https://www.ermao.net/sub/v2ray/ermao.net",
+
+    # 2. 10ium 专项与协议源 (Hysteria2 / TUIC / Mixed)
     "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/hysteria2",
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/channels/protocols/hysteria",
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/hysteria",
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/subscribe/protocols/tuic",
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/tuic",
-    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/countries/au/mixed",
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/trojan",
     "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/mix",
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/security/tls",
 
-    # 2. ShatakVPN 定向源 (US / NL / AU 专属库 - 修正大小写)
-    "https://raw.githubusercontent.com/shatakvp/ConfigForge-V2Ray/main/configs/us/all.txt",
-    "https://raw.githubusercontent.com/shatakvp/ConfigForge-V2Ray/main/configs/nl/all.txt",
-    "https://raw.githubusercontent.com/shatakvp/ConfigForge-V2Ray/main/configs/au/all.txt",
-
-    # 3. Au1rxx 优质定向与Base64源
-    "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt",
-    "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-TW.txt",
+    # 3. Au1rxx 优质定向与Base64源 (保留主库及台湾/美国分国别源)
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt",
     "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-US.txt",
 
-    # 4. 其他精选与动态清洗 Worker 源
+    # 4. 其他精选与高产出综合源
     "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/Config_jo.txt",
     "https://sub.445569.xyz/",
     "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",
     "https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/merged.txt",
 
-    # 5. 增补源：进一步扩充台湾、美国及澳洲节点基数
-    "https://raw.githubusercontent.com/telegram-configs-collector/main/countries/tw/mixed",
-    "https://raw.githubusercontent.com/telegram-configs-collector/main/countries/us/mixed",
-    "https://raw.githubusercontent.com/telegram-configs-collector/main/countries/au/mixed"
+    # 5. 定向增补源：美国专项、高存活率节点池（提升美、澳、台家宽候选基数）
+    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/channels/surfboardv2ray/us",
+    "https://raw.githubusercontent.com/voken100g/AutoRope/main/All_Configs_Sub.txt",
+    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/countries/au/mixed",
+    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/countries/tw/mixed"
 ]
 
 OUTPUT_DIR = "output"
