@@ -4,24 +4,88 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 01 (移动家宽) - jack",
-      "server": "test.keoplentuio.xyz",
-      "server_port": 2053,
-      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
+      "type": "hysteria2",
+      "tag": "🇺🇸 美国 (United States) 01 (家宽) - jack",
+      "server": "155.117.19.17",
+      "server_port": 443,
+      "password": "5fa748137b6d822308eea4611f474ad5",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "a39ca173b57ac7021b08bf3e3de9f1f6"
+      }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇰🇷 韩国 (South Korea) 02 (家宽) - jack",
-      "server": "218.237.185.234",
-      "server_port": 4652,
-      "method": "aes-256-cfb",
-      "password": "qwerREWQ@@"
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽) - jack",
+      "server": "dog-hk.kunlun01dns.com",
+      "server_port": 21021,
+      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "security": "auto"
     },
     {
-      "type": "vless",
+      "type": "tuic",
       "tag": "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
-      "server": "hinet1.2yly.com",
+      "server": "118.168.196.215",
+      "server_port": 8080,
+      "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
+      "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "tls": {
+        "enabled": true,
+        "server_name": "tw3.dexlos.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 04 (移动家宽) - jack",
+      "server": "zfd-hkv2.kunlun01dns.com",
+      "server_port": 16113,
+      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 05 (家宽) - jack",
+      "server": "42.200.173.5",
+      "server_port": 443,
+      "uuid": "b98d4c6e-6770-4a31-8256-a4750cdea0e7",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "s3.ap-east-1.amazonaws.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo",
+          "short_id": "1a"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 06 (移动家宽) - jack",
+      "server": "dog-hk.kunlun01dns.com",
+      "server_port": 21022,
+      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack",
+      "server": "61.230.162.88",
       "server_port": 24215,
       "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
       "tls": {
@@ -43,18 +107,26 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇷 土耳其 (Turkey) 01 (移动家宽) - jack",
-        "🇰🇷 韩国 (South Korea) 02 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack"
+        "🇺🇸 美国 (United States) 01 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 04 (移动家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 05 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 06 (移动家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇷 土耳其 (Turkey) 01 (移动家宽) - jack",
-        "🇰🇷 韩国 (South Korea) 02 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack"
+        "🇺🇸 美国 (United States) 01 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 04 (移动家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 05 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 06 (移动家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
