@@ -1,0 +1,27 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇨🇱 智利 (Chile) 01 - jack
+  server: ruot.ayucloudservices.nl
+  port: 35032
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: bd962c9a-d6f2-4561-bd80-34206c4d5279
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇨🇱 智利 (Chile) 01 - jack
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇨🇱 智利 (Chile) 01 - jack
+rules:
+- MATCH,PROXIES

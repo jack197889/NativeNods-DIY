@@ -6,6 +6,46 @@
     {
       "type": "vless",
       "tag": "🇮🇶 IQ 01 - jack",
+      "server": "188.114.97.6",
+      "server_port": 8080,
+      "uuid": "2db92da9-8ffb-491b-81d6-6e8d50876020",
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiWlFRWlMwRDdLakVqMyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
+        "headers": {
+          "Host": "bpb-01c11365.hjdbcvdbkv.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇮🇶 IQ 02 - jack",
+      "server": "188.114.96.3",
+      "server_port": 443,
+      "password": "pjg&JybcgFsca,+gQMa",
+      "tls": {
+        "enabled": true,
+        "server_name": "022XW1dMCzG0C6165Pcla6.tOMBORn69.WOrkErS.dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/TXGYPKAmg2T9agqYRDFm?ed=2560",
+        "headers": {
+          "Host": "022xw1dmczg0c6165pcla6.tomborn69.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇶 IQ 03 - jack",
       "server": "arcturus.yokkastars.com",
       "server_port": 40443,
       "uuid": "bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54",
@@ -29,14 +69,18 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇶 IQ 01 - jack"
+        "🇮🇶 IQ 01 - jack",
+        "🇮🇶 IQ 02 - jack",
+        "🇮🇶 IQ 03 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇶 IQ 01 - jack"
+        "🇮🇶 IQ 01 - jack",
+        "🇮🇶 IQ 02 - jack",
+        "🇮🇶 IQ 03 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

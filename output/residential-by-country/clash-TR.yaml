@@ -5,11 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽) - jack
-  server: test.keoplentuio.xyz
-  port: 2053
+  server: tumspr.azad0namah.ir
+  port: 5566
   udp: true
-  type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: 8NwabdWBXK1q1QaBhF69rw==:Lzvg7nuGDOIqso68553eNQ==
 proxy-groups:
 - name: PROXIES
   type: select

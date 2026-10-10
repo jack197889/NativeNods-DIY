@@ -5,26 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - jack
-  server: swidenlanzerotte.live
-  port: 443
-  udp: true
-  type: vless
-  uuid: 56de13ac-086e-4789-8e1e-1bf2bd90216b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: MQrvfivvEfLGzDee7h0j5uC-DwaD_38_NXOY9-NhqxM
-  servername: swidenlanzerotte.live
-  client-fingerprint: chrome
-- name: 🇸🇪 瑞典 (Sweden) 02 - jack
-  server: svip.skycon808.com
-  port: 60005
-  udp: true
-  type: anytls
-  password: 13f0acfa-38c1-4e82-a758-583aa31740df
-  sni: xjp18.2uuzhe.com
-  skip-cert-verify: true
-- name: 🇸🇪 瑞典 (Sweden) 03 - jack
   server: 62.60.159.81
   port: 2053
   udp: true
@@ -39,6 +19,26 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpce5bb9e71
+- name: 🇸🇪 瑞典 (Sweden) 02 - jack
+  server: swidenlanzerotte.live
+  port: 443
+  udp: true
+  type: vless
+  uuid: 56de13ac-086e-4789-8e1e-1bf2bd90216b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: MQrvfivvEfLGzDee7h0j5uC-DwaD_38_NXOY9-NhqxM
+  servername: swidenlanzerotte.live
+  client-fingerprint: chrome
+- name: 🇸🇪 瑞典 (Sweden) 03 - jack
+  server: svip.skycon808.com
+  port: 60005
+  udp: true
+  type: anytls
+  password: 13f0acfa-38c1-4e82-a758-583aa31740df
+  sni: xjp18.2uuzhe.com
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select

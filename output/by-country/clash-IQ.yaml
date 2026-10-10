@@ -5,6 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇶 IQ 01 - jack
+  server: 188.114.97.6
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 2db92da9-8ffb-491b-81d6-6e8d50876020
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiWlFRWlMwRDdLakVqMyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: bpb-01c11365.hjdbcvdbkv.workers.dev
+- name: 🇮🇶 IQ 02 - jack
+  server: 188.114.96.3
+  port: 443
+  udp: true
+  type: trojan
+  password: pjg&JybcgFsca,+gQMa
+  sni: 022XW1dMCzG0C6165Pcla6.tOMBORn69.WOrkErS.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /tr/TXGYPKAmg2T9agqYRDFm?ed=2560
+- name: 🇮🇶 IQ 03 - jack
   server: arcturus.yokkastars.com
   port: 40443
   udp: true
@@ -23,11 +45,15 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇮🇶 IQ 01 - jack
+  - 🇮🇶 IQ 02 - jack
+  - 🇮🇶 IQ 03 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇶 IQ 01 - jack
+  - 🇮🇶 IQ 02 - jack
+  - 🇮🇶 IQ 03 - jack
 rules:
 - MATCH,PROXIES

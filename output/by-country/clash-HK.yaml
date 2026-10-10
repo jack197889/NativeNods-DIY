@@ -5,48 +5,44 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - jack
-  server: jumpernode.site
+  server: ld.235231.xyz
   port: 443
   udp: true
   type: vless
-  uuid: 23af32ca-bea1-4a5e-bebb-04d1b1b633bc
-  flow: xtls-rprx-vision
+  uuid: 65d3f9b3-d289-4a8e-9c87-90bba156de30
   tls: true
-  reality-opts:
-    public-key: sDKrtAJk2VP_w1w7cFi2O86RdlvQ2E2An5xsRdJlgGE
-    short-id: 6d962e8d8a0dce
-  servername: p-nt-www-amazon-com-kalias.amazon.com
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 02 - jack
-  server: 202.146.222.89
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: t.me
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - jack
-  server: 43.161.230.103
-  port: 8443
-  udp: true
-  type: hysteria2
-  password: HysTeria2026!Proxy
-  sni: mz.hkychina.com
+  servername: ld.235231.xyz
   skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 04 - jack
-  server: 82.29.36.250
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇭🇰 中国香港 (Hong Kong) 02 - jack
+  server: 34.92.19.135
   port: 443
   udp: true
   type: vless
-  uuid: 41a7af38-0bb1-4493-aa8d-634af0c2548b
+  uuid: 90153538-ef08-4942-b8e1-41e7c523e659
+  tls: true
+  reality-opts:
+    public-key: tSBJnEt6E1dy6UgX9gX5wUfvZ2KAXjGWVKsEq886OWM
+    short-id: 56d4e7ae4f86fa39
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - jack
+  server: 156.224.77.171
+  port: 9443
+  udp: true
+  type: vless
+  uuid: fe0721ac-c577-4938-b7ca-8ab5f43bb8da
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 09XPceP705hC-5sEDXDSLeL2eMOrF-mFISK8JaJ7q2g
-    short-id: 09353d6dc5b789
-  servername: aws.amazon.com
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 05 - jack
+    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
+    short-id: b390142456517acc
+  servername: www.amazon.com
+  client-fingerprint: random
+- name: 🇭🇰 中国香港 (Hong Kong) 04 - jack
   server: 154.37.216.186
   port: 443
   udp: true
@@ -59,7 +55,35 @@ proxies:
     short-id: f39ad9d9eb26df47
   servername: www.bing.com
   client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 05 - jack
+  server: 20.205.14.234
+  port: 26480
+  udp: true
+  type: vless
+  uuid: 01de63ee-d2d6-4842-b2f0-d54c7eca267a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: thefrz26hPQjCrKszJ6m_41nLmThPGkTEKBjYVDGM0E
+  servername: addons.mozilla.org
+  client-fingerprint: firefox
 - name: 🇭🇰 中国香港 (Hong Kong) 06 - jack
+  server: 202.146.222.174
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: t.me
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 07 - jack
+  server: 202.146.222.89
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https://t.me/clashv8
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 08 - jack
   server: full-ox.rooster465.autos
   port: 443
   udp: true
@@ -67,23 +91,15 @@ proxies:
   password: UX82473651
   sni: full-ox.rooster465.autos
   skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 07 - jack
+- name: 🇭🇰 中国香港 (Hong Kong) 09 - jack
   server: 202.146.222.29
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2�
+  sni: speedtest.tinkoff.ru
   skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 08 - jack
-  server: 202.146.222.174
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/WangCai2🇨🇳
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 09 - jack
+- name: 🇭🇰 中国香港 (Hong Kong) 10 - jack
   server: 2.27.109.179
   port: 45464
   udp: true
@@ -91,7 +107,28 @@ proxies:
   password: XuMweB2PWs
   sni: 2.27.109.179.sslip.io
   skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 10 - jack
+- name: 🇭🇰 中国香港 (Hong Kong) 11 - jack
+  server: mz.hkychina.com
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: HysTeria2026!Proxy
+  sni: mz.hkychina.com
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 12 - jack
+  server: 82.29.36.250
+  port: 443
+  udp: true
+  type: vless
+  uuid: 41a7af38-0bb1-4493-aa8d-634af0c2548b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 09XPceP705hC-5sEDXDSLeL2eMOrF-mFISK8JaJ7q2g
+    short-id: 09353d6dc5b789
+  servername: aws.amazon.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 13 - jack
   server: yg1.ygkkk.dpdns.org
   port: 443
   udp: true
@@ -107,33 +144,15 @@ proxies:
     path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
     headers:
       Host: jmp1.907737.xyz
-- name: 🇭🇰 中国香港 (Hong Kong) 11 - jack
-  server: 3696b38bsg.murphyweb.sbs
-  port: 32134
+- name: 🇭🇰 中国香港 (Hong Kong) 14 - jack
+  server: ruot.ayucloudservices.nl
+  port: 40004
   udp: true
-  type: vless
-  uuid: 5b01dc2d-6892-49b8-8289-3f73a32e00e4
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: OdTELUjAUKO_qr-O-uihaAZJAhA8GyIWVI6CpozVCU4
-    short-id: 6c6c7c97
-  servername: buylite.music.apple.com
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 12 - jack
-  server: 20.205.14.234
-  port: 26480
-  udp: true
-  type: vless
-  uuid: 01de63ee-d2d6-4842-b2f0-d54c7eca267a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: thefrz26hPQjCrKszJ6m_41nLmThPGkTEKBjYVDGM0E
-  servername: addons.mozilla.org
-  client-fingerprint: firefox
-- name: 🇭🇰 中国香港 (Hong Kong) 13 - jack
-  server: i2psm3knof5qjjix.v.3dns.vip
+  type: ss
+  cipher: aes-128-gcm
+  password: 70a5c510-d56d-43e7-b150-9c00c969bd50
+- name: 🇭🇰 中国香港 (Hong Kong) 15 - jack
+  server: nycqg19zkwacpm1b.v.3dns.vip
   port: 443
   udp: true
   type: vmess
@@ -141,11 +160,13 @@ proxies:
   alterId: 0
   cipher: auto
   tls: true
-  servername: i2psm3knof5qjjix.v.3dns.vip
+  servername: NYcQg19zkwaCPM1B.v.3dns.vip
   skip-cert-verify: false
   network: ws
   ws-opts:
     path: /ws-vmess
+    headers:
+      Host: NYcQg19zkwaCPM1B.v.3dns.vip
 proxy-groups:
 - name: PROXIES
   type: select
@@ -164,6 +185,8 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 11 - jack
   - 🇭🇰 中国香港 (Hong Kong) 12 - jack
   - 🇭🇰 中国香港 (Hong Kong) 13 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 14 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 15 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -182,5 +205,7 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 11 - jack
   - 🇭🇰 中国香港 (Hong Kong) 12 - jack
   - 🇭🇰 中国香港 (Hong Kong) 13 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 14 - jack
+  - 🇭🇰 中国香港 (Hong Kong) 15 - jack
 rules:
 - MATCH,PROXIES
