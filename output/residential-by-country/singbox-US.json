@@ -4,8 +4,31 @@
   },
   "outbounds": [
     {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 01 (移动家宽) - jack",
+      "server": "104.18.0.1",
+      "server_port": 443,
+      "uuid": "3ccba794-1c6d-48a8-acf2-f5caf0e69d86",
+      "tls": {
+        "enabled": true,
+        "server_name": "all.speedtest03.ccwu.cc",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "all.speedtest03.ccwu.cc"
+        }
+      }
+    },
+    {
       "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 01 (家宽) - jack",
+      "tag": "🇺🇸 美国 (United States) 02 (家宽) - jack",
       "server": "155.117.19.17",
       "server_port": 443,
       "password": "5fa748137b6d822308eea4611f474ad5",
@@ -24,14 +47,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 美国 (United States) 01 (家宽) - jack"
+        "🇺🇸 美国 (United States) 01 (移动家宽) - jack",
+        "🇺🇸 美国 (United States) 02 (家宽) - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 美国 (United States) 01 (家宽) - jack"
+        "🇺🇸 美国 (United States) 01 (移动家宽) - jack",
+        "🇺🇸 美国 (United States) 02 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

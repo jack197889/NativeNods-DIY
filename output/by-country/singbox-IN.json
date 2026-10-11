@@ -14,7 +14,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -26,12 +26,12 @@
     {
       "type": "trojan",
       "tag": "🇮🇳 印度 (India) 02 - jack",
-      "server": "35.244.28.130",
+      "server": "34.131.228.210",
       "server_port": 443,
       "password": "M7v%w11Se*",
       "tls": {
         "enabled": true,
-        "server_name": "tttyder.wsone.icu",
+        "server_name": "hyfuuf6.wsone.icu",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -40,23 +40,8 @@
       }
     },
     {
-      "type": "vmess",
-      "tag": "🇮🇳 印度 (India) 03 - jack",
-      "server": "152.67.8.205",
-      "server_port": 80,
-      "uuid": "9db4c708-aef8-4359-821b-38e47990be0d",
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "152.67.8.205"
-        }
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇮🇳 印度 (India) 04 - jack",
+      "tag": "🇮🇳 印度 (India) 03 - jack",
       "server": "148.113.5.44",
       "server_port": 443,
       "uuid": "72ea5a91-ffcc-43d2-9297-5993c3abf186",
@@ -72,6 +57,21 @@
           "enabled": true,
           "public_key": "QLjTpkXRB453R9fXhJzKkc_q_gSm2MZrIOuxW4uW-mI",
           "short_id": "221873918e0bb74d"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇮🇳 印度 (India) 04 - jack",
+      "server": "152.67.8.205",
+      "server_port": 80,
+      "uuid": "9db4c708-aef8-4359-821b-38e47990be0d",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "152.67.8.205"
         }
       }
     },

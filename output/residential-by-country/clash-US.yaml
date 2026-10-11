@@ -4,7 +4,22 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01 (家宽) - jack
+- name: 🇺🇸 美国 (United States) 01 (移动家宽) - jack
+  server: 104.18.0.1
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3ccba794-1c6d-48a8-acf2-f5caf0e69d86
+  tls: true
+  servername: all.speedtest03.ccwu.cc
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: all.speedtest03.ccwu.cc
+- name: 🇺🇸 美国 (United States) 02 (家宽) - jack
   server: 155.117.19.17
   port: 443
   udp: true
@@ -19,12 +34,14 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 (United States) 01 (家宽) - jack
+  - 🇺🇸 美国 (United States) 01 (移动家宽) - jack
+  - 🇺🇸 美国 (United States) 02 (家宽) - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 (United States) 01 (家宽) - jack
+  - 🇺🇸 美国 (United States) 01 (移动家宽) - jack
+  - 🇺🇸 美国 (United States) 02 (家宽) - jack
 rules:
 - MATCH,PROXIES

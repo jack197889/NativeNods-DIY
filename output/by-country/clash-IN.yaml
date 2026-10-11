@@ -15,29 +15,16 @@ proxies:
     public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
     short-id: 9980e0609b0d3891
   servername: www.apple.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇮🇳 印度 (India) 02 - jack
-  server: 35.244.28.130
+  server: 34.131.228.210
   port: 443
   udp: true
   type: trojan
   password: M7v%w11Se*
-  sni: tttyder.wsone.icu
+  sni: hyfuuf6.wsone.icu
   skip-cert-verify: false
 - name: 🇮🇳 印度 (India) 03 - jack
-  server: 152.67.8.205
-  port: 80
-  udp: true
-  type: vmess
-  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 152.67.8.205
-- name: 🇮🇳 印度 (India) 04 - jack
   server: 148.113.5.44
   port: 443
   udp: true
@@ -50,6 +37,19 @@ proxies:
     short-id: 221873918e0bb74d
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇮🇳 印度 (India) 04 - jack
+  server: 152.67.8.205
+  port: 80
+  udp: true
+  type: vmess
+  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 152.67.8.205
 proxy-groups:
 - name: PROXIES
   type: select
