@@ -4,29 +4,9 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
-      "server": "hinet1.2yly.com",
-      "server_port": 24215,
-      "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
-      "tls": {
-        "enabled": true,
-        "server_name": "addons.mozilla.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE",
-          "short_id": ""
-        }
-      }
-    },
-    {
       "type": "tuic",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
-      "server": "118.168.196.215",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack",
+      "server": "118.168.211.221",
       "server_port": 8080,
       "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
       "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
@@ -39,6 +19,26 @@
         "alpn": [
           "h3"
         ]
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
+      "server": "118.167.248.243",
+      "server_port": 24215,
+      "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
+      "tls": {
+        "enabled": true,
+        "server_name": "addons.mozilla.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE",
+          "short_id": ""
+        }
       }
     },
     {

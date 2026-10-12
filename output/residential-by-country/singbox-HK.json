@@ -7,30 +7,26 @@
       "type": "vmess",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - jack",
       "server": "dog-hk.kunlun01dns.com",
-      "server_port": 21022,
+      "server_port": 21020,
       "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
       "security": "auto"
     },
     {
-      "type": "vless",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack",
-      "server": "42.200.173.5",
-      "server_port": 443,
-      "uuid": "b98d4c6e-6770-4a31-8256-a4750cdea0e7",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "s3.ap-east-1.amazonaws.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo",
-          "short_id": "1a"
-        }
-      }
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽) - jack",
+      "server": "zfd-hkv2.kunlun01dns.com",
+      "server_port": 16115,
+      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
+      "security": "auto"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - jack",
+      "server": "v10.hdacd.com",
+      "server_port": 30807,
+      "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
+      "security": "auto",
+      "alter_id": 2
     },
     {
       "type": "selector",
@@ -38,7 +34,8 @@
       "outbounds": [
         "auto",
         "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack"
+        "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - jack"
       ]
     },
     {
@@ -46,7 +43,8 @@
       "tag": "auto",
       "outbounds": [
         "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - jack"
+        "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 03 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

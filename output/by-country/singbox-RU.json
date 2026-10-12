@@ -6,39 +6,7 @@
     {
       "type": "vless",
       "tag": "🇷🇺 俄罗斯 (Russia) 01 - jack",
-      "server": "193.233.74.6",
-      "server_port": 8444,
-      "uuid": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
-      "tls": {
-        "enabled": true,
-        "server_name": "github.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
-          "short_id": "457fab2ac885dbe0"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "GunService"
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇷🇺 俄罗斯 (Russia) 02 - jack",
-      "server": "130.49.189.158",
-      "server_port": 43558,
-      "method": "chacha20-ietf-poly1305",
-      "password": "eicdhshSrFLCx/sZ1PSpuKyoVWGZpU95tFS4iGC1c04="
-    },
-    {
-      "type": "vless",
-      "tag": "🇷🇺 俄罗斯 (Russia) 03 - jack",
-      "server": "153.80.241.206",
+      "server": "147.45.60.160",
       "server_port": 8444,
       "uuid": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
       "tls": {
@@ -60,61 +28,133 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇷🇺 俄罗斯 (Russia) 04 - jack",
-      "server": "139.28.168.126",
-      "server_port": 8080,
-      "password": "we_9m92rJZ93_m9Cj3KXB_mC9AS7Nx",
+      "type": "vless",
+      "tag": "🇷🇺 俄罗斯 (Russia) 02 - jack",
+      "server": "193.233.74.6",
+      "server_port": 8444,
+      "uuid": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
       "tls": {
         "enabled": true,
-        "server_name": "hopp-honkong-new.roxa.org",
-        "insecure": false
+        "server_name": "github.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
+          "short_id": "457fab2ac885dbe0"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "GunService"
       }
     },
     {
       "type": "vless",
-      "tag": "🇷🇺 俄罗斯 (Russia) 05 - jack",
-      "server": "79.174.92.222",
+      "tag": "🇷🇺 俄罗斯 (Russia) 03 - jack",
+      "server": "freede.aiage.work",
       "server_port": 443,
-      "uuid": "03ca8c3f-e777-45b5-a1b1-592094ca99ee",
+      "uuid": "6338c01a-310e-42c3-bf4f-2a20e161054b",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "m.vk.com",
+        "server_name": "freede.aiage.work",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "_PYBo3dyZRpGC44vADqcmlBCSeAVh1X8l3mulghVsTI",
-          "short_id": "a1b2c3d4"
+          "public_key": "A_bQLZE6D32TJUdAf9doQTPaTUXyJjPXLSklplG4V1g",
+          "short_id": "57e7977c9011061c"
         }
-      },
-      "transport": {
-        "type": "grpc"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇷🇺 俄罗斯 (Russia) 04 - jack",
+      "server": "130.49.189.158",
+      "server_port": 43558,
+      "method": "chacha20-ietf-poly1305",
+      "password": "52+ggoCvKFVJyT1NDiuWOZw2rHIvAg3tgqgJl8aeCwY="
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇷🇺 俄罗斯 (Russia) 05 - jack",
+      "server": "194.87.118.184",
+      "server_port": 2053,
+      "password": "7ab3c77e-8fcc-4848-918f-cae3d4eac794",
+      "tls": {
+        "enabled": true,
+        "server_name": "match-stream.lovkisport.blog",
+        "insecure": true
       }
     },
     {
       "type": "vless",
       "tag": "🇷🇺 俄罗斯 (Russia) 06 - jack",
-      "server": "cloud.korroh.com",
-      "server_port": 443,
-      "uuid": "ec6f8131-7a5d-4117-9627-6fb2b39ae0da",
+      "server": "45.12.75.242",
+      "server_port": 26424,
+      "uuid": "633f424e-2b11-48da-a6b3-a849dd71456f",
       "tls": {
         "enabled": true,
-        "server_name": "cloud.korroh.com",
-        "insecure": false,
+        "server_name": "ya.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0",
+          "short_id": "23103e1e"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/remote.php/dav/89f7661a0011ce46",
-        "headers": {
-          "Host": "cloud.korroh.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 俄罗斯 (Russia) 07 - jack",
+      "server": "cape.flowzari.info",
+      "server_port": 443,
+      "uuid": "6c21cf57-a9a9-4075-ad9f-631152bd911e",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cape.flowzari.info",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "5DdSLIpnYjqYTI4-yC-ulr8PGMA8YML_EWdKvOjdinc",
+          "short_id": "693e339ad3613446"
         }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇷🇺 俄罗斯 (Russia) 08 - jack",
+      "server": "spainspeedboostjbl88.qcloud.surf",
+      "server_port": 27313,
+      "password": "8bd04756-3beb-4348-82c9-d35453df50ce",
+      "tls": {
+        "enabled": true,
+        "server_name": "spainspeedboostjbl88.qcloud.surf",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇷🇺 俄罗斯 (Russia) 09 - jack",
+      "server": "alb1337.zaebalsanoproxyklinus.lol",
+      "server_port": 28152,
+      "password": "8bd04756-3beb-4348-82c9-d35453df50ce",
+      "tls": {
+        "enabled": true,
+        "server_name": "alb1337.zaebalsanoproxyklinus.lol",
+        "insecure": false
       }
     },
     {
@@ -127,7 +167,10 @@
         "🇷🇺 俄罗斯 (Russia) 03 - jack",
         "🇷🇺 俄罗斯 (Russia) 04 - jack",
         "🇷🇺 俄罗斯 (Russia) 05 - jack",
-        "🇷🇺 俄罗斯 (Russia) 06 - jack"
+        "🇷🇺 俄罗斯 (Russia) 06 - jack",
+        "🇷🇺 俄罗斯 (Russia) 07 - jack",
+        "🇷🇺 俄罗斯 (Russia) 08 - jack",
+        "🇷🇺 俄罗斯 (Russia) 09 - jack"
       ]
     },
     {
@@ -139,7 +182,10 @@
         "🇷🇺 俄罗斯 (Russia) 03 - jack",
         "🇷🇺 俄罗斯 (Russia) 04 - jack",
         "🇷🇺 俄罗斯 (Russia) 05 - jack",
-        "🇷🇺 俄罗斯 (Russia) 06 - jack"
+        "🇷🇺 俄罗斯 (Russia) 06 - jack",
+        "🇷🇺 俄罗斯 (Russia) 07 - jack",
+        "🇷🇺 俄罗斯 (Russia) 08 - jack",
+        "🇷🇺 俄罗斯 (Russia) 09 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
