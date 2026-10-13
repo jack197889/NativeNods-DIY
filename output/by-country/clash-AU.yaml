@@ -22,6 +22,18 @@ proxies:
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   sni: vpn-au-001.fastervpn.world
   skip-cert-verify: true
+- name: 🇦🇺 澳大利亚 (Australia) 03 - jack
+  server: 144.172.65.72
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 8afeb33c-b686-43e9-a629-0d98f991ec28
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: f25sygANXTpzdc9YPCwkggwSmm3piA3BluSeHdfG-hg
+  servername: www.tradingview.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -29,6 +41,7 @@ proxy-groups:
   - AUTO
   - 🇦🇺 澳大利亚 (Australia) 01 - jack
   - 🇦🇺 澳大利亚 (Australia) 02 - jack
+  - 🇦🇺 澳大利亚 (Australia) 03 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -36,5 +49,6 @@ proxy-groups:
   proxies:
   - 🇦🇺 澳大利亚 (Australia) 01 - jack
   - 🇦🇺 澳大利亚 (Australia) 02 - jack
+  - 🇦🇺 澳大利亚 (Australia) 03 - jack
 rules:
 - MATCH,PROXIES

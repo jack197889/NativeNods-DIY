@@ -11,14 +11,28 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
-- name: 🇨🇭 瑞士 (Switzerland) 03 - jack
-  server: 140.238.213.114
-  port: 50160
+- name: 🇨🇭 瑞士 (Switzerland) 02 - jack
+  server: 208.69.78.217
+  port: 8444
   udp: true
   type: hysteria2
-  password: 84a506ca5aca505696a454d828420b3f
-  sni: 140.238.213.114
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
   skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+- name: 🇨🇭 瑞士 (Switzerland) 03 - jack
+  server: 208.69.78.217
+  port: 2053
+  udp: true
+  type: vless
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  tls: true
+  reality-opts:
+    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
+    short-id: ad86e2d52ff40ebd
+  servername: www.apple.com
+  client-fingerprint: chrome
 - name: 🇨🇭 瑞士 (Switzerland) 04 - jack
   server: 45.90.59.15
   port: 443
@@ -33,6 +47,29 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: firefox
 - name: 🇨🇭 瑞士 (Switzerland) 05 - jack
+  server: 140.238.213.114
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 84a506ca5aca505696a454d828420b3f
+  sni: 140.238.213.114
+  skip-cert-verify: true
+- name: 🇨🇭 瑞士 (Switzerland) 06 - jack
+  server: 138.124.63.224
+  port: 8444
+  udp: true
+  type: vless
+  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
+  tls: true
+  reality-opts:
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+    short-id: 457fab2ac885dbe0
+  servername: github.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: GunService
+- name: 🇨🇭 瑞士 (Switzerland) 07 - jack
   server: 138.124.96.88
   port: 41826
   udp: true
@@ -47,52 +84,55 @@ proxies:
     path: /
     headers:
       Host: ''
-- name: 🇨🇭 瑞士 (Switzerland) 06 - jack
-  server: 138.124.63.224
-  port: 8444
+- name: 🇨🇭 瑞士 (Switzerland) 09 - jack
+  server: 185.18.250.245
+  port: 443
   udp: true
-  type: vless
-  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
-  tls: true
-  reality-opts:
-    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
-    short-id: 457fab2ac885dbe0
-  servername: github.com
-  client-fingerprint: ''
-  network: grpc
-  grpc-opts:
-    grpc-service-name: GunService
-- name: 🇨🇭 瑞士 (Switzerland) 07 - jack
-  server: 208.69.78.217
-  port: 8444
-  udp: true
-  type: hysteria2
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  sni: vpn.local
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
   skip-cert-verify: true
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇨🇭 瑞士 (Switzerland) 10 - jack
+  server: 185.18.250.245
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇭 瑞士 (Switzerland) 01 - jack
+  - 🇨🇭 瑞士 (Switzerland) 02 - jack
   - 🇨🇭 瑞士 (Switzerland) 03 - jack
   - 🇨🇭 瑞士 (Switzerland) 04 - jack
   - 🇨🇭 瑞士 (Switzerland) 05 - jack
   - 🇨🇭 瑞士 (Switzerland) 06 - jack
   - 🇨🇭 瑞士 (Switzerland) 07 - jack
+  - 🇨🇭 瑞士 (Switzerland) 09 - jack
+  - 🇨🇭 瑞士 (Switzerland) 10 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇭 瑞士 (Switzerland) 01 - jack
+  - 🇨🇭 瑞士 (Switzerland) 02 - jack
   - 🇨🇭 瑞士 (Switzerland) 03 - jack
   - 🇨🇭 瑞士 (Switzerland) 04 - jack
   - 🇨🇭 瑞士 (Switzerland) 05 - jack
   - 🇨🇭 瑞士 (Switzerland) 06 - jack
   - 🇨🇭 瑞士 (Switzerland) 07 - jack
+  - 🇨🇭 瑞士 (Switzerland) 09 - jack
+  - 🇨🇭 瑞士 (Switzerland) 10 - jack
 rules:
 - MATCH,PROXIES

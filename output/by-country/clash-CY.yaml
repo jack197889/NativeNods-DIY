@@ -5,18 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇾 塞浦路斯 (Cyprus) 01 - jack
-  server: 194.76.154.31
-  port: 40443
-  udp: true
-  type: vless
-  uuid: 9f0baff8-bdee-4de9-9515-bcc4932b41fa
-  tls: true
-  reality-opts:
-    public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
-    short-id: a8ae
-  servername: deepl.com
-  client-fingerprint: firefox
-- name: 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
   server: 77.110.105.122
   port: 443
   udp: true
@@ -24,8 +12,10 @@ proxies:
   uuid: 019fbe0f-2d9f-4b89-9f81-e1e36129892a
   flow: xtls-rprx-vision
   tls: true
+  reality-opts:
+    public-key: EBISh6QAVskJ_nvet-Qio9jS2yqxe9de6GMScYlbjhI
+    short-id: 226509f017e4c36d
   servername: co-pl.speedtec.ru
-  skip-cert-verify: false
   client-fingerprint: random
 proxy-groups:
 - name: PROXIES
@@ -33,13 +23,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇨🇾 塞浦路斯 (Cyprus) 01 - jack
-  - 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇾 塞浦路斯 (Cyprus) 01 - jack
-  - 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
 rules:
 - MATCH,PROXIES

@@ -5,12 +5,11 @@
   "outbounds": [
     {
       "type": "vmess",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - jack",
-      "server": "v10.hdacd.com",
-      "server_port": 30807,
-      "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
-      "security": "auto",
-      "alter_id": 2
+      "tag": "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - jack",
+      "server": "dog-hk.kunlun01dns.com",
+      "server_port": 21022,
+      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "security": "auto"
     },
     {
       "type": "vmess",
@@ -25,7 +24,7 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - jack",
         "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽) - jack"
       ]
     },
@@ -33,7 +32,7 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - jack",
+        "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽) - jack",
         "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"

@@ -6,26 +6,6 @@
     {
       "type": "vless",
       "tag": "🇨🇾 塞浦路斯 (Cyprus) 01 - jack",
-      "server": "194.76.154.31",
-      "server_port": 40443,
-      "uuid": "9f0baff8-bdee-4de9-9515-bcc4932b41fa",
-      "tls": {
-        "enabled": true,
-        "server_name": "deepl.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ",
-          "short_id": "a8ae"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇾 塞浦路斯 (Cyprus) 02 - jack",
       "server": "77.110.105.122",
       "server_port": 443,
       "uuid": "019fbe0f-2d9f-4b89-9f81-e1e36129892a",
@@ -33,10 +13,14 @@
       "tls": {
         "enabled": true,
         "server_name": "co-pl.speedtec.ru",
-        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "EBISh6QAVskJ_nvet-Qio9jS2yqxe9de6GMScYlbjhI",
+          "short_id": "226509f017e4c36d"
         }
       }
     },
@@ -45,16 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇾 塞浦路斯 (Cyprus) 01 - jack",
-        "🇨🇾 塞浦路斯 (Cyprus) 02 - jack"
+        "🇨🇾 塞浦路斯 (Cyprus) 01 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇾 塞浦路斯 (Cyprus) 01 - jack",
-        "🇨🇾 塞浦路斯 (Cyprus) 02 - jack"
+        "🇨🇾 塞浦路斯 (Cyprus) 01 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

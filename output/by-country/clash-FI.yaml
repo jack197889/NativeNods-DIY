@@ -5,13 +5,59 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - jack
+  server: 191.101.157.251
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+- name: 🇫🇮 芬兰 (Finland) 02 - jack
+  server: 185.103.110.66
+  port: 18280
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: f9300a9bf39ae0347c3a3bfbc4dd7754
+- name: 🇫🇮 芬兰 (Finland) 03 - jack
   server: 185.103.110.68
   port: 18283
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: f9300a9bf39ae0347c3a3bfbc4dd7754
-- name: 🇫🇮 芬兰 (Finland) 02 - jack
+- name: 🇫🇮 芬兰 (Finland) 04 - jack
+  server: 185.239.141.248
+  port: 8388
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: j_Z9yWqItCz_9yhD5YVY4w
+- name: 🇫🇮 芬兰 (Finland) 05 - jack
+  server: 87.58.149.117
+  port: 443
+  udp: true
+  type: vless
+  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: EqN5QtvWGccdkmL5ZNVDBRxRhWgr6g_vr3ABT8Q2dW4
+    short-id: ff0ddf949624ef2a
+  servername: freefl.aiage.work
+  client-fingerprint: ''
+- name: 🇫🇮 芬兰 (Finland) 06 - jack
+  server: 31.77.151.175
+  port: 443
+  udp: true
+  type: vless
+  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ZqVz1kWNxh_5zQ5PPkoPHoaXQOvppM0ZyIo8uKp2dCg
+    short-id: bdf5852d1423e694
+  servername: fi.pythonsetupbib.online
+  client-fingerprint: random
+- name: 🇫🇮 芬兰 (Finland) 07 - jack
   server: 95.216.27.15
   port: 2053
   udp: true
@@ -23,26 +69,59 @@ proxies:
     short-id: d368b94e275ab080
   servername: www.google.com
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 03 - jack
-  server: edge10.cyrionflare.com
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
-- name: 🇫🇮 芬兰 (Finland) 04 - jack
-  server: tundra.venorix.online
+- name: 🇫🇮 芬兰 (Finland) 08 - jack
+  server: 65.108.3.59
   port: 443
   udp: true
   type: vless
-  uuid: 6c21cf57-a9a9-4075-ad9f-631152bd911e
+  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: IHm9_n5a0hMAvgclNtwWpNpq68Xdj9-Q5NG3eLkcFjE
-    short-id: 52fe21c959620cd8
-  servername: tundra.venorix.online
+    public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
+    short-id: 90ec9bba2019
+  servername: web.eitaa.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 09 - jack
+  server: 196.196.206.36
+  port: 443
+  udp: true
+  type: vless
+  uuid: ace33fb8-c593-4b17-8f72-f3359b6e9638
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: III2StgFziJtisbaKDYlEF2qYwBHJZnzZH5DHdwuFQ8
+    short-id: d110331f200987ae
+  servername: finaluty.loknietotop.digital
+  client-fingerprint: ''
+- name: 🇫🇮 芬兰 (Finland) 10 - jack
+  server: van2.ragnarok-it.xyz
+  port: 8446
+  udp: true
+  type: vless
+  uuid: a61496c3-f256-4a36-8a52-8638b9cc900a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Y6ZtoxCUW1qFIvLTNfbrsyfCDoIBaRsqGNtbF_mcAXM
+    short-id: 7bac4b112d30d1
+  servername: amd.com
+  client-fingerprint: edge
+- name: 🇫🇮 芬兰 (Finland) 11 - jack
+  server: 87.242.95.150
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 7ac594a4-fabc-486c-9a91-5662c09e63cd
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: pobC1laHCtpMK1EA520CyOpYeel0t90hEV_eRJExFAE
+    short-id: 20272c52657d22da
+  servername: passport.yandex.ru
   client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 05 - jack
+- name: 🇫🇮 芬兰 (Finland) 12 - jack
   server: fi-p1.h1cloud.net
   port: 25481
   udp: true
@@ -57,27 +136,19 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: 8cb5baa18cd7
-- name: 🇫🇮 芬兰 (Finland) 06 - jack
-  server: van2.ragnarok-it.xyz
-  port: 8446
+- name: 🇫🇮 芬兰 (Finland) 13 - jack
+  server: fi-p1.h1cloud.net
+  port: 25633
   udp: true
   type: vless
-  uuid: a61496c3-f256-4a36-8a52-8638b9cc900a
-  flow: xtls-rprx-vision
+  uuid: 0c3ad9d5-cffd-4748-b8df-ab145288144b
   tls: true
   reality-opts:
-    public-key: Y6ZtoxCUW1qFIvLTNfbrsyfCDoIBaRsqGNtbF_mcAXM
-    short-id: 7bac4b112d30d1
-  servername: amd.com
-  client-fingerprint: edge
-- name: 🇫🇮 芬兰 (Finland) 07 - jack
-  server: 185.103.110.66
-  port: 18280
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: f9300a9bf39ae0347c3a3bfbc4dd7754
-- name: 🇫🇮 芬兰 (Finland) 08 - jack
+    public-key: YLIRYJ8UkT0nSSgxJr7YckNuXnokVyEs2G6thNyx1GE
+    short-id: 200811f031ae7463
+  servername: www.icloud.com
+  client-fingerprint: random
+- name: 🇫🇮 芬兰 (Finland) 14 - jack
   server: 109.172.54.135
   port: 8444
   udp: true
@@ -87,10 +158,25 @@ proxies:
   reality-opts:
     public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
   servername: github.com
-  client-fingerprint: ''
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
+- name: 🇫🇮 芬兰 (Finland) 15 - jack
+  server: fi-p1.h1cloud.net
+  port: 25634
+  udp: true
+  type: vless
+  uuid: ec572cf0-1337-4c51-b4ec-ff2f538c1f4c
+  tls: true
+  reality-opts:
+    public-key: xjmKTfAwtZNtyMrfGSo1a-Xc807CIdJXsboMsDMROFA
+    short-id: 12e9af979082beab
+  servername: www.icloud.com
+  client-fingerprint: random
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 2894574fe211
 proxy-groups:
 - name: PROXIES
   type: select
@@ -104,6 +190,13 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 06 - jack
   - 🇫🇮 芬兰 (Finland) 07 - jack
   - 🇫🇮 芬兰 (Finland) 08 - jack
+  - 🇫🇮 芬兰 (Finland) 09 - jack
+  - 🇫🇮 芬兰 (Finland) 10 - jack
+  - 🇫🇮 芬兰 (Finland) 11 - jack
+  - 🇫🇮 芬兰 (Finland) 12 - jack
+  - 🇫🇮 芬兰 (Finland) 13 - jack
+  - 🇫🇮 芬兰 (Finland) 14 - jack
+  - 🇫🇮 芬兰 (Finland) 15 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -117,5 +210,12 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 06 - jack
   - 🇫🇮 芬兰 (Finland) 07 - jack
   - 🇫🇮 芬兰 (Finland) 08 - jack
+  - 🇫🇮 芬兰 (Finland) 09 - jack
+  - 🇫🇮 芬兰 (Finland) 10 - jack
+  - 🇫🇮 芬兰 (Finland) 11 - jack
+  - 🇫🇮 芬兰 (Finland) 12 - jack
+  - 🇫🇮 芬兰 (Finland) 13 - jack
+  - 🇫🇮 芬兰 (Finland) 14 - jack
+  - 🇫🇮 芬兰 (Finland) 15 - jack
 rules:
 - MATCH,PROXIES
