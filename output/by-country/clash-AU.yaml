@@ -14,7 +14,7 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: 850a3fb1cd33a28f12d837578ae1a2e7
-- name: 🇦🇺 澳大利亚 (Australia) 03 - jack
+- name: 🇦🇺 澳大利亚 (Australia) 02 - jack
   server: vpn-au-001.fastervpn.world
   port: 443
   udp: true
@@ -28,13 +28,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇦🇺 澳大利亚 (Australia) 01 - jack
-  - 🇦🇺 澳大利亚 (Australia) 03 - jack
+  - 🇦🇺 澳大利亚 (Australia) 02 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇺 澳大利亚 (Australia) 01 - jack
-  - 🇦🇺 澳大利亚 (Australia) 03 - jack
+  - 🇦🇺 澳大利亚 (Australia) 02 - jack
 rules:
 - MATCH,PROXIES

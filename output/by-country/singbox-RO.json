@@ -4,24 +4,15 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇷🇴 罗马尼亚 (Romania) 01 - jack",
-      "server": "95.133.247.98",
-      "server_port": 995,
-      "uuid": "df275727-c25a-450b-99c3-29e4e6b0b6b9",
+      "server": "usa0001hy-noru.packet-drop-society.net",
+      "server_port": 443,
+      "password": "f7f971ce-6171-4498-9737-23b037cc11f2",
       "tls": {
         "enabled": true,
-        "server_name": "love-paris.roxa.org",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "httpupgrade",
-        "path": "/api/v1",
-        "host": "love-paris.roxa.org"
+        "server_name": "packet-drop-society.net",
+        "insecure": false
       }
     },
     {
@@ -62,24 +53,19 @@
       }
     },
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇷🇴 罗马尼亚 (Romania) 04 - jack",
-      "server": "146.70.124.85",
+      "server": "hy2-new.aspidnet.xyz",
       "server_port": 443,
-      "uuid": "40abbe13-f02e-4da2-9b19-966c2c3eb4ee",
-      "flow": "xtls-rprx-vision",
+      "password": "QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s",
       "tls": {
         "enabled": true,
-        "server_name": "www.datadoghq.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "byzvlw97wjAAAfHs5AZRV0P0H6_JKBEZ4yfLS0HNewE",
-          "short_id": "fe24f8a0a560056e"
-        }
+        "server_name": "hy2-new.aspidnet.xyz",
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "c1b4086fea89914496c7e10967a419216566"
       }
     },
     {
@@ -91,29 +77,8 @@
       "password": "U83u9OGpvSatIUW7LsWffr"
     },
     {
-      "type": "vless",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 06 - jack",
-      "server": "103.126.51.58",
-      "server_port": 995,
-      "uuid": "1fc575d3-81bb-44d5-9efa-4131c7cc677a",
-      "tls": {
-        "enabled": true,
-        "server_name": "ocober-romania-new.yyuyy.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      },
-      "transport": {
-        "type": "httpupgrade",
-        "path": "/api/v1",
-        "host": "ocober-romania-new.yyuyy.com"
-      }
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 07 - jack",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 06 - jack",
       "server": "185.156.44.99",
       "server_port": 443,
       "password": "gf1:gfhysteria2024",
@@ -124,29 +89,8 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 08 - jack",
-      "server": "83.147.245.126",
-      "server_port": 443,
-      "uuid": "0cf8e402-e801-4aeb-9b7a-00a933f9f1c1",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets-str-53.nexus-infinitus.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "gLO2GRqV0iVDmVdytcJLqGyZEB5Swxb-NAOC9AL13UM",
-          "short_id": "344f1f56582dda0f"
-        }
-      }
-    },
-    {
       "type": "shadowsocks",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 09 - jack",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 07 - jack",
       "server": "bogging-eyeteeth-fly.freesocks.work",
       "server_port": 443,
       "method": "chacha20-ietf-poly1305",
@@ -163,9 +107,7 @@
         "🇷🇴 罗马尼亚 (Romania) 04 - jack",
         "🇷🇴 罗马尼亚 (Romania) 05 - jack",
         "🇷🇴 罗马尼亚 (Romania) 06 - jack",
-        "🇷🇴 罗马尼亚 (Romania) 07 - jack",
-        "🇷🇴 罗马尼亚 (Romania) 08 - jack",
-        "🇷🇴 罗马尼亚 (Romania) 09 - jack"
+        "🇷🇴 罗马尼亚 (Romania) 07 - jack"
       ]
     },
     {
@@ -178,9 +120,7 @@
         "🇷🇴 罗马尼亚 (Romania) 04 - jack",
         "🇷🇴 罗马尼亚 (Romania) 05 - jack",
         "🇷🇴 罗马尼亚 (Romania) 06 - jack",
-        "🇷🇴 罗马尼亚 (Romania) 07 - jack",
-        "🇷🇴 罗马尼亚 (Romania) 08 - jack",
-        "🇷🇴 罗马尼亚 (Romania) 09 - jack"
+        "🇷🇴 罗马尼亚 (Romania) 07 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
