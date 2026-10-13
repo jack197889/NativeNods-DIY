@@ -12,18 +12,18 @@ proxies:
   cipher: aes-256-gcm
   password: AxIYWtskJWIIaefW
 - name: 🇸🇪 瑞典 (Sweden) 02 - jack
-  server: 5.157.10.149
+  server: 46.246.125.153
   port: 443
   udp: true
   type: vless
-  uuid: ace33fb8-c593-4b17-8f72-f3359b6e9638
+  uuid: a16a3e32-8d63-4dec-8c67-1361388a64ca
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: x6p656szvu_3CKLsJ4NtkooRvdTVGx7IoPca_p58_jA
-    short-id: fb442438e2223836
-  servername: swerka.loknietotop.digital
-  client-fingerprint: random
+    public-key: ftglT-Ghp2FPiPlwyEAldfiAE1IL_AJ9UCkfCj0zk2I
+    short-id: a83b77e064761e3c
+  servername: res.cdn.office.net
+  client-fingerprint: ''
 - name: 🇸🇪 瑞典 (Sweden) 03 - jack
   server: 62.60.159.81
   port: 2053
@@ -40,19 +40,6 @@ proxies:
   grpc-opts:
     grpc-service-name: grpce5bb9e71
 - name: 🇸🇪 瑞典 (Sweden) 04 - jack
-  server: 46.246.125.153
-  port: 443
-  udp: true
-  type: vless
-  uuid: a16a3e32-8d63-4dec-8c67-1361388a64ca
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ftglT-Ghp2FPiPlwyEAldfiAE1IL_AJ9UCkfCj0zk2I
-    short-id: a83b77e064761e3c
-  servername: res.cdn.office.net
-  client-fingerprint: chrome
-- name: 🇸🇪 瑞典 (Sweden) 05 - jack
   server: 94.143.231.146
   port: 443
   udp: true
@@ -67,28 +54,39 @@ proxies:
     path: /merky-connect/de6/
     headers:
       Host: sub.merky.top
-- name: 🇸🇪 瑞典 (Sweden) 06 - jack
-  server: se1.h1cloud.net
-  port: 26226
+- name: 🇸🇪 瑞典 (Sweden) 05 - jack
+  server: 193.27.200.200
+  port: 443
   udp: true
   type: vless
-  uuid: ec572cf0-1337-4c51-b4ec-ff2f538c1f4c
+  uuid: 3db6eb7e-c548-11f1-9902-a337233c6cda
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: zsSr4H-YgykAOYdIYFaAnFQtIguRhP825FodeKSoxjA
-    short-id: 2ddf3f1151012c98
-  servername: www.dn.se
-  client-fingerprint: random
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 69effd3120f4
-- name: 🇸🇪 瑞典 (Sweden) 07 - jack
-  server: sweedenqfds777.qcloud.surf
-  port: 21223
+    public-key: Sikc1gu5t_uwitf1xTTChP9tpT_sjY530p2tioHbmz0
+    short-id: 3b20e438da99
+  servername: swe.wizard.select
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 06 - jack
+  server: swerka.loknietotop.digital
+  port: 443
   udp: true
-  type: hysteria2
-  password: 8bd04756-3beb-4348-82c9-d35453df50ce
-  sni: 127.0.0.1
+  type: vless
+  uuid: ace33fb8-c593-4b17-8f72-f3359b6e9638
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: x6p656szvu_3CKLsJ4NtkooRvdTVGx7IoPca_p58_jA
+    short-id: fb442438e2223836
+  servername: swerka.loknietotop.digital
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 07 - jack
+  server: svip.skycon808.com
+  port: 60005
+  udp: true
+  type: anytls
+  password: 13f0acfa-38c1-4e82-a758-583aa31740df
+  sni: xjp18.2uuzhe.com
   skip-cert-verify: true
 proxy-groups:
 - name: PROXIES

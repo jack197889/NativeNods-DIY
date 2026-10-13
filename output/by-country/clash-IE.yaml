@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇪 爱尔兰 (Ireland) 01 - jack
-  server: adapting-basilisk.rooster465.autos
+  server: 54.72.130.222
   port: 443
   udp: true
   type: trojan
@@ -13,21 +13,21 @@ proxies:
   sni: adapting-basilisk.rooster465.autos
   skip-cert-verify: true
 - name: 🇮🇪 爱尔兰 (Ireland) 02 - jack
-  server: master-possum.rooster465.autos
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: master-possum.rooster465.autos
-  skip-cert-verify: true
-- name: 🇮🇪 爱尔兰 (Ireland) 03 - jack
   server: loved-shark.rooster465.autos
   port: 443
   udp: true
   type: trojan
   password: UX82473651
   sni: loved-shark.rooster465.autos
-  skip-cert-verify: true
+  skip-cert-verify: false
+- name: 🇮🇪 爱尔兰 (Ireland) 03 - jack
+  server: master-possum.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: master-possum.rooster465.autos
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select

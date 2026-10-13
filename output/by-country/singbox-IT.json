@@ -22,6 +22,13 @@
     {
       "type": "vless",
       "tag": "🇮🇹 意大利 (Italy) 03 - jack",
+      "server": "204.216.216.23",
+      "server_port": 10086,
+      "uuid": "9f0285ee-20ca-4953-bcdb-86a920652923"
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇹 意大利 (Italy) 04 - jack",
       "server": "31.59.180.155",
       "server_port": 443,
       "uuid": "ee18d188-14cc-417e-beb1-70e4add6d023",
@@ -42,23 +49,7 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇮🇹 意大利 (Italy) 04 - jack",
-      "server": "91.201.65.122",
-      "server_port": 9074,
-      "method": "aes-256-cfb",
-      "password": "p5wSkb2uM3pKSS3j"
-    },
-    {
-      "type": "shadowsocks",
       "tag": "🇮🇹 意大利 (Italy) 05 - jack",
-      "server": "91.201.65.122",
-      "server_port": 9070,
-      "method": "aes-256-cfb",
-      "password": "bf7v334KKDV3YDhH"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇮🇹 意大利 (Italy) 06 - jack",
       "server": "91.201.65.122",
       "server_port": 9092,
       "method": "aes-256-cfb",
@@ -66,7 +57,7 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇮🇹 意大利 (Italy) 07 - jack",
+      "tag": "🇮🇹 意大利 (Italy) 06 - jack",
       "server": "91.201.65.122",
       "server_port": 9065,
       "method": "aes-256-cfb",
@@ -74,11 +65,19 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇮🇹 意大利 (Italy) 08 - jack",
+      "tag": "🇮🇹 意大利 (Italy) 07 - jack",
       "server": "91.201.65.122",
       "server_port": 9039,
       "method": "aes-256-cfb",
       "password": "qYEN5HX4JKeVCdEC"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇮🇹 意大利 (Italy) 08 - jack",
+      "server": "91.201.65.122",
+      "server_port": 9002,
+      "method": "aes-256-cfb",
+      "password": "b8KkNDjEd5QqFyRm"
     },
     {
       "type": "shadowsocks",
@@ -89,12 +88,24 @@
       "password": "SBM7R883jBmnqe6C"
     },
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇮🇹 意大利 (Italy) 10 - jack",
-      "server": "91.201.65.122",
-      "server_port": 9059,
-      "method": "aes-256-cfb",
-      "password": "9XwYyZsK8SNzQDtY"
+      "server": "57.131.38.163",
+      "server_port": 2053,
+      "uuid": "d4b08cd6-0903-411a-9dac-45dbdf5c9712",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc",
+          "short_id": "5b8a942318178e7b"
+        }
+      }
     },
     {
       "type": "vless",
@@ -121,48 +132,42 @@
       "type": "shadowsocks",
       "tag": "🇮🇹 意大利 (Italy) 12 - jack",
       "server": "91.201.65.122",
-      "server_port": 9002,
+      "server_port": 9059,
       "method": "aes-256-cfb",
-      "password": "b8KkNDjEd5QqFyRm"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇮🇹 意大利 (Italy) 13 - jack",
-      "server": "91.201.65.122",
-      "server_port": 9050,
-      "method": "aes-256-cfb",
-      "password": "FG5ddLsMPbV5CutE"
+      "password": "9XwYyZsK8SNzQDtY"
     },
     {
       "type": "vless",
-      "tag": "🇮🇹 意大利 (Italy) 14 - jack",
-      "server": "57.131.38.163",
-      "server_port": 2053,
-      "uuid": "d4b08cd6-0903-411a-9dac-45dbdf5c9712",
+      "tag": "🇮🇹 意大利 (Italy) 13 - jack",
+      "server": "82.118.16.187",
+      "server_port": 443,
+      "uuid": "dc2259c4-388e-4285-ba18-df619b6672b6",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc",
-          "short_id": "5b8a942318178e7b"
+          "public_key": "R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU",
+          "short_id": "cd6065902eea7a02"
         }
       }
     },
     {
-      "type": "vless",
-      "tag": "🇮🇹 意大利 (Italy) 15 - jack",
-      "server": "204.216.216.23",
-      "server_port": 10086,
-      "uuid": "9f0285ee-20ca-4953-bcdb-86a920652923"
+      "type": "shadowsocks",
+      "tag": "🇮🇹 意大利 (Italy) 14 - jack",
+      "server": "91.201.65.122",
+      "server_port": 9074,
+      "method": "aes-256-cfb",
+      "password": "p5wSkb2uM3pKSS3j"
     },
     {
       "type": "vless",
-      "tag": "🇮🇹 意大利 (Italy) 16 - jack",
+      "tag": "🇮🇹 意大利 (Italy) 15 - jack",
       "server": "204.216.216.23",
       "server_port": 1114,
       "uuid": "6ba2eac6-0ec9-44ca-a42b-a8e23aafb530",
@@ -182,25 +187,12 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇮🇹 意大利 (Italy) 17 - jack",
-      "server": "82.118.16.187",
-      "server_port": 443,
-      "uuid": "dc2259c4-388e-4285-ba18-df619b6672b6",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU",
-          "short_id": "cd6065902eea7a02"
-        }
-      }
+      "type": "shadowsocks",
+      "tag": "🇮🇹 意大利 (Italy) 16 - jack",
+      "server": "91.201.65.122",
+      "server_port": 9070,
+      "method": "aes-256-cfb",
+      "password": "bf7v334KKDV3YDhH"
     },
     {
       "type": "selector",
@@ -222,8 +214,7 @@
         "🇮🇹 意大利 (Italy) 13 - jack",
         "🇮🇹 意大利 (Italy) 14 - jack",
         "🇮🇹 意大利 (Italy) 15 - jack",
-        "🇮🇹 意大利 (Italy) 16 - jack",
-        "🇮🇹 意大利 (Italy) 17 - jack"
+        "🇮🇹 意大利 (Italy) 16 - jack"
       ]
     },
     {
@@ -245,8 +236,7 @@
         "🇮🇹 意大利 (Italy) 13 - jack",
         "🇮🇹 意大利 (Italy) 14 - jack",
         "🇮🇹 意大利 (Italy) 15 - jack",
-        "🇮🇹 意大利 (Italy) 16 - jack",
-        "🇮🇹 意大利 (Italy) 17 - jack"
+        "🇮🇹 意大利 (Italy) 16 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
