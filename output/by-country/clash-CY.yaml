@@ -5,12 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇾 塞浦路斯 (Cyprus) 01 - jack
-  server: frr.drwrdoh.org
-  port: 8086
+  server: 5.253.28.240
+  port: 2443
   udp: true
-  type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: f2Nq5YLnyclPaWR8my7/Vdd3ZX8URncXZNly5+HcUSs=:dQ6WYcPpGX5xIxUVPAR8w1A9eY6kEVoKKW3HleJ6o8Y=
+  type: vless
+  uuid: 5e679ccd-1586-4d5f-b87b-48251046cad8
+  tls: true
+  reality-opts:
+    public-key: h85e28MxBgNyT9d9cNeOLVtWfHq6cT_1_oxZOTajtTg
+    short-id: 92c32de179e5d908
+  servername: deepl.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: rex-eb0bf76b710ce763
 - name: 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
   server: 77.110.105.122
   port: 443
@@ -23,33 +31,18 @@ proxies:
   skip-cert-verify: false
   client-fingerprint: random
 - name: 🇨🇾 塞浦路斯 (Cyprus) 03 - jack
-  server: 5.253.28.240
-  port: 2443
-  udp: true
-  type: vless
-  uuid: 5e679ccd-1586-4d5f-b87b-48251046cad8
-  tls: true
-  reality-opts:
-    public-key: h85e28MxBgNyT9d9cNeOLVtWfHq6cT_1_oxZOTajtTg
-    short-id: 92c32de179e5d908
-  servername: deepl.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: rex-eb0bf76b710ce763
-- name: 🇨🇾 塞浦路斯 (Cyprus) 04 - jack
-  server: 5.253.30.99
+  server: hydra.yokkastars.com
   port: 40443
   udp: true
   type: vless
-  uuid: 511c1563-2cb6-4064-abc6-a59ee49818a8
+  uuid: 405b964e-a2d2-454f-aaaa-711cc218897c
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
     short-id: 88b6
   servername: deepl.com
-  client-fingerprint: chrome
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
@@ -58,7 +51,6 @@ proxy-groups:
   - 🇨🇾 塞浦路斯 (Cyprus) 01 - jack
   - 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
   - 🇨🇾 塞浦路斯 (Cyprus) 03 - jack
-  - 🇨🇾 塞浦路斯 (Cyprus) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -67,6 +59,5 @@ proxy-groups:
   - 🇨🇾 塞浦路斯 (Cyprus) 01 - jack
   - 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
   - 🇨🇾 塞浦路斯 (Cyprus) 03 - jack
-  - 🇨🇾 塞浦路斯 (Cyprus) 04 - jack
 rules:
 - MATCH,PROXIES

@@ -5,28 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇩 印尼 (Indonesia) 01 - jack
-  server: 45.85.118.50
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime55.workers.dev
-- name: 🇮🇩 印尼 (Indonesia) 02 - jack
-  server: 188.114.97.6
-  port: 80
-  udp: true
-  type: vless
-  uuid: 33ebe52d-cd35-4d0f-a3e9-14adb7ff1ff4
-  network: ws
-  ws-opts:
-    path: /id-tksi
-    headers:
-      Host: www.genflix.co.id.r3xxe.eu.cc
-- name: 🇮🇩 印尼 (Indonesia) 03 - jack
   server: 103.172.197.3
   port: 16006
   udp: true
@@ -37,8 +15,8 @@ proxies:
   reality-opts:
     public-key: ll7JTP628PuBMZJvx6fuhGSmCRSURnReAetmhCEL8GU
   servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇮🇩 印尼 (Indonesia) 04 - jack
+  client-fingerprint: firefox
+- name: 🇮🇩 印尼 (Indonesia) 02 - jack
   server: 103.172.197.2
   port: 29172
   udp: true
@@ -57,8 +35,6 @@ proxy-groups:
   - AUTO
   - 🇮🇩 印尼 (Indonesia) 01 - jack
   - 🇮🇩 印尼 (Indonesia) 02 - jack
-  - 🇮🇩 印尼 (Indonesia) 03 - jack
-  - 🇮🇩 印尼 (Indonesia) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -66,7 +42,5 @@ proxy-groups:
   proxies:
   - 🇮🇩 印尼 (Indonesia) 01 - jack
   - 🇮🇩 印尼 (Indonesia) 02 - jack
-  - 🇮🇩 印尼 (Indonesia) 03 - jack
-  - 🇮🇩 印尼 (Indonesia) 04 - jack
 rules:
 - MATCH,PROXIES

@@ -6,20 +6,21 @@
     {
       "type": "trojan",
       "tag": "🇱🇺 卢森堡 (Luxembourg) 01 - jack",
-      "server": "107.189.26.160",
+      "server": "mfyousheng.nl.eu.org",
       "server_port": 443,
       "password": "Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q",
       "tls": {
         "enabled": true,
         "server_name": "mfyousheng.nl.eu.org",
-        "insecure": false
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
-        "path": "/tjwsLhx0SFASG4l9FERJ1g",
-        "headers": {
-          "Host": "mfyousheng.nl.eu.org"
-        }
+        "path": "/tjwsLhx0SFASG4l9FERJ1g"
       }
     },
     {

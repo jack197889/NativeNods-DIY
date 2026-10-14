@@ -5,33 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇭 瑞士 (Switzerland) 01 - jack
-  server: 132.243.175.144
-  port: 8388
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
-- name: 🇨🇭 瑞士 (Switzerland) 02 - jack
-  server: 152.67.75.161
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 3a702d4d1de4949005d8431220e040fb
-  sni: www.bing.com
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: c13f29db6a638ad2b211b9ce2669ef27
-- name: 🇨🇭 瑞士 (Switzerland) 03 - jack
-  server: 208.69.78.217
-  port: 8444
-  udp: true
-  type: hysteria2
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  sni: vpn.local
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-- name: 🇨🇭 瑞士 (Switzerland) 04 - jack
   server: 140.238.213.114
   port: 50160
   udp: true
@@ -39,7 +12,26 @@ proxies:
   password: 84a506ca5aca505696a454d828420b3f
   sni: 140.238.213.114
   skip-cert-verify: true
-- name: 🇨🇭 瑞士 (Switzerland) 05 - jack
+- name: 🇨🇭 瑞士 (Switzerland) 02 - jack
+  server: 132.243.175.144
+  port: 8388
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
+- name: 🇨🇭 瑞士 (Switzerland) 03 - jack
+  server: 208.69.78.217
+  port: 2053
+  udp: true
+  type: vless
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  tls: true
+  reality-opts:
+    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
+    short-id: ad86e2d52ff40ebd
+  servername: www.apple.com
+  client-fingerprint: firefox
+- name: 🇨🇭 瑞士 (Switzerland) 04 - jack
   server: 45.90.59.15
   port: 443
   udp: true
@@ -53,6 +45,16 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: firefox
 - name: 🇨🇭 瑞士 (Switzerland) 06 - jack
+  server: 152.67.75.161
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 3a702d4d1de4949005d8431220e040fb
+  sni: www.bing.com
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: c13f29db6a638ad2b211b9ce2669ef27
+- name: 🇨🇭 瑞士 (Switzerland) 07 - jack
   server: 138.124.63.224
   port: 8444
   udp: true
@@ -67,7 +69,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
-- name: 🇨🇭 瑞士 (Switzerland) 07 - jack
+- name: 🇨🇭 瑞士 (Switzerland) 08 - jack
   server: ch.srv.vbuste.ru
   port: 444
   udp: true
@@ -82,48 +84,16 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: ''
-- name: 🇨🇭 瑞士 (Switzerland) 08 - jack
-  server: 138.124.96.88
-  port: 41826
-  udp: true
-  type: vless
-  uuid: 2eb3f6a0-df6e-49b6-994c-177acdd50a97
-  tls: true
-  servername: sweden.homyak.app
-  skip-cert-verify: false
-  client-fingerprint: random
-  network: httpupgrade
-  httpupgrade-opts:
-    path: /
-    headers:
-      Host: ''
 - name: 🇨🇭 瑞士 (Switzerland) 09 - jack
   server: 208.69.78.217
-  port: 2053
+  port: 8444
   udp: true
-  type: vless
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  tls: true
-  reality-opts:
-    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
-    short-id: ad86e2d52ff40ebd
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🇨🇭 瑞士 (Switzerland) 11 - jack
-  server: 142.91.101.39
-  port: 627
-  udp: true
-  type: vless
-  uuid: 3f87daa8-3af8-40a0-b655-127911e008dc
-  tls: true
-  servername: 7nnoiou0z.3xn99hzq2sh7iekktpkeq7rofs3qc8iohrqs4pb9p.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 7nnoiou0z.3xn99hzq2sh7iekktpkeq7rofs3qc8iohrqs4pb9p.workers.dev
+  type: hysteria2
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
 proxy-groups:
 - name: PROXIES
   type: select
@@ -133,12 +103,10 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 02 - jack
   - 🇨🇭 瑞士 (Switzerland) 03 - jack
   - 🇨🇭 瑞士 (Switzerland) 04 - jack
-  - 🇨🇭 瑞士 (Switzerland) 05 - jack
   - 🇨🇭 瑞士 (Switzerland) 06 - jack
   - 🇨🇭 瑞士 (Switzerland) 07 - jack
   - 🇨🇭 瑞士 (Switzerland) 08 - jack
   - 🇨🇭 瑞士 (Switzerland) 09 - jack
-  - 🇨🇭 瑞士 (Switzerland) 11 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -148,11 +116,9 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 02 - jack
   - 🇨🇭 瑞士 (Switzerland) 03 - jack
   - 🇨🇭 瑞士 (Switzerland) 04 - jack
-  - 🇨🇭 瑞士 (Switzerland) 05 - jack
   - 🇨🇭 瑞士 (Switzerland) 06 - jack
   - 🇨🇭 瑞士 (Switzerland) 07 - jack
   - 🇨🇭 瑞士 (Switzerland) 08 - jack
   - 🇨🇭 瑞士 (Switzerland) 09 - jack
-  - 🇨🇭 瑞士 (Switzerland) 11 - jack
 rules:
 - MATCH,PROXIES

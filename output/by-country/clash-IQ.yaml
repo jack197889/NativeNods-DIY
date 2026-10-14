@@ -5,18 +5,22 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇶 IQ 01 - jack
-  server: 104.21.70.21
-  port: 8080
+  server: 104.21.94.230
+  port: 443
   udp: true
   type: vless
-  uuid: 33918b20-9e02-4dc6-8b30-79b2d4b2e0e6
+  uuid: de78c0b1-c5c8-412a-bd92-430d1f2e2642
+  tls: true
+  servername: FroSTy-PonD-7436.SHHabbYAt914.woRkErS.dEv
+  skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiUjJBU3JkVlRwSWtnciIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0
+    path: /NmrU9ImDG7jA7oFEem
     headers:
-      Host: auto-scale-238b2b.infra-core-1630dd.workers.dev
+      Host: frosty-pond-7436.shhabbyat914.workers.dev
 - name: 🇮🇶 IQ 02 - jack
-  server: 178.17.57.120
+  server: arcturus.yokkastars.com
   port: 40443
   udp: true
   type: vless
@@ -27,7 +31,7 @@ proxies:
     public-key: w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4
     short-id: db46e2946fc466fd
   servername: deepl.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

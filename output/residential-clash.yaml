@@ -4,17 +4,40 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽) - jack
-  server: 206.1.102.81
-  port: 17915
+- name: 🇺🇸 美国 (United States) 01 (家宽) - jack
+  server: 155.117.19.17
+  port: 443
   udp: true
-  type: vless
-  uuid: 439628ee-ef8e-4a3e-ba0f-091b7376dcb8
-  tls: true
-  servername: googol.wookshop.ir
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack
+  type: hysteria2
+  password: 5fa748137b6d822308eea4611f474ad5
+  sni: www.bing.com
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: a39ca173b57ac7021b08bf3e3de9f1f6
+- name: 🇰🇷 韩国 (South Korea) 02 (家宽) - jack
+  server: p141.panda001.net
+  port: 4652
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+- name: 🇭🇰 中国香港 (Hong Kong) 03 (移动家宽) - jack
+  server: dog-hk.kunlun01dns.com
+  port: 21022
+  udp: true
+  type: vmess
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+- name: 🇭🇰 中国香港 (Hong Kong) 04 (移动家宽) - jack
+  server: zfd-hkv2.kunlun01dns.com
+  port: 16115
+  udp: true
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
+- name: 🇹🇷 土耳其 (Turkey) 05 (移动家宽) - jack
   server: test.keoplentuio.xyz
   port: 2053
   udp: true
@@ -25,14 +48,20 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽) - jack
-  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack
+  - 🇺🇸 美国 (United States) 01 (家宽) - jack
+  - 🇰🇷 韩国 (South Korea) 02 (家宽) - jack
+  - 🇭🇰 中国香港 (Hong Kong) 03 (移动家宽) - jack
+  - 🇭🇰 中国香港 (Hong Kong) 04 (移动家宽) - jack
+  - 🇹🇷 土耳其 (Turkey) 05 (移动家宽) - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽) - jack
-  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack
+  - 🇺🇸 美国 (United States) 01 (家宽) - jack
+  - 🇰🇷 韩国 (South Korea) 02 (家宽) - jack
+  - 🇭🇰 中国香港 (Hong Kong) 03 (移动家宽) - jack
+  - 🇭🇰 中国香港 (Hong Kong) 04 (移动家宽) - jack
+  - 🇹🇷 土耳其 (Turkey) 05 (移动家宽) - jack
 rules:
 - MATCH,PROXIES
