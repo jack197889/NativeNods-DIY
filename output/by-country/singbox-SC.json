@@ -4,26 +4,30 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇨🇱 智利 (Chile) 01 - jack",
-      "server": "64.176.2.21",
-      "server_port": 8388,
-      "method": "aes-256-gcm",
-      "password": "xBStBEVqvGwHPocc"
+      "type": "trojan",
+      "tag": "🇸🇨 塞舌尔 (Seychelles) 01 - jack",
+      "server": "45.205.27.78",
+      "server_port": 10443,
+      "password": "69869b3d-3fdd-46ef-9ff3-eed2d2e532c1",
+      "tls": {
+        "enabled": true,
+        "server_name": "45.205.27.78",
+        "insecure": true
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇱 智利 (Chile) 01 - jack"
+        "🇸🇨 塞舌尔 (Seychelles) 01 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇱 智利 (Chile) 01 - jack"
+        "🇸🇨 塞舌尔 (Seychelles) 01 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

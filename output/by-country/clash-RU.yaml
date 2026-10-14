@@ -19,6 +19,28 @@ proxies:
   grpc-opts:
     grpc-service-name: GunService
 - name: 🇷🇺 俄罗斯 (Russia) 02 - jack
+  server: 91.196.32.121
+  port: 2443
+  udp: true
+  type: vless
+  uuid: c635b5f6-b5ea-4e57-927f-75860b0cb984
+  tls: true
+  reality-opts:
+    public-key: cnmFHIiPbBDSOiui-ZJw8JIWSa4UARyNrHhBp3p7sBc
+    short-id: f1b2c3d4
+  servername: fonts.google.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+- name: 🇷🇺 俄罗斯 (Russia) 03 - jack
+  server: 130.49.189.158
+  port: 43558
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 52+ggoCvKFVJyT1NDiuWOZw2rHIvAg3tgqgJl8aeCwY=
+- name: 🇷🇺 俄罗斯 (Russia) 04 - jack
   server: 193.233.74.6
   port: 8444
   udp: true
@@ -33,8 +55,24 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
-- name: 🇷🇺 俄罗斯 (Russia) 03 - jack
-  server: 213.165.56.102
+- name: 🇷🇺 俄罗斯 (Russia) 05 - jack
+  server: hy9.shamanfun.ru
+  port: 1443
+  udp: true
+  type: hysteria2
+  password: c635b5f6-b5ea-4e57-927f-75860b0cb984
+  sni: hy9.shamanfun.ru
+  skip-cert-verify: false
+- name: 🇷🇺 俄罗斯 (Russia) 06 - jack
+  server: spainspeedboostjbl88.qcloud.surf
+  port: 27313
+  udp: true
+  type: hysteria2
+  password: 8bd04756-3beb-4348-82c9-d35453df50ce
+  sni: spainspeedboostjbl88.qcloud.surf
+  skip-cert-verify: true
+- name: 🇷🇺 俄罗斯 (Russia) 07 - jack
+  server: freede.aiage.work
   port: 443
   udp: true
   type: vless
@@ -45,72 +83,28 @@ proxies:
     public-key: A_bQLZE6D32TJUdAf9doQTPaTUXyJjPXLSklplG4V1g
     short-id: 57e7977c9011061c
   servername: freede.aiage.work
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 04 - jack
-  server: 130.49.189.158
-  port: 43558
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 52+ggoCvKFVJyT1NDiuWOZw2rHIvAg3tgqgJl8aeCwY=
-- name: 🇷🇺 俄罗斯 (Russia) 05 - jack
-  server: 153.80.241.206
-  port: 8444
-  udp: true
-  type: vless
-  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
-  tls: true
-  reality-opts:
-    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
-  servername: github.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: GunService
-- name: 🇷🇺 俄罗斯 (Russia) 06 - jack
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 08 - jack
   server: 194.87.118.184
   port: 2053
   udp: true
   type: hysteria2
   password: 7ab3c77e-8fcc-4848-918f-cae3d4eac794
-  sni: 'off'
+  sni: 194.87.118.184
   skip-cert-verify: true
-- name: 🇷🇺 俄罗斯 (Russia) 07 - jack
-  server: 130.49.189.250
-  port: 28152
-  udp: true
-  type: hysteria2
-  password: 4ad3dbf5-2005-4d96-b56c-a0ca9905cab6
-  sni: alb1337.zaebalsanoproxyklinus.lol
-  skip-cert-verify: false
-- name: 🇷🇺 俄罗斯 (Russia) 08 - jack
-  server: hy9.shamanfun.ru
-  port: 1443
-  udp: true
-  type: hysteria2
-  password: c635b5f6-b5ea-4e57-927f-75860b0cb984
-  sni: hy9.shamanfun.ru
-  skip-cert-verify: false
 - name: 🇷🇺 俄罗斯 (Russia) 09 - jack
-  server: spainspeedboostjbl88.qcloud.surf
-  port: 27313
-  udp: true
-  type: hysteria2
-  password: 8bd04756-3beb-4348-82c9-d35453df50ce
-  sni: spainspeedboostjbl88.qcloud.surf
-  skip-cert-verify: true
-- name: 🇷🇺 俄罗斯 (Russia) 10 - jack
-  server: 45.12.75.242
-  port: 26424
+  server: 83.166.235.114
+  port: 443
   udp: true
   type: vless
-  uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
+  uuid: a16a3e32-8d63-4dec-8c67-1361388a64ca
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0
-    short-id: 23103e1e
-  servername: ya.ru
-  client-fingerprint: chrome
+    public-key: PdHyJBOPSoTgTljNWw-I6b5iTX_vaZfNwmPT6aeNpmc
+    short-id: 40ce66d79fdbeb13
+  servername: eh1.vk.ru
+  client-fingerprint: ''
 proxy-groups:
 - name: PROXIES
   type: select
@@ -125,7 +119,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 07 - jack
   - 🇷🇺 俄罗斯 (Russia) 08 - jack
   - 🇷🇺 俄罗斯 (Russia) 09 - jack
-  - 🇷🇺 俄罗斯 (Russia) 10 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -140,6 +133,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 07 - jack
   - 🇷🇺 俄罗斯 (Russia) 08 - jack
   - 🇷🇺 俄罗斯 (Russia) 09 - jack
-  - 🇷🇺 俄罗斯 (Russia) 10 - jack
 rules:
 - MATCH,PROXIES

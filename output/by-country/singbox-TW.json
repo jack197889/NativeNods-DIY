@@ -4,32 +4,74 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "tuic",
       "tag": "🇹🇼 中国台湾 (Taiwan) 01 - jack",
-      "server": "160.187.100.109",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "server": "tw4.dexlos.com",
+      "server_port": 8080,
+      "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
+      "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
       "tls": {
         "enabled": true,
-        "server_name": "127.0.0.1",
-        "insecure": true
+        "server_name": "tw4.dexlos.com",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
       }
     },
     {
       "type": "hysteria2",
       "tag": "🇹🇼 中国台湾 (Taiwan) 02 - jack",
-      "server": "103.115.109.49",
+      "server": "160.187.100.109",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "https",
+        "server_name": "160.187.100.109",
         "insecure": true
       }
     },
     {
-      "type": "vless",
+      "type": "tuic",
       "tag": "🇹🇼 中国台湾 (Taiwan) 03 - jack",
+      "server": "tw3.dexlos.com",
+      "server_port": 8080,
+      "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
+      "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "tls": {
+        "enabled": true,
+        "server_name": "tw3.dexlos.com",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "tuic",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 04 - jack",
+      "server": "tw5.dexlos.com",
+      "server_port": 8080,
+      "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
+      "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "tls": {
+        "enabled": true,
+        "server_name": "tw5.dexlos.com",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 05 - jack",
       "server": "60.248.219.78",
       "server_port": 443,
       "uuid": "c1c04450-bf71-4049-ad0c-9cf6d94d9f1f",
@@ -47,13 +89,47 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 06 - jack",
+      "server": "103.115.109.49",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "https:",
+        "insecure": true
+      }
+    },
+    {
+      "type": "tuic",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 07 - jack",
+      "server": "tw8.dexlos.com",
+      "server_port": 8080,
+      "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
+      "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "tls": {
+        "enabled": true,
+        "server_name": "tw8.dexlos.com",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇹🇼 中国台湾 (Taiwan) 01 - jack",
         "🇹🇼 中国台湾 (Taiwan) 02 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 - jack"
+        "🇹🇼 中国台湾 (Taiwan) 03 - jack",
+        "🇹🇼 中国台湾 (Taiwan) 04 - jack",
+        "🇹🇼 中国台湾 (Taiwan) 05 - jack",
+        "🇹🇼 中国台湾 (Taiwan) 06 - jack",
+        "🇹🇼 中国台湾 (Taiwan) 07 - jack"
       ]
     },
     {
@@ -62,7 +138,11 @@
       "outbounds": [
         "🇹🇼 中国台湾 (Taiwan) 01 - jack",
         "🇹🇼 中国台湾 (Taiwan) 02 - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 - jack"
+        "🇹🇼 中国台湾 (Taiwan) 03 - jack",
+        "🇹🇼 中国台湾 (Taiwan) 04 - jack",
+        "🇹🇼 中国台湾 (Taiwan) 05 - jack",
+        "🇹🇼 中国台湾 (Taiwan) 06 - jack",
+        "🇹🇼 中国台湾 (Taiwan) 07 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
