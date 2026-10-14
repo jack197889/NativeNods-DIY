@@ -53,9 +53,8 @@ except ImportError as e:
 # ══════════════════════════════════════════════════════════════════
 
 SOURCE_URLS = [
-    # 1. 原版内置来源：保留
-    "https://wild-cloud-9893.heleimail.workers.dev",
-    "https://open.heleimail.workers.dev/",
+    # 1. 保留高存活基础盘与优质 CDN 加速源
+    "https://cdn.jsdelivr.net/gh/free18/v2ray@main/v.txt",
     "https://raw.githubusercontent.com/freefq/free/master/v2",
     "https://www.ermao.net/sub/v2ray/ermao.net",
 
@@ -75,24 +74,22 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-US.txt",
     "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-AU.txt",
 
-    # 4. 其他原有来源
+    # 4. 其他精选与高产出综合源
     "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/Config_jo.txt",
     "https://sub.445569.xyz/",
     "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",
     "https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/merged.txt",
+    "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
+    "https://raw.githubusercontent.com/clashv2ray-hub/v2rayfree/refs/heads/main/v2ray.txt",
 
-    # 5. 台湾、澳大利亚定向补充
+    # 5. 台湾、澳大利亚定向补充（提升澳台有效节点基数）
     "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/TW.txt",
     "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/AU.txt",
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/countries/tw/mixed",
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/countries/au/mixed",
 
-    # 6. 全球补充池：每小时更新，增加来源多样性
+    # 6. 全球补充池：增加来源多样性
     "https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/nodes.txt",
-
-    # 以下两条在你之前的日志中返回 HTTP 404，先停用
-    # "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/channels/surfboardv2ray/us",
-    # "https://raw.githubusercontent.com/voken100g/AutoRope/main/All_Configs_Sub.txt",
 ]
 
 OUTPUT_DIR = "output"
