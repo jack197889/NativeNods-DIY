@@ -14,47 +14,7 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: a39ca173b57ac7021b08bf3e3de9f1f6
-- name: 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack
-  server: test.keoplentuio.xyz
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-- name: 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack
-  server: me17.msjia8844.site
-  port: 7443
-  udp: true
-  type: hysteria2
-  password: M8LP9DztTr3znqCkmf-r08CQLBLLFK1r
-  sni: me17.msjia8844.site
-  skip-cert-verify: false
-  obfs: salamander
-  obfs-password: u3Soh9_Ui0UmcuY6vk0ug8Lq
-- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
-  server: 684616s4.df6h451rh.xin
-  port: 443
-  udp: true
-  type: anytls
-  password: ec74bb6a86c2
-  sni: px.ads.linkedin.com
-  skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack
-  server: fujrdt.d6f54hd1j.cc
-  port: 443
-  udp: true
-  type: vmess
-  uuid: d877dc6f-7323-4b47-a7dd-14228cbae854
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: fujrdt.d6f54hd1j.cc
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fujrdt.d6f54hd1j.cc
-- name: 🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack
+- name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
   server: hinet1.2yly.com
   port: 24215
   udp: true
@@ -64,28 +24,40 @@ proxies:
   reality-opts:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
   servername: addons.mozilla.org
-  client-fingerprint: chrome
+  client-fingerprint: qq
+- name: 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
+  server: 684616s4.df6h451rh.xin
+  port: 443
+  udp: true
+  type: anytls
+  password: ec74bb6a86c2
+  sni: px.ads.linkedin.com
+  skip-cert-verify: true
+- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
+  server: er8u54dh.df6h451rh.xin
+  port: 443
+  udp: true
+  type: anytls
+  password: ec74bb6a86c2
+  sni: px.ads.linkedin.com
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇺🇸 美国 (United States) 01 (家宽) - jack
-  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack
-  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇺🇸 美国 (United States) 01 (家宽) - jack
-  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack
-  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack
 rules:
 - MATCH,PROXIES

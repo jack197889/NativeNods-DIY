@@ -6,39 +6,44 @@ log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - jack
   server: 149.102.132.184
-  port: 443
+  port: 80
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: g5h5jleTRSyO3Rk4
 - name: 🇬🇧 英国 (United Kingdom) 02 - jack
+  server: 149.102.132.184
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: g5h5jleTRSyO3Rk4
+- name: 🇬🇧 英国 (United Kingdom) 03 - jack
   server: 141.98.101.181
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇬🇧 英国 (United Kingdom) 03 - jack
-  server: 149.102.132.184
-  port: 80
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: g5h5jleTRSyO3Rk4
 - name: 🇬🇧 英国 (United Kingdom) 04 - jack
-  server: 146.70.61.18
-  port: 8080
+  server: 51.89.194.151
+  port: 2053
   udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
+  type: vless
+  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
+  tls: true
+  reality-opts:
+    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
+    short-id: d051f678212f9d54
+  servername: www.apple.com
+  client-fingerprint: firefox
 - name: 🇬🇧 英国 (United Kingdom) 05 - jack
-  server: 146.70.61.37
-  port: 8080
+  server: 13.40.23.138
+  port: 443
   udp: true
   type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
+  cipher: aes-256-cfb
+  password: amazonskr05
 - name: 🇬🇧 英国 (United Kingdom) 06 - jack
   server: 164.37.100.195
   port: 443
@@ -53,6 +58,40 @@ proxies:
   servername: tomaz1337shellbuy.vvzzkontaktezzvv.garden
   client-fingerprint: chrome
 - name: 🇬🇧 英国 (United Kingdom) 07 - jack
+  server: 146.70.61.18
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇬🇧 英国 (United Kingdom) 08 - jack
+  server: 57.129.132.223
+  port: 80
+  udp: true
+  type: vmess
+  uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: google.com
+- name: 🇬🇧 英国 (United Kingdom) 09 - jack
+  server: 146.70.61.37
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇬🇧 英国 (United Kingdom) 10 - jack
+  server: 146.70.23.32
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇬🇧 英国 (United Kingdom) 11 - jack
   server: 186.190.211.188
   port: 443
   udp: true
@@ -62,74 +101,27 @@ proxies:
   servername: 186.190.211.188
   skip-cert-verify: true
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 08 - jack
-  server: 146.70.23.32
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇬🇧 英国 (United Kingdom) 09 - jack
-  server: 57.129.130.57
-  port: 52014
-  udp: true
-  type: vless
-  uuid: 98286408-b683-4c0f-96c5-7e00da649d90
-  tls: true
-  servername: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 10 - jack
+- name: 🇬🇧 英国 (United Kingdom) 12 - jack
   server: 94.156.250.148
   port: 7001
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: RexnBgU7EV5ADxG
-- name: 🇬🇧 英国 (United Kingdom) 11 - jack
-  server: 158.173.24.73
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇬🇧 英国 (United Kingdom) 12 - jack
-  server: 158.173.24.73
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
 - name: 🇬🇧 英国 (United Kingdom) 13 - jack
-  server: 193.188.21.253
-  port: 10444
+  server: 31.59.217.164
+  port: 443
   udp: true
   type: vless
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
+  uuid: 4b09d40d-e36a-47c3-baa4-e6bf551b3183
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  servername: video.yandex.ru
-  client-fingerprint: safari
+    public-key: kOkILS7UXUQDNPLYn4SQ65kMIWKXNOttV5Kddw4ZqTo
+    short-id: 1625a2a79d01328f
+  servername: www.adobe.com
+  client-fingerprint: chrome
 - name: 🇬🇧 英国 (United Kingdom) 14 - jack
-  server: 193.188.21.253
-  port: 14430
-  udp: true
-  type: vless
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 193.188.21.253
-- name: 🇬🇧 英国 (United Kingdom) 15 - jack
   server: 46.250.250.149
   port: 2053
   udp: true
@@ -141,20 +133,7 @@ proxies:
     short-id: 9922313fffed1c63
   servername: www.apple.com
   client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 16 - jack
-  server: 193.163.203.170
-  port: 443
-  udp: true
-  type: vless
-  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
-    short-id: b28db60d77c50b4f
-  servername: yandex.ru
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 17 - jack
+- name: 🇬🇧 英国 (United Kingdom) 15 - jack
   server: 46.250.240.80
   port: 2053
   udp: true
@@ -166,33 +145,20 @@ proxies:
     short-id: 4cc9dc65f7770115
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 18 - jack
-  server: 195.72.166.251
-  port: 443
-  udp: true
-  type: vless
-  uuid: 64c05afc-ce81-4ba0-b697-afa04da1427e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: RKDT6fVgcZS8Qfzhv5rbeHRIflA3UTKD_HNLJyOoUwk
-    short-id: 25349b36802f
-  servername: www.lloydsbankinggroup.com
-  client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 19 - jack
+- name: 🇬🇧 英国 (United Kingdom) 16 - jack
   server: 107.181.151.241
   port: 443
   udp: true
   type: vless
-  uuid: de38389f-5651-4f2f-8276-5aabf3b861c9
+  uuid: 106d20f6-d70a-40e2-b69b-8e82baf8d117
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
-    short-id: 225e930cfd4d
-  servername: www.hollywoodreporter.com
-  client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 20 - jack
+    short-id: 60500a63ad12
+  servername: www.microsoft.com
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 17 - jack
   server: 107.181.151.39
   port: 443
   udp: true
@@ -205,20 +171,7 @@ proxies:
     short-id: 73a9e631a09b
   servername: www.microsoft.com
   client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 21 - jack
-  server: 146.70.104.235
-  port: 443
-  udp: true
-  type: vless
-  uuid: 698922a2-1ca5-4bfb-92fb-0aa7e779ce21
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: FcvI0ncjwII1n6tnWQ6nLWuwRpk8hdYoYzYCi1sbhjY
-    short-id: 1c3ce7aa488b3e50
-  servername: www.datadoghq.com
-  client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 22 - jack
+- name: 🇬🇧 英国 (United Kingdom) 18 - jack
   server: 87.239.249.137
   port: 443
   udp: true
@@ -231,20 +184,20 @@ proxies:
     short-id: 91af08b1ce1f
   servername: www.foxsports.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 23 - jack
-  server: webdisk.jaggyslawa.org
+- name: 🇬🇧 英国 (United Kingdom) 19 - jack
+  server: 193.163.203.170
   port: 443
   udp: true
   type: vless
-  uuid: 75113671-63e3-452d-87d3-261a37e8b472
+  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s
-    short-id: baf023e1026a
-  servername: www.mozilla.org
+    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
+    short-id: b28db60d77c50b4f
+  servername: yandex.ru
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 24 - jack
+- name: 🇬🇧 英国 (United Kingdom) 20 - jack
   server: 104.238.2.82
   port: 443
   udp: true
@@ -257,7 +210,7 @@ proxies:
     short-id: b558b9305a0b
   servername: www.microsoft.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 25 - jack
+- name: 🇬🇧 英国 (United Kingdom) 21 - jack
   server: v36.hdacd.com
   port: 30836
   udp: true
@@ -265,31 +218,58 @@ proxies:
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 2
   cipher: auto
-- name: 🇬🇧 英国 (United Kingdom) 26 - jack
-  server: 51.89.194.151
-  port: 2053
+- name: 🇬🇧 英国 (United Kingdom) 22 - jack
+  server: de1.wizard.select
+  port: 443
   udp: true
   type: vless
-  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
-  tls: true
-  reality-opts:
-    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
-    short-id: d051f678212f9d54
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 27 - jack
-  server: 138.124.125.193
-  port: 10444
-  udp: true
-  type: vless
-  uuid: e57ce64d-5a1a-4a90-96df-9e1bd3ad26e4
+  uuid: 143fc3c6-c807-11f1-b5bb-55ba72567166
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  servername: ads.x5.ru
-  client-fingerprint: safari
+    public-key: bh7oxfR5Z80ysdaZ-WurGfzR8rcXHEdKkxonpUtJLGk
+    short-id: 1760e3746d0697
+  servername: de1.wizard.select
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 23 - jack
+  server: 138.124.90.177
+  port: 10443
+  udp: true
+  type: vless
+  uuid: 3a0e4040-67cc-43e0-a9fb-98e15ddb0526
+- name: 🇬🇧 英国 (United Kingdom) 24 - jack
+  server: 82.38.31.190
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇬🇧 英国 (United Kingdom) 25 - jack
+  server: 195.72.166.251
+  port: 443
+  udp: true
+  type: vless
+  uuid: 64c05afc-ce81-4ba0-b697-afa04da1427e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: RKDT6fVgcZS8Qfzhv5rbeHRIflA3UTKD_HNLJyOoUwk
+    short-id: 25349b36802f
+  servername: www.lloydsbankinggroup.com
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 26 - jack
+  server: 57.128.164.21
+  port: 80
+  udp: true
+  type: vmess
+  uuid: bda82bcd-f6e2-46ae-9552-673f0b87ac30
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /d3d3LmlyYW5ob3N0LmNvbQ==
+    headers:
+      Host: https.http.www.net.com.ramseyv2.ir.
 proxy-groups:
 - name: PROXIES
   type: select
@@ -321,7 +301,6 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 24 - jack
   - 🇬🇧 英国 (United Kingdom) 25 - jack
   - 🇬🇧 英国 (United Kingdom) 26 - jack
-  - 🇬🇧 英国 (United Kingdom) 27 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -353,6 +332,5 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 24 - jack
   - 🇬🇧 英国 (United Kingdom) 25 - jack
   - 🇬🇧 英国 (United Kingdom) 26 - jack
-  - 🇬🇧 英国 (United Kingdom) 27 - jack
 rules:
 - MATCH,PROXIES

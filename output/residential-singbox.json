@@ -21,30 +21,27 @@
     },
     {
       "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack",
-      "server": "test.keoplentuio.xyz",
-      "server_port": 2053,
-      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack",
-      "server": "me17.msjia8844.site",
-      "server_port": 7443,
-      "password": "M8LP9DztTr3znqCkmf-r08CQLBLLFK1r",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
+      "server": "hinet1.2yly.com",
+      "server_port": 24215,
+      "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
       "tls": {
         "enabled": true,
-        "server_name": "me17.msjia8844.site",
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "u3Soh9_Ui0UmcuY6vk0ug8Lq"
+        "server_name": "addons.mozilla.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE",
+          "short_id": ""
+        }
       }
     },
     {
       "type": "anytls",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
       "server": "684616s4.df6h451rh.xin",
       "server_port": 443,
       "password": "ec74bb6a86c2",
@@ -55,43 +52,15 @@
       }
     },
     {
-      "type": "vmess",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
-      "server": "fujrdt.d6f54hd1j.cc",
+      "type": "anytls",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
+      "server": "er8u54dh.df6h451rh.xin",
       "server_port": 443,
-      "uuid": "d877dc6f-7323-4b47-a7dd-14228cbae854",
-      "security": "auto",
+      "password": "ec74bb6a86c2",
       "tls": {
         "enabled": true,
-        "server_name": "fujrdt.d6f54hd1j.cc",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "fujrdt.d6f54hd1j.cc"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack",
-      "server": "hinet1.2yly.com",
-      "server_port": 24215,
-      "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
-      "tls": {
-        "enabled": true,
-        "server_name": "addons.mozilla.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE",
-          "short_id": ""
-        }
+        "server_name": "px.ads.linkedin.com",
+        "insecure": true
       }
     },
     {
@@ -100,11 +69,9 @@
       "outbounds": [
         "auto",
         "🇺🇸 美国 (United States) 01 (家宽) - jack",
-        "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack",
-        "🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack"
+        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack"
       ]
     },
     {
@@ -112,11 +79,9 @@
       "tag": "auto",
       "outbounds": [
         "🇺🇸 美国 (United States) 01 (家宽) - jack",
-        "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack",
-        "🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack"
+        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

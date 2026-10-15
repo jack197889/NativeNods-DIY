@@ -18,6 +18,22 @@ proxies:
   alpn:
   - h3
 - name: 🇹🇼 中国台湾 (Taiwan) 02 - jack
+  server: 103.115.109.49
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https://t.me/WangCai2🇨🇳
+  skip-cert-verify: true
+- name: 🇹🇼 中国台湾 (Taiwan) 03 - jack
+  server: 160.187.100.109
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-tw-002.fastervpn.world
+  skip-cert-verify: true
+- name: 🇹🇼 中国台湾 (Taiwan) 04 - jack
   server: tw8.dexlos.com
   port: 8080
   udp: true
@@ -30,23 +46,20 @@ proxies:
   udp-relay-mode: native
   alpn:
   - h3
-- name: 🇹🇼 中国台湾 (Taiwan) 03 - jack
-  server: vpn-tw-002.fastervpn.world
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: google.com
-  skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 04 - jack
-  server: 103.115.109.49
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2🇨🇳
-  skip-cert-verify: true
 - name: 🇹🇼 中国台湾 (Taiwan) 05 - jack
+  server: tw4.dexlos.com
+  port: 8080
+  udp: true
+  type: tuic
+  uuid: 8A9905B7-801B-41AF-BFC9-2034212770F6
+  password: 8A9905B7-801B-41AF-BFC9-2034212770F6
+  sni: tw4.dexlos.com
+  skip-cert-verify: false
+  congestion-controller: bbr
+  udp-relay-mode: native
+  alpn:
+  - h3
+- name: 🇹🇼 中国台湾 (Taiwan) 06 - jack
   server: 60.248.219.78
   port: 443
   udp: true
@@ -60,7 +73,7 @@ proxies:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
       Host: ty986gfazs.cainiaohub.xyz
-- name: 🇹🇼 中国台湾 (Taiwan) 06 - jack
+- name: 🇹🇼 中国台湾 (Taiwan) 07 - jack
   server: tw5.dexlos.com
   port: 8080
   udp: true
@@ -68,19 +81,6 @@ proxies:
   uuid: 8A9905B7-801B-41AF-BFC9-2034212770F6
   password: 8A9905B7-801B-41AF-BFC9-2034212770F6
   sni: tw5.dexlos.com
-  skip-cert-verify: false
-  congestion-controller: bbr
-  udp-relay-mode: native
-  alpn:
-  - h3
-- name: 🇹🇼 中国台湾 (Taiwan) 07 - jack
-  server: tw4.dexlos.com
-  port: 8080
-  udp: true
-  type: tuic
-  uuid: 8A9905B7-801B-41AF-BFC9-2034212770F6
-  password: 8A9905B7-801B-41AF-BFC9-2034212770F6
-  sni: tw4.dexlos.com
   skip-cert-verify: false
   congestion-controller: bbr
   udp-relay-mode: native
