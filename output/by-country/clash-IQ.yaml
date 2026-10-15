@@ -1,0 +1,31 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇮🇶 IQ 01 - jack
+  server: 172.67.131.217
+  port: 443
+  udp: true
+  type: trojan
+  password: 6c73b7937b3e44e5982f9d5efa57d8cd
+  sni: aUTO-scale-728382.BuiLD-sVc-267891.wORkErs.dEv
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /tr/9LJwNSQPh5UJMu8TbPKBJPtkZWKkYFFl?ed=2560
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇮🇶 IQ 01 - jack
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇮🇶 IQ 01 - jack
+rules:
+- MATCH,PROXIES

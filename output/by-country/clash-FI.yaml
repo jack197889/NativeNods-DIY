@@ -19,24 +19,6 @@ proxies:
   cipher: aes-128-gcm
   password: f9300a9bf39ae0347c3a3bfbc4dd7754
 - name: 🇫🇮 芬兰 (Finland) 03 - jack
-  server: 95.216.27.15
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
-  tls: true
-  reality-opts:
-    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
-    short-id: d368b94e275ab080
-  servername: www.google.com
-  client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 04 - jack
-  server: edge10.cyrionflare.com
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
-- name: 🇫🇮 芬兰 (Finland) 05 - jack
   server: 152.233.71.81
   port: 443
   udp: true
@@ -48,30 +30,34 @@ proxies:
     public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
     short-id: 1c3e8241a8743df9
   servername: brointelengence.com
-  client-fingerprint: random
-- name: 🇫🇮 芬兰 (Finland) 06 - jack
-  server: 109.172.54.135
-  port: 8444
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 04 - jack
+  server: 95.216.27.15
+  port: 2053
   udp: true
   type: vless
-  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
+  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
   tls: true
   reality-opts:
-    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
-  servername: github.com
+    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
+    short-id: d368b94e275ab080
+  servername: www.google.com
   client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 05 - jack
+  server: ultimate.warriorofblacksun.run
+  port: 443
+  udp: true
+  type: vless
+  uuid: 97c52223-dc53-4d59-ae9b-2bf4344eb5eb
+  tls: true
+  reality-opts:
+    public-key: Ww_HS9_n7ob3uESSXtbU23EPM-BOJ5ZYLp-RFB0L0SY
+  servername: ultimate.warriorofblacksun.run
+  client-fingerprint: qq
   network: grpc
   grpc-opts:
-    grpc-service-name: GunService
-- name: 🇫🇮 芬兰 (Finland) 07 - jack
-  server: sweedenqfds777.qcloud.surf
-  port: 21223
-  udp: true
-  type: hysteria2
-  password: 8bd04756-3beb-4348-82c9-d35453df50ce
-  sni: 127.0.0.1
-  skip-cert-verify: true
-- name: 🇫🇮 芬兰 (Finland) 08 - jack
+    grpc-service-name: xyz
+- name: 🇫🇮 芬兰 (Finland) 06 - jack
   server: 65.108.3.59
   port: 443
   udp: true
@@ -83,7 +69,72 @@ proxies:
     public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
     short-id: 90ec9bba2019
   servername: web.eitaa.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 07 - jack
+  server: edge10.cyrionflare.com
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+- name: 🇫🇮 芬兰 (Finland) 08 - jack
+  server: b2a2.velqixa.ir
+  port: 39221
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: Pzlcb_PeV3uRgiC2NNoNKw
+- name: 🇫🇮 芬兰 (Finland) 09 - jack
+  server: fi-p1.h1cloud.net
+  port: 25481
+  udp: true
+  type: vless
+  uuid: 68c3d665-b2b5-4ffb-9f37-9f3d8c47324d
+  tls: true
+  reality-opts:
+    public-key: mhIAHuZIEr2NpdGGSeOxar7VRSgEfVoNwb_G8Y0073E
+    short-id: 3b84fc70657725af
+  servername: www.bing.com
+  client-fingerprint: random
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 8cb5baa18cd7
+- name: 🇫🇮 芬兰 (Finland) 10 - jack
+  server: 188.241.54.208
+  port: 443
+  udp: true
+  type: vless
+  uuid: fbaa413d-2ffb-4e36-8444-e1b1ab829fe1
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: qlVZ2ehdXHCxIADkf5swgXT2ZHrpSP7HM6SKTBMQXRU
+    short-id: 456bf62e2b728b97
+  servername: www.samsung.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 11 - jack
+  server: app-mi-28.spbstudentlife.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: 090da6a8-69f7-4b49-8af9-a8f8bfb07f17
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: VpHiR2qy9ielGf500Cp5S_e9eDR_of2dthqe7bNflRk
+    short-id: 1fcb15860699f6b1
+  servername: assets-mi-28.spbstudentlife.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 12 - jack
+  server: 45.144.234.157
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.144.234.157
 proxy-groups:
 - name: PROXIES
   type: select
@@ -97,6 +148,10 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 06 - jack
   - 🇫🇮 芬兰 (Finland) 07 - jack
   - 🇫🇮 芬兰 (Finland) 08 - jack
+  - 🇫🇮 芬兰 (Finland) 09 - jack
+  - 🇫🇮 芬兰 (Finland) 10 - jack
+  - 🇫🇮 芬兰 (Finland) 11 - jack
+  - 🇫🇮 芬兰 (Finland) 12 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -110,5 +165,9 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 06 - jack
   - 🇫🇮 芬兰 (Finland) 07 - jack
   - 🇫🇮 芬兰 (Finland) 08 - jack
+  - 🇫🇮 芬兰 (Finland) 09 - jack
+  - 🇫🇮 芬兰 (Finland) 10 - jack
+  - 🇫🇮 芬兰 (Finland) 11 - jack
+  - 🇫🇮 芬兰 (Finland) 12 - jack
 rules:
 - MATCH,PROXIES

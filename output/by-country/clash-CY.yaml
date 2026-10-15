@@ -5,6 +5,27 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇾 塞浦路斯 (Cyprus) 01 - jack
+  server: 185.233.187.188
+  port: 2087
+  udp: true
+  type: hysteria2
+  password: d0589fb6-420b-4078-a72a-66d270a25fd9
+  sni: fireedge.eaglors.com
+  skip-cert-verify: false
+- name: 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
+  server: 5.253.30.99
+  port: 40443
+  udp: true
+  type: vless
+  uuid: 511c1563-2cb6-4064-abc6-a59ee49818a8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
+    short-id: 88b6
+  servername: deepl.com
+  client-fingerprint: chrome
+- name: 🇨🇾 塞浦路斯 (Cyprus) 03 - jack
   server: 5.253.28.240
   port: 2443
   udp: true
@@ -19,19 +40,6 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: rex-eb0bf76b710ce763
-- name: 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
-  server: 5.253.30.99
-  port: 40443
-  udp: true
-  type: vless
-  uuid: 511c1563-2cb6-4064-abc6-a59ee49818a8
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
-    short-id: 88b6
-  servername: deepl.com
-  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
@@ -39,6 +47,7 @@ proxy-groups:
   - AUTO
   - 🇨🇾 塞浦路斯 (Cyprus) 01 - jack
   - 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
+  - 🇨🇾 塞浦路斯 (Cyprus) 03 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -46,5 +55,6 @@ proxy-groups:
   proxies:
   - 🇨🇾 塞浦路斯 (Cyprus) 01 - jack
   - 🇨🇾 塞浦路斯 (Cyprus) 02 - jack
+  - 🇨🇾 塞浦路斯 (Cyprus) 03 - jack
 rules:
 - MATCH,PROXIES

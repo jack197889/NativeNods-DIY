@@ -4,8 +4,30 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 01 - jack",
+      "server": "181.214.1.30",
+      "server_port": 8880,
+      "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "vms.lifetime39.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 02 - jack",
+      "server": "213.183.63.60",
+      "server_port": 9066,
+      "method": "aes-256-cfb",
+      "password": "2KUaE2a8NWTvuCZ3"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 03 - jack",
       "server": "213.183.63.60",
       "server_port": 9028,
       "method": "aes-256-cfb",
@@ -13,15 +35,7 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇧🇬 保加利亚 (Bulgaria) 02 - jack",
-      "server": "213.183.63.60",
-      "server_port": 9085,
-      "method": "aes-256-cfb",
-      "password": "9ej82EKe2gq7gLAM"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇧🇬 保加利亚 (Bulgaria) 03 - jack",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 04 - jack",
       "server": "213.183.63.60",
       "server_port": 9098,
       "method": "aes-256-cfb",
@@ -29,7 +43,7 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇧🇬 保加利亚 (Bulgaria) 04 - jack",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 05 - jack",
       "server": "213.183.63.60",
       "server_port": 9054,
       "method": "aes-256-cfb",
@@ -37,15 +51,15 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇧🇬 保加利亚 (Bulgaria) 05 - jack",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 06 - jack",
       "server": "213.183.63.60",
-      "server_port": 9061,
+      "server_port": 9085,
       "method": "aes-256-cfb",
-      "password": "4R3hUfZ2FHhDmNcP"
+      "password": "9ej82EKe2gq7gLAM"
     },
     {
       "type": "shadowsocks",
-      "tag": "🇧🇬 保加利亚 (Bulgaria) 06 - jack",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 07 - jack",
       "server": "213.183.63.60",
       "server_port": 9049,
       "method": "aes-256-cfb",
@@ -53,11 +67,40 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇧🇬 保加利亚 (Bulgaria) 07 - jack",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 08 - jack",
       "server": "213.183.63.60",
-      "server_port": 9066,
+      "server_port": 9064,
       "method": "aes-256-cfb",
-      "password": "2KUaE2a8NWTvuCZ3"
+      "password": "cp8pRSUAyLhTfVWH"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 09 - jack",
+      "server": "213.183.63.60",
+      "server_port": 9061,
+      "method": "aes-256-cfb",
+      "password": "4R3hUfZ2FHhDmNcP"
+    },
+    {
+      "type": "vless",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 10 - jack",
+      "server": "195.123.226.21",
+      "server_port": 443,
+      "uuid": "6589c320-db68-43cd-a273-b46299bab355",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "gateway.icloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "rabtI-ymNXBUvYYRwAw8DiR-1pdP7U0WPIaCBHEkgzo",
+          "short_id": "77bb0d07bddbc832"
+        }
+      }
     },
     {
       "type": "selector",
@@ -70,7 +113,10 @@
         "🇧🇬 保加利亚 (Bulgaria) 04 - jack",
         "🇧🇬 保加利亚 (Bulgaria) 05 - jack",
         "🇧🇬 保加利亚 (Bulgaria) 06 - jack",
-        "🇧🇬 保加利亚 (Bulgaria) 07 - jack"
+        "🇧🇬 保加利亚 (Bulgaria) 07 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 08 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 09 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 10 - jack"
       ]
     },
     {
@@ -83,7 +129,10 @@
         "🇧🇬 保加利亚 (Bulgaria) 04 - jack",
         "🇧🇬 保加利亚 (Bulgaria) 05 - jack",
         "🇧🇬 保加利亚 (Bulgaria) 06 - jack",
-        "🇧🇬 保加利亚 (Bulgaria) 07 - jack"
+        "🇧🇬 保加利亚 (Bulgaria) 07 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 08 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 09 - jack",
+        "🇧🇬 保加利亚 (Bulgaria) 10 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

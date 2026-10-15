@@ -1,0 +1,57 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "trojan",
+      "tag": "🇮🇶 IQ 01 - jack",
+      "server": "172.67.131.217",
+      "server_port": 443,
+      "password": "6c73b7937b3e44e5982f9d5efa57d8cd",
+      "tls": {
+        "enabled": true,
+        "server_name": "aUTO-scale-728382.BuiLD-sVc-267891.wORkErs.dEv",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/9LJwNSQPh5UJMu8TbPKBJPtkZWKkYFFl?ed=2560",
+        "headers": {
+          "Host": "auto-ScaLe-728382.builD-sVc-267891.WoRkeRS.DeV"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇮🇶 IQ 01 - jack"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇮🇶 IQ 01 - jack"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}
