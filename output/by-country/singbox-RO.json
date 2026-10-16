@@ -20,8 +20,24 @@
       }
     },
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇷🇴 罗马尼亚 (Romania) 02 - jack",
+      "server": "hy2-new.aspidnet.xyz",
+      "server_port": 443,
+      "password": "QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s",
+      "tls": {
+        "enabled": true,
+        "server_name": "hy2-new.aspidnet.xyz",
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "c1b4086fea89914496c7e10967a419216566"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 03 - jack",
       "server": "146.70.124.85",
       "server_port": 443,
       "uuid": "40abbe13-f02e-4da2-9b19-966c2c3eb4ee",
@@ -31,7 +47,7 @@
         "server_name": "www.datadoghq.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -42,7 +58,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 03 - jack",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 04 - jack",
       "server": "82.117.255.174",
       "server_port": 443,
       "uuid": "679439c5-28f2-485e-af5f-60a5fcd9c36c",
@@ -62,14 +78,6 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 04 - jack",
-      "server": "bogging-eyeteeth-fly.freesocks.work",
-      "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "QFWzCw2uX9B9i6qAYeFBIE"
-    },
-    {
       "type": "hysteria2",
       "tag": "🇷🇴 罗马尼亚 (Romania) 05 - jack",
       "server": "185.156.44.99",
@@ -77,9 +85,17 @@
       "password": "gf1:gfhysteria2024",
       "tls": {
         "enabled": true,
-        "server_name": "whatsapp.com",
+        "server_name": "css.rbxcdn.com",
         "insecure": true
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 06 - jack",
+      "server": "bogging-eyeteeth-fly.freesocks.work",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QFWzCw2uX9B9i6qAYeFBIE"
     },
     {
       "type": "selector",
@@ -90,7 +106,8 @@
         "🇷🇴 罗马尼亚 (Romania) 02 - jack",
         "🇷🇴 罗马尼亚 (Romania) 03 - jack",
         "🇷🇴 罗马尼亚 (Romania) 04 - jack",
-        "🇷🇴 罗马尼亚 (Romania) 05 - jack"
+        "🇷🇴 罗马尼亚 (Romania) 05 - jack",
+        "🇷🇴 罗马尼亚 (Romania) 06 - jack"
       ]
     },
     {
@@ -101,7 +118,8 @@
         "🇷🇴 罗马尼亚 (Romania) 02 - jack",
         "🇷🇴 罗马尼亚 (Romania) 03 - jack",
         "🇷🇴 罗马尼亚 (Romania) 04 - jack",
-        "🇷🇴 罗马尼亚 (Romania) 05 - jack"
+        "🇷🇴 罗马尼亚 (Romania) 05 - jack",
+        "🇷🇴 罗马尼亚 (Romania) 06 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

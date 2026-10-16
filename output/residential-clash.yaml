@@ -4,7 +4,22 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01 (家宽) - jack
+- name: 🇬🇧 英国 (United Kingdom) 01 (家宽) - jack
+  server: 162.159.153.4
+  port: 443
+  udp: true
+  type: vless
+  uuid: f2a73750-3087-48ff-a763-1348c15dce68
+  tls: true
+  servername: rayan-007.maxima.dpdns.org
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rayan-007.maxima.dpdns.org
+- name: 🇺🇸 美国 (United States) 02 (家宽) - jack
   server: 155.117.19.17
   port: 443
   udp: true
@@ -14,7 +29,53 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: a39ca173b57ac7021b08bf3e3de9f1f6
-- name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
+- name: 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
+  server: tw8.dexlos.com
+  port: 8080
+  udp: true
+  type: tuic
+  uuid: 8A9905B7-801B-41AF-BFC9-2034212770F6
+  password: 8A9905B7-801B-41AF-BFC9-2034212770F6
+  sni: tw8.dexlos.com
+  skip-cert-verify: false
+  congestion-controller: bbr
+  udp-relay-mode: native
+  alpn:
+  - h3
+- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
+  server: tw5.dexlos.com
+  port: 8080
+  udp: true
+  type: tuic
+  uuid: 8A9905B7-801B-41AF-BFC9-2034212770F6
+  password: 8A9905B7-801B-41AF-BFC9-2034212770F6
+  sni: tw5.dexlos.com
+  skip-cert-verify: false
+  congestion-controller: bbr
+  udp-relay-mode: native
+  alpn:
+  - h3
+- name: 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack
+  server: tw4.dexlos.com
+  port: 8080
+  udp: true
+  type: tuic
+  uuid: 8A9905B7-801B-41AF-BFC9-2034212770F6
+  password: 8A9905B7-801B-41AF-BFC9-2034212770F6
+  sni: tw4.dexlos.com
+  skip-cert-verify: false
+  congestion-controller: bbr
+  udp-relay-mode: native
+  alpn:
+  - h3
+- name: 🇰🇷 韩国 (South Korea) 06 (家宽) - jack
+  server: 218.237.185.234
+  port: 4652
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+- name: 🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack
   server: hinet1.2yly.com
   port: 24215
   udp: true
@@ -24,8 +85,26 @@ proxies:
   reality-opts:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
   servername: addons.mozilla.org
-  client-fingerprint: qq
-- name: 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 08 (移动家宽) - jack
+  server: zfd-hkv2.kunlun01dns.com
+  port: 16115
+  udp: true
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
+- name: 🇹🇷 土耳其 (Turkey) 09 (移动家宽) - jack
+  server: me17.msjia8844.site
+  port: 7443
+  udp: true
+  type: hysteria2
+  password: M8LP9DztTr3znqCkmf-r08CQLBLLFK1r
+  sni: me17.msjia8844.site
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: u3Soh9_Ui0UmcuY6vk0ug8Lq
+- name: 🇹🇼 中国台湾 (Taiwan) 10 (家宽) - jack
   server: 684616s4.df6h451rh.xin
   port: 443
   udp: true
@@ -33,7 +112,26 @@ proxies:
   password: ec74bb6a86c2
   sni: px.ads.linkedin.com
   skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
+- name: 🇹🇷 土耳其 (Turkey) 11 (移动家宽) - jack
+  server: test.keoplentuio.xyz
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+- name: 🇹🇼 中国台湾 (Taiwan) 12 (家宽) - jack
+  server: tw3.dexlos.com
+  port: 8080
+  udp: true
+  type: tuic
+  uuid: 8A9905B7-801B-41AF-BFC9-2034212770F6
+  password: 8A9905B7-801B-41AF-BFC9-2034212770F6
+  sni: tw3.dexlos.com
+  skip-cert-verify: false
+  congestion-controller: bbr
+  udp-relay-mode: native
+  alpn:
+  - h3
+- name: 🇹🇼 中国台湾 (Taiwan) 13 (家宽) - jack
   server: er8u54dh.df6h451rh.xin
   port: 443
   udp: true
@@ -46,18 +144,36 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 (United States) 01 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
+  - 🇬🇧 英国 (United Kingdom) 01 (家宽) - jack
+  - 🇺🇸 美国 (United States) 02 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack
+  - 🇰🇷 韩国 (South Korea) 06 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack
+  - 🇭🇰 中国香港 (Hong Kong) 08 (移动家宽) - jack
+  - 🇹🇷 土耳其 (Turkey) 09 (移动家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 10 (家宽) - jack
+  - 🇹🇷 土耳其 (Turkey) 11 (移动家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 12 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 13 (家宽) - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 (United States) 01 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
+  - 🇬🇧 英国 (United Kingdom) 01 (家宽) - jack
+  - 🇺🇸 美国 (United States) 02 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack
+  - 🇰🇷 韩国 (South Korea) 06 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack
+  - 🇭🇰 中国香港 (Hong Kong) 08 (移动家宽) - jack
+  - 🇹🇷 土耳其 (Turkey) 09 (移动家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 10 (家宽) - jack
+  - 🇹🇷 土耳其 (Turkey) 11 (移动家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 12 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 13 (家宽) - jack
 rules:
 - MATCH,PROXIES

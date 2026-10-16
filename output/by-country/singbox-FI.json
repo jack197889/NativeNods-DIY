@@ -25,8 +25,16 @@
       }
     },
     {
-      "type": "vless",
+      "type": "vmess",
       "tag": "🇫🇮 芬兰 (Finland) 02 - jack",
+      "server": "fin-2.povrak.ir",
+      "server_port": 56268,
+      "uuid": "9a53a545-53e3-4fce-a0ba-5cfc3c4e5a74",
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 03 - jack",
       "server": "95.216.27.15",
       "server_port": 2053,
       "uuid": "1c81f6d3-5771-4c5d-9fdd-1655eff50634",
@@ -46,35 +54,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 03 - jack",
-      "server": "65.108.3.59",
-      "server_port": 443,
-      "uuid": "8df2e661-6f46-471b-9133-7fc13a0daa35",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "web.eitaa.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no",
-          "short_id": "90ec9bba2019"
-        }
-      }
-    },
-    {
-      "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 04 - jack",
-      "server": "edge10.cyrionflare.com",
-      "server_port": 2052,
-      "uuid": "1a8ecc41-6e62-431b-8eca-87c2fa4dc286"
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 05 - jack",
       "server": "109.172.54.135",
       "server_port": 8444,
       "uuid": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
@@ -97,6 +77,66 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 05 - jack",
+      "server": "65.108.3.59",
+      "server_port": 443,
+      "uuid": "8df2e661-6f46-471b-9133-7fc13a0daa35",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "web.eitaa.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no",
+          "short_id": "90ec9bba2019"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 06 - jack",
+      "server": "edge10.cyrionflare.com",
+      "server_port": 2052,
+      "uuid": "1a8ecc41-6e62-431b-8eca-87c2fa4dc286"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 07 - jack",
+      "server": "36a466g.fi1.h1clayd.click",
+      "server_port": 443,
+      "uuid": "9a0e84f8-4b58-477f-99da-5fac5a2e58e8",
+      "tls": {
+        "enabled": true,
+        "server_name": "36a466g.fi1.h1clayd.click",
+        "utls": {
+          "enabled": true,
+          "fingerprint": ""
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg",
+          "short_id": "b3c9d0c6bdd114a6"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "0adb9638509b"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇫🇮 芬兰 (Finland) 08 - jack",
+      "server": "b2a2.velqixa.ir",
+      "server_port": 39221,
+      "method": "chacha20-ietf-poly1305",
+      "password": "Pzlcb_PeV3uRgiC2NNoNKw"
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -105,7 +145,10 @@
         "🇫🇮 芬兰 (Finland) 02 - jack",
         "🇫🇮 芬兰 (Finland) 03 - jack",
         "🇫🇮 芬兰 (Finland) 04 - jack",
-        "🇫🇮 芬兰 (Finland) 05 - jack"
+        "🇫🇮 芬兰 (Finland) 05 - jack",
+        "🇫🇮 芬兰 (Finland) 06 - jack",
+        "🇫🇮 芬兰 (Finland) 07 - jack",
+        "🇫🇮 芬兰 (Finland) 08 - jack"
       ]
     },
     {
@@ -116,7 +159,10 @@
         "🇫🇮 芬兰 (Finland) 02 - jack",
         "🇫🇮 芬兰 (Finland) 03 - jack",
         "🇫🇮 芬兰 (Finland) 04 - jack",
-        "🇫🇮 芬兰 (Finland) 05 - jack"
+        "🇫🇮 芬兰 (Finland) 05 - jack",
+        "🇫🇮 芬兰 (Finland) 06 - jack",
+        "🇫🇮 芬兰 (Finland) 07 - jack",
+        "🇫🇮 芬兰 (Finland) 08 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
