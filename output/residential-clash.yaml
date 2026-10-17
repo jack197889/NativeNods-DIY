@@ -14,38 +14,20 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: a39ca173b57ac7021b08bf3e3de9f1f6
-- name: 🇺🇸 美国 (United States) 02 (家宽) - jack
-  server: ld.235231.xyz
-  port: 443
-  udp: true
-  type: vless
-  uuid: 65d3f9b3-d289-4a8e-9c87-90bba156de30
-  tls: true
-  servername: ld.235231.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇰🇷 韩国 (South Korea) 03 (家宽) - jack
+- name: 🇰🇷 韩国 (South Korea) 02 (家宽) - jack
   server: 218.237.185.234
   port: 4652
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: qwerREWQ@@
-- name: 🇰🇷 韩国 (South Korea) 04 (家宽) - jack
-  server: 183.109.131.75
-  port: 20086
+- name: 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack
+  server: test.keoplentuio.xyz
+  port: 2053
   udp: true
-  type: vmess
-  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack
+  type: vless
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
   server: 118.167.219.24
   port: 24215
   udp: true
@@ -56,25 +38,17 @@ proxies:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
   servername: addons.mozilla.org
   client-fingerprint: firefox
-- name: 🇭🇰 中国香港 (Hong Kong) 06 (家宽) - jack
-  server: t4.qifei.app
-  port: 443
+- name: 🇹🇷 土耳其 (Turkey) 05 (移动家宽) - jack
+  server: me17.msjia8844.site
+  port: 7443
   udp: true
-  type: vless
-  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
-  servername: s3.ap-east-1.amazonaws.com
-  client-fingerprint: random
-- name: 🇹🇷 土耳其 (Turkey) 07 (移动家宽) - jack
-  server: test.keoplentuio.xyz
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-- name: 🇹🇼 中国台湾 (Taiwan) 08 (家宽) - jack
+  type: hysteria2
+  password: M8LP9DztTr3znqCkmf-r08CQLBLLFK1r
+  sni: me17.msjia8844.site
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: u3Soh9_Ui0UmcuY6vk0ug8Lq
+- name: 🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack
   server: er8u54dh.df6h451rh.xin
   port: 443
   udp: true
@@ -82,31 +56,47 @@ proxies:
   password: ec74bb6a86c2
   sni: px.ads.linkedin.com
   skip-cert-verify: true
+- name: 🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack
+  server: 684616s4.df6h451rh.xin
+  port: 443
+  udp: true
+  type: anytls
+  password: ec74bb6a86c2
+  sni: px.ads.linkedin.com
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 08 (家宽) - jack
+  server: 56481.df6h451rh.xin
+  port: 443
+  udp: true
+  type: anytls
+  password: 0324fbc29561
+  sni: images.ctfassets.net
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇺🇸 美国 (United States) 01 (家宽) - jack
-  - 🇺🇸 美国 (United States) 02 (家宽) - jack
-  - 🇰🇷 韩国 (South Korea) 03 (家宽) - jack
-  - 🇰🇷 韩国 (South Korea) 04 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack
-  - 🇭🇰 中国香港 (Hong Kong) 06 (家宽) - jack
-  - 🇹🇷 土耳其 (Turkey) 07 (移动家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 08 (家宽) - jack
+  - 🇰🇷 韩国 (South Korea) 02 (家宽) - jack
+  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
+  - 🇹🇷 土耳其 (Turkey) 05 (移动家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack
+  - 🇭🇰 中国香港 (Hong Kong) 08 (家宽) - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇺🇸 美国 (United States) 01 (家宽) - jack
-  - 🇺🇸 美国 (United States) 02 (家宽) - jack
-  - 🇰🇷 韩国 (South Korea) 03 (家宽) - jack
-  - 🇰🇷 韩国 (South Korea) 04 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack
-  - 🇭🇰 中国香港 (Hong Kong) 06 (家宽) - jack
-  - 🇹🇷 土耳其 (Turkey) 07 (移动家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 08 (家宽) - jack
+  - 🇰🇷 韩国 (South Korea) 02 (家宽) - jack
+  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack
+  - 🇹🇷 土耳其 (Turkey) 05 (移动家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 06 (家宽) - jack
+  - 🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack
+  - 🇭🇰 中国香港 (Hong Kong) 08 (家宽) - jack
 rules:
 - MATCH,PROXIES

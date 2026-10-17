@@ -5,26 +5,22 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01 - jack
-  server: 185.174.137.172
-  port: 8446
+  server: 5.188.181.201
+  port: 9019
   udp: true
-  type: hysteria2
-  password: e9dc02d400b67c727aca1620
-  sni: 185.174.137.172
-  skip-cert-verify: true
+  type: ss
+  cipher: aes-256-cfb
+  password: GA9KzeEgvfxNrgmM
 - name: 🇪🇸 西班牙 (Spain) 02 - jack
-  server: 46.28.71.247
+  server: 18.100.47.39
   port: 443
   udp: true
   type: vless
-  uuid: 12c53e32-e589-47d6-b857-e4132294f767
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE
-    short-id: 0dfc23fe80778c00
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
+  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
+  network: h2
+  h2-opts:
+    host: []
+    path: /
 - name: 🇪🇸 西班牙 (Spain) 03 - jack
   server: 212.227.235.66
   port: 2053
@@ -38,6 +34,19 @@ proxies:
   servername: www.apple.com
   client-fingerprint: firefox
 - name: 🇪🇸 西班牙 (Spain) 04 - jack
+  server: 46.28.71.247
+  port: 443
+  udp: true
+  type: vless
+  uuid: 12c53e32-e589-47d6-b857-e4132294f767
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE
+    short-id: 0dfc23fe80778c00
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇪🇸 西班牙 (Spain) 05 - jack
   server: 193.238.154.78
   port: 443
   udp: true
@@ -50,7 +59,7 @@ proxies:
     short-id: e93d46ee3735069e
   servername: gateway.icloud.com
   client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 05 - jack
+- name: 🇪🇸 西班牙 (Spain) 06 - jack
   server: 83.147.18.3
   port: 443
   udp: true
@@ -73,6 +82,7 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 03 - jack
   - 🇪🇸 西班牙 (Spain) 04 - jack
   - 🇪🇸 西班牙 (Spain) 05 - jack
+  - 🇪🇸 西班牙 (Spain) 06 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -83,5 +93,6 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 03 - jack
   - 🇪🇸 西班牙 (Spain) 04 - jack
   - 🇪🇸 西班牙 (Spain) 05 - jack
+  - 🇪🇸 西班牙 (Spain) 06 - jack
 rules:
 - MATCH,PROXIES

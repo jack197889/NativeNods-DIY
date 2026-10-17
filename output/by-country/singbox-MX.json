@@ -5,25 +5,25 @@
   "outbounds": [
     {
       "type": "shadowsocks",
-      "tag": "🇪🇬 埃及 (Egypt) 01 - jack",
-      "server": "38.54.59.102",
-      "server_port": 443,
+      "tag": "🇲🇽 墨西哥 (Mexico) 01 - jack",
+      "server": "64.177.90.30",
+      "server_port": 8388,
       "method": "aes-256-gcm",
-      "password": "pKEW8JPByTVTLtM"
+      "password": "BWyPPTusFKhGgzKh"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇬 埃及 (Egypt) 01 - jack"
+        "🇲🇽 墨西哥 (Mexico) 01 - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇬 埃及 (Egypt) 01 - jack"
+        "🇲🇽 墨西哥 (Mexico) 01 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

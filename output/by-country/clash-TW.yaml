@@ -5,14 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 - jack
-  server: 103.115.109.49
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https
-  skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 02 - jack
   server: 165.154.195.38
   port: 35034
   udp: true
@@ -20,13 +12,21 @@ proxies:
   uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
   alterId: 0
   cipher: auto
-- name: 🇹🇼 中国台湾 (Taiwan) 03 - jack
+- name: 🇹🇼 中国台湾 (Taiwan) 02 - jack
   server: 160.187.100.109
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   sni: 160.187.100.109
+  skip-cert-verify: true
+- name: 🇹🇼 中国台湾 (Taiwan) 03 - jack
+  server: 103.115.109.49
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https://t.me/oneclickvpnkeys
   skip-cert-verify: true
 - name: 🇹🇼 中国台湾 (Taiwan) 04 - jack
   server: 60.248.219.78

@@ -4,22 +4,18 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "trojan",
       "tag": "🇲🇾 马来西亚 (Malaysia) 01 - jack",
-      "server": "104.21.23.80",
+      "server": "47.250.84.25",
       "server_port": 443,
-      "uuid": "f5f0babe-aea2-4f07-a1fc-3c9820253f49",
-      "security": "auto",
+      "password": "5931134d1cde66bf83a54acdfebe7ab2",
       "tls": {
         "enabled": true,
-        "server_name": "my.lovehk.xyz",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/KualaLumpur1",
-        "headers": {
-          "Host": "my.lovehk.xyz"
+        "server_name": "47.250.84.25",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     },

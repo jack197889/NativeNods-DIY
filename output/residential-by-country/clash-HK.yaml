@@ -5,17 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - jack
-  server: t4.qifei.app
+  server: 56481.df6h451rh.xin
   port: 443
   udp: true
-  type: vless
-  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
-  servername: s3.ap-east-1.amazonaws.com
-  client-fingerprint: random
+  type: anytls
+  password: 0324fbc29561
+  sni: images.ctfassets.net
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select

@@ -5,35 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇭 瑞士 (Switzerland) 01 - jack
-  server: 129.153.71.28
-  port: 28863
+  server: 208.69.78.217
+  port: 21158
   udp: true
-  type: vless
-  uuid: d3d09526-18f4-45db-ae99-89407c29c94a
-  tls: true
-  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+  type: hysteria2
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
 - name: 🇨🇭 瑞士 (Switzerland) 02 - jack
-  server: 86.106.84.194
-  port: 13261
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: 2bf536a4bd6008511734a505d248de2c
-- name: 🇨🇭 瑞士 (Switzerland) 03 - jack
-  server: 132.243.175.144
-  port: 8388
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
-- name: 🇨🇭 瑞士 (Switzerland) 04 - jack
   server: 152.67.75.161
   port: 443
   udp: true
@@ -43,60 +24,7 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: c13f29db6a638ad2b211b9ce2669ef27
-- name: 🇨🇭 瑞士 (Switzerland) 05 - jack
-  server: 208.69.78.217
-  port: 33117
-  udp: true
-  type: hysteria2
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  sni: vpn.local
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-- name: 🇨🇭 瑞士 (Switzerland) 06 - jack
-  server: 208.69.78.217
-  port: 33130
-  udp: true
-  type: hysteria2
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  sni: vpn.local
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-- name: 🇨🇭 瑞士 (Switzerland) 07 - jack
-  server: 208.69.78.217
-  port: 21090
-  udp: true
-  type: hysteria2
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  sni: vpn.local
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-- name: 🇨🇭 瑞士 (Switzerland) 08 - jack
-  server: 138.124.9.0
-  port: 443
-  udp: true
-  type: vless
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: EqN5QtvWGccdkmL5ZNVDBRxRhWgr6g_vr3ABT8Q2dW4
-    short-id: ff0ddf949624ef2a
-  servername: freefl.aiage.work
-  client-fingerprint: chrome
-- name: 🇨🇭 瑞士 (Switzerland) 09 - jack
-  server: 208.69.78.217
-  port: 21021
-  udp: true
-  type: hysteria2
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  sni: vpn.local
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-- name: 🇨🇭 瑞士 (Switzerland) 10 - jack
+- name: 🇨🇭 瑞士 (Switzerland) 03 - jack
   server: 138.124.63.224
   port: 8444
   udp: true
@@ -111,22 +39,33 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
-- name: 🇨🇭 瑞士 (Switzerland) 11 - jack
-  server: 54.178.110.17
-  port: 4443
+- name: 🇨🇭 瑞士 (Switzerland) 04 - jack
+  server: 140.238.213.114
+  port: 50160
   udp: true
-  type: vless
-  uuid: d5fbd83b-7346-4ad9-94c0-76293724824d
-  tls: true
-  servername: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
+  type: hysteria2
+  password: 84a506ca5aca505696a454d828420b3f
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 🇨🇭 瑞士 (Switzerland) 05 - jack
+  server: 104.165.205.42
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: 990c8eb6-4c4e-4277-8602-79af8402cdd0
+  sni: speedtestmark.com
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
-- name: 🇨🇭 瑞士 (Switzerland) 12 - jack
+- name: 🇨🇭 瑞士 (Switzerland) 06 - jack
+  server: 208.69.78.217
+  port: 21067
+  udp: true
+  type: hysteria2
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+- name: 🇨🇭 瑞士 (Switzerland) 07 - jack
   server: 45.90.59.15
   port: 443
   udp: true
@@ -139,9 +78,9 @@ proxies:
     short-id: 19253fae84102271
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🇨🇭 瑞士 (Switzerland) 13 - jack
+- name: 🇨🇭 瑞士 (Switzerland) 08 - jack
   server: 208.69.78.217
-  port: 33133
+  port: 21047
   udp: true
   type: hysteria2
   password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
@@ -149,30 +88,17 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
-- name: 🇨🇭 瑞士 (Switzerland) 14 - jack
-  server: 116.204.164.5
-  port: 7443
-  udp: true
-  type: vless
-  uuid: 0f2765c2-1845-4545-987e-337c7cfb4e52
-  tls: true
-  servername: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
-- name: 🇨🇭 瑞士 (Switzerland) 15 - jack
-  server: 140.238.213.114
-  port: 50160
+- name: 🇨🇭 瑞士 (Switzerland) 09 - jack
+  server: 208.69.78.217
+  port: 21154
   udp: true
   type: hysteria2
-  password: 84a506ca5aca505696a454d828420b3f
-  sni: 140.238.213.114
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
   skip-cert-verify: true
-- name: 🇨🇭 瑞士 (Switzerland) 16 - jack
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+- name: 🇨🇭 瑞士 (Switzerland) 10 - jack
   server: 208.69.78.217
   port: 21147
   udp: true
@@ -182,9 +108,9 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
-- name: 🇨🇭 瑞士 (Switzerland) 17 - jack
+- name: 🇨🇭 瑞士 (Switzerland) 11 - jack
   server: 208.69.78.217
-  port: 33042
+  port: 21046
   udp: true
   type: hysteria2
   password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
@@ -192,9 +118,9 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
-- name: 🇨🇭 瑞士 (Switzerland) 18 - jack
+- name: 🇨🇭 瑞士 (Switzerland) 12 - jack
   server: 208.69.78.217
-  port: 33171
+  port: 33117
   udp: true
   type: hysteria2
   password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
@@ -202,7 +128,7 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
-- name: 🇨🇭 瑞士 (Switzerland) 19 - jack
+- name: 🇨🇭 瑞士 (Switzerland) 13 - jack
   server: 208.69.78.217
   port: 33187
   udp: true
@@ -212,21 +138,9 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
-- name: 🇨🇭 瑞士 (Switzerland) 20 - jack
+- name: 🇨🇭 瑞士 (Switzerland) 14 - jack
   server: 208.69.78.217
-  port: 2053
-  udp: true
-  type: vless
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  tls: true
-  reality-opts:
-    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
-    short-id: ad86e2d52ff40ebd
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🇨🇭 瑞士 (Switzerland) 21 - jack
-  server: 208.69.78.217
-  port: 21161
+  port: 33044
   udp: true
   type: hysteria2
   password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
@@ -234,7 +148,7 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
-- name: 🇨🇭 瑞士 (Switzerland) 22 - jack
+- name: 🇨🇭 瑞士 (Switzerland) 15 - jack
   server: 208.69.78.217
   port: 33174
   udp: true
@@ -244,9 +158,9 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
-- name: 🇨🇭 瑞士 (Switzerland) 23 - jack
+- name: 🇨🇭 瑞士 (Switzerland) 16 - jack
   server: 208.69.78.217
-  port: 33013
+  port: 21016
   udp: true
   type: hysteria2
   password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
@@ -254,22 +168,7 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
-- name: 🇨🇭 瑞士 (Switzerland) 25 - jack
-  server: 109.120.155.155
-  port: 444
-  udp: true
-  type: vless
-  uuid: 99ab6748-3d57-4562-9451-843c15960b9b
-  tls: true
-  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
-- name: 🇨🇭 瑞士 (Switzerland) 26 - jack
+- name: 🇨🇭 瑞士 (Switzerland) 17 - jack
   server: 208.69.78.217
   port: 21054
   udp: true
@@ -279,9 +178,9 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
-- name: 🇨🇭 瑞士 (Switzerland) 27 - jack
+- name: 🇨🇭 瑞士 (Switzerland) 18 - jack
   server: 208.69.78.217
-  port: 21084
+  port: 33152
   udp: true
   type: hysteria2
   password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
@@ -289,9 +188,89 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
-- name: 🇨🇭 瑞士 (Switzerland) 28 - jack
+- name: 🇨🇭 瑞士 (Switzerland) 19 - jack
   server: 208.69.78.217
-  port: 21047
+  port: 21021
+  udp: true
+  type: hysteria2
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+- name: 🇨🇭 瑞士 (Switzerland) 20 - jack
+  server: 208.69.78.217
+  port: 33171
+  udp: true
+  type: hysteria2
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+- name: 🇨🇭 瑞士 (Switzerland) 21 - jack
+  server: 208.69.78.217
+  port: 33013
+  udp: true
+  type: hysteria2
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+- name: 🇨🇭 瑞士 (Switzerland) 22 - jack
+  server: 208.69.78.217
+  port: 21113
+  udp: true
+  type: hysteria2
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+- name: 🇨🇭 瑞士 (Switzerland) 23 - jack
+  server: 208.69.78.217
+  port: 33042
+  udp: true
+  type: hysteria2
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+- name: 🇨🇭 瑞士 (Switzerland) 24 - jack
+  server: 208.69.78.217
+  port: 21080
+  udp: true
+  type: hysteria2
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+- name: 🇨🇭 瑞士 (Switzerland) 25 - jack
+  server: 208.69.78.217
+  port: 33130
+  udp: true
+  type: hysteria2
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+- name: 🇨🇭 瑞士 (Switzerland) 26 - jack
+  server: 208.69.78.217
+  port: 33133
+  udp: true
+  type: hysteria2
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+- name: 🇨🇭 瑞士 (Switzerland) 27 - jack
+  server: 208.69.78.217
+  port: 33092
   udp: true
   type: hysteria2
   password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
@@ -311,7 +290,7 @@ proxies:
   obfs-password: mbQXP2ASuHbF6ZPq
 - name: 🇨🇭 瑞士 (Switzerland) 30 - jack
   server: 208.69.78.217
-  port: 8444
+  port: 33195
   udp: true
   type: hysteria2
   password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
@@ -321,7 +300,7 @@ proxies:
   obfs-password: mbQXP2ASuHbF6ZPq
 - name: 🇨🇭 瑞士 (Switzerland) 31 - jack
   server: 208.69.78.217
-  port: 21080
+  port: 33025
   udp: true
   type: hysteria2
   password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
@@ -331,7 +310,7 @@ proxies:
   obfs-password: mbQXP2ASuHbF6ZPq
 - name: 🇨🇭 瑞士 (Switzerland) 32 - jack
   server: 208.69.78.217
-  port: 33092
+  port: 33141
   udp: true
   type: hysteria2
   password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
@@ -341,7 +320,17 @@ proxies:
   obfs-password: mbQXP2ASuHbF6ZPq
 - name: 🇨🇭 瑞士 (Switzerland) 33 - jack
   server: 208.69.78.217
-  port: 21067
+  port: 8444
+  udp: true
+  type: hysteria2
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+- name: 🇨🇭 瑞士 (Switzerland) 34 - jack
+  server: 208.69.78.217
+  port: 21084
   udp: true
   type: hysteria2
   password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
@@ -377,15 +366,16 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 21 - jack
   - 🇨🇭 瑞士 (Switzerland) 22 - jack
   - 🇨🇭 瑞士 (Switzerland) 23 - jack
+  - 🇨🇭 瑞士 (Switzerland) 24 - jack
   - 🇨🇭 瑞士 (Switzerland) 25 - jack
   - 🇨🇭 瑞士 (Switzerland) 26 - jack
   - 🇨🇭 瑞士 (Switzerland) 27 - jack
-  - 🇨🇭 瑞士 (Switzerland) 28 - jack
   - 🇨🇭 瑞士 (Switzerland) 29 - jack
   - 🇨🇭 瑞士 (Switzerland) 30 - jack
   - 🇨🇭 瑞士 (Switzerland) 31 - jack
   - 🇨🇭 瑞士 (Switzerland) 32 - jack
   - 🇨🇭 瑞士 (Switzerland) 33 - jack
+  - 🇨🇭 瑞士 (Switzerland) 34 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -414,14 +404,15 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 21 - jack
   - 🇨🇭 瑞士 (Switzerland) 22 - jack
   - 🇨🇭 瑞士 (Switzerland) 23 - jack
+  - 🇨🇭 瑞士 (Switzerland) 24 - jack
   - 🇨🇭 瑞士 (Switzerland) 25 - jack
   - 🇨🇭 瑞士 (Switzerland) 26 - jack
   - 🇨🇭 瑞士 (Switzerland) 27 - jack
-  - 🇨🇭 瑞士 (Switzerland) 28 - jack
   - 🇨🇭 瑞士 (Switzerland) 29 - jack
   - 🇨🇭 瑞士 (Switzerland) 30 - jack
   - 🇨🇭 瑞士 (Switzerland) 31 - jack
   - 🇨🇭 瑞士 (Switzerland) 32 - jack
   - 🇨🇭 瑞士 (Switzerland) 33 - jack
+  - 🇨🇭 瑞士 (Switzerland) 34 - jack
 rules:
 - MATCH,PROXIES

@@ -4,24 +4,29 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇱🇻 拉脱维亚 (Latvia) 01 - jack",
-      "server": "185.135.86.175",
-      "server_port": 9034,
-      "method": "aes-256-cfb",
-      "password": "Yg4MbdXFQ9HFFVY6"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 02 - jack",
-      "server": "185.135.86.175",
-      "server_port": 9007,
-      "method": "aes-256-cfb",
-      "password": "kSPmvwdFzGMMW5pY"
+      "server": "138.124.180.137",
+      "server_port": 443,
+      "uuid": "5234b2b7-5e07-422c-8159-d62a676c00c6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c",
+          "short_id": "33acba1b"
+        }
+      }
     },
     {
       "type": "vless",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 03 - jack",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 02 - jack",
       "server": "185.220.223.24",
       "server_port": 443,
       "uuid": "6338c01a-310e-42c3-bf4f-2a20e161054b",
@@ -31,7 +36,7 @@
         "server_name": "lv.aiage.work",
         "utls": {
           "enabled": true,
-          "fingerprint": ""
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -42,24 +47,53 @@
     },
     {
       "type": "shadowsocks",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 03 - jack",
+      "server": "185.135.86.175",
+      "server_port": 9086,
+      "method": "aes-256-cfb",
+      "password": "37Z4TFCYhfxcpc9Q"
+    },
+    {
+      "type": "shadowsocks",
       "tag": "🇱🇻 拉脱维亚 (Latvia) 04 - jack",
       "server": "185.135.86.175",
-      "server_port": 9068,
+      "server_port": 9036,
       "method": "aes-256-cfb",
-      "password": "mwgRg9hRq3b4Qnwb"
+      "password": "hbtvgUz5uNYyB3Rf"
     },
     {
       "type": "shadowsocks",
       "tag": "🇱🇻 拉脱维亚 (Latvia) 05 - jack",
       "server": "185.135.86.175",
-      "server_port": 9033,
+      "server_port": 9082,
       "method": "aes-256-cfb",
-      "password": "UTJA57ypk2XKQpnm"
+      "password": "45xgMgm386pjWjTx"
     },
     {
       "type": "vless",
       "tag": "🇱🇻 拉脱维亚 (Latvia) 06 - jack",
-      "server": "185.220.223.25",
+      "server": "195.123.208.32",
+      "server_port": 443,
+      "uuid": "1ebcb694-875c-4be7-b6a2-d53c8208991b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "gateway.icloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "ICrsmE5hqN7IsDIyHPG2WkDUUFK_VEj9yobLv8zuDwk",
+          "short_id": "757b9e1ef18e60f0"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 07 - jack",
+      "server": "lv.aiage.work",
       "server_port": 443,
       "uuid": "6338c01a-310e-42c3-bf4f-2a20e161054b",
       "flow": "xtls-rprx-vision",
@@ -78,43 +112,6 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 07 - jack",
-      "server": "185.135.86.175",
-      "server_port": 9094,
-      "method": "aes-256-cfb",
-      "password": "rpgbNnU9rDDU4aWZ"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 08 - jack",
-      "server": "185.135.86.175",
-      "server_port": 9086,
-      "method": "aes-256-cfb",
-      "password": "37Z4TFCYhfxcpc9Q"
-    },
-    {
-      "type": "vless",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 09 - jack",
-      "server": "138.124.180.137",
-      "server_port": 443,
-      "uuid": "5234b2b7-5e07-422c-8159-d62a676c00c6",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c",
-          "short_id": "33acba1b"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -125,9 +122,7 @@
         "🇱🇻 拉脱维亚 (Latvia) 04 - jack",
         "🇱🇻 拉脱维亚 (Latvia) 05 - jack",
         "🇱🇻 拉脱维亚 (Latvia) 06 - jack",
-        "🇱🇻 拉脱维亚 (Latvia) 07 - jack",
-        "🇱🇻 拉脱维亚 (Latvia) 08 - jack",
-        "🇱🇻 拉脱维亚 (Latvia) 09 - jack"
+        "🇱🇻 拉脱维亚 (Latvia) 07 - jack"
       ]
     },
     {
@@ -140,9 +135,7 @@
         "🇱🇻 拉脱维亚 (Latvia) 04 - jack",
         "🇱🇻 拉脱维亚 (Latvia) 05 - jack",
         "🇱🇻 拉脱维亚 (Latvia) 06 - jack",
-        "🇱🇻 拉脱维亚 (Latvia) 07 - jack",
-        "🇱🇻 拉脱维亚 (Latvia) 08 - jack",
-        "🇱🇻 拉脱维亚 (Latvia) 09 - jack"
+        "🇱🇻 拉脱维亚 (Latvia) 07 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

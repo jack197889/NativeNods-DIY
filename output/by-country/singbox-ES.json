@@ -4,36 +4,21 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "shadowsocks",
       "tag": "🇪🇸 西班牙 (Spain) 01 - jack",
-      "server": "185.174.137.172",
-      "server_port": 8446,
-      "password": "e9dc02d400b67c727aca1620",
-      "tls": {
-        "enabled": true,
-        "server_name": "185.174.137.172",
-        "insecure": true
-      }
+      "server": "5.188.181.201",
+      "server_port": 9019,
+      "method": "aes-256-cfb",
+      "password": "GA9KzeEgvfxNrgmM"
     },
     {
       "type": "vless",
       "tag": "🇪🇸 西班牙 (Spain) 02 - jack",
-      "server": "46.28.71.247",
+      "server": "18.100.47.39",
       "server_port": 443,
-      "uuid": "12c53e32-e589-47d6-b857-e4132294f767",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE",
-          "short_id": "0dfc23fe80778c00"
-        }
+      "uuid": "7060231d-b9ba-495f-a218-bf427940cf3e",
+      "transport": {
+        "type": "http"
       }
     },
     {
@@ -59,6 +44,27 @@
     {
       "type": "vless",
       "tag": "🇪🇸 西班牙 (Spain) 04 - jack",
+      "server": "46.28.71.247",
+      "server_port": 443,
+      "uuid": "12c53e32-e589-47d6-b857-e4132294f767",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE",
+          "short_id": "0dfc23fe80778c00"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇸 西班牙 (Spain) 05 - jack",
       "server": "193.238.154.78",
       "server_port": 443,
       "uuid": "897d47f8-4dd5-42a1-bcd0-bef19caff55a",
@@ -79,7 +85,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 05 - jack",
+      "tag": "🇪🇸 西班牙 (Spain) 06 - jack",
       "server": "83.147.18.3",
       "server_port": 443,
       "uuid": "9f61cdf4-810d-4052-bbc7-2da0c8e20104",
@@ -107,7 +113,8 @@
         "🇪🇸 西班牙 (Spain) 02 - jack",
         "🇪🇸 西班牙 (Spain) 03 - jack",
         "🇪🇸 西班牙 (Spain) 04 - jack",
-        "🇪🇸 西班牙 (Spain) 05 - jack"
+        "🇪🇸 西班牙 (Spain) 05 - jack",
+        "🇪🇸 西班牙 (Spain) 06 - jack"
       ]
     },
     {
@@ -118,7 +125,8 @@
         "🇪🇸 西班牙 (Spain) 02 - jack",
         "🇪🇸 西班牙 (Spain) 03 - jack",
         "🇪🇸 西班牙 (Spain) 04 - jack",
-        "🇪🇸 西班牙 (Spain) 05 - jack"
+        "🇪🇸 西班牙 (Spain) 05 - jack",
+        "🇪🇸 西班牙 (Spain) 06 - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
