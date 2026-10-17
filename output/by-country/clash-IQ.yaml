@@ -4,32 +4,32 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国 (United Kingdom) 01 (家宽) - jack
-  server: 162.159.153.4
-  port: 443
+- name: 🇮🇶 IQ 01 - jack
+  server: 172.67.208.235
+  port: 2096
   udp: true
   type: vless
-  uuid: f2a73750-3087-48ff-a763-1348c15dce68
+  uuid: b9ede7a5-5b4b-4aee-ac37-2c307e587e47
   tls: true
-  servername: rayan-007.maxima.dpdns.org
+  servername: courses.mftplus.qzz.io
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
+    path: /eyJqdW5rIjoidVkzQm1ROUg4dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
     headers:
-      Host: rayan-007.maxima.dpdns.org
+      Host: courses.mftplus.qzz.io
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇬🇧 英国 (United Kingdom) 01 (家宽) - jack
+  - 🇮🇶 IQ 01 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧 英国 (United Kingdom) 01 (家宽) - jack
+  - 🇮🇶 IQ 01 - jack
 rules:
 - MATCH,PROXIES

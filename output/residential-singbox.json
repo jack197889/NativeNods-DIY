@@ -4,30 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 01 (家宽) - jack",
-      "server": "162.159.153.4",
-      "server_port": 443,
-      "uuid": "f2a73750-3087-48ff-a763-1348c15dce68",
-      "tls": {
-        "enabled": true,
-        "server_name": "rayan-007.maxima.dpdns.org",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rayan-007.maxima.dpdns.org"
-        }
-      }
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 02 (家宽) - jack",
+      "tag": "🇺🇸 美国 (United States) 01 (家宽) - jack",
       "server": "155.117.19.17",
       "server_port": 443,
       "password": "5fa748137b6d822308eea4611f474ad5",
@@ -42,71 +20,49 @@
       }
     },
     {
-      "type": "tuic",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
-      "server": "tw8.dexlos.com",
-      "server_port": 8080,
-      "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
-      "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
-      "congestion_control": "bbr",
-      "udp_relay_mode": "native",
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 02 (家宽) - jack",
+      "server": "ld.235231.xyz",
+      "server_port": 443,
+      "uuid": "65d3f9b3-d289-4a8e-9c87-90bba156de30",
       "tls": {
         "enabled": true,
-        "server_name": "tw8.dexlos.com",
+        "server_name": "ld.235231.xyz",
         "insecure": false,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "tuic",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
-      "server": "tw5.dexlos.com",
-      "server_port": 8080,
-      "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
-      "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
-      "congestion_control": "bbr",
-      "udp_relay_mode": "native",
-      "tls": {
-        "enabled": true,
-        "server_name": "tw5.dexlos.com",
-        "insecure": false,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "tuic",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
-      "server": "tw4.dexlos.com",
-      "server_port": 8080,
-      "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
-      "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
-      "congestion_control": "bbr",
-      "udp_relay_mode": "native",
-      "tls": {
-        "enabled": true,
-        "server_name": "tw4.dexlos.com",
-        "insecure": false,
-        "alpn": [
-          "h3"
-        ]
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
       }
     },
     {
       "type": "shadowsocks",
-      "tag": "🇰🇷 韩国 (South Korea) 06 (家宽) - jack",
+      "tag": "🇰🇷 韩国 (South Korea) 03 (家宽) - jack",
       "server": "218.237.185.234",
       "server_port": 4652,
       "method": "aes-256-cfb",
       "password": "qwerREWQ@@"
     },
     {
+      "type": "vmess",
+      "tag": "🇰🇷 韩国 (South Korea) 04 (家宽) - jack",
+      "server": "183.109.131.75",
+      "server_port": 20086,
+      "uuid": "b26c4803-0bca-467c-a245-c9a80bdd72ec",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
       "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack",
-      "server": "hinet1.2yly.com",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
+      "server": "118.167.219.24",
       "server_port": 24215,
       "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
       "tls": {
@@ -114,7 +70,7 @@
         "server_name": "addons.mozilla.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -124,69 +80,36 @@
       }
     },
     {
-      "type": "vmess",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 08 (移动家宽) - jack",
-      "server": "zfd-hkv2.kunlun01dns.com",
-      "server_port": 16115,
-      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
-      "security": "auto"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇹🇷 土耳其 (Turkey) 09 (移动家宽) - jack",
-      "server": "me17.msjia8844.site",
-      "server_port": 7443,
-      "password": "M8LP9DztTr3znqCkmf-r08CQLBLLFK1r",
-      "tls": {
-        "enabled": true,
-        "server_name": "me17.msjia8844.site",
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "u3Soh9_Ui0UmcuY6vk0ug8Lq"
-      }
-    },
-    {
-      "type": "anytls",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 10 (家宽) - jack",
-      "server": "684616s4.df6h451rh.xin",
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 06 (家宽) - jack",
+      "server": "t4.qifei.app",
       "server_port": 443,
-      "password": "ec74bb6a86c2",
+      "uuid": "b98d4c6e-6770-4a31-8256-a4750cdea0e7",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "px.ads.linkedin.com",
-        "insecure": true
+        "server_name": "s3.ap-east-1.amazonaws.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo",
+          "short_id": ""
+        }
       }
     },
     {
       "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 11 (移动家宽) - jack",
+      "tag": "🇹🇷 土耳其 (Turkey) 07 (移动家宽) - jack",
       "server": "test.keoplentuio.xyz",
       "server_port": 2053,
       "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
     },
     {
-      "type": "tuic",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 12 (家宽) - jack",
-      "server": "tw3.dexlos.com",
-      "server_port": 8080,
-      "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
-      "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
-      "congestion_control": "bbr",
-      "udp_relay_mode": "native",
-      "tls": {
-        "enabled": true,
-        "server_name": "tw3.dexlos.com",
-        "insecure": false,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
       "type": "anytls",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 13 (家宽) - jack",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 08 (家宽) - jack",
       "server": "er8u54dh.df6h451rh.xin",
       "server_port": 443,
       "password": "ec74bb6a86c2",
@@ -204,38 +127,28 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 英国 (United Kingdom) 01 (家宽) - jack",
+        "🇺🇸 美国 (United States) 01 (家宽) - jack",
         "🇺🇸 美国 (United States) 02 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
+        "🇰🇷 韩国 (South Korea) 03 (家宽) - jack",
+        "🇰🇷 韩国 (South Korea) 04 (家宽) - jack",
         "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
-        "🇰🇷 韩国 (South Korea) 06 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 08 (移动家宽) - jack",
-        "🇹🇷 土耳其 (Turkey) 09 (移动家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 10 (家宽) - jack",
-        "🇹🇷 土耳其 (Turkey) 11 (移动家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 12 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 13 (家宽) - jack"
+        "🇭🇰 中国香港 (Hong Kong) 06 (家宽) - jack",
+        "🇹🇷 土耳其 (Turkey) 07 (移动家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 08 (家宽) - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 英国 (United Kingdom) 01 (家宽) - jack",
+        "🇺🇸 美国 (United States) 01 (家宽) - jack",
         "🇺🇸 美国 (United States) 02 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - jack",
+        "🇰🇷 韩国 (South Korea) 03 (家宽) - jack",
+        "🇰🇷 韩国 (South Korea) 04 (家宽) - jack",
         "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - jack",
-        "🇰🇷 韩国 (South Korea) 06 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - jack",
-        "🇭🇰 中国香港 (Hong Kong) 08 (移动家宽) - jack",
-        "🇹🇷 土耳其 (Turkey) 09 (移动家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 10 (家宽) - jack",
-        "🇹🇷 土耳其 (Turkey) 11 (移动家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 12 (家宽) - jack",
-        "🇹🇼 中国台湾 (Taiwan) 13 (家宽) - jack"
+        "🇭🇰 中国香港 (Hong Kong) 06 (家宽) - jack",
+        "🇹🇷 土耳其 (Turkey) 07 (移动家宽) - jack",
+        "🇹🇼 中国台湾 (Taiwan) 08 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

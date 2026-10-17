@@ -20,18 +20,40 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 02 (家宽) - jack",
+      "server": "ld.235231.xyz",
+      "server_port": 443,
+      "uuid": "65d3f9b3-d289-4a8e-9c87-90bba156de30",
+      "tls": {
+        "enabled": true,
+        "server_name": "ld.235231.xyz",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 美国 (United States) 01 (家宽) - jack"
+        "🇺🇸 美国 (United States) 01 (家宽) - jack",
+        "🇺🇸 美国 (United States) 02 (家宽) - jack"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 美国 (United States) 01 (家宽) - jack"
+        "🇺🇸 美国 (United States) 01 (家宽) - jack",
+        "🇺🇸 美国 (United States) 02 (家宽) - jack"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

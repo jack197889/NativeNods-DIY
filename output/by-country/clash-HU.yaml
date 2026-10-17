@@ -5,6 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇺 匈牙利 (Hungary) 01 - jack
+  server: 85.155.242.39
+  port: 443
+  udp: true
+  type: vless
+  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: mPzNFHO4pZMzFviRkIhRd7xDUz4dMHyI-flZLOrgDVg
+    short-id: f8379ce795f2e5ed
+  servername: hu1.aiage.work
+  client-fingerprint: firefox
+- name: 🇭🇺 匈牙利 (Hungary) 02 - jack
   server: 85.155.242.37
   port: 443
   udp: true
@@ -17,19 +30,6 @@ proxies:
     short-id: f8379ce795f2e5ed
   servername: hu1.aiage.work
   client-fingerprint: chrome
-- name: 🇭🇺 匈牙利 (Hungary) 02 - jack
-  server: hu1.aiage.work
-  port: 443
-  udp: true
-  type: vless
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: mPzNFHO4pZMzFviRkIhRd7xDUz4dMHyI-flZLOrgDVg
-    short-id: f8379ce795f2e5ed
-  servername: hu1.aiage.work
-  client-fingerprint: firefox
 - name: 🇭🇺 匈牙利 (Hungary) 03 - jack
   server: 85.155.242.38
   port: 443
@@ -43,6 +43,19 @@ proxies:
     short-id: f8379ce795f2e5ed
   servername: hu1.aiage.work
   client-fingerprint: chrome
+- name: 🇭🇺 匈牙利 (Hungary) 04 - jack
+  server: 79.139.59.46
+  port: 443
+  udp: true
+  type: vless
+  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: mPzNFHO4pZMzFviRkIhRd7xDUz4dMHyI-flZLOrgDVg
+    short-id: f8379ce795f2e5ed
+  servername: hu1.aiage.work
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -51,6 +64,7 @@ proxy-groups:
   - 🇭🇺 匈牙利 (Hungary) 01 - jack
   - 🇭🇺 匈牙利 (Hungary) 02 - jack
   - 🇭🇺 匈牙利 (Hungary) 03 - jack
+  - 🇭🇺 匈牙利 (Hungary) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -59,5 +73,6 @@ proxy-groups:
   - 🇭🇺 匈牙利 (Hungary) 01 - jack
   - 🇭🇺 匈牙利 (Hungary) 02 - jack
   - 🇭🇺 匈牙利 (Hungary) 03 - jack
+  - 🇭🇺 匈牙利 (Hungary) 04 - jack
 rules:
 - MATCH,PROXIES
