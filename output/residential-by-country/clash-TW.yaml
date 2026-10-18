@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack
-  server: 118.167.219.24
+  server: hinet1.2yly.com
   port: 24215
   udp: true
   type: vless
@@ -14,17 +14,9 @@ proxies:
   reality-opts:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
   servername: addons.mozilla.org
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
   server: er8u54dh.df6h451rh.xin
-  port: 443
-  udp: true
-  type: anytls
-  password: ec74bb6a86c2
-  sni: px.ads.linkedin.com
-  skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
-  server: 684616s4.df6h451rh.xin
   port: 443
   udp: true
   type: anytls
@@ -38,7 +30,6 @@ proxy-groups:
   - AUTO
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -46,6 +37,5 @@ proxy-groups:
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - jack
   - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - jack
-  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - jack
 rules:
 - MATCH,PROXIES

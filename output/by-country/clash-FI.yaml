@@ -5,6 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - jack
+  server: 45.144.234.157
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.144.234.157
+- name: 🇫🇮 芬兰 (Finland) 02 - jack
   server: 95.216.27.15
   port: 2053
   udp: true
@@ -16,17 +27,6 @@ proxies:
     short-id: d368b94e275ab080
   servername: www.google.com
   client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 02 - jack
-  server: 45.144.234.157
-  port: 14430
-  udp: true
-  type: vless
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 45.144.234.157
 - name: 🇫🇮 芬兰 (Finland) 03 - jack
   server: 152.233.71.81
   port: 443
@@ -41,6 +41,18 @@ proxies:
   servername: brointelengence.com
   client-fingerprint: chrome
 - name: 🇫🇮 芬兰 (Finland) 04 - jack
+  server: 212.87.222.10
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 8afeb33c-b686-43e9-a629-0d98f991ec28
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: f25sygANXTpzdc9YPCwkggwSmm3piA3BluSeHdfG-hg
+  servername: www.nokia.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 05 - jack
   server: 31.77.199.147
   port: 4443
   udp: true
@@ -53,7 +65,7 @@ proxies:
     short-id: 7da2eae792187ab9
   servername: images.unsplash.com
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 05 - jack
+- name: 🇫🇮 芬兰 (Finland) 06 - jack
   server: mci.amir12.ir
   port: 2112
   udp: true
@@ -65,7 +77,21 @@ proxies:
     short-id: 125ba3
   servername: play.google.com
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 06 - jack
+- name: 🇫🇮 芬兰 (Finland) 07 - jack
+  server: 109.172.54.135
+  port: 8444
+  udp: true
+  type: vless
+  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
+  tls: true
+  reality-opts:
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+  servername: github.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: GunService
+- name: 🇫🇮 芬兰 (Finland) 08 - jack
   server: mci1.amir12.ir
   port: 1222
   udp: true
@@ -88,6 +114,8 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 04 - jack
   - 🇫🇮 芬兰 (Finland) 05 - jack
   - 🇫🇮 芬兰 (Finland) 06 - jack
+  - 🇫🇮 芬兰 (Finland) 07 - jack
+  - 🇫🇮 芬兰 (Finland) 08 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -99,5 +127,7 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 04 - jack
   - 🇫🇮 芬兰 (Finland) 05 - jack
   - 🇫🇮 芬兰 (Finland) 06 - jack
+  - 🇫🇮 芬兰 (Finland) 07 - jack
+  - 🇫🇮 芬兰 (Finland) 08 - jack
 rules:
 - MATCH,PROXIES

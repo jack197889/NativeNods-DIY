@@ -5,12 +5,22 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽) - jack
+  server: 206.1.100.148
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 53373a04-2dd2-472e-af5d-d55fbffa7dbd
+  tls: true
+  servername: game.jafarghasemivip.ir
+  skip-cert-verify: false
+  client-fingerprint: safari
+- name: 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack
   server: test.keoplentuio.xyz
   port: 2053
   udp: true
   type: vless
   uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-- name: 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack
+- name: 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack
   server: me17.msjia8844.site
   port: 7443
   udp: true
@@ -27,6 +37,7 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 (移动家宽) - jack
   - 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack
+  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -34,5 +45,6 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 (移动家宽) - jack
   - 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - jack
+  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - jack
 rules:
 - MATCH,PROXIES

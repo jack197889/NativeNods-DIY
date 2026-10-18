@@ -5,45 +5,23 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇪 爱尔兰 (Ireland) 01 - jack
-  server: 34.245.208.137
-  port: 443
+  server: 35.177.104.48
+  port: 22222
   udp: true
   type: vless
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  network: h2
-  h2-opts:
-    host: []
-    path: /
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
 - name: 🇮🇪 爱尔兰 (Ireland) 02 - jack
-  server: 18.171.245.198
-  port: 443
+  server: 13.135.17.74
+  port: 22222
   udp: true
   type: vless
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  network: h2
-  h2-opts:
-    host: []
-    path: /
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
 - name: 🇮🇪 爱尔兰 (Ireland) 03 - jack
-  server: 3.8.150.222
-  port: 443
+  server: 13.135.17.74
+  port: 22224
   udp: true
   type: vless
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  network: h2
-  h2-opts:
-    host: []
-    path: /
-- name: 🇮🇪 爱尔兰 (Ireland) 04 - jack
-  server: 34.253.212.171
-  port: 443
-  udp: true
-  type: vless
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  network: h2
-  h2-opts:
-    host: []
-    path: /
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
 proxy-groups:
 - name: PROXIES
   type: select
@@ -52,7 +30,6 @@ proxy-groups:
   - 🇮🇪 爱尔兰 (Ireland) 01 - jack
   - 🇮🇪 爱尔兰 (Ireland) 02 - jack
   - 🇮🇪 爱尔兰 (Ireland) 03 - jack
-  - 🇮🇪 爱尔兰 (Ireland) 04 - jack
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -61,6 +38,5 @@ proxy-groups:
   - 🇮🇪 爱尔兰 (Ireland) 01 - jack
   - 🇮🇪 爱尔兰 (Ireland) 02 - jack
   - 🇮🇪 爱尔兰 (Ireland) 03 - jack
-  - 🇮🇪 爱尔兰 (Ireland) 04 - jack
 rules:
 - MATCH,PROXIES
