@@ -4,39 +4,21 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇹 意大利 (Italy) 01 - jack
-  server: 185.164.175.81
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇮🇹 意大利 (Italy) 02 - jack
+- name: 🇮🇹 意大利 (Italy) 01 - xiaohe
   server: 57.131.48.45
   port: 8388
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: itzvpn@321
-- name: 🇮🇹 意大利 (Italy) 03 - jack
-  server: 204.216.216.23
-  port: 10086
+- name: 🇮🇹 意大利 (Italy) 02 - xiaohe
+  server: 185.164.175.81
+  port: 19999
   udp: true
-  type: vless
-  uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
-- name: 🇮🇹 意大利 (Italy) 04 - jack
-  server: 195.231.37.150
-  port: 443
-  udp: true
-  type: vless
-  uuid: 244d9eab-3311-40c7-b47f-4968dc3088a6
-  tls: true
-  reality-opts:
-    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
-    short-id: 868419504747f6de
-  servername: tcpit3.figurapn.ru
-  client-fingerprint: firefox
-- name: 🇮🇹 意大利 (Italy) 05 - jack
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇮🇹 意大利 (Italy) 03 - xiaohe
   server: 31.59.180.155
   port: 443
   udp: true
@@ -49,7 +31,7 @@ proxies:
     short-id: 5aab0b0401044801
   servername: italynew.nztvpn.com
   client-fingerprint: firefox
-- name: 🇮🇹 意大利 (Italy) 06 - jack
+- name: 🇮🇹 意大利 (Italy) 04 - xiaohe
   server: 57.131.38.163
   port: 2053
   udp: true
@@ -61,20 +43,7 @@ proxies:
     short-id: 5b8a942318178e7b
   servername: www.apple.com
   client-fingerprint: firefox
-- name: 🇮🇹 意大利 (Italy) 07 - jack
-  server: 82.118.16.189
-  port: 443
-  udp: true
-  type: vless
-  uuid: d5e5f5a1-0f23-4c49-af9f-4be445bf9d8e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SjGkzJQ9I6ZZjC3V73atcPMczhMm0oiTrB8mUQXz1HY
-    short-id: 37fbf155c7a9f3ff
-  servername: www.cloudflare.com
-  client-fingerprint: random
-- name: 🇮🇹 意大利 (Italy) 08 - jack
+- name: 🇮🇹 意大利 (Italy) 05 - xiaohe
   server: 82.118.16.187
   port: 443
   udp: true
@@ -87,90 +56,66 @@ proxies:
     short-id: cd6065902eea7a02
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇮🇹 意大利 (Italy) 09 - jack
-  server: 91.201.65.122
-  port: 9097
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: Sn5B7jTqr76aCJT8
-- name: 🇮🇹 意大利 (Italy) 10 - jack
-  server: 116.204.164.30
-  port: 7443
+- name: 🇮🇹 意大利 (Italy) 06 - xiaohe
+  server: 82.118.16.189
+  port: 443
   udp: true
   type: vless
-  uuid: 097e0483-50a9-4adf-8f62-031057710d11
-  tls: true
-  servername: o-85ley6knn8ut.6nvkygqh144t7xtdyvh0y3o4gzo3ujhnk8n.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: o-85ley6knn8ut.6nvkygqh144t7xtdyvh0y3o4gzo3ujhnk8n.workers.dev
-- name: 🇮🇹 意大利 (Italy) 11 - jack
-  server: 91.201.65.122
-  port: 9059
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 9XwYyZsK8SNzQDtY
-- name: 🇮🇹 意大利 (Italy) 12 - jack
-  server: 91.201.65.122
-  port: 9092
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: TyNkGmp9hs6eGpDK
-- name: 🇮🇹 意大利 (Italy) 13 - jack
-  server: 204.216.216.23
-  port: 1114
-  udp: true
-  type: vless
-  uuid: 6ba2eac6-0ec9-44ca-a42b-a8e23aafb530
+  uuid: d5e5f5a1-0f23-4c49-af9f-4be445bf9d8e
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: WfkCF0eEuIoO0MyJsKOddU89QrTzCZ4y2dzCJbH99CQ
-    short-id: 79a1e14b
-  servername: yahoo.com
+    public-key: SjGkzJQ9I6ZZjC3V73atcPMczhMm0oiTrB8mUQXz1HY
+    short-id: 37fbf155c7a9f3ff
+  servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇮🇹 意大利 (Italy) 07 - xiaohe
+  server: 91.201.65.122
+  port: 9039
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: qYEN5HX4JKeVCdEC
+- name: 🇮🇹 意大利 (Italy) 08 - xiaohe
+  server: 91.201.65.122
+  port: 9050
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: FG5ddLsMPbV5CutE
+- name: 🇮🇹 意大利 (Italy) 09 - xiaohe
+  server: 204.216.216.23
+  port: 10086
+  udp: true
+  type: vless
+  uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇹 意大利 (Italy) 01 - jack
-  - 🇮🇹 意大利 (Italy) 02 - jack
-  - 🇮🇹 意大利 (Italy) 03 - jack
-  - 🇮🇹 意大利 (Italy) 04 - jack
-  - 🇮🇹 意大利 (Italy) 05 - jack
-  - 🇮🇹 意大利 (Italy) 06 - jack
-  - 🇮🇹 意大利 (Italy) 07 - jack
-  - 🇮🇹 意大利 (Italy) 08 - jack
-  - 🇮🇹 意大利 (Italy) 09 - jack
-  - 🇮🇹 意大利 (Italy) 10 - jack
-  - 🇮🇹 意大利 (Italy) 11 - jack
-  - 🇮🇹 意大利 (Italy) 12 - jack
-  - 🇮🇹 意大利 (Italy) 13 - jack
+  - 🇮🇹 意大利 (Italy) 01 - xiaohe
+  - 🇮🇹 意大利 (Italy) 02 - xiaohe
+  - 🇮🇹 意大利 (Italy) 03 - xiaohe
+  - 🇮🇹 意大利 (Italy) 04 - xiaohe
+  - 🇮🇹 意大利 (Italy) 05 - xiaohe
+  - 🇮🇹 意大利 (Italy) 06 - xiaohe
+  - 🇮🇹 意大利 (Italy) 07 - xiaohe
+  - 🇮🇹 意大利 (Italy) 08 - xiaohe
+  - 🇮🇹 意大利 (Italy) 09 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇹 意大利 (Italy) 01 - jack
-  - 🇮🇹 意大利 (Italy) 02 - jack
-  - 🇮🇹 意大利 (Italy) 03 - jack
-  - 🇮🇹 意大利 (Italy) 04 - jack
-  - 🇮🇹 意大利 (Italy) 05 - jack
-  - 🇮🇹 意大利 (Italy) 06 - jack
-  - 🇮🇹 意大利 (Italy) 07 - jack
-  - 🇮🇹 意大利 (Italy) 08 - jack
-  - 🇮🇹 意大利 (Italy) 09 - jack
-  - 🇮🇹 意大利 (Italy) 10 - jack
-  - 🇮🇹 意大利 (Italy) 11 - jack
-  - 🇮🇹 意大利 (Italy) 12 - jack
-  - 🇮🇹 意大利 (Italy) 13 - jack
+  - 🇮🇹 意大利 (Italy) 01 - xiaohe
+  - 🇮🇹 意大利 (Italy) 02 - xiaohe
+  - 🇮🇹 意大利 (Italy) 03 - xiaohe
+  - 🇮🇹 意大利 (Italy) 04 - xiaohe
+  - 🇮🇹 意大利 (Italy) 05 - xiaohe
+  - 🇮🇹 意大利 (Italy) 06 - xiaohe
+  - 🇮🇹 意大利 (Italy) 07 - xiaohe
+  - 🇮🇹 意大利 (Italy) 08 - xiaohe
+  - 🇮🇹 意大利 (Italy) 09 - xiaohe
 rules:
 - MATCH,PROXIES

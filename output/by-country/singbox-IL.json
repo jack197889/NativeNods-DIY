@@ -5,7 +5,7 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇮🇱 以色列 (Israel) 01 - jack",
+      "tag": "🇮🇱 以色列 (Israel) 01 - xiaohe",
       "server": "185.95.231.156",
       "server_port": 443,
       "uuid": "1f8cf47a-b66a-4916-979f-26edfcf44eea",
@@ -15,7 +15,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -25,18 +25,32 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "🇮🇱 以色列 (Israel) 02 - xiaohe",
+      "server": "129.159.156.109",
+      "server_port": 50160,
+      "password": "f25f19f29ce3fb53a35bf1b35b452a43",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇱 以色列 (Israel) 01 - jack"
+        "🇮🇱 以色列 (Israel) 01 - xiaohe",
+        "🇮🇱 以色列 (Israel) 02 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇱 以色列 (Israel) 01 - jack"
+        "🇮🇱 以色列 (Israel) 01 - xiaohe",
+        "🇮🇱 以色列 (Israel) 02 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
