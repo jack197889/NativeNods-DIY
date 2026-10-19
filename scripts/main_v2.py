@@ -53,43 +53,18 @@ except ImportError as e:
 # ══════════════════════════════════════════════════════════════════
 
 SOURCE_URLS = [
-    # 1. 保留高存活基础盘与优质 CDN 加速源
-    "https://cdn.jsdelivr.net/gh/free18/v2ray@main/v.txt",
-    "https://raw.githubusercontent.com/freefq/free/master/v2",
-    "https://www.ermao.net/sub/v2ray/ermao.net",
-
-    # 2. 10ium：原有协议与综合来源
-    "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/hysteria2",
-    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/channels/protocols/hysteria",
-    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/hysteria",
-    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/subscribe/protocols/tuic",
-    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/tuic",
-    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/trojan",
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt",
+    "https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/all.txt",
     "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/mix",
+    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/hysteria",
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/security/tls",
-
-    # 3. Au1rxx：全球池 + 台湾、美国、澳大利亚定向池
-    "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt",
-    "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-TW.txt",
-    "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-US.txt",
-    "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-AU.txt",
-
-    # 4. 其他精选与高产出综合源
-    "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/Config_jo.txt",
-    "https://sub.445569.xyz/",
-    "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",
-    "https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/merged.txt",
-    "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
-    "https://raw.githubusercontent.com/clashv2ray-hub/v2rayfree/refs/heads/main/v2ray.txt",
-
-    # 5. 台湾、澳大利亚定向补充（提升澳台有效节点基数）
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/TW.txt",
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/AU.txt",
-    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/countries/tw/mixed",
-    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/countries/au/mixed",
-
-    # 6. 全球补充池：增加来源多样性
-    "https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/nodes.txt",
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",
+    "https://raw.githubusercontent.com/freefq/free/master/v2",
+    "https://raw.githubusercontent.com/roosterkid/openproxylist/main/V2RAY_RAW.txt",
+    "https://www.ermao.net/sub/v2ray/ermao.net",
+    "https://raw.githubusercontent.com/ishalumi/proxy-node-collector/main/output/nodes_base64.txt",
+    "https://gist.githubusercontent.com/shuaidaoya/9e5cf2749c0ce79932dd9229d9b4162b/raw/base64.txt",
+    "https://shadowmere.akiel.dev/api/b64sub/",
 ]
 
 OUTPUT_DIR = "output"
@@ -1652,10 +1627,19 @@ def classify_network_type(ip: str, country: str, asn, org: str, ip_api_rec: dict
 def outbound_to_clash(node: dict, name: str) -> dict:
     """sing-box outbound → Clash (Meta/mihomo) proxy dict"""
     t = node.get("type")
-    port = node.get("server_port") or node.get("port")
-    server = node.get("server") or node.get("address")
-    if not server or not port:
+    server = node.get("server")
+    port = node.get("server_port")
+    
+    # 安全处理：防止 hy2 端口跳跃节点缺少 server_port 导致崩溃
+    if not server:
         return None
+    if port is None:
+        if node.get("server_ports"):
+            # 取第一个端口区间的起始端口
+            port = int(str(node["server_ports"][0]).split(":")[0])
+        else:
+            return None
+            
     proxy = {"name": name, "server": server, "port": port, "udp": True}
 
     if t == "vless":
@@ -2203,7 +2187,7 @@ def make_node_name(item, idx, force_residential=False):
     # Scamalytics 风控分: 高风险节点名内标注 (R分数), 低危不标 (保持简洁)
     fraud = item.get("fraud_score", -1)
     risk_tag = f" R{fraud}" if 0 <= fraud < 75 and fraud >= 40 else (" ⚠R" if fraud >= 75 else "")
-    return f"{flag} {cname} {idx:02d}{tag}{risk_tag} - jack"
+    return f"{flag} {cname} {idx:02d}{tag}{risk_tag} - xiaohe"
 
 
 def export_all(unique_nodes, residential, non_residential):
@@ -2314,7 +2298,7 @@ def export_singbox_json(sb_nodes, filepath):
 
 def update_readme(total_count, res_count):
     repo_name = os.environ.get("GITHUB_REPOSITORY", "hezhanleiok/freesub").strip()
-    cache_bust = int(time.time())
+    cache_bust = ""
     # 私有化部署 Worker 脚本里的仓库参数 (默认值兜底)
     try:
         owner, repo = repo_name.split("/", 1)
@@ -2349,9 +2333,9 @@ def update_readme(total_count, res_count):
             flag = get_country_flag(cc)
             name = COUNTRY_NAMES.get(cc, cc)
             cnt = counts[cc]
-            v2 = f"[CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/{sub}/{cc}.txt?v={cache_bust}) · [Raw 直链](https://raw.githubusercontent.com/{repo_name}/main/output/{sub}/{cc}.txt)"
-            cl = f"[CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/{sub}/clash-{cc}.yaml?v={cache_bust}) · [Raw 直链](https://raw.githubusercontent.com/{repo_name}/main/output/{sub}/clash-{cc}.yaml)"
-            sb = f"[CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/{sub}/singbox-{cc}.json?v={cache_bust}) · [Raw 直链](https://raw.githubusercontent.com/{repo_name}/main/output/{sub}/singbox-{cc}.json)"
+            v2 = f"[CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/{sub}/{cc}.txt) · [Raw 直链](https://raw.githubusercontent.com/{repo_name}/main/output/{sub}/{cc}.txt)"
+            cl = f"[CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/{sub}/clash-{cc}.yaml) · [Raw 直链](https://raw.githubusercontent.com/{repo_name}/main/output/{sub}/clash-{cc}.yaml)"
+            sb = f"[CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/{sub}/singbox-{cc}.json) · [Raw 直链](https://raw.githubusercontent.com/{repo_name}/main/output/{sub}/singbox-{cc}.json)"
             rows.append(f"| {flag} {name} | {cnt} | {v2} | {cl} | {sb} |")
         return "\n".join(rows) if rows else "| 暂无可用节点 | 0 | - | - | - |"
 
@@ -2370,9 +2354,9 @@ def update_readme(total_count, res_count):
 
 | 客户端 / 格式类型 | 节点总数 | 免翻 CDN 订阅直链 (国内直连) | 官方原生 Raw 直链 (开启代理) |
 | :--- | :---: | :--- | :--- |
-| 🚀 **Clash (YAML 格式)** | `{total_count}` | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/clash.yaml?v={cache_bust}) | [官方 Raw 直链](https://raw.githubusercontent.com/{repo_name}/main/output/clash.yaml) |
-| ⚡ **V2RayN (Base64 格式)** | `{total_count}` | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/v2ray.txt?v={cache_bust}) | [官方 Raw 直链](https://raw.githubusercontent.com/{repo_name}/main/output/v2ray.txt) |
-| 📦 **sing-box (JSON 格式)** | `{total_count}` | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/singbox.json?v={cache_bust}) | [官方 Raw 直链](https://raw.githubusercontent.com/{repo_name}/main/output/singbox.json) |
+| 🚀 **Clash (YAML 格式)** | `{total_count}` | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/clash.yaml) | [官方 Raw 直链](https://raw.githubusercontent.com/{repo_name}/main/output/clash.yaml) |
+| ⚡ **V2RayN (Base64 格式)** | `{total_count}` | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/v2ray.txt) | [官方 Raw 直链](https://raw.githubusercontent.com/{repo_name}/main/output/v2ray.txt) |
+| 📦 **sing-box (JSON 格式)** | `{total_count}` | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/singbox.json) | [官方 Raw 直链](https://raw.githubusercontent.com/{repo_name}/main/output/singbox.json) |
 
 ---
 
@@ -2590,24 +2574,6 @@ def main():
     total, res = export_all(unique_nodes, residential, non_residential)
     update_readme(total, res)
 
-    # ★ CDN 缓存刷新: jsdelivr 边缘节点缓存滞后导致 "CDN 订阅比 RAW 少节点"
-    #    (实测 TW CDN=2 vs RAW=4, purge 后立即一致) — CI 每次跑完主动刷新
-    try:
-        repo_name = os.environ.get("GITHUB_REPOSITORY", "").strip()
-        if repo_name and "/" in repo_name:
-            purged, failed = 0, 0
-            for f in glob.glob(os.path.join(BASEDIR, "output", "**", "*.*"), recursive=True):
-                rel = os.path.relpath(f, BASEDIR).replace("\\", "/")
-                try:
-                    DIRECT_SESSION.get(
-                        f"https://purge.jsdelivr.net/gh/{repo_name}@main/{rel}",
-                        timeout=10)
-                    purged += 1
-                except Exception:
-                    failed += 1
-            print(f"[+] jsdelivr CDN 缓存刷新: {purged} 个文件 ({failed} 失败)")
-    except Exception as e:
-        print(f"[!] CDN 刷新跳过: {e}")
 
     # 统计报告
     elapsed = time.time() - t_start
