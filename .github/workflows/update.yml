@@ -2,9 +2,10 @@ name: Update Subscriptions
 
 on:
   schedule:
-    # 对应北京时间 08:17 和 20:17 (UTC 00:17, 12:17)
-    - cron: '17 0,12 * * *'
-  workflow_dispatch: # 支持手动点击运行
+    # 北京时间 07:40（UTC 23:40 前一天）
+    # 预留排队延迟 + 运行时间，争取在 08:30 前完成
+    - cron: '40 23 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
