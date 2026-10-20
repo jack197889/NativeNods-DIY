@@ -58,7 +58,7 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/freefq/free/master/v2",
     "https://www.ermao.net/sub/v2ray/ermao.net",
 
-    # 2. Au1rxx 全量 + 重点国家定向（JP / US / NL / HK / TW / AU）
+    # 2. Au1rxx 全量 + 重点国家定向（核心主力）
     "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt",
     "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-JP.txt",
     "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-US.txt",
@@ -67,36 +67,27 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-TW.txt",
     "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-AU.txt",
 
-    # 3. 10ium + Telegram 收集器（协议丰富）
+    # 3. 10ium 精选（协议补充，体量适中）
     "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/mix",
     "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/hysteria2",
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/hysteria",
-    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/tuic",
-    "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/trojan",
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/security/tls",
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/countries/tw/mixed",
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/countries/au/mixed",
-    "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/hysteria",
-    "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/vless",
 
-    # 4. 高产出综合聚合源
+    # 4. 高质量验证/聚合源（体量可控）
     "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",
-    "https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/merged.txt",
-    "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
-    "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.txt",
-    "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt",
     "https://raw.githubusercontent.com/yy1588133/proxy-pool/main/v2ray.txt",
     "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
     "https://raw.githubusercontent.com/clashv2ray-hub/v2rayfree/refs/heads/main/v2ray.txt",
-
-    # 5. 台湾 / 澳大利亚定向补充 + 其他精选
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/TW.txt",
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/AU.txt",
     "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/Config_jo.txt",
     "https://sub.445569.xyz/",
+
+    # 5. 少量定向与补充
+    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/TW.txt",
+    "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/AU.txt",
     "https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/nodes.txt",
     "https://raw.githubusercontent.com/free-nodes/v2rayfree/main/sub",
-    "https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/everything.txt",
     "https://freenode.biz/api/featured?format=nsubscribe",
 ]
 
