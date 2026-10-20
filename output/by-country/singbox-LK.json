@@ -26,7 +26,11 @@
       "tls": {
         "enabled": true,
         "server_name": "free.sahanwickramasinghe.me",
-        "insecure": false
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
