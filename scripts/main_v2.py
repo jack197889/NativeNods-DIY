@@ -67,7 +67,7 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-TW.txt",
     "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-AU.txt",
 
-    # 3. 10ium 精选（协议补充，体量适中）
+    # 3. 10ium 精选
     "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/mix",
     "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/hysteria2",
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/hysteria",
@@ -75,7 +75,7 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/countries/tw/mixed",
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/countries/au/mixed",
 
-    # 4. 高质量验证/聚合源（体量可控）
+    # 4. 高质量验证/聚合源
     "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",
     "https://raw.githubusercontent.com/yy1588133/proxy-pool/main/v2ray.txt",
     "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
@@ -83,12 +83,22 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/Config_jo.txt",
     "https://sub.445569.xyz/",
 
-    # 5. 少量定向与补充
+    # 5. 原有少量定向与补充
     "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/TW.txt",
     "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Country/AU.txt",
     "https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/nodes.txt",
     "https://raw.githubusercontent.com/free-nodes/v2rayfree/main/sub",
     "https://freenode.biz/api/featured?format=nsubscribe",
+
+    # 6. 新增：专门加强 JP / TW / AU
+    "https://raw.githubusercontent.com/miladtahanian/V2RayScrapeByCountry/main/Countries/Japan.txt",
+    "https://raw.githubusercontent.com/miladtahanian/V2RayScrapeByCountry/main/Countries/Taiwan.txt",
+    "https://raw.githubusercontent.com/miladtahanian/V2RayScrapeByCountry/main/Countries/Australia.txt",
+    "https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/jp/all.b64",
+    "https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/tw/all.b64",
+    "https://raw.githubusercontent.com/Argh73/VpnConfigCollector/main/Splitted-By-Country/Japan.txt",
+    "https://raw.githubusercontent.com/Argh73/VpnConfigCollector/main/Splitted-By-Country/Taiwan.txt",
+    "https://raw.githubusercontent.com/Argh73/VpnConfigCollector/main/Splitted-By-Country/Australia.txt",
 ]
 
 OUTPUT_DIR = "output"
