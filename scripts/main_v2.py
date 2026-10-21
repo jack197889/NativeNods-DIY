@@ -10,10 +10,11 @@
   2. 去重 → DNS 解析 + TCP 端口预检（并发）
   3. sing-box 真实测活：本地 SOCKS 入站 → 节点出站 → generate_204（要求返回 204）
      顺带取出口 IP；可选限时测速（ENABLE_SPEED_TEST=1）
-  4. 分类：
-       - 国家：出口 IP 的 GeoLite2-Country
-       - 原生 IP：GeoLite2 的「使用地国家」== 「注册地国家」（与检测网站的定义一致）
-       - 家宽 / 机房：ip-api(hosting/mobile) + ASN 名称关键词
+  4. 分类（每个节点只属于一类，优先级 家宽 > 原生 > 普通）：
+       - 家宽：家庭宽带 IP（含移动网络）且为原生 IP。识别沿用原作者方案
+               (ip-api hosting/proxy/mobile → CDN 网段 → ASN 名单 → 名称关键词 → rDNS)，无需额外核验
+       - 原生：非家宽，且为原生 IP（注册地国家 == 使用地国家；注册地取 RDAP，查不到用 GeoLite2）
+       - 普通：其余，含「广播 IP」(包括家庭宽带但广播的 IP)
   5. 导出：v2ray(base64) / Clash / sing-box，总表 + 按国家，并更新 README
 
 规则：家宽、原生节点全部保留；普通节点保留延迟最低的 MAX_NORMAL(默认 50) 个。
@@ -26,6 +27,7 @@
   MAX_CANDIDATES                  最多测试多少个节点（默认 5000，0=不限）
   MAX_NORMAL / MAX_NATIVE / MAX_RESIDENTIAL   各类保留上限（0=不限）
   ENABLE_SPEED_TEST=1             开启限时测速
+  ENABLE_RDAP=0                   关闭 RDAP 注册地查询（仅用 GeoLite2）
   DROP_INSECURE=1                 丢弃「跳过证书验证」的节点
   DEBUG=1                         打印更多排查信息
 """
@@ -159,6 +161,7 @@ SPEED_TEST_BUDGET = 4.0
 SPEED_MIN_BYTES_PER_S = 70_000
 
 # 精选规则
+NO_EXIT_MAX_RATIO = 0.5         # 取不到出口 IP 的存活节点占比超过它 → 视为探测服务故障，不淘汰
 MAX_NORMAL = _env_int("MAX_NORMAL", 50)
 MAX_NATIVE = _env_int("MAX_NATIVE", 0)
 MAX_RESIDENTIAL = _env_int("MAX_RESIDENTIAL", 0)
@@ -166,6 +169,9 @@ DEDUP_BY_EXIT_IP = True         # 相同出口 IP 只保留延迟最低的一个
 DROP_INSECURE = _env_flag("DROP_INSECURE", False)
 ALLOW_INSECURE_DEFAULT = False  # 订阅链接没写 insecure 时，是否默认跳过证书验证
 ENABLE_IP_API = _env_flag("ENABLE_IP_API", True)
+ENABLE_RDAP = _env_flag("ENABLE_RDAP", True)   # 用 RIR(RDAP) 确认注册地
+RDAP_MAX_IPS = 1500
+RDAP_WORKERS = 8
 DEBUG = _env_flag("DEBUG", False)
 NAME_SUFFIX = "xiaohe"
 
@@ -196,19 +202,196 @@ USER_AGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
 
 UDP_PROTOS = ("hysteria2", "tuic")
 
-# 机房 / ISP 关键词（只在 ip-api 不可用、或作为补充时使用）
-IDC_RE = re.compile(
-    r"(hosting|datacenter|data center|data centre|\bidc\b|\bvps\b|\bcloud|server|colo|dedicated|"
-    r"amazon|\baws\b|google|microsoft|azure|digitalocean|linode|akamai|vultr|choopa|\bovh|hetzner|"
-    r"leaseweb|oracle|alibaba|aliyun|tencent|huawei|cloudflare|contabo|m247|datacamp|quadranet|"
-    r"psychz|colocrossing|zenlayer|gcore|dmit|bandwagon|racknerd|hostwinds|kamatera|scaleway|"
-    r"ionos|upcloud|rackspace|softlayer|ucloud|oneprovider|frantech|buyvm|cdn77|fastly|equinix|"
-    r"sharktech|clouvider|multacom|virmach)", re.I)
-ISP_RE = re.compile(
-    r"(broadband|pppoe|\bdsl\b|\bcable\b|fiber|fibre|ftth|residential|telecom|telekom|comcast|"
-    r"spectrum|verizon|at&t|vodafone|softbank|\bocn\b|chunghwa|hinet|hkbn|pccw|\bhkt\b|singtel|"
-    r"starhub|\bntt\b|kddi|rakuten|rogers|telus|charter|centurylink|telstra|optus|orange|"
-    r"bouygues|kt corp|sk broadband|lg uplus|china unicom|china mobile)", re.I)
+# 以下名单与关键词沿用原作者方案（CDN 网段 / 机房 ASN / 家宽 ASN / 名称关键词）
+# Cloudflare 官方 Anycast 全网段 (命中即 CDN 任播, 绝非家宽)
+CLOUDFLARE_IP_NETWORKS = [ipaddress.ip_network(n) for n in (
+    "173.245.48.0/20","103.21.244.0/22","103.22.200.0/22","103.31.4.0/22",
+    "141.101.64.0/18","108.162.192.0/18","190.93.240.0/20","188.114.96.0/20",
+    "197.234.240.0/22","198.41.128.0/17","162.158.0.0/15","104.16.0.0/13",
+    "104.24.0.0/14","172.64.0.0/13","131.0.72.0/22",
+)]
+
+# Google / Fastly / Akamai 等常见 CDN 与云入口段 (命中即标 CDN/机房)
+CDN_IP_NETWORKS_EXTRA = [ipaddress.ip_network(n) for n in (
+    # Google
+    "8.8.4.0/24","8.8.8.0/24","8.34.208.0/20","8.35.192.0/20","34.64.0.0/10","35.184.0.0/13",
+    "35.192.0.0/14","35.196.0.0/15","35.200.0.0/13","35.216.0.0/15","35.220.0.0/14",
+    "64.15.112.0/20","64.233.160.0/19","66.102.0.0/20","66.249.64.0/19","72.14.192.0/18",
+    "74.125.0.0/16","108.177.0.0/17","142.250.0.0/15","172.217.0.0/16","173.194.0.0/16",
+    "209.85.128.0/17","216.58.192.0/19","216.239.32.0/19",
+    # Fastly
+    "23.235.32.0/20","43.249.72.0/22","103.244.50.0/24","103.245.222.0/23",
+    "104.156.80.0/20","140.248.64.0/18","146.75.0.0/16","151.101.0.0/16",
+    "157.52.64.0/18","167.82.0.0/17","199.232.0.0/16","204.129.196.0/22",
+    # Akamai (核心段)
+    "23.32.0.0/13","23.64.0.0/14","23.192.0.0/11","23.197.0.0/16",
+    "95.100.0.0/15","104.64.0.0/10","184.24.0.0/13","184.84.0.0/14",
+    # Cloudflare Spectrum / 托管入口
+    "104.16.0.0/12",
+)]
+
+# 已知云/机房 ASN (离线兜底用; 在线 ip-api hosting=true 为主判据)
+DATACENTER_ASNS = {
+    13335,  # Cloudflare
+    16509, 14618,  # AWS
+    15169, 396982,  # Google
+    8075, 8068,  # Microsoft
+    24940,  # Hetzner
+    16276,  # OVH
+    14061,  # DigitalOcean
+    31898, 63949,  # Oracle
+    45102,  # Alibaba
+    132203,  # Tencent
+    20473,  # Choopa/Vultr 早期
+    60068,  # Datacamp (CDN77)
+    55081,  # Hostinger
+    197540,  # Hostinger EU
+    51167,  # Contabo
+    8560,  # 1&1 / IONOS
+    42708,  # IONOS
+    201814, 49981,  # Hosthatch/Hostkey 类
+    212238, 46652,  # Serverius/OVH 类
+    141995, 200019, 136907, 39351, 9009,  # M247/Hosthatch 等
+    174, 3356, 1299, 2914, 6939,  # 骨干 (Cogent/Lumen/Arelion/NTT/Hurricane)
+    199524, 206096, 49505,  # Selectel/WorldStream
+    62240, 49304, 34665, 209242, 219337, 44477,
+    200651, 202685, 210644, 205628, 51852, 204544, 397373, 140224,  # 小型 IDC
+    54866,  # Parsebian/HydraTransit 类
+    45899,  # VNPT 云? 标记为 IDC
+    # ★ 实测漏网: 收购家宽段/伪装 DSL rDNS 的云边网络 (ip-api proxy=true 案例补充)
+    62610,  # Zenlayer (AS62610, rDNS 带 dsl.speakeasy.net 但 proxy=true)
+    60205,  # 62610 关联段
+    8342,  # Deltacomputers/Evrasia 类
+    9009, 47692, 62041, 56630, 57502,  # Serverius/ProXmedia/Clouvider 类
+}
+
+# 民用宽带 ASN 白名单 (离线兜底; 关键国家主流运营商)
+RESIDENTIAL_ASNS = {
+    # 台湾
+    3462,    # Chunghwa Telecom (中华电信)
+    9924, 17709, 4780, 18049,  # 亚太电信/远传/台湾大哥大/凯擘
+    9269, 3491,  # 台湾硕网/和宇宽频
+    # 香港
+    4760, 476, 4515, 9229, 9266, 10103,  # PCCW/HKT/CUHK/HGC/HKBN/HKTBB
+    9059, 38861,  # Hong Kong Broadband
+    # 日本
+    4713, 2516, 17676, 4721, 2497, 9605, 17511, 9318, 2518, 20193,
+    # Softbank/NTT Communications/KDDI/IIJ/Sony/Plala/@nifty/JCN
+    4766, 3786, 17816, 9357,
+    # 韩国
+    4713, 9318, 17816, 9357, 4766,  # KT/LG/SK  
+    # 美国
+    701, 7018, 7922, 20115, 22773, 10796, 20057, 11427, 10507, 6128,
+    33363, 21928, 10777, 33660, 33661, 33662, 36466, 53417, 55136,
+    20057, 19024, 12271, 11404, 6983, 33554, 7155, 30162, 10790,
+    # Comcast (7922/33487/22263...) / Charter (20115/10796/20057) / Cox / AT&T / Verizon
+    702, 703, 704, 705, 706, 709, 710, 711, 712, 713, 714, 715,  # legacy Verizon
+    2828, 20001, 3549,  # CenturyLink/Level3 (部分为家宽)
+    6167, 6162, 7018,  # AT&T
+    5056,  # Cox East
+    10796,  # Charter
+    11351,  # TWC
+    6128,  # Atlantis
+    # 英国
+    2856, 5607, 20650, 13285, 12576, 12725, 19541, 33950, 5413,
+    # BT/TalkTalk/Orange/Virgin/Plusnet/Sky/Eclipse
+    # 德国
+    3320, 3209, 6805, 8888, 9145, 13237, 15366, 20879, 16097, 15594,
+    # DT/Vodafone/EWE/netcup/Telefónica
+    # 法国
+    3215, 12322, 15557, 5410, 21590, 22869, 8228, 8220, 12670,
+    # Orange/Free/SFR/Bouygues/LDN/9.tel
+    # 荷兰 / 比利时
+    33915, 20857, 5418, 6777, 15535, 6830, 8683,
+    # KPN/Ziggo/Tele2/Solcon/Proximus/Telenet
+    # 加拿大
+    577, 6539, 812, 7992, 22995, 23498, 30645, 11260, 5645, 13331,
+    # Bell/Rogers/Corus/Cogeco/Videotron/Telus
+    # 澳大利亚 / 新西兰
+    1221, 4764, 4761, 4747, 4802, 4804, 38293, 9443, 23871, 4771,
+    # Telstra/Optus/iinet/AAPT/Exetel/SparkNZ
+    # 新加坡 / 马来西亚
+    9506, 9224, 10091, 4657, 32308, 55553, 177545, 9534, 17971, 24210,
+    # Singtel/StarHub/M1/MyRepublic/TM/Maxis/Time
+    # 巴西 / 拉美
+    28573, 26599, 28598, 22085, 27699, 11014, 16832, 16397, 26615,
+    # Claro/Vivo/Algar/Brisanet
+    # 土耳其 / 俄罗斯 / 哈萨克
+    9121, 34984, 15924, 31103, 47853, 25513, 12714, 8359, 12389,
+    # Türk Telekom/Vodafone TR/MTS/Rostelecom/Kazakhtelecom
+    # 意大利 / 西班牙
+    3269, 30722, 12874, 12392, 12474, 3352, 12479, 12430,
+    # Telecom Italia/Fastweb/Vodafone IT/Telefónica ES
+    # 印度 / 越南 / 泰国 / 菲律宾 / 印尼
+    55836, 9829, 9498, 17813, 45899, 7552, 9675, 7568, 45773, 45543,
+    7590, 17457, 7552, 131293, 9336, 23969, 17816, 24099, 38251,
+    # 印尼 Telkomsel/Indosat/Smartfren; 越南 Viettel/FPT; 泰国 AIS/True
+}
+
+# rDNS / ISP 名称关键词 (大小写不敏感; 离线兜底)
+IDC_NAME_PATTERNS = [
+    "hosting", "hoster", "datacenter", "data center", "cloud", "server",
+    "vps", "dedicated", "colo", "colocation", "compute", "storage",
+    "amazon", "aws", "google cloud", "microsoft", "azure", "oracle",
+    "digitalocean", "linode", "vultr", "choopa", "hetzner", "ovh",
+    "contabo", "m247", "leaseweb", "online s.a.s", "scaleway",
+    "alibaba", "tencent", "huawei cloud", "ucloud", "jdcloud", "ksyun",
+    "fastly", "cloudflare", "akamai", "cdn", "anycast", "edge network",
+    "hostkey", "selectel", "aeza", "justhost", "idnica", "hostinger",
+    "ionos", "1&1", "godaddy", "namecheap", "sucuri", "ispxk",
+    "zenlayer", "zencom", "g-core", "gcore", "netcup", "hetzner",
+]
+
+RESIDENTIAL_NAME_PATTERNS = [
+    # 通用家宽特征
+    "broadband", "pppoe", "pppoa", "dsl", "cable", "fiber", "ftth",
+    "fibre", "dynamic", "dial", "dialup", "residential", "home",
+    "consumer", "cust", "customer", "subscriber", "pool", "dynamic-ip",
+    # 台湾
+    "chunghwa", "hinet", "taiwanmobile", "twn", "aptg", "kbro",
+    "tfn", "sparq", "seednet", "data communication business group",
+    # 香港
+    "hkbn", "hong kong broadband", "pccw", "hkt", "hgc", "smartone",
+    "netvigator", "citic telecom", "i-cable", "hk cable",
+    # 日本
+    "softbank", "ocn", "plala", "so-net", "iiJmio home", "eonet",
+    "kddi", "jcom", "au broadband", "biglobe", "nifty",
+    # 韩国
+    "korea telecom", "kt corp", "sk broadband", "lgu+", "lg uplus",
+    # 美国
+    "comcast", "charter communications", "spectrum", "cox communications",
+    "at&t", "at and t", "bellsouth", "sbc internet", "qwest", "centurylink",
+    "verizon fios", "verizon online", "frontier communications", "windstream",
+    "altice", "optimum online", "rcn", "wave broadband", "consolidated",
+    "hughes", "viasat", "starlink", "mediaserv",
+    # 欧洲
+    "deutsche telekom", "telekom deutschland", "vodafone d2", "kabel deutschland",
+    "british telecom", "bt broadband", "virgin media", "sky uk", "talktalk",
+    "orange sa", "free SAS".lower(), "sfr", "bouygues", "bbox", "numericable",
+    "kpn", "ziggo", "t-mobile netherlands", "proximus", "telenet",
+    "telefonica", "movistar", "vodafone espana", "jazztel", "orange es",
+    "telecom italia", "fastweb home", "iliad italia", "windtre",
+    "swisscom", "a1 telekom", "magyar telekom", "o2 czech",
+    "telia sweden", "telenor", "tele2 sweden", "bredband2",
+    "rostelecom home", "mgts", "ertelecom", "dom.ru", "mtu-moscow",
+    # 亚太其他
+    "singtel", "starhub", "m1 limited", "myrepublic", "viewqwest",
+    "maxis", "unifi", "time dotcom", "tm net", "celcom",
+    "ais", "true internet", "3bb", "dtac tri", "ntc net",
+    "viettel", "vnpt", "fpt telecom", "cmc telecom", "vinaphone",
+    "pldt", "globe telecom", "converge ict", "sky broadband ph",
+    "telkomsel", "indosat", "xl axiata", "biznet networks", "first media",
+    # 拉美 / 土耳其 / 其他
+    "claro", "vivo", "tim brasil", "oi internet", "net servicos",
+    "turk telekom", "superonline", "ttk", "kablonet", "vodafone net",
+    " kazakhtelecom", "beeline kz", "izatelecom",
+    "bigpond", "iinet", "optus", "tpg internet", "aussie broadband",
+    "spark nz", "vodafone nz", "2degrees", "orcon", "slingshot",
+]
+
+# ── 本项目补充 ──
+RESIDENTIAL_ASNS.add(2527)                       # Sony Network Communications / So-net / nuro（截图中的家庭宽带样例）
+RESIDENTIAL_NAME_PATTERNS.extend(["sony network", "nuro"])
 
 COUNTRY_NAMES = {
     "HK": "中国香港 (Hong Kong)", "TW": "中国台湾 (Taiwan)", "MO": "中国澳门 (Macao)",
@@ -1172,11 +1355,20 @@ def run_liveness_test(candidates: list) -> list:
             if done % 100 == 0 or done == total:
                 print(f"    进度 {done}/{total} | 存活 {len(results)} | 用时 {int(time.time() - t0)}s")
     print(f"[+] 测活通过: {len(results)}")
+    no_exit = [r for r in results if not r.get("exit_ip")]
+    if no_exit:
+        if len(results) >= 10 and len(no_exit) / len(results) > NO_EXIT_MAX_RATIO:
+            print(f"[!] {len(no_exit)}/{len(results)} 个存活节点取不到出口 IP，疑似探测服务故障，本次不淘汰 "
+                  f"(这些节点只会归入普通)")
+        else:
+            results = [r for r in results if r.get("exit_ip")]
+            bump("no_exit_ip", len(no_exit))
+            print(f"[*] 取不到出口 IP 的节点已淘汰: {len(no_exit)} 个，剩余 {len(results)}")
     return results
 
 
 # ══════════════════════════════════════════════════════════════════
-# 分类：国家 / 原生 / 家宽
+# 分类：家宽 / 原生 / 普通
 # ══════════════════════════════════════════════════════════════════
 
 class GeoDB:
@@ -1203,7 +1395,7 @@ class GeoDB:
         return cc if re.fullmatch(r"[A-Z]{2}", cc) else None
 
     def lookup(self, ip: str) -> dict:
-        res = {"country": None, "registered": None, "asn_org": ""}
+        res = {"country": None, "registered": None, "asn": None, "asn_org": ""}
         if not ip:
             return res
         if self.country:
@@ -1217,6 +1409,7 @@ class GeoDB:
             try:
                 rec = self.asn.get(ip) or {}
                 res["asn_org"] = str(rec.get("autonomous_system_organization") or "")
+                res["asn"] = rec.get("autonomous_system_number")
             except Exception:  # noqa: BLE001
                 pass
         return res
@@ -1258,30 +1451,142 @@ def ip_api_batch_lookup(ip_list: list) -> dict:
     return info
 
 
-def classify_ip_type(rec: dict, asn_org: str) -> str:
-    """返回 'residential'(家宽/移动) 或 'idc'(机房/未知)。"""
-    text = " ".join(filter(None, [asn_org, rec.get("isp"), rec.get("org"), rec.get("asname")]))
-    if rec:                                              # ip-api 有结果
-        if rec.get("mobile"):
-            return "residential"
-        if rec.get("hosting") or IDC_RE.search(text):
-            return "idc"
-        return "residential"
-    # ip-api 无结果：保守判断，必须明确像 ISP 才算家宽
-    if ISP_RE.search(text) and not IDC_RE.search(text):
-        return "residential"
-    return "idc"
+def _make_matcher(patterns):
+    """短词(<=4字符)按单词边界匹配，长词按子串匹配，避免 colo→colombia、ais→mais 之类误判。"""
+    clean = sorted({p.strip().lower() for p in patterns if p and p.strip()})
+    short = [p for p in clean if len(p) <= 4]
+    long_ = [p for p in clean if len(p) > 4]
+    rx = (re.compile(r"(?<![a-z0-9])(?:" + "|".join(re.escape(p) for p in short) + r")(?![a-z0-9])")
+          if short else None)
+
+    def match(text: str) -> bool:
+        t = (text or "").lower()
+        return bool((rx and rx.search(t)) or any(k in t for k in long_))
+    return match
+
+
+_IDC_MATCH = _make_matcher(IDC_NAME_PATTERNS)
+_RES_MATCH = _make_matcher(RESIDENTIAL_NAME_PATTERNS)
+_ALL_CDN_NETS = CLOUDFLARE_IP_NETWORKS + CDN_IP_NETWORKS_EXTRA
+
+
+def _asn_int(v):
+    if isinstance(v, int):
+        return v
+    m = re.match(r"\s*(?:AS)?(\d+)", str(v or ""), re.I)
+    return int(m.group(1)) if m else None
+
+
+def get_rdns(ip: str) -> str:
+    try:
+        return socket.gethostbyaddr(ip)[0].lower()
+    except (OSError, UnicodeError):
+        return ""
+
+
+def classify_network_type(ip: str, asn_int, org_text: str, rec: dict, rdns: str = ""):
+    """网络类型识别（沿用原作者的优先级）。
+    返回 (net_type, confidence)，net_type ∈ cdn / datacenter / mobile / residential / unknown
+    优先级: CDN 网段 > ip-api(hosting / proxy / mobile) > ASN 名单 > 名称关键词 > rDNS"""
+    try:
+        ip_obj = ipaddress.ip_address(ip)
+    except ValueError:
+        return "unknown", 0
+    for net in _ALL_CDN_NETS:
+        if ip_obj in net:
+            return "cdn", 100
+    rec = rec or {}
+    if rec.get("hosting"):
+        return "datacenter", 90
+    if rec.get("proxy"):          # 机房收购家宽段、伪装 DSL 的典型形态，硬否决家宽
+        return "datacenter", 88
+    if rec.get("mobile"):
+        return "mobile", 85
+    if asn_int:
+        if asn_int in DATACENTER_ASNS:
+            return "datacenter", 80
+        if asn_int in RESIDENTIAL_ASNS:
+            return "residential", 82
+    if org_text:
+        if _IDC_MATCH(org_text):
+            return "datacenter", 70
+        if _RES_MATCH(org_text):
+            return "residential", 70
+    if rdns:
+        if _IDC_MATCH(rdns):
+            return "datacenter", 60
+        if _RES_MATCH(rdns):
+            return "residential", 60
+    return "unknown", 30
+
+
+def native_check(geo_cc, registered, echo_cc, ipapi_cc) -> bool:
+    """原生 IP：注册地国家 == 使用地国家，且其它地理来源与之不矛盾（否则按「广播 IP」处理）。"""
+    if not geo_cc or not registered or geo_cc != registered:
+        return False
+    for other in (echo_cc, ipapi_cc):
+        if other and other != geo_cc:
+            return False
+    return True
+
+
+_RDAP_CACHE = {}
+
+
+def rdap_country(ip: str):
+    """向 RIR(RDAP) 查询 IP 段登记国家，即「注册地」。查不到返回 None。"""
+    if ip in _RDAP_CACHE:
+        return _RDAP_CACHE[ip]
+    cc = None
+    try:
+        r = DIRECT_SESSION.get(f"https://rdap.org/ip/{ip}", timeout=12,
+                               headers={"Accept": "application/rdap+json, application/json"})
+        if r.status_code == 200:
+            c = str((r.json() or {}).get("country") or "").upper()
+            cc = c if re.fullmatch(r"[A-Z]{2}", c) else None
+    except (requests.RequestException, ValueError):
+        pass
+    _RDAP_CACHE[ip] = cc
+    return cc
+
+
+def rdap_lookup_many(ips: list) -> dict:
+    ips = ips[:RDAP_MAX_IPS]
+    if not ips:
+        return {}
+    print(f"[*] RDAP 查询 {len(ips)} 个出口 IP 的登记国家(注册地) ...")
+    out = {}
+    with ThreadPoolExecutor(RDAP_WORKERS) as ex:
+        futs = {ex.submit(rdap_country, ip): ip for ip in ips}
+        for fut in as_completed(futs):
+            try:
+                out[futs[fut]] = fut.result()
+            except Exception:  # noqa: BLE001
+                out[futs[fut]] = None
+    print(f"    RDAP 有结果: {sum(1 for v in out.values() if v)}/{len(ips)}")
+    return out
 
 
 def classify_results(results: list):
-    print("[*] 分类: 国家 / 原生(注册地==使用地) / 家宽 或 机房 ...")
+    """每个节点只属于一类：家宽 > 原生 > 普通，互不重叠。
+       家宽 = 家庭宽带 IP（含移动网络）且是原生 IP，无需额外核验
+       原生 = 非家宽，且是原生 IP（注册地国家 == 使用地国家，典型如机房原生）
+       普通 = 其余（含「广播 IP」，包括家庭宽带但广播的 IP）"""
+    print("[*] 分类: 家宽 / 原生 / 普通 ...")
+
+    if DEDUP_BY_EXIT_IP:                    # 先去重，减少后续所有外部查询
+        best = {}
+        for r in results:
+            key = r.get("exit_ip") or ("srv", r["ip"], r["port"])
+            if key not in best or r["latency_ms"] < best[key]["latency_ms"]:
+                best[key] = r
+        if len(best) != len(results):
+            print(f"[*] 相同出口 IP 去重: {len(results)} → {len(best)}")
+        results = list(best.values())
+
     geo = GeoDB()
     if not geo.country:
-        print("[!] 没有 GeoLite2-Country，国家取自出口探测，原生 IP 无法判断")
-
-    for r in results:
-        r["_look_ip"] = r.get("exit_ip") or r["ip"]
-        r["_geo"] = geo.lookup(r["_look_ip"])
+        print("[!] 没有 GeoLite2-Country，无法判断原生 IP (全部按普通处理)")
 
     ip_info = {}
     if ENABLE_IP_API:
@@ -1291,37 +1596,66 @@ def classify_results(results: list):
 
     items = []
     for r in results:
-        g = r["_geo"]
+        look_ip = r.get("exit_ip") or r["ip"]
+        g = geo.lookup(look_ip)
         rec = ip_info.get(r.get("exit_ip"), {})
-        actual = g["country"] or r.get("exit_country") or rec.get("countryCode")
-        actual = (actual or "OTHER").upper()
+        asn = _asn_int(rec.get("as")) or g["asn"]
+        org_text = rec.get("asname") or rec.get("org") or g["asn_org"] or ""
+        net_type, conf = classify_network_type(look_ip, asn, org_text, rec)
+        ipapi_cc = str(rec.get("countryCode") or "").upper() or None
+        actual = (g["country"] or r.get("exit_country") or ipapi_cc or "OTHER").upper()
         if not re.fullmatch(r"[A-Z]{2}", actual):
             actual = "OTHER"
-        native = bool(g["country"] and g["registered"] and g["country"] == g["registered"])
-        ip_type = classify_ip_type(rec, g["asn_org"])
-        tag = "家宽·原生" if (ip_type == "residential" and native) else (
-            "家宽" if ip_type == "residential" else ("原生" if native else ""))
         items.append({
             "raw": r["raw"], "outbound": r["outbound"], "server": r["server"], "port": r["port"],
-            "proto": r["proto"], "ip": r["ip"], "exit_ip": r.get("exit_ip"),
-            "latency_ms": r["latency_ms"], "country": actual,
-            "native": native, "ip_type": ip_type, "tag": tag, "asn_org": g["asn_org"],
+            "proto": r["proto"], "ip": r["ip"], "exit_ip": r.get("exit_ip"), "look_ip": look_ip,
+            "latency_ms": r["latency_ms"], "country": actual, "asn": asn, "org_text": org_text,
+            "net_type": net_type, "confidence": conf, "geo": g, "echo_cc": r.get("exit_country"),
+            "ipapi_cc": ipapi_cc, "registered": None, "native": False, "tag": "",
         })
 
-    if DEDUP_BY_EXIT_IP:
-        best = {}
-        for it in items:
-            key = it["exit_ip"] or ("srv", it["ip"], it["port"])
-            if key not in best or it["latency_ms"] < best[key]["latency_ms"]:
-                best[key] = it
-        if len(best) != len(items):
-            print(f"[*] 相同出口 IP 去重: {len(items)} → {len(best)}")
-        items = list(best.values())
+    # rDNS 兜底：仅对「仍无法判断」的 IP
+    unknown = [i for i in items if i["net_type"] == "unknown" and i["exit_ip"]][:600]
+    if unknown:
+        with ThreadPoolExecutor(32) as ex:
+            for it, rd in zip(unknown, ex.map(lambda i: get_rdns(i["look_ip"]), unknown)):
+                if rd:
+                    it["rdns"] = rd
+                    it["net_type"], it["confidence"] = classify_network_type(
+                        it["look_ip"], it["asn"], it["org_text"], ip_info.get(it["exit_ip"], {}), rd)
+
+    # 原生判断：注册地 = RDAP 登记国家，查不到时用 GeoLite2 registered_country
+    rdap = {}
+    if ENABLE_RDAP:
+        rdap = rdap_lookup_many(sorted({i["look_ip"] for i in items if is_public_ip(i["look_ip"])}))
+    for i in items:
+        i["registered"] = rdap.get(i["look_ip"]) or i["geo"]["registered"]
+        i["native"] = (bool(i["exit_ip"]) and i["net_type"] != "cdn"
+                       and native_check(i["geo"]["country"], i["registered"], i["echo_cc"], i["ipapi_cc"]))
+        # 家庭宽带 / 移动网络 + 广播 IP → 普通，所以家宽必须同时是原生
+        i["residential"] = i["net_type"] in ("residential", "mobile") and i["confidence"] >= 60 and i["native"]
+        i["native_final"] = i["native"] and not i["residential"]
+        i["tag"] = ("移动家宽" if i["net_type"] == "mobile" else "家宽") if i["residential"] else (
+            "原生" if i["native_final"] else "")
+
+    print("[*] 网络类型: " + " | ".join(f"{t}={sum(1 for i in items if i['net_type'] == t)}"
+          for t in ("residential", "mobile", "datacenter", "cdn", "unknown"))
+          + f" | 原生={sum(1 for i in items if i['native'])}")
+
+    if DEBUG:
+        os.makedirs(os.path.join(OUTPUT_DIR, "debug"), exist_ok=True)
+        write_text(os.path.join(OUTPUT_DIR, "debug", "classification.json"), json.dumps([{
+            "exit_ip": i["exit_ip"], "country": i["country"], "asn": i["asn"], "org": i["org_text"],
+            "rdns": i.get("rdns"), "net_type": i["net_type"], "confidence": i["confidence"],
+            "geo_country": i["geo"]["country"], "mm_registered": i["geo"]["registered"],
+            "registered_used": i["registered"], "echo_country": i["echo_cc"], "ipapi_country": i["ipapi_cc"],
+            "native": i["native"], "result": i["tag"] or "普通",
+        } for i in items], indent=1, ensure_ascii=False))
 
     items.sort(key=lambda x: x["latency_ms"])
-    residential = [i for i in items if i["ip_type"] == "residential"]
-    native = [i for i in items if i["ip_type"] != "residential" and i["native"]]
-    normal = [i for i in items if i["ip_type"] != "residential" and not i["native"]]
+    residential = [i for i in items if i["residential"]]
+    native = [i for i in items if i["native_final"]]
+    normal = [i for i in items if not i["residential"] and not i["native_final"]]
     if MAX_RESIDENTIAL > 0:
         residential = residential[:MAX_RESIDENTIAL]
     if MAX_NATIVE > 0:
@@ -1723,8 +2057,9 @@ sing-box 客户端配置 (1.12+): `{raw}/singbox.json`
 
 ## 📖 说明
 
-- **原生 IP**: 出口 IP 的「注册地国家」与「实际使用地国家」一致 (GeoLite2-Country 的 registered_country 与 country)。
-- **家宽**: ip-api 判断非机房 (hosting=false) 或移动网络，并结合 ASN 名称关键词；属于近似判断，可能与第三方检测网站不完全一致。
+- **分类互斥**: 每个节点只属于「家宽 / 原生 / 普通」之一，优先级 家宽 > 原生。
+- **原生 IP**: 注册地国家与实际使用地国家一致 (注册地取 RDAP 登记国家，查不到用 GeoLite2；多个地理库互相矛盾则不算)。「广播 IP」归普通。
+- **家宽**: 家庭宽带 IP（含移动网络）且为原生 IP，识别沿用原作者方案；家庭宽带但广播的 IP 归普通。
 - 免费节点来自公开订阅源，**不可信**，可能嗅探或篡改流量，请勿用于登录银行、邮箱等敏感账号。
 """
     write_text(os.path.join(BASEDIR, "README.md"), text)
@@ -1736,7 +2071,7 @@ sing-box 客户端配置 (1.12+): `{raw}/singbox.json`
 
 def print_diagnostics():
     keys = ["parse_fail", "duplicate", "dropped_insecure", "dns_fail", "non_public_ip", "port_closed",
-            "start_fail", "probe_fail", "too_slow", "test_exception"]
+            "start_fail", "probe_fail", "no_exit_ip", "too_slow", "test_exception"]
     line = " | ".join(f"{k}={STATS[k]}" for k in keys if STATS[k])
     if line:
         print(f"[*] 统计: {line}")
