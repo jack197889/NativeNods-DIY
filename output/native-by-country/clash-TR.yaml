@@ -5,12 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 (原生) - xiaohe
-  type: ss
-  server: Tak.zqpm.ir
-  port: 8989
+  type: vless
+  server: 78.135.73.47
+  port: 443
   udp: true
-  cipher: aes-256-gcm
-  password: BzG4OidkLBijT04YGIyVMXBd9eS-caVi
+  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.datadoghq.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
+    short-id: f46cd3ea3d1eb72d
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select

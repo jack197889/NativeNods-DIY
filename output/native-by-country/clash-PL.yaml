@@ -5,34 +5,38 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01 (原生) - xiaohe
-  type: vless
-  server: 83.168.71.216
-  port: 443
-  udp: true
-  uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a
-  tls: true
-  servername: ads.x5.ru
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho
-    short-id: 2f49bccf11150ef2
-  network: tcp
-- name: 🇵🇱 波兰 (Poland) 02 (原生) - xiaohe
   type: trojan
   server: pl1.dedushka.top
   port: 443
   udp: true
   password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   sni: pl1.dedushka.top
+  skip-cert-verify: true
   network: tcp
-- name: 🇵🇱 波兰 (Poland) 03 (原生) - xiaohe
+- name: 🇵🇱 波兰 (Poland) 02 (原生) - xiaohe
   type: trojan
   server: pl2.dedushka.top
   port: 443
   udp: true
   password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   sni: pl2.dedushka.top
+  alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  network: tcp
+- name: 🇵🇱 波兰 (Poland) 03 (原生) - xiaohe
+  type: vless
+  server: 5.42.99.64
+  port: 8443
+  udp: true
+  uuid: c53ea5e9-ed8b-4990-805d-7f1d6451426c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: du-rov.secureservice.top
   client-fingerprint: chrome
+  reality-opts:
+    public-key: fSVfR9NB-6J6smrZlavi0GWd8JfDh0aXuEkKbtuFzUI
+    short-id: 3cbc3d737fb9c4af
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择

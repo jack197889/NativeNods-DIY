@@ -4,23 +4,23 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇪 爱尔兰 (Ireland) 01 (原生) - xiaohe
-  type: vless
-  server: 18.134.224.162
-  port: 22223
+- name: 🇹🇭 泰国 (Thailand) 01 (原生) - xiaohe
+  type: ss
+  server: 103.107.52.106
+  port: 52351
   udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  network: tcp
+  cipher: aes-256-gcm
+  password: sxajCTwrlK0zl+zmHpX0p0jXIfatnzlLzWlSQ950L1c=
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇮🇪 爱尔兰 (Ireland) 01 (原生) - xiaohe
+  - 🇹🇭 泰国 (Thailand) 01 (原生) - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇮🇪 爱尔兰 (Ireland) 01 (原生) - xiaohe
+  - 🇹🇭 泰国 (Thailand) 01 (原生) - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

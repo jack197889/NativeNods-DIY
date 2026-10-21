@@ -4,7 +4,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽·原生) - xiaohe
+- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
   type: vless
   server: 61.230.160.34
   port: 24215
@@ -22,11 +22,11 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽·原生) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽·原生) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

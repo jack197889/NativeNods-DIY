@@ -4,7 +4,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇳 中国大陆 (China) 01 (家宽·原生) - xiaohe
+- name: 🇨🇳 中国大陆 (China) 01 (家宽) - xiaohe
   type: vmess
   server: 112.132.215.108
   port: 50002
@@ -18,11 +18,11 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇨🇳 中国大陆 (China) 01 (家宽·原生) - xiaohe
+  - 🇨🇳 中国大陆 (China) 01 (家宽) - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇨🇳 中国大陆 (China) 01 (家宽·原生) - xiaohe
+  - 🇨🇳 中国大陆 (China) 01 (家宽) - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -6,22 +6,13 @@ log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 - xiaohe
   type: vless
-  server: 172.64.150.43
-  port: 8080
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  network: ws
-  ws-opts:
-    path: /sg-melbi
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-- name: 🇸🇬 新加坡 (Singapore) 02 - xiaohe
-  type: vless
   server: 104.21.70.21
-  port: 8080
+  port: 443
   udp: true
   uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
   packet-encoding: xudp
+  tls: true
+  servername: nautica-cff.kloningstrife002.workers.dev
   network: ws
   ws-opts:
     path: /138.2.74.219-28616
@@ -33,12 +24,10 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇸🇬 新加坡 (Singapore) 01 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 02 - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇸🇬 新加坡 (Singapore) 01 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 02 - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

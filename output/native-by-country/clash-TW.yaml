@@ -6,20 +6,34 @@ log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 (原生) - xiaohe
   type: hysteria2
-  server: vpn-tw-002.fastervpn.world
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: speedtest.tinkoff.ru
-  skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 02 (原生) - xiaohe
-  type: hysteria2
   server: 103.115.109.49
   port: 443
   udp: true
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   sni: https%3a%2f%2ft.me%2fwangcai2
   skip-cert-verify: true
+- name: 🇹🇼 中国台湾 (Taiwan) 02 (原生) - xiaohe
+  type: hysteria2
+  server: vpn-tw-002.fastervpn.world
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: whatsapp.com
+  skip-cert-verify: true
+- name: 🇹🇼 中国台湾 (Taiwan) 03 (原生) - xiaohe
+  type: vless
+  server: 59.125.69.22
+  port: 443
+  udp: true
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
+  tls: true
+  servername: tse1.mm.bing.net
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+    headers:
+      Host: tse1.mm.bing.net
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -27,11 +41,13 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇹🇼 中国台湾 (Taiwan) 01 (原生) - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 02 (原生) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 03 (原生) - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01 (原生) - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 02 (原生) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 03 (原生) - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
