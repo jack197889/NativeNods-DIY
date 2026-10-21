@@ -1,0 +1,64 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇷🇴 罗马尼亚 (Romania) 01 (原生) - xiaohe
+  type: trojan
+  server: de1.dedushka.top
+  port: 443
+  udp: true
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  sni: de1.dedushka.top
+  network: tcp
+- name: 🇷🇴 罗马尼亚 (Romania) 02 (原生) - xiaohe
+  type: trojan
+  server: it1.dedushka.top
+  port: 443
+  udp: true
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  sni: it1.dedushka.top
+  network: tcp
+- name: 🇷🇴 罗马尼亚 (Romania) 03 (原生) - xiaohe
+  type: vless
+  server: edge10.cyrionflare.com
+  port: 2052
+  udp: true
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+  network: tcp
+- name: 🇷🇴 罗马尼亚 (Romania) 04 (原生) - xiaohe
+  type: vless
+  server: 146.70.124.85
+  port: 443
+  udp: true
+  uuid: 40abbe13-f02e-4da2-9b19-966c2c3eb4ee
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.datadoghq.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: byzvlw97wjAAAfHs5AZRV0P0H6_JKBEZ4yfLS0HNewE
+    short-id: fe24f8a0a560056e
+  network: tcp
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇷🇴 罗马尼亚 (Romania) 01 (原生) - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 02 (原生) - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 03 (原生) - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 04 (原生) - xiaohe
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇷🇴 罗马尼亚 (Romania) 01 (原生) - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 02 (原生) - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 03 (原生) - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 04 (原生) - xiaohe
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

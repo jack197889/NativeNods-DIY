@@ -1,0 +1,35 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇪🇪 EE 01 (原生) - xiaohe
+  type: vless
+  server: 93.89.220.37
+  port: 443
+  udp: true
+  uuid: 185e2bb3-2934-48d0-bbd5-dd20d16e83ee
+  flow: xtls-rprx-vision
+  tls: true
+  servername: ibm.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: lwKaUQ81wJUJRsqAPsfTPj5V_f9N50UYEwzRI_nuq2g
+    short-id: e88cb983f3c97528
+  network: tcp
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇪🇪 EE 01 (原生) - xiaohe
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇪🇪 EE 01 (原生) - xiaohe
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

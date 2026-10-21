@@ -1,0 +1,215 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇩🇪 德国 (Germany) 01 (原生) - xiaohe
+  type: vless
+  server: 188.114.96.9
+  port: 443
+  udp: true
+  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
+  tls: true
+  servername: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrj
+    headers:
+      Host: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
+- name: 🇩🇪 德国 (Germany) 02 (原生) - xiaohe
+  type: vless
+  server: 104.16.71.200
+  port: 443
+  udp: true
+  uuid: ef90e2bc-3a44-4501-a3ea-bf09db2a5add
+  tls: true
+  servername: 36Z9gwXP6-QFZHXPojDTktyP-r0eq.MosVSDbdbdbD.WorKErS.DEv
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/TbCP2PwiJ42OB798hgBhfWy85gAaq
+    headers:
+      Host: 36Z9gwXP6-QFZHXPojDTktyP-r0eq.MosVSDbdbdbD.WorKErS.DEv
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇩🇪 德国 (Germany) 03 (原生) - xiaohe
+  type: ss
+  server: 213.202.208.199
+  port: 5000
+  udp: true
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: 🇩🇪 德国 (Germany) 04 (原生) - xiaohe
+  type: vmess
+  server: lucas.ehsanazizi-speed-server.com
+  port: 2110
+  udp: true
+  uuid: 06d4d001-4168-4876-9416-7caecf578f40
+  alterId: 0
+  cipher: auto
+  network: tcp
+- name: 🇩🇪 德国 (Germany) 05 (原生) - xiaohe
+  type: vless
+  server: 46.225.46.136
+  port: 2087
+  udp: true
+  uuid: a5db5ab5-8d28-49c0-ad55-0ad4724e4c0d
+  tls: true
+  servername: hoert1rert.localip.ir
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /hokm
+    headers:
+      Host: hoert1rert.localip.ir
+- name: 🇩🇪 德国 (Germany) 06 (原生) - xiaohe
+  type: vless
+  server: alman.5f2vvtqh5syot.info
+  port: 443
+  udp: true
+  uuid: ed6c724c-435f-4f83-a781-f57579af320b
+  tls: true
+  servername: alman.5f2vvtqh5syot.info
+  network: ws
+  ws-opts:
+    path: /9d9fdbc18c834cffab4276811501fbae
+    headers:
+      Host: alman.5f2vvtqh5syot.info
+- name: 🇩🇪 德国 (Germany) 07 (原生) - xiaohe
+  type: vless
+  server: sino.bestsellers1.site
+  port: 2083
+  udp: true
+  uuid: 7858128a-6b5e-4f86-9bff-52c1f1e6439d
+  tls: true
+  servername: sino.bestsellers1.site
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sino.bestsellers1.site
+- name: 🇩🇪 德国 (Germany) 08 (原生) - xiaohe
+  type: vless
+  server: test.wecantos.site
+  port: 20000
+  udp: true
+  uuid: ca59a503-db23-44af-9879-49747d8da98f
+  network: tcp
+- name: 🇩🇪 德国 (Germany) 09 (原生) - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: a8a6aba0-bbe4-4eaa-8bb7-98601ef162bc
+  tls: true
+  servername: omid-3x-ui.abolfzlllll.us.ci
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: omid-3x-ui.abolfzlllll.us.ci
+- name: 🇩🇪 德国 (Germany) 10 (原生) - xiaohe
+  type: hysteria2
+  server: 1o2.690423.xyz
+  port: 8443
+  udp: true
+  password: myptyun.Hu5bS3VYUd3iqmaU
+  sni: 1o2.690423.xyz
+  skip-cert-verify: true
+- name: 🇩🇪 德国 (Germany) 11 (原生) - xiaohe
+  type: vmess
+  server: 91.107.169.224
+  port: 80
+  udp: true
+  uuid: d4b69108-f756-48af-a331-e8356bc95eb4
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    v2ray-http-upgrade: true
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.dns-look.space.
+- name: 🇩🇪 德国 (Germany) 12 (原生) - xiaohe
+  type: vless
+  server: connect.wecantos.site
+  port: 10000
+  udp: true
+  uuid: a05ecf37-c661-4247-ab09-4432cf0f3cc1
+  network: tcp
+- name: 🇩🇪 德国 (Germany) 13 (原生) - xiaohe
+  type: vless
+  server: mci1.amir12.ir
+  port: 1222
+  udp: true
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  tls: true
+  servername: play.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
+    short-id: a25d0f
+  network: tcp
+- name: 🇩🇪 德国 (Germany) 14 (原生) - xiaohe
+  type: vless
+  server: 31.70.111.146
+  port: 443
+  udp: true
+  uuid: 84ed0e09-6803-4ef9-a977-74b657d971e5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ZNmuzIn-zyJi2C0sWRpL9fsMYCgYauXpJElXTqY_LEE
+    short-id: d7de3a6ff4018957
+  network: tcp
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇩🇪 德国 (Germany) 01 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 02 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 03 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 04 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 05 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 06 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 07 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 08 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 09 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 10 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 11 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 12 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 13 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 14 (原生) - xiaohe
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇩🇪 德国 (Germany) 01 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 02 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 03 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 04 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 05 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 06 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 07 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 08 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 09 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 10 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 11 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 12 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 13 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 14 (原生) - xiaohe
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

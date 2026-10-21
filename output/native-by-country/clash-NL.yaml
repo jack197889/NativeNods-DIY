@@ -1,0 +1,94 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇳🇱 荷兰 (Netherlands) 01 (原生) - xiaohe
+  type: vless
+  server: 172.67.155.222
+  port: 443
+  udp: true
+  uuid: 82b279c6-5cba-3a96-f8bd-780a00000035
+  packet-encoding: xudp
+  tls: true
+  servername: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
+- name: 🇳🇱 荷兰 (Netherlands) 02 (原生) - xiaohe
+  type: ss
+  server: 158.173.20.208
+  port: 443
+  udp: true
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇳🇱 荷兰 (Netherlands) 03 (原生) - xiaohe
+  type: vless
+  server: dns5.m3hrzd.ir
+  port: 8055
+  udp: true
+  uuid: b4ce2452-5f71-4137-8cf9-0467ca5b07b0
+  flow: xtls-rprx-vision
+  tls: true
+  servername: race.egistration.ir
+  client-fingerprint: edge
+  reality-opts:
+    public-key: 4ExW95eL_lG7-vBq744NvIrYYm9tQyl33xf5mqNvEho
+    short-id: 967a1145531e3868
+  network: tcp
+- name: 🇳🇱 荷兰 (Netherlands) 04 (原生) - xiaohe
+  type: ss
+  server: 158.173.20.171
+  port: 443
+  udp: true
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇳🇱 荷兰 (Netherlands) 05 (原生) - xiaohe
+  type: vless
+  server: dns11.m3hrzd.ir
+  port: 8030
+  udp: true
+  uuid: b4ce2452-5f71-4137-8cf9-0467ca5b07b0
+  tls: true
+  servername: race.egistration.ir
+  client-fingerprint: edge
+  reality-opts:
+    public-key: yNCiWHU2y1M-cWl5jJLfSDwwYM_9gdP5sqBLANxxdAs
+    short-id: 38dda82955d5791e
+  network: tcp
+- name: 🇳🇱 荷兰 (Netherlands) 06 (原生) - xiaohe
+  type: hysteria2
+  server: nl-hy-test.tcp-reset-club.net
+  port: 443
+  udp: true
+  password: 529f1911-04d5-4427-94b9-c851fd459a27
+  sni: nl-hy-test.tcp-reset-club.net
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇳🇱 荷兰 (Netherlands) 01 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 02 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 03 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 04 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 05 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 06 (原生) - xiaohe
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇳🇱 荷兰 (Netherlands) 01 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 02 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 03 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 04 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 05 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 06 (原生) - xiaohe
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

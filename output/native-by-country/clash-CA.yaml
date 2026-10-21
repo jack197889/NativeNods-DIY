@@ -1,0 +1,165 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇨🇦 加拿大 (Canada) 01 (原生) - xiaohe
+  type: vless
+  server: 66.70.179.198
+  port: 2053
+  udp: true
+  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
+    short-id: 83f8317a948bb769
+  network: tcp
+- name: 🇨🇦 加拿大 (Canada) 02 (原生) - xiaohe
+  type: ss
+  server: 51.222.136.236
+  port: 8882
+  udp: true
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
+- name: 🇨🇦 加拿大 (Canada) 03 (原生) - xiaohe
+  type: ss
+  server: 51.79.64.198
+  port: 8119
+  udp: true
+  cipher: aes-256-gcm
+  password: cdBIDV42DCwnfIN
+- name: 🇨🇦 加拿大 (Canada) 04 (原生) - xiaohe
+  type: vmess
+  server: 134.195.196.211
+  port: 18000
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  network: tcp
+- name: 🇨🇦 加拿大 (Canada) 05 (原生) - xiaohe
+  type: vless
+  server: 103.106.229.37
+  port: 21004
+  udp: true
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: 2df2bd9d8366cef1
+  network: tcp
+- name: 🇨🇦 加拿大 (Canada) 06 (原生) - xiaohe
+  type: vless
+  server: 510.150333.xyz
+  port: 21003
+  udp: true
+  uuid: 67952583-8572-42e1-943d-0602794f885b
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
+    short-id: f3602a3a1cf928b7
+  network: tcp
+- name: 🇨🇦 加拿大 (Canada) 07 (原生) - xiaohe
+  type: vless
+  server: milo.networkforexir.site
+  port: 8080
+  udp: true
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+  network: tcp
+- name: 🇨🇦 加拿大 (Canada) 08 (原生) - xiaohe
+  type: ss
+  server: 51.222.141.125
+  port: 445
+  udp: true
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
+- name: 🇨🇦 加拿大 (Canada) 09 (原生) - xiaohe
+  type: ss
+  server: 51.222.155.32
+  port: 5003
+  udp: true
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: 🇨🇦 加拿大 (Canada) 10 (原生) - xiaohe
+  type: ss
+  server: 51.222.200.165
+  port: 5000
+  udp: true
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: 🇨🇦 加拿大 (Canada) 11 (原生) - xiaohe
+  type: ss
+  server: 51.222.155.113
+  port: 5601
+  udp: true
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: 🇨🇦 加拿大 (Canada) 12 (原生) - xiaohe
+  type: ss
+  server: 51.79.85.185
+  port: 8118
+  udp: true
+  cipher: aes-256-gcm
+  password: cdBIDV42DCwnfIN
+- name: 🇨🇦 加拿大 (Canada) 13 (原生) - xiaohe
+  type: ss
+  server: 51.79.49.116
+  port: 8882
+  udp: true
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
+- name: 🇨🇦 加拿大 (Canada) 14 (原生) - xiaohe
+  type: ss
+  server: 51.222.12.127
+  port: 445
+  udp: true
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇨🇦 加拿大 (Canada) 01 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 02 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 03 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 04 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 05 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 06 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 07 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 08 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 09 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 10 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 11 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 12 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 13 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 14 (原生) - xiaohe
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇨🇦 加拿大 (Canada) 01 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 02 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 03 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 04 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 05 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 06 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 07 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 08 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 09 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 10 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 11 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 12 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 13 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 14 (原生) - xiaohe
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

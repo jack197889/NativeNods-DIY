@@ -1,0 +1,28 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇮🇪 爱尔兰 (Ireland) 01 (原生) - xiaohe
+  type: vless
+  server: 18.134.224.162
+  port: 22223
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  network: tcp
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇮🇪 爱尔兰 (Ireland) 01 (原生) - xiaohe
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇮🇪 爱尔兰 (Ireland) 01 (原生) - xiaohe
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

@@ -1,67 +1,28 @@
 port: 7890
 socks-port: 7891
-allow-lan: true
+allow-lan: false
 mode: rule
 log-level: info
 proxies:
 - name: 🇮🇪 爱尔兰 (Ireland) 01 - xiaohe
-  server: 18.169.146.8
-  port: 22223
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇮🇪 爱尔兰 (Ireland) 02 - xiaohe
-  server: 52.214.157.27
+  type: ss
+  server: 104.46.14.31
   port: 443
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇮🇪 爱尔兰 (Ireland) 03 - xiaohe
-  server: 18.169.146.8
-  port: 22222
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇮🇪 爱尔兰 (Ireland) 04 - xiaohe
-  server: 51.200.48.17
-  port: 22223
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇮🇪 爱尔兰 (Ireland) 05 - xiaohe
-  server: 51.200.48.17
-  port: 22224
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇮🇪 爱尔兰 (Ireland) 06 - xiaohe
-  server: 51.200.48.17
-  port: 22222
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  cipher: chacha20-ietf-poly1305
+  password: dIuRNbl5mM2ac6d0
 proxy-groups:
-- name: PROXIES
+- name: 🚀 节点选择
   type: select
   proxies:
-  - AUTO
+  - ♻️ 自动选择
   - 🇮🇪 爱尔兰 (Ireland) 01 - xiaohe
-  - 🇮🇪 爱尔兰 (Ireland) 02 - xiaohe
-  - 🇮🇪 爱尔兰 (Ireland) 03 - xiaohe
-  - 🇮🇪 爱尔兰 (Ireland) 04 - xiaohe
-  - 🇮🇪 爱尔兰 (Ireland) 05 - xiaohe
-  - 🇮🇪 爱尔兰 (Ireland) 06 - xiaohe
-- name: AUTO
+- name: ♻️ 自动选择
   type: url-test
-  url: https://www.gstatic.com/generate_204
-  interval: 300
   proxies:
   - 🇮🇪 爱尔兰 (Ireland) 01 - xiaohe
-  - 🇮🇪 爱尔兰 (Ireland) 02 - xiaohe
-  - 🇮🇪 爱尔兰 (Ireland) 03 - xiaohe
-  - 🇮🇪 爱尔兰 (Ireland) 04 - xiaohe
-  - 🇮🇪 爱尔兰 (Ireland) 05 - xiaohe
-  - 🇮🇪 爱尔兰 (Ireland) 06 - xiaohe
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
 rules:
-- MATCH,PROXIES
+- MATCH,🚀 节点选择

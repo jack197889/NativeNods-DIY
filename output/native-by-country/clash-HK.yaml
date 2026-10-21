@@ -1,0 +1,70 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇭🇰 中国香港 (Hong Kong) 01 (原生) - xiaohe
+  type: hysteria2
+  server: 202.146.222.29
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https%3a%2f%2ft.me%2fwangcai2%d1%80%d2%b9%d2%af%d1%91%d1%80%d2%b9%d2%af%d1%96
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 02 (原生) - xiaohe
+  type: hysteria2
+  server: 202.146.222.174
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 03 (原生) - xiaohe
+  type: vless
+  server: 45.202.248.173
+  port: 9443
+  udp: true
+  uuid: 82eb8419-59f4-4d3e-9106-d05d22af615c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.amazon.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
+    short-id: b390142456517acc
+  network: tcp
+- name: 🇭🇰 中国香港 (Hong Kong) 04 (原生) - xiaohe
+  type: vless
+  server: us.mediabox12wrr.site
+  port: 8443
+  udp: true
+  uuid: 1566a6e1-8181-41ef-894c-6d6d0d482470
+  tls: true
+  servername: us.mediabox12wrr.site
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /dfefc609ed724b3d8647ed29
+    headers:
+      Host: us.mediabox12wrr.site
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇭🇰 中国香港 (Hong Kong) 01 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 02 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 03 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 04 (原生) - xiaohe
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇭🇰 中国香港 (Hong Kong) 01 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 02 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 03 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 04 (原生) - xiaohe
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

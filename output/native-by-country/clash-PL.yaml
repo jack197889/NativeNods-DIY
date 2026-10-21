@@ -1,0 +1,55 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇵🇱 波兰 (Poland) 01 (原生) - xiaohe
+  type: vless
+  server: 83.168.71.216
+  port: 443
+  udp: true
+  uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a
+  tls: true
+  servername: ads.x5.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho
+    short-id: 2f49bccf11150ef2
+  network: tcp
+- name: 🇵🇱 波兰 (Poland) 02 (原生) - xiaohe
+  type: trojan
+  server: pl1.dedushka.top
+  port: 443
+  udp: true
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  sni: pl1.dedushka.top
+  network: tcp
+- name: 🇵🇱 波兰 (Poland) 03 (原生) - xiaohe
+  type: trojan
+  server: pl2.dedushka.top
+  port: 443
+  udp: true
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  sni: pl2.dedushka.top
+  client-fingerprint: chrome
+  network: tcp
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇵🇱 波兰 (Poland) 01 (原生) - xiaohe
+  - 🇵🇱 波兰 (Poland) 02 (原生) - xiaohe
+  - 🇵🇱 波兰 (Poland) 03 (原生) - xiaohe
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇵🇱 波兰 (Poland) 01 (原生) - xiaohe
+  - 🇵🇱 波兰 (Poland) 02 (原生) - xiaohe
+  - 🇵🇱 波兰 (Poland) 03 (原生) - xiaohe
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择
