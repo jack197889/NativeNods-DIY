@@ -6,32 +6,32 @@ log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 (原生) - xiaohe
   type: vless
+  server: 128.241.25.127
+  port: 30036
+  udp: true
+  uuid: a1b59134-6cd4-496a-8aa8-bb224e75e800
+  tls: true
+  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+- name: 🇯🇵 日本 (Japan) 02 (原生) - xiaohe
+  type: vless
   server: 128.241.25.3
   port: 30021
   udp: true
-  uuid: e18901aa-2836-44ce-a1d7-af6b174ccae7
+  uuid: 53339ee0-1412-4550-89c7-48d1cb71b390
   tls: true
-  servername: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+  servername: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
   client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /@Marisa_kristi
     headers:
-      Host: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
-- name: 🇯🇵 日本 (Japan) 02 (原生) - xiaohe
-  type: vless
-  server: 128.241.25.11
-  port: 30021
-  udp: true
-  uuid: c03bbba1-93ab-4781-8e8e-089cd257193f
-  tls: true
-  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+      Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
 - name: 🇯🇵 日本 (Japan) 03 (原生) - xiaohe
   type: vless
   server: 128.241.25.3
@@ -48,19 +48,48 @@ proxies:
       Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
 - name: 🇯🇵 日本 (Japan) 04 (原生) - xiaohe
   type: vless
-  server: 128.241.25.3
-  port: 30021
+  server: 57.129.130.57
+  port: 52014
   udp: true
-  uuid: 0e8371c0-0287-4805-a882-42a7b482a9de
+  uuid: b30c54d5-315f-428c-80d0-83b4f423abb2
   tls: true
-  servername: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
+  servername: ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev
   client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /@Marisa_kristi
     headers:
-      Host: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
+      Host: ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev
 - name: 🇯🇵 日本 (Japan) 05 (原生) - xiaohe
+  type: vless
+  server: 57.129.130.57
+  port: 52014
+  udp: true
+  uuid: 201e0019-2e79-4147-8a09-e510d630abeb
+  packet-encoding: xudp
+  tls: true
+  servername: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+- name: 🇯🇵 日本 (Japan) 06 (原生) - xiaohe
+  type: vless
+  server: 79.137.199.52
+  port: 21
+  udp: true
+  uuid: f346f223-ebf6-4da3-955e-425de7e9c372
+  tls: true
+  servername: 8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev
+- name: 🇯🇵 日本 (Japan) 07 (原生) - xiaohe
   type: vless
   server: 142.91.108.25
   port: 443
@@ -74,48 +103,6 @@ proxies:
     public-key: 9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM
     short-id: ea36c03d86f91287
   network: tcp
-- name: 🇯🇵 日本 (Japan) 06 (原生) - xiaohe
-  type: vless
-  server: 103.75.118.228
-  port: 11452
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: random
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  network: tcp
-- name: 🇯🇵 日本 (Japan) 07 (原生) - xiaohe
-  type: vless
-  server: 203.137.165.164
-  port: 57554
-  udp: true
-  uuid: a2336cca-3fd0-45cb-8ac5-1de6d17692b2
-  tls: true
-  servername: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
-- name: 🇯🇵 日本 (Japan) 08 (原生) - xiaohe
-  type: vless
-  server: 45.77.241.190
-  port: 8441
-  udp: true
-  uuid: d492bf74-6555-4b57-94f0-52b56adbc760
-  tls: true
-  servername: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -128,7 +115,6 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 05 (原生) - xiaohe
   - 🇯🇵 日本 (Japan) 06 (原生) - xiaohe
   - 🇯🇵 日本 (Japan) 07 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 08 (原生) - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -139,7 +125,6 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 05 (原生) - xiaohe
   - 🇯🇵 日本 (Japan) 06 (原生) - xiaohe
   - 🇯🇵 日本 (Japan) 07 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 08 (原生) - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

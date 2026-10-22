@@ -5,27 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - xiaohe
-  type: vmess
-  server: 84.17.41.2
-  port: 18000
-  udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  network: tcp
-- name: 🇺🇸 美国 (United States) 02 - xiaohe
   type: vless
-  server: 172.67.155.65
-  port: 8443
+  server: 188.114.98.0
+  port: 443
   udp: true
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
   servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /cart/docs/www/proxyip?ed#
+    path: ?TELEGRAM--i10VPN?ed
     headers:
       Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 02 - xiaohe
+  type: ss
+  server: 185.230.230.18
+  port: 19999
+  udp: true
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇺🇸 美国 (United States) 03 - xiaohe
   type: vless
   server: 188.114.98.0
@@ -39,13 +40,13 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: ?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    path: /?DailyConfigs---DailyConfigs---DailyConfigs?ed
     headers:
       Host: lucasjow.us.ci
 - name: 🇺🇸 美国 (United States) 04 - xiaohe
   type: vless
-  server: 172.67.155.65
-  port: 8443
+  server: 104.18.43.174
+  port: 443
   udp: true
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
@@ -53,7 +54,7 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed
     headers:
       Host: lucasjow.us.ci
 - name: 🇺🇸 美国 (United States) 05 - xiaohe
@@ -64,54 +65,54 @@ proxies:
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
   servername: lucasjow.us.ci
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /cart/docs/www/proxyip
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 06 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM-TOOTFFARANGIfp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 07 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?V2XAY-joinV
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 08 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
   alpn:
   - http/1.1
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?Telegram---TEHRANARGO
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 06 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: 0aab6adc-104c-4339-8d25-09755ffe2cbd
+  packet-encoding: xudp
+  tls: true
+  servername: liang92.dpdns.org
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: liang92.dpdns.org
+- name: 🇺🇸 美国 (United States) 07 - xiaohe
+  type: vless
+  server: 104.18.40.100
+  port: 443
+  udp: true
+  uuid: d342d11e-d224-4463-b982-532309285094
+  tls: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- name: 🇺🇸 美国 (United States) 08 - xiaohe
+  type: vless
+  server: 172.67.155.65
+  port: 8443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed
     headers:
       Host: lucasjow.us.ci
 - name: 🇺🇸 美国 (United States) 09 - xiaohe
@@ -124,10 +125,183 @@ proxies:
   servername: lucasjow.us.ci
   network: ws
   ws-opts:
-    path: /?Telegram---mehrosaboran?ed
+    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET?fp=chrome
     headers:
       Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
 - name: 🇺🇸 美国 (United States) 10 - xiaohe
+  type: vless
+  server: 104.21.91.244
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 11 - xiaohe
+  type: vless
+  server: 104.21.91.244
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 12 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /?Telegram---bored_vpnfp=chrome
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 13 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: ?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 14 - xiaohe
+  type: vless
+  server: 172.67.155.65
+  port: 8443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /cart/docs/www/proxyip
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 15 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?Telegram---bored_vpn
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 16 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 17 - xiaohe
+  type: vless
+  server: 104.21.91.244
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: ?---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 18 - xiaohe
+  type: vless
+  server: 104.18.43.174
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 19 - xiaohe
+  type: vless
+  server: 162.159.250.29
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 20 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--i10VPN?edfp=chrome
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 21 - xiaohe
   type: vless
   server: 172.67.155.65
   port: 8443
@@ -144,22 +318,7 @@ proxies:
       Host: lucasjow.us.ci
     max-early-data: 512
     early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 11 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?Telegram---V2ray_confiig
-    headers:
-      Host: lucasjow.us.ci
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 12 - xiaohe
+- name: 🇺🇸 美国 (United States) 22 - xiaohe
   type: vless
   server: 188.114.98.0
   port: 443
@@ -172,44 +331,26 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: ?TELEGRAM--MTMVPN--MTMVPN--MTMVPN--MTMVPN
+    path: T
     headers:
       Host: lucasjow.us.ci
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 13 - xiaohe
+- name: 🇺🇸 美国 (United States) 23 - xiaohe
   type: vless
-  server: 188.114.98.0
+  server: 188.164.248.216
   port: 443
   udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  uuid: d342d11e-d224-4463-b982-532309285094
   tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM-TOOTFFARANGI
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 14 - xiaohe
-  type: vless
-  server: cf-socks.caoyuwu.eu.org
-  port: 443
-  udp: true
-  uuid: 9cdcbaf0-d244-4f37-b227-90166e43f5b5
-  tls: true
-  servername: cf-socks.caoyuwu.eu.org
+  servername: ccc.010304.xyz
   client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: cf-socks.caoyuwu.eu.org
-- name: 🇺🇸 美国 (United States) 15 - xiaohe
+      Host: ccc.010304.xyz
+- name: 🇺🇸 美国 (United States) 24 - xiaohe
   type: vless
-  server: 104.21.91.244
+  server: 188.114.98.0
   port: 443
   udp: true
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
@@ -225,157 +366,21 @@ proxies:
       Host: lucasjow.us.ci
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 16 - xiaohe
-  type: vless
-  server: 172.67.155.65
-  port: 2053
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 17 - xiaohe
-  type: vless
-  server: cf.877774.xyz
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  client-fingerprint: qq
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 18 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /cart/docs/www/proxyipfp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 19 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: '0'
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 20 - xiaohe
-  type: vless
-  server: 104.21.91.244
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: ?TELEGRAM--MTMVPN--MTMVPN--MTMVPN--MTMVPN
-    headers:
-      Host: lucasjow.us.ci
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 21 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?SAFEWEBS_SAFEWEBS_SAFEWEBS_SAFEWEBSfp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 22 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hubfp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 23 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?DailyConfigs---DailyConfigs---DailyConfigs
-    headers:
-      Host: lucasjow.us.ci
-    max-early-data: 2056
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 24 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub
-    headers:
-      Host: lucasjow.us.ci
 - name: 🇺🇸 美国 (United States) 25 - xiaohe
   type: vless
-  server: 188.114.97.6
-  port: 443
+  server: 172.67.155.65
+  port: 8443
   udp: true
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
   servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /Chanel0111Net
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
     headers:
       Host: lucasjow.us.ci
+    max-early-data: 512
+    early-data-header-name: Sec-WebSocket-Protocol
 - name: 🇺🇸 美国 (United States) 26 - xiaohe
   type: vless
   server: 188.114.97.6
@@ -384,6 +389,8 @@ proxies:
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
   servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
   client-fingerprint: chrome
   network: ws
   ws-opts:
@@ -394,16 +401,18 @@ proxies:
     early-data-header-name: Sec-WebSocket-Protocol
 - name: 🇺🇸 美国 (United States) 27 - xiaohe
   type: vless
-  server: 104.21.91.244
+  server: 188.114.98.0
   port: 443
   udp: true
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
   servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
+    path: /cart/docs/www/proxyipfp=chrome
     headers:
       Host: lucasjow.us.ci
 - name: 🇺🇸 美国 (United States) 28 - xiaohe
@@ -419,25 +428,25 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: '0'
+    path: ?Telegram---TEHRANARGO
     headers:
       Host: lucasjow.us.ci
 - name: 🇺🇸 美国 (United States) 29 - xiaohe
   type: vless
-  server: 188.114.98.0
+  server: 188.114.97.6
   port: 443
   udp: true
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
   servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?Telegram---DailyConfigs---DailyConfigs---DailyConfigs#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    path: /?DailyConfigs---DailyConfigs---DailyConfigs
     headers:
       Host: lucasjow.us.ci
+    max-early-data: 2056
+    early-data-header-name: Sec-WebSocket-Protocol
 - name: 🇺🇸 美国 (United States) 30 - xiaohe
   type: vless
   server: 188.114.98.0
@@ -446,17 +455,17 @@ proxies:
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
   servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?TELEGRAM--MTMVPN--MTMVPN--MTMVPN--MTMVPN
+    path: /?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM
     headers:
       Host: lucasjow.us.ci
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
 - name: 🇺🇸 美国 (United States) 31 - xiaohe
   type: vless
-  server: 188.114.98.0
+  server: 188.114.97.6
   port: 443
   udp: true
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
@@ -464,27 +473,13 @@ proxies:
   servername: lucasjow.us.ci
   alpn:
   - http/1.1
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /cart/docs/www/proxyip?ed#Telegram---bored_vpn
+    path: /?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hubfp=chrome
     headers:
       Host: lucasjow.us.ci
 - name: 🇺🇸 美国 (United States) 32 - xiaohe
   type: vless
-  server: cf.877774.xyz
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /+
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 33 - xiaohe
-  type: vless
   server: 188.114.98.0
   port: 443
   udp: true
@@ -496,9 +491,27 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?V2XAY-joinV
+    path: /?Telegram---V2ray_confiig?ed
     headers:
       Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 33 - xiaohe
+  type: vless
+  server: 104.21.91.244
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: ?DailyConfigs---DailyConfigs---DailyConfigs
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2056
+    early-data-header-name: Sec-WebSocket-Protocol
 - name: 🇺🇸 美国 (United States) 34 - xiaohe
   type: vless
   server: 188.114.98.0
@@ -512,79 +525,12 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /fp=chrome
+    path: ?TELEGRAM---MARAMBASHI---MARAMBASHI---MARAMBASHI---MARAMBASHI
     headers:
       Host: lucasjow.us.ci
 - name: 🇺🇸 美国 (United States) 35 - xiaohe
   type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 36 - xiaohe
-  type: vless
-  server: 104.18.43.174
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--v2ray_configs_pools?edfp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 37 - xiaohe
-  type: vless
   server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: Tfp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 38 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?Telegram---mehrosaboran
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 39 - xiaohe
-  type: vless
-  server: xstack.mahanfixe.workers.dev
-  port: 443
-  udp: true
-  uuid: a8b1d666-d3ba-4b17-90c4-ba7514c74f78
-  tls: true
-  servername: xstack.mahanfixe.workers.dev
-  network: ws
-  ws-opts:
-    path: /xiron
-    headers:
-      Host: xstack.mahanfixe.workers.dev
-- name: 🇺🇸 美国 (United States) 40 - xiaohe
-  type: vless
-  server: 104.21.91.244
   port: 443
   udp: true
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
@@ -595,38 +541,28 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---fp=chrome
+    path: ?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
     headers:
       Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 41 - xiaohe
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 36 - xiaohe
   type: vless
-  server: 188.164.248.216
-  port: 443
-  udp: true
-  uuid: d342d11e-d224-4463-b982-532309285094
-  tls: true
-  servername: ccc.010304.xyz
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- name: 🇺🇸 美国 (United States) 42 - xiaohe
-  type: vless
-  server: 188.114.98.0
+  server: 188.114.97.6
   port: 443
   udp: true
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
   servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?Telegram---mehrosaboranfp=chrome
+    path: /?Telegram---V2ray_confiig?ed
     headers:
       Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 43 - xiaohe
+- name: 🇺🇸 美国 (United States) 37 - xiaohe
   type: vless
   server: 188.114.97.6
   port: 443
@@ -637,27 +573,10 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?Telegram---bored_vpn
+    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
     headers:
       Host: lucasjow.us.ci
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 44 - xiaohe
-  type: vless
-  server: 172.67.155.65
-  port: 8443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?DailyConfigs---DailyConfigs---DailyConfigs
-    headers:
-      Host: lucasjow.us.ci
-    max-early-data: 2056
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 45 - xiaohe
+- name: 🇺🇸 美国 (United States) 38 - xiaohe
   type: vless
   server: 188.114.98.0
   port: 443
@@ -665,6 +584,125 @@ proxies:
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
   servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /V2ray_confiig---V2ray_confiig---V2ray_confiig
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 1024
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 39 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?Telegram---Vpney
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 40 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /Chanel0111Net
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 41 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM-TOOTFFARANGI
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 42 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 43 - xiaohe
+  type: vless
+  server: b2n.ir
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: ?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 44 - xiaohe
+  type: vless
+  server: 104.21.91.244
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 45 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /?TELEGRAM---MARAMBASHI---MARAMBASHI---MARAMBASHI---MARAMBASHI
@@ -683,12 +721,12 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: ?Telegram---mehrosaboran?ed
+    path: /cart/docs/www/proxyip?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM
     headers:
       Host: lucasjow.us.ci
 - name: 🇺🇸 美国 (United States) 47 - xiaohe
   type: vless
-  server: 188.114.97.6
+  server: 188.114.98.0
   port: 443
   udp: true
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
@@ -699,7 +737,23 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?TELEGRAM--V2ray_confiig
+    path: ?Telegram---i10VPN
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 48 - xiaohe
+  type: vless
+  server: 104.21.91.244
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: ?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub
     headers:
       Host: lucasjow.us.ci
     max-early-data: 2560
@@ -756,6 +810,7 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 45 - xiaohe
   - 🇺🇸 美国 (United States) 46 - xiaohe
   - 🇺🇸 美国 (United States) 47 - xiaohe
+  - 🇺🇸 美国 (United States) 48 - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -806,6 +861,7 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 45 - xiaohe
   - 🇺🇸 美国 (United States) 46 - xiaohe
   - 🇺🇸 美国 (United States) 47 - xiaohe
+  - 🇺🇸 美国 (United States) 48 - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

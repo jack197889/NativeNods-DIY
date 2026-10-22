@@ -6,19 +6,19 @@ log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01 (原生) - xiaohe
   type: trojan
-  server: pl1.dedushka.top
-  port: 443
-  udp: true
-  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
-  sni: pl1.dedushka.top
-  network: tcp
-- name: 🇵🇱 波兰 (Poland) 02 (原生) - xiaohe
-  type: trojan
   server: 31.133.0.186
   port: 443
   udp: true
   password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   sni: pl2.dedushka.top
+  network: tcp
+- name: 🇵🇱 波兰 (Poland) 02 (原生) - xiaohe
+  type: trojan
+  server: pl1.dedushka.top
+  port: 443
+  udp: true
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  sni: pl1.dedushka.top
   network: tcp
 - name: 🇵🇱 波兰 (Poland) 03 (原生) - xiaohe
   type: vless

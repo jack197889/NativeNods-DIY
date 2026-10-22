@@ -6,17 +6,10 @@ log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01 (原生) - xiaohe
   type: vless
-  server: 146.70.124.85
-  port: 443
+  server: edge10.cyrionflare.com
+  port: 2052
   udp: true
-  uuid: 40abbe13-f02e-4da2-9b19-966c2c3eb4ee
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.datadoghq.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: byzvlw97wjAAAfHs5AZRV0P0H6_JKBEZ4yfLS0HNewE
-    short-id: fe24f8a0a560056e
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择

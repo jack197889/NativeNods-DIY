@@ -19,6 +19,15 @@ proxies:
     short-id: b390142456517acc
   network: tcp
 - name: 🇭🇰 中国香港 (Hong Kong) 02 (原生) - xiaohe
+  type: vmess
+  server: 101.32.8.251
+  port: 50001
+  udp: true
+  uuid: 5706beb5-479b-475d-b557-00309327e9cc
+  alterId: 0
+  cipher: auto
+  network: tcp
+- name: 🇭🇰 中国香港 (Hong Kong) 03 (原生) - xiaohe
   type: vless
   server: 141.11.149.174
   port: 9443
@@ -32,30 +41,21 @@ proxies:
     public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
     short-id: b390142456517acc
   network: tcp
-- name: 🇭🇰 中国香港 (Hong Kong) 03 (原生) - xiaohe
-  type: vmess
-  server: 101.32.8.251
-  port: 50001
-  udp: true
-  uuid: 5706beb5-479b-475d-b557-00309327e9cc
-  alterId: 0
-  cipher: auto
-  network: tcp
 - name: 🇭🇰 中国香港 (Hong Kong) 04 (原生) - xiaohe
-  type: hysteria2
-  server: 202.146.222.174
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2🇨🇳
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 05 (原生) - xiaohe
   type: hysteria2
   server: 202.146.222.29
   port: 443
   udp: true
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: www.bing.com
+  sni: speedtest.tinkoff.ru
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 05 (原生) - xiaohe
+  type: hysteria2
+  server: 202.146.222.174
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https%3a%2f%2ft.me%2foneclickvpnkeys
   skip-cert-verify: true
 - name: 🇭🇰 中国香港 (Hong Kong) 06 (原生) - xiaohe
   type: vless
@@ -70,23 +70,6 @@ proxies:
     public-key: EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo
     short-id: eb9539689690d35c
   network: tcp
-- name: 🇭🇰 中国香港 (Hong Kong) 07 (原生) - xiaohe
-  type: vmess
-  server: hk2.998998.best
-  port: 443
-  udp: true
-  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: server15.9966338.xyz
-  network: ws
-  ws-opts:
-    path: /asivewritten
-    headers:
-      Host: server15.9966338.xyz
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -98,7 +81,6 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 04 (原生) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 05 (原生) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 06 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 07 (原生) - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -108,7 +90,6 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 04 (原生) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 05 (原生) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 06 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 07 (原生) - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
