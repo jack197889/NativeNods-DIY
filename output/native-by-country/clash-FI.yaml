@@ -4,30 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇱🇹 LT 01 (原生) - xiaohe
+- name: 🇫🇮 芬兰 (Finland) 01 (原生) - xiaohe
   type: vless
-  server: 84.32.109.20
+  server: 168.222.143.254
   port: 443
   udp: true
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
+  uuid: ebdf87e8-4f75-4b84-94e0-65ce4894993a
   flow: xtls-rprx-vision
   tls: true
-  servername: litv.nztvpn.com
+  servername: st.avito.ru
   client-fingerprint: chrome
   reality-opts:
-    public-key: 3jySGemfaqPZ2vM66Qtzo5SotO3eoRn1FeGaKp6KBQ4
-    short-id: 0da7e14db353e7d0
+    public-key: 3_Qy1SAtWfbiQbznyhlXxJtqB-5QQ46VF1Uz2h5A7Q4
+    short-id: 2dc17935
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇱🇹 LT 01 (原生) - xiaohe
+  - 🇫🇮 芬兰 (Finland) 01 (原生) - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇱🇹 LT 01 (原生) - xiaohe
+  - 🇫🇮 芬兰 (Finland) 01 (原生) - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

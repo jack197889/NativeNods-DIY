@@ -12,26 +12,29 @@ proxies:
   uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
   tls: true
   servername: addons.mozilla.org
-  client-fingerprint: firefox
+  client-fingerprint: ios
   reality-opts:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
     short-id: ''
   network: tcp
-- name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
-  type: anytls
-  server: 654968169.df6h451rh.xin
-  port: 443
+- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
+  type: vmess
+  server: 183.109.131.75
+  port: 20086
   udp: true
-  password: 0324fbc29561
-  sni: 654968169.df6h451rh.xin
-  skip-cert-verify: true
+  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
 - name: 🇨🇳 中国大陆 (China) 01 (家宽) - xiaohe
   type: vmess
   server: 112.132.215.108
   port: 50002
   udp: true
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
+  alterId: 0
   cipher: auto
   network: tcp
 proxy-groups:
@@ -40,13 +43,13 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
   - 🇨🇳 中国大陆 (China) 01 (家宽) - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
   - 🇨🇳 中国大陆 (China) 01 (家宽) - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300

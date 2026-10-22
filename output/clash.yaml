@@ -12,61 +12,321 @@ proxies:
   uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
   tls: true
   servername: addons.mozilla.org
-  client-fingerprint: firefox
+  client-fingerprint: ios
   reality-opts:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
     short-id: ''
   network: tcp
-- name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
-  type: anytls
-  server: 654968169.df6h451rh.xin
-  port: 443
+- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
+  type: vmess
+  server: 183.109.131.75
+  port: 20086
   udp: true
-  password: 0324fbc29561
-  sni: 654968169.df6h451rh.xin
-  skip-cert-verify: true
+  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
 - name: 🇨🇳 中国大陆 (China) 01 (家宽) - xiaohe
   type: vmess
   server: 112.132.215.108
   port: 50002
   udp: true
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
+  alterId: 0
   cipher: auto
   network: tcp
 - name: 🇺🇸 美国 (United States) 01 (原生) - xiaohe
-  type: vless
-  server: 172.245.253.16
+  type: trojan
+  server: resources.findlocaljobnetworkandbuildcommunityconnections.com
   port: 443
   udp: true
-  uuid: b67422ff-101b-433b-8f66-4ab282960b36
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: Vh8dv6ENmfFd4JlPgj9-R1Fbet2m6JyRFukcVvDq5A8
-    short-id: e7dc2c820ba8bbd4
+  password: f0eb8c92ce8946aaba856569cff1a16b
+  sni: resources.findlocaljobnetworkandbuildcommunityconnections.com
   network: tcp
 - name: 🇺🇸 美国 (United States) 02 (原生) - xiaohe
-  type: vless
-  server: 38.107.232.36
-  port: 80
+  type: trojan
+  server: resources.findlocaljobnetworkandbuildcommunityconnections.com
+  port: 443
   udp: true
-  uuid: 18cf8db1-9f86-43f7-baa0-382efb7f2dfa
-  network: ws
-  ws-opts:
-    path: /vless/
+  password: f0eb8c92ce8946aaba856569cff1a16b
+  sni: resources.findlocaljobnetworkandbuildcommunityconnections.com
+  skip-cert-verify: true
+  network: tcp
 - name: 🇺🇸 美国 (United States) 03 (原生) - xiaohe
   type: trojan
-  server: 66.23.203.21
-  port: 59689
+  server: www.findlocaljobnetworkandbuildcommunityconnections.com
+  port: 443
   udp: true
-  password: ae7eb4dwyaz25pxwgq59
-  sni: 66.23.203.21
+  password: 242a3d8eee5e4ed1a6bfa4141d549a25
+  sni: www.findlocaljobnetworkandbuildcommunityconnections.com
+  network: tcp
+- name: 🇺🇸 美国 (United States) 04 (原生) - xiaohe
+  type: trojan
+  server: blog.findlocaljobnetworkandbuildcommunityconnections.com
+  port: 443
+  udp: true
+  password: dba20dcb635e430fa4d3bfc303a149d2
+  sni: blog.findlocaljobnetworkandbuildcommunityconnections.com
+  skip-cert-verify: true
+  network: tcp
+- name: 🇺🇸 美国 (United States) 05 (原生) - xiaohe
+  type: trojan
+  server: 216.106.186.33
+  port: 443
+  udp: true
+  password: f0eb8c92ce8946aaba856569cff1a16b
+  sni: resources.findlocaljobnetworkandbuildcommunityconnections.com
   skip-cert-verify: true
   network: tcp
 - name: 🇩🇪 德国 (Germany) 01 (原生) - xiaohe
+  type: vless
+  server: 104.21.70.21
+  port: 8080
+  udp: true
+  uuid: 93fa8bdb-9cca-4a3e-8355-b7c12e4f595e
+  packet-encoding: xudp
+  network: ws
+  ws-opts:
+    path: /vl/yLWNcuUuw1jlJpkDhGy
+    headers:
+      Host: fornewiran.ade-1000.workers.dev
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 06 (原生) - xiaohe
+  type: vless
+  server: 172.67.174.10
+  port: 443
+  udp: true
+  uuid: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
+  tls: true
+  servername: blackshadow.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /44.209.52.7-443
+    headers:
+      Host: blackshadow.dpdns.org
+- name: 🇺🇸 美国 (United States) 07 (原生) - xiaohe
+  type: vless
+  server: fm3.pages.dev
+  port: 443
+  udp: true
+  uuid: e5833a75-2095-48bb-8bb5-ce17291efd13
+  tls: true
+  servername: fm3.pages.dev
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: fm3.pages.dev
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 08 (原生) - xiaohe
+  type: vless
+  server: 188.114.97.3
+  port: 2083
+  udp: true
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  packet-encoding: xudp
+  tls: true
+  servername: newwk1.f1w.de5.net
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: newwk1.f1w.de5.net
+- name: 🇺🇸 美国 (United States) 09 (原生) - xiaohe
+  type: vless
+  server: 15.204.97.197
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇺🇸 美国 (United States) 10 (原生) - xiaohe
+  type: vless
+  server: 15.204.97.206
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  alpn:
+  - http%2f1.1
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇺🇸 美国 (United States) 11 (原生) - xiaohe
+  type: vless
+  server: 15.204.97.195
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: random
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: ''
+  network: tcp
+- name: 🇺🇸 美国 (United States) 12 (原生) - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: a8b1d666-d3ba-4b17-90c4-ba7514c74f78
+  packet-encoding: xudp
+  tls: true
+  servername: xstack.mahanfixe.workers.dev
+  network: ws
+  ws-opts:
+    path: /xiron
+    headers:
+      Host: xstack.mahanfixe.workers.dev
+- name: 🇺🇸 美国 (United States) 13 (原生) - xiaohe
+  type: vless
+  server: 104.18.26.94
+  port: 443
+  udp: true
+  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
+  tls: true
+  servername: c7dabe95.proxy-978.pages.dev
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: c7dabe95.proxy-978.pages.dev
+- name: 🇺🇸 美国 (United States) 14 (原生) - xiaohe
+  type: vless
+  server: 15.204.97.214
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: random
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: ''
+  network: tcp
+- name: 🇺🇸 美国 (United States) 15 (原生) - xiaohe
+  type: vless
+  server: 15.204.97.209
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇺🇸 美国 (United States) 16 (原生) - xiaohe
+  type: trojan
+  server: www.wto.org
+  port: 8443
+  udp: true
+  password: ec1fa47d-4eac-4b3f-8cae-4a2982d43e2f
+  sni: jiangjc.pages.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: jiangjc.pages.dev
+- name: 🇺🇸 美国 (United States) 17 (原生) - xiaohe
+  type: vless
+  server: 172.67.167.179
+  port: 443
+  udp: true
+  uuid: a8b1d666-d3ba-4b17-90c4-ba7514c74f78
+  tls: true
+  servername: xstack.mahanfixe.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /xiron
+    headers:
+      Host: xstack.mahanfixe.workers.dev
+- name: 🇳🇱 荷兰 (Netherlands) 01 (原生) - xiaohe
+  type: vless
+  server: 172.67.155.222
+  port: 443
+  udp: true
+  uuid: 82b279c6-5cba-3a96-f8bd-780a00000035
+  packet-encoding: xudp
+  tls: true
+  servername: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
+- name: 🇺🇸 美国 (United States) 18 (原生) - xiaohe
+  type: vless
+  server: 172.64.155.209
+  port: 443
+  udp: true
+  uuid: 64726966-0000-4000-8000-740000000000
+  tls: true
+  servername: parsa-panel-dy55x.railway1385-2a46.workers.dev
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /drift
+    headers:
+      Host: parsa-panel-dy55x.railway1385-2a46.workers.dev
+- name: 🇺🇸 美国 (United States) 19 (原生) - xiaohe
+  type: vless
+  server: 15.204.97.219
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇺🇸 美国 (United States) 20 (原生) - xiaohe
+  type: vless
+  server: mybb.com
+  port: 443
+  udp: true
+  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
+  tls: true
+  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rayan-007.nastaran.dpdns.org
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 21 (原生) - xiaohe
   type: trojan
   server: 104.21.26.36
   port: 443
@@ -81,319 +341,147 @@ proxies:
       Host: vless.herogoing.top
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 04 (原生) - xiaohe
+- name: 🇺🇸 美国 (United States) 22 (原生) - xiaohe
   type: vless
-  server: 188.114.97.6
-  port: 443
+  server: 15.204.97.198
+  port: 23576
   udp: true
-  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
   tls: true
-  servername: server5.9966338.xyz
-  alpn:
-  - http/1.1
-  client-fingerprint: edge
-  network: ws
-  ws-opts:
-    path: /drsukitgreiusweqa9otrh983
-    headers:
-      Host: server5.9966338.xyz
-- name: 🇺🇸 美国 (United States) 05 (原生) - xiaohe
-  type: vmess
-  server: cf.0sm.com
-  port: 443
-  udp: true
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: vmess.lbw666.dpdns.org
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: vmess.lbw666.dpdns.org
-- name: 🇩🇪 德国 (Germany) 02 (原生) - xiaohe
-  type: vless
-  server: medium.com
-  port: 443
-  udp: true
-  uuid: f2a73750-3087-48ff-a763-1348c15dce68
-  tls: true
-  servername: rAyAn-007.mAxImA.DpDnS.OrG
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: rAyAn-007.mAxImA.DpDnS.OrG
-- name: 🇺🇸 美国 (United States) 06 (原生) - xiaohe
-  type: vmess
-  server: 172.67.187.145
-  port: 80
-  udp: true
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: vmess.lbw666.dpdns.org
-    max-early-data: 2048
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 07 (原生) - xiaohe
-  type: trojan
-  server: www.wto.org
-  port: 8443
-  udp: true
-  password: ec1fa47d-4eac-4b3f-8cae-4a2982d43e2f
-  sni: jiangjc.pages.dev
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: jiangjc.pages.dev
-- name: 🇳🇱 荷兰 (Netherlands) 01 (原生) - xiaohe
-  type: trojan
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  password: mitivpn
-  sni: de.mitivpn.in.net
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/--@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
-    headers:
-      Host: de.mitivpn.in.net
-- name: 🇺🇸 美国 (United States) 08 (原生) - xiaohe
-  type: vless
-  server: chatgpt.com
-  port: 443
-  udp: true
-  uuid: 64726966-0000-4000-8000-740000000000
-  tls: true
-  servername: parsa-panel-dy55x.railway1385-2a46.workers.dev
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /drift
-    headers:
-      Host: parsa-panel-dy55x.railway1385-2a46.workers.dev
-- name: 🇸🇬 新加坡 (Singapore) 01 (原生) - xiaohe
-  type: vless
-  server: 104.18.35.86
-  port: 2082
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  network: ws
-  ws-opts:
-    path: /fp
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-- name: 🇺🇸 美国 (United States) 09 (原生) - xiaohe
-  type: trojan
-  server: 69.164.240.85
-  port: 50875
-  udp: true
-  password: nwilryafgkyvuxauc8pz
-  skip-cert-verify: true
+  servername: fuck.rkn
+  client-fingerprint: random
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: ''
   network: tcp
-- name: 🇺🇸 美国 (United States) 10 (原生) - xiaohe
-  type: ss
-  server: 193.151.163.18
-  port: 19999
-  udp: true
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 11 (原生) - xiaohe
-  type: hysteria2
-  server: 129.213.91.185
-  port: 35013
-  udp: true
-  password: 4291c983-c520-46ac-82cc-48f14bef573f
-  sni: 129.213.91.185
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 12 (原生) - xiaohe
-  type: ss
-  server: 198.98.53.130
+- name: 🇺🇸 美国 (United States) 23 (原生) - xiaohe
+  type: vless
+  server: 44.248.233.99
   port: 443
   udp: true
-  cipher: chacha20-ietf-poly1305
-  password: eDfN7SODQceIOmIAbtJJtK
-- name: 🇺🇸 美国 (United States) 13 (原生) - xiaohe
-  type: vless
-  server: 159.89.87.21
-  port: 28190
-  udp: true
-  uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
+  uuid: 37615d66-5467-44a3-bc23-f2c3bef7f761
   flow: xtls-rprx-vision
   tls: true
   servername: aws.amazon.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
-    short-id: ''
-  network: tcp
-- name: 🇺🇸 美国 (United States) 14 (原生) - xiaohe
-  type: ss
-  server: 185.215.132.18
-  port: 19999
-  udp: true
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 15 (原生) - xiaohe
-  type: vless
-  server: 195.123.235.183
-  port: 443
-  udp: true
-  uuid: c14ec728-3eca-4750-87fc-fd1e6aeb81d5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: H3R3BUAl7thrIZsznTbb-eRREIjQOH2f3WO0oTN7OGY
-    short-id: a0e2a6074c6456b0
-  network: tcp
-- name: 🇺🇸 美国 (United States) 16 (原生) - xiaohe
-  type: vless
-  server: us-4bf85a22b1.shamanapp.online
-  port: 10453
-  udp: true
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-  tls: true
-  servername: www.google.com
-  client-fingerprint: random
-  reality-opts:
-    public-key: rAHMmpeUJ6uOoGgk31dTF4-1RTtLZFnOEs_li2AYQWc
-    short-id: ''
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TunService
-- name: 🇺🇸 美国 (United States) 17 (原生) - xiaohe
-  type: vless
-  server: 195.123.235.177
-  port: 443
-  udp: true
-  uuid: 729dd5f2-f5ff-4070-8c10-863eceded0b1
-  flow: xtls-rprx-vision
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 5B83otQ5ZQwtBFhR7xzsGJRXflkFKRJpQguYbE5JWGI
-    short-id: ''
-  network: tcp
-- name: 🇺🇸 美国 (United States) 18 (原生) - xiaohe
-  type: ss
-  server: 185.215.132.9
-  port: 19999
-  udp: true
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 19 (原生) - xiaohe
-  type: vless
-  server: xray1-direct-mci1-fs-ce.freesocks.work
-  port: 443
-  udp: true
-  uuid: 5fe28268-9c62-4f19-a8ed-7c84d2d530bc
-  flow: xtls-rprx-vision
-  tls: true
-  servername: dl.google.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 7j3hmlHrEDk3Kjx-dFG3E3jf0c6PZF45trIPFsuKWmI
-    short-id: ''
-  network: tcp
-- name: 🇺🇸 美国 (United States) 20 (原生) - xiaohe
-  type: vless
-  server: 195.123.235.177
-  port: 443
-  udp: true
-  uuid: 729dd5f2-f5ff-4070-8c10-863eceded0b1
-  flow: xtls-rprx-vision
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 5B83otQ5ZQwtBFhR7xzsGJRXflkFKRJpQguYbE5JWGI
-    short-id: c85d029f5e8eb393
-  network: tcp
-- name: 🇺🇸 美国 (United States) 21 (原生) - xiaohe
-  type: vless
-  server: 69.48.201.136
-  port: 30016
-  udp: true
-  uuid: 03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a
-  network: ws
-  ws-opts:
-    path: /usserver
-    headers:
-      Host: zoom.us
-- name: 🇺🇸 美国 (United States) 22 (原生) - xiaohe
-  type: hysteria2
-  server: 163.192.14.135
-  port: 50160
-  udp: true
-  password: 099830134df5ac3a04a4b21d39b8c395
-  sni: t.me
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 23 (原生) - xiaohe
-  type: vless
-  server: 147.182.212.232
-  port: 56565
-  udp: true
-  uuid: 7b188eea-b08f-42c2-bac7-d3b0e74218b8
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.paypal.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: Td03Ae-cuYLq4xg7MSps58c_yRUcbbwtZLXm0ywabjY
-    short-id: ''
+    public-key: p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM
+    short-id: 21270a66
   network: tcp
 - name: 🇺🇸 美国 (United States) 24 (原生) - xiaohe
+  type: vless
+  server: xstack.mahanfixe.workers.dev
+  port: 443
+  udp: true
+  uuid: a8b1d666-d3ba-4b17-90c4-ba7514c74f78
+  packet-encoding: xudp
+  tls: true
+  servername: xstack.mahanfixe.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /xiron
+    headers:
+      Host: xstack.mahanfixe.workers.dev
+- name: 🇺🇸 美国 (United States) 25 (原生) - xiaohe
+  type: vless
+  server: 15.204.97.216
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇺🇸 美国 (United States) 26 (原生) - xiaohe
+  type: vless
+  server: 51.81.203.63
+  port: 443
+  udp: true
+  uuid: cb2dbb6a-a1ea-4023-9ace-6466cee57241
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.icloud.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0
+    short-id: 4477382ff6d3d41c
+  network: tcp
+- name: 🇺🇸 美国 (United States) 27 (原生) - xiaohe
+  type: vless
+  server: 104.21.5.155
+  port: 443
+  udp: true
+  uuid: 0548782b-ab25-456f-a11b-099932e2a877
+  tls: true
+  servername: file-io-5e675d-edg.vshejegehje.workers.dev
+  network: ws
+  ws-opts:
+    path: /?+
+    headers:
+      Host: file-io-5e675d-edg.vshejegehje.workers.dev
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 28 (原生) - xiaohe
+  type: vless
+  server: 54.191.98.142
+  port: 443
+  udp: true
+  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
+  network: h2
+  h2-opts:
+    path: /
+- name: 🇺🇸 美国 (United States) 29 (原生) - xiaohe
   type: hysteria2
   server: 155.248.209.237
   port: 33333
   udp: true
   password: bce6c821-200d-421f-bf3d-7159e5246ea0
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 25 (原生) - xiaohe
-  type: vless
-  server: 208.84.100.209
-  port: 2112
+  sni: hy2.123266.xyz
+- name: 🇺🇸 美国 (United States) 30 (原生) - xiaohe
+  type: hysteria2
+  server: 163.192.14.135
+  port: 50160
   udp: true
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
-  tls: true
-  servername: play.google.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: p8pUe3hwND5rhAti-yRQ5qMaIkNdhxOV1K1jpbtJlEQ
-    short-id: 125ba3
-  network: tcp
-- name: 🇺🇸 美国 (United States) 26 (原生) - xiaohe
+  password: 099830134df5ac3a04a4b21d39b8c395
+  sni: speedtest.tinkoff.ru
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 31 (原生) - xiaohe
   type: vless
-  server: 45.32.69.110
+  server: mybb.com
   port: 443
   udp: true
-  uuid: 1572b9c5-d741-46eb-b4a2-a5d23958dfbe
+  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
   tls: true
-  servername: itunes.apple.com
+  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
   client-fingerprint: chrome
-  reality-opts:
-    public-key: 6l-Yq_zkVrnExw8AVv85VwoYnfNc8-dRSpoj_AA-fxY
-    short-id: c5cde18f
   network: ws
   ws-opts:
-    path: /ws
+    path: /
     headers:
-      Host: itunes.apple.com
-- name: 🇺🇸 美国 (United States) 27 (原生) - xiaohe
+      Host: rayan-007.nastaran.dpdns.org
+- name: 🇺🇸 美国 (United States) 32 (原生) - xiaohe
+  type: vless
+  server: 104.21.35.17
+  port: 443
+  udp: true
+  uuid: a8b1d666-d3ba-4b17-90c4-ba7514c74f78
+  tls: true
+  servername: xstack.mahanfixe.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /xiron
+    headers:
+      Host: xstack.mahanfixe.workers.dev
+- name: 🇺🇸 美国 (United States) 33 (原生) - xiaohe
   type: vmess
-  server: Rib9JXAYoqjGN2KW.v.3dns.vip
+  server: rib9jxayoqjgn2kw.v.3dns.vip
   port: 443
   udp: true
   uuid: 9b31490d-190e-4ef1-af0a-7ccab3e7c3b5
@@ -406,33 +494,49 @@ proxies:
     path: /ws-vmess
     headers:
       Host: Rib9JXAYoqjGN2KW.v.3dns.vip
-- name: 🇺🇸 美国 (United States) 28 (原生) - xiaohe
+- name: 🇺🇸 美国 (United States) 34 (原生) - xiaohe
   type: vless
-  server: 45.63.53.81
+  server: 47.251.108.158
   port: 443
   udp: true
-  uuid: c512dcbd-1847-40a2-9c99-989c8bfe4717
+  uuid: 975fc322-6e38-434b-a53c-d39fed49b9a9
+  flow: xtls-rprx-vision
   tls: true
-  servername: itunes.apple.com
+  servername: www.cloudflare.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: 6nTROV2ELz-3vNUl0A00hp378QngpYABrPgjCpUknD0
-    short-id: f436f707
+    public-key: SmgYcFIvvFXW3xh4gvGhIJuQsaZvWkAylcjB6TEddEs
+    short-id: 896f52ba2cfca903
+  network: tcp
+- name: 🇺🇸 美国 (United States) 35 (原生) - xiaohe
+  type: vless
+  server: mybb.com
+  port: 443
+  udp: true
+  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
+  tls: true
+  servername: rayan-007.nastaran.dpdns.org
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /ws
+    path: /
     headers:
-      Host: itunes.apple.com
-- name: 🇺🇸 美国 (United States) 29 (原生) - xiaohe
-  type: vmess
-  server: 67.220.85.46
-  port: 18000
+      Host: rayan-007.nastaran.dpdns.org
+- name: 🇺🇸 美国 (United States) 36 (原生) - xiaohe
+  type: vless
+  server: 23.95.222.127
+  port: 8443
   udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
+  uuid: 352ff568-f971-4613-bf48-92997a5d44ed
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ribQDOlZ69PzvZ1EDF0EcmMvbq_T5RQrVRBSGUU2riU
+    short-id: 35cd899f8de04801
   network: tcp
-- name: 🇺🇸 美国 (United States) 30 (原生) - xiaohe
+- name: 🇺🇸 美国 (United States) 37 (原生) - xiaohe
   type: vless
   server: 154.29.145.196
   port: 443
@@ -449,319 +553,31 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇺🇸 美国 (United States) 31 (原生) - xiaohe
+- name: 🇺🇸 美国 (United States) 38 (原生) - xiaohe
   type: vless
-  server: 47.251.108.158
+  server: 172.236.227.60
   port: 443
   udp: true
-  uuid: 975fc322-6e38-434b-a53c-d39fed49b9a9
-  flow: xtls-rprx-vision
+  uuid: e1ca5089-4e86-4fa9-b5e7-aa94cd91e71d
   tls: true
-  servername: www.cloudflare.com
+  servername: itunes.apple.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: SmgYcFIvvFXW3xh4gvGhIJuQsaZvWkAylcjB6TEddEs
-    short-id: 896f52ba2cfca903
-  network: tcp
-- name: 🇺🇸 美国 (United States) 32 (原生) - xiaohe
+    public-key: RTuOfZq_rHg1mbEZ_Xh0p9jDaRjIv_CYy5E-oLfUUR4
+    short-id: 59ad82ce
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇺🇸 美国 (United States) 39 (原生) - xiaohe
   type: ss
   server: 216.105.168.18
   port: 443
   udp: true
   cipher: chacha20-ietf-poly1305
-  password: hCCWOcIsK5wrFz4OX70rWf
-- name: 🇺🇸 美国 (United States) 33 (原生) - xiaohe
-  type: hysteria2
-  server: 192.236.226.182
-  port: 2053
-  udp: true
-  password: 46647da9-d4b4-407f-bea6-ad0b1abc561f
-  sni: 192.236.226.182
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 34 (原生) - xiaohe
-  type: ss
-  server: 173.244.56.9
-  port: 443
-  udp: true
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 35 (原生) - xiaohe
-  type: ss
-  server: 15.204.246.132
-  port: 7307
-  udp: true
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-- name: 🇺🇸 美国 (United States) 36 (原生) - xiaohe
-  type: vless
-  server: t12.qifei.app
-  port: 443
-  udp: true
-  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amazon.com
-  client-fingerprint: random
-  reality-opts:
-    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
-    short-id: 1a
-  network: tcp
-- name: 🇺🇸 美国 (United States) 37 (原生) - xiaohe
-  type: vless
-  server: 131.143.180.110
-  port: 443
-  udp: true
-  uuid: 0dfaf133-be36-436a-bdad-a7b53ae58b30
-  flow: xtls-rprx-vision
-  tls: true
-  servername: learn.microsoft.com
-  client-fingerprint: edge
-  reality-opts:
-    public-key: ABZFDD3Ne57Q0i7skCnEpyUVTKTdMhm3aqJ9mwLZ7lw
-    short-id: 62169cb853fb7503
-  network: tcp
-- name: 🇺🇸 美国 (United States) 38 (原生) - xiaohe
-  type: vless
-  server: 195.123.240.65
-  port: 443
-  udp: true
-  uuid: ce18d0eb-5c71-41f9-96e5-1632e22456e4
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: ios
-  reality-opts:
-    public-key: StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE
-    short-id: 19296c9f1bf9c7b1
-  network: tcp
-- name: 🇨🇦 加拿大 (Canada) 01 (原生) - xiaohe
-  type: vless
-  server: 66.70.179.198
-  port: 2053
-  udp: true
-  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
-    short-id: 83f8317a948bb769
-  network: tcp
-- name: 🇺🇸 美国 (United States) 39 (原生) - xiaohe
-  type: vless
-  server: 107.150.27.178
-  port: 8443
-  udp: true
-  uuid: c4ec8b8d-d8b1-49f2-8eb8-5903745f6381
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.sme.com.au
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: _7gRLyI2odDAG_D5YV4fbbOoCEH4BfF5XigHTPHPl3I
-    short-id: c71dd992a5c26702
-  network: tcp
+  password: bQZl7HDxSabr1FurTYQHFU
 - name: 🇺🇸 美国 (United States) 40 (原生) - xiaohe
-  type: trojan
-  server: us3.dedushka.top
-  port: 443
-  udp: true
-  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
-  sni: us3.dedushka.top
-  network: tcp
-- name: 🇺🇸 美国 (United States) 41 (原生) - xiaohe
-  type: vless
-  server: t15.qifei.app
-  port: 443
-  udp: true
-  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amazon.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
-    short-id: ''
-  network: tcp
-- name: 🇺🇸 美国 (United States) 42 (原生) - xiaohe
-  type: ss
-  server: 193.151.160.18
-  port: 19999
-  udp: true
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 43 (原生) - xiaohe
-  type: ss
-  server: 95.215.201.18
-  port: 19999
-  udp: true
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 44 (原生) - xiaohe
-  type: vmess
-  server: 38.91.107.49
-  port: 18000
-  udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  network: tcp
-- name: 🇺🇸 美国 (United States) 45 (原生) - xiaohe
-  type: vmess
-  server: 67.220.95.3
-  port: 18000
-  udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: aes-128-gcm
-  network: tcp
-- name: 🇺🇸 美国 (United States) 46 (原生) - xiaohe
-  type: trojan
-  server: www.findlocaljobnetworkandbuildcommunityconnections.com
-  port: 443
-  udp: true
-  password: 242a3d8eee5e4ed1a6bfa4141d549a25
-  sni: www.findlocaljobnetworkandbuildcommunityconnections.com
-  network: tcp
-- name: 🇺🇸 美国 (United States) 47 (原生) - xiaohe
-  type: ss
-  server: 45.86.51.18
-  port: 19999
-  udp: true
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 48 (原生) - xiaohe
-  type: vless
-  server: 5.34.178.120
-  port: 443
-  udp: true
-  uuid: 9063f9fb-e88a-4ee0-b4a4-a92ca7316a9f
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: random
-  reality-opts:
-    public-key: EVhq2BxKuw2Cody1DmF_HPvUYKwzdXbHP47blUv-eRM
-    short-id: 55ab5559e3a6d10a
-  network: tcp
-- name: 🇺🇸 美国 (United States) 49 (原生) - xiaohe
-  type: trojan
-  server: resources.findlocaljobnetworkandbuildcommunityconnections.com
-  port: 443
-  udp: true
-  password: f0eb8c92ce8946aaba856569cff1a16b
-  sni: resources.findlocaljobnetworkandbuildcommunityconnections.com
-  skip-cert-verify: true
-  network: tcp
-- name: 🇺🇸 美国 (United States) 50 (原生) - xiaohe
-  type: trojan
-  server: 216.106.186.32
-  port: 443
-  udp: true
-  password: dba20dcb635e430fa4d3bfc303a149d2
-  sni: blog.findlocaljobnetworkandbuildcommunityconnections.com
-  network: tcp
-- name: 🇺🇸 美国 (United States) 51 (原生) - xiaohe
-  type: trojan
-  server: blog.findlocaljobnetworkandbuildcommunityconnections.com
-  port: 443
-  udp: true
-  password: dba20dcb635e430fa4d3bfc303a149d2
-  sni: blog.findlocaljobnetworkandbuildcommunityconnections.com
-  network: tcp
-- name: 🇺🇸 美国 (United States) 52 (原生) - xiaohe
-  type: vless
-  server: 23.95.222.127
-  port: 8443
-  udp: true
-  uuid: 352ff568-f971-4613-bf48-92997a5d44ed
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: random
-  reality-opts:
-    public-key: ribQDOlZ69PzvZ1EDF0EcmMvbq_T5RQrVRBSGUU2riU
-    short-id: 35cd899f8de04801
-  network: tcp
-- name: 🇺🇸 美国 (United States) 53 (原生) - xiaohe
-  type: ss
-  server: 15.204.246.107
-  port: 8888
-  udp: true
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-- name: 🇺🇸 美国 (United States) 54 (原生) - xiaohe
-  type: vless
-  server: 15.204.97.209
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: ''
-  network: tcp
-- name: 🇺🇸 美国 (United States) 55 (原生) - xiaohe
-  type: vmess
-  server: us5-1.998998.best
-  port: 443
-  udp: true
-  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: server4.9966338.xyz
-  network: ws
-  ws-opts:
-    path: /androirfdsreoightrjh
-    headers:
-      Host: server4.9966338.xyz
-- name: 🇺🇸 美国 (United States) 56 (原生) - xiaohe
-  type: vless
-  server: 15.204.97.219
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  network: tcp
-- name: 🇺🇸 美国 (United States) 57 (原生) - xiaohe
-  type: vless
-  server: 15.204.97.195
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: random
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: ''
-  network: tcp
-- name: 🇺🇸 美国 (United States) 58 (原生) - xiaohe
-  type: vless
-  server: 15.204.97.216
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: random
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: ''
-  network: tcp
-- name: 🇺🇸 美国 (United States) 59 (原生) - xiaohe
   type: vless
   server: 154.40.55.185
   port: 443
@@ -770,97 +586,115 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: www.oracle.com
-  client-fingerprint: chrome
+  client-fingerprint: random
   reality-opts:
     public-key: XY0OTrgnRWxHbqBC8u4qFWvZakjNZY83AAnL_lwHu1M
-    short-id: e726fb
+    short-id: 7f
   network: tcp
-- name: 🇺🇸 美国 (United States) 60 (原生) - xiaohe
-  type: vmess
-  server: 129.146.77.248
-  port: 39495
-  udp: true
-  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: 129.146.77.248
-- name: 🇺🇸 美国 (United States) 61 (原生) - xiaohe
+- name: 🇺🇸 美国 (United States) 41 (原生) - xiaohe
   type: vless
-  server: 15.204.97.206
-  port: 23576
+  server: 144.202.126.147
+  port: 443
   udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
+  uuid: 45d51389-0c38-4843-8ae8-cffb94e97a72
   tls: true
-  servername: fuck.rkn
-  client-fingerprint: random
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: ''
-  network: tcp
-- name: 🇺🇸 美国 (United States) 62 (原生) - xiaohe
-  type: vless
-  server: 15.204.97.197
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
+  servername: itunes.apple.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  network: tcp
-- name: 🇺🇸 美国 (United States) 63 (原生) - xiaohe
-  type: vmess
-  server: 129.146.143.80
-  port: 48111
-  udp: true
-  uuid: d4603cc2-e0ee-4651-83f5-1db5b7168177
-  alterId: 0
-  cipher: auto
-  network: tcp
-- name: 🇺🇸 美国 (United States) 64 (原生) - xiaohe
-  type: ss
-  server: 173.244.56.6
+    public-key: jO7THaLxz0Oz3kePAJcuwcKNTlsWoEWGh18zzRmiXgo
+    short-id: 77c4230d
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇺🇸 美国 (United States) 42 (原生) - xiaohe
+  type: vless
+  server: 154.12.38.159
   port: 443
   udp: true
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 65 (原生) - xiaohe
+  uuid: 12c465bd-11a3-4fd8-8aa9-19b20a883b9e
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: iv4XmZKQUC4KEuMaWZxDmjJOlGEnS3rRw-Nk8h93zUU
+    short-id: f61a3a8f
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇺🇸 美国 (United States) 43 (原生) - xiaohe
   type: vless
-  server: 15.204.97.214
-  port: 23576
+  server: 45.63.53.81
+  port: 443
   udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  uuid: c512dcbd-1847-40a2-9c99-989c8bfe4717
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 6nTROV2ELz-3vNUl0A00hp378QngpYABrPgjCpUknD0
+    short-id: f436f707
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇺🇸 美国 (United States) 44 (原生) - xiaohe
+  type: vless
+  server: 174.136.204.23
+  port: 34539
+  udp: true
+  uuid: 6877f68f-2443-445d-8c11-16c77a2699a5
   flow: xtls-rprx-vision
   tls: true
-  servername: fuck.rkn
-  client-fingerprint: random
+  servername: apple.com
+  client-fingerprint: ios
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    public-key: KZ95U9GVT36nb3EPuraPI2BwyikGlQv8sIyRvgECt2E
+    short-id: ab400d5a
+  network: tcp
+- name: 🇺🇸 美国 (United States) 45 (原生) - xiaohe
+  type: hysteria2
+  server: 192.236.226.182
+  port: 2053
+  udp: true
+  password: 46647da9-d4b4-407f-bea6-ad0b1abc561f
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 46 (原生) - xiaohe
+  type: vless
+  server: 172.235.58.21
+  port: 443
+  udp: true
+  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.amazon.com
+  client-fingerprint: safari
+  reality-opts:
+    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
     short-id: ''
   network: tcp
-- name: 🇺🇸 美国 (United States) 66 (原生) - xiaohe
+- name: 🇺🇸 美国 (United States) 47 (原生) - xiaohe
   type: vless
-  server: 51.81.203.63
+  server: 45.76.172.197
   port: 443
   udp: true
-  uuid: cb2dbb6a-a1ea-4023-9ace-6466cee57241
-  flow: xtls-rprx-vision
+  uuid: b256c867-a020-48e0-be80-1b079f2613a2
   tls: true
-  servername: www.icloud.com
-  client-fingerprint: random
+  servername: itunes.apple.com
+  client-fingerprint: chrome
   reality-opts:
-    public-key: nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0
-    short-id: 4477382ff6d3d41c
-  network: tcp
-- name: 🇺🇸 美国 (United States) 67 (原生) - xiaohe
+    public-key: Ag8SQ5QdqfHO9pKWA93kqGmH5EQo7Xm5Z4RbPnwPBBE
+    short-id: ff3597db
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇺🇸 美国 (United States) 48 (原生) - xiaohe
   type: vless
   server: 154.12.38.202
   port: 443
@@ -877,79 +711,88 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇺🇸 美国 (United States) 68 (原生) - xiaohe
+- name: 🇺🇸 美国 (United States) 49 (原生) - xiaohe
   type: ss
-  server: 15.204.233.41
-  port: 8882
+  server: 167.160.90.54
+  port: 11478
   udp: true
-  cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-- name: 🇺🇸 美国 (United States) 69 (原生) - xiaohe
-  type: ss
-  server: 193.151.160.9
-  port: 19999
-  udp: true
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 70 (原生) - xiaohe
+  cipher: aes-128-gcm
+  password: 36f398a022881b99884755030b81d507
+- name: 🇺🇸 美国 (United States) 50 (原生) - xiaohe
   type: vless
-  server: 15.204.97.198
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: random
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: ''
-  network: tcp
-- name: 🇺🇸 美国 (United States) 71 (原生) - xiaohe
-  type: ss
-  server: 15.204.247.175
-  port: 8008
-  udp: true
-  cipher: aes-256-gcm
-  password: XKFKl2rULjIp74
-- name: 🇺🇸 美国 (United States) 72 (原生) - xiaohe
-  type: vless
-  server: 44.248.233.99
+  server: 195.123.240.65
   port: 443
   udp: true
-  uuid: 37615d66-5467-44a3-bc23-f2c3bef7f761
-  flow: xtls-rprx-vision
-  tls: true
-  servername: aws.amazon.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM
-    short-id: 21270a66
-  network: tcp
-- name: 🇨🇦 加拿大 (Canada) 02 (原生) - xiaohe
-  type: vmess
-  server: 134.195.196.211
-  port: 18000
-  udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  network: tcp
-- name: 🇺🇸 美国 (United States) 73 (原生) - xiaohe
-  type: vless
-  server: 195.211.98.43
-  port: 443
-  udp: true
-  uuid: 1b4b11d5-4c2d-4533-9a55-636757cdee94
+  uuid: ce18d0eb-5c71-41f9-96e5-1632e22456e4
   flow: xtls-rprx-vision
   tls: true
   servername: www.cloudflare.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE
+    short-id: 19296c9f1bf9c7b1
+  network: tcp
+- name: 🇯🇵 日本 (Japan) 01 (原生) - xiaohe
+  type: vless
+  server: 128.241.25.3
+  port: 30021
+  udp: true
+  uuid: e18901aa-2836-44ce-a1d7-af6b174ccae7
+  tls: true
+  servername: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+- name: 🇯🇵 日本 (Japan) 02 (原生) - xiaohe
+  type: vless
+  server: 128.241.25.11
+  port: 30021
+  udp: true
+  uuid: c03bbba1-93ab-4781-8e8e-089cd257193f
+  tls: true
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+- name: 🇺🇸 美国 (United States) 51 (原生) - xiaohe
+  type: vmess
+  server: www.shopify.com
+  port: 443
+  udp: true
+  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: guanwang.awsno.com
+  network: ws
+  ws-opts:
+    path: /hls/cctv5phd.m3u8
+    headers:
+      Host: guanwang.awsno.com
+- name: 🇺🇸 美国 (United States) 52 (原生) - xiaohe
+  type: vless
+  server: 45.32.69.110
+  port: 443
+  udp: true
+  uuid: 1572b9c5-d741-46eb-b4a2-a5d23958dfbe
+  tls: true
+  servername: itunes.apple.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
-    short-id: 9c56fddf237e8eaf
-  network: tcp
-- name: 🇺🇸 美国 (United States) 74 (原生) - xiaohe
+    public-key: 6l-Yq_zkVrnExw8AVv85VwoYnfNc8-dRSpoj_AA-fxY
+    short-id: c5cde18f
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇺🇸 美国 (United States) 53 (原生) - xiaohe
   type: vmess
   server: us16-4.998998.best
   port: 443
@@ -966,24 +809,50 @@ proxies:
       Host: server1.9966338.xyz
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 75 (原生) - xiaohe
-  type: vmess
-  server: guanwang.awsno.com
+- name: 🇺🇸 美国 (United States) 54 (原生) - xiaohe
+  type: ss
+  server: 95.215.201.18
+  port: 19999
+  udp: true
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸 美国 (United States) 55 (原生) - xiaohe
+  type: ss
+  server: 173.244.56.9
   port: 443
   udp: true
-  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸 美国 (United States) 56 (原生) - xiaohe
+  type: vmess
+  server: 129.146.77.248
+  port: 39495
+  udp: true
+  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
   alterId: 0
   cipher: auto
-  tls: true
-  servername: guanwang.awsno.com
   network: ws
   ws-opts:
-    path: /hls/cctv5phd.m3u8
+    path: /cctv13.m3u8
     headers:
-      Host: guanwang.awsno.com
-- name: 🇺🇸 美国 (United States) 76 (原生) - xiaohe
+      Host: 129.146.77.248
+- name: 🇯🇵 日本 (Japan) 03 (原生) - xiaohe
   type: vless
-  server: 172.64.145.133
+  server: 128.241.25.3
+  port: 30021
+  udp: true
+  uuid: 48de1831-a4a2-4eba-8723-8e0bb7a9da0d
+  tls: true
+  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+- name: 🇺🇸 美国 (United States) 57 (原生) - xiaohe
+  type: vless
+  server: 104.16.10.21
   port: 443
   udp: true
   uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
@@ -994,7 +863,396 @@ proxies:
     path: /ws
     headers:
       Host: a.cwvps.eu.org
+- name: 🇯🇵 日本 (Japan) 04 (原生) - xiaohe
+  type: vless
+  server: 128.241.25.3
+  port: 30021
+  udp: true
+  uuid: 0e8371c0-0287-4805-a882-42a7b482a9de
+  tls: true
+  servername: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
+- name: 🇺🇸 美国 (United States) 58 (原生) - xiaohe
+  type: ss
+  server: 173.244.56.6
+  port: 443
+  udp: true
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸 美国 (United States) 59 (原生) - xiaohe
+  type: vmess
+  server: cf.090227.xyz
+  port: 443
+  udp: true
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: vmess.lbw666.dpdns.org
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: vmess.lbw666.dpdns.org
+- name: 🇺🇸 美国 (United States) 60 (原生) - xiaohe
+  type: vless
+  server: 3h-unitedstates1.09vpn.com
+  port: 80
+  udp: true
+  uuid: 18cf8db1-9f86-43f7-baa0-382efb7f2dfa
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: 3h-unitedstates1.09vpn.com
+- name: 🇺🇸 美国 (United States) 61 (原生) - xiaohe
+  type: ss
+  server: 156.146.38.167
+  port: 443
+  udp: true
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸 美国 (United States) 62 (原生) - xiaohe
+  type: trojan
+  server: 66.23.203.21
+  port: 59689
+  udp: true
+  password: ae7eb4dwyaz25pxwgq59
+  skip-cert-verify: true
+  network: tcp
+- name: 🇺🇸 美国 (United States) 63 (原生) - xiaohe
+  type: vless
+  server: 195.211.98.43
+  port: 443
+  udp: true
+  uuid: 1b4b11d5-4c2d-4533-9a55-636757cdee94
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
+    short-id: 9c56fddf237e8eaf
+  network: tcp
+- name: 🇺🇸 美国 (United States) 64 (原生) - xiaohe
+  type: vless
+  server: 172.245.253.16
+  port: 443
+  udp: true
+  uuid: b67422ff-101b-433b-8f66-4ab282960b36
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: Vh8dv6ENmfFd4JlPgj9-R1Fbet2m6JyRFukcVvDq5A8
+    short-id: e7dc2c820ba8bbd4
+  network: tcp
+- name: 🇺🇸 美国 (United States) 65 (原生) - xiaohe
+  type: ss
+  server: 185.215.132.9
+  port: 19999
+  udp: true
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸 美国 (United States) 66 (原生) - xiaohe
+  type: ss
+  server: 185.215.132.18
+  port: 19999
+  udp: true
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸 美国 (United States) 67 (原生) - xiaohe
+  type: vless
+  server: xray1-direct-mci1-fs-ce.freesocks.work
+  port: 443
+  udp: true
+  uuid: 5d9df866-5b64-4871-bc4a-35c84ed0ef40
+  flow: xtls-rprx-vision
+  tls: true
+  servername: dl.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 7j3hmlHrEDk3Kjx-dFG3E3jf0c6PZF45trIPFsuKWmI
+    short-id: ''
+  network: tcp
+- name: 🇺🇸 美国 (United States) 68 (原生) - xiaohe
+  type: vless
+  server: 23.94.251.190
+  port: 443
+  udp: true
+  uuid: 4a54f9e1-1cb0-4873-8f35-38bcf1650966
+  flow: xtls-rprx-vision
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: H-jO-7NT8LAkA9o8SOpFC-GeEqk-Jhpesmx5jJ_3n14
+    short-id: 312d6625929ec3df
+  network: tcp
+- name: 🇺🇸 美国 (United States) 69 (原生) - xiaohe
+  type: hysteria2
+  server: 129.213.91.185
+  port: 35013
+  udp: true
+  password: 4291c983-c520-46ac-82cc-48f14bef573f
+  sni: 129.213.91.185
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 70 (原生) - xiaohe
+  type: vmess
+  server: 67.220.85.46
+  port: 18000
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  network: tcp
+- name: 🇺🇸 美国 (United States) 71 (原生) - xiaohe
+  type: vmess
+  server: 67.220.95.3
+  port: 18000
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: aes-128-gcm
+  network: tcp
+- name: 🇺🇸 美国 (United States) 72 (原生) - xiaohe
+  type: trojan
+  server: 69.164.240.85
+  port: 50875
+  udp: true
+  password: nwilryafgkyvuxauc8pz
+  skip-cert-verify: true
+  network: tcp
+- name: 🇺🇸 美国 (United States) 73 (原生) - xiaohe
+  type: vless
+  server: 162.35.126.130
+  port: 10453
+  udp: true
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  tls: true
+  servername: www.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: rAHMmpeUJ6uOoGgk31dTF4-1RTtLZFnOEs_li2AYQWc
+    short-id: ''
+  network: grpc
+  grpc-opts:
+    grpc-service-name: TunService
+- name: 🇺🇸 美国 (United States) 74 (原生) - xiaohe
+  type: vmess
+  server: 129.146.143.80
+  port: 48111
+  udp: true
+  uuid: d4603cc2-e0ee-4651-83f5-1db5b7168177
+  alterId: 0
+  cipher: auto
+  network: tcp
+- name: 🇨🇦 加拿大 (Canada) 01 (原生) - xiaohe
+  type: ss
+  server: 51.79.49.116
+  port: 8882
+  udp: true
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
+- name: 🇨🇦 加拿大 (Canada) 02 (原生) - xiaohe
+  type: vless
+  server: 66.70.179.198
+  port: 2053
+  udp: true
+  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
+    short-id: 83f8317a948bb769
+  network: tcp
+- name: 🇺🇸 美国 (United States) 75 (原生) - xiaohe
+  type: vless
+  server: xray2-direct-mci1-fs-ce.freesocks.work
+  port: 443
+  udp: true
+  uuid: b5c388f7-332b-493d-b5f6-11edf6042a30
+  flow: xtls-rprx-vision
+  tls: true
+  servername: dl.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 7j3hmlHrEDk3Kjx-dFG3E3jf0c6PZF45trIPFsuKWmI
+    short-id: ''
+  network: tcp
+- name: 🇺🇸 美国 (United States) 76 (原生) - xiaohe
+  type: vless
+  server: 195.123.235.177
+  port: 443
+  udp: true
+  uuid: 729dd5f2-f5ff-4070-8c10-863eceded0b1
+  flow: xtls-rprx-vision
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 5B83otQ5ZQwtBFhR7xzsGJRXflkFKRJpQguYbE5JWGI
+    short-id: c85d029f5e8eb393
+  network: tcp
+- name: 🇨🇦 加拿大 (Canada) 03 (原生) - xiaohe
+  type: ss
+  server: 51.222.155.32
+  port: 5003
+  udp: true
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
 - name: 🇺🇸 美国 (United States) 77 (原生) - xiaohe
+  type: vless
+  server: 195.123.235.183
+  port: 443
+  udp: true
+  uuid: c14ec728-3eca-4750-87fc-fd1e6aeb81d5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: H3R3BUAl7thrIZsznTbb-eRREIjQOH2f3WO0oTN7OGY
+    short-id: a0e2a6074c6456b0
+  network: tcp
+- name: 🇺🇸 美国 (United States) 78 (原生) - xiaohe
+  type: vless
+  server: 208.84.100.209
+  port: 2112
+  udp: true
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  tls: true
+  servername: play.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: p8pUe3hwND5rhAti-yRQ5qMaIkNdhxOV1K1jpbtJlEQ
+    short-id: 125ba3
+  network: tcp
+- name: 🇺🇸 美国 (United States) 79 (原生) - xiaohe
+  type: vless
+  server: uspanel.unixzone.us
+  port: 30016
+  udp: true
+  uuid: 03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a
+  network: ws
+  ws-opts:
+    path: /usserver
+    headers:
+      Host: uspanel.unixzone.us
+- name: 🇺🇸 美国 (United States) 80 (原生) - xiaohe
+  type: ss
+  server: 198.98.53.130
+  port: 443
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: eDfN7SODQceIOmIAbtJJtK
+- name: 🇺🇸 美国 (United States) 81 (原生) - xiaohe
+  type: ss
+  server: 45.86.51.18
+  port: 19999
+  udp: true
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸 美国 (United States) 82 (原生) - xiaohe
+  type: vless
+  server: 47.253.226.114
+  port: 443
+  udp: true
+  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
+    short-id: ''
+  network: tcp
+- name: 🇺🇸 美国 (United States) 83 (原生) - xiaohe
+  type: vless
+  server: 5.34.178.120
+  port: 443
+  udp: true
+  uuid: 9063f9fb-e88a-4ee0-b4a4-a92ca7316a9f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: EVhq2BxKuw2Cody1DmF_HPvUYKwzdXbHP47blUv-eRM
+    short-id: 55ab5559e3a6d10a
+  network: tcp
+- name: 🇺🇸 美国 (United States) 84 (原生) - xiaohe
+  type: vless
+  server: 159.89.87.21
+  port: 28190
+  udp: true
+  uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
+  flow: xtls-rprx-vision
+  tls: true
+  servername: aws.amazon.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
+    short-id: ''
+  network: tcp
+- name: 🇺🇸 美国 (United States) 85 (原生) - xiaohe
+  type: vmess
+  server: us5-1.998998.best
+  port: 443
+  udp: true
+  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: server4.9966338.xyz
+  network: ws
+  ws-opts:
+    path: /androirfdsreoightrjh
+    headers:
+      Host: server4.9966338.xyz
+- name: 🇺🇸 美国 (United States) 86 (原生) - xiaohe
+  type: hysteria2
+  server: clash2.deep-links.com
+  port: 443
+  udp: true
+  password: 4c858cccff331e64c711a199a6cb256a
+  sni: clash2.deep-links.com
+- name: 🇺🇸 美国 (United States) 87 (原生) - xiaohe
+  type: ss
+  server: 193.151.163.18
+  port: 19999
+  udp: true
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸 美国 (United States) 88 (原生) - xiaohe
+  type: vless
+  server: 147.182.212.232
+  port: 56565
+  udp: true
+  uuid: 7b188eea-b08f-42c2-bac7-d3b0e74218b8
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.paypal.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: Td03Ae-cuYLq4xg7MSps58c_yRUcbbwtZLXm0ywabjY
+    short-id: ''
+  network: tcp
+- name: 🇨🇦 加拿大 (Canada) 04 (原生) - xiaohe
+  type: ss
+  server: 51.222.136.236
+  port: 8882
+  udp: true
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
+- name: 🇺🇸 美国 (United States) 89 (原生) - xiaohe
   type: vmess
   server: 38.110.1.246
   port: 18000
@@ -1003,38 +1261,278 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: 🇺🇸 美国 (United States) 78 (原生) - xiaohe
+- name: 🇨🇦 加拿大 (Canada) 05 (原生) - xiaohe
+  type: ss
+  server: 51.79.85.185
+  port: 8118
+  udp: true
+  cipher: aes-256-gcm
+  password: cdBIDV42DCwnfIN
+- name: 🇺🇸 美国 (United States) 90 (原生) - xiaohe
   type: vmess
-  server: node8.liudonghoe.com
+  server: 38.91.107.49
+  port: 18000
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  network: tcp
+- name: 🇺🇸 美国 (United States) 91 (原生) - xiaohe
+  type: ss
+  server: 15.204.233.41
+  port: 8882
+  udp: true
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
+- name: 🇺🇸 美国 (United States) 92 (原生) - xiaohe
+  type: ss
+  server: 193.151.160.18
+  port: 19999
+  udp: true
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸 美国 (United States) 93 (原生) - xiaohe
+  type: trojan
+  server: us3.dedushka.top
   port: 443
   udp: true
-  uuid: 47050e4e-965d-41ca-976d-73c1f11e6905
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  sni: us3.dedushka.top
+  alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  network: tcp
+- name: 🇺🇸 美国 (United States) 94 (原生) - xiaohe
+  type: vless
+  server: us2-2.998998.best
+  port: 443
+  udp: true
+  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  tls: true
+  servername: server6.9966338.xyz
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /fiughoieuhti834t90
+    headers:
+      Host: server6.9966338.xyz
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 95 (原生) - xiaohe
+  type: ss
+  server: 193.151.160.9
+  port: 19999
+  udp: true
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇨🇦 加拿大 (Canada) 06 (原生) - xiaohe
+  type: vmess
+  server: 134.195.196.211
+  port: 18000
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  network: tcp
+- name: 🇺🇸 美国 (United States) 96 (原生) - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  tls: true
+  servername: server5.9966338.xyz
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /drsukitgreiusweqa9otrh983
+    headers:
+      Host: server5.9966338.xyz
+- name: 🇺🇸 美国 (United States) 97 (原生) - xiaohe
+  type: ss
+  server: 15.204.247.244
+  port: 4444
+  udp: true
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+- name: 🇺🇸 美国 (United States) 98 (原生) - xiaohe
+  type: ss
+  server: 15.204.246.107
+  port: 8888
+  udp: true
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: 🇯🇵 日本 (Japan) 05 (原生) - xiaohe
+  type: vless
+  server: 142.91.108.25
+  port: 443
+  udp: true
+  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
+  flow: xtls-rprx-vision
+  tls: true
+  servername: jp3.nztvpn.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM
+    short-id: ea36c03d86f91287
+  network: tcp
+- name: 🇯🇵 日本 (Japan) 06 (原生) - xiaohe
+  type: vless
+  server: 103.75.118.228
+  port: 11452
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  network: tcp
+- name: 🇺🇸 美国 (United States) 99 (原生) - xiaohe
+  type: vmess
+  server: 172.64.80.1
+  port: 8443
+  udp: true
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
   alterId: 0
   cipher: auto
   tls: true
-  servername: node8.liudonghoe.com
+  servername: v2ray1.dozapp.xyz
   network: ws
   ws-opts:
-    path: /hoe8
+    path: /lMnsZUN4/
     headers:
-      Host: node8.liudonghoe.com
-- name: 🇨🇦 加拿大 (Canada) 03 (原生) - xiaohe
-  type: ss
-  server: 51.222.141.125
-  port: 445
+      Host: v2ray1.dozapp.xyz
+- name: 🇯🇵 日本 (Japan) 07 (原生) - xiaohe
+  type: vless
+  server: 203.137.165.164
+  port: 57554
   udp: true
-  cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
-- name: 🇳🇱 荷兰 (Netherlands) 02 (原生) - xiaohe
-  type: ss
-  server: 158.173.20.171
+  uuid: a2336cca-3fd0-45cb-8ac5-1de6d17692b2
+  tls: true
+  servername: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
+- name: 🇺🇸 美国 (United States) 100 (原生) - xiaohe
+  type: vless
+  server: 176.122.158.11
   port: 443
   udp: true
-  cipher: aes-128-gcm
-  password: shadowsocks
+  uuid: 154c54e0-028d-4c8a-9512-7ad1588cce2a
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: safari
+  reality-opts:
+    public-key: dV6-Xn1FCpiYvbJ1o79HjMr0IJg29xacSQcaD4jeKAM
+    short-id: f8d85e1a92219c3c
+  network: tcp
+- name: 🇺🇸 美国 (United States) 101 (原生) - xiaohe
+  type: vless
+  server: 131.143.180.110
+  port: 443
+  udp: true
+  uuid: 0dfaf133-be36-436a-bdad-a7b53ae58b30
+  flow: xtls-rprx-vision
+  tls: true
+  servername: learn.microsoft.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ABZFDD3Ne57Q0i7skCnEpyUVTKTdMhm3aqJ9mwLZ7lw
+    short-id: 62169cb853fb7503
+  network: tcp
+- name: 🇹🇼 中国台湾 (Taiwan) 02 (原生) - xiaohe
+  type: hysteria2
+  server: 103.115.109.49
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 'https:'
+  skip-cert-verify: true
+- name: 🇹🇼 中国台湾 (Taiwan) 03 (原生) - xiaohe
+  type: hysteria2
+  server: 160.187.100.109
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 127.0.0.1
+  skip-cert-verify: true
+- name: 🇮🇪 爱尔兰 (Ireland) 01 (原生) - xiaohe
+  type: vless
+  server: 3.252.104.83
+  port: 443
+  udp: true
+  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
+  network: h2
+  h2-opts:
+    path: /
+- name: 🇭🇰 中国香港 (Hong Kong) 01 (原生) - xiaohe
+  type: vless
+  server: 45.202.248.173
+  port: 9443
+  udp: true
+  uuid: 82eb8419-59f4-4d3e-9106-d05d22af615c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.amazon.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
+    short-id: b390142456517acc
+  network: tcp
+- name: 🇭🇰 中国香港 (Hong Kong) 02 (原生) - xiaohe
+  type: vless
+  server: 141.11.149.174
+  port: 9443
+  udp: true
+  uuid: 82eb8419-59f4-4d3e-9106-d05d22af615c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.amazon.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
+    short-id: b390142456517acc
+  network: tcp
+- name: 🇭🇰 中国香港 (Hong Kong) 03 (原生) - xiaohe
+  type: vmess
+  server: 101.32.8.251
+  port: 50001
+  udp: true
+  uuid: 5706beb5-479b-475d-b557-00309327e9cc
+  alterId: 0
+  cipher: auto
+  network: tcp
+- name: 🇳🇱 荷兰 (Netherlands) 02 (原生) - xiaohe
+  type: hysteria2
+  server: nl-hy-test.tcp-reset-club.net
+  port: 443
+  udp: true
+  password: 529f1911-04d5-4427-94b9-c851fd459a27
+  sni: nl-hy-test.tcp-reset-club.net
+- name: 🇬🇧 英国 (United Kingdom) 01 (原生) - xiaohe
+  type: ss
+  server: 185.176.206.9
+  port: 19999
+  udp: true
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇩🇪 德国 (Germany) 02 (原生) - xiaohe
+  type: ss
+  server: 213.202.208.199
+  port: 5000
+  udp: true
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
 - name: 🇫🇷 法国 (France) 01 (原生) - xiaohe
   type: vless
-  server: 163.245.42.48
+  server: edge.bookmai.com
   port: 443
   udp: true
   uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
@@ -1046,150 +1544,41 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
     short-id: ''
   network: tcp
-- name: 🇫🇷 法国 (France) 02 (原生) - xiaohe
+- name: 🇳🇱 荷兰 (Netherlands) 03 (原生) - xiaohe
   type: trojan
-  server: 188.114.98.0
+  server: 95.85.54.197
   port: 443
   udp: true
   password: humanity
-  sni: www.calmlunch.com
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
+  sni: www.pleadcourt.org
   network: ws
   ws-opts:
-    path: //assignment
+    path: /assignment
     headers:
-      Host: www.calmlunch.com
-- name: 🇬🇧 英国 (United Kingdom) 01 (原生) - xiaohe
-  type: ss
-  server: 185.176.206.9
-  port: 19999
-  udp: true
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇳🇱 荷兰 (Netherlands) 03 (原生) - xiaohe
-  type: ss
-  server: 158.173.20.208
-  port: 443
-  udp: true
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇳🇱 荷兰 (Netherlands) 04 (原生) - xiaohe
-  type: hysteria2
-  server: 109.235.49.234
-  port: 443
-  udp: true
-  password: dd50a499-7e43-4589-8490-f3b9c2451473
-  skip-cert-verify: true
-- name: 🇳🇱 荷兰 (Netherlands) 05 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.48
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 06 (原生) - xiaohe
-  type: ss
-  server: 193.29.139.132
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 07 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.175
-  port: 443
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 08 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.186
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇫🇷 法国 (France) 03 (原生) - xiaohe
-  type: vless
-  server: 51.77.217.70
-  port: 2053
-  udp: true
-  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: random
-  reality-opts:
-    public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
-    short-id: bfe58beb41f1d09f
-  network: tcp
-- name: 🇳🇱 荷兰 (Netherlands) 09 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.189
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇩🇪 德国 (Germany) 03 (原生) - xiaohe
-  type: vless
-  server: shortbig.ir
-  port: 443
-  udp: true
-  uuid: ed6c724c-435f-4f83-a781-f57579af320b
-  tls: true
-  servername: alman.5f2vvtqh5syot.info
-  network: ws
-  ws-opts:
-    path: /9d9fdbc18c834cffab4276811501fbae
-    headers:
-      Host: alman.5f2vvtqh5syot.info
-- name: 🇫🇷 法国 (France) 04 (原生) - xiaohe
+      Host: www.pleadcourt.org
+- name: 🇫🇷 法国 (France) 02 (原生) - xiaohe
   type: hysteria2
   server: 62.210.7.139
   port: 60111
   udp: true
   password: github.com/Alvin9999-newpac/fanqiang
+  sni: 62.210.7.139
   skip-cert-verify: true
-- name: 🇫🇷 法国 (France) 05 (原生) - xiaohe
+- name: 🇫🇷 法国 (France) 03 (原生) - xiaohe
   type: vless
-  server: ov-france1.09vpn.com
-  port: 80
-  udp: true
-  uuid: f5c47e9c-914a-4a91-a81e-a5a77bc10fc1
-  network: ws
-  ws-opts:
-    path: /vless/
-    headers:
-      Host: ov-france1.09vpn.com
-- name: 🇳🇱 荷兰 (Netherlands) 10 (原生) - xiaohe
-  type: ss
-  server: 193.29.139.198
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 11 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.171
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 12 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.13
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 13 (原生) - xiaohe
-  type: ss
-  server: 193.29.139.235
+  server: 104.26.13.235
   port: 443
   udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇫🇷 法国 (France) 06 (原生) - xiaohe
+  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  tls: true
+  servername: nat9.outsidemyheart.space
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /saosaosao
+    headers:
+      Host: nat9.outsidemyheart.space
+- name: 🇫🇷 法国 (France) 04 (原生) - xiaohe
   type: vless
   server: 137.74.16.237
   port: 443
@@ -1198,358 +1587,114 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: www.icloud.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   reality-opts:
     public-key: 7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I
     short-id: b390e0a721d242b0
   network: tcp
-- name: 🇬🇧 英国 (United Kingdom) 02 (原生) - xiaohe
-  type: vless
-  server: 23.81.36.148
-  port: 1222
-  udp: true
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
-  tls: true
-  servername: play.google.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
-    short-id: a25d0f
-  network: tcp
-- name: 🇳🇱 荷兰 (Netherlands) 14 (原生) - xiaohe
+- name: 🇨🇦 加拿大 (Canada) 07 (原生) - xiaohe
   type: ss
-  server: 82.38.31.69
-  port: 8080
+  server: 51.222.12.127
+  port: 445
   udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 15 (原生) - xiaohe
-  type: ss
-  server: 193.29.139.179
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 16 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.10
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 17 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.217
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 18 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.198
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇩🇪 德国 (Germany) 04 (原生) - xiaohe
-  type: vless
-  server: alman.5f2vvtqh5syot.info
-  port: 443
-  udp: true
-  uuid: ed6c724c-435f-4f83-a781-f57579af320b
-  tls: true
-  servername: alman.5f2vvtqh5syot.info
-  network: ws
-  ws-opts:
-    path: /9d9fdbc18c834cffab4276811501fbae
-    headers:
-      Host: alman.5f2vvtqh5syot.info
-- name: 🇳🇱 荷兰 (Netherlands) 19 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.210
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 20 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.39
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 21 (原生) - xiaohe
-  type: ss
-  server: 193.29.139.147
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 22 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.176
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 23 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.213
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇫🇷 法国 (France) 07 (原生) - xiaohe
-  type: vless
-  server: 62.210.91.2
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: random
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: ''
-  network: tcp
-- name: 🇫🇷 法国 (France) 08 (原生) - xiaohe
-  type: vless
-  server: 62.210.91.10
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  network: tcp
-- name: 🇳🇱 荷兰 (Netherlands) 24 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.155
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 25 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.66
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 26 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.149
-  port: 443
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 27 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.16
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 28 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.203
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 29 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.2
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 30 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.35
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 31 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.46
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 32 (原生) - xiaohe
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
+- name: 🇳🇱 荷兰 (Netherlands) 04 (原生) - xiaohe
   type: ss
   server: 82.38.31.159
   port: 443
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇺🇸 美国 (United States) 79 (原生) - xiaohe
-  type: trojan
-  server: 176.122.162.190
-  port: 443
+- name: 🇳🇱 荷兰 (Netherlands) 05 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.187
+  port: 8080
   udp: true
-  password: 35fd040b3a765ffff6dda3029eb36eee
-  sni: www.microsoft.com
-  skip-cert-verify: true
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇫🇷 法国 (France) 05 (原生) - xiaohe
+  type: vless
+  server: 51.77.217.70
+  port: 2053
+  udp: true
+  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
+    short-id: bfe58beb41f1d09f
   network: tcp
-- name: 🇳🇱 荷兰 (Netherlands) 33 (原生) - xiaohe
+- name: 🇳🇱 荷兰 (Netherlands) 06 (原生) - xiaohe
   type: ss
-  server: 193.29.139.168
-  port: 8080
+  server: dns5.m3hrzd.ir
+  port: 8044
   udp: true
   cipher: chacha20-ietf-poly1305
-  password: QCXDxuDlTTMD7jtgHUjIoj
-- name: 🇳🇱 荷兰 (Netherlands) 34 (原生) - xiaohe
+  password: 5ox2e7xif1rCKOiffOPvibGk-KVXCk8v
+- name: 🇳🇱 荷兰 (Netherlands) 07 (原生) - xiaohe
   type: ss
-  server: 82.38.31.208
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 35 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.62
+  server: 82.38.31.9
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇩🇪 德国 (Germany) 05 (原生) - xiaohe
+- name: 🇫🇷 法国 (France) 06 (原生) - xiaohe
   type: vless
-  server: 46.225.46.136
-  port: 2087
-  udp: true
-  uuid: a5db5ab5-8d28-49c0-ad55-0ad4724e4c0d
-  tls: true
-  servername: hoert1rert.localip.ir
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /hokm
-    headers:
-      Host: hoert1rert.localip.ir
-- name: 🇳🇱 荷兰 (Netherlands) 36 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.183
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 37 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.82
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 38 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.162
-  port: 443
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 39 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.26
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 40 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.34
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇩🇪 德国 (Germany) 06 (原生) - xiaohe
-  type: vless
-  server: sino.bestsellers1.site
-  port: 2083
-  udp: true
-  uuid: 7858128a-6b5e-4f86-9bff-52c1f1e6439d
-  tls: true
-  servername: sino.bestsellers1.site
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sino.bestsellers1.site
-- name: 🇫🇷 法国 (France) 09 (原生) - xiaohe
-  type: trojan
-  server: 45.87.41.18
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: 🇳🇱 荷兰 (Netherlands) 41 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.42
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇩🇪 德国 (Germany) 07 (原生) - xiaohe
-  type: vmess
-  server: 91.107.169.224
+  server: 152.228.162.19
   port: 80
   udp: true
-  uuid: d4b69108-f756-48af-a331-e8356bc95eb4
-  alterId: 0
-  cipher: auto
+  uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0
   network: ws
   ws-opts:
-    path: /
-    v2ray-http-upgrade: true
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.dns-look.space.
-- name: 🇳🇱 荷兰 (Netherlands) 42 (原生) - xiaohe
+    path: /vless/
+- name: 🇳🇱 荷兰 (Netherlands) 08 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.198
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 09 (原生) - xiaohe
   type: ss
   server: 193.29.139.204
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 43 (原生) - xiaohe
+- name: 🇳🇱 荷兰 (Netherlands) 10 (原生) - xiaohe
   type: ss
-  server: 82.38.31.200
+  server: 82.38.31.215
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 44 (原生) - xiaohe
+- name: 🇳🇱 荷兰 (Netherlands) 11 (原生) - xiaohe
   type: ss
-  server: 193.29.139.225
+  server: 82.38.31.39
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇵🇱 波兰 (Poland) 01 (原生) - xiaohe
-  type: trojan
-  server: pl1.dedushka.top
-  port: 443
+- name: 🇳🇱 荷兰 (Netherlands) 12 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.61
+  port: 8080
   udp: true
-  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
-  sni: pl1.dedushka.top
-  skip-cert-verify: true
-  network: tcp
-- name: 🇫🇷 法国 (France) 10 (原生) - xiaohe
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 13 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.220
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇫🇷 法国 (France) 07 (原生) - xiaohe
   type: trojan
-  server: 185.114.72.31
-  port: 2053
+  server: 172.67.217.240
+  port: 443
   udp: true
   password: humanity
   sni: www.calmlunch.com
@@ -1558,7 +1703,28 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: 🇫🇷 法国 (France) 11 (原生) - xiaohe
+- name: 🇳🇱 荷兰 (Netherlands) 14 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.194
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 15 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.175
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 16 (原生) - xiaohe
+  type: ss
+  server: 193.29.139.188
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇫🇷 法国 (France) 08 (原生) - xiaohe
   type: vless
   server: 152.228.139.33
   port: 51671
@@ -1573,108 +1739,521 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc_common3
-- name: 🇩🇪 德国 (Germany) 08 (原生) - xiaohe
-  type: vless
-  server: 31.70.111.146
-  port: 443
+- name: 🇳🇱 荷兰 (Netherlands) 17 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.16
+  port: 8080
   udp: true
-  uuid: 84ed0e09-6803-4ef9-a977-74b657d971e5
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 18 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.171
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 19 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.42
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇫🇷 法国 (France) 09 (原生) - xiaohe
+  type: vless
+  server: 62.210.91.2
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
   tls: true
-  servername: www.apple.com
+  servername: fuck.rkn
   client-fingerprint: chrome
   reality-opts:
-    public-key: ZNmuzIn-zyJi2C0sWRpL9fsMYCgYauXpJElXTqY_LEE
-    short-id: d7de3a6ff4018957
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
   network: tcp
-- name: 🇯🇵 日本 (Japan) 01 (原生) - xiaohe
-  type: vless
-  server: 142.91.108.25
+- name: 🇳🇱 荷兰 (Netherlands) 20 (原生) - xiaohe
+  type: ss
+  server: 193.29.139.235
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 21 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.208
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 22 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.162
   port: 443
   udp: true
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 23 (原生) - xiaohe
+  type: ss
+  server: 193.29.139.198
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 24 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.212
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 25 (原生) - xiaohe
+  type: ss
+  server: 193.29.139.234
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: 4a2rfixophdjffa8KVA4Aa
+- name: 🇫🇷 法国 (France) 10 (原生) - xiaohe
+  type: vless
+  server: 62.210.91.10
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
   tls: true
-  servername: jp3.nztvpn.com
-  client-fingerprint: chrome
+  servername: fuck.rkn
+  client-fingerprint: random
   reality-opts:
-    public-key: 9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM
-    short-id: ea36c03d86f91287
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: ''
   network: tcp
-- name: 🇵🇱 波兰 (Poland) 02 (原生) - xiaohe
-  type: trojan
-  server: pl2.dedushka.top
-  port: 443
+- name: 🇳🇱 荷兰 (Netherlands) 26 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.200
+  port: 8080
   udp: true
-  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
-  sni: pl2.dedushka.top
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 27 (原生) - xiaohe
+  type: ss
+  server: 193.29.139.212
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: QCXDxuDlTTMD7jtgHUjIoj
+- name: 🇩🇪 德国 (Germany) 03 (原生) - xiaohe
+  type: vless
+  server: shortbig.ir
+  port: 2087
+  udp: true
+  uuid: 31f185b6-e591-413b-ba72-88083a87feb2
+  tls: true
+  servername: a4.ladankashani.ir
   alpn:
   - http/1.1
-  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /hokm
+    headers:
+      Host: a4.ladankashani.ir
+- name: 🇳🇱 荷兰 (Netherlands) 28 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.179
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 29 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.3
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 30 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.189
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 31 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.47
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 32 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.203
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 33 (原生) - xiaohe
+  type: ss
+  server: 178.83.185.156
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 34 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.184
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇩🇪 德国 (Germany) 04 (原生) - xiaohe
+  type: vmess
+  server: 178.105.168.171
+  port: 2110
+  udp: true
+  uuid: 06d4d001-4168-4876-9416-7caecf578f40
+  alterId: 0
+  cipher: auto
   network: tcp
-- name: 🇯🇵 日本 (Japan) 02 (原生) - xiaohe
+- name: 🇳🇱 荷兰 (Netherlands) 35 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.66
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 36 (原生) - xiaohe
+  type: ss
+  server: 193.29.139.202
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 37 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.149
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇫🇷 法国 (France) 11 (原生) - xiaohe
+  type: hysteria2
+  server: 62.210.147.2
+  port: 43115
+  udp: true
+  password: github.com/Alvin9999-newpac/fanqiang
+  sni: www.microsoft.com
+  skip-cert-verify: true
+- name: 🇩🇪 德国 (Germany) 05 (原生) - xiaohe
   type: vless
-  server: speedjapga1.xyy123.win
+  server: 91.107.247.173
+  port: 2083
+  udp: true
+  uuid: 7858128a-6b5e-4f86-9bff-52c1f1e6439d
+  tls: true
+  servername: sino.bestsellers1.site
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sino.bestsellers1.site
+- name: 🇳🇱 荷兰 (Netherlands) 38 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.69
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 39 (原生) - xiaohe
+  type: ss
+  server: 193.29.139.151
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇩🇪 德国 (Germany) 06 (原生) - xiaohe
+  type: vless
+  server: 91.107.247.173
+  port: 2083
+  udp: true
+  uuid: 7858128a-6b5e-4f86-9bff-52c1f1e6439d
+  tls: true
+  servername: sino.bestsellers1.site
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sino.bestsellers1.site
+- name: 🇳🇱 荷兰 (Netherlands) 40 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.82
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇺🇸 美国 (United States) 102 (原生) - xiaohe
+  type: ss
+  server: 15.204.246.132
+  port: 7307
+  udp: true
+  cipher: aes-256-gcm
+  password: FoOiGlkAA9yPEGP
+- name: 🇳🇱 荷兰 (Netherlands) 41 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.34
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇩🇪 德国 (Germany) 07 (原生) - xiaohe
+  type: vless
+  server: test.wecantos.site
+  port: 20000
+  udp: true
+  uuid: ca59a503-db23-44af-9879-49747d8da98f
+  network: tcp
+- name: 🇳🇱 荷兰 (Netherlands) 42 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.28
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 43 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.46
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 44 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.35
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇨🇦 加拿大 (Canada) 08 (原生) - xiaohe
+  type: ss
+  server: 51.222.141.125
+  port: 445
+  udp: true
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
+- name: 🇭🇰 中国香港 (Hong Kong) 04 (原生) - xiaohe
+  type: hysteria2
+  server: 202.146.222.174
   port: 443
   udp: true
-  uuid: 9290643b-1a90-4357-b9b5-b47eacbffc0e
-  flow: xtls-rprx-vision
-  tls: true
-  servername: amzn.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: Z7B8VKvjAiBH93XEkHFWCVBfK8Mu5HTLtAwfr5LuYlk
-    short-id: 67c9e7da12d2
-  network: tcp
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https://t.me/wangcai2🇨🇳
+  skip-cert-verify: true
+- name: 🇳🇱 荷兰 (Netherlands) 45 (原生) - xiaohe
+  type: ss
+  server: 193.29.139.225
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇭🇰 中国香港 (Hong Kong) 05 (原生) - xiaohe
+  type: hysteria2
+  server: 202.146.222.29
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 🇳🇱 荷兰 (Netherlands) 46 (原生) - xiaohe
+  type: ss
+  server: 158.173.20.171
+  port: 443
+  udp: true
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇳🇱 荷兰 (Netherlands) 47 (原生) - xiaohe
+  type: ss
+  server: 193.29.139.179
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
 - name: 🇫🇷 法国 (France) 12 (原生) - xiaohe
   type: trojan
-  server: 166.1.36.83
+  server: 5.253.189.238
   port: 443
   udp: true
   password: humanity
   sni: www.calmlunch.com
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /assignment
     headers:
       Host: www.calmlunch.com
+- name: 🇫🇷 法国 (France) 13 (原生) - xiaohe
+  type: trojan
+  server: 45.87.41.18
+  port: 443
+  udp: true
+  password: humanity
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: 🇩🇪 德国 (Germany) 08 (原生) - xiaohe
+  type: vless
+  server: 46.225.46.136
+  port: 2087
+  udp: true
+  uuid: a5db5ab5-8d28-49c0-ad55-0ad4724e4c0d
+  tls: true
+  servername: hoert1rert.localip.ir
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /hokm
+    headers:
+      Host: hoert1rert.localip.ir
+- name: 🇵🇱 波兰 (Poland) 01 (原生) - xiaohe
+  type: trojan
+  server: pl1.dedushka.top
+  port: 443
+  udp: true
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  sni: pl1.dedushka.top
+  network: tcp
+- name: 🇵🇱 波兰 (Poland) 02 (原生) - xiaohe
+  type: trojan
+  server: 31.133.0.186
+  port: 443
+  udp: true
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  sni: pl2.dedushka.top
+  network: tcp
+- name: 🇪🇪 EE 01 (原生) - xiaohe
+  type: vless
+  server: 93.89.220.37
+  port: 443
+  udp: true
+  uuid: 185e2bb3-2934-48d0-bbd5-dd20d16e83ee
+  flow: xtls-rprx-vision
+  tls: true
+  servername: ibm.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: lwKaUQ81wJUJRsqAPsfTPj5V_f9N50UYEwzRI_nuq2g
+    short-id: e88cb983f3c97528
+  network: tcp
 - name: 🇩🇪 德国 (Germany) 09 (原生) - xiaohe
+  type: vmess
+  server: uk2-2.998998.best
+  port: 443
+  udp: true
+  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: server3.9966338.xyz
+  network: ws
+  ws-opts:
+    path: /waetasiuofguiwer
+    headers:
+      Host: server3.9966338.xyz
+- name: 🇸🇬 新加坡 (Singapore) 01 (原生) - xiaohe
+  type: vless
+  server: 139.162.27.96
+  port: 2096
+  udp: true
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  tls: true
+  servername: free-server.techsonic.dev
+  network: ws
+  ws-opts:
+    path: /free-server.techsonic.dev
+    headers:
+      Host: free-server.techsonic.dev
+- name: 🇯🇵 日本 (Japan) 08 (原生) - xiaohe
+  type: vless
+  server: 45.77.241.190
+  port: 8441
+  udp: true
+  uuid: d492bf74-6555-4b57-94f0-52b56adbc760
+  tls: true
+  servername: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
+- name: 🇩🇪 德国 (Germany) 10 (原生) - xiaohe
   type: vless
   server: 188.114.97.6
   port: 443
   udp: true
-  uuid: a8a6aba0-bbe4-4eaa-8bb7-98601ef162bc
+  uuid: 497ef812-aa17-49a1-9e13-8cbd8c0dce9a
   tls: true
-  servername: omid-3x-ui.abolfzlllll.us.ci
+  servername: qwerty22.victorypro724mr11.dpdns.org
   client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /ws
     headers:
-      Host: omid-3x-ui.abolfzlllll.us.ci
-- name: 🇫🇷 法国 (France) 13 (原生) - xiaohe
-  type: trojan
-  server: 213.1.145.50
+      Host: qwerty22.victorypro724mr11.dpdns.org
+- name: 🇸🇬 新加坡 (Singapore) 02 (原生) - xiaohe
+  type: vless
+  server: 147.93.173.45
+  port: 10444
+  udp: true
+  uuid: 75c5f51b-d548-4eab-a26e-aa10fc3dbc7b
+  flow: xtls-rprx-vision
+  tls: true
+  servername: video.yandex.ru
+  client-fingerprint: safari
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  network: tcp
+- name: 🇩🇪 德国 (Germany) 11 (原生) - xiaohe
+  type: vless
+  server: 157.90.175.178
+  port: 1222
+  udp: true
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  tls: true
+  servername: play.google.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
+    short-id: a25d0f
+  network: tcp
+- name: 🇳🇱 荷兰 (Netherlands) 48 (原生) - xiaohe
+  type: ss
+  server: 158.173.20.208
   port: 443
   udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇩🇪 德国 (Germany) 12 (原生) - xiaohe
+  type: vmess
+  server: 91.107.169.224
+  port: 80
+  udp: true
+  uuid: d4b69108-f756-48af-a331-e8356bc95eb4
+  alterId: 0
+  cipher: auto
   network: ws
   ws-opts:
-    path: /assignment
+    path: /
+    v2ray-http-upgrade: true
     headers:
-      Host: www.calmlunch.com
-- name: 🇱🇻 LV 01 (原生) - xiaohe
-  type: trojan
-  server: lv1.dedushka.top
-  port: 443
-  udp: true
-  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
-  sni: lv1.dedushka.top
-  skip-cert-verify: true
-  network: tcp
+      Host: google.whatsapp.snapp.torob.basalam.dns-look.space.
 - name: 🇫🇷 法国 (France) 14 (原生) - xiaohe
   type: vmess
   server: 145.239.55.210
@@ -1688,266 +2267,34 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
-- name: 🇳🇱 荷兰 (Netherlands) 45 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.61
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇧🇾 BY 01 (原生) - xiaohe
+- name: 🇩🇪 德国 (Germany) 13 (原生) - xiaohe
   type: vless
-  server: 95.128.71.79
-  port: 14430
-  udp: true
-  uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 95.128.71.79
-- name: 🇫🇷 法国 (France) 15 (原生) - xiaohe
-  type: trojan
-  server: 191.96.94.226
+  server: 31.70.111.146
   port: 443
   udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: 🇺🇸 美国 (United States) 80 (原生) - xiaohe
-  type: vmess
-  server: 104.17.77.77
-  port: 8443
-  udp: true
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  alterId: 0
-  cipher: none
-  tls: true
-  servername: v2ray1.dozapp.xyz
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /lMnsZUN4/
-    headers:
-      Host: v2ray1.dozapp.xyz
-- name: 🇫🇷 法国 (France) 16 (原生) - xiaohe
-  type: trojan
-  server: 212.227.144.37
-  port: 8443
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: 🇹🇷 土耳其 (Turkey) 01 (原生) - xiaohe
-  type: vless
-  server: 78.135.73.47
-  port: 443
-  udp: true
-  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
+  uuid: 84ed0e09-6803-4ef9-a977-74b657d971e5
   flow: xtls-rprx-vision
   tls: true
-  servername: www.datadoghq.com
+  servername: www.apple.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
-    short-id: f46cd3ea3d1eb72d
+    public-key: ZNmuzIn-zyJi2C0sWRpL9fsMYCgYauXpJElXTqY_LEE
+    short-id: d7de3a6ff4018957
   network: tcp
-- name: 🇹🇼 中国台湾 (Taiwan) 02 (原生) - xiaohe
-  type: hysteria2
-  server: 103.115.109.49
+- name: 🇮🇹 意大利 (Italy) 01 (原生) - xiaohe
+  type: vless
+  server: 82.118.16.189
   port: 443
   udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2fwangcai2
-  skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 03 (原生) - xiaohe
-  type: hysteria2
-  server: vpn-tw-002.fastervpn.world
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: whatsapp.com
-  skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 04 (原生) - xiaohe
-  type: vless
-  server: 59.125.69.22
-  port: 443
-  udp: true
-  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  tls: true
-  servername: tse1.mm.bing.net
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-    headers:
-      Host: tse1.mm.bing.net
-- name: 🇱🇹 LT 01 (原生) - xiaohe
-  type: vless
-  server: 84.32.109.20
-  port: 443
-  udp: true
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
-  flow: xtls-rprx-vision
-  tls: true
-  servername: litv.nztvpn.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 3jySGemfaqPZ2vM66Qtzo5SotO3eoRn1FeGaKp6KBQ4
-    short-id: 0da7e14db353e7d0
-  network: tcp
-- name: 🇭🇰 中国香港 (Hong Kong) 02 (原生) - xiaohe
-  type: vless
-  server: 45.202.248.173
-  port: 9443
-  udp: true
-  uuid: 82eb8419-59f4-4d3e-9106-d05d22af615c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amazon.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
-    short-id: b390142456517acc
-  network: tcp
-- name: 🇭🇰 中国香港 (Hong Kong) 03 (原生) - xiaohe
-  type: vless
-  server: 141.11.149.174
-  port: 9443
-  udp: true
-  uuid: 82eb8419-59f4-4d3e-9106-d05d22af615c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amazon.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
-    short-id: b390142456517acc
-  network: tcp
-- name: 🇧🇾 BY 02 (原生) - xiaohe
-  type: vless
-  server: 178.172.227.124
-  port: 10444
-  udp: true
-  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
-  flow: xtls-rprx-vision
-  tls: true
-  servername: ads.x5.ru
-  client-fingerprint: safari
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  network: tcp
-- name: 🇭🇰 中国香港 (Hong Kong) 04 (原生) - xiaohe
-  type: vmess
-  server: 101.32.8.251
-  port: 50001
-  udp: true
-  uuid: 5706beb5-479b-475d-b557-00309327e9cc
-  alterId: 0
-  cipher: auto
-  network: tcp
-- name: 🇧🇾 BY 03 (原生) - xiaohe
-  type: vless
-  server: 178.172.227.228
-  port: 10444
-  udp: true
-  uuid: b6e5dc56-836f-48c1-9163-b0b0b43b647d
-  flow: xtls-rprx-vision
-  tls: true
-  servername: ads.x5.ru
-  client-fingerprint: safari
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  network: tcp
-- name: 🇷🇴 罗马尼亚 (Romania) 01 (原生) - xiaohe
-  type: vless
-  server: 146.70.124.85
-  port: 443
-  udp: true
-  uuid: 40abbe13-f02e-4da2-9b19-966c2c3eb4ee
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.datadoghq.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: byzvlw97wjAAAfHs5AZRV0P0H6_JKBEZ4yfLS0HNewE
-    short-id: fe24f8a0a560056e
-  network: tcp
-- name: 🇷🇺 俄罗斯 (Russia) 01 (原生) - xiaohe
-  type: ss
-  server: 46.17.44.216
-  port: 18443
-  udp: true
-  cipher: aes-256-gcm
-  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
-- name: 🇭🇰 中国香港 (Hong Kong) 05 (原生) - xiaohe
-  type: hysteria2
-  server: 202.146.222.29
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2fwangcai2%f0%9f%87%a8%f0%9f%87%b3
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 06 (原生) - xiaohe
-  type: hysteria2
-  server: 202.146.222.174
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 'off'
-  skip-cert-verify: true
-- name: 🇫🇷 法国 (France) 17 (原生) - xiaohe
-  type: trojan
-  server: 91.245.225.79
-  port: 2053
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: 🇭🇰 中国香港 (Hong Kong) 07 (原生) - xiaohe
-  type: vless
-  server: 103.180.20.100
-  port: 20003
-  udp: true
-  uuid: 52ac38da-c2fa-4f98-bef1-f3adef5d3ae9
+  uuid: d5e5f5a1-0f23-4c49-af9f-4be445bf9d8e
   flow: xtls-rprx-vision
   tls: true
   servername: www.cloudflare.com
-  client-fingerprint: safari
-  reality-opts:
-    public-key: OgcLHAAzQV0qTuXwHnz0huEueM5f3vRpYZHMH8JsjC4
-    short-id: 09d75ddaf90d0ba5
-  network: tcp
-- name: 🇸🇬 新加坡 (Singapore) 02 (原生) - xiaohe
-  type: vless
-  server: 139.162.27.96
-  port: 2096
-  udp: true
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  tls: true
-  servername: free-server.techsonic.dev
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /free-server.techsonic.dev
-    headers:
-      Host: free-server.techsonic.dev
+  reality-opts:
+    public-key: SjGkzJQ9I6ZZjC3V73atcPMczhMm0oiTrB8mUQXz1HY
+    short-id: 37fbf155c7a9f3ff
+  network: tcp
 - name: 🇸🇬 新加坡 (Singapore) 03 (原生) - xiaohe
   type: vmess
   server: 8.219.97.17
@@ -1963,21 +2310,445 @@ proxies:
     path: /ws-vmess
     headers:
       Host: wjofhsqteueywxeq.v.3dns.vip
-- name: 🇸🇬 新加坡 (Singapore) 04 (原生) - xiaohe
+- name: 🇱🇻 LV 01 (原生) - xiaohe
+  type: trojan
+  server: lv1.dedushka.top
+  port: 443
+  udp: true
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  sni: lv1.dedushka.top
+  network: tcp
+- name: 🇫🇷 法国 (France) 15 (原生) - xiaohe
+  type: trojan
+  server: 166.1.36.83
+  port: 443
+  udp: true
+  password: humanity
+  sni: www.calmlunch.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: 🇺🇸 美国 (United States) 103 (原生) - xiaohe
+  type: vmess
+  server: node8.liudonghoe.com
+  port: 443
+  udp: true
+  uuid: 47050e4e-965d-41ca-976d-73c1f11e6905
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: node8.liudonghoe.com
+  network: ws
+  ws-opts:
+    path: /hoe8
+    headers:
+      Host: node8.liudonghoe.com
+- name: 🇫🇷 法国 (France) 16 (原生) - xiaohe
+  type: trojan
+  server: 191.96.94.226
+  port: 443
+  udp: true
+  password: humanity
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: 🇫🇷 法国 (France) 17 (原生) - xiaohe
+  type: trojan
+  server: 5.44.46.142
+  port: 443
+  udp: true
+  password: humanity
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: 🇫🇷 法国 (France) 18 (原生) - xiaohe
+  type: trojan
+  server: 91.245.225.79
+  port: 2053
+  udp: true
+  password: humanity
+  sni: www.calmlunch.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: 🇹🇭 泰国 (Thailand) 01 (原生) - xiaohe
   type: vless
-  server: 147.93.173.45
+  server: 103.86.49.57
+  port: 80
+  udp: true
+  uuid: 3c52e091-6714-4915-949f-2149fe69951b
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: aIs.SpEeDtEsT.nEt
+- name: 🇵🇱 波兰 (Poland) 03 (原生) - xiaohe
+  type: vless
+  server: site.teslamotor.site
+  port: 20001
+  udp: true
+  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
+  network: tcp
+- name: 🇫🇷 法国 (France) 19 (原生) - xiaohe
+  type: trojan
+  server: 89.150.34.41
+  port: 2053
+  udp: true
+  password: humanity
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: 🇩🇪 德国 (Germany) 14 (原生) - xiaohe
+  type: vless
+  server: 903.rtgpu.com
+  port: 443
+  udp: true
+  uuid: c6438331-a79b-4471-fd5e-42c2eeac29fa
+  tls: true
+  servername: 903.rtgpu.com
+  network: ws
+  ws-opts:
+    path: /nmd2
+    headers:
+      Host: 903.rtgpu.com
+- name: 🇧🇾 BY 01 (原生) - xiaohe
+  type: vless
+  server: 178.172.227.228
   port: 10444
   udp: true
-  uuid: 75c5f51b-d548-4eab-a26e-aa10fc3dbc7b
+  uuid: b6e5dc56-836f-48c1-9163-b0b0b43b647d
   flow: xtls-rprx-vision
   tls: true
-  servername: video.yandex.ru
+  servername: ads.x5.ru
+  client-fingerprint: edge
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  network: tcp
+- name: 🇩🇪 德国 (Germany) 15 (原生) - xiaohe
+  type: vless
+  server: connect.wecantos.site
+  port: 10000
+  udp: true
+  uuid: a05ecf37-c661-4247-ab09-4432cf0f3cc1
+  network: tcp
+- name: 🇹🇷 土耳其 (Turkey) 01 (原生) - xiaohe
+  type: vless
+  server: 78.135.73.47
+  port: 443
+  udp: true
+  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.datadoghq.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
+    short-id: f46cd3ea3d1eb72d
+  network: tcp
+- name: 🇫🇷 法国 (France) 20 (原生) - xiaohe
+  type: trojan
+  server: 5.78.92.27
+  port: 8443
+  udp: true
+  password: humanity
+  sni: www.calmlunch.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: 🇧🇾 BY 02 (原生) - xiaohe
+  type: vless
+  server: 178.172.227.124
+  port: 10444
+  udp: true
+  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
+  flow: xtls-rprx-vision
+  tls: true
+  servername: ads.x5.ru
   client-fingerprint: safari
   reality-opts:
     public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
     short-id: 8debcf36f1cc69ff
   network: tcp
-- name: 🇭🇰 中国香港 (Hong Kong) 08 (原生) - xiaohe
+- name: 🇷🇺 俄罗斯 (Russia) 01 (原生) - xiaohe
+  type: ss
+  server: 176.32.34.253
+  port: 18443
+  udp: true
+  cipher: aes-256-gcm
+  password: Lpq5UPVHtQYiuB9jEUNc2WkeIYCUH9DE
+- name: 🇹🇭 泰国 (Thailand) 02 (原生) - xiaohe
+  type: ss
+  server: pphfree2.mvpnpvpn.de5.net
+  port: 52351
+  udp: true
+  cipher: aes-256-gcm
+  password: sxajCTwrlK0zl+zmHpX0p0jXIfatnzlLzWlSQ950L1c=
+- name: 🇫🇷 法国 (France) 21 (原生) - xiaohe
+  type: trojan
+  server: 185.255.179.166
+  port: 443
+  udp: true
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: 🇬🇧 英国 (United Kingdom) 02 (原生) - xiaohe
+  type: vless
+  server: 23.81.36.148
+  port: 1222
+  udp: true
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  tls: true
+  servername: play.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
+    short-id: a25d0f
+  network: tcp
+- name: 🇫🇷 法国 (France) 22 (原生) - xiaohe
+  type: vless
+  server: 8.6.112.0
+  port: 443
+  udp: true
+  uuid: 55d6b5ed-359b-4e4f-b568-e5affed702c9
+  tls: true
+  servername: polshaov.ochmaybrooooo.online
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: polshaov.ochmaybrooooo.online
+- name: 🇷🇴 罗马尼亚 (Romania) 01 (原生) - xiaohe
+  type: vless
+  server: 146.70.124.85
+  port: 443
+  udp: true
+  uuid: 40abbe13-f02e-4da2-9b19-966c2c3eb4ee
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.datadoghq.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: byzvlw97wjAAAfHs5AZRV0P0H6_JKBEZ4yfLS0HNewE
+    short-id: fe24f8a0a560056e
+  network: tcp
+- name: 🇫🇷 法国 (France) 23 (原生) - xiaohe
+  type: trojan
+  server: 185.36.141.81
+  port: 443
+  udp: true
+  password: humanity
+  sni: www.calmlunch.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: 🇩🇪 德国 (Germany) 16 (原生) - xiaohe
+  type: vless
+  server: 91.107.188.129
+  port: 2083
+  udp: true
+  uuid: 36592d47-b9f5-4e8f-949e-45ac05472aab
+  tls: true
+  servername: site.check-looks.space
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: site.check-looks.space
+- name: 🇫🇮 芬兰 (Finland) 01 (原生) - xiaohe
+  type: vless
+  server: 168.222.143.254
+  port: 443
+  udp: true
+  uuid: ebdf87e8-4f75-4b84-94e0-65ce4894993a
+  flow: xtls-rprx-vision
+  tls: true
+  servername: st.avito.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 3_Qy1SAtWfbiQbznyhlXxJtqB-5QQ46VF1Uz2h5A7Q4
+    short-id: 2dc17935
+  network: tcp
+- name: 🇻🇳 越南 (Vietnam) 01 (原生) - xiaohe
+  type: vless
+  server: 150.95.109.109
+  port: 2086
+  udp: true
+  uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
+  network: tcp
+- name: 🇮🇳 印度 (India) 01 (原生) - xiaohe
+  type: vless
+  server: 165.99.222.161
+  port: 443
+  udp: true
+  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+  flow: xtls-rprx-vision
+  tls: true
+  servername: in1.vkusnews.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: SC6AnZ_BlvDruiGFpDRno9b1V3wMmq9gjB-KEHHUlE4
+    short-id: ''
+  network: tcp
+- name: 🇷🇺 俄罗斯 (Russia) 02 (原生) - xiaohe
+  type: vless
+  server: 9f6635t.msk1.h1clayd.click
+  port: 443
+  udp: true
+  uuid: 3acb386b-fdd7-4bc9-911f-159fdcd834ce
+  tls: true
+  servername: 9f6635t.msk1.h1clayd.click
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: aovrqfVIxA_POvJorIg05wBQJM9nZ859c0fsNL7v9RM
+    short-id: 0ea5f9d7955c3971
+  network: tcp
+- name: 🇬🇧 英国 (United Kingdom) 03 (原生) - xiaohe
+  type: vless
+  server: 144.48.11.97
+  port: 43000
+  udp: true
+  uuid: 4799abf0-d0d9-4a46-9c31-b1f76ae00e1e
+  flow: xtls-rprx-vision
+  tls: true
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: lmT0SFJL1A8_ariRWL65dhShaqFbpitjGanv7EFnoR0
+    short-id: 725e6ea0
+  network: tcp
+- name: 🇳🇱 荷兰 (Netherlands) 49 (原生) - xiaohe
+  type: vless
+  server: 94.103.2.109
+  port: 8451
+  udp: true
+  uuid: a346c521-7a7f-452b-9356-a4893feb5982
+  tls: true
+  servername: github.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+    short-id: ''
+  network: grpc
+  grpc-opts:
+    grpc-service-name: GunService
+- name: 🇨🇳 中国大陆 (China) 02 (原生) - xiaohe
+  type: vmess
+  server: 120.48.133.162
+  port: 10086
+  udp: true
+  uuid: a01e5d56-464f-45b9-b600-164db4700162
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇷🇺 俄罗斯 (Russia) 03 (原生) - xiaohe
+  type: ss
+  server: 176.32.33.254
+  port: 18443
+  udp: true
+  cipher: aes-256-gcm
+  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
+- name: 🇫🇷 法国 (France) 24 (原生) - xiaohe
+  type: trojan
+  server: 77.221.138.199
+  port: 8443
+  udp: true
+  password: humanity
+  sni: www.calmlunch.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: 🇺🇸 美国 (United States) 104 (原生) - xiaohe
+  type: vless
+  server: 162.35.8.62
+  port: 443
+  udp: true
+  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
+  tls: true
+  servername: 9bc578g.us4.h1clayd.click
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: uUWYLl2Fdhr74k9o5WacesJjvsCwLiOHccgfR23TIk4
+    short-id: 29b29106d4769e3a
+  network: grpc
+  grpc-opts:
+    grpc-service-name: aa7f1b042f73
+- name: 🇨🇦 加拿大 (Canada) 09 (原生) - xiaohe
+  type: vless
+  server: milo.networkforexir.site
+  port: 8080
+  udp: true
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+  network: tcp
+- name: 🇿🇦 南非 (South Africa) 01 (原生) - xiaohe
+  type: ss
+  server: 102.37.156.224
+  port: 443
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
+- name: 🇻🇳 越南 (Vietnam) 02 (原生) - xiaohe
+  type: vless
+  server: 154.21.203.106
+  port: 51279
+  udp: true
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.tesla.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: f6Tj8-uvWsLv3V-lGLuPciArp5oKqUImBg-U7-WJ-0A
+    short-id: bb82c8
+  network: tcp
+- name: 🇭🇰 中国香港 (Hong Kong) 06 (原生) - xiaohe
+  type: vless
+  server: 526.150333.xyz
+  port: 21003
+  udp: true
+  uuid: 52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo
+    short-id: eb9539689690d35c
+  network: tcp
+- name: 🇭🇰 中国香港 (Hong Kong) 07 (原生) - xiaohe
   type: vmess
   server: hk2.998998.best
   port: 443
@@ -1992,252 +2763,111 @@ proxies:
     path: /asivewritten
     headers:
       Host: server15.9966338.xyz
-- name: 🇬🇧 英国 (United Kingdom) 03 (原生) - xiaohe
-  type: vless
-  server: 144.48.11.97
-  port: 43000
-  udp: true
-  uuid: 4799abf0-d0d9-4a46-9c31-b1f76ae00e1e
-  flow: xtls-rprx-vision
-  tls: true
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: lmT0SFJL1A8_ariRWL65dhShaqFbpitjGanv7EFnoR0
-    short-id: 725e6ea0
-  network: tcp
-- name: 🇵🇱 波兰 (Poland) 03 (原生) - xiaohe
-  type: vless
-  server: 5.42.99.64
-  port: 8443
-  udp: true
-  uuid: c53ea5e9-ed8b-4990-805d-7f1d6451426c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: du-rov.secureservice.top
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: fSVfR9NB-6J6smrZlavi0GWd8JfDh0aXuEkKbtuFzUI
-    short-id: 3cbc3d737fb9c4af
-  network: tcp
-- name: 🇺🇸 美国 (United States) 81 (原生) - xiaohe
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 105 (原生) - xiaohe
   type: ss
-  server: 15.204.247.206
-  port: 4444
+  server: 15.204.247.175
+  port: 8008
   udp: true
   cipher: aes-256-gcm
-  password: pKEW8JPByTVTLtM
-- name: 🇯🇵 日本 (Japan) 03 (原生) - xiaohe
-  type: vless
-  server: pyygg0769.sys-metric-report.com
-  port: 52804
-  udp: true
-  uuid: 2c8c4c3b-4616-400c-a2d4-f3669ea18fe9
-  flow: xtls-rprx-vision
-  tls: true
-  servername: japp.cfastcdn.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: cCwvNI8D-LX-kLH1IDuBZwnKkkyMPJm_0sJXsxz-_mA
-    short-id: 68c4f6b0
-  network: tcp
-- name: 🇿🇦 南非 (South Africa) 01 (原生) - xiaohe
-  type: ss
-  server: 102.37.156.224
-  port: 443
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
-- name: 🇺🇸 美国 (United States) 82 (原生) - xiaohe
-  type: ss
-  server: 15.204.247.244
-  port: 443
-  udp: true
-  cipher: aes-256-gcm
-  password: pKEW8JPByTVTLtM
-- name: 🇩🇪 德国 (Germany) 10 (原生) - xiaohe
-  type: ss
-  server: 213.202.208.199
-  port: 5000
-  udp: true
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-- name: 🇯🇵 日本 (Japan) 04 (原生) - xiaohe
-  type: vless
-  server: 142.91.101.39
-  port: 627
-  udp: true
-  uuid: 2949e720-4588-4edc-8642-ff2b7b368c78
-  tls: true
-  servername: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
-- name: 🇯🇵 日本 (Japan) 05 (原生) - xiaohe
-  type: vless
-  server: 142.91.101.39
-  port: 627
-  udp: true
-  uuid: 23b385cf-02c3-4df8-8402-11f1916418cd
-  tls: true
-  servername: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
-- name: 🇫🇷 法国 (France) 18 (原生) - xiaohe
+  password: XKFKl2rULjIp74
+- name: 🇫🇷 法国 (France) 25 (原生) - xiaohe
   type: trojan
-  server: 185.36.141.81
-  port: 443
+  server: 212.227.144.37
+  port: 8443
   udp: true
   password: humanity
   sni: www.calmlunch.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: 🇺🇸 美国 (United States) 83 (原生) - xiaohe
-  type: hysteria2
-  server: starlink-ft.251313.xyz
-  port: 443
-  udp: true
-  password: https://xship.2fa.cat
-  sni: www.cloudflare.com
   skip-cert-verify: true
-- name: 🇹🇭 泰国 (Thailand) 01 (原生) - xiaohe
-  type: ss
-  server: 103.107.52.106
-  port: 52351
-  udp: true
-  cipher: aes-256-gcm
-  password: sxajCTwrlK0zl+zmHpX0p0jXIfatnzlLzWlSQ950L1c=
-- name: 🇨🇦 加拿大 (Canada) 04 (原生) - xiaohe
-  type: ss
-  server: 51.222.200.165
-  port: 5000
-  udp: true
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-- name: 🇨🇦 加拿大 (Canada) 05 (原生) - xiaohe
-  type: ss
-  server: 51.222.155.32
-  port: 5003
-  udp: true
-  cipher: aes-256-gcm
-  password: g5MeD6Ft3CWlJId
-- name: 🇺🇸 美国 (United States) 84 (原生) - xiaohe
-  type: vless
-  server: wafjapga1.xyy123.win
-  port: 443
-  udp: true
-  uuid: 2796f9eb-fe22-43a1-9158-13bc34972e73
-  flow: xtls-rprx-vision
-  tls: true
-  servername: intel.com
-  client-fingerprint: edge
-  reality-opts:
-    public-key: 2gEyCa4p40rmut61LN-jwQDEOW5JZGZImU92WOXOcnQ
-    short-id: ac1b79beb059f1d6
-  network: tcp
-- name: 🇫🇷 法国 (France) 19 (原生) - xiaohe
-  type: trojan
-  server: 5.78.92.27
-  port: 8443
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: 🇪🇪 EE 01 (原生) - xiaohe
-  type: vless
-  server: 93.89.220.37
-  port: 443
-  udp: true
-  uuid: 185e2bb3-2934-48d0-bbd5-dd20d16e83ee
-  flow: xtls-rprx-vision
-  tls: true
-  servername: ibm.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: lwKaUQ81wJUJRsqAPsfTPj5V_f9N50UYEwzRI_nuq2g
-    short-id: e88cb983f3c97528
-  network: tcp
-- name: 🇨🇦 加拿大 (Canada) 06 (原生) - xiaohe
+- name: 🇨🇦 加拿大 (Canada) 10 (原生) - xiaohe
   type: ss
   server: 51.79.64.198
   port: 8119
   udp: true
   cipher: aes-256-gcm
   password: cdBIDV42DCwnfIN
-- name: 🇨🇦 加拿大 (Canada) 07 (原生) - xiaohe
+- name: 🇨🇦 加拿大 (Canada) 11 (原生) - xiaohe
   type: ss
-  server: 51.222.12.127
-  port: 445
+  server: 51.222.155.113
+  port: 5601
   udp: true
   cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
-- name: 🇨🇦 加拿大 (Canada) 08 (原生) - xiaohe
+  password: Y6R9pAtvxxzmGC
+- name: 🇨🇦 加拿大 (Canada) 12 (原生) - xiaohe
   type: ss
-  server: 51.222.136.236
-  port: 8882
+  server: 51.222.200.165
+  port: 5000
   udp: true
   cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-- name: 🇺🇸 美国 (United States) 85 (原生) - xiaohe
-  type: vless
-  server: 162.35.8.62
-  port: 443
+  password: Y6R9pAtvxxzmGC
+- name: 🇺🇸 美国 (United States) 106 (原生) - xiaohe
+  type: ss
+  server: 15.204.247.206
+  port: 4444
   udp: true
-  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
-  tls: true
-  servername: a0688bt.us4.h1clayd.click
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 5-9YzvyXcZ4J5Z4OaVTUbxUU2InvnwT17m0XY-Jse1E
-    short-id: 257420d9d430152a
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+- name: 🇺🇸 美国 (United States) 107 - xiaohe
+  type: vmess
+  server: 84.17.41.2
+  port: 18000
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   network: tcp
-- name: 🇳🇱 荷兰 (Netherlands) 46 (原生) - xiaohe
-  type: ss
-  server: 193.29.139.151
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇨🇦 加拿大 (Canada) 09 (原生) - xiaohe
-  type: ss
-  server: 51.79.49.116
-  port: 8882
-  udp: true
-  cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-- name: 🇺🇸 美国 (United States) 86 - xiaohe
+- name: 🇺🇸 美国 (United States) 108 - xiaohe
   type: vless
-  server: 162.159.250.29
-  port: 443
+  server: 172.67.155.65
+  port: 8443
   udp: true
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
   servername: lucasjow.us.ci
   network: ws
   ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
+    path: /cart/docs/www/proxyip?ed#
     headers:
       Host: lucasjow.us.ci
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 87 - xiaohe
+- name: 🇺🇸 美国 (United States) 109 - xiaohe
   type: vless
-  server: cf.090227.xyz
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: ?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 110 - xiaohe
+  type: vless
+  server: 172.67.155.65
+  port: 8443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 111 - xiaohe
+  type: vless
+  server: 188.114.97.6
   port: 443
   udp: true
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
@@ -2249,400 +2879,6 @@ proxies:
     path: /cart/docs/www/proxyip
     headers:
       Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 88 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?Telegram---DailyConfigs---DailyConfigs---DailyConfigsfp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 89 - xiaohe
-  type: vless
-  server: 104.26.4.2
-  port: 443
-  udp: true
-  uuid: d342d11e-d224-4463-b982-532309285094
-  tls: true
-  servername: ccc.010304.xyz
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- name: 🇺🇸 美国 (United States) 90 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?Telegram---bored_vpn
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 91 - xiaohe
-  type: vless
-  server: 104.21.91.244
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---fp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 92 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 93 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?Telegram---pirozi_ArGaP---pirozi_ArGaP---pirozi_ArGaP---pirozi_ArGaP
-    headers:
-      Host: lucasjow.us.ci
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 94 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?SAFEWEBS_SAFEWEBS_SAFEWEBS_SAFEWEBS
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 95 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--i10VPN?ed
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 96 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇸🇬 新加坡 (Singapore) 05 - xiaohe
-  type: vless
-  server: 104.21.70.21
-  port: 443
-  udp: true
-  uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
-  packet-encoding: xudp
-  tls: true
-  servername: nautica-cff.kloningstrife002.workers.dev
-  network: ws
-  ws-opts:
-    path: /138.2.74.219-28616
-    headers:
-      Host: nautica-cff.kloningstrife002.workers.dev
-- name: 🇺🇸 美国 (United States) 97 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /cart/docs/www/proxyip?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 98 - xiaohe
-  type: vless
-  server: b2n.ir
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /cart/docs/www/proxyip=108.160.132.132?ed#
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 99 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM---MARAMBASHI---MARAMBASHI---MARAMBASHI---MARAMBASHI
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 100 - xiaohe
-  type: vless
-  server: 104.21.91.244
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: ?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 101 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: ?Telegram---pirozi_ArGaP---pirozi_ArGaP---pirozi_ArGaP---pirozi_ArGaP
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 102 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?SAFEWEBS_SAFEWEBS_SAFEWEBS_SAFEWEBS
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇯🇵 日本 (Japan) 06 - xiaohe
-  type: vless
-  server: b2n.ir
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /cart/docs/www/proxyip=108.160.132.132?ed#TELEGRAM---@MTMVPN---@MTMVPN---@MTMVPN---@MTMVPN
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 103 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 104 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: ?TELEGRAM--v2ray_configs_pools?ed
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 105 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: ?Telegram---bored_vpn
-    headers:
-      Host: lucasjow.us.ci
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 106 - xiaohe
-  type: vless
-  server: 104.21.91.244
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?edfp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 107 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?Telegram---bored_vpn
-    headers:
-      Host: lucasjow.us.ci
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 108 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /cart/docs/www/proxyip?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 109 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?Telegram---DailyConfigs---DailyConfigs---DailyConfigs
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 110 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--v2ray_configs_pools
-    headers:
-      Host: lucasjow.us.ci
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 111 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /?Telegram---mehrosaboranfp=chrome
-    headers:
-      Host: lucasjow.us.ci
 - name: 🇺🇸 美国 (United States) 112 - xiaohe
   type: vless
   server: 188.114.98.0
@@ -2651,280 +2887,13 @@ proxies:
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
   servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub
+    path: /?TELEGRAM-TOOTFFARANGIfp=chrome
     headers:
       Host: lucasjow.us.ci
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
 - name: 🇺🇸 美国 (United States) 113 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /p=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 114 - xiaohe
-  type: vless
-  server: 104.21.91.244
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 115 - xiaohe
-  type: ss
-  server: 156.146.38.168
-  port: 443
-  udp: true
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 116 - xiaohe
-  type: vless
-  server: b2n.ir
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
-    headers:
-      Host: lucasjow.us.ci
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 117 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: ?TELEGRAM--i10VPN?ed
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 118 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: '0'
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 119 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 120 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: ?---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---fp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 121 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?Telegram---V2ray_confiig?ed
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 122 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?edfp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 123 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 124 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: ?Telegram---DailyConfigs---DailyConfigs---DailyConfigsfp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 125 - xiaohe
-  type: vless
-  server: 104.21.91.244
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 126 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?fp=chrome
-    headers:
-      Host: lucasjow.us.ci
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 127 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?Telegram---DailyConfigs---DailyConfigs---DailyConfigsfp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 128 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?Telegram---mehrosaboran
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 129 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?Telegram---DailyConfigs---DailyConfigs---DailyConfigs
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 130 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--v2ray_configs_pools?ed
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 131 - xiaohe
   type: vless
   server: 188.114.97.6
   port: 443
@@ -2938,20 +2907,7 @@ proxies:
     path: /?V2XAY-joinV
     headers:
       Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 132 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: '0'
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 133 - xiaohe
+- name: 🇺🇸 美国 (United States) 114 - xiaohe
   type: vless
   server: 188.114.98.0
   port: 443
@@ -2964,7 +2920,634 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
+    path: /?Telegram---TEHRANARGO
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 115 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /?Telegram---mehrosaboran?ed
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 116 - xiaohe
+  type: vless
+  server: 172.67.155.65
+  port: 8443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  packet-encoding: xudp
+  tls: true
+  servername: lucasjow.us.ci
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 512
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 117 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
     path: /?Telegram---V2ray_confiig
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 118 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: ?TELEGRAM--MTMVPN--MTMVPN--MTMVPN--MTMVPN
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 119 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM-TOOTFFARANGI
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 120 - xiaohe
+  type: vless
+  server: cf-socks.caoyuwu.eu.org
+  port: 443
+  udp: true
+  uuid: 9cdcbaf0-d244-4f37-b227-90166e43f5b5
+  tls: true
+  servername: cf-socks.caoyuwu.eu.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cf-socks.caoyuwu.eu.org
+- name: 🇺🇸 美国 (United States) 121 - xiaohe
+  type: vless
+  server: 104.21.91.244
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: ?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 122 - xiaohe
+  type: vless
+  server: 172.67.155.65
+  port: 2053
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 123 - xiaohe
+  type: vless
+  server: cf.877774.xyz
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  client-fingerprint: qq
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 124 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /cart/docs/www/proxyipfp=chrome
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 125 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: '0'
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 126 - xiaohe
+  type: vless
+  server: 104.21.91.244
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: ?TELEGRAM--MTMVPN--MTMVPN--MTMVPN--MTMVPN
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 127 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?SAFEWEBS_SAFEWEBS_SAFEWEBS_SAFEWEBSfp=chrome
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇯🇵 日本 (Japan) 09 - xiaohe
+  type: vless
+  server: 104.21.91.244
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /cart/docs/www/proxyip=108.160.132.132?ed#Telegram---MTMVPN---MTMVPN---MTMVPN---MTMVPN
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 128 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hubfp=chrome
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 129 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?DailyConfigs---DailyConfigs---DailyConfigs
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2056
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 130 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 131 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /Chanel0111Net
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 132 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 133 - xiaohe
+  type: vless
+  server: 104.21.91.244
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 134 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: '0'
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 135 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?Telegram---DailyConfigs---DailyConfigs---DailyConfigs#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 136 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MTMVPN--MTMVPN--MTMVPN--MTMVPN
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 137 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /cart/docs/www/proxyip?ed#Telegram---bored_vpn
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 138 - xiaohe
+  type: vless
+  server: cf.877774.xyz
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /+
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 139 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?V2XAY-joinV
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 140 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 141 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇸🇬 新加坡 (Singapore) 04 - xiaohe
+  type: vless
+  server: chat.openai.com
+  port: 8880
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime29.workers.dev
+- name: 🇺🇸 美国 (United States) 142 - xiaohe
+  type: vless
+  server: 104.18.43.174
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--v2ray_configs_pools?edfp=chrome
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 143 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: Tfp=chrome
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 144 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?Telegram---mehrosaboran
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 145 - xiaohe
+  type: vless
+  server: xstack.mahanfixe.workers.dev
+  port: 443
+  udp: true
+  uuid: a8b1d666-d3ba-4b17-90c4-ba7514c74f78
+  tls: true
+  servername: xstack.mahanfixe.workers.dev
+  network: ws
+  ws-opts:
+    path: /xiron
+    headers:
+      Host: xstack.mahanfixe.workers.dev
+- name: 🇺🇸 美国 (United States) 146 - xiaohe
+  type: vless
+  server: 104.21.91.244
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---fp=chrome
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 147 - xiaohe
+  type: vless
+  server: 188.164.248.216
+  port: 443
+  udp: true
+  uuid: d342d11e-d224-4463-b982-532309285094
+  tls: true
+  servername: ccc.010304.xyz
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ccc.010304.xyz
+- name: 🇺🇸 美国 (United States) 148 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?Telegram---mehrosaboranfp=chrome
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 149 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?Telegram---bored_vpn
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇸🇬 新加坡 (Singapore) 05 - xiaohe
+  type: vless
+  server: 104.21.70.21
+  port: 8080
+  udp: true
+  uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+  packet-encoding: xudp
+  network: ws
+  ws-opts:
+    path: /138.2.74.219-28616
+    headers:
+      Host: nautica-cff.kloningstrife002.workers.dev
+- name: 🇺🇸 美国 (United States) 150 - xiaohe
+  type: vless
+  server: 172.67.155.65
+  port: 8443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /?DailyConfigs---DailyConfigs---DailyConfigs
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2056
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 151 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM---MARAMBASHI---MARAMBASHI---MARAMBASHI---MARAMBASHI
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 152 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: ?Telegram---mehrosaboran?ed
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 153 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--V2ray_confiig
     headers:
       Host: lucasjow.us.ci
     max-early-data: 2560
@@ -2975,20 +3558,17 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
   - 🇨🇳 中国大陆 (China) 01 (家宽) - xiaohe
   - 🇺🇸 美国 (United States) 01 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 02 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 03 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 01 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 04 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 05 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 02 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 01 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 06 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 07 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 01 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 08 (原生) - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 01 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 09 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 10 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 11 (原生) - xiaohe
@@ -2998,6 +3578,7 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 15 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 16 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 17 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 01 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 18 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 19 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 20 (原生) - xiaohe
@@ -3019,7 +3600,6 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 36 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 37 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 38 (原生) - xiaohe
-  - 🇨🇦 加拿大 (Canada) 01 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 39 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 40 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 41 (原生) - xiaohe
@@ -3032,13 +3612,17 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 48 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 49 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 50 (原生) - xiaohe
+  - 🇯🇵 日本 (Japan) 01 (原生) - xiaohe
+  - 🇯🇵 日本 (Japan) 02 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 51 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 52 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 53 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 54 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 55 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 56 (原生) - xiaohe
+  - 🇯🇵 日本 (Japan) 03 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 57 (原生) - xiaohe
+  - 🇯🇵 日本 (Japan) 04 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 58 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 59 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 60 (原生) - xiaohe
@@ -3054,157 +3638,181 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 70 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 71 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 72 (原生) - xiaohe
-  - 🇨🇦 加拿大 (Canada) 02 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 73 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 74 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 01 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 02 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 75 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 76 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 03 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 77 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 78 (原生) - xiaohe
-  - 🇨🇦 加拿大 (Canada) 03 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 79 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 80 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 81 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 82 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 83 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 84 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 85 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 86 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 87 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 88 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 04 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 89 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 05 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 90 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 91 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 92 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 93 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 94 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 95 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 06 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 96 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 97 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 98 (原生) - xiaohe
+  - 🇯🇵 日本 (Japan) 05 (原生) - xiaohe
+  - 🇯🇵 日本 (Japan) 06 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 99 (原生) - xiaohe
+  - 🇯🇵 日本 (Japan) 07 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 100 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 101 (原生) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 02 (原生) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 03 (原生) - xiaohe
+  - 🇮🇪 爱尔兰 (Ireland) 01 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 01 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 02 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 03 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 02 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 01 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 02 (原生) - xiaohe
   - 🇬🇧 英国 (United Kingdom) 01 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 02 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 01 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 03 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 02 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 03 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 04 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 07 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 04 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 05 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 05 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 06 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 07 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 06 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 08 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 03 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 09 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 03 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 04 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 05 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 10 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 11 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 12 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 13 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 06 (原生) - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 02 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 07 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 14 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 15 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 16 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 08 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 17 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 18 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 04 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 19 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 09 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 20 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 21 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 22 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 23 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 07 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 08 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 24 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 25 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 10 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 26 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 27 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 03 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 28 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 29 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 30 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 31 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 32 (原生) - xiaohe
-  - 🇺🇸 美国 (United States) 79 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 33 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 34 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 04 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 35 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 05 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 36 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 37 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 11 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 05 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 38 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 39 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 40 (原生) - xiaohe
   - 🇩🇪 德国 (Germany) 06 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 09 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 40 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 102 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 41 (原生) - xiaohe
   - 🇩🇪 德国 (Germany) 07 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 42 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 43 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 44 (原生) - xiaohe
-  - 🇵🇱 波兰 (Poland) 01 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 10 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 11 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 08 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 01 (原生) - xiaohe
-  - 🇵🇱 波兰 (Poland) 02 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 02 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 12 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 09 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 13 (原生) - xiaohe
-  - 🇱🇻 LV 01 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 14 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 45 (原生) - xiaohe
-  - 🇧🇾 BY 01 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 15 (原生) - xiaohe
-  - 🇺🇸 美国 (United States) 80 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 16 (原生) - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 01 (原生) - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 02 (原生) - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 03 (原生) - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 04 (原生) - xiaohe
-  - 🇱🇹 LT 01 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 02 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 03 (原生) - xiaohe
-  - 🇧🇾 BY 02 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 04 (原生) - xiaohe
-  - 🇧🇾 BY 03 (原生) - xiaohe
-  - 🇷🇴 罗马尼亚 (Romania) 01 (原生) - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 01 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 05 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 06 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 17 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 07 (原生) - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 02 (原生) - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 03 (原生) - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 04 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 08 (原生) - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 03 (原生) - xiaohe
-  - 🇵🇱 波兰 (Poland) 03 (原生) - xiaohe
-  - 🇺🇸 美国 (United States) 81 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 03 (原生) - xiaohe
-  - 🇿🇦 南非 (South Africa) 01 (原生) - xiaohe
-  - 🇺🇸 美国 (United States) 82 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 10 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 04 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 05 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 18 (原生) - xiaohe
-  - 🇺🇸 美国 (United States) 83 (原生) - xiaohe
-  - 🇹🇭 泰国 (Thailand) 01 (原生) - xiaohe
-  - 🇨🇦 加拿大 (Canada) 04 (原生) - xiaohe
-  - 🇨🇦 加拿大 (Canada) 05 (原生) - xiaohe
-  - 🇺🇸 美国 (United States) 84 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 19 (原生) - xiaohe
-  - 🇪🇪 EE 01 (原生) - xiaohe
-  - 🇨🇦 加拿大 (Canada) 06 (原生) - xiaohe
-  - 🇨🇦 加拿大 (Canada) 07 (原生) - xiaohe
   - 🇨🇦 加拿大 (Canada) 08 (原生) - xiaohe
-  - 🇺🇸 美国 (United States) 85 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 04 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 45 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 05 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 46 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 47 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 12 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 13 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 08 (原生) - xiaohe
+  - 🇵🇱 波兰 (Poland) 01 (原生) - xiaohe
+  - 🇵🇱 波兰 (Poland) 02 (原生) - xiaohe
+  - 🇪🇪 EE 01 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 09 (原生) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 01 (原生) - xiaohe
+  - 🇯🇵 日本 (Japan) 08 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 10 (原生) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 02 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 11 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 48 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 12 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 14 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 13 (原生) - xiaohe
+  - 🇮🇹 意大利 (Italy) 01 (原生) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 03 (原生) - xiaohe
+  - 🇱🇻 LV 01 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 15 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 103 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 16 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 17 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 18 (原生) - xiaohe
+  - 🇹🇭 泰国 (Thailand) 01 (原生) - xiaohe
+  - 🇵🇱 波兰 (Poland) 03 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 19 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 14 (原生) - xiaohe
+  - 🇧🇾 BY 01 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 15 (原生) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 01 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 20 (原生) - xiaohe
+  - 🇧🇾 BY 02 (原生) - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 01 (原生) - xiaohe
+  - 🇹🇭 泰国 (Thailand) 02 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 21 (原生) - xiaohe
+  - 🇬🇧 英国 (United Kingdom) 02 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 22 (原生) - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 01 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 23 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 16 (原生) - xiaohe
+  - 🇫🇮 芬兰 (Finland) 01 (原生) - xiaohe
+  - 🇻🇳 越南 (Vietnam) 01 (原生) - xiaohe
+  - 🇮🇳 印度 (India) 01 (原生) - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 02 (原生) - xiaohe
+  - 🇬🇧 英国 (United Kingdom) 03 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 49 (原生) - xiaohe
+  - 🇨🇳 中国大陆 (China) 02 (原生) - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 03 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 24 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 104 (原生) - xiaohe
   - 🇨🇦 加拿大 (Canada) 09 (原生) - xiaohe
-  - 🇺🇸 美国 (United States) 86 - xiaohe
-  - 🇺🇸 美国 (United States) 87 - xiaohe
-  - 🇺🇸 美国 (United States) 88 - xiaohe
-  - 🇺🇸 美国 (United States) 89 - xiaohe
-  - 🇺🇸 美国 (United States) 90 - xiaohe
-  - 🇺🇸 美国 (United States) 91 - xiaohe
-  - 🇺🇸 美国 (United States) 92 - xiaohe
-  - 🇺🇸 美国 (United States) 93 - xiaohe
-  - 🇺🇸 美国 (United States) 94 - xiaohe
-  - 🇺🇸 美国 (United States) 95 - xiaohe
-  - 🇺🇸 美国 (United States) 96 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 05 - xiaohe
-  - 🇺🇸 美国 (United States) 97 - xiaohe
-  - 🇺🇸 美国 (United States) 98 - xiaohe
-  - 🇺🇸 美国 (United States) 99 - xiaohe
-  - 🇺🇸 美国 (United States) 100 - xiaohe
-  - 🇺🇸 美国 (United States) 101 - xiaohe
-  - 🇺🇸 美国 (United States) 102 - xiaohe
-  - 🇯🇵 日本 (Japan) 06 - xiaohe
-  - 🇺🇸 美国 (United States) 103 - xiaohe
-  - 🇺🇸 美国 (United States) 104 - xiaohe
-  - 🇺🇸 美国 (United States) 105 - xiaohe
-  - 🇺🇸 美国 (United States) 106 - xiaohe
+  - 🇿🇦 南非 (South Africa) 01 (原生) - xiaohe
+  - 🇻🇳 越南 (Vietnam) 02 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 06 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 07 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 105 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 25 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 10 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 11 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 12 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 106 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 107 - xiaohe
   - 🇺🇸 美国 (United States) 108 - xiaohe
   - 🇺🇸 美国 (United States) 109 - xiaohe
@@ -3226,30 +3834,50 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 125 - xiaohe
   - 🇺🇸 美国 (United States) 126 - xiaohe
   - 🇺🇸 美国 (United States) 127 - xiaohe
+  - 🇯🇵 日本 (Japan) 09 - xiaohe
   - 🇺🇸 美国 (United States) 128 - xiaohe
   - 🇺🇸 美国 (United States) 129 - xiaohe
   - 🇺🇸 美国 (United States) 130 - xiaohe
   - 🇺🇸 美国 (United States) 131 - xiaohe
   - 🇺🇸 美国 (United States) 132 - xiaohe
   - 🇺🇸 美国 (United States) 133 - xiaohe
+  - 🇺🇸 美国 (United States) 134 - xiaohe
+  - 🇺🇸 美国 (United States) 135 - xiaohe
+  - 🇺🇸 美国 (United States) 136 - xiaohe
+  - 🇺🇸 美国 (United States) 137 - xiaohe
+  - 🇺🇸 美国 (United States) 138 - xiaohe
+  - 🇺🇸 美国 (United States) 139 - xiaohe
+  - 🇺🇸 美国 (United States) 140 - xiaohe
+  - 🇺🇸 美国 (United States) 141 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 04 - xiaohe
+  - 🇺🇸 美国 (United States) 142 - xiaohe
+  - 🇺🇸 美国 (United States) 143 - xiaohe
+  - 🇺🇸 美国 (United States) 144 - xiaohe
+  - 🇺🇸 美国 (United States) 145 - xiaohe
+  - 🇺🇸 美国 (United States) 146 - xiaohe
+  - 🇺🇸 美国 (United States) 147 - xiaohe
+  - 🇺🇸 美国 (United States) 148 - xiaohe
+  - 🇺🇸 美国 (United States) 149 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 05 - xiaohe
+  - 🇺🇸 美国 (United States) 150 - xiaohe
+  - 🇺🇸 美国 (United States) 151 - xiaohe
+  - 🇺🇸 美国 (United States) 152 - xiaohe
+  - 🇺🇸 美国 (United States) 153 - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
   - 🇨🇳 中国大陆 (China) 01 (家宽) - xiaohe
   - 🇺🇸 美国 (United States) 01 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 02 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 03 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 01 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 04 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 05 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 02 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 01 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 06 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 07 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 01 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 08 (原生) - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 01 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 09 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 10 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 11 (原生) - xiaohe
@@ -3259,6 +3887,7 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 15 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 16 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 17 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 01 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 18 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 19 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 20 (原生) - xiaohe
@@ -3280,7 +3909,6 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 36 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 37 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 38 (原生) - xiaohe
-  - 🇨🇦 加拿大 (Canada) 01 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 39 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 40 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 41 (原生) - xiaohe
@@ -3293,13 +3921,17 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 48 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 49 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 50 (原生) - xiaohe
+  - 🇯🇵 日本 (Japan) 01 (原生) - xiaohe
+  - 🇯🇵 日本 (Japan) 02 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 51 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 52 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 53 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 54 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 55 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 56 (原生) - xiaohe
+  - 🇯🇵 日本 (Japan) 03 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 57 (原生) - xiaohe
+  - 🇯🇵 日本 (Japan) 04 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 58 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 59 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 60 (原生) - xiaohe
@@ -3315,157 +3947,181 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 70 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 71 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 72 (原生) - xiaohe
-  - 🇨🇦 加拿大 (Canada) 02 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 73 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 74 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 01 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 02 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 75 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 76 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 03 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 77 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 78 (原生) - xiaohe
-  - 🇨🇦 加拿大 (Canada) 03 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 79 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 80 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 81 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 82 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 83 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 84 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 85 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 86 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 87 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 88 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 04 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 89 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 05 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 90 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 91 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 92 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 93 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 94 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 95 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 06 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 96 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 97 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 98 (原生) - xiaohe
+  - 🇯🇵 日本 (Japan) 05 (原生) - xiaohe
+  - 🇯🇵 日本 (Japan) 06 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 99 (原生) - xiaohe
+  - 🇯🇵 日本 (Japan) 07 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 100 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 101 (原生) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 02 (原生) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 03 (原生) - xiaohe
+  - 🇮🇪 爱尔兰 (Ireland) 01 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 01 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 02 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 03 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 02 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 01 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 02 (原生) - xiaohe
   - 🇬🇧 英国 (United Kingdom) 01 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 02 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 01 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 03 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 02 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 03 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 04 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 07 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 04 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 05 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 05 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 06 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 07 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 06 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 08 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 03 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 09 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 03 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 04 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 05 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 10 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 11 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 12 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 13 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 06 (原生) - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 02 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 07 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 14 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 15 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 16 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 08 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 17 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 18 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 04 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 19 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 09 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 20 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 21 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 22 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 23 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 07 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 08 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 24 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 25 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 10 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 26 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 27 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 03 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 28 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 29 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 30 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 31 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 32 (原生) - xiaohe
-  - 🇺🇸 美国 (United States) 79 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 33 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 34 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 04 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 35 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 05 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 36 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 37 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 11 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 05 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 38 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 39 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 40 (原生) - xiaohe
   - 🇩🇪 德国 (Germany) 06 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 09 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 40 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 102 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 41 (原生) - xiaohe
   - 🇩🇪 德国 (Germany) 07 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 42 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 43 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 44 (原生) - xiaohe
-  - 🇵🇱 波兰 (Poland) 01 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 10 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 11 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 08 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 01 (原生) - xiaohe
-  - 🇵🇱 波兰 (Poland) 02 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 02 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 12 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 09 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 13 (原生) - xiaohe
-  - 🇱🇻 LV 01 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 14 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 45 (原生) - xiaohe
-  - 🇧🇾 BY 01 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 15 (原生) - xiaohe
-  - 🇺🇸 美国 (United States) 80 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 16 (原生) - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 01 (原生) - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 02 (原生) - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 03 (原生) - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 04 (原生) - xiaohe
-  - 🇱🇹 LT 01 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 02 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 03 (原生) - xiaohe
-  - 🇧🇾 BY 02 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 04 (原生) - xiaohe
-  - 🇧🇾 BY 03 (原生) - xiaohe
-  - 🇷🇴 罗马尼亚 (Romania) 01 (原生) - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 01 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 05 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 06 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 17 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 07 (原生) - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 02 (原生) - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 03 (原生) - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 04 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 08 (原生) - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 03 (原生) - xiaohe
-  - 🇵🇱 波兰 (Poland) 03 (原生) - xiaohe
-  - 🇺🇸 美国 (United States) 81 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 03 (原生) - xiaohe
-  - 🇿🇦 南非 (South Africa) 01 (原生) - xiaohe
-  - 🇺🇸 美国 (United States) 82 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 10 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 04 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 05 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 18 (原生) - xiaohe
-  - 🇺🇸 美国 (United States) 83 (原生) - xiaohe
-  - 🇹🇭 泰国 (Thailand) 01 (原生) - xiaohe
-  - 🇨🇦 加拿大 (Canada) 04 (原生) - xiaohe
-  - 🇨🇦 加拿大 (Canada) 05 (原生) - xiaohe
-  - 🇺🇸 美国 (United States) 84 (原生) - xiaohe
-  - 🇫🇷 法国 (France) 19 (原生) - xiaohe
-  - 🇪🇪 EE 01 (原生) - xiaohe
-  - 🇨🇦 加拿大 (Canada) 06 (原生) - xiaohe
-  - 🇨🇦 加拿大 (Canada) 07 (原生) - xiaohe
   - 🇨🇦 加拿大 (Canada) 08 (原生) - xiaohe
-  - 🇺🇸 美国 (United States) 85 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 04 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 45 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 05 (原生) - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 46 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 47 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 12 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 13 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 08 (原生) - xiaohe
+  - 🇵🇱 波兰 (Poland) 01 (原生) - xiaohe
+  - 🇵🇱 波兰 (Poland) 02 (原生) - xiaohe
+  - 🇪🇪 EE 01 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 09 (原生) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 01 (原生) - xiaohe
+  - 🇯🇵 日本 (Japan) 08 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 10 (原生) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 02 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 11 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 48 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 12 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 14 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 13 (原生) - xiaohe
+  - 🇮🇹 意大利 (Italy) 01 (原生) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 03 (原生) - xiaohe
+  - 🇱🇻 LV 01 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 15 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 103 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 16 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 17 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 18 (原生) - xiaohe
+  - 🇹🇭 泰国 (Thailand) 01 (原生) - xiaohe
+  - 🇵🇱 波兰 (Poland) 03 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 19 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 14 (原生) - xiaohe
+  - 🇧🇾 BY 01 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 15 (原生) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 01 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 20 (原生) - xiaohe
+  - 🇧🇾 BY 02 (原生) - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 01 (原生) - xiaohe
+  - 🇹🇭 泰国 (Thailand) 02 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 21 (原生) - xiaohe
+  - 🇬🇧 英国 (United Kingdom) 02 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 22 (原生) - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 01 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 23 (原生) - xiaohe
+  - 🇩🇪 德国 (Germany) 16 (原生) - xiaohe
+  - 🇫🇮 芬兰 (Finland) 01 (原生) - xiaohe
+  - 🇻🇳 越南 (Vietnam) 01 (原生) - xiaohe
+  - 🇮🇳 印度 (India) 01 (原生) - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 02 (原生) - xiaohe
+  - 🇬🇧 英国 (United Kingdom) 03 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 49 (原生) - xiaohe
+  - 🇨🇳 中国大陆 (China) 02 (原生) - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 03 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 24 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 104 (原生) - xiaohe
   - 🇨🇦 加拿大 (Canada) 09 (原生) - xiaohe
-  - 🇺🇸 美国 (United States) 86 - xiaohe
-  - 🇺🇸 美国 (United States) 87 - xiaohe
-  - 🇺🇸 美国 (United States) 88 - xiaohe
-  - 🇺🇸 美国 (United States) 89 - xiaohe
-  - 🇺🇸 美国 (United States) 90 - xiaohe
-  - 🇺🇸 美国 (United States) 91 - xiaohe
-  - 🇺🇸 美国 (United States) 92 - xiaohe
-  - 🇺🇸 美国 (United States) 93 - xiaohe
-  - 🇺🇸 美国 (United States) 94 - xiaohe
-  - 🇺🇸 美国 (United States) 95 - xiaohe
-  - 🇺🇸 美国 (United States) 96 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 05 - xiaohe
-  - 🇺🇸 美国 (United States) 97 - xiaohe
-  - 🇺🇸 美国 (United States) 98 - xiaohe
-  - 🇺🇸 美国 (United States) 99 - xiaohe
-  - 🇺🇸 美国 (United States) 100 - xiaohe
-  - 🇺🇸 美国 (United States) 101 - xiaohe
-  - 🇺🇸 美国 (United States) 102 - xiaohe
-  - 🇯🇵 日本 (Japan) 06 - xiaohe
-  - 🇺🇸 美国 (United States) 103 - xiaohe
-  - 🇺🇸 美国 (United States) 104 - xiaohe
-  - 🇺🇸 美国 (United States) 105 - xiaohe
-  - 🇺🇸 美国 (United States) 106 - xiaohe
+  - 🇿🇦 南非 (South Africa) 01 (原生) - xiaohe
+  - 🇻🇳 越南 (Vietnam) 02 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 06 (原生) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 07 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 105 (原生) - xiaohe
+  - 🇫🇷 法国 (France) 25 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 10 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 11 (原生) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 12 (原生) - xiaohe
+  - 🇺🇸 美国 (United States) 106 (原生) - xiaohe
   - 🇺🇸 美国 (United States) 107 - xiaohe
   - 🇺🇸 美国 (United States) 108 - xiaohe
   - 🇺🇸 美国 (United States) 109 - xiaohe
@@ -3487,12 +4143,35 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 125 - xiaohe
   - 🇺🇸 美国 (United States) 126 - xiaohe
   - 🇺🇸 美国 (United States) 127 - xiaohe
+  - 🇯🇵 日本 (Japan) 09 - xiaohe
   - 🇺🇸 美国 (United States) 128 - xiaohe
   - 🇺🇸 美国 (United States) 129 - xiaohe
   - 🇺🇸 美国 (United States) 130 - xiaohe
   - 🇺🇸 美国 (United States) 131 - xiaohe
   - 🇺🇸 美国 (United States) 132 - xiaohe
   - 🇺🇸 美国 (United States) 133 - xiaohe
+  - 🇺🇸 美国 (United States) 134 - xiaohe
+  - 🇺🇸 美国 (United States) 135 - xiaohe
+  - 🇺🇸 美国 (United States) 136 - xiaohe
+  - 🇺🇸 美国 (United States) 137 - xiaohe
+  - 🇺🇸 美国 (United States) 138 - xiaohe
+  - 🇺🇸 美国 (United States) 139 - xiaohe
+  - 🇺🇸 美国 (United States) 140 - xiaohe
+  - 🇺🇸 美国 (United States) 141 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 04 - xiaohe
+  - 🇺🇸 美国 (United States) 142 - xiaohe
+  - 🇺🇸 美国 (United States) 143 - xiaohe
+  - 🇺🇸 美国 (United States) 144 - xiaohe
+  - 🇺🇸 美国 (United States) 145 - xiaohe
+  - 🇺🇸 美国 (United States) 146 - xiaohe
+  - 🇺🇸 美国 (United States) 147 - xiaohe
+  - 🇺🇸 美国 (United States) 148 - xiaohe
+  - 🇺🇸 美国 (United States) 149 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 05 - xiaohe
+  - 🇺🇸 美国 (United States) 150 - xiaohe
+  - 🇺🇸 美国 (United States) 151 - xiaohe
+  - 🇺🇸 美国 (United States) 152 - xiaohe
+  - 🇺🇸 美国 (United States) 153 - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

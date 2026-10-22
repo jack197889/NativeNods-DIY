@@ -1,0 +1,35 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇮🇹 意大利 (Italy) 01 (原生) - xiaohe
+  type: vless
+  server: 82.118.16.189
+  port: 443
+  udp: true
+  uuid: d5e5f5a1-0f23-4c49-af9f-4be445bf9d8e
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: SjGkzJQ9I6ZZjC3V73atcPMczhMm0oiTrB8mUQXz1HY
+    short-id: 37fbf155c7a9f3ff
+  network: tcp
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇮🇹 意大利 (Italy) 01 (原生) - xiaohe
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇮🇹 意大利 (Italy) 01 (原生) - xiaohe
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

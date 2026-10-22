@@ -43,33 +43,32 @@ proxies:
   network: tcp
 - name: 🇭🇰 中国香港 (Hong Kong) 04 (原生) - xiaohe
   type: hysteria2
-  server: 202.146.222.29
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2fwangcai2%f0%9f%87%a8%f0%9f%87%b3
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 05 (原生) - xiaohe
-  type: hysteria2
   server: 202.146.222.174
   port: 443
   udp: true
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 'off'
+  sni: https://t.me/wangcai2🇨🇳
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 05 (原生) - xiaohe
+  type: hysteria2
+  server: 202.146.222.29
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: www.bing.com
   skip-cert-verify: true
 - name: 🇭🇰 中国香港 (Hong Kong) 06 (原生) - xiaohe
   type: vless
-  server: 103.180.20.100
-  port: 20003
+  server: 526.150333.xyz
+  port: 21003
   udp: true
-  uuid: 52ac38da-c2fa-4f98-bef1-f3adef5d3ae9
-  flow: xtls-rprx-vision
+  uuid: 52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a
   tls: true
   servername: www.cloudflare.com
-  client-fingerprint: safari
+  client-fingerprint: chrome
   reality-opts:
-    public-key: OgcLHAAzQV0qTuXwHnz0huEueM5f3vRpYZHMH8JsjC4
-    short-id: 09d75ddaf90d0ba5
+    public-key: EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo
+    short-id: eb9539689690d35c
   network: tcp
 - name: 🇭🇰 中国香港 (Hong Kong) 07 (原生) - xiaohe
   type: vmess
@@ -86,6 +85,8 @@ proxies:
     path: /asivewritten
     headers:
       Host: server15.9966338.xyz
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
 proxy-groups:
 - name: 🚀 节点选择
   type: select

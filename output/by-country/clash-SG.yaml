@@ -6,13 +6,22 @@ log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 - xiaohe
   type: vless
+  server: chat.openai.com
+  port: 8880
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime29.workers.dev
+- name: 🇸🇬 新加坡 (Singapore) 02 - xiaohe
+  type: vless
   server: 104.21.70.21
-  port: 443
+  port: 8080
   udp: true
   uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
   packet-encoding: xudp
-  tls: true
-  servername: nautica-cff.kloningstrife002.workers.dev
   network: ws
   ws-opts:
     path: /138.2.74.219-28616
@@ -24,10 +33,12 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇸🇬 新加坡 (Singapore) 01 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 02 - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇸🇬 新加坡 (Singapore) 01 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 02 - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
