@@ -17,7 +17,7 @@
        - 普通：其余，含「广播 IP」(包括家庭宽带但广播的 IP)
   5. 导出：v2ray(base64) / Clash / sing-box，总表 + 按国家，并更新 README
 
-规则：家宽、原生节点全部保留；普通节点保留延迟最低的 MAX_NORMAL(默认 50) 个。
+规则：风控值(Scamalytics) 超过 MAX_RISK_SCORE(默认 45) 的节点一律淘汰；家宽、原生节点全部保留；普通节点保留延迟最低的 MAX_NORMAL(默认 50) 个。
 
 依赖：pip install -r requirements.txt   (requests[socks]  PyYAML  maxminddb)
 
@@ -26,6 +26,7 @@
   MAX_WORKERS_TEST                测活并发（默认 48）
   MAX_CANDIDATES                  最多测试多少个节点（默认 5000，0=不限）
   MAX_NORMAL / MAX_NATIVE / MAX_RESIDENTIAL   各类保留上限（0=不限）
+  MAX_RISK_SCORE / ENABLE_RISK_FILTER / DROP_RISK_UNKNOWN   风控值过滤(默认 45 / 开 / 查询失败保留)
   ENABLE_SPEED_TEST=1             开启限时测速
   ENABLE_RDAP=0                   关闭 RDAP 注册地查询（仅用 GeoLite2）
   DROP_INSECURE=1                 丢弃「跳过证书验证」的节点
@@ -161,6 +162,11 @@ SPEED_TEST_BUDGET = 4.0
 SPEED_MIN_BYTES_PER_S = 70_000
 
 # 精选规则
+ENABLE_RISK_FILTER = _env_flag("ENABLE_RISK_FILTER", True)   # 风控值过滤（所有节点，含普通）
+MAX_RISK_SCORE = _env_int("MAX_RISK_SCORE", 45)              # 风控值超过它的节点淘汰
+DROP_RISK_UNKNOWN = _env_flag("DROP_RISK_UNKNOWN", False)    # 风控值查询失败的节点：默认保留
+RISK_WORKERS = 4
+RISK_BATCH = 60
 NO_EXIT_MAX_RATIO = 0.5         # 取不到出口 IP 的存活节点占比超过它 → 视为探测服务故障，不淘汰
 MAX_NORMAL = _env_int("MAX_NORMAL", 50)
 MAX_NATIVE = _env_int("MAX_NATIVE", 0)
@@ -1567,6 +1573,61 @@ def rdap_lookup_many(ips: list) -> dict:
     return out
 
 
+_RISK_CACHE = {}
+
+
+def scamalytics_fraud_score(ip: str) -> int:
+    """Scamalytics 风控评分 0-100，越高越脏（抓取网页，方式同原作者；可能被拦截或改版）。失败返回 -1。"""
+    if ip in _RISK_CACHE:
+        return _RISK_CACHE[ip]
+    score = -1
+    for _ in range(2):
+        try:
+            r = DIRECT_SESSION.get(f"https://scamalytics.com/ip/{ip}", timeout=12)
+            if r.status_code == 200:
+                m = re.search(r"Fraud Score:\s*(\d+)", r.text)
+                if m:
+                    score = int(m.group(1))
+                break
+        except requests.RequestException:
+            pass
+        time.sleep(1.5)
+    _RISK_CACHE[ip] = score
+    return score
+
+
+def risk_select(cands: list, cap: int, label: str) -> list:
+    """按延迟从低到高取节点，淘汰风控值 > MAX_RISK_SCORE 的；有上限时按需分批查询，淘汰后继续往后补满。"""
+    if not ENABLE_RISK_FILTER:
+        return cands[:cap] if cap > 0 else list(cands)
+    picked, pos, rejected, unknown = [], 0, 0, 0
+    while pos < len(cands) and (cap <= 0 or len(picked) < cap):
+        size = RISK_BATCH if cap <= 0 else max(20, cap - len(picked))
+        chunk = cands[pos:pos + size]
+        pos += len(chunk)
+        ips = sorted({c["look_ip"] for c in chunk if c["look_ip"] not in _RISK_CACHE})
+        if ips:
+            with ThreadPoolExecutor(RISK_WORKERS) as ex:
+                _RISK_CACHE.update(zip(ips, ex.map(scamalytics_fraud_score, ips)))
+        for c in chunk:
+            sc = _RISK_CACHE.get(c["look_ip"], -1)
+            c["risk"] = sc
+            if sc > MAX_RISK_SCORE:
+                c["risk_drop"] = True
+                rejected += 1
+                continue
+            if sc < 0:
+                unknown += 1
+                if DROP_RISK_UNKNOWN:
+                    c["risk_drop"] = True
+                    continue
+            picked.append(c)
+            if cap > 0 and len(picked) >= cap:
+                break
+    print(f"    {label}: 保留 {len(picked)} | 风控值>{MAX_RISK_SCORE} 淘汰 {rejected} | 风控查询失败 {unknown}")
+    return picked
+
+
 def classify_results(results: list):
     """每个节点只属于一类：家宽 > 原生 > 普通，互不重叠。
        家宽 = 家庭宽带 IP（含移动网络）且是原生 IP，无需额外核验
@@ -1612,6 +1673,7 @@ def classify_results(results: list):
             "latency_ms": r["latency_ms"], "country": actual, "asn": asn, "org_text": org_text,
             "net_type": net_type, "confidence": conf, "geo": g, "echo_cc": r.get("exit_country"),
             "ipapi_cc": ipapi_cc, "registered": None, "native": False, "tag": "",
+            "risk": None, "risk_drop": False,
         })
 
     # rDNS 兜底：仅对「仍无法判断」的 IP
@@ -1642,6 +1704,21 @@ def classify_results(results: list):
           for t in ("residential", "mobile", "datacenter", "cdn", "unknown"))
           + f" | 原生={sum(1 for i in items if i['native'])}")
 
+    items.sort(key=lambda x: x["latency_ms"])
+    residential = [i for i in items if i["residential"]]
+    native = [i for i in items if i["native_final"]]
+    normal = [i for i in items if not i["residential"] and not i["native_final"]]
+    if ENABLE_RISK_FILTER:
+        print(f"[*] 风控值过滤: 淘汰风控值 > {MAX_RISK_SCORE} 的节点 (家宽/原生/普通均适用) ...")
+    residential = risk_select(residential, MAX_RESIDENTIAL, "家宽")
+    native = risk_select(native, MAX_NATIVE, "原生")
+    selected_normal = risk_select(normal, MAX_NORMAL, "普通")
+    queried = [i for i in items if i["risk"] is not None]
+    if len(queried) >= 10 and sum(1 for i in queried if i["risk"] < 0) / len(queried) > 0.5:
+        print("[!] 超过一半的风控查询失败 (可能被 scamalytics 拦截)，本次风控过滤基本没有生效")
+    print(f"[*] 精选结果: 家宽 {len(residential)} | 原生 {len(native)} | "
+          f"普通精选 {len(selected_normal)} (候选 {len(normal)}) | 总计 "
+          f"{len(residential) + len(native) + len(selected_normal)}")
     if DEBUG:
         os.makedirs(os.path.join(OUTPUT_DIR, "debug"), exist_ok=True)
         write_text(os.path.join(OUTPUT_DIR, "debug", "classification.json"), json.dumps([{
@@ -1649,21 +1726,9 @@ def classify_results(results: list):
             "rdns": i.get("rdns"), "net_type": i["net_type"], "confidence": i["confidence"],
             "geo_country": i["geo"]["country"], "mm_registered": i["geo"]["registered"],
             "registered_used": i["registered"], "echo_country": i["echo_cc"], "ipapi_country": i["ipapi_cc"],
-            "native": i["native"], "result": i["tag"] or "普通",
+            "native": i["native"], "risk": i["risk"], "risk_dropped": i["risk_drop"],
+            "result": i["tag"] or "普通",
         } for i in items], indent=1, ensure_ascii=False))
-
-    items.sort(key=lambda x: x["latency_ms"])
-    residential = [i for i in items if i["residential"]]
-    native = [i for i in items if i["native_final"]]
-    normal = [i for i in items if not i["residential"] and not i["native_final"]]
-    if MAX_RESIDENTIAL > 0:
-        residential = residential[:MAX_RESIDENTIAL]
-    if MAX_NATIVE > 0:
-        native = native[:MAX_NATIVE]
-    selected_normal = normal[:MAX_NORMAL] if MAX_NORMAL > 0 else normal
-    print(f"[*] 精选结果: 家宽 {len(residential)} | 原生 {len(native)} | "
-          f"普通精选 {len(selected_normal)} (候选 {len(normal)}) | 总计 "
-          f"{len(residential) + len(native) + len(selected_normal)}")
     return {"residential": residential, "native": native, "normal": selected_normal}
 
 
@@ -2058,6 +2123,7 @@ sing-box 客户端配置 (1.12+): `{raw}/singbox.json`
 ## 📖 说明
 
 - **分类互斥**: 每个节点只属于「家宽 / 原生 / 普通」之一，优先级 家宽 > 原生。
+- **风控值过滤**: 风控值超过 {MAX_RISK_SCORE} 的节点一律淘汰 (Scamalytics 评分，与检测网站的风控值数据源不同，数值不能直接等同)。
 - **原生 IP**: 注册地国家与实际使用地国家一致 (注册地取 RDAP 登记国家，查不到用 GeoLite2；多个地理库互相矛盾则不算)。「广播 IP」归普通。
 - **家宽**: 家庭宽带 IP（含移动网络）且为原生 IP，识别沿用原作者方案；家庭宽带但广播的 IP 归普通。
 - 免费节点来自公开订阅源，**不可信**，可能嗅探或篡改流量，请勿用于登录银行、邮箱等敏感账号。
