@@ -4,28 +4,26 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇭 瑞士-Dronten 01
-  type: trojan
-  server: 188.114.97.6
+- name: 🇺🇸 美国-洛杉矶 01 (家宽)
+  type: hysteria2
+  server: 155.117.19.17
   port: 443
   udp: true
-  password: mitivpn
-  sni: de.mitivpn.in.net
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: de.mitivpn.in.net
+  password: 5fa748137b6d822308eea4611f474ad5
+  sni: www.bing.com
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: a39ca173b57ac7021b08bf3e3de9f1f6
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇨🇭 瑞士-Dronten 01
+  - 🇺🇸 美国-洛杉矶 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇨🇭 瑞士-Dronten 01
+  - 🇺🇸 美国-洛杉矶 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

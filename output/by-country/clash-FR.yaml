@@ -6,7 +6,18 @@ log-level: info
 proxies:
 - name: 🇫🇷 法国-巴黎 01
   type: vless
-  server: 15.224.143.133
+  server: 138.124.70.41
+  port: 14430
+  udp: true
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 138.124.70.41
+- name: 🇫🇷 法国-巴黎 02
+  type: vless
+  server: 35.180.222.143
   port: 22222
   udp: true
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
@@ -17,10 +28,12 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇫🇷 法国-巴黎 01
+  - 🇫🇷 法国-巴黎 02
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇫🇷 法国-巴黎 01
+  - 🇫🇷 法国-巴黎 02
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

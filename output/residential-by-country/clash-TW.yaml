@@ -1,0 +1,70 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇹🇼 台湾-南港 01 (家宽)
+  type: vless
+  server: hinet1.2yly.com
+  port: 24215
+  udp: true
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+  tls: true
+  servername: addons.mozilla.org
+  client-fingerprint: safari
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+    short-id: ''
+  network: tcp
+- name: 🇹🇼 台湾-New Taipei City 02 (家宽)
+  type: trojan
+  server: iwt196.zxom.eu.org
+  port: 20015
+  udp: true
+  password: 82f1c096fc0d4b1a
+  sni: iwt196.zxom.eu.org
+  network: tcp
+- name: 🇹🇼 台湾-Changhua 03 (家宽)
+  type: anytls
+  server: er8u54dh.df6h451rh.xin
+  port: 443
+  udp: true
+  password: 0324fbc29561
+  sni: px.ads.linkedin.com
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  skip-cert-verify: true
+- name: 🇹🇼 台湾-Yuanlin 04 (家宽)
+  type: anytls
+  server: 684616s4.df6h451rh.xin
+  port: 443
+  udp: true
+  password: 0324fbc29561
+  sni: px.ads.linkedin.com
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  skip-cert-verify: true
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇹🇼 台湾-南港 01 (家宽)
+  - 🇹🇼 台湾-New Taipei City 02 (家宽)
+  - 🇹🇼 台湾-Changhua 03 (家宽)
+  - 🇹🇼 台湾-Yuanlin 04 (家宽)
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇹🇼 台湾-南港 01 (家宽)
+  - 🇹🇼 台湾-New Taipei City 02 (家宽)
+  - 🇹🇼 台湾-Changhua 03 (家宽)
+  - 🇹🇼 台湾-Yuanlin 04 (家宽)
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

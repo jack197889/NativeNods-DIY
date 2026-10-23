@@ -1,0 +1,44 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇬🇧 英国-阿姆斯特丹 01
+  type: ss
+  server: sql.popmintxo.cc
+  port: 43385
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: AwW1fV6oDDQKh8r2znmptv59tPgt4eHVTgFaTqgKS2jiSdikJ7GyGCBYehDaK38S8yMgHFdbJqcTmRJSfYS5CFw345bNhFZa
+- name: 🇬🇧 英国-Coventry 02
+  type: vless
+  server: 138.124.125.193
+  port: 10444
+  udp: true
+  uuid: e57ce64d-5a1a-4a90-96df-9e1bd3ad26e4
+  flow: xtls-rprx-vision
+  tls: true
+  servername: ads.x5.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  network: tcp
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇬🇧 英国-阿姆斯特丹 01
+  - 🇬🇧 英国-Coventry 02
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇬🇧 英国-阿姆斯特丹 01
+  - 🇬🇧 英国-Coventry 02
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

@@ -4,43 +4,14 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇩🇪 德国-法兰克福 01 (原生)
-  type: vless
-  server: connect.wecantos.site
-  port: 10000
-  udp: true
-  uuid: a05ecf37-c661-4247-ab09-4432cf0f3cc1
-  network: tcp
-- name: 🇩🇪 德国-法兰克福 02 (原生)
-  type: vless
-  server: freesocks.work
-  port: 2052
-  udp: true
-  uuid: e3fb01b6-69b4-41d7-babf-696d992de194
-  packet-encoding: xudp
-  network: ws
-  ws-opts:
-    path: /@BlueKnight_net--@BlueKnight_net
-    headers:
-      Host: uwu.blueknightnet.qzz.io
-- name: 🇩🇪 德国-杜塞尔多夫 03 (原生)
+- name: 🇩🇪 德国-杜塞尔多夫 01 (原生)
   type: ss
   server: 213.202.208.199
-  port: 5000
+  port: 7001
   udp: true
   cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-- name: 🇩🇪 德国-纽伦堡 04 (原生)
-  type: trojan
-  server: lm10.ehsanazizi-speed-server.com
-  port: 2127
-  udp: true
-  password: zgRfB1MMJDJ65rwKSnGCZuzLpTiUSfgzHmTb26ye7mM=
-  sni: lm10.ehsanazizi-speed-server.com
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  network: tcp
-- name: 🇩🇪 德国-纽伦堡 05 (原生)
+  password: RexnBgU7EV5ADxG
+- name: 🇩🇪 德国-纽伦堡 02 (原生)
   type: vless
   server: sino.bestsellers1.site
   port: 2083
@@ -53,22 +24,7 @@ proxies:
     path: /
     headers:
       Host: sino.bestsellers1.site
-- name: 🇩🇪 德国-纽伦堡 06 (原生)
-  type: vless
-  server: hoert1rert.localip.ir
-  port: 2087
-  udp: true
-  uuid: a5db5ab5-8d28-49c0-ad55-0ad4724e4c0d
-  tls: true
-  servername: hoert1rert.localip.ir
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /hokm
-    headers:
-      Host: hoert1rert.localip.ir
-- name: 🇩🇪 德国-法尔肯施泰因 07 (原生)
+- name: 🇩🇪 德国-法尔肯施泰因 03 (原生)
   type: vmess
   server: 91.107.169.224
   port: 80
@@ -82,28 +38,53 @@ proxies:
     v2ray-http-upgrade: true
     headers:
       Host: google.whatsapp.snapp.torob.basalam.dns-look.space.
-- name: 🇩🇪 德国-纽伦堡 08 (原生)
+- name: 🇩🇪 德国-纽伦堡 04 (原生)
   type: hysteria2
   server: 5.45.100.100
   port: 51511
   udp: true
   password: miaoge110
-  sni: www.bing.com
   skip-cert-verify: true
-- name: 🇩🇪 德国-纽伦堡 09 (原生)
+- name: 🇩🇪 德国-柏林 05 (原生)
   type: vless
-  server: mci.amir12.ir
-  port: 2112
+  server: 31.70.111.146
+  port: 443
   udp: true
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  uuid: 84ed0e09-6803-4ef9-a977-74b657d971e5
+  flow: xtls-rprx-vision
   tls: true
-  servername: play.google.com
+  servername: www.apple.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: p8pUe3hwND5rhAti-yRQ5qMaIkNdhxOV1K1jpbtJlEQ
-    short-id: 125ba3
+    public-key: ZNmuzIn-zyJi2C0sWRpL9fsMYCgYauXpJElXTqY_LEE
+    short-id: d7de3a6ff4018957
   network: tcp
-- name: 🇩🇪 德国-纽伦堡 10 (原生)
+- name: 🇩🇪 德国-法兰克福 06 (原生)
+  type: vless
+  server: 104.21.65.43
+  port: 2052
+  udp: true
+  uuid: aa5d861a-7799-41a7-bdf4-7a6414cf98fd
+  network: ws
+  ws-opts:
+    path: /@BlueKnight_net--@BlueKnight_net
+    headers:
+      Host: uwu.blueknightnet.qzz.io
+- name: 🇩🇪 德国-法尔肯施泰因 07 (原生)
+  type: vless
+  server: 91.107.188.129
+  port: 2083
+  udp: true
+  uuid: 36592d47-b9f5-4e8f-949e-45ac05472aab
+  tls: true
+  servername: site.check-looks.space
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: site.check-looks.space
+- name: 🇩🇪 德国-纽伦堡 08 (原生)
   type: vless
   server: uiuxtestsdcv-development-r6dg9.lucity.app
   port: 443
@@ -117,49 +98,46 @@ proxies:
     path: /ws/58b06206-cd53-23d6-279a-0f0dd259cb0a
     headers:
       Host: uiuxtestsdcv-development-r6dg9.lucity.app
-- name: 🇩🇪 德国-法尔肯施泰因 11 (原生)
+- name: 🇩🇪 德国-纽伦堡 09 (原生)
   type: vless
-  server: 91.107.188.129
-  port: 2083
+  server: mci.amir12.ir
+  port: 2112
   udp: true
-  uuid: 36592d47-b9f5-4e8f-949e-45ac05472aab
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  packet-encoding: xudp
   tls: true
-  servername: site.check-looks.space
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: site.check-looks.space
+  servername: play.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: p8pUe3hwND5rhAti-yRQ5qMaIkNdhxOV1K1jpbtJlEQ
+    short-id: 125ba3
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇩🇪 德国-法兰克福 01 (原生)
-  - 🇩🇪 德国-法兰克福 02 (原生)
-  - 🇩🇪 德国-杜塞尔多夫 03 (原生)
+  - 🇩🇪 德国-杜塞尔多夫 01 (原生)
+  - 🇩🇪 德国-纽伦堡 02 (原生)
+  - 🇩🇪 德国-法尔肯施泰因 03 (原生)
   - 🇩🇪 德国-纽伦堡 04 (原生)
-  - 🇩🇪 德国-纽伦堡 05 (原生)
-  - 🇩🇪 德国-纽伦堡 06 (原生)
+  - 🇩🇪 德国-柏林 05 (原生)
+  - 🇩🇪 德国-法兰克福 06 (原生)
   - 🇩🇪 德国-法尔肯施泰因 07 (原生)
   - 🇩🇪 德国-纽伦堡 08 (原生)
   - 🇩🇪 德国-纽伦堡 09 (原生)
-  - 🇩🇪 德国-纽伦堡 10 (原生)
-  - 🇩🇪 德国-法尔肯施泰因 11 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇩🇪 德国-法兰克福 01 (原生)
-  - 🇩🇪 德国-法兰克福 02 (原生)
-  - 🇩🇪 德国-杜塞尔多夫 03 (原生)
+  - 🇩🇪 德国-杜塞尔多夫 01 (原生)
+  - 🇩🇪 德国-纽伦堡 02 (原生)
+  - 🇩🇪 德国-法尔肯施泰因 03 (原生)
   - 🇩🇪 德国-纽伦堡 04 (原生)
-  - 🇩🇪 德国-纽伦堡 05 (原生)
-  - 🇩🇪 德国-纽伦堡 06 (原生)
+  - 🇩🇪 德国-柏林 05 (原生)
+  - 🇩🇪 德国-法兰克福 06 (原生)
   - 🇩🇪 德国-法尔肯施泰因 07 (原生)
   - 🇩🇪 德国-纽伦堡 08 (原生)
   - 🇩🇪 德国-纽伦堡 09 (原生)
-  - 🇩🇪 德国-纽伦堡 10 (原生)
-  - 🇩🇪 德国-法尔肯施泰因 11 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
