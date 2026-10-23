@@ -4,7 +4,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇾 BY 01 (原生) - xiaohe
+- name: 🇧🇾 BY Bol’shoye Stiklevo 01 (原生) - xiaohe
   type: vless
   server: 178.172.227.228
   port: 14430
@@ -15,7 +15,7 @@ proxies:
     path: /vless
     headers:
       Host: 178.172.227.228
-- name: 🇧🇾 BY 02 (原生) - xiaohe
+- name: 🇧🇾 BY Bol’shoye Stiklevo 02 (原生) - xiaohe
   type: vless
   server: 178.172.227.124
   port: 14430
@@ -31,13 +31,13 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇧🇾 BY 01 (原生) - xiaohe
-  - 🇧🇾 BY 02 (原生) - xiaohe
+  - 🇧🇾 BY Bol’shoye Stiklevo 01 (原生) - xiaohe
+  - 🇧🇾 BY Bol’shoye Stiklevo 02 (原生) - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇧🇾 BY 01 (原生) - xiaohe
-  - 🇧🇾 BY 02 (原生) - xiaohe
+  - 🇧🇾 BY Bol’shoye Stiklevo 01 (原生) - xiaohe
+  - 🇧🇾 BY Bol’shoye Stiklevo 02 (原生) - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

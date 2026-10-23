@@ -4,34 +4,250 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01 - xiaohe
+- name: 🇺🇸 美国 (United States) Flower Mound 01 - xiaohe
   type: vless
-  server: 172.67.155.65
-  port: 2053
+  server: 188.114.97.6
+  port: 443
   udp: true
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
   servername: lucasjow.us.ci
   network: ws
   ws-opts:
-    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    path: /?DailyConfigs---DailyConfigs---DailyConfigs
     headers:
       Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 02 - xiaohe
+    max-early-data: 2056
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) Berrechid 02 - xiaohe
   type: vless
-  server: 104.26.4.2
+  server: 188.114.97.6
   port: 443
   udp: true
-  uuid: d342d11e-d224-4463-b982-532309285094
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
-  servername: ccc.010304.xyz
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
   client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: ?TELEGRAM-TOOTFFARANGI
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 03 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /cart/docs/www/proxyip?ed#Telegram---pirozi_ArGaP---pirozi_ArGaP---pirozi_ArGaP---pirozi_ArGaP
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 04 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: ccc.010304.xyz
-- name: 🇺🇸 美国 (United States) 03 - xiaohe
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 05 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 2053
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /?---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---fp=chrome
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 06 - xiaohe
+  type: vless
+  server: 80.93.202.40
+  port: 8880
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime02.workers.dev
+- name: 🇺🇸 美国 (United States) Flower Mound 07 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 512
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) Flower Mound 08 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--V2ray_confiig
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) Flower Mound 09 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: ?Telegram---mehrosaboran
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 10 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /cart/docs/www/proxyip
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 11 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /cart/docs/www/proxyipfp=chrome
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 12 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hubfp=chrome
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 13 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 14 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) Flower Mound 15 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: ?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) Flower Mound 16 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?Telegram---V2ray_confiig
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) Flower Mound 17 - xiaohe
   type: vless
   server: 188.114.97.6
   port: 443
@@ -43,25 +259,12 @@ proxies:
   - http/1.1
   network: ws
   ws-opts:
-    path: /?Telegram---TEHRANARGOfp=chrome
+    path: /?Telegram---bored_vpnfp=chrome
     headers:
       Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 04 - xiaohe
+- name: 🇺🇸 美国 (United States) Flower Mound 18 - xiaohe
   type: vless
-  server: cf.090227.xyz
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 05 - xiaohe
-  type: vless
-  server: 188.114.98.0
+  server: 104.21.91.244
   port: 443
   udp: true
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
@@ -69,13 +272,27 @@ proxies:
   servername: lucasjow.us.ci
   alpn:
   - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /Chanel0111Net
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 19 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
   client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /?Telegram---mehrosaboran
     headers:
       Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 06 - xiaohe
+- name: 🇺🇸 美国 (United States) Flower Mound 20 - xiaohe
   type: vless
   server: 188.114.98.0
   port: 443
@@ -88,90 +305,60 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    path: /?TELEGRAM--i10VPN?ed
     headers:
       Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 07 - xiaohe
+- name: 🇺🇸 美国 (United States) Flower Mound 21 - xiaohe
   type: vless
-  server: 23.227.39.30
-  port: 8880
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime17.workers.dev
-- name: 🇺🇸 美国 (United States) 08 - xiaohe
-  type: vless
-  server: 172.67.155.65
-  port: 8443
+  server: 188.114.98.0
+  port: 443
   udp: true
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
   servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: ?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 22 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
     headers:
       Host: lucasjow.us.ci
-    max-early-data: 2048
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 09 - xiaohe
+- name: 🇺🇸 美国 (United States) Flower Mound 23 - xiaohe
   type: vless
-  server: cf.877774.xyz
+  server: 162.159.250.29
   port: 443
   udp: true
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
   servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /+
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
     headers:
       Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 10 - xiaohe
-  type: vless
-  server: 172.67.155.65
-  port: 8443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub?ed
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 11 - xiaohe
-  type: vless
-  server: 172.67.155.65
-  port: 2053
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /cart/docs/www/proxyip
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 12 - xiaohe
-  type: vless
-  server: cf.877774.xyz
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  client-fingerprint: qq
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 13 - xiaohe
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) Flower Mound 24 - xiaohe
   type: vless
   server: 188.114.98.0
   port: 443
@@ -187,9 +374,7 @@ proxies:
     path: /?Telegram---pirozi_ArGaP---pirozi_ArGaP---pirozi_ArGaP---pirozi_ArGaP
     headers:
       Host: lucasjow.us.ci
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 14 - xiaohe
+- name: 🇺🇸 美国 (United States) Flower Mound 25 - xiaohe
   type: vless
   server: 188.114.98.0
   port: 443
@@ -202,101 +387,12 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
-    headers:
-      Host: lucasjow.us.ci
-    max-early-data: 512
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 15 - xiaohe
-  type: vless
-  server: 172.67.155.65
-  port: 8443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
+    path: ?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
     headers:
       Host: lucasjow.us.ci
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 16 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 17 - xiaohe
-  type: vless
-  server: 172.67.155.65
-  port: 8443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /cart/docs/www/proxyip?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 18 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--i10VPN?edfp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 19 - xiaohe
-  type: vless
-  server: cf.090227.xyz
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
-    headers:
-      Host: lucasjow.us.ci
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 20 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--V2ray_confiig
-    headers:
-      Host: lucasjow.us.ci
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 21 - xiaohe
+- name: 🇺🇸 美国 (United States) Flower Mound 26 - xiaohe
   type: vless
   server: 188.114.97.6
   port: 443
@@ -311,273 +407,7 @@ proxies:
     path: /?TELEGRAM-TOOTFFARANGIfp=chrome
     headers:
       Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 22 - xiaohe
-  type: vless
-  server: 104.18.0.181
-  port: 2082
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  network: ws
-  ws-opts:
-    path: /fp
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-- name: 🇺🇸 美国 (United States) 23 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /?Telegram---V2ray_confiig?edfp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 24 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 25 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 26 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 27 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM-TOOTFFARANGI
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 28 - xiaohe
-  type: vless
-  server: 216.24.57.1
-  port: 443
-  udp: true
-  uuid: 974c2588-c1cd-43ac-8823-ce3d879b09fd
-  tls: true
-  servername: somersby.pt.ex33r.eu.cc
-  network: ws
-  ws-opts:
-    path: /id-amz
-    headers:
-      Host: somersby.pt.ex33r.eu.cc
-- name: 🇺🇸 美国 (United States) 29 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?Telegram---TEHRANARGO
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 30 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: ?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 31 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM
-    headers:
-      Host: lucasjow.us.ci
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 32 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?Telegram---DailyConfigs---DailyConfigs---DailyConfigs
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 33 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?Telegram---TEHRANARGO
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 34 - xiaohe
-  type: vless
-  server: 104.21.70.21
-  port: 8080
-  udp: true
-  uuid: a8b1d666-d3ba-4b17-90c4-ba7514c74f78
-  packet-encoding: xudp
-  network: ws
-  ws-opts:
-    path: /xiron
-    headers:
-      Host: xstack.mahanfixe.workers.dev
-- name: 🇺🇸 美国 (United States) 35 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?Telegram---mehrosaboran?ed
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 36 - xiaohe
-  type: vless
-  server: cf.877774.xyz
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /+
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 37 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: lucasjow.us.ci
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 38 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?Telegram---mehrosaboran
-    headers:
-      Host: lucasjow.us.ci
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 39 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 2053
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---fp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 40 - xiaohe
+- name: 🇺🇸 美国 (United States) Flower Mound 27 - xiaohe
   type: vless
   server: 104.18.43.174
   port: 443
@@ -588,10 +418,65 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed
+    path: /?TELEGRAM--v2ray_configs_pools?ed
     headers:
       Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 41 - xiaohe
+- name: 🇺🇸 美国 (United States) Flower Mound 28 - xiaohe
+  type: vless
+  server: 172.67.155.65
+  port: 8443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub?ed
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 29 - xiaohe
+  type: vless
+  server: 104.21.91.244
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 30 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /?Telegram---DailyConfigs---DailyConfigs---DailyConfigs
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 31 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?edfp=chrome
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 32 - xiaohe
   type: vless
   server: 188.114.98.0
   port: 443
@@ -604,10 +489,10 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?Telegram---mehrosaboran?ed
+    path: ?Telegram---pirozi_ArGaP---pirozi_ArGaP---pirozi_ArGaP---pirozi_ArGaP
     headers:
       Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 42 - xiaohe
+- name: 🇺🇸 美国 (United States) Flower Mound 33 - xiaohe
   type: vless
   server: 188.114.97.6
   port: 443
@@ -615,41 +500,12 @@ proxies:
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
   servername: lucasjow.us.ci
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?Telegram---TEHRANARGO
+    path: /?Telegram---mehrosaboran?edfp=chrome
     headers:
       Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 43 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /cart/docs/www/proxyip
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 44 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: 3fp=chrome
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 45 - xiaohe
+- name: 🇺🇸 美国 (United States) Flower Mound 34 - xiaohe
   type: vless
   server: 188.114.98.0
   port: 443
@@ -662,23 +518,10 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---
+    path: /?Telegram---i10VPN
     headers:
       Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 46 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 2053
-  udp: true
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 47 - xiaohe
+- name: 🇺🇸 美国 (United States) Flower Mound 35 - xiaohe
   type: vless
   server: 188.114.97.6
   port: 443
@@ -689,131 +532,313 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    path: '%25'
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 36 - xiaohe
+  type: vless
+  server: 172.67.155.65
+  port: 8443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2048
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) Flower Mound 37 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?Telegram---TEHRANARGOfp=chrome
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 38 - xiaohe
+  type: vless
+  server: 185.148.104.30
+  port: 8880
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime51.workers.dev
+- name: 🇺🇸 美国 (United States) Flower Mound 39 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--V2ray_confiig
     headers:
       Host: lucasjow.us.ci
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 48 - xiaohe
+- name: 🇺🇸 美国 (United States) Flower Mound 40 - xiaohe
   type: vless
-  server: chatgpt.com
+  server: 188.114.97.6
   port: 443
   udp: true
-  uuid: 64726966-0000-4000-8000-740000000000
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
-  servername: parsa-panel-dy55x.railway1385-2a46.workers.dev
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM-TOOTFFARANGI#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 41 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
   alpn:
   - http/1.1
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /drift
+    path: /Chanel0111Net
     headers:
-      Host: parsa-panel-dy55x.railway1385-2a46.workers.dev
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 42 - xiaohe
+  type: vless
+  server: 172.67.155.65
+  port: 8443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 43 - xiaohe
+  type: vless
+  server: 104.18.43.174
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 44 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MTMVPN--MTMVPN--MTMVPN--MTMVPN
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) Flower Mound 45 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 马德里 46 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /?Telegram---mehrosaboran
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) Flower Mound 47 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?Telegram---bored_vpn
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) Flower Mound 48 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  servername: lucasjow.us.ci
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?Telegram---bored_vpn
+    headers:
+      Host: lucasjow.us.ci
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇺🇸 美国 (United States) 01 - xiaohe
-  - 🇺🇸 美国 (United States) 02 - xiaohe
-  - 🇺🇸 美国 (United States) 03 - xiaohe
-  - 🇺🇸 美国 (United States) 04 - xiaohe
-  - 🇺🇸 美国 (United States) 05 - xiaohe
-  - 🇺🇸 美国 (United States) 06 - xiaohe
-  - 🇺🇸 美国 (United States) 07 - xiaohe
-  - 🇺🇸 美国 (United States) 08 - xiaohe
-  - 🇺🇸 美国 (United States) 09 - xiaohe
-  - 🇺🇸 美国 (United States) 10 - xiaohe
-  - 🇺🇸 美国 (United States) 11 - xiaohe
-  - 🇺🇸 美国 (United States) 12 - xiaohe
-  - 🇺🇸 美国 (United States) 13 - xiaohe
-  - 🇺🇸 美国 (United States) 14 - xiaohe
-  - 🇺🇸 美国 (United States) 15 - xiaohe
-  - 🇺🇸 美国 (United States) 16 - xiaohe
-  - 🇺🇸 美国 (United States) 17 - xiaohe
-  - 🇺🇸 美国 (United States) 18 - xiaohe
-  - 🇺🇸 美国 (United States) 19 - xiaohe
-  - 🇺🇸 美国 (United States) 20 - xiaohe
-  - 🇺🇸 美国 (United States) 21 - xiaohe
-  - 🇺🇸 美国 (United States) 22 - xiaohe
-  - 🇺🇸 美国 (United States) 23 - xiaohe
-  - 🇺🇸 美国 (United States) 24 - xiaohe
-  - 🇺🇸 美国 (United States) 25 - xiaohe
-  - 🇺🇸 美国 (United States) 26 - xiaohe
-  - 🇺🇸 美国 (United States) 27 - xiaohe
-  - 🇺🇸 美国 (United States) 28 - xiaohe
-  - 🇺🇸 美国 (United States) 29 - xiaohe
-  - 🇺🇸 美国 (United States) 30 - xiaohe
-  - 🇺🇸 美国 (United States) 31 - xiaohe
-  - 🇺🇸 美国 (United States) 32 - xiaohe
-  - 🇺🇸 美国 (United States) 33 - xiaohe
-  - 🇺🇸 美国 (United States) 34 - xiaohe
-  - 🇺🇸 美国 (United States) 35 - xiaohe
-  - 🇺🇸 美国 (United States) 36 - xiaohe
-  - 🇺🇸 美国 (United States) 37 - xiaohe
-  - 🇺🇸 美国 (United States) 38 - xiaohe
-  - 🇺🇸 美国 (United States) 39 - xiaohe
-  - 🇺🇸 美国 (United States) 40 - xiaohe
-  - 🇺🇸 美国 (United States) 41 - xiaohe
-  - 🇺🇸 美国 (United States) 42 - xiaohe
-  - 🇺🇸 美国 (United States) 43 - xiaohe
-  - 🇺🇸 美国 (United States) 44 - xiaohe
-  - 🇺🇸 美国 (United States) 45 - xiaohe
-  - 🇺🇸 美国 (United States) 46 - xiaohe
-  - 🇺🇸 美国 (United States) 47 - xiaohe
-  - 🇺🇸 美国 (United States) 48 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 01 - xiaohe
+  - 🇺🇸 美国 (United States) Berrechid 02 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 03 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 04 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 05 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 06 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 07 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 08 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 09 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 10 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 11 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 12 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 13 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 14 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 15 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 16 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 17 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 18 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 19 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 20 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 21 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 22 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 23 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 24 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 25 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 26 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 27 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 28 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 29 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 30 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 31 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 32 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 33 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 34 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 35 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 36 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 37 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 38 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 39 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 40 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 41 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 42 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 43 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 44 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 45 - xiaohe
+  - 🇺🇸 美国 (United States) 马德里 46 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 47 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 48 - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇺🇸 美国 (United States) 01 - xiaohe
-  - 🇺🇸 美国 (United States) 02 - xiaohe
-  - 🇺🇸 美国 (United States) 03 - xiaohe
-  - 🇺🇸 美国 (United States) 04 - xiaohe
-  - 🇺🇸 美国 (United States) 05 - xiaohe
-  - 🇺🇸 美国 (United States) 06 - xiaohe
-  - 🇺🇸 美国 (United States) 07 - xiaohe
-  - 🇺🇸 美国 (United States) 08 - xiaohe
-  - 🇺🇸 美国 (United States) 09 - xiaohe
-  - 🇺🇸 美国 (United States) 10 - xiaohe
-  - 🇺🇸 美国 (United States) 11 - xiaohe
-  - 🇺🇸 美国 (United States) 12 - xiaohe
-  - 🇺🇸 美国 (United States) 13 - xiaohe
-  - 🇺🇸 美国 (United States) 14 - xiaohe
-  - 🇺🇸 美国 (United States) 15 - xiaohe
-  - 🇺🇸 美国 (United States) 16 - xiaohe
-  - 🇺🇸 美国 (United States) 17 - xiaohe
-  - 🇺🇸 美国 (United States) 18 - xiaohe
-  - 🇺🇸 美国 (United States) 19 - xiaohe
-  - 🇺🇸 美国 (United States) 20 - xiaohe
-  - 🇺🇸 美国 (United States) 21 - xiaohe
-  - 🇺🇸 美国 (United States) 22 - xiaohe
-  - 🇺🇸 美国 (United States) 23 - xiaohe
-  - 🇺🇸 美国 (United States) 24 - xiaohe
-  - 🇺🇸 美国 (United States) 25 - xiaohe
-  - 🇺🇸 美国 (United States) 26 - xiaohe
-  - 🇺🇸 美国 (United States) 27 - xiaohe
-  - 🇺🇸 美国 (United States) 28 - xiaohe
-  - 🇺🇸 美国 (United States) 29 - xiaohe
-  - 🇺🇸 美国 (United States) 30 - xiaohe
-  - 🇺🇸 美国 (United States) 31 - xiaohe
-  - 🇺🇸 美国 (United States) 32 - xiaohe
-  - 🇺🇸 美国 (United States) 33 - xiaohe
-  - 🇺🇸 美国 (United States) 34 - xiaohe
-  - 🇺🇸 美国 (United States) 35 - xiaohe
-  - 🇺🇸 美国 (United States) 36 - xiaohe
-  - 🇺🇸 美国 (United States) 37 - xiaohe
-  - 🇺🇸 美国 (United States) 38 - xiaohe
-  - 🇺🇸 美国 (United States) 39 - xiaohe
-  - 🇺🇸 美国 (United States) 40 - xiaohe
-  - 🇺🇸 美国 (United States) 41 - xiaohe
-  - 🇺🇸 美国 (United States) 42 - xiaohe
-  - 🇺🇸 美国 (United States) 43 - xiaohe
-  - 🇺🇸 美国 (United States) 44 - xiaohe
-  - 🇺🇸 美国 (United States) 45 - xiaohe
-  - 🇺🇸 美国 (United States) 46 - xiaohe
-  - 🇺🇸 美国 (United States) 47 - xiaohe
-  - 🇺🇸 美国 (United States) 48 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 01 - xiaohe
+  - 🇺🇸 美国 (United States) Berrechid 02 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 03 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 04 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 05 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 06 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 07 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 08 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 09 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 10 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 11 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 12 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 13 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 14 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 15 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 16 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 17 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 18 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 19 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 20 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 21 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 22 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 23 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 24 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 25 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 26 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 27 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 28 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 29 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 30 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 31 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 32 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 33 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 34 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 35 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 36 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 37 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 38 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 39 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 40 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 41 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 42 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 43 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 44 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 45 - xiaohe
+  - 🇺🇸 美国 (United States) 马德里 46 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 47 - xiaohe
+  - 🇺🇸 美国 (United States) Flower Mound 48 - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

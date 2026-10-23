@@ -4,18 +4,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国 (United Kingdom) 01 (原生) - xiaohe
-  type: vless
-  server: 155.46.167.30
-  port: 8880
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime50.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 02 (原生) - xiaohe
+- name: 🇬🇧 英国 (United Kingdom) City of London 01 (原生) - xiaohe
   type: vless
   server: 23.81.36.148
   port: 1222
@@ -28,7 +17,7 @@ proxies:
     public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
     short-id: a25d0f
   network: tcp
-- name: 🇬🇧 英国 (United Kingdom) 03 (原生) - xiaohe
+- name: 🇬🇧 英国 (United Kingdom) 伦敦 02 (原生) - xiaohe
   type: vless
   server: 144.48.11.97
   port: 43000
@@ -47,15 +36,13 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇬🇧 英国 (United Kingdom) 01 (原生) - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 02 (原生) - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 03 (原生) - xiaohe
+  - 🇬🇧 英国 (United Kingdom) City of London 01 (原生) - xiaohe
+  - 🇬🇧 英国 (United Kingdom) 伦敦 02 (原生) - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇬🇧 英国 (United Kingdom) 01 (原生) - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 02 (原生) - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 03 (原生) - xiaohe
+  - 🇬🇧 英国 (United Kingdom) City of London 01 (原生) - xiaohe
+  - 🇬🇧 英国 (United Kingdom) 伦敦 02 (原生) - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

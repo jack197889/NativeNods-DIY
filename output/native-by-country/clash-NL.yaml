@@ -4,139 +4,111 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇱 荷兰 (Netherlands) 01 (原生) - xiaohe
+- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 01 (原生) - xiaohe
   type: vless
-  server: 172.67.155.222
+  server: 172.67.184.45
   port: 443
   udp: true
-  uuid: 82b279c6-5cba-3a96-f8bd-780a00000035
-  packet-encoding: xudp
+  uuid: 82b279c6-5cba-3a96-f8bd-780a00000045
   tls: true
   servername: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /sync
+    path: /
     headers:
       Host: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
-- name: 🇳🇱 荷兰 (Netherlands) 02 (原生) - xiaohe
-  type: hysteria2
-  server: nl-hy-test.tcp-reset-club.net
-  port: 443
-  udp: true
-  password: dd50a499-7e43-4589-8490-f3b9c2451473
-  sni: tcp-reset-club.net
-  skip-cert-verify: true
-- name: 🇳🇱 荷兰 (Netherlands) 03 (原生) - xiaohe
+- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 02 (原生) - xiaohe
   type: ss
-  server: dns5.m3hrzd.ir
-  port: 8044
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: 5ox2e7xif1rCKOiffOPvibGk-KVXCk8v
-- name: 🇳🇱 荷兰 (Netherlands) 04 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.171
-  port: 443
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 05 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.192
+  server: 82.38.31.191
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 06 (原生) - xiaohe
+- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 03 (原生) - xiaohe
   type: ss
-  server: 82.38.31.54
+  server: 193.29.139.225
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 07 (原生) - xiaohe
+- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 04 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.170
+  port: 443
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 05 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.180
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 06 (原生) - xiaohe
+  type: ss
+  server: 193.29.139.235
+  port: 443
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 07 (原生) - xiaohe
   type: ss
   server: 82.38.31.66
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 08 (原生) - xiaohe
-  type: ss
-  server: 193.29.139.235
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 09 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.179
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 10 (原生) - xiaohe
-  type: ss
-  server: 158.173.20.208
+- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 08 (原生) - xiaohe
+  type: hysteria2
+  server: nl-hy-test.tcp-reset-club.net
   port: 443
   udp: true
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇳🇱 荷兰 (Netherlands) 11 (原生) - xiaohe
+  password: dd50a499-7e43-4589-8490-f3b9c2451473
+  sni: nl-hy-test.tcp-reset-club.net
+- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 09 (原生) - xiaohe
   type: ss
   server: 82.38.31.42
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 12 (原生) - xiaohe
-  type: vless
-  server: 94.103.2.23
-  port: 8451
+- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 10 (原生) - xiaohe
+  type: ss
+  server: 158.173.20.208
+  port: 443
   udp: true
-  uuid: a346c521-7a7f-452b-9356-a4893feb5982
-  tls: true
-  servername: github.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
-    short-id: ''
-  network: grpc
-  grpc-opts:
-    grpc-service-name: GunService
+  cipher: aes-128-gcm
+  password: shadowsocks
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇳🇱 荷兰 (Netherlands) 01 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 02 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 03 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 04 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 05 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 06 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 07 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 08 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 09 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 10 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 11 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 12 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 01 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 02 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 03 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 04 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 05 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 06 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 07 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 08 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 09 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 10 (原生) - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇳🇱 荷兰 (Netherlands) 01 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 02 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 03 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 04 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 05 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 06 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 07 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 08 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 09 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 10 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 11 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 12 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 01 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 02 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 03 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 04 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 05 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 06 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 07 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 08 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 09 (原生) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 10 (原生) - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

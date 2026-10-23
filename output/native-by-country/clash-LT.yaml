@@ -4,29 +4,31 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇦 乌克兰 (Ukraine) 01 (原生) - xiaohe
+- name: 🇱🇹 LT Šiauliai 01 (原生) - xiaohe
   type: vless
-  server: netx.smrtai.top
+  server: skelmoridianservice.com
   port: 443
   udp: true
-  uuid: d8b58872-cc25-4bb2-badb-b86399c075fa
+  uuid: af381781-3a00-4565-b1bc-4df0275eb4b9
   tls: true
-  servername: www.cloudflare.com
+  servername: www.velunatrixes.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk
-    short-id: d8b58872
-  network: tcp
+    public-key: C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4
+    short-id: a1b2c3d4e5f6a7b8
+  network: grpc
+  grpc-opts:
+    grpc-service-name: moktana.net.v1.StreamService
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇺🇦 乌克兰 (Ukraine) 01 (原生) - xiaohe
+  - 🇱🇹 LT Šiauliai 01 (原生) - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇺🇦 乌克兰 (Ukraine) 01 (原生) - xiaohe
+  - 🇱🇹 LT Šiauliai 01 (原生) - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

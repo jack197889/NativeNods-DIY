@@ -4,18 +4,20 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇯🇵 日本 (Japan) 01 - xiaohe
+- name: 🇯🇵 日本 (Japan) Minamishinagawa 01 - xiaohe
   type: vless
-  server: cf.130519.xyz
+  server: 188.114.97.6
   port: 443
   udp: true
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
   servername: lucasjow.us.ci
-  client-fingerprint: qq
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /cart/docs/www/proxyip=108.160.132.132
+    path: /cart/docs/www/proxyip=108.160.132.132?ed#Telegram---bored_vpn
     headers:
       Host: lucasjow.us.ci
 proxy-groups:
@@ -23,11 +25,11 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇯🇵 日本 (Japan) 01 - xiaohe
+  - 🇯🇵 日本 (Japan) Minamishinagawa 01 - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇯🇵 日本 (Japan) 01 - xiaohe
+  - 🇯🇵 日本 (Japan) Minamishinagawa 01 - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
