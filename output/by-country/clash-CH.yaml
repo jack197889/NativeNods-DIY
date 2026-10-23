@@ -1,0 +1,33 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇨🇭 瑞士-Dronten 01
+  type: trojan
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  password: mitivpn
+  sni: de.mitivpn.in.net
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: de.mitivpn.in.net
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇨🇭 瑞士-Dronten 01
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇨🇭 瑞士-Dronten 01
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

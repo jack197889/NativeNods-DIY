@@ -6,6 +6,21 @@ log-level: info
 proxies:
 - name: 🇩🇪 德国-法兰克福 01
   type: vless
+  server: 188.114.96.9
+  port: 443
+  udp: true
+  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
+  tls: true
+  servername: IdB8ONMVbntuYT5t7t6cEJfw8vLrb.paGEs.DeV
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrjfp=chrome
+    headers:
+      Host: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
+- name: 🇩🇪 德国-法兰克福 02
+  type: vless
   server: courses.mftplus.qzz.io
   port: 2096
   udp: true
@@ -18,39 +33,6 @@ proxies:
     path: /eyJqdW5rIjoidVkzQm1ROUg4dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
     headers:
       Host: courses.mftplus.qzz.io
-- name: 🇩🇪 德国-法兰克福 02
-  type: vless
-  server: 104.21.70.21
-  port: 443
-  udp: true
-  uuid: 93fa8bdb-9cca-4a3e-8355-b7c12e4f595e
-  packet-encoding: xudp
-  tls: true
-  servername: fornewiran.ade-1000.workers.dev
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /vl/yLWNcuUuw1jlJpkDhGy
-    headers:
-      Host: fornewiran.ade-1000.workers.dev
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇩🇪 德国-法兰克福 03
-  type: trojan
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  password: mitivpn
-  sni: d-e.mitivpn.in.net
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: d-e.mitivpn.in.net
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -58,13 +40,11 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇩🇪 德国-法兰克福 01
   - 🇩🇪 德国-法兰克福 02
-  - 🇩🇪 德国-法兰克福 03
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇩🇪 德国-法兰克福 01
   - 🇩🇪 德国-法兰克福 02
-  - 🇩🇪 德国-法兰克福 03
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

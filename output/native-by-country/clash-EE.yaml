@@ -4,29 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 台湾-南港 01 (家宽)
+- name: 🇪🇪 EE-Tallinn 01 (原生)
   type: vless
-  server: 61.230.160.34
-  port: 24215
+  server: 93.89.220.37
+  port: 443
   udp: true
-  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+  uuid: 185e2bb3-2934-48d0-bbd5-dd20d16e83ee
+  flow: xtls-rprx-vision
   tls: true
-  servername: addons.mozilla.org
-  client-fingerprint: firefox
+  servername: ibm.com
+  client-fingerprint: chrome
   reality-opts:
-    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
-    short-id: ''
+    public-key: lwKaUQ81wJUJRsqAPsfTPj5V_f9N50UYEwzRI_nuq2g
+    short-id: e88cb983f3c97528
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇹🇼 台湾-南港 01 (家宽)
+  - 🇪🇪 EE-Tallinn 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇹🇼 台湾-南港 01 (家宽)
+  - 🇪🇪 EE-Tallinn 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

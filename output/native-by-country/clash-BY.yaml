@@ -21,14 +21,17 @@ proxies:
 - name: 🇧🇾 BY-Minsk 02 (原生)
   type: vless
   server: 95.128.71.79
-  port: 14430
+  port: 10444
   udp: true
   uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 95.128.71.79
+  flow: xtls-rprx-vision
+  tls: true
+  servername: ads.x5.ru
+  client-fingerprint: safari
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select

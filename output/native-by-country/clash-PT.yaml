@@ -1,0 +1,36 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇵🇹 PT-Carnaxide 01 (原生)
+  type: vless
+  server: 31.192.237.186
+  port: 2053
+  udp: true
+  uuid: d18c6897-2849-456a-8c46-d7ecece47c20
+  packet-encoding: xudp
+  tls: true
+  servername: wzs.echo.net.eu.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HUlxQSwUEVRwJUx8BQRoaSVhfRhoOChkDDUs=
+    headers:
+      Host: wzs.echo.net.eu.org
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇵🇹 PT-Carnaxide 01 (原生)
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇵🇹 PT-Carnaxide 01 (原生)
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

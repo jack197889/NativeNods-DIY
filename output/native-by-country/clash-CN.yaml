@@ -4,30 +4,27 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇪 BE-布鲁塞尔 01
-  type: vless
-  server: 172.67.134.136
-  port: 443
+- name: 🇨🇳 中国大陆-Beijing 01 (原生)
+  type: vmess
+  server: 120.48.133.162
+  port: 10086
   udp: true
-  uuid: fa45096d-bed0-ad80-c773-23c300000003
-  tls: true
-  servername: xo3ubk-c97eql-n2d4a9.shoameni17.workers.dev
-  client-fingerprint: chrome
+  uuid: a01e5d56-464f-45b9-b600-164db4700162
+  alterId: 0
+  cipher: auto
   network: ws
   ws-opts:
     path: /
-    headers:
-      Host: xo3ubk-c97eql-n2d4a9.shoameni17.workers.dev
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇧🇪 BE-布鲁塞尔 01
+  - 🇨🇳 中国大陆-Beijing 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇧🇪 BE-布鲁塞尔 01
+  - 🇨🇳 中国大陆-Beijing 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -4,30 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇮 芬兰-Tampere 01 (原生)
+- name: 🇨🇿 捷克-阿姆斯特丹 01
   type: vless
-  server: 168.222.143.254
+  server: 193.124.17.190
   port: 443
   udp: true
-  uuid: ebdf87e8-4f75-4b84-94e0-65ce4894993a
+  uuid: d84c13b2-c2b9-4a7c-838f-05ac09ee422e
   flow: xtls-rprx-vision
   tls: true
-  servername: st.avito.ru
-  client-fingerprint: chrome
+  servername: www.mozilla.org
+  client-fingerprint: firefox
   reality-opts:
-    public-key: 3_Qy1SAtWfbiQbznyhlXxJtqB-5QQ46VF1Uz2h5A7Q4
-    short-id: 2dc17935
+    public-key: J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk
+    short-id: 2a2ce9e42980
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇫🇮 芬兰-Tampere 01 (原生)
+  - 🇨🇿 捷克-阿姆斯特丹 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇫🇮 芬兰-Tampere 01 (原生)
+  - 🇨🇿 捷克-阿姆斯特丹 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

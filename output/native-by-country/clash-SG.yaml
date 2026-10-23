@@ -5,19 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 01 (原生)
-  type: vless
-  server: 147.93.173.45
-  port: 10444
+  type: vmess
+  server: wjofhsqteueywxeq.v.3dns.vip
+  port: 443
   udp: true
-  uuid: 75c5f51b-d548-4eab-a26e-aa10fc3dbc7b
-  flow: xtls-rprx-vision
+  uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
+  alterId: 0
+  cipher: auto
   tls: true
-  servername: video.yandex.ru
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  network: tcp
+  servername: wjofhsqteueywxeq.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: wjofhsqteueywxeq.v.3dns.vip
 proxy-groups:
 - name: 🚀 节点选择
   type: select

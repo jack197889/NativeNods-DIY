@@ -4,30 +4,32 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇷 韩国-Mapo-gu 01 (原生)
+- name: 🇮🇶 IQ-法兰克福 01
   type: vless
-  server: saas.sin.fan
+  server: 188.114.96.9
   port: 443
   udp: true
-  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
   tls: true
-  servername: vp6.1145678.xyz
+  servername: IdB8ONMVbntuYT5t7t6cEJfw8vLrb.paGEs.DeV
+  alpn:
+  - http/1.1
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /photos/url/video/TkZDG0RVE1kPREsSEQ8YEEBHSEpZUwhIFF4WRBIIFUkVRQQQRhNYEFASC0FbR1ZETQ9cXUZAQ1laV0cXFBJEXFVeAVUCDVxbAEpYElFeVhQDWV0SQwEWQlpGWRoNA1YdDhk=
+    path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrj
     headers:
-      Host: vp6.1145678.xyz
+      Host: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇰🇷 韩国-Mapo-gu 01 (原生)
+  - 🇮🇶 IQ-法兰克福 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇰🇷 韩国-Mapo-gu 01 (原生)
+  - 🇮🇶 IQ-法兰克福 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

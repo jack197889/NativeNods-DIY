@@ -4,50 +4,50 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 台湾-南港 01 (家宽)
-  type: vless
-  server: 61.230.160.34
-  port: 24215
+- name: 🇭🇰 香港 01 (家宽)
+  type: anytls
+  server: 654968169.df6h451rh.xin
+  port: 443
   udp: true
-  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+  password: 0324fbc29561
+  sni: 654968169.df6h451rh.xin
+  skip-cert-verify: true
+- name: 🇮🇳 印度-Dhār 01 (家宽)
+  type: vless
+  server: 122.176.216.52
+  port: 443
+  udp: true
+  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
   tls: true
-  servername: addons.mozilla.org
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
-    short-id: ''
-  network: tcp
+  servername: app-6ada5023.deploy.meerasolution.com
+  network: ws
+  ws-opts:
+    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+    headers:
+      Host: app-6ada5023.deploy.meerasolution.com
 - name: 🇨🇳 中国大陆-Hefei 01 (家宽)
   type: vmess
   server: 112.132.215.108
   port: 50002
   udp: true
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
+  alterId: 0
   cipher: auto
   network: tcp
-- name: 🇸🇬 新加坡 01 (家宽)
-  type: hysteria2
-  server: s3.huhiuh.space
-  port: 18642
-  udp: true
-  password: user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2
-  sni: s3.huhiuh.space
-  skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇹🇼 台湾-南港 01 (家宽)
+  - 🇭🇰 香港 01 (家宽)
+  - 🇮🇳 印度-Dhār 01 (家宽)
   - 🇨🇳 中国大陆-Hefei 01 (家宽)
-  - 🇸🇬 新加坡 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇹🇼 台湾-南港 01 (家宽)
+  - 🇭🇰 香港 01 (家宽)
+  - 🇮🇳 印度-Dhār 01 (家宽)
   - 🇨🇳 中国大陆-Hefei 01 (家宽)
-  - 🇸🇬 新加坡 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
