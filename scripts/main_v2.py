@@ -24,7 +24,8 @@
 可用环境变量（均可选）：
   SINGBOX_BIN / SINGBOX_VERSION   指定内核路径 / 版本
   MAX_WORKERS_TEST                测活并发（默认 48）
-  MAX_CANDIDATES                  最多测试多少个节点（默认 5000，0=不限）
+  MAX_CANDIDATES                  最多测试多少个节点（默认 5000，0=不限）；超出时
+                                  PRIORITY_SOURCE_URLS（JP/NL/TW/AU 专属源）的节点优先保留
   MAX_NORMAL / MAX_NATIVE / MAX_RESIDENTIAL   各类保留上限（0=不限）
   MAX_RISK_SCORE / ENABLE_RISK_FILTER / DROP_RISK_UNKNOWN   风控值过滤(默认 45 / 开 / 查询失败保留)
   ENABLE_SPEED_TEST=1             开启限时测速
@@ -97,7 +98,6 @@ def _env_flag(name: str, default: bool = False) -> bool:
 
 SOURCE_URLS = [
     "https://cdn.jsdelivr.net/gh/free18/v2ray@main/v.txt",
-    "https://raw.githubusercontent.com/freefq/free/master/v2",
     "https://www.ermao.net/sub/v2ray/ermao.net",
     "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt",
     "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-JP.txt",
@@ -110,20 +110,33 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/hysteria2",
     "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",
     "https://raw.githubusercontent.com/yy1588133/proxy-pool/main/v2ray.txt",
-    "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
     "https://sub.445569.xyz/",
+    "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
+    "https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.txt",
     # 额外高更新频率聚合源（含 JP/NL/TW/AU 等）
     "https://raw.githubusercontent.com/barry-far/V2ray-Config/main/All_Configs_Sub.txt",
-    "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_base64_Sub.txt",
     "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/config.txt",
     "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub1.txt",
     "https://raw.githubusercontent.com/free-nodes/v2rayfree/main/sub",
     "https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/nodes.txt",
-    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/all_extracted_configs.txt",
     "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
-    "https://raw.githubusercontent.com/mfuu/v2ray/master/v2ray",
     "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list_raw.txt",
+    # ── 2026-10 新增：多源聚合 + 真实测活（日更或更快）──
+    "https://raw.githubusercontent.com/Mahdi0024/ProxyCollector/master/sub/proxies.txt",   # sing-box 测活，24h
+    "https://raw.githubusercontent.com/ishalumi/proxy-node-collector/main/output/nodes_base64.txt",  # 聚合15个仓库，6h
 ]
+
+# 目标地区专属源（荷兰/日本/台湾/澳洲）：这些源里的节点在候选过多时优先入选，不参与随机抽样淘汰。
+# 说明：源里的国家标签只是第三方按 IP 归属地打的，是否原生/家宽仍由下方流程自行判定。
+_AU1 = "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-"
+_SOLI = "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/Countries/"
+PRIORITY_SOURCE_URLS = {
+    _AU1 + "JP.txt", _AU1 + "NL.txt", _AU1 + "TW.txt", _AU1 + "AU.txt",   # 已有，每小时更新并经 sing-box 验证
+    # SoliSpirit 分国（Netherlands.txt 404，仅用 The_Netherlands.txt）
+    _SOLI + "Japan.txt", _SOLI + "The_Netherlands.txt",
+    _SOLI + "Taiwan.txt", _SOLI + "Australia.txt",
+}
+SOURCE_URLS.extend(sorted(u for u in PRIORITY_SOURCE_URLS if u not in SOURCE_URLS))
 
 # 路径：脚本放在 <repo>/scripts/ 下时，输出到 <repo>/output
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -223,10 +236,15 @@ UDP_PROTOS = ("hysteria2", "tuic")
 # 以下名单与关键词沿用原作者方案（CDN 网段 / 机房 ASN / 家宽 ASN / 名称关键词）
 # Cloudflare 官方 Anycast 全网段 (命中即 CDN 任播, 绝非家宽)
 CLOUDFLARE_IP_NETWORKS = [ipaddress.ip_network(n) for n in (
+    # IPv4（Cloudflare 官方公布）
     "173.245.48.0/20","103.21.244.0/22","103.22.200.0/22","103.31.4.0/22",
     "141.101.64.0/18","108.162.192.0/18","190.93.240.0/20","188.114.96.0/20",
     "197.234.240.0/22","198.41.128.0/17","162.158.0.0/15","104.16.0.0/13",
     "104.24.0.0/14","172.64.0.0/13","131.0.72.0/22",
+    # IPv6（Cloudflare 官方 + WARP 客户端出口，避免漏掉 2a09:bac5:: 这类）
+    "2400:cb00::/32","2606:4700::/32","2803:f800::/32","2405:b500::/32",
+    "2405:8100::/32","2a06:98c0::/29","2c0f:f248::/32",
+    "2a09:bac0::/29",   # Cloudflare WARP
 )]
 
 # Google / Fastly / Akamai 等常见 CDN 与云入口段 (命中即标 CDN/机房)
@@ -1140,6 +1158,9 @@ def extract_nodes_from_text(text: str) -> set:
     return results
 
 
+PRIORITY_URIS: set = set()      # 来自 PRIORITY_SOURCE_URLS 的节点链接（候选过多时优先保留）
+
+
 def fetch_raw_nodes() -> list:
     nodes = set()
     print(f"[*] 抓取 {len(SOURCE_URLS)} 个订阅源 ...")
@@ -1159,13 +1180,16 @@ def fetch_raw_nodes() -> list:
             url, got = fut.result()
             print(f"    {'+' if got else '-'} {len(got):>5}  {url}")
             nodes.update(got)
+            if url in PRIORITY_SOURCE_URLS:
+                PRIORITY_URIS.update(got)
     print(f"[*] 初始抓取总量: {len(nodes)}")
     return list(nodes)
 
 
 def build_candidates(raw_list: list) -> list:
     seen, items = set(), []
-    for uri in raw_list:
+    # 专属源节点排在前面：同一节点多源重复时，保留其「优先」标记
+    for uri in sorted(raw_list, key=lambda u: u not in PRIORITY_URIS):
         parsed = parse_node_uri(uri)
         if not parsed:
             bump("parse_fail")
@@ -1179,7 +1203,8 @@ def build_candidates(raw_list: list) -> list:
             bump("duplicate")
             continue
         seen.add(key)
-        items.append({"raw": uri, "outbound": outbound, "server": server, "port": port, "proto": proto})
+        items.append({"raw": uri, "outbound": outbound, "server": server, "port": port, "proto": proto,
+                      "priority": uri in PRIORITY_URIS})
     print(f"[*] 解析成功 {len(items)} | 解析失败/不支持 {STATS['parse_fail']} | 重复 {STATS['duplicate']}")
     return items
 
@@ -1809,14 +1834,29 @@ def classify_results(results: list):
 
     # 彻底剔除 Cloudflare / WARP（ASN 13335、CDN 网段、org 含 cloudflare）
     def _is_cloudflare(it):
+        """仅按出口 IP / ASN / 组织名判断，不碰节点 server 域名，避免误杀。"""
         if it.get("net_type") == "cdn":
             return True
         asn = it.get("asn")
-        if asn == 13335:
+        if asn in (13335, 209242):
             return True
-        org = (it.get("org_text") or "").lower()
-        if "cloudflare" in org or "cloudflarewarp" in org.replace(" ", ""):
+        org = (it.get("org_text") or "").lower().replace(" ", "")
+        if "cloudflare" in org:  # 含 cloudflarewarp / cloudflareinc 等
             return True
+        g = it.get("geo") or {}
+        if g.get("asn") in (13335, 209242):
+            return True
+        if "cloudflare" in (g.get("asn_org") or "").lower().replace(" ", ""):
+            return True
+        # 出口 IP 落在 Cloudflare/WARP 官方网段（含 IPv6）
+        ip = it.get("look_ip") or it.get("exit_ip") or ""
+        try:
+            ip_obj = ipaddress.ip_address(ip)
+            for net in CLOUDFLARE_IP_NETWORKS:
+                if ip_obj in net:
+                    return True
+        except ValueError:
+            pass
         return False
 
     before_cf = len(items)
@@ -2308,9 +2348,14 @@ def main():
         sys.exit(1)
 
     if MAX_CANDIDATES > 0 and len(candidates) > MAX_CANDIDATES:
-        random.shuffle(candidates)
-        print(f"[*] 候选过多，随机抽取 {MAX_CANDIDATES} 个测试 (可用 MAX_CANDIDATES 调整)")
-        candidates = candidates[:MAX_CANDIDATES]
+        pri = [c for c in candidates if c.get("priority")]
+        rest = [c for c in candidates if not c.get("priority")]
+        random.shuffle(pri)
+        random.shuffle(rest)
+        candidates = (pri + rest)[:MAX_CANDIDATES]
+        kept_pri = sum(1 for c in candidates if c.get("priority"))
+        print(f"[*] 候选过多，截取 {MAX_CANDIDATES} 个测试：目标地区专属源节点优先 "
+              f"({kept_pri}/{len(pri)} 保留)，其余随机补足 (可用 MAX_CANDIDATES 调整)")
 
     results = run_liveness_test(candidates)
     print_diagnostics()
