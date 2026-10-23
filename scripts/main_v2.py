@@ -198,7 +198,8 @@ SPEED_TEST_URLS = [
 ]
 
 IP_API_BATCH_URL = ("http://ip-api.com/batch?fields="
-                    "status,message,countryCode,isp,org,as,asname,mobile,proxy,hosting,query")
+                    "status,message,countryCode,regionName,city,isp,org,as,asname,"
+                    "mobile,proxy,hosting,query")
 IP_API_BATCH_SIZE = 100
 IP_API_BATCH_INTERVAL = 4.2     # 免费版 15 次/分钟
 IP_API_MAX_IPS = 3000
@@ -415,6 +416,73 @@ COUNTRY_NAMES = {
     "RO": "罗马尼亚 (Romania)", "BG": "保加利亚 (Bulgaria)", "NO": "挪威 (Norway)",
     "DK": "丹麦 (Denmark)", "AT": "奥地利 (Austria)", "CZ": "捷克 (Czechia)",
     "OTHER": "其他地区 (Other)",
+}
+
+# 城市英→中映射（key 小写；覆盖节点常见落地城市，未命中则保留原文）
+CITY_NAMES_ZH = {
+    # 美国
+    "new york": "纽约", "new york city": "纽约", "nyc": "纽约",
+    "los angeles": "洛杉矶", "la": "洛杉矶",
+    "san francisco": "旧金山", "san jose": "圣何塞", "san diego": "圣地亚哥",
+    "seattle": "西雅图", "chicago": "芝加哥", "dallas": "达拉斯", "houston": "休斯顿",
+    "austin": "奥斯汀", "miami": "迈阿密", "atlanta": "亚特兰大", "boston": "波士顿",
+    "denver": "丹佛", "phoenix": "凤凰城", "las vegas": "拉斯维加斯",
+    "washington": "华盛顿", "washington d.c.": "华盛顿", "washington dc": "华盛顿",
+    "philadelphia": "费城", "detroit": "底特律", "minneapolis": "明尼阿波利斯",
+    "portland": "波特兰", "salt lake city": "盐湖城", "charlotte": "夏洛特",
+    "ashburn": "阿什本", "buffalo": "布法罗", "tampa": "坦帕",
+    "santa clara": "圣克拉拉", "sunnyvale": "桑尼维尔", "mountain view": "山景城",
+    "palo alto": "帕洛阿尔托", "fremont": "弗里蒙特", "irvine": "尔湾",
+    "boardman": "博德曼", "hillsboro": "希尔斯伯勒", "council bluffs": "康瑟尔布拉夫斯",
+    # 日本
+    "tokyo": "东京", "osaka": "大阪", "yokohama": "横滨", "nagoya": "名古屋",
+    "sapporo": "札幌", "fukuoka": "福冈", "kyoto": "京都", "kobe": "神户",
+    "kawasaki": "川崎", "chiba": "千叶", "sendai": "仙台", "hiroshima": "广岛",
+    # 韩国
+    "seoul": "首尔", "busan": "釜山", "incheon": "仁川", "daegu": "大邱",
+    "daejeon": "大田", "gwangju": "光州",
+    # 港澳台 / 新加坡
+    "hong kong": "香港", "taipei": "台北", "kaohsiung": "高雄", "taichung": "台中",
+    "tainan": "台南", "hsinchu": "新竹", "macau": "澳门", "macao": "澳门",
+    "singapore": "新加坡",
+    # 英国 / 爱尔兰
+    "london": "伦敦", "manchester": "曼彻斯特", "birmingham": "伯明翰",
+    "edinburgh": "爱丁堡", "glasgow": "格拉斯哥", "liverpool": "利物浦",
+    "bristol": "布里斯托尔", "leeds": "利兹", "dublin": "都柏林", "cork": "科克",
+    # 德国 / 荷兰 / 比利时
+    "berlin": "柏林", "frankfurt": "法兰克福", "munich": "慕尼黑", "hamburg": "汉堡",
+    "cologne": "科隆", "dusseldorf": "杜塞尔多夫", "düsseldorf": "杜塞尔多夫",
+    "stuttgart": "斯图加特", "nuremberg": "纽伦堡", "amsterdam": "阿姆斯特丹",
+    "rotterdam": "鹿特丹", "the hague": "海牙", "utrecht": "乌得勒支",
+    "brussels": "布鲁塞尔", "antwerp": "安特卫普",
+    # 法国 / 意大利 / 西班牙 / 瑞士
+    "paris": "巴黎", "marseille": "马赛", "lyon": "里昂", "milan": "米兰",
+    "rome": "罗马", "turin": "都灵", "naples": "那不勒斯", "madrid": "马德里",
+    "barcelona": "巴塞罗那", "valencia": "瓦伦西亚", "zurich": "苏黎世",
+    "geneva": "日内瓦", "bern": "伯尔尼",
+    # 北欧 / 东欧
+    "stockholm": "斯德哥尔摩", "oslo": "奥斯陆", "copenhagen": "哥本哈根",
+    "helsinki": "赫尔辛基", "warsaw": "华沙", "prague": "布拉格", "vienna": "维也纳",
+    "budapest": "布达佩斯", "bucharest": "布加勒斯特", "sofia": "索非亚",
+    "kyiv": "基辅", "kiev": "基辅", "moscow": "莫斯科",
+    "saint petersburg": "圣彼得堡", "st. petersburg": "圣彼得堡",
+    # 加拿大 / 澳大利亚 / 新西兰
+    "toronto": "多伦多", "vancouver": "温哥华", "montreal": "蒙特利尔",
+    "ottawa": "渥太华", "calgary": "卡尔加里", "sydney": "悉尼",
+    "melbourne": "墨尔本", "brisbane": "布里斯班", "perth": "珀斯",
+    "adelaide": "阿德莱德", "auckland": "奥克兰", "wellington": "惠灵顿",
+    # 东南亚 / 南亚
+    "bangkok": "曼谷", "ho chi minh city": "胡志明市", "hanoi": "河内",
+    "jakarta": "雅加达", "kuala lumpur": "吉隆坡", "manila": "马尼拉",
+    "mumbai": "孟买", "delhi": "德里", "new delhi": "新德里",
+    "bangalore": "班加罗尔", "bengaluru": "班加罗尔", "chennai": "钦奈",
+    "hyderabad": "海得拉巴",
+    # 中东 / 其他
+    "dubai": "迪拜", "abu dhabi": "阿布扎比", "istanbul": "伊斯坦布尔",
+    "ankara": "安卡拉", "tel aviv": "特拉维夫", "jerusalem": "耶路撒冷",
+    "sao paulo": "圣保罗", "são paulo": "圣保罗", "rio de janeiro": "里约热内卢",
+    "buenos aires": "布宜诺斯艾利斯", "mexico city": "墨西哥城",
+    "johannesburg": "约翰内斯堡", "cape town": "开普敦",
 }
 
 DIRECT_SESSION = requests.Session()
@@ -1667,10 +1735,16 @@ def classify_results(results: list):
         actual = (g["country"] or r.get("exit_country") or ipapi_cc or "OTHER").upper()
         if not re.fullmatch(r"[A-Z]{2}", actual):
             actual = "OTHER"
+        # 城市：有有效值才写入，空/unknown 一律不写（命名时回退到仅国家）
+        city_raw = str(rec.get("city") or "").strip()
+        city = city_raw if city_raw and city_raw.lower() not in ("unknown", "n/a", "-", "null") else ""
+        region_raw = str(rec.get("regionName") or "").strip()
+        region = region_raw if region_raw and region_raw.lower() not in ("unknown", "n/a", "-", "null") else ""
         items.append({
             "raw": r["raw"], "outbound": r["outbound"], "server": r["server"], "port": r["port"],
             "proto": r["proto"], "ip": r["ip"], "exit_ip": r.get("exit_ip"), "look_ip": look_ip,
-            "latency_ms": r["latency_ms"], "country": actual, "asn": asn, "org_text": org_text,
+            "latency_ms": r["latency_ms"], "country": actual, "city": city, "region": region,
+            "asn": asn, "org_text": org_text,
             "net_type": net_type, "confidence": conf, "geo": g, "echo_cc": r.get("exit_country"),
             "ipapi_cc": ipapi_cc, "registered": None, "native": False, "tag": "",
             "risk": None, "risk_drop": False,
@@ -1722,7 +1796,8 @@ def classify_results(results: list):
     if DEBUG:
         os.makedirs(os.path.join(OUTPUT_DIR, "debug"), exist_ok=True)
         write_text(os.path.join(OUTPUT_DIR, "debug", "classification.json"), json.dumps([{
-            "exit_ip": i["exit_ip"], "country": i["country"], "asn": i["asn"], "org": i["org_text"],
+            "exit_ip": i["exit_ip"], "country": i["country"], "city": i.get("city"), "region": i.get("region"),
+            "asn": i["asn"], "org": i["org_text"],
             "rdns": i.get("rdns"), "net_type": i["net_type"], "confidence": i["confidence"],
             "geo_country": i["geo"]["country"], "mm_registered": i["geo"]["registered"],
             "registered_used": i["registered"], "echo_country": i["echo_cc"], "ipapi_country": i["ipapi_cc"],
@@ -1999,10 +2074,24 @@ def export_singbox_json(nodes: list, filepath: str):
 # 导出
 # ══════════════════════════════════════════════════════════════════
 
+def city_to_zh(city: str) -> str:
+    """将 ip-api 返回的英文城市名转为中文；未命中映射则原样返回。"""
+    c = (city or "").strip()
+    if not c:
+        return ""
+    return CITY_NAMES_ZH.get(c.lower(), c)
+
+
 def make_node_name(item: dict, idx: int) -> str:
+    """中文命名：国旗 + 国家名 +（有则）中文城市 + 序号 +（家宽/原生）标签。
+    序号按国家自增；没有可靠城市时只写国家，不填「未知」。"""
     cc = item["country"]
+    place = COUNTRY_NAMES.get(cc, cc)
+    city_zh = city_to_zh(item.get("city") or "")
+    if city_zh:
+        place = f"{place} {city_zh}"
     tag = f" ({item['tag']})" if item.get("tag") else ""
-    return f"{get_country_flag(cc)} {COUNTRY_NAMES.get(cc, cc)} {idx:02d}{tag} - {NAME_SUFFIX}"
+    return f"{get_country_flag(cc)} {place} {idx:02d}{tag} - {NAME_SUFFIX}"
 
 
 def build_group(nodes_list: list):
@@ -2123,6 +2212,7 @@ sing-box 客户端配置 (1.12+): `{raw}/singbox.json`
 ## 📖 说明
 
 - **分类互斥**: 每个节点只属于「家宽 / 原生 / 普通」之一，优先级 家宽 > 原生。
+- **节点命名**: 根据落地 IP 自动标注中文国家名；能查到城市时追加中文城市名（如「美国 (United States) 纽约」），映射表未覆盖的城市保留英文原文；查不到城市则只写国家。序号按国家自增。
 - **风控值过滤**: 风控值超过 {MAX_RISK_SCORE} 的节点一律淘汰 (Scamalytics 评分，与检测网站的风控值数据源不同，数值不能直接等同)。
 - **原生 IP**: 注册地国家与实际使用地国家一致 (注册地取 RDAP 登记国家，查不到用 GeoLite2；多个地理库互相矛盾则不算)。「广播 IP」归普通。
 - **家宽**: 家庭宽带 IP（含移动网络）且为原生 IP，识别沿用原作者方案；家庭宽带但广播的 IP 归普通。
