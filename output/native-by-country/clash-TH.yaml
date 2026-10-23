@@ -4,19 +4,18 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇭 泰国 (Thailand) 曼谷 01 (原生) - xiaohe
+- name: 🇹🇭 泰国-曼谷 01 (原生)
   type: vless
-  server: v2ray.simspeedup.com
+  server: 103.86.49.57
   port: 80
   udp: true
   uuid: 3c52e091-6714-4915-949f-2149fe69951b
-  packet-encoding: xudp
   network: ws
   ws-opts:
     path: /ws
     headers:
-      Host: v2ray.simspeedup.com
-- name: 🇹🇭 泰国 (Thailand) Ban Wang Man 02 (原生) - xiaohe
+      Host: aIs.SpEeDtEsT.nEt
+- name: 🇹🇭 泰国-万曼村 02 (原生)
   type: ss
   server: pphfree2.mvpnpvpn.de5.net
   port: 52351
@@ -28,13 +27,13 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇹🇭 泰国 (Thailand) 曼谷 01 (原生) - xiaohe
-  - 🇹🇭 泰国 (Thailand) Ban Wang Man 02 (原生) - xiaohe
+  - 🇹🇭 泰国-曼谷 01 (原生)
+  - 🇹🇭 泰国-万曼村 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇹🇭 泰国 (Thailand) 曼谷 01 (原生) - xiaohe
-  - 🇹🇭 泰国 (Thailand) Ban Wang Man 02 (原生) - xiaohe
+  - 🇹🇭 泰国-曼谷 01 (原生)
+  - 🇹🇭 泰国-万曼村 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

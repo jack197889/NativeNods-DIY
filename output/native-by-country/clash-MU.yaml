@@ -4,27 +4,27 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇳 中国大陆 (China) Beijing 01 (原生) - xiaohe
-  type: vmess
-  server: 120.48.133.162
-  port: 10086
+- name: 🇲🇺 MU-Port Louis 01 (原生)
+  type: vless
+  server: 23.227.39.30
+  port: 8880
   udp: true
-  uuid: a01e5d56-464f-45b9-b600-164db4700162
-  alterId: 0
-  cipher: auto
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   network: ws
   ws-opts:
     path: /
+    headers:
+      Host: vms.lifetime17.workers.dev
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇨🇳 中国大陆 (China) Beijing 01 (原生) - xiaohe
+  - 🇲🇺 MU-Port Louis 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇨🇳 中国大陆 (China) Beijing 01 (原生) - xiaohe
+  - 🇲🇺 MU-Port Louis 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

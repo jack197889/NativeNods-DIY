@@ -4,7 +4,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇳 印度 (India) Noida 01 (原生) - xiaohe
+- name: 🇮🇳 印度-Noida 01 (原生)
   type: vless
   server: 165.99.222.161
   port: 443
@@ -23,11 +23,11 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇮🇳 印度 (India) Noida 01 (原生) - xiaohe
+  - 🇮🇳 印度-Noida 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇮🇳 印度 (India) Noida 01 (原生) - xiaohe
+  - 🇮🇳 印度-Noida 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

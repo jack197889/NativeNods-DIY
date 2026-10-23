@@ -4,111 +4,143 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 01 (原生) - xiaohe
+- name: 🇳🇱 荷兰-阿姆斯特丹 01 (原生)
   type: vless
-  server: 172.67.184.45
+  server: 172.67.155.222
   port: 443
   udp: true
-  uuid: 82b279c6-5cba-3a96-f8bd-780a00000045
+  uuid: 82b279c6-5cba-3a96-f8bd-780a00000035
+  packet-encoding: xudp
   tls: true
   servername: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
+    path: /sync
     headers:
       Host: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
-- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 02 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.191
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 03 (原生) - xiaohe
-  type: ss
-  server: 193.29.139.225
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 04 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.170
+- name: 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
+  type: trojan
+  server: b2n.ir
   port: 443
   udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 05 (原生) - xiaohe
+  password: mitivpn
+  sni: de.mitivpn.in.net
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: de.mitivpn.in.net
+- name: 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
+  type: hysteria2
+  server: 109.235.49.234
+  port: 443
+  udp: true
+  password: dd50a499-7e43-4589-8490-f3b9c2451473
+  sni: nl-hy-test.tcp-reset-club.net
+- name: 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
   type: ss
   server: 82.38.31.180
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 06 (原生) - xiaohe
+- name: 🇳🇱 荷兰-阿姆斯特丹 05 (原生)
   type: ss
-  server: 193.29.139.235
-  port: 443
+  server: 82.38.31.193
+  port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 07 (原生) - xiaohe
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
   type: ss
-  server: 82.38.31.66
+  server: 193.29.139.225
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 08 (原生) - xiaohe
-  type: hysteria2
-  server: nl-hy-test.tcp-reset-club.net
-  port: 443
-  udp: true
-  password: dd50a499-7e43-4589-8490-f3b9c2451473
-  sni: nl-hy-test.tcp-reset-club.net
-- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 09 (原生) - xiaohe
+- name: 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
   type: ss
   server: 82.38.31.42
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 10 (原生) - xiaohe
+- name: 🇳🇱 荷兰-阿姆斯特丹 08 (原生)
+  type: ss
+  server: 82.38.31.171
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰-阿姆斯特丹 09 (原生)
+  type: ss
+  server: 193.29.139.235
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰-阿姆斯特丹 10 (原生)
+  type: ss
+  server: 82.38.31.66
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰-阿姆斯特丹 11 (原生)
   type: ss
   server: 158.173.20.208
   port: 443
   udp: true
   cipher: aes-128-gcm
   password: shadowsocks
+- name: 🇳🇱 荷兰-阿姆斯特丹 12 (原生)
+  type: vless
+  server: 94.103.2.23
+  port: 8451
+  udp: true
+  uuid: a346c521-7a7f-452b-9356-a4893feb5982
+  tls: true
+  servername: github.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+    short-id: ''
+  network: grpc
+  grpc-opts:
+    grpc-service-name: GunService
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 01 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 02 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 03 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 04 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 05 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 06 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 07 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 08 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 09 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 10 (原生) - xiaohe
+  - 🇳🇱 荷兰-阿姆斯特丹 01 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 05 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 08 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 09 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 10 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 11 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 12 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 01 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 02 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 03 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 04 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 05 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 06 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 07 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 08 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 09 (原生) - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 阿姆斯特丹 10 (原生) - xiaohe
+  - 🇳🇱 荷兰-阿姆斯特丹 01 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 05 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 08 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 09 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 10 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 11 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 12 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

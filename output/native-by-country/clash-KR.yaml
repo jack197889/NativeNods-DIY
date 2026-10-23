@@ -4,30 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇪 阿联酋 (UAE) 迪拜 01 - xiaohe
+- name: 🇰🇷 韩国-Mapo-gu 01 (原生)
   type: vless
-  server: 104.21.108.4
+  server: saas.sin.fan
   port: 443
   udp: true
-  uuid: fa45096d-bed0-ad80-c773-23c300000018
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
   tls: true
-  servername: xo3ubk-c97eql-n2d4a9.shoameni17.workers.dev
+  servername: vp6.1145678.xyz
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
+    path: /photos/url/video/TkZDG0RVE1kPREsSEQ8YEEBHSEpZUwhIFF4WRBIIFUkVRQQQRhNYEFASC0FbR1ZETQ9cXUZAQ1laV0cXFBJEXFVeAVUCDVxbAEpYElFeVhQDWV0SQwEWQlpGWRoNA1YdDhk=
     headers:
-      Host: xo3ubk-c97eql-n2d4a9.shoameni17.workers.dev
+      Host: vp6.1145678.xyz
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇦🇪 阿联酋 (UAE) 迪拜 01 - xiaohe
+  - 🇰🇷 韩国-Mapo-gu 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇦🇪 阿联酋 (UAE) 迪拜 01 - xiaohe
+  - 🇰🇷 韩国-Mapo-gu 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

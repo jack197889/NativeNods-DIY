@@ -4,7 +4,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇯🇵 日本 (Japan) Minamishinagawa 01 - xiaohe
+- name: 🇯🇵 日本-南品川 01
   type: vless
   server: 188.114.97.6
   port: 443
@@ -17,7 +17,7 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /cart/docs/www/proxyip=108.160.132.132?ed#Telegram---bored_vpn
+    path: /cart/docs/www/proxyip=108.160.132.132?ed#
     headers:
       Host: lucasjow.us.ci
 proxy-groups:
@@ -25,11 +25,11 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇯🇵 日本 (Japan) Minamishinagawa 01 - xiaohe
+  - 🇯🇵 日本-南品川 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇯🇵 日本 (Japan) Minamishinagawa 01 - xiaohe
+  - 🇯🇵 日本-南品川 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

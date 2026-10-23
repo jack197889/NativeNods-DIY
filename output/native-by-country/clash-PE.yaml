@@ -4,7 +4,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇵🇪 PE Lima 01 (原生) - xiaohe
+- name: 🇵🇪 PE-Lima 01 (原生)
   type: vless
   server: 172.65.90.41
   port: 2053
@@ -23,11 +23,11 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇵🇪 PE Lima 01 (原生) - xiaohe
+  - 🇵🇪 PE-Lima 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇵🇪 PE Lima 01 (原生) - xiaohe
+  - 🇵🇪 PE-Lima 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -4,7 +4,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇬 新加坡 (Singapore) 新加坡 01 (家宽) - xiaohe
+- name: 🇸🇬 新加坡-新加坡 01 (家宽)
   type: hysteria2
   server: s3.huhiuh.space
   port: 18642
@@ -17,11 +17,11 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇸🇬 新加坡 (Singapore) 新加坡 01 (家宽) - xiaohe
+  - 🇸🇬 新加坡-新加坡 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇸🇬 新加坡 (Singapore) 新加坡 01 (家宽) - xiaohe
+  - 🇸🇬 新加坡-新加坡 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

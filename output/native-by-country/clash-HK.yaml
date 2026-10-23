@@ -4,7 +4,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇰 中国香港 (Hong Kong) 香港 01 (原生) - xiaohe
+- name: 🇭🇰 香港 01 (原生)
   type: vless
   server: 141.11.149.174
   port: 9443
@@ -18,21 +18,7 @@ proxies:
     public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
     short-id: b390142456517acc
   network: tcp
-- name: 🇭🇰 中国香港 (Hong Kong) 香港 02 (原生) - xiaohe
-  type: vless
-  server: 165.154.63.139
-  port: 443
-  udp: true
-  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amazon.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ
-    short-id: ca4aedd4
-  network: tcp
-- name: 🇭🇰 中国香港 (Hong Kong) 香港 03 (原生) - xiaohe
+- name: 🇭🇰 香港 02 (原生)
   type: vless
   server: 154.83.86.85
   port: 9443
@@ -46,7 +32,21 @@ proxies:
     public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
     short-id: b390142456517acc
   network: tcp
-- name: 🇭🇰 中国香港 (Hong Kong) 香港 04 (原生) - xiaohe
+- name: 🇭🇰 香港 03 (原生)
+  type: vless
+  server: 165.154.63.139
+  port: 443
+  udp: true
+  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.amazon.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ
+    short-id: ca4aedd4
+  network: tcp
+- name: 🇭🇰 香港 04 (原生)
   type: hysteria2
   server: nas.aizhzo.com
   port: 5010
@@ -55,47 +55,75 @@ proxies:
   sni: nas.aizhzo.com
   obfs: salamander
   obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
-- name: 🇭🇰 中国香港 (Hong Kong) Mong Kok 05 (原生) - xiaohe
-  type: vless
-  server: 526.150333.xyz
-  port: 21001
+- name: 🇭🇰 香港 05 (原生)
+  type: vmess
+  server: hk2.998998.best
+  port: 443
   udp: true
-  uuid: 52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a
+  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  alterId: 0
+  cipher: auto
   tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: safari
-  reality-opts:
-    public-key: EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo
-    short-id: b6dfd5c750351c57
-  network: tcp
-- name: 🇭🇰 中国香港 (Hong Kong) Fo Tan 06 (原生) - xiaohe
+  servername: server15.9966338.xyz
+  network: ws
+  ws-opts:
+    path: /asivewritten
+    headers:
+      Host: server15.9966338.xyz
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇭🇰 香港 06 (原生)
   type: hysteria2
   server: 202.146.222.174
   port: 443
   udp: true
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2🇨🇳
   skip-cert-verify: true
+- name: 🇭🇰 香港 07 (原生)
+  type: hysteria2
+  server: 202.146.222.29
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https://t.me/wangcai2üá
+  skip-cert-verify: true
+- name: 🇭🇰 香港 08 (原生)
+  type: vless
+  server: 526.150333.xyz
+  port: 21003
+  udp: true
+  uuid: 52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: ios
+  reality-opts:
+    public-key: EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo
+    short-id: eb9539689690d35c
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇭🇰 中国香港 (Hong Kong) 香港 01 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 香港 02 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 香港 03 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 香港 04 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) Mong Kok 05 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) Fo Tan 06 (原生) - xiaohe
+  - 🇭🇰 香港 01 (原生)
+  - 🇭🇰 香港 02 (原生)
+  - 🇭🇰 香港 03 (原生)
+  - 🇭🇰 香港 04 (原生)
+  - 🇭🇰 香港 05 (原生)
+  - 🇭🇰 香港 06 (原生)
+  - 🇭🇰 香港 07 (原生)
+  - 🇭🇰 香港 08 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇭🇰 中国香港 (Hong Kong) 香港 01 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 香港 02 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 香港 03 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 香港 04 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) Mong Kok 05 (原生) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) Fo Tan 06 (原生) - xiaohe
+  - 🇭🇰 香港 01 (原生)
+  - 🇭🇰 香港 02 (原生)
+  - 🇭🇰 香港 03 (原生)
+  - 🇭🇰 香港 04 (原生)
+  - 🇭🇰 香港 05 (原生)
+  - 🇭🇰 香港 06 (原生)
+  - 🇭🇰 香港 07 (原生)
+  - 🇭🇰 香港 08 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -4,7 +4,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇷🇴 罗马尼亚 (Romania) 布加勒斯特 01 (原生) - xiaohe
+- name: 🇷🇴 罗马尼亚-布加勒斯特 01 (原生)
   type: vless
   server: edge10.cyrionflare.com
   port: 2052
@@ -16,11 +16,11 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇷🇴 罗马尼亚 (Romania) 布加勒斯特 01 (原生) - xiaohe
+  - 🇷🇴 罗马尼亚-布加勒斯特 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇷🇴 罗马尼亚 (Romania) 布加勒斯特 01 (原生) - xiaohe
+  - 🇷🇴 罗马尼亚-布加勒斯特 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

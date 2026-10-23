@@ -4,7 +4,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇷 土耳其 (Turkey) Yakuplu 01 (原生) - xiaohe
+- name: 🇹🇷 土耳其-Yakuplu 01 (原生)
   type: vless
   server: 78.135.73.47
   port: 443
@@ -23,11 +23,11 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇹🇷 土耳其 (Turkey) Yakuplu 01 (原生) - xiaohe
+  - 🇹🇷 土耳其-Yakuplu 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇹🇷 土耳其 (Turkey) Yakuplu 01 (原生) - xiaohe
+  - 🇹🇷 土耳其-Yakuplu 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

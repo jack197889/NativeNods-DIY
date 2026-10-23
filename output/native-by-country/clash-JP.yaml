@@ -4,37 +4,21 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇯🇵 日本 (Japan) 东京 01 (原生) - xiaohe
+- name: 🇯🇵 日本-东京 01 (原生)
   type: vless
-  server: 192.241.229.131
-  port: 74
+  server: 128.241.25.11
+  port: 30021
   udp: true
-  uuid: 8fd85405-c28b-42ce-87a8-646cbe38ced4
-  packet-encoding: xudp
+  uuid: b8b47337-b7d3-4458-9000-482366061a95
   tls: true
-  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+  servername: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
   client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /@Marisa_kristi
     headers:
-      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
-- name: 🇯🇵 日本 (Japan) 东京 02 (原生) - xiaohe
-  type: vless
-  server: 57.129.130.57
-  port: 52014
-  udp: true
-  uuid: 98286408-b683-4c0f-96c5-7e00da649d90
-  packet-encoding: xudp
-  tls: true
-  servername: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
-- name: 🇯🇵 日本 (Japan) 札幌 03 (原生) - xiaohe
+      Host: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
+- name: 🇯🇵 日本-札幌 02 (原生)
   type: vless
   server: 142.91.108.25
   port: 443
@@ -43,46 +27,60 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: jp3.nztvpn.com
-  client-fingerprint: random
+  client-fingerprint: chrome
   reality-opts:
     public-key: 9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM
     short-id: ea36c03d86f91287
   network: tcp
-- name: 🇯🇵 日本 (Japan) Fujisawa 04 (原生) - xiaohe
+- name: 🇯🇵 日本-Chiyoda City 03 (原生)
   type: vless
-  server: 37.120.222.70
-  port: 8082
+  server: 57.129.130.10
+  port: 52014
   udp: true
-  uuid: 59c3c1c7-62d0-4707-9d67-5ff9c008591c
+  uuid: 395bab7e-302a-42b4-bac7-8acb7d36fdf3
   packet-encoding: xudp
   tls: true
-  servername: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
+  servername: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
   client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /@Marisa_kristi
     headers:
-      Host: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
-- name: 🇯🇵 日本 (Japan) 东京 05 (原生) - xiaohe
+      Host: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
+- name: 🇯🇵 日本-Fujisawa 04 (原生)
   type: vless
-  server: 203.137.165.164
-  port: 57554
+  server: 57.129.130.34
+  port: 52014
   udp: true
-  uuid: 91cf01c5-62c1-44cd-80e0-df6310025dab
+  uuid: 53367702-4b8d-431a-a193-34d7d057a065
   tls: true
-  servername: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
   client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /@Marisa_kristi
     headers:
-      Host: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
-- name: 🇯🇵 日本 (Japan) Chiyoda City 06 (原生) - xiaohe
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+- name: 🇯🇵 日本-东京 05 (原生)
   type: vless
-  server: 129.151.64.169
-  port: 31867
+  server: 57.129.130.57
+  port: 52014
   udp: true
-  uuid: 0ff1bcdb-8dcc-4b05-93df-09f028330184
+  uuid: 091ea5fd-4e8d-4459-90af-e4d10179efff
+  tls: true
+  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+- name: 🇯🇵 日本-东京 06 (原生)
+  type: vless
+  server: 185.125.103.62
+  port: 8082
+  udp: true
+  uuid: 72af1965-ec91-4376-82b1-75be51885506
   packet-encoding: xudp
   tls: true
   servername: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
@@ -92,43 +90,26 @@ proxies:
     path: /@Marisa_kristi
     headers:
       Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
-- name: 🇯🇵 日本 (Japan) 东京 07 (原生) - xiaohe
-  type: vless
-  server: 147.45.42.73
-  port: 20443
-  udp: true
-  uuid: fcbb9617-7b3c-4b21-8a91-a57350a75222
-  packet-encoding: xudp
-  tls: true
-  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇯🇵 日本 (Japan) 东京 01 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 东京 02 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 札幌 03 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) Fujisawa 04 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 东京 05 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) Chiyoda City 06 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 东京 07 (原生) - xiaohe
+  - 🇯🇵 日本-东京 01 (原生)
+  - 🇯🇵 日本-札幌 02 (原生)
+  - 🇯🇵 日本-Chiyoda City 03 (原生)
+  - 🇯🇵 日本-Fujisawa 04 (原生)
+  - 🇯🇵 日本-东京 05 (原生)
+  - 🇯🇵 日本-东京 06 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇯🇵 日本 (Japan) 东京 01 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 东京 02 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 札幌 03 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) Fujisawa 04 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 东京 05 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) Chiyoda City 06 (原生) - xiaohe
-  - 🇯🇵 日本 (Japan) 东京 07 (原生) - xiaohe
+  - 🇯🇵 日本-东京 01 (原生)
+  - 🇯🇵 日本-札幌 02 (原生)
+  - 🇯🇵 日本-Chiyoda City 03 (原生)
+  - 🇯🇵 日本-Fujisawa 04 (原生)
+  - 🇯🇵 日本-东京 05 (原生)
+  - 🇯🇵 日本-东京 06 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
