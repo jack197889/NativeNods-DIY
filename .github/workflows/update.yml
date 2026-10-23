@@ -2,10 +2,9 @@ name: Update Subscriptions
 
 on:
   schedule:
-    # 北京时间 06:07（UTC 22:07 前一天）
-    # 预留排队延迟 + 运行时间，争取在 08:30 前完成
-    - cron: '7 22 * * *'
-  workflow_dispatch:
+    # 每天北京时间 04:09 → UTC 20:09
+    - cron: '9 20 * * *'
+  workflow_dispatch:   # 保留这个方便手动触发测试
 
 jobs:
   build:
