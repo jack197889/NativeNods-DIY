@@ -6,85 +6,86 @@ log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01 (原生) - xiaohe
   type: vless
-  server: 172.67.184.45
+  server: 172.67.155.222
   port: 443
   udp: true
-  uuid: 82b279c6-5cba-3a96-f8bd-780a00000045
+  uuid: 82b279c6-5cba-3a96-f8bd-780a00000035
+  packet-encoding: xudp
   tls: true
   servername: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
+    path: /sync
     headers:
       Host: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
 - name: 🇳🇱 荷兰 (Netherlands) 02 (原生) - xiaohe
+  type: hysteria2
+  server: nl-hy-test.tcp-reset-club.net
+  port: 443
+  udp: true
+  password: dd50a499-7e43-4589-8490-f3b9c2451473
+  sni: tcp-reset-club.net
+  skip-cert-verify: true
+- name: 🇳🇱 荷兰 (Netherlands) 03 (原生) - xiaohe
   type: ss
   server: dns5.m3hrzd.ir
   port: 8044
   udp: true
   cipher: chacha20-ietf-poly1305
   password: 5ox2e7xif1rCKOiffOPvibGk-KVXCk8v
-- name: 🇳🇱 荷兰 (Netherlands) 03 (原生) - xiaohe
-  type: ss
-  server: 158.173.20.208
-  port: 443
-  udp: true
-  cipher: aes-128-gcm
-  password: shadowsocks
 - name: 🇳🇱 荷兰 (Netherlands) 04 (原生) - xiaohe
-  type: hysteria2
-  server: nl-hy-test.tcp-reset-club.net
-  port: 443
-  udp: true
-  password: 529f1911-04d5-4427-94b9-c851fd459a27
-  sni: tcp-reset-club.net
-  skip-cert-verify: true
-- name: 🇳🇱 荷兰 (Netherlands) 05 (原生) - xiaohe
   type: ss
   server: 82.38.31.171
-  port: 8080
+  port: 443
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 06 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.179
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 07 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.54
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 08 (原生) - xiaohe
-  type: ss
-  server: 82.38.31.42
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 09 (原生) - xiaohe
-  type: ss
-  server: 193.29.139.235
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 10 (原生) - xiaohe
+- name: 🇳🇱 荷兰 (Netherlands) 05 (原生) - xiaohe
   type: ss
   server: 82.38.31.192
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰 (Netherlands) 11 (原生) - xiaohe
+- name: 🇳🇱 荷兰 (Netherlands) 06 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.54
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 07 (原生) - xiaohe
   type: ss
   server: 82.38.31.66
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 08 (原生) - xiaohe
+  type: ss
+  server: 193.29.139.235
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 09 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.179
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰 (Netherlands) 10 (原生) - xiaohe
+  type: ss
+  server: 158.173.20.208
+  port: 443
+  udp: true
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇳🇱 荷兰 (Netherlands) 11 (原生) - xiaohe
+  type: ss
+  server: 82.38.31.42
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305

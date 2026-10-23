@@ -4,27 +4,25 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
+- name: 🇨🇳 中国大陆 (China) 01 (家宽) - xiaohe
   type: vmess
-  server: 183.109.131.75
-  port: 20086
+  server: 112.132.215.108
+  port: 50002
   udp: true
-  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   alterId: 0
   cipher: auto
-  network: ws
-  ws-opts:
-    path: /
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
+  - 🇨🇳 中国大陆 (China) 01 (家宽) - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
+  - 🇨🇳 中国大陆 (China) 01 (家宽) - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

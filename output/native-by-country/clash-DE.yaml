@@ -5,113 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 (原生) - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 8080
+  type: trojan
+  server: 188.114.97.9
+  port: 443
   udp: true
-  uuid: b9ede7a5-5b4b-4aee-ac37-2c307e587e47
-  packet-encoding: xudp
+  password: TsX0XJKMa2h$CbKr0k
+  sni: IDB8onmVBntUyt5T7T6cEjFW8VLRB.PAGES.DeV
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoidVkzQm1ROUg4dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    path: /tr/mPwnfIHtx0vldKy0A5AGJTZB
     headers:
-      Host: courses.mftplus.qzz.io
+      Host: IDB8onmVBntUyt5T7T6cEjFW8VLRB.PAGES.DeV
 - name: 🇩🇪 德国 (Germany) 02 (原生) - xiaohe
-  type: vless
-  server: 172.66.44.124
-  port: 443
-  udp: true
-  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
-  tls: true
-  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
-- name: 🇩🇪 德国 (Germany) 03 (原生) - xiaohe
-  type: trojan
-  server: 172.67.131.217
-  port: 443
-  udp: true
-  password: 6c73b7937b3e44e5982f9d5efa57d8cd
-  sni: aUTO-scale-728382.BuiLD-sVc-267891.wORkErs.dEv
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /tr/9LJwNSQPh5UJMu8TbPKBJPtkZWKkYFFl
-    headers:
-      Host: auto-ScaLe-728382.builD-sVc-267891.WoRkeRS.DeV
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇩🇪 德国 (Germany) 04 (原生) - xiaohe
-  type: vless
-  server: courses.mftplus.qzz.io
-  port: 2096
-  udp: true
-  uuid: b9ede7a5-5b4b-4aee-ac37-2c307e587e47
-  tls: true
-  servername: courses.mftplus.qzz.io
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoidVkzQm1ROUg4dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
-    headers:
-      Host: courses.mftplus.qzz.io
-- name: 🇩🇪 德国 (Germany) 05 (原生) - xiaohe
-  type: trojan
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  password: mitivpn
-  sni: d-e.mitivpn.in.net
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/--@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
-    headers:
-      Host: d-e.mitivpn.in.net
-- name: 🇩🇪 德国 (Germany) 06 (原生) - xiaohe
-  type: vmess
-  server: lucas.ehsanazizi-speed-server.com
-  port: 2110
-  udp: true
-  uuid: 06d4d001-4168-4876-9416-7caecf578f40
-  alterId: 0
-  cipher: auto
-  network: tcp
-- name: 🇩🇪 德国 (Germany) 07 (原生) - xiaohe
-  type: vless
-  server: hoert1rert.localip.ir
-  port: 2087
-  udp: true
-  uuid: a5db5ab5-8d28-49c0-ad55-0ad4724e4c0d
-  tls: true
-  servername: hoert1rert.localip.ir
-  network: ws
-  ws-opts:
-    path: /hokm
-    headers:
-      Host: hoert1rert.localip.ir
-- name: 🇩🇪 德国 (Germany) 08 (原生) - xiaohe
-  type: vless
-  server: sino.bestsellers1.site
-  port: 2083
-  udp: true
-  uuid: 7858128a-6b5e-4f86-9bff-52c1f1e6439d
-  tls: true
-  servername: sino.bestsellers1.site
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sino.bestsellers1.site
-- name: 🇩🇪 德国 (Germany) 09 (原生) - xiaohe
   type: vmess
   server: uk2-2.998998.best
   port: 443
@@ -126,66 +34,60 @@ proxies:
     path: /waetasiuofguiwer
     headers:
       Host: server3.9966338.xyz
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇩🇪 德国 (Germany) 10 (原生) - xiaohe
+- name: 🇩🇪 德国 (Germany) 03 (原生) - xiaohe
   type: vless
-  server: connect.wecantos.site
-  port: 10000
+  server: sino.bestsellers1.site
+  port: 2083
   udp: true
-  uuid: a05ecf37-c661-4247-ab09-4432cf0f3cc1
-  network: tcp
-- name: 🇩🇪 德国 (Germany) 11 (原生) - xiaohe
+  uuid: 7858128a-6b5e-4f86-9bff-52c1f1e6439d
+  tls: true
+  servername: sino.bestsellers1.site
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sino.bestsellers1.site
+- name: 🇩🇪 德国 (Germany) 04 (原生) - xiaohe
   type: vless
   server: test.wecantos.site
   port: 20000
   udp: true
   uuid: ca59a503-db23-44af-9879-49747d8da98f
   network: tcp
-- name: 🇩🇪 德国 (Germany) 12 (原生) - xiaohe
+- name: 🇩🇪 德国 (Germany) 05 (原生) - xiaohe
   type: vless
-  server: shortbig.ir
+  server: 46.225.46.136
   port: 2087
   udp: true
-  uuid: 31f185b6-e591-413b-ba72-88083a87feb2
+  uuid: a5db5ab5-8d28-49c0-ad55-0ad4724e4c0d
   tls: true
-  servername: a4.ladankashani.ir
+  servername: hoert1rert.localip.ir
   alpn:
   - http/1.1
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /hokm
     headers:
-      Host: a4.ladankashani.ir
-- name: 🇩🇪 德国 (Germany) 13 (原生) - xiaohe
+      Host: hoert1rert.localip.ir
+- name: 🇩🇪 德国 (Germany) 06 (原生) - xiaohe
   type: vmess
-  server: 91.107.169.224
-  port: 80
+  server: 178.105.168.171
+  port: 2110
   udp: true
-  uuid: d4b69108-f756-48af-a331-e8356bc95eb4
+  uuid: 06d4d001-4168-4876-9416-7caecf578f40
   alterId: 0
   cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    v2ray-http-upgrade: true
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.dns-look.space.
-- name: 🇩🇪 德国 (Germany) 14 (原生) - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
+  network: tcp
+- name: 🇩🇪 德国 (Germany) 07 (原生) - xiaohe
+  type: hysteria2
+  server: 5.45.100.100
+  port: 51511
   udp: true
-  uuid: a8a6aba0-bbe4-4eaa-8bb7-98601ef162bc
-  tls: true
-  servername: omid-3x-ui.abolfzlllll.us.ci
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: omid-3x-ui.abolfzlllll.us.ci
-- name: 🇩🇪 德国 (Germany) 15 (原生) - xiaohe
+  password: miaoge110
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 🇩🇪 德国 (Germany) 08 (原生) - xiaohe
   type: vless
   server: 31.70.111.146
   port: 443
@@ -199,21 +101,28 @@ proxies:
     public-key: ZNmuzIn-zyJi2C0sWRpL9fsMYCgYauXpJElXTqY_LEE
     short-id: d7de3a6ff4018957
   network: tcp
-- name: 🇩🇪 德国 (Germany) 16 (原生) - xiaohe
+- name: 🇩🇪 德国 (Germany) 09 (原生) - xiaohe
   type: vless
-  server: 903.rtgpu.com
-  port: 443
+  server: connect.wecantos.site
+  port: 10000
   udp: true
-  uuid: c6438331-a79b-4471-fd5e-42c2eeac29fa
-  tls: true
-  servername: 903.rtgpu.com
-  client-fingerprint: chrome
+  uuid: a05ecf37-c661-4247-ab09-4432cf0f3cc1
+  network: tcp
+- name: 🇩🇪 德国 (Germany) 10 (原生) - xiaohe
+  type: vmess
+  server: 91.107.169.224
+  port: 80
+  udp: true
+  uuid: d4b69108-f756-48af-a331-e8356bc95eb4
+  alterId: 0
+  cipher: auto
   network: ws
   ws-opts:
-    path: /nmd2
+    path: /
+    v2ray-http-upgrade: true
     headers:
-      Host: 903.rtgpu.com
-- name: 🇩🇪 德国 (Germany) 17 (原生) - xiaohe
+      Host: google.whatsapp.snapp.torob.basalam.dns-look.space.
+- name: 🇩🇪 德国 (Germany) 11 (原生) - xiaohe
   type: vless
   server: mci1.amir12.ir
   port: 1222
@@ -226,7 +135,7 @@ proxies:
     public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
     short-id: a25d0f
   network: tcp
-- name: 🇩🇪 德国 (Germany) 18 (原生) - xiaohe
+- name: 🇩🇪 德国 (Germany) 12 (原生) - xiaohe
   type: vless
   server: 91.107.188.129
   port: 2083
@@ -234,13 +143,12 @@ proxies:
   uuid: 36592d47-b9f5-4e8f-949e-45ac05472aab
   tls: true
   servername: site.check-looks.space
-  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /
     headers:
       Host: site.check-looks.space
-- name: 🇩🇪 德国 (Germany) 19 (原生) - xiaohe
+- name: 🇩🇪 德国 (Germany) 13 (原生) - xiaohe
   type: ss
   server: 213.202.208.199
   port: 5000
@@ -265,12 +173,6 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 11 (原生) - xiaohe
   - 🇩🇪 德国 (Germany) 12 (原生) - xiaohe
   - 🇩🇪 德国 (Germany) 13 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 14 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 15 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 16 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 17 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 18 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 19 (原生) - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -287,12 +189,6 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 11 (原生) - xiaohe
   - 🇩🇪 德国 (Germany) 12 (原生) - xiaohe
   - 🇩🇪 德国 (Germany) 13 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 14 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 15 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 16 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 17 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 18 (原生) - xiaohe
-  - 🇩🇪 德国 (Germany) 19 (原生) - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

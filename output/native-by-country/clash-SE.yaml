@@ -1,0 +1,37 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇸🇪 瑞典 (Sweden) 01 (原生) - xiaohe
+  type: vless
+  server: media.vik.lalibobi.online
+  port: 443
+  udp: true
+  uuid: 21ffcccd-8fbe-43fb-9dd1-24452fdfa8ad
+  tls: true
+  servername: media.vik.lalibobi.online
+  alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /live/showroom
+    headers:
+      Host: media.vik.lalibobi.online
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇸🇪 瑞典 (Sweden) 01 (原生) - xiaohe
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇸🇪 瑞典 (Sweden) 01 (原生) - xiaohe
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

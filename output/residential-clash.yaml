@@ -4,45 +4,6 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
-  type: vless
-  server: hinet1.2yly.com
-  port: 24215
-  udp: true
-  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
-  tls: true
-  servername: addons.mozilla.org
-  client-fingerprint: ios
-  reality-opts:
-    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
-    short-id: ''
-  network: tcp
-- name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
-  type: vmess
-  server: 9641684.sdf65h4.top
-  port: 443
-  udp: true
-  uuid: 250c015d-bab0-4ed3-b638-b4eda48f5840
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: 9641684.sdf65h4.top
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 9641684.sdf65h4.top
-- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
-  type: vmess
-  server: 183.109.131.75
-  port: 20086
-  udp: true
-  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
 - name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
   type: anytls
   server: 654968169.df6h451rh.xin
@@ -51,22 +12,37 @@ proxies:
   password: 0324fbc29561
   sni: 654968169.df6h451rh.xin
   skip-cert-verify: true
+- name: 🇨🇳 中国大陆 (China) 01 (家宽) - xiaohe
+  type: vmess
+  server: 112.132.215.108
+  port: 50002
+  udp: true
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 0
+  cipher: auto
+  network: tcp
+- name: 🇸🇬 新加坡 (Singapore) 01 (家宽) - xiaohe
+  type: hysteria2
+  server: s3.huhiuh.space
+  port: 18642
+  udp: true
+  password: user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2
+  sni: s3.huhiuh.space
+  skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
-  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  - 🇨🇳 中国大陆 (China) 01 (家宽) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 01 (家宽) - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
-  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  - 🇨🇳 中国大陆 (China) 01 (家宽) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 01 (家宽) - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

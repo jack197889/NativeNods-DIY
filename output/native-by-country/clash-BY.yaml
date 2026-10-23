@@ -6,28 +6,38 @@ log-level: info
 proxies:
 - name: 🇧🇾 BY 01 (原生) - xiaohe
   type: vless
+  server: 178.172.227.228
+  port: 14430
+  udp: true
+  uuid: b6e5dc56-836f-48c1-9163-b0b0b43b647d
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 178.172.227.228
+- name: 🇧🇾 BY 02 (原生) - xiaohe
+  type: vless
   server: 178.172.227.124
-  port: 10444
+  port: 14430
   udp: true
   uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
-  flow: xtls-rprx-vision
-  tls: true
-  servername: ads.x5.ru
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  network: tcp
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 178.172.227.124
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇧🇾 BY 01 (原生) - xiaohe
+  - 🇧🇾 BY 02 (原生) - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇧🇾 BY 01 (原生) - xiaohe
+  - 🇧🇾 BY 02 (原生) - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

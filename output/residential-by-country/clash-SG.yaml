@@ -4,25 +4,24 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇪 爱尔兰 (Ireland) 01 (原生) - xiaohe
-  type: vless
-  server: 3.252.104.83
-  port: 443
+- name: 🇸🇬 新加坡 (Singapore) 01 (家宽) - xiaohe
+  type: hysteria2
+  server: s3.huhiuh.space
+  port: 18642
   udp: true
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  network: h2
-  h2-opts:
-    path: /
+  password: user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2
+  sni: s3.huhiuh.space
+  skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇮🇪 爱尔兰 (Ireland) 01 (原生) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 01 (家宽) - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇮🇪 爱尔兰 (Ireland) 01 (原生) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 01 (家宽) - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

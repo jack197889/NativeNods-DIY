@@ -6,15 +6,18 @@ log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 (原生) - xiaohe
   type: vless
-  server: 104.18.35.86
-  port: 8080
+  server: 147.93.173.45
+  port: 10444
   udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  network: ws
-  ws-opts:
-    path: /sg-melbi
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
+  uuid: 75c5f51b-d548-4eab-a26e-aa10fc3dbc7b
+  flow: xtls-rprx-vision
+  tls: true
+  servername: video.yandex.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  network: tcp
 - name: 🇸🇬 新加坡 (Singapore) 02 (原生) - xiaohe
   type: vmess
   server: 8.219.97.17
@@ -30,20 +33,6 @@ proxies:
     path: /ws-vmess
     headers:
       Host: wjofhsqteueywxeq.v.3dns.vip
-- name: 🇸🇬 新加坡 (Singapore) 03 (原生) - xiaohe
-  type: vless
-  server: 147.93.173.45
-  port: 10444
-  udp: true
-  uuid: 75c5f51b-d548-4eab-a26e-aa10fc3dbc7b
-  flow: xtls-rprx-vision
-  tls: true
-  servername: video.yandex.ru
-  client-fingerprint: random
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -51,13 +40,11 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇸🇬 新加坡 (Singapore) 01 (原生) - xiaohe
   - 🇸🇬 新加坡 (Singapore) 02 (原生) - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 03 (原生) - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇸🇬 新加坡 (Singapore) 01 (原生) - xiaohe
   - 🇸🇬 新加坡 (Singapore) 02 (原生) - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 03 (原生) - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

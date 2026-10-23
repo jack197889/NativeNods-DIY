@@ -6,6 +6,17 @@ log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01 (原生) - xiaohe
   type: vless
+  server: 63.141.128.30
+  port: 8880
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime42.workers.dev
+- name: 🇷🇴 罗马尼亚 (Romania) 02 (原生) - xiaohe
+  type: vless
   server: edge10.cyrionflare.com
   port: 2052
   udp: true
@@ -17,10 +28,12 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇷🇴 罗马尼亚 (Romania) 01 (原生) - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 02 (原生) - xiaohe
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇷🇴 罗马尼亚 (Romania) 01 (原生) - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 02 (原生) - xiaohe
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

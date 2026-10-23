@@ -7,19 +7,17 @@ proxies:
 - name: 🇩🇪 德国 (Germany) 01 - xiaohe
   type: vless
   server: 188.114.97.6
-  port: 443
+  port: 8080
   udp: true
-  uuid: e56059f1-5a1a-4d0a-a2d0-58ecb4eb2f3f
+  uuid: 93fa8bdb-9cca-4a3e-8355-b7c12e4f595e
   packet-encoding: xudp
-  tls: true
-  servername: ezaccess-project-f62c30.pages.dev
-  alpn:
-  - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiZWlPODVjTnhnaSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    path: /vl/yLWNcuUuw1jlJpkDhGy
     headers:
-      Host: ezaccess-project-f62c30.pages.dev
+      Host: fornewiran.ade-1000.workers.dev
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
 proxy-groups:
 - name: 🚀 节点选择
   type: select

@@ -6,19 +6,19 @@ log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 (原生) - xiaohe
   type: hysteria2
-  server: 103.115.109.49
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2foneclickvpnkeys
-  skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 02 (原生) - xiaohe
-  type: hysteria2
   server: vpn-tw-002.fastervpn.world
   port: 443
   udp: true
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vk.com
+  sni: vpn-tw-002.fastervpn.world\u0026insecure=1\u0026allowinsecure=1
+  skip-cert-verify: true
+- name: 🇹🇼 中国台湾 (Taiwan) 02 (原生) - xiaohe
+  type: hysteria2
+  server: 103.115.109.49
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 'https:'
   skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
