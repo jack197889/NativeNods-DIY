@@ -401,21 +401,21 @@ RESIDENTIAL_ASNS.add(2527)                       # Sony Network Communications /
 RESIDENTIAL_NAME_PATTERNS.extend(["sony network", "nuro"])
 
 COUNTRY_NAMES = {
-    "HK": "中国香港 (Hong Kong)", "TW": "中国台湾 (Taiwan)", "MO": "中国澳门 (Macao)",
-    "CN": "中国大陆 (China)", "JP": "日本 (Japan)", "SG": "新加坡 (Singapore)",
-    "US": "美国 (United States)", "KR": "韩国 (South Korea)", "DE": "德国 (Germany)",
-    "GB": "英国 (United Kingdom)", "CA": "加拿大 (Canada)", "FR": "法国 (France)",
-    "NL": "荷兰 (Netherlands)", "AU": "澳大利亚 (Australia)", "IN": "印度 (India)",
-    "RU": "俄罗斯 (Russia)", "TR": "土耳其 (Turkey)", "BR": "巴西 (Brazil)",
-    "ID": "印度尼西亚 (Indonesia)", "TH": "泰国 (Thailand)", "VN": "越南 (Vietnam)",
-    "MY": "马来西亚 (Malaysia)", "PH": "菲律宾 (Philippines)", "AR": "阿根廷 (Argentina)",
-    "IT": "意大利 (Italy)", "ES": "西班牙 (Spain)", "SE": "瑞典 (Sweden)",
-    "CH": "瑞士 (Switzerland)", "PL": "波兰 (Poland)", "UA": "乌克兰 (Ukraine)",
-    "FI": "芬兰 (Finland)", "IE": "爱尔兰 (Ireland)", "MX": "墨西哥 (Mexico)",
-    "ZA": "南非 (South Africa)", "AE": "阿联酋 (UAE)", "IL": "以色列 (Israel)",
-    "RO": "罗马尼亚 (Romania)", "BG": "保加利亚 (Bulgaria)", "NO": "挪威 (Norway)",
-    "DK": "丹麦 (Denmark)", "AT": "奥地利 (Austria)", "CZ": "捷克 (Czechia)",
-    "OTHER": "其他地区 (Other)",
+    "HK": "香港", "TW": "台湾", "MO": "澳门",
+    "CN": "中国大陆", "JP": "日本", "SG": "新加坡",
+    "US": "美国", "KR": "韩国", "DE": "德国",
+    "GB": "英国", "CA": "加拿大", "FR": "法国",
+    "NL": "荷兰", "AU": "澳大利亚", "IN": "印度",
+    "RU": "俄罗斯", "TR": "土耳其", "BR": "巴西",
+    "ID": "印度尼西亚", "TH": "泰国", "VN": "越南",
+    "MY": "马来西亚", "PH": "菲律宾", "AR": "阿根廷",
+    "IT": "意大利", "ES": "西班牙", "SE": "瑞典",
+    "CH": "瑞士", "PL": "波兰", "UA": "乌克兰",
+    "FI": "芬兰", "IE": "爱尔兰", "MX": "墨西哥",
+    "ZA": "南非", "AE": "阿联酋", "IL": "以色列",
+    "RO": "罗马尼亚", "BG": "保加利亚", "NO": "挪威",
+    "DK": "丹麦", "AT": "奥地利", "CZ": "捷克",
+    "OTHER": "其他地区",
 }
 
 # 城市英→中映射（key 小写；覆盖节点常见落地城市，未命中则保留原文）
@@ -483,6 +483,24 @@ CITY_NAMES_ZH = {
     "sao paulo": "圣保罗", "são paulo": "圣保罗", "rio de janeiro": "里约热内卢",
     "buenos aires": "布宜诺斯艾利斯", "mexico city": "墨西哥城",
     "johannesburg": "约翰内斯堡", "cape town": "开普敦",
+    # 香港区名（HK 节点命名不展示城市，映射仅作备用）
+    "mong kok": "旺角", "mongkok": "旺角", "central": "中环", "tsim sha tsui": "尖沙咀",
+    "kwun tong": "观塘", "sha tin": "沙田", "tuen mun": "屯门", "yuen long": "元朗",
+    "tai po": "大埔", "sai wan": "西环", "causeway bay": "铜锣湾", "wan chai": "湾仔",
+    # 台湾
+    "nangang": "南港", "nan gang": "南港", "banqiao": "板桥", "zhonghe": "中和",
+    "taoyuan": "桃园", "keelung": "基隆", "new taipei": "新北", "hualien": "花莲",
+    # 用户反馈补充
+    "flower mound": "弗劳尔芒德", "flowermound": "弗劳尔芒德",
+    "ban wang man": "万曼村", "frankfurt am main": "法兰克福",
+    "minamishinagawa": "南品川", "minami-shinagawa": "南品川",
+    "falkenstein": "法尔肯施泰因",
+    "north kansas city": "北堪萨斯城",
+    "bear": "贝尔",
+    "beauharnois": "博阿尔努瓦",
+    "charlottesville": "夏洛茨维尔",
+    "staten island": "斯塔滕岛",
+    "kansas city": "堪萨斯城",
 }
 
 DIRECT_SESSION = requests.Session()
@@ -2083,15 +2101,18 @@ def city_to_zh(city: str) -> str:
 
 
 def make_node_name(item: dict, idx: int) -> str:
-    """中文命名：国旗 + 国家名 +（有则）中文城市 + 序号 +（家宽/原生）标签。
-    序号按国家自增；没有可靠城市时只写国家，不填「未知」。"""
+    """中文命名：国旗 + 国家[-城市] + 序号 +（家宽/原生）标签。
+    香港不展示区名，只写「香港」；序号按国家自增；无城市时不填「未知」。
+    不再附加 NAME_SUFFIX。"""
     cc = item["country"]
     place = COUNTRY_NAMES.get(cc, cc)
-    city_zh = city_to_zh(item.get("city") or "")
-    if city_zh:
-        place = f"{place} {city_zh}"
+    # 香港：不细分区名，统一「香港」
+    if cc != "HK":
+        city_zh = city_to_zh(item.get("city") or "")
+        if city_zh:
+            place = f"{place}-{city_zh}"
     tag = f" ({item['tag']})" if item.get("tag") else ""
-    return f"{get_country_flag(cc)} {place} {idx:02d}{tag} - {NAME_SUFFIX}"
+    return f"{get_country_flag(cc)} {place} {idx:02d}{tag}"
 
 
 def build_group(nodes_list: list):
@@ -2212,7 +2233,7 @@ sing-box 客户端配置 (1.12+): `{raw}/singbox.json`
 ## 📖 说明
 
 - **分类互斥**: 每个节点只属于「家宽 / 原生 / 普通」之一，优先级 家宽 > 原生。
-- **节点命名**: 根据落地 IP 自动标注中文国家名；能查到城市时追加中文城市名（如「美国 (United States) 纽约」），映射表未覆盖的城市保留英文原文；查不到城市则只写国家。序号按国家自增。
+- **节点命名**: 中文国家名，有城市时用「国家-城市」（如「日本-东京」）；香港统一写「香港」不展示区名；映射表未覆盖的城市保留英文原文；序号按国家自增。
 - **风控值过滤**: 风控值超过 {MAX_RISK_SCORE} 的节点一律淘汰 (Scamalytics 评分，与检测网站的风控值数据源不同，数值不能直接等同)。
 - **原生 IP**: 注册地国家与实际使用地国家一致 (注册地取 RDAP 登记国家，查不到用 GeoLite2；多个地理库互相矛盾则不算)。「广播 IP」归普通。
 - **家宽**: 家庭宽带 IP（含移动网络）且为原生 IP，识别沿用原作者方案；家庭宽带但广播的 IP 归普通。
