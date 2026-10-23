@@ -112,6 +112,17 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/yy1588133/proxy-pool/main/v2ray.txt",
     "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
     "https://sub.445569.xyz/",
+    # 额外高更新频率聚合源（含 JP/NL/TW/AU 等）
+    "https://raw.githubusercontent.com/barry-far/V2ray-Config/main/All_Configs_Sub.txt",
+    "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_base64_Sub.txt",
+    "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/config.txt",
+    "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub1.txt",
+    "https://raw.githubusercontent.com/free-nodes/v2rayfree/main/sub",
+    "https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/nodes.txt",
+    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/all_extracted_configs.txt",
+    "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
+    "https://raw.githubusercontent.com/mfuu/v2ray/master/v2ray",
+    "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list_raw.txt",
 ]
 
 # 路径：脚本放在 <repo>/scripts/ 下时，输出到 <repo>/output
@@ -1796,6 +1807,25 @@ def classify_results(results: list):
           for t in ("residential", "mobile", "datacenter", "cdn", "unknown"))
           + f" | 原生={sum(1 for i in items if i['native'])}")
 
+    # 彻底剔除 Cloudflare / WARP（ASN 13335、CDN 网段、org 含 cloudflare）
+    def _is_cloudflare(it):
+        if it.get("net_type") == "cdn":
+            return True
+        asn = it.get("asn")
+        if asn == 13335:
+            return True
+        org = (it.get("org_text") or "").lower()
+        if "cloudflare" in org or "cloudflarewarp" in org.replace(" ", ""):
+            return True
+        return False
+
+    before_cf = len(items)
+    items = [i for i in items if not _is_cloudflare(i)]
+    dropped_cf = before_cf - len(items)
+    if dropped_cf:
+        print(f"[*] 已剔除 Cloudflare/WARP 节点: {dropped_cf} 个，剩余 {len(items)}")
+        bump("dropped_cloudflare", dropped_cf)
+
     items.sort(key=lambda x: x["latency_ms"])
     residential = [i for i in items if i["residential"]]
     native = [i for i in items if i["native_final"]]
@@ -2102,14 +2132,15 @@ def city_to_zh(city: str) -> str:
 
 def make_node_name(item: dict, idx: int) -> str:
     """中文命名：国旗 + 国家[-城市] + 序号 +（家宽/原生）标签。
-    香港不展示区名，只写「香港」；序号按国家自增；无城市时不填「未知」。
-    不再附加 NAME_SUFFIX。"""
+    香港不展示区名；城市与国家同名时只写国家（如新加坡不写「新加坡-新加坡」）。
+    序号按国家自增；无城市时不填「未知」；不再附加 NAME_SUFFIX。"""
     cc = item["country"]
     place = COUNTRY_NAMES.get(cc, cc)
     # 香港：不细分区名，统一「香港」
     if cc != "HK":
         city_zh = city_to_zh(item.get("city") or "")
-        if city_zh:
+        # 城市与国家名相同（或城市名就是国名）时不追加，避免「新加坡-新加坡」
+        if city_zh and city_zh != place and city_zh not in place:
             place = f"{place}-{city_zh}"
     tag = f" ({item['tag']})" if item.get("tag") else ""
     return f"{get_country_flag(cc)} {place} {idx:02d}{tag}"
