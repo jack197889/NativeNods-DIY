@@ -15,7 +15,7 @@ proxies:
   network: tcp
 - name: 🇵🇱 波兰-Poznan 02 (原生)
   type: trojan
-  server: pl1.dedushka.top
+  server: 31.133.0.182
   port: 443
   udp: true
   password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
@@ -28,7 +28,7 @@ proxies:
   udp: true
   uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
   network: tcp
-- name: 🇵🇱 波兰-华沙 04 (原生)
+- name: 🇵🇱 波兰-Olsztyn 04 (原生)
   type: vless
   server: 5.42.99.64
   port: 8443
@@ -50,14 +50,14 @@ proxy-groups:
   - 🇵🇱 波兰-Poznan 01 (原生)
   - 🇵🇱 波兰-Poznan 02 (原生)
   - 🇵🇱 波兰-华沙 03 (原生)
-  - 🇵🇱 波兰-华沙 04 (原生)
+  - 🇵🇱 波兰-Olsztyn 04 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇵🇱 波兰-Poznan 01 (原生)
   - 🇵🇱 波兰-Poznan 02 (原生)
   - 🇵🇱 波兰-华沙 03 (原生)
-  - 🇵🇱 波兰-华沙 04 (原生)
+  - 🇵🇱 波兰-Olsztyn 04 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

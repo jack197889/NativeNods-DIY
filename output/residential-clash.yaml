@@ -26,7 +26,7 @@ proxies:
   alterId: 64
   cipher: auto
   network: tcp
-- name: 🇸🇬 新加坡-新加坡 01 (家宽)
+- name: 🇸🇬 新加坡 01 (家宽)
   type: hysteria2
   server: s3.huhiuh.space
   port: 18642
@@ -41,13 +41,13 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇹🇼 台湾-南港 01 (家宽)
   - 🇨🇳 中国大陆-Hefei 01 (家宽)
-  - 🇸🇬 新加坡-新加坡 01 (家宽)
+  - 🇸🇬 新加坡 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇹🇼 台湾-南港 01 (家宽)
   - 🇨🇳 中国大陆-Hefei 01 (家宽)
-  - 🇸🇬 新加坡-新加坡 01 (家宽)
+  - 🇸🇬 新加坡 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

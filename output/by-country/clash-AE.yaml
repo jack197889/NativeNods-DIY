@@ -4,27 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇺 MU-Port Louis 01 (原生)
+- name: 🇦🇪 阿联酋-迪拜 01
   type: vless
-  server: 23.227.39.30
-  port: 8880
+  server: 104.21.108.4
+  port: 443
   udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  uuid: fa45096d-bed0-ad80-c773-23c300000018
+  tls: true
+  servername: xo3ubk-c97eql-n2d4a9.shoameni17.workers.dev
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: vms.lifetime17.workers.dev
+      Host: xo3ubk-c97eql-n2d4a9.shoameni17.workers.dev
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇲🇺 MU-Port Louis 01 (原生)
+  - 🇦🇪 阿联酋-迪拜 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇲🇺 MU-Port Louis 01 (原生)
+  - 🇦🇪 阿联酋-迪拜 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
