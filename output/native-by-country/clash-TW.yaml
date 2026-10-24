@@ -10,16 +10,25 @@ proxies:
   port: 443
   udp: true
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a
+  sni: https://t.me/oneclickvpnkeys
   skip-cert-verify: true
-- name: 🇹🇼 台湾-Longjing 02 (原生)
+- name: 🇹🇼 台湾-台北 02 (原生)
+  type: hysteria2
+  server: vpn-tw-002.fastervpn.world
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: t.me
+  skip-cert-verify: true
+- name: 🇹🇼 台湾-Longjing 03 (原生)
   type: vless
-  server: 60.248.219.78
+  server: 60.248.219.53
   port: 443
   udp: true
   uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
   tls: true
   servername: ty986gfazs.cainiaohub.xyz
+  client-fingerprint: chrome
   skip-cert-verify: true
   network: ws
   ws-opts:
@@ -32,12 +41,14 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇹🇼 台湾-台北 01 (原生)
-  - 🇹🇼 台湾-Longjing 02 (原生)
+  - 🇹🇼 台湾-台北 02 (原生)
+  - 🇹🇼 台湾-Longjing 03 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇹🇼 台湾-台北 01 (原生)
-  - 🇹🇼 台湾-Longjing 02 (原生)
+  - 🇹🇼 台湾-台北 02 (原生)
+  - 🇹🇼 台湾-Longjing 03 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

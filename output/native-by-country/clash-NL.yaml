@@ -10,29 +10,30 @@ proxies:
   port: 443
   udp: true
   password: 529f1911-04d5-4427-94b9-c851fd459a27
-  sni: tcp-reset-club.net
-  skip-cert-verify: true
+  sni: nl-hy-test.tcp-reset-club.net
 - name: 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
+  type: vmess
+  server: 185.19.33.102
+  port: 21898
+  udp: true
+  uuid: cb316949-07c2-4c49-b03c-4d4011b96c74
+  alterId: 0
+  cipher: auto
+  network: tcp
+- name: 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
   type: ss
-  server: 193.29.139.235
+  server: 158.173.20.208
   port: 443
   udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
   type: ss
   server: 82.38.31.170
   port: 443
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
-  type: ss
-  server: 82.38.31.181
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
 - name: 🇳🇱 荷兰-阿姆斯特丹 05 (原生)
   type: ss
   server: 193.29.139.198
@@ -42,32 +43,39 @@ proxies:
   password: k1dBOmOB4oqi7Ump37a1bQ
 - name: 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
   type: ss
-  server: 82.38.31.54
+  server: 193.29.139.235
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
 - name: 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
   type: ss
-  server: 82.38.31.66
+  server: 82.38.31.54
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
 - name: 🇳🇱 荷兰-阿姆斯特丹 08 (原生)
   type: ss
+  server: 82.38.31.180
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰-阿姆斯特丹 09 (原生)
+  type: ss
   server: 82.38.31.42
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰-阿姆斯特丹 09 (原生)
+- name: 🇳🇱 荷兰-阿姆斯特丹 10 (原生)
   type: ss
-  server: 158.173.20.208
-  port: 443
+  server: 82.38.31.66
+  port: 8080
   udp: true
-  cipher: aes-128-gcm
-  password: shadowsocks
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -82,6 +90,7 @@ proxy-groups:
   - 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 08 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 09 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 10 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -94,6 +103,7 @@ proxy-groups:
   - 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 08 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 09 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 10 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

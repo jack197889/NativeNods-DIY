@@ -1,0 +1,36 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇲🇾 马来西亚-吉隆坡 01 (原生)
+  type: vless
+  server: 111.90.143.184
+  port: 61111
+  udp: true
+  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+  tls: true
+  servername: github.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: jT5prLDhvJ86zZVz5pDX907oQbeZ0Hyb_VcDSiJxQQU
+    short-id: 1378f725da558887
+  network: grpc
+  grpc-opts:
+    grpc-service-name: ''
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇲🇾 马来西亚-吉隆坡 01 (原生)
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇲🇾 马来西亚-吉隆坡 01 (原生)
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

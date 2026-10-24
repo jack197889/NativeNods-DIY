@@ -5,12 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚-布加勒斯特 01 (原生)
-  type: vless
-  server: edge10.cyrionflare.com
-  port: 2052
+  type: ss
+  server: irnamh.g44mozgh.ir
+  port: 1001
   udp: true
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
-  network: tcp
+  cipher: chacha20-ietf-poly1305
+  password: xJUiv6Q1mBPuRv1yQ8-dqFEss0Ho4FtE
 proxy-groups:
 - name: 🚀 节点选择
   type: select

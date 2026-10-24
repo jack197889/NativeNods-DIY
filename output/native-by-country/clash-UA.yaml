@@ -1,0 +1,34 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇺🇦 乌克兰-基辅 01 (原生)
+  type: vless
+  server: netx.smrtai.top
+  port: 443
+  udp: true
+  uuid: d8b58872-cc25-4bb2-badb-b86399c075fa
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk
+    short-id: d8b58872
+  network: tcp
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇺🇦 乌克兰-基辅 01 (原生)
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇺🇦 乌克兰-基辅 01 (原生)
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

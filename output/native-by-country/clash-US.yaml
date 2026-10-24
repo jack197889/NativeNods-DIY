@@ -4,91 +4,14 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国-达拉斯 01 (原生)
-  type: trojan
-  server: 66.23.203.21
-  port: 59689
-  udp: true
-  password: ae7eb4dwyaz25pxwgq59
-  skip-cert-verify: true
-  network: tcp
-- name: 🇺🇸 美国-芝加哥 02 (原生)
-  type: vmess
-  server: 172.64.229.21
-  port: 443
-  udp: true
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: vmess.lbw666.dpdns.org
-  alpn:
-  - 'null'
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: vmess.lbw666.dpdns.org
-    max-early-data: 2048
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国-达拉斯 03 (原生)
-  type: vless
-  server: 38.107.232.36
-  port: 80
-  udp: true
-  uuid: 18cf8db1-9f86-43f7-baa0-382efb7f2dfa
-  network: ws
-  ws-opts:
-    path: /vless/
-- name: 🇺🇸 美国-芝加哥 04 (原生)
-  type: vless
-  server: 195.211.98.43
-  port: 443
-  udp: true
-  uuid: 1b4b11d5-4c2d-4533-9a55-636757cdee94
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: safari
-  reality-opts:
-    public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
-    short-id: 9c56fddf237e8eaf
-  network: tcp
-- name: 🇺🇸 美国-Secaucus 05 (原生)
-  type: trojan
-  server: 69.164.240.85
-  port: 50875
-  udp: true
-  password: nwilryafgkyvuxauc8pz
-  skip-cert-verify: true
-  network: tcp
-- name: 🇺🇸 美国-华盛顿 06 (原生)
-  type: vless
-  server: 69.46.46.91
-  port: 443
-  udp: true
-  uuid: 4c0ddde3-c7d1-4589-a0ac-f08a535516b0
-  tls: true
-  servername: marzbanupdate-production-306a.up.railway.app
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /cdn/c7fd66fb-a1cb-4d9d-b12a-3379555fdcee
-    headers:
-      Host: marzbanupdate-production-306a.up.railway.app
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国-阿什本 07 (原生)
+- name: 🇺🇸 美国-阿什本 01 (原生)
   type: hysteria2
   server: 129.213.91.185
   port: 35013
   udp: true
   password: 4291c983-c520-46ac-82cc-48f14bef573f
-  sni: 129.213.91.185
   skip-cert-verify: true
-- name: 🇺🇸 美国-夏洛茨维尔 08 (原生)
+- name: 🇺🇸 美国-夏洛茨维尔 02 (原生)
   type: vless
   server: 47.253.226.114
   port: 443
@@ -102,30 +25,14 @@ proxies:
     public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
     short-id: ''
   network: tcp
-- name: 🇺🇸 美国-Secaucus 09 (原生)
-  type: vless
-  server: 195.123.235.183
-  port: 443
+- name: 🇺🇸 美国-Newark 03 (原生)
+  type: ss
+  server: 193.151.163.18
+  port: 19999
   udp: true
-  uuid: c14ec728-3eca-4750-87fc-fd1e6aeb81d5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: H3R3BUAl7thrIZsznTbb-eRREIjQOH2f3WO0oTN7OGY
-    short-id: a0e2a6074c6456b0
-  network: tcp
-- name: 🇺🇸 美国-阿什本 10 (原生)
-  type: vless
-  server: 44.205.20.135
-  port: 443
-  udp: true
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  network: h2
-  h2-opts:
-    path: /
-- name: 🇺🇸 美国-Secaucus 11 (原生)
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸 美国-Secaucus 04 (原生)
   type: vless
   server: 195.123.235.177
   port: 443
@@ -137,100 +44,122 @@ proxies:
   client-fingerprint: chrome
   reality-opts:
     public-key: 5B83otQ5ZQwtBFhR7xzsGJRXflkFKRJpQguYbE5JWGI
-    short-id: ''
+    short-id: c85d029f5e8eb393
   network: tcp
-- name: 🇺🇸 美国-洛杉矶 12 (原生)
-  type: vless
-  server: 45.63.53.81
-  port: 443
+- name: 🇺🇸 美国-Secaucus 05 (原生)
+  type: trojan
+  server: 69.164.240.85
+  port: 50875
   udp: true
-  uuid: c512dcbd-1847-40a2-9c99-989c8bfe4717
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 6nTROV2ELz-3vNUl0A00hp378QngpYABrPgjCpUknD0
-    short-id: f436f707
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🇺🇸 美国-圣克拉拉 13 (原生)
-  type: vless
-  server: 47.251.25.74
-  port: 443
-  udp: true
-  uuid: 18805ff3-b420-45de-af18-93be14024ae8
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amazon.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: H56cOJhw0xw76lDEpt7IuJJmVGemK6_CK34KtHwDMX8
-    short-id: ''
-  network: tcp
-- name: 🇺🇸 美国-洛杉矶 14 (原生)
-  type: vless
-  server: 144.202.126.147
-  port: 443
-  udp: true
-  uuid: 45d51389-0c38-4843-8ae8-cffb94e97a72
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: jO7THaLxz0Oz3kePAJcuwcKNTlsWoEWGh18zzRmiXgo
-    short-id: 77c4230d
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🇺🇸 美国-洛杉矶 15 (原生)
-  type: hysteria2
-  server: 192.236.226.182
-  port: 2053
-  udp: true
-  password: 46647da9-d4b4-407f-bea6-ad0b1abc561f
+  password: nwilryafgkyvuxauc8pz
+  sni: 69.164.240.85
   skip-cert-verify: true
-- name: 🇺🇸 美国-洛杉矶 16 (原生)
-  type: vless
-  server: rn.20066002.xyz
-  port: 443
-  udp: true
-  uuid: 444715e6-1c6a-4027-90df-fa01ac984669
-  flow: xtls-rprx-vision
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: q6WMAqAzFYui3TiWXdOJ1-E4NbiHHk5o1mx6W6m4hEM
-    short-id: c4623fa4291795e7
   network: tcp
-- name: 🇺🇸 美国-Minkler 17 (原生)
-  type: vmess
-  server: rib9jxayoqjgn2kw.v.3dns.vip
-  port: 443
-  udp: true
-  uuid: 9b31490d-190e-4ef1-af0a-7ccab3e7c3b5
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: rib9jxayoqjgn2kw.v.3dns.vip
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: rib9jxayoqjgn2kw.v.3dns.vip
-- name: 🇺🇸 美国-洛杉矶 18 (原生)
+- name: 🇺🇸 美国-斯塔滕岛 06 (原生)
   type: ss
-  server: 216.105.168.18
+  server: 198.98.53.130
   port: 443
   udp: true
   cipher: chacha20-ietf-poly1305
-  password: hCCWOcIsK5wrFz4OX70rWf
-- name: 🇺🇸 美国-洛杉矶 19 (原生)
+  password: eDfN7SODQceIOmIAbtJJtK
+- name: 🇺🇸 美国-芝加哥 07 (原生)
+  type: vless
+  server: 195.211.98.43
+  port: 443
+  udp: true
+  uuid: 1b4b11d5-4c2d-4533-9a55-636757cdee94
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: safari
+  reality-opts:
+    public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
+    short-id: 9c56fddf237e8eaf
+  network: tcp
+- name: 🇺🇸 美国-Elk Grove Village 08 (原生)
+  type: ss
+  server: 216.128.153.186
+  port: 443
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: gWXhRbGoI53aSRV8fv9alMwr
+- name: 🇺🇸 美国-芝加哥 09 (原生)
+  type: vmess
+  server: 172.67.187.145
+  port: 80
+  udp: true
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: vmess.lbw666.dpdns.org
+    max-early-data: 2048
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国-达拉斯 10 (原生)
+  type: vless
+  server: 3h-unitedstates1.09vpn.com
+  port: 80
+  udp: true
+  uuid: 18cf8db1-9f86-43f7-baa0-382efb7f2dfa
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: 3h-unitedstates1.09vpn.com
+- name: 🇺🇸 美国-达拉斯 11 (原生)
+  type: trojan
+  server: 66.23.203.21
+  port: 59689
+  udp: true
+  password: ae7eb4dwyaz25pxwgq59
+  skip-cert-verify: true
+  network: tcp
+- name: 🇺🇸 美国-贝尔 12 (原生)
+  type: vless
+  server: xray1-direct-mci1-fs-ce.freesocks.work
+  port: 443
+  udp: true
+  uuid: 39277e58-2e69-4a43-bb67-c2afbaa150af
+  flow: xtls-rprx-vision
+  tls: true
+  servername: dl.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 7j3hmlHrEDk3Kjx-dFG3E3jf0c6PZF45trIPFsuKWmI
+    short-id: ''
+  network: tcp
+- name: 🇺🇸 美国-休斯顿 13 (原生)
+  type: vmess
+  server: us5-1.998998.best
+  port: 443
+  udp: true
+  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: server4.9966338.xyz
+  network: ws
+  ws-opts:
+    path: /androirfdsreoightrjh
+    headers:
+      Host: server4.9966338.xyz
+- name: 🇺🇸 美国-北堪萨斯城 14 (原生)
+  type: vless
+  server: 208.84.100.209
+  port: 2112
+  udp: true
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  tls: true
+  servername: play.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: p8pUe3hwND5rhAti-yRQ5qMaIkNdhxOV1K1jpbtJlEQ
+    short-id: 125ba3
+  network: tcp
+- name: 🇺🇸 美国-洛杉矶 15 (原生)
   type: vless
   server: 45.32.69.110
   port: 443
@@ -247,21 +176,24 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇺🇸 美国-洛杉矶 20 (原生)
+- name: 🇺🇸 美国-洛杉矶 16 (原生)
   type: vless
-  server: 172.235.58.21
+  server: 144.202.126.147
   port: 443
   udp: true
-  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
-  flow: xtls-rprx-vision
+  uuid: 45d51389-0c38-4843-8ae8-cffb94e97a72
   tls: true
-  servername: www.amazon.com
+  servername: itunes.apple.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
-    short-id: ''
-  network: tcp
-- name: 🇺🇸 美国-洛杉矶 21 (原生)
+    public-key: jO7THaLxz0Oz3kePAJcuwcKNTlsWoEWGh18zzRmiXgo
+    short-id: 77c4230d
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇺🇸 美国-洛杉矶 17 (原生)
   type: vless
   server: 45.76.172.197
   port: 443
@@ -278,198 +210,21 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇺🇸 美国-Newark 22 (原生)
-  type: ss
-  server: 193.151.163.18
-  port: 19999
-  udp: true
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国-洛杉矶 23 (原生)
+- name: 🇺🇸 美国-洛杉矶 18 (原生)
   type: vless
-  server: 107.150.27.178
-  port: 8443
+  server: 154.40.55.185
+  port: 443
   udp: true
-  uuid: c4ec8b8d-d8b1-49f2-8eb8-5903745f6381
+  uuid: 52919204-4ed9-42c8-97a0-0f01d007f898
   flow: xtls-rprx-vision
   tls: true
-  servername: www.sme.com.au
+  servername: www.oracle.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: _7gRLyI2odDAG_D5YV4fbbOoCEH4BfF5XigHTPHPl3I
-    short-id: c71dd992a5c26702
+    public-key: XY0OTrgnRWxHbqBC8u4qFWvZakjNZY83AAnL_lwHu1M
+    short-id: e726fb
   network: tcp
-- name: 🇺🇸 美国-北堪萨斯城 24 (原生)
-  type: vless
-  server: 208.84.100.209
-  port: 8080
-  udp: true
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇺🇸 美国-斯塔滕岛 25 (原生)
-  type: ss
-  server: 198.98.53.130
-  port: 443
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: eDfN7SODQceIOmIAbtJJtK
-- name: 🇺🇸 美国-洛杉矶 26 (原生)
-  type: vless
-  server: 195.123.240.65
-  port: 443
-  udp: true
-  uuid: ce18d0eb-5c71-41f9-96e5-1632e22456e4
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: random
-  reality-opts:
-    public-key: StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE
-    short-id: 19296c9f1bf9c7b1
-  network: tcp
-- name: 🇺🇸 美国-贝尔 27 (原生)
-  type: vless
-  server: xray1-direct-mci1-fs-ce.freesocks.work
-  port: 443
-  udp: true
-  uuid: 0a6a8462-4fff-43b0-b963-340dab7ed49d
-  flow: xtls-rprx-vision
-  tls: true
-  servername: dl.google.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 7j3hmlHrEDk3Kjx-dFG3E3jf0c6PZF45trIPFsuKWmI
-    short-id: ''
-  network: tcp
-- name: 🇺🇸 美国-圣克拉拉 28 (原生)
-  type: vless
-  server: 23.95.222.127
-  port: 8443
-  udp: true
-  uuid: 352ff568-f971-4613-bf48-92997a5d44ed
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: ribQDOlZ69PzvZ1EDF0EcmMvbq_T5RQrVRBSGUU2riU
-    short-id: 35cd899f8de04801
-  network: tcp
-- name: 🇺🇸 美国-洛杉矶 29 (原生)
-  type: vless
-  server: 216.167.126.97
-  port: 443
-  udp: true
-  uuid: e5c3d067-7a15-4977-90c0-7e0f6e896a09
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: yFvOpugh65xKQNAwKrhitv4d2pflD8QwNFMj-jDOmT8
-    short-id: 0123456789abcdef
-  network: tcp
-- name: 🇺🇸 美国-洛杉矶 30 (原生)
-  type: vless
-  server: 154.12.38.159
-  port: 443
-  udp: true
-  uuid: 12c465bd-11a3-4fd8-8aa9-19b20a883b9e
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: iv4XmZKQUC4KEuMaWZxDmjJOlGEnS3rRw-Nk8h93zUU
-    short-id: f61a3a8f
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🇺🇸 美国-Reston 31 (原生)
-  type: vless
-  server: 15.204.97.219
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  network: tcp
-- name: 🇺🇸 美国-洛杉矶 32 (原生)
-  type: vless
-  server: 154.29.145.196
-  port: 443
-  udp: true
-  uuid: 62fdae06-6692-4b79-8f34-470784e55fd6
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: h6EW_Y5nW9PRypxaOrSOyiHZDR-kuNfdoy24inGOoB0
-    short-id: 33b15a3e
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🇺🇸 美国-洛杉矶 33 (原生)
-  type: vless
-  server: 154.12.38.202
-  port: 443
-  udp: true
-  uuid: 2a9ab69b-26e7-44d0-a325-e5056d849900
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: iJDZHJQcTGl2VIwbsRmlOG9JGbbmxNY5wmv1hc6OwQM
-    short-id: c31176b6
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🇺🇸 美国-休斯顿 34 (原生)
-  type: vmess
-  server: us5-1.998998.best
-  port: 443
-  udp: true
-  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: server4.9966338.xyz
-  network: ws
-  ws-opts:
-    path: /androirfdsreoightrjh
-    headers:
-      Host: server4.9966338.xyz
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国-圣何塞 35 (原生)
-  type: hysteria2
-  server: 155.248.209.237
-  port: 33333
-  udp: true
-  password: bce6c821-200d-421f-bf3d-7159e5246ea0
-  sni: 155.248.209.237
-  skip-cert-verify: true
-- name: 🇺🇸 美国-圣何塞 36 (原生)
-  type: hysteria2
-  server: 163.192.14.135
-  port: 50160
-  udp: true
-  password: 099830134df5ac3a04a4b21d39b8c395
-  sni: css.rbxcdn.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国-凤凰城 37 (原生)
+- name: 🇺🇸 美国-凤凰城 19 (原生)
   type: vmess
   server: 129.146.77.248
   port: 39495
@@ -480,54 +235,106 @@ proxies:
   network: ws
   ws-opts:
     path: /cctv13.m3u8
-    headers:
-      Host: 129.146.77.248
-- name: 🇺🇸 美国-Secaucus 38 (原生)
+- name: 🇺🇸 美国-圣何塞 20 (原生)
+  type: hysteria2
+  server: 155.248.209.237
+  port: 33333
+  udp: true
+  password: bce6c821-200d-421f-bf3d-7159e5246ea0
+  sni: 155.248.209.2
+  skip-cert-verify: true
+- name: 🇺🇸 美国-圣何塞 21 (原生)
+  type: hysteria2
+  server: 163.192.14.135
+  port: 50160
+  udp: true
+  password: 099830134df5ac3a04a4b21d39b8c395
+  sni: vk.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国-圣克拉拉 22 (原生)
   type: vless
-  server: 162.35.8.62
+  server: 47.251.25.74
   port: 443
   udp: true
-  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
-  tls: true
-  servername: 9bc578g.us4.h1clayd.click
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: uUWYLl2Fdhr74k9o5WacesJjvsCwLiOHccgfR23TIk4
-    short-id: 29b29106d4769e3a
-  network: grpc
-  grpc-opts:
-    grpc-service-name: aa7f1b042f73
-- name: 🇺🇸 美国-贝尔 39 (原生)
-  type: vless
-  server: xray2-direct-mci1-fs-ce.freesocks.work
-  port: 443
-  udp: true
-  uuid: 937cd35b-adf9-4205-962a-b856d551258e
+  uuid: 18805ff3-b420-45de-af18-93be14024ae8
   flow: xtls-rprx-vision
   tls: true
-  servername: dl.google.com
+  servername: www.amazon.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: 7j3hmlHrEDk3Kjx-dFG3E3jf0c6PZF45trIPFsuKWmI
+    public-key: H56cOJhw0xw76lDEpt7IuJJmVGemK6_CK34KtHwDMX8
     short-id: ''
   network: tcp
-- name: 🇺🇸 美国-博德曼 40 (原生)
+- name: 🇺🇸 美国-洛杉矶 23 (原生)
+  type: vmess
+  server: 23.254.194.215
+  port: 8080
+  udp: true
+  uuid: 3c75a551-81d6-46d0-876d-79519719bb22
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /3c75a551-81d6-46d0-876d-79519719bb22-vm
+- name: 🇺🇸 美国-洛杉矶 24 (原生)
   type: vless
-  server: tk1.high-speed-test-56424.me
+  server: 195.123.240.65
   port: 443
   udp: true
-  uuid: 37615d66-5467-44a3-bc23-f2c3bef7f761
+  uuid: ce18d0eb-5c71-41f9-96e5-1632e22456e4
   flow: xtls-rprx-vision
   tls: true
-  servername: aws.amazon.com
-  client-fingerprint: random
+  servername: www.cloudflare.com
+  client-fingerprint: ios
   reality-opts:
-    public-key: p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM
-    short-id: 21270a66
+    public-key: StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE
+    short-id: 19296c9f1bf9c7b1
   network: tcp
-- name: 🇺🇸 美国-洛杉矶 41 (原生)
+- name: 🇺🇸 美国-Minkler 25 (原生)
   type: vmess
-  server: www.shopify.com
+  server: 47.88.79.34
+  port: 443
+  udp: true
+  uuid: 9b31490d-190e-4ef1-af0a-7ccab3e7c3b5
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: rib9jxayoqjgn2kw.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: rib9jxayoqjgn2kw.v.3dns.vip
+- name: 🇺🇸 美国-凤凰城 26 (原生)
+  type: vless
+  server: 141.101.122.147
+  port: 443
+  udp: true
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  tls: true
+  servername: a.cwvps.eu.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: a.cwvps.eu.org
+- name: 🇺🇸 美国-休斯顿 27 (原生)
+  type: trojan
+  server: us3-2.998998.best
+  port: 443
+  udp: true
+  password: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  sni: nat3.xxai.dpdns.org
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /anyway
+    headers:
+      Host: nat3.xxai.dpdns.org
+- name: 🇺🇸 美国-洛杉矶 28 (原生)
+  type: vmess
+  server: guanwang.awsno.com
   port: 443
   udp: true
   uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
@@ -540,7 +347,104 @@ proxies:
     path: /hls/cctv5phd.m3u8
     headers:
       Host: guanwang.awsno.com
-- name: 🇺🇸 美国-洛杉矶 42 (原生)
+- name: 🇺🇸 美国-贝尔 29 (原生)
+  type: vless
+  server: xray2-direct-mci1-fs-ce.freesocks.work
+  port: 443
+  udp: true
+  uuid: a2e4b051-3b6d-4d36-a031-ab886833d759
+  flow: xtls-rprx-vision
+  tls: true
+  servername: dl.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 7j3hmlHrEDk3Kjx-dFG3E3jf0c6PZF45trIPFsuKWmI
+    short-id: ''
+  network: tcp
+- name: 🇺🇸 美国-洛杉矶 30 (原生)
+  type: vless
+  server: 172.235.58.21
+  port: 443
+  udp: true
+  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.amazon.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
+    short-id: ''
+  network: tcp
+- name: 🇺🇸 美国-洛杉矶 31 (原生)
+  type: vless
+  server: 172.236.227.60
+  port: 443
+  udp: true
+  uuid: e1ca5089-4e86-4fa9-b5e7-aa94cd91e71d
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: RTuOfZq_rHg1mbEZ_Xh0p9jDaRjIv_CYy5E-oLfUUR4
+    short-id: 59ad82ce
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇺🇸 美国-西雅图 32 (原生)
+  type: hysteria2
+  server: 66.94.121.46
+  port: 443
+  udp: true
+  password: gf1:gfhysteria2024
+  sni: www.broadcom.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国-贝尔 33 (原生)
+  type: vless
+  server: minimize-evenness.cdn-content.com
+  port: 443
+  udp: true
+  uuid: 71ee5343-b431-44be-bed7-22b9b9f7253c
+  tls: true
+  servername: minimize-evenness.cdn-content.com
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: minimize-evenness.cdn-content.com
+- name: 🇺🇸 美国-旧金山 34 (原生)
+  type: vless
+  server: 38.107.236.166
+  port: 8443
+  udp: true
+  uuid: 48572af1-d091-457b-a86e-4a457e99927f
+  tls: true
+  servername: 3h-unitedstates3.09vpn.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: 3h-unitedstates3.09vpn.com
+- name: 🇺🇸 美国-圣克拉拉 35 (原生)
+  type: vless
+  server: 23.95.222.127
+  port: 8443
+  udp: true
+  uuid: 352ff568-f971-4613-bf48-92997a5d44ed
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: ios
+  reality-opts:
+    public-key: ribQDOlZ69PzvZ1EDF0EcmMvbq_T5RQrVRBSGUU2riU
+    short-id: 35cd899f8de04801
+  network: tcp
+- name: 🇺🇸 美国-洛杉矶 36 (原生)
   type: vmess
   server: us16-4.998998.best
   port: 443
@@ -557,53 +461,81 @@ proxies:
       Host: server1.9966338.xyz
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国-凤凰城 43 (原生)
+- name: 🇺🇸 美国-Reston 37 (原生)
   type: vless
-  server: 104.18.81.30
+  server: 15.204.97.219
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: random
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: ''
+  network: tcp
+- name: 🇺🇸 美国-洛杉矶 38 (原生)
+  type: hysteria2
+  server: 192.236.226.182
+  port: 2053
+  udp: true
+  password: 46647da9-d4b4-407f-bea6-ad0b1abc561f
+  sni: 192.236.226.182
+  skip-cert-verify: true
+- name: 🇺🇸 美国-博德曼 39 (原生)
+  type: vless
+  server: 44.248.233.99
   port: 443
   udp: true
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  uuid: 37615d66-5467-44a3-bc23-f2c3bef7f761
+  flow: xtls-rprx-vision
   tls: true
-  servername: a.cwvps.eu.org
+  servername: aws.amazon.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM
+    short-id: 21270a66
+  network: tcp
+- name: 🇺🇸 美国-拉斯维加斯 40 (原生)
+  type: vless
+  server: 88.216.69.253
+  port: 443
+  udp: true
+  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  tls: true
+  servername: server6.9966338.xyz
+  alpn:
+  - http/1.1
   network: ws
   ws-opts:
-    path: /ws
+    path: /fiughoieuhti834t90
     headers:
-      Host: a.cwvps.eu.org
-- name: 🇺🇸 美国-圣何塞 44 (原生)
+      Host: server6.9966338.xyz
+- name: 🇺🇸 美国-圣何塞 41 (原生)
   type: hysteria2
   server: starlink-ft.251313.xyz
   port: 443
   udp: true
-  password: https://xship.top
-  sni: xship.top
+  password: https://xship.2fa.cat
+  sni: www.cloudflare.com
   skip-cert-verify: true
-- name: 🇺🇸 美国-西雅图 45 (原生)
+- name: 🇺🇸 美国-洛杉矶 42 (原生)
   type: vless
-  server: 176.122.158.11
+  server: 66.154.101.36
   port: 443
   udp: true
-  uuid: 154c54e0-028d-4c8a-9512-7ad1588cce2a
-  flow: xtls-rprx-vision
-  packet-encoding: xudp
+  uuid: c166ca49-4af0-416d-8411-2100f7bde9fe
   tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: safari
+  servername: www.tesla.com
+  client-fingerprint: chrome
   reality-opts:
-    public-key: dV6-Xn1FCpiYvbJ1o79HjMr0IJg29xacSQcaD4jeKAM
-    short-id: f8d85e1a92219c3c
+    public-key: t_aj99mkcVXDY_7xI9RhWyEY3khupiGiDsGKEJ7EajM
+    short-id: 5590a9bae52e0586
   network: tcp
-- name: 🇺🇸 美国-西雅图 46 (原生)
-  type: hysteria2
-  server: 66.94.121.46
-  port: 443
-  udp: true
-  password: gf1:gfhysteria2024
-  sni: 66.94.121.46
-  skip-cert-verify: true
-- name: 🇺🇸 美国-St Louis 47 (原生)
+- name: 🇺🇸 美国-St Louis 43 (原生)
   type: vmess
-  server: 172.67.167.78
+  server: 104.21.57.84
   port: 8443
   udp: true
   uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
@@ -616,15 +548,77 @@ proxies:
     path: /lMnsZUN4/
     headers:
       Host: v2ray1.dozapp.xyz
-- name: 🇺🇸 美国-洛杉矶 48 (原生)
+- name: 🇺🇸 美国-西雅图 44 (原生)
   type: vless
-  server: a3.xtssc.top
-  port: 48805
+  server: 176.122.158.11
+  port: 443
   udp: true
-  uuid: 48aa91a2-049c-49ac-902c-285a78dda068
+  uuid: 154c54e0-028d-4c8a-9512-7ad1588cce2a
+  flow: xtls-rprx-vision
   tls: true
-  servername: a3.xtssc.top
+  servername: www.cloudflare.com
+  client-fingerprint: safari
+  reality-opts:
+    public-key: dV6-Xn1FCpiYvbJ1o79HjMr0IJg29xacSQcaD4jeKAM
+    short-id: f8d85e1a92219c3c
+  network: tcp
+- name: 🇺🇸 美国-Secaucus 45 (原生)
+  type: vless
+  server: 162.35.8.62
+  port: 443
+  udp: true
+  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
+  tls: true
+  servername: 9bc578g.us4.h1clayd.click
   client-fingerprint: chrome
+  reality-opts:
+    public-key: uUWYLl2Fdhr74k9o5WacesJjvsCwLiOHccgfR23TIk4
+    short-id: 29b29106d4769e3a
+  network: grpc
+  grpc-opts:
+    grpc-service-name: aa7f1b042f73
+- name: 🇺🇸 美国-洛杉矶 46 (原生)
+  type: vless
+  server: 216.167.126.97
+  port: 443
+  udp: true
+  uuid: e5c3d067-7a15-4977-90c0-7e0f6e896a09
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: yFvOpugh65xKQNAwKrhitv4d2pflD8QwNFMj-jDOmT8
+    short-id: 0123456789abcdef
+  network: tcp
+- name: 🇺🇸 美国-洛杉矶 47 (原生)
+  type: vmess
+  server: node8.liudonghoe.com
+  port: 443
+  udp: true
+  uuid: 47050e4e-965d-41ca-976d-73c1f11e6905
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: node8.liudonghoe.com
+  network: ws
+  ws-opts:
+    path: /hoe8
+    headers:
+      Host: node8.liudonghoe.com
+- name: 🇺🇸 美国-西雅图 48 (原生)
+  type: vless
+  server: 45.144.221.169
+  port: 443
+  udp: true
+  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+  flow: xtls-rprx-vision
+  tls: true
+  servername: arizona.eosapp.net
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU
+    short-id: ''
   network: tcp
 - name: 🇺🇸 美国-Reston 49 (原生)
   type: ss
@@ -635,124 +629,124 @@ proxies:
   password: faBAoD54k87UJG7
 - name: 🇺🇸 美国-洛杉矶 50 (原生)
   type: vless
-  server: 154.40.55.185
-  port: 443
+  server: 154.17.5.16
+  port: 8443
   udp: true
-  uuid: 52919204-4ed9-42c8-97a0-0f01d007f898
+  uuid: 3d116251-c919-4cf7-bc61-3a90d91aa80b
   flow: xtls-rprx-vision
   tls: true
-  servername: www.oracle.com
-  client-fingerprint: firefox
+  servername: updates.cdn-apple.com
+  client-fingerprint: chrome
   reality-opts:
-    public-key: XY0OTrgnRWxHbqBC8u4qFWvZakjNZY83AAnL_lwHu1M
-    short-id: e726fb
+    public-key: ozguNbRK0BghbZv0n6a164gmotQ-EI-VR9iXgGlfuXg
+    short-id: ''
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇺🇸 美国-达拉斯 01 (原生)
-  - 🇺🇸 美国-芝加哥 02 (原生)
-  - 🇺🇸 美国-达拉斯 03 (原生)
-  - 🇺🇸 美国-芝加哥 04 (原生)
+  - 🇺🇸 美国-阿什本 01 (原生)
+  - 🇺🇸 美国-夏洛茨维尔 02 (原生)
+  - 🇺🇸 美国-Newark 03 (原生)
+  - 🇺🇸 美国-Secaucus 04 (原生)
   - 🇺🇸 美国-Secaucus 05 (原生)
-  - 🇺🇸 美国-华盛顿 06 (原生)
-  - 🇺🇸 美国-阿什本 07 (原生)
-  - 🇺🇸 美国-夏洛茨维尔 08 (原生)
-  - 🇺🇸 美国-Secaucus 09 (原生)
-  - 🇺🇸 美国-阿什本 10 (原生)
-  - 🇺🇸 美国-Secaucus 11 (原生)
-  - 🇺🇸 美国-洛杉矶 12 (原生)
-  - 🇺🇸 美国-圣克拉拉 13 (原生)
-  - 🇺🇸 美国-洛杉矶 14 (原生)
+  - 🇺🇸 美国-斯塔滕岛 06 (原生)
+  - 🇺🇸 美国-芝加哥 07 (原生)
+  - 🇺🇸 美国-Elk Grove Village 08 (原生)
+  - 🇺🇸 美国-芝加哥 09 (原生)
+  - 🇺🇸 美国-达拉斯 10 (原生)
+  - 🇺🇸 美国-达拉斯 11 (原生)
+  - 🇺🇸 美国-贝尔 12 (原生)
+  - 🇺🇸 美国-休斯顿 13 (原生)
+  - 🇺🇸 美国-北堪萨斯城 14 (原生)
   - 🇺🇸 美国-洛杉矶 15 (原生)
   - 🇺🇸 美国-洛杉矶 16 (原生)
-  - 🇺🇸 美国-Minkler 17 (原生)
+  - 🇺🇸 美国-洛杉矶 17 (原生)
   - 🇺🇸 美国-洛杉矶 18 (原生)
-  - 🇺🇸 美国-洛杉矶 19 (原生)
-  - 🇺🇸 美国-洛杉矶 20 (原生)
-  - 🇺🇸 美国-洛杉矶 21 (原生)
-  - 🇺🇸 美国-Newark 22 (原生)
+  - 🇺🇸 美国-凤凰城 19 (原生)
+  - 🇺🇸 美国-圣何塞 20 (原生)
+  - 🇺🇸 美国-圣何塞 21 (原生)
+  - 🇺🇸 美国-圣克拉拉 22 (原生)
   - 🇺🇸 美国-洛杉矶 23 (原生)
-  - 🇺🇸 美国-北堪萨斯城 24 (原生)
-  - 🇺🇸 美国-斯塔滕岛 25 (原生)
-  - 🇺🇸 美国-洛杉矶 26 (原生)
-  - 🇺🇸 美国-贝尔 27 (原生)
-  - 🇺🇸 美国-圣克拉拉 28 (原生)
-  - 🇺🇸 美国-洛杉矶 29 (原生)
+  - 🇺🇸 美国-洛杉矶 24 (原生)
+  - 🇺🇸 美国-Minkler 25 (原生)
+  - 🇺🇸 美国-凤凰城 26 (原生)
+  - 🇺🇸 美国-休斯顿 27 (原生)
+  - 🇺🇸 美国-洛杉矶 28 (原生)
+  - 🇺🇸 美国-贝尔 29 (原生)
   - 🇺🇸 美国-洛杉矶 30 (原生)
-  - 🇺🇸 美国-Reston 31 (原生)
-  - 🇺🇸 美国-洛杉矶 32 (原生)
-  - 🇺🇸 美国-洛杉矶 33 (原生)
-  - 🇺🇸 美国-休斯顿 34 (原生)
-  - 🇺🇸 美国-圣何塞 35 (原生)
-  - 🇺🇸 美国-圣何塞 36 (原生)
-  - 🇺🇸 美国-凤凰城 37 (原生)
-  - 🇺🇸 美国-Secaucus 38 (原生)
-  - 🇺🇸 美国-贝尔 39 (原生)
-  - 🇺🇸 美国-博德曼 40 (原生)
-  - 🇺🇸 美国-洛杉矶 41 (原生)
+  - 🇺🇸 美国-洛杉矶 31 (原生)
+  - 🇺🇸 美国-西雅图 32 (原生)
+  - 🇺🇸 美国-贝尔 33 (原生)
+  - 🇺🇸 美国-旧金山 34 (原生)
+  - 🇺🇸 美国-圣克拉拉 35 (原生)
+  - 🇺🇸 美国-洛杉矶 36 (原生)
+  - 🇺🇸 美国-Reston 37 (原生)
+  - 🇺🇸 美国-洛杉矶 38 (原生)
+  - 🇺🇸 美国-博德曼 39 (原生)
+  - 🇺🇸 美国-拉斯维加斯 40 (原生)
+  - 🇺🇸 美国-圣何塞 41 (原生)
   - 🇺🇸 美国-洛杉矶 42 (原生)
-  - 🇺🇸 美国-凤凰城 43 (原生)
-  - 🇺🇸 美国-圣何塞 44 (原生)
-  - 🇺🇸 美国-西雅图 45 (原生)
-  - 🇺🇸 美国-西雅图 46 (原生)
-  - 🇺🇸 美国-St Louis 47 (原生)
-  - 🇺🇸 美国-洛杉矶 48 (原生)
+  - 🇺🇸 美国-St Louis 43 (原生)
+  - 🇺🇸 美国-西雅图 44 (原生)
+  - 🇺🇸 美国-Secaucus 45 (原生)
+  - 🇺🇸 美国-洛杉矶 46 (原生)
+  - 🇺🇸 美国-洛杉矶 47 (原生)
+  - 🇺🇸 美国-西雅图 48 (原生)
   - 🇺🇸 美国-Reston 49 (原生)
   - 🇺🇸 美国-洛杉矶 50 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇺🇸 美国-达拉斯 01 (原生)
-  - 🇺🇸 美国-芝加哥 02 (原生)
-  - 🇺🇸 美国-达拉斯 03 (原生)
-  - 🇺🇸 美国-芝加哥 04 (原生)
+  - 🇺🇸 美国-阿什本 01 (原生)
+  - 🇺🇸 美国-夏洛茨维尔 02 (原生)
+  - 🇺🇸 美国-Newark 03 (原生)
+  - 🇺🇸 美国-Secaucus 04 (原生)
   - 🇺🇸 美国-Secaucus 05 (原生)
-  - 🇺🇸 美国-华盛顿 06 (原生)
-  - 🇺🇸 美国-阿什本 07 (原生)
-  - 🇺🇸 美国-夏洛茨维尔 08 (原生)
-  - 🇺🇸 美国-Secaucus 09 (原生)
-  - 🇺🇸 美国-阿什本 10 (原生)
-  - 🇺🇸 美国-Secaucus 11 (原生)
-  - 🇺🇸 美国-洛杉矶 12 (原生)
-  - 🇺🇸 美国-圣克拉拉 13 (原生)
-  - 🇺🇸 美国-洛杉矶 14 (原生)
+  - 🇺🇸 美国-斯塔滕岛 06 (原生)
+  - 🇺🇸 美国-芝加哥 07 (原生)
+  - 🇺🇸 美国-Elk Grove Village 08 (原生)
+  - 🇺🇸 美国-芝加哥 09 (原生)
+  - 🇺🇸 美国-达拉斯 10 (原生)
+  - 🇺🇸 美国-达拉斯 11 (原生)
+  - 🇺🇸 美国-贝尔 12 (原生)
+  - 🇺🇸 美国-休斯顿 13 (原生)
+  - 🇺🇸 美国-北堪萨斯城 14 (原生)
   - 🇺🇸 美国-洛杉矶 15 (原生)
   - 🇺🇸 美国-洛杉矶 16 (原生)
-  - 🇺🇸 美国-Minkler 17 (原生)
+  - 🇺🇸 美国-洛杉矶 17 (原生)
   - 🇺🇸 美国-洛杉矶 18 (原生)
-  - 🇺🇸 美国-洛杉矶 19 (原生)
-  - 🇺🇸 美国-洛杉矶 20 (原生)
-  - 🇺🇸 美国-洛杉矶 21 (原生)
-  - 🇺🇸 美国-Newark 22 (原生)
+  - 🇺🇸 美国-凤凰城 19 (原生)
+  - 🇺🇸 美国-圣何塞 20 (原生)
+  - 🇺🇸 美国-圣何塞 21 (原生)
+  - 🇺🇸 美国-圣克拉拉 22 (原生)
   - 🇺🇸 美国-洛杉矶 23 (原生)
-  - 🇺🇸 美国-北堪萨斯城 24 (原生)
-  - 🇺🇸 美国-斯塔滕岛 25 (原生)
-  - 🇺🇸 美国-洛杉矶 26 (原生)
-  - 🇺🇸 美国-贝尔 27 (原生)
-  - 🇺🇸 美国-圣克拉拉 28 (原生)
-  - 🇺🇸 美国-洛杉矶 29 (原生)
+  - 🇺🇸 美国-洛杉矶 24 (原生)
+  - 🇺🇸 美国-Minkler 25 (原生)
+  - 🇺🇸 美国-凤凰城 26 (原生)
+  - 🇺🇸 美国-休斯顿 27 (原生)
+  - 🇺🇸 美国-洛杉矶 28 (原生)
+  - 🇺🇸 美国-贝尔 29 (原生)
   - 🇺🇸 美国-洛杉矶 30 (原生)
-  - 🇺🇸 美国-Reston 31 (原生)
-  - 🇺🇸 美国-洛杉矶 32 (原生)
-  - 🇺🇸 美国-洛杉矶 33 (原生)
-  - 🇺🇸 美国-休斯顿 34 (原生)
-  - 🇺🇸 美国-圣何塞 35 (原生)
-  - 🇺🇸 美国-圣何塞 36 (原生)
-  - 🇺🇸 美国-凤凰城 37 (原生)
-  - 🇺🇸 美国-Secaucus 38 (原生)
-  - 🇺🇸 美国-贝尔 39 (原生)
-  - 🇺🇸 美国-博德曼 40 (原生)
-  - 🇺🇸 美国-洛杉矶 41 (原生)
+  - 🇺🇸 美国-洛杉矶 31 (原生)
+  - 🇺🇸 美国-西雅图 32 (原生)
+  - 🇺🇸 美国-贝尔 33 (原生)
+  - 🇺🇸 美国-旧金山 34 (原生)
+  - 🇺🇸 美国-圣克拉拉 35 (原生)
+  - 🇺🇸 美国-洛杉矶 36 (原生)
+  - 🇺🇸 美国-Reston 37 (原生)
+  - 🇺🇸 美国-洛杉矶 38 (原生)
+  - 🇺🇸 美国-博德曼 39 (原生)
+  - 🇺🇸 美国-拉斯维加斯 40 (原生)
+  - 🇺🇸 美国-圣何塞 41 (原生)
   - 🇺🇸 美国-洛杉矶 42 (原生)
-  - 🇺🇸 美国-凤凰城 43 (原生)
-  - 🇺🇸 美国-圣何塞 44 (原生)
-  - 🇺🇸 美国-西雅图 45 (原生)
-  - 🇺🇸 美国-西雅图 46 (原生)
-  - 🇺🇸 美国-St Louis 47 (原生)
-  - 🇺🇸 美国-洛杉矶 48 (原生)
+  - 🇺🇸 美国-St Louis 43 (原生)
+  - 🇺🇸 美国-西雅图 44 (原生)
+  - 🇺🇸 美国-Secaucus 45 (原生)
+  - 🇺🇸 美国-洛杉矶 46 (原生)
+  - 🇺🇸 美国-洛杉矶 47 (原生)
+  - 🇺🇸 美国-西雅图 48 (原生)
   - 🇺🇸 美国-Reston 49 (原生)
   - 🇺🇸 美国-洛杉矶 50 (原生)
   url: https://www.gstatic.com/generate_204

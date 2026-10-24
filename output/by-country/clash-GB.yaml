@@ -4,39 +4,46 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国-阿姆斯特丹 01
-  type: ss
-  server: sql.popmintxo.cc
-  port: 43385
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: AwW1fV6oDDQKh8r2znmptv59tPgt4eHVTgFaTqgKS2jiSdikJ7GyGCBYehDaK38S8yMgHFdbJqcTmRJSfYS5CFw345bNhFZa
-- name: 🇬🇧 英国-Coventry 02
+- name: 🇬🇧 英国-伦敦 01
   type: vless
-  server: 138.124.125.193
-  port: 10444
+  server: 51.89.194.151
+  port: 2053
   udp: true
-  uuid: e57ce64d-5a1a-4a90-96df-9e1bd3ad26e4
-  flow: xtls-rprx-vision
+  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
   tls: true
-  servername: ads.x5.ru
+  servername: www.apple.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
+    short-id: d051f678212f9d54
+  network: tcp
+- name: 🇬🇧 英国-阿姆斯特丹 02
+  type: vless
+  server: sql.popmintxo.cc
+  port: 443
+  udp: true
+  uuid: d806a58b-33aa-42e0-b170-395e49c16b37
+  flow: xtls-rprx-vision
+  packet-encoding: xudp
+  tls: true
+  servername: www.microsoft.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
+    public-key: Y0noOXC8qHmbM0GmDpj-9BBwKSOtHs-uMbNfKU050GQ
+    short-id: b558b9305a0b
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇬🇧 英国-阿姆斯特丹 01
-  - 🇬🇧 英国-Coventry 02
+  - 🇬🇧 英国-伦敦 01
+  - 🇬🇧 英国-阿姆斯特丹 02
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇬🇧 英国-阿姆斯特丹 01
-  - 🇬🇧 英国-Coventry 02
+  - 🇬🇧 英国-伦敦 01
+  - 🇬🇧 英国-阿姆斯特丹 02
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

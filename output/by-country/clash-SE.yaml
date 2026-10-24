@@ -4,25 +4,23 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇨 SC-洛杉矶 01
-  type: trojan
-  server: ui108.pacemakere.com
-  port: 20008
+- name: 🇸🇪 瑞典-斯德哥尔摩 01
+  type: hysteria2
+  server: 50.7.38.243
+  port: 443
   udp: true
-  password: 6ab93ec68bd94b76
-  sni: ui108.pacemakere.com
-  client-fingerprint: android
-  network: tcp
+  password: d4ca9415f0eac7897472e1e5b86d2e96
+  sni: promo.betust.net
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇸🇨 SC-洛杉矶 01
+  - 🇸🇪 瑞典-斯德哥尔摩 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇸🇨 SC-洛杉矶 01
+  - 🇸🇪 瑞典-斯德哥尔摩 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

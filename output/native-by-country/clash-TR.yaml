@@ -18,16 +18,25 @@ proxies:
     public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
     short-id: f46cd3ea3d1eb72d
   network: tcp
+- name: 🇹🇷 土耳其-Fatih 02 (原生)
+  type: ss
+  server: 87.107.169.30
+  port: 905
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: gIQNL_FMokvXxf2ht0Tc4pYwvt-tQ0e9
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇹🇷 土耳其-Yakuplu 01 (原生)
+  - 🇹🇷 土耳其-Fatih 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇹🇷 土耳其-Yakuplu 01 (原生)
+  - 🇹🇷 土耳其-Fatih 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -6,40 +6,21 @@ log-level: info
 proxies:
 - name: 🇮🇪 爱尔兰-都柏林 01
   type: ss
-  server: 20.223.233.241
+  server: 20.123.12.228
   port: 443
   udp: true
   cipher: chacha20-ietf-poly1305
-  password: Ds3hlPero5ov6gae
-- name: 🇮🇪 爱尔兰-伦敦 02
-  type: vless
-  server: 16.60.44.179
-  port: 22224
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  packet-encoding: xudp
-  network: tcp
-- name: 🇮🇪 爱尔兰-伦敦 03
-  type: vless
-  server: 51.24.209.55
-  port: 22224
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  network: tcp
+  password: lmG45rfbkt8DAPfP
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇮🇪 爱尔兰-都柏林 01
-  - 🇮🇪 爱尔兰-伦敦 02
-  - 🇮🇪 爱尔兰-伦敦 03
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇮🇪 爱尔兰-都柏林 01
-  - 🇮🇪 爱尔兰-伦敦 02
-  - 🇮🇪 爱尔兰-伦敦 03
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

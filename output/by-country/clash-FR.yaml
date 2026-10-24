@@ -16,11 +16,34 @@ proxies:
     headers:
       Host: 138.124.70.41
 - name: 🇫🇷 法国-巴黎 02
-  type: vless
-  server: 35.180.222.143
-  port: 22222
+  type: hysteria2
+  server: 13.36.234.11
+  port: 443
   udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-fr-001.fastervpn.world
+  skip-cert-verify: true
+- name: 🇫🇷 法国-巴黎 03
+  type: hysteria2
+  server: 51.44.167.227
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-fr-001.fastervpn.world
+  skip-cert-verify: true
+- name: 🇫🇷 法国-巴黎 04
+  type: vless
+  server: 45.95.98.135
+  port: 443
+  udp: true
+  uuid: 2f5cfa10-43e5-4912-800d-557308a26a29
+  flow: xtls-rprx-vision
+  tls: true
+  servername: 8g6zbdoai3lb.cloudydigital.net
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 8MkHK9vGRtOA97_ag2qUoru4ONKe3W6r7SR1UtIKiWU
+    short-id: c1c6c4326b5b
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
@@ -29,11 +52,15 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇫🇷 法国-巴黎 01
   - 🇫🇷 法国-巴黎 02
+  - 🇫🇷 法国-巴黎 03
+  - 🇫🇷 法国-巴黎 04
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇫🇷 法国-巴黎 01
   - 🇫🇷 法国-巴黎 02
+  - 🇫🇷 法国-巴黎 03
+  - 🇫🇷 法国-巴黎 04
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
