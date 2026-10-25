@@ -4,30 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇯🇵 日本-札幌 01 (原生)
+- name: 🇯🇵 日本-东京 01 (原生)
   type: vless
-  server: 142.91.108.25
-  port: 443
+  server: 142.91.101.39
+  port: 627
   udp: true
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
-  flow: xtls-rprx-vision
+  uuid: 23b385cf-02c3-4df8-8402-11f1916418cd
   tls: true
-  servername: jp3.nztvpn.com
+  servername: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
   client-fingerprint: chrome
-  reality-opts:
-    public-key: 9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM
-    short-id: ea36c03d86f91287
-  network: tcp
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇯🇵 日本-札幌 01 (原生)
+  - 🇯🇵 日本-东京 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇯🇵 日本-札幌 01 (原生)
+  - 🇯🇵 日本-东京 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

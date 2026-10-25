@@ -6,35 +6,35 @@ log-level: info
 proxies:
 - name: 🇳🇱 荷兰-阿姆斯特丹 01
   type: vless
-  server: 86.54.28.75
-  port: 443
+  server: 5.129.234.167
+  port: 12213
   udp: true
-  uuid: 44ae52b9-76fc-444d-8e43-186b4384b80a
+  uuid: 7c464358-6c89-4623-bd20-7c7bcd51bc55
   flow: xtls-rprx-vision
   tls: true
-  servername: www.apple.com
-  client-fingerprint: random
+  servername: music.yandex.ru
+  client-fingerprint: firefox
   reality-opts:
-    public-key: PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU
-    short-id: 1d86d17709852910
+    public-key: kTKM-s7XF0s878Ydmq1KeZFiGT6k1Bw_rLE79s1l1jI
+    short-id: 6a29a03b21
   network: tcp
 - name: 🇳🇱 荷兰-Haarlem 02
   type: vless
-  server: 51.158.206.8
+  server: 51.158.206.26
   port: 23576
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
   tls: true
   servername: fuck.rkn
-  client-fingerprint: chrome
+  client-fingerprint: random
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
+    short-id: ''
   network: tcp
 - name: 🇳🇱 荷兰-Haarlem 03
   type: vless
-  server: 51.158.206.26
+  server: 51.158.206.103
   port: 23576
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
@@ -48,61 +48,32 @@ proxies:
   network: tcp
 - name: 🇳🇱 荷兰-Haarlem 04
   type: vless
-  server: 51.158.206.86
-  port: 23576
+  server: 51.15.16.68
+  port: 2053
   udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
+  uuid: 7d0fd363-16d2-43ce-9d6d-ed2c15d2cb7c
   tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
+  servername: www.apple.com
+  client-fingerprint: random
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
+    public-key: Zotx4F9CI6_q9yeKCKIHDjwzCv_Aq7WSo7N0Zc1A6Sc
+    short-id: 3c99c85cbb6b3b44
   network: tcp
 - name: 🇳🇱 荷兰-Haarlem 05
   type: vless
-  server: 51.158.206.34
+  server: 51.158.206.96
   port: 23576
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
   tls: true
   servername: fuck.rkn
-  client-fingerprint: chrome
+  client-fingerprint: random
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
+    short-id: ''
   network: tcp
-- name: 🇳🇱 荷兰-阿姆斯特丹 06
-  type: vless
-  server: 72.56.88.181
-  port: 443
-  udp: true
-  uuid: 7ce594b9-918b-441d-922c-230341838abd
-  flow: xtls-rprx-vision
-  tls: true
-  servername: nl2.xshoponline.ru
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: EkBRN12aZMx4Q_FCOcxB9KuzMkgLSBswmkDycnaTZWM
-    short-id: 1a917cfae106f7dd
-  network: tcp
-- name: 🇳🇱 荷兰-Haarlem 07
-  type: vless
-  server: 51.158.206.80
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  network: tcp
-- name: 🇳🇱 荷兰-Haarlem 08
+- name: 🇳🇱 荷兰-Haarlem 06
   type: vless
   server: 51.158.206.97
   port: 23576
@@ -116,9 +87,37 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   network: tcp
+- name: 🇳🇱 荷兰-Haarlem 07
+  type: vless
+  server: 51.158.206.12
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 08
+  type: vless
+  server: 51.158.206.80
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
 - name: 🇳🇱 荷兰-Haarlem 09
   type: vless
-  server: 51.158.206.25
+  server: 51.158.206.20
   port: 23576
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
@@ -132,102 +131,56 @@ proxies:
   network: tcp
 - name: 🇳🇱 荷兰-Haarlem 10
   type: vless
-  server: 51.15.16.68
-  port: 2053
-  udp: true
-  uuid: 7d0fd363-16d2-43ce-9d6d-ed2c15d2cb7c
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: Zotx4F9CI6_q9yeKCKIHDjwzCv_Aq7WSo7N0Zc1A6Sc
-    short-id: 3c99c85cbb6b3b44
-  network: tcp
-- name: 🇳🇱 荷兰-Haarlem 11
-  type: vless
-  server: 51.158.206.103
+  server: 51.158.206.19
   port: 23576
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
   tls: true
   servername: fuck.rkn
-  client-fingerprint: random
+  client-fingerprint: chrome
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: ''
+    short-id: '01'
   network: tcp
-- name: 🇳🇱 荷兰-阿姆斯特丹 12
+- name: 🇳🇱 荷兰-Haarlem 11
   type: hysteria2
-  server: 5.129.235.85
-  port: 443
+  server: hysteria.udpgw.com
+  port: 8443
   udp: true
-  password: gf1:gfhysteria2024
-  sni: speedtest.tinkoff.ru
+  password: HowdyHysteria2023w0W
+  sni: sni-here.com
   skip-cert-verify: true
-- name: 🇳🇱 荷兰-阿姆斯特丹 13
+  obfs: salamander
+  obfs-password: HysteriaHowdy
+- name: 🇳🇱 荷兰-Haarlem 12
   type: vless
-  server: 5.129.234.167
-  port: 12213
+  server: 51.158.206.86
+  port: 23576
   udp: true
-  uuid: 7c464358-6c89-4623-bd20-7c7bcd51bc55
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
   tls: true
-  servername: music.yandex.ru
-  client-fingerprint: firefox
+  servername: fuck.rkn
+  client-fingerprint: chrome
   reality-opts:
-    public-key: kTKM-s7XF0s878Ydmq1KeZFiGT6k1Bw_rLE79s1l1jI
-    short-id: 6a29a03b21
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
   network: tcp
-- name: 🇳🇱 荷兰-Haarlem 14
-  type: trojan
-  server: 95.85.32.57
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.pleadcourt.org
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.pleadcourt.org
-- name: 🇳🇱 荷兰-Haarlem 15
-  type: trojan
-  server: 188.226.181.61
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.pleadcourt.org
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.pleadcourt.org
-- name: 🇳🇱 荷兰-Halfweg 16
-  type: ss
-  server: 50.7.41.118
-  port: 17001
-  udp: true
-  cipher: aes-256-gcm
-  password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
-- name: 🇳🇱 荷兰-Eygelshoven 17
+- name: 🇳🇱 荷兰-阿姆斯特丹 13
   type: vless
-  server: 193.111.248.80
-  port: 2053
+  server: 89.110.106.126
+  port: 443
   udp: true
-  uuid: 605dea9b-b485-45c9-af9b-cc2b0195023c
+  uuid: b2d5eabe-b95b-41ac-950c-79e7a5535416
+  flow: xtls-rprx-vision
   tls: true
-  servername: nl3.mycloud1.org
+  servername: onlineschool-1.ru
   client-fingerprint: chrome
   reality-opts:
-    public-key: Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E
-    short-id: afee962d
-  network: grpc
-  grpc-opts:
-    grpc-service-name: api
+    public-key: in7aGYeONw98422LAI5rxeQaMVUxIcevPtiLLbEgtwc
+    short-id: 06cd89d328994d7c
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -238,18 +191,14 @@ proxy-groups:
   - 🇳🇱 荷兰-Haarlem 03
   - 🇳🇱 荷兰-Haarlem 04
   - 🇳🇱 荷兰-Haarlem 05
-  - 🇳🇱 荷兰-阿姆斯特丹 06
+  - 🇳🇱 荷兰-Haarlem 06
   - 🇳🇱 荷兰-Haarlem 07
   - 🇳🇱 荷兰-Haarlem 08
   - 🇳🇱 荷兰-Haarlem 09
   - 🇳🇱 荷兰-Haarlem 10
   - 🇳🇱 荷兰-Haarlem 11
-  - 🇳🇱 荷兰-阿姆斯特丹 12
+  - 🇳🇱 荷兰-Haarlem 12
   - 🇳🇱 荷兰-阿姆斯特丹 13
-  - 🇳🇱 荷兰-Haarlem 14
-  - 🇳🇱 荷兰-Haarlem 15
-  - 🇳🇱 荷兰-Halfweg 16
-  - 🇳🇱 荷兰-Eygelshoven 17
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -258,18 +207,14 @@ proxy-groups:
   - 🇳🇱 荷兰-Haarlem 03
   - 🇳🇱 荷兰-Haarlem 04
   - 🇳🇱 荷兰-Haarlem 05
-  - 🇳🇱 荷兰-阿姆斯特丹 06
+  - 🇳🇱 荷兰-Haarlem 06
   - 🇳🇱 荷兰-Haarlem 07
   - 🇳🇱 荷兰-Haarlem 08
   - 🇳🇱 荷兰-Haarlem 09
   - 🇳🇱 荷兰-Haarlem 10
   - 🇳🇱 荷兰-Haarlem 11
-  - 🇳🇱 荷兰-阿姆斯特丹 12
+  - 🇳🇱 荷兰-Haarlem 12
   - 🇳🇱 荷兰-阿姆斯特丹 13
-  - 🇳🇱 荷兰-Haarlem 14
-  - 🇳🇱 荷兰-Haarlem 15
-  - 🇳🇱 荷兰-Halfweg 16
-  - 🇳🇱 荷兰-Eygelshoven 17
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

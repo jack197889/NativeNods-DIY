@@ -5,14 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 01 (原生)
-  type: trojan
+  type: hysteria2
   server: 43.156.36.253
-  port: 443
+  port: 8443
   udp: true
   password: WvH8ooM9hom4KOOJHFJz1x5umE0aV4R0
-  sni: 43.156.36.253
+  sni: tx-hy2
   skip-cert-verify: true
-  network: tcp
 - name: 🇸🇬 新加坡 02 (原生)
   type: vless
   server: 43.156.89.197
@@ -28,6 +27,20 @@ proxies:
     short-id: 63dac514fdfdd11c
   network: tcp
 - name: 🇸🇬 新加坡 03 (原生)
+  type: vless
+  server: 147.93.173.45
+  port: 10444
+  udp: true
+  uuid: 75c5f51b-d548-4eab-a26e-aa10fc3dbc7b
+  flow: xtls-rprx-vision
+  tls: true
+  servername: video.yandex.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  network: tcp
+- name: 🇸🇬 新加坡 04 (原生)
   type: vmess
   server: wjofhsqteueywxeq.v.3dns.vip
   port: 443
@@ -42,20 +55,6 @@ proxies:
     path: /ws-vmess
     headers:
       Host: wjofhsqteueywxeq.v.3dns.vip
-- name: 🇸🇬 新加坡 04 (原生)
-  type: vless
-  server: support.zoom.us
-  port: 443
-  udp: true
-  uuid: b054e267-e2d8-4ca2-b95e-79ca5cb7cf9a
-  tls: true
-  servername: cloud.ghostdev.lk
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: cloud.ghostdev.lk
 proxy-groups:
 - name: 🚀 节点选择
   type: select

@@ -4,7 +4,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇩🇪 德国-Orem 01
+- name: 🇩🇪 德国-法兰克福 01
   type: vless
   server: 64.188.66.181
   port: 443
@@ -13,18 +13,18 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: ge-s-1.pythonmakemigreat.wiki
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   reality-opts:
     public-key: 5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8
     short-id: 2c9a2790ad5900b2
   network: tcp
 - name: 🇩🇪 德国-法兰克福 02
-  type: ss
-  server: 31.76.11.83
-  port: 15731
+  type: vless
+  server: 31.77.148.89
+  port: 45021
   udp: true
-  cipher: chacha20-ietf-poly1305
-  password: xAYXtB+XMdfWWOlmL8PWcOZEPfKHKVv7NcTY6jpcL/A=
+  uuid: ad263f1c-199e-4aaf-bf22-c3ad0407d377
+  network: tcp
 - name: 🇩🇪 德国-法兰克福 03
   type: vless
   server: 130.17.25.67
@@ -34,34 +34,47 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: github.com
-  client-fingerprint: random
+  client-fingerprint: chrome
   reality-opts:
     public-key: lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q
     short-id: 9e4eced6e98ed4d4
   network: tcp
 - name: 🇩🇪 德国-法兰克福 04
-  type: ss
-  server: 185.226.172.8
-  port: 8008
+  type: trojan
+  server: oge126.pacemakere.com
+  port: 20029
   udp: true
-  cipher: aes-256-gcm
-  password: XKFKl2rULjIp74
+  password: e2c626bcab2143cf
+  sni: oge126.pacemakere.com
+  skip-cert-verify: true
+  network: tcp
+- name: 🇩🇪 德国-法兰克福 05
+  type: vmess
+  server: 31.76.11.83
+  port: 22366
+  udp: true
+  uuid: 632cfa69-ae00-49d1-81e0-554979d1e9fa
+  alterId: 0
+  cipher: auto
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇩🇪 德国-Orem 01
+  - 🇩🇪 德国-法兰克福 01
   - 🇩🇪 德国-法兰克福 02
   - 🇩🇪 德国-法兰克福 03
   - 🇩🇪 德国-法兰克福 04
+  - 🇩🇪 德国-法兰克福 05
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇩🇪 德国-Orem 01
+  - 🇩🇪 德国-法兰克福 01
   - 🇩🇪 德国-法兰克福 02
   - 🇩🇪 德国-法兰克福 03
   - 🇩🇪 德国-法兰克福 04
+  - 🇩🇪 德国-法兰克福 05
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

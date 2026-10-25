@@ -4,30 +4,23 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇩 MD-法兰克福 01
+- name: 🇵🇱 波兰-华沙 01 (原生)
   type: vless
-  server: 5.252.179.15
-  port: 443
+  server: site.teslamotor.site
+  port: 20001
   udp: true
-  uuid: 0ab273e4-cea6-41d0-bbab-41071d2fc455
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.bing.com
-  client-fingerprint: qq
-  reality-opts:
-    public-key: XQB2zIgrhD8AtxgYFM8UiiWYt1sLVBLhMg1M4-sGMAY
-    short-id: 296f27de82dad7ff
+  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇲🇩 MD-法兰克福 01
+  - 🇵🇱 波兰-华沙 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇲🇩 MD-法兰克福 01
+  - 🇵🇱 波兰-华沙 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

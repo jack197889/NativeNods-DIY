@@ -13,23 +13,10 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: www.apple.com
-  client-fingerprint: chrome
+  client-fingerprint: random
   reality-opts:
     public-key: 8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To
     short-id: a3a578ab
-  network: tcp
-- name: 🇮🇱 以色列-法兰克福 02
-  type: vless
-  server: 77.90.61.135
-  port: 443
-  udp: true
-  uuid: 8815925b-c7b8-4f94-9c24-9dc864f63a29
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: XlEzAhUOUC-hZA2Uk2sctG5WR9lPeAUAHGNQVu9oAVg
-    short-id: ce1dc482
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
@@ -37,12 +24,10 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇮🇱 以色列-Secaucus 01
-  - 🇮🇱 以色列-法兰克福 02
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇮🇱 以色列-Secaucus 01
-  - 🇮🇱 以色列-法兰克福 02
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

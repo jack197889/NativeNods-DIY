@@ -4,23 +4,25 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇪 爱尔兰-都柏林 01
-  type: ss
-  server: 20.123.12.228
-  port: 443
+- name: 🇰🇷 韩国-Dong-gu 01 (原生)
+  type: trojan
+  server: tjhg.m2k699.com
+  port: 24999
   udp: true
-  cipher: chacha20-ietf-poly1305
-  password: lmG45rfbkt8DAPfP
+  password: 29086912-33e4-4e06-ba2b-60f1a195864f
+  sni: tjhg.m2k699.com
+  skip-cert-verify: true
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇮🇪 爱尔兰-都柏林 01
+  - 🇰🇷 韩国-Dong-gu 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇮🇪 爱尔兰-都柏林 01
+  - 🇰🇷 韩国-Dong-gu 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

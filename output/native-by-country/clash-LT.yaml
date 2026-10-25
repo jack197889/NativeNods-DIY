@@ -4,30 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇿 捷克-阿姆斯特丹 01
+- name: 🇱🇹 LT-Šiauliai 01 (原生)
   type: vless
-  server: 193.124.17.190
+  server: 45.11.27.130
   port: 443
   udp: true
-  uuid: 6dfc9149-1ff9-41c3-8563-0ef284381731
+  uuid: 8c8a8681-5444-4e18-a427-54f19eea6a77
   flow: xtls-rprx-vision
   tls: true
-  servername: www.tradingview.com
+  servername: litva2.ovhpride.shop
   client-fingerprint: firefox
   reality-opts:
-    public-key: J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk
-    short-id: 1374bddeb25d
+    public-key: mJkx2aIzeXMsdR38oCpeGX4r5Siq4__nb0I4gk1-wVM
+    short-id: ''
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇨🇿 捷克-阿姆斯特丹 01
+  - 🇱🇹 LT-Šiauliai 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇨🇿 捷克-阿姆斯特丹 01
+  - 🇱🇹 LT-Šiauliai 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

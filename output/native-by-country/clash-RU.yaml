@@ -6,10 +6,10 @@ log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯-莫斯科 01 (原生)
   type: vless
-  server: 45.151.71.152
+  server: 45.151.71.167
   port: 443
   udp: true
-  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
+  uuid: 680e92ac-1688-49e0-af96-7327fbc30ce8
   flow: xtls-rprx-vision
   tls: true
   servername: abuse.ozon.ru
@@ -19,13 +19,25 @@ proxies:
     short-id: ''
   network: tcp
 - name: 🇷🇺 俄罗斯-莫斯科 02 (原生)
+  type: vless
+  server: 185.147.27.183
+  port: 8443
+  udp: true
+  uuid: 379998c5-2a71-4202-9c74-522e0c3c5404
+  flow: xtls-rprx-vision
+  tls: true
+  servername: ekb.eg
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  network: tcp
+- name: 🇷🇺 俄罗斯-莫斯科 03 (原生)
   type: hysteria2
   server: 103.88.243.142
   port: 11592
   udp: true
   password: 41edb44c8e
   sni: srv-17e124.21freedom.net
-- name: 🇷🇺 俄罗斯-莫斯科 03 (原生)
+- name: 🇷🇺 俄罗斯-莫斯科 04 (原生)
   type: vless
   server: xsru1.ddnsfree.com
   port: 443
@@ -37,13 +49,25 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc-ru
-- name: 🇷🇺 俄罗斯-莫斯科 04 (原生)
+- name: 🇷🇺 俄罗斯-莫斯科 05 (原生)
   type: ss
   server: 46.17.43.227
   port: 18443
   udp: true
   cipher: aes-256-gcm
   password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
+- name: 🇷🇺 俄罗斯-莫斯科 06 (原生)
+  type: vless
+  server: 185.147.27.164
+  port: 8443
+  udp: true
+  uuid: 3a90bf69-1ffe-4ebb-b9a7-ad9ba8e9f66f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: speedtest.net
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -53,6 +77,8 @@ proxy-groups:
   - 🇷🇺 俄罗斯-莫斯科 02 (原生)
   - 🇷🇺 俄罗斯-莫斯科 03 (原生)
   - 🇷🇺 俄罗斯-莫斯科 04 (原生)
+  - 🇷🇺 俄罗斯-莫斯科 05 (原生)
+  - 🇷🇺 俄罗斯-莫斯科 06 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -60,6 +86,8 @@ proxy-groups:
   - 🇷🇺 俄罗斯-莫斯科 02 (原生)
   - 🇷🇺 俄罗斯-莫斯科 03 (原生)
   - 🇷🇺 俄罗斯-莫斯科 04 (原生)
+  - 🇷🇺 俄罗斯-莫斯科 05 (原生)
+  - 🇷🇺 俄罗斯-莫斯科 06 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
