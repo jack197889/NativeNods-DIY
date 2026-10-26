@@ -4,30 +4,31 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇯🇵 日本-东京 01 (原生)
+- name: 🇺🇦 乌克兰-Kharkiv 01
   type: vless
-  server: 142.91.101.39
-  port: 627
+  server: staging.lastilhame.monster
+  port: 443
   udp: true
-  uuid: 23b385cf-02c3-4df8-8402-11f1916418cd
+  uuid: 2ba7f500-017b-4891-87a0-e4e62a4ad52d
+  flow: xtls-rprx-vision
+  packet-encoding: xudp
   tls: true
-  servername: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+  servername: www.microsoft.com
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+  reality-opts:
+    public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
+    short-id: 9409f73c2fd7
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇯🇵 日本-东京 01 (原生)
+  - 🇺🇦 乌克兰-Kharkiv 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇯🇵 日本-东京 01 (原生)
+  - 🇺🇦 乌克兰-Kharkiv 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -4,26 +4,24 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国-洛杉矶 01 (家宽)
+- name: 🇸🇪 瑞典-斯德哥尔摩 01
   type: hysteria2
-  server: 155.117.19.17
+  server: promo.betust.net
   port: 443
   udp: true
-  password: 5fa748137b6d822308eea4611f474ad5
-  sni: www.bing.com
+  password: d4ca9415f0eac7897472e1e5b86d2e96
+  sni: promo.betust.net
   skip-cert-verify: true
-  obfs: salamander
-  obfs-password: a39ca173b57ac7021b08bf3e3de9f1f6
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇺🇸 美国-洛杉矶 01 (家宽)
+  - 🇸🇪 瑞典-斯德哥尔摩 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇺🇸 美国-洛杉矶 01 (家宽)
+  - 🇸🇪 瑞典-斯德哥尔摩 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

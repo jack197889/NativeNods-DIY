@@ -4,31 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇾 马来西亚-吉隆坡 01 (原生)
+- name: 🇨🇿 捷克-阿姆斯特丹 01
   type: vless
-  server: 111.90.143.184
-  port: 61111
+  server: server.slavkiti.monster
+  port: 443
   udp: true
-  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+  uuid: 4d017db2-7655-4276-9557-e2ec25b04ee7
+  flow: xtls-rprx-vision
   tls: true
-  servername: github.com
+  servername: www.tradingview.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: jT5prLDhvJ86zZVz5pDX907oQbeZ0Hyb_VcDSiJxQQU
-    short-id: 1378f725da558887
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ''
+    public-key: J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk
+    short-id: ee1716767f9b
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇲🇾 马来西亚-吉隆坡 01 (原生)
+  - 🇨🇿 捷克-阿姆斯特丹 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇲🇾 马来西亚-吉隆坡 01 (原生)
+  - 🇨🇿 捷克-阿姆斯特丹 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

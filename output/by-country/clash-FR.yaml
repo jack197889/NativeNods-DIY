@@ -4,7 +4,21 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国-巴黎 01
+- name: 🇫🇷 法国-Erith 01
+  type: vless
+  server: 51.77.108.218
+  port: 8443
+  udp: true
+  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
+  flow: xtls-rprx-vision
+  tls: true
+  servername: ozon.ru
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: ''
+  network: tcp
+- name: 🇫🇷 法国-巴黎 02
   type: vless
   server: 138.124.70.41
   port: 14430
@@ -13,25 +27,17 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-- name: 🇫🇷 法国-巴黎 02
-  type: hysteria2
-  server: 51.44.167.227
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-fr-001.fastervpn.world
-  skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇫🇷 法国-巴黎 01
+  - 🇫🇷 法国-Erith 01
   - 🇫🇷 法国-巴黎 02
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇫🇷 法国-巴黎 01
+  - 🇫🇷 法国-Erith 01
   - 🇫🇷 法国-巴黎 02
   url: https://www.gstatic.com/generate_204
   interval: 300

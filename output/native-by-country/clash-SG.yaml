@@ -5,28 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 01 (原生)
-  type: hysteria2
+  type: trojan
   server: 43.156.36.253
-  port: 8443
+  port: 443
   udp: true
   password: WvH8ooM9hom4KOOJHFJz1x5umE0aV4R0
-  sni: tx-hy2
   skip-cert-verify: true
-- name: 🇸🇬 新加坡 02 (原生)
-  type: vless
-  server: 43.156.89.197
-  port: 61000
-  udp: true
-  uuid: f5b93de5-b756-4f87-bb1c-7e5b622688fa
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amd.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: FivAz9qw86uYacvLo5qIMnw9gQ9uKT9KIdGzhxROTSE
-    short-id: 63dac514fdfdd11c
   network: tcp
-- name: 🇸🇬 新加坡 03 (原生)
+- name: 🇸🇬 新加坡 02 (原生)
   type: vless
   server: 147.93.173.45
   port: 10444
@@ -40,7 +26,7 @@ proxies:
     public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
     short-id: 8debcf36f1cc69ff
   network: tcp
-- name: 🇸🇬 新加坡 04 (原生)
+- name: 🇸🇬 新加坡 03 (原生)
   type: vmess
   server: wjofhsqteueywxeq.v.3dns.vip
   port: 443
@@ -55,6 +41,20 @@ proxies:
     path: /ws-vmess
     headers:
       Host: wjofhsqteueywxeq.v.3dns.vip
+- name: 🇸🇬 新加坡 04 (原生)
+  type: vless
+  server: 43.156.89.197
+  port: 61000
+  udp: true
+  uuid: f5b93de5-b756-4f87-bb1c-7e5b622688fa
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.amd.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: FivAz9qw86uYacvLo5qIMnw9gQ9uKT9KIdGzhxROTSE
+    short-id: 63dac514fdfdd11c
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select

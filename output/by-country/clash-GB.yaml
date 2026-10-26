@@ -1,0 +1,60 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇬🇧 英国-伦敦 01
+  type: vless
+  server: 51.89.194.151
+  port: 2053
+  udp: true
+  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
+    short-id: d051f678212f9d54
+  network: tcp
+- name: 🇬🇧 英国-伦敦 02
+  type: trojan
+  server: ikuk204.zxom.eu.org
+  port: 20022
+  udp: true
+  password: 5e4a2c58499345c3
+  sni: ikuk204.zxom.eu.org
+  skip-cert-verify: true
+  network: tcp
+- name: 🇬🇧 英国-伦敦 03
+  type: vless
+  server: node-uk.connectsuite.org
+  port: 8443
+  udp: true
+  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
+  tls: true
+  servername: node-uk.connectsuite.org
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  network: tcp
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇬🇧 英国-伦敦 01
+  - 🇬🇧 英国-伦敦 02
+  - 🇬🇧 英国-伦敦 03
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇬🇧 英国-伦敦 01
+  - 🇬🇧 英国-伦敦 02
+  - 🇬🇧 英国-伦敦 03
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

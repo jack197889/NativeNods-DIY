@@ -4,23 +4,25 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇽 墨西哥-Querétaro City 01
-  type: ss
-  server: 64.177.90.30
-  port: 8388
+- name: 🇲🇽 墨西哥-墨西哥城 01
+  type: vless
+  server: mx001.zestapp778.com
+  port: 19167
   udp: true
-  cipher: aes-256-gcm
-  password: BWyPPTusFKhGgzKh
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  tls: true
+  servername: mx001.zestapp778.com
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇲🇽 墨西哥-Querétaro City 01
+  - 🇲🇽 墨西哥-墨西哥城 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇲🇽 墨西哥-Querétaro City 01
+  - 🇲🇽 墨西哥-墨西哥城 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

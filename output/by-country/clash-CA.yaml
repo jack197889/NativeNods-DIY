@@ -15,11 +15,13 @@ proxies:
   network: tcp
 - name: 🇨🇦 加拿大-多伦多 02
   type: trojan
-  server: ca.tronsg.com
+  server: 155.138.138.2
   port: 443
   udp: true
   password: Trojan@82164024
   sni: ca.tronsg.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择

@@ -4,30 +4,31 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇱🇹 LT-Šiauliai 01 (原生)
+- name: 🇸🇪 瑞典-斯德哥尔摩 01 (原生)
   type: vless
-  server: 45.11.27.130
+  server: se1-cl3.vless-fiberstasis.top
   port: 443
   udp: true
-  uuid: 8c8a8681-5444-4e18-a427-54f19eea6a77
-  flow: xtls-rprx-vision
+  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
   tls: true
-  servername: litva2.ovhpride.shop
+  servername: se1-cl3.vless-fiberstasis.top
   client-fingerprint: firefox
   reality-opts:
-    public-key: mJkx2aIzeXMsdR38oCpeGX4r5Siq4__nb0I4gk1-wVM
-    short-id: ''
-  network: tcp
+    public-key: qJja_3vaCxm3As6alnqjpIIThwGm4e4m_MOluQBNFgo
+    short-id: 11d37dd92940329e
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-se-3
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇱🇹 LT-Šiauliai 01 (原生)
+  - 🇸🇪 瑞典-斯德哥尔摩 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇱🇹 LT-Šiauliai 01 (原生)
+  - 🇸🇪 瑞典-斯德哥尔摩 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

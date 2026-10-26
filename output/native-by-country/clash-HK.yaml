@@ -6,50 +6,58 @@ log-level: info
 proxies:
 - name: 🇭🇰 香港 01 (原生)
   type: hysteria2
-  server: 202.146.222.29
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2fwangcai2%c3%b0%c2%9f%c2%87%c2%a8%c3%b0%c2%9f%c2%87%c2%b3
-  skip-cert-verify: true
-- name: 🇭🇰 香港 02 (原生)
-  type: hysteria2
-  server: 202.146.222.174
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/oneclickvpnkeys
-  skip-cert-verify: true
-- name: 🇭🇰 香港 03 (原生)
-  type: hysteria2
-  server: 202.146.222.89
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 202.146.222.89
-  skip-cert-verify: true
-- name: 🇭🇰 香港 04 (原生)
-  type: hysteria2
-  server: 152.32.254.68
+  server: nas.aizhzo.com
   port: 5010
   udp: true
   password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ
   sni: nas.aizhzo.com
   obfs: salamander
   obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
-- name: 🇭🇰 香港 05 (原生)
-  type: vless
-  server: 165.154.63.139
+- name: 🇭🇰 香港 02 (原生)
+  type: hysteria2
+  server: 202.146.222.29
   port: 443
   udp: true
-  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
-  flow: xtls-rprx-vision
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https://t.me/wangcai2üá®üá≥
+  skip-cert-verify: true
+- name: 🇭🇰 香港 03 (原生)
+  type: hysteria2
+  server: 202.146.222.174
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https%3a%2f%2ft.me%2foneclickvpnkeys
+  skip-cert-verify: true
+- name: 🇭🇰 香港 04 (原生)
+  type: hysteria2
+  server: 202.146.222.89
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  skip-cert-verify: true
+- name: 🇭🇰 香港 05 (原生)
+  type: vless
+  server: 501.150333.xyz
+  port: 21002
+  udp: true
+  uuid: 972be0be-1831-4b5e-b26b-3b6e139a1cd0
   tls: true
-  servername: www.amazon.com
+  servername: www.cloudflare.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ
-    short-id: ca4aedd4
+    public-key: OCs6EIBsSg-f8MW0RE7QDwjZafk09F1aGl7olF7yAW0
+    short-id: 48b41af29b500164
+  network: tcp
+- name: 🇭🇰 香港 06 (原生)
+  type: vless
+  server: 152.175.8.52
+  port: 59746
+  udp: true
+  uuid: 99fa1d27-b252-4cba-b04d-50c3d0873700
+  tls: true
+  servername: hk013.zestapp778.com
+  client-fingerprint: firefox
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
@@ -61,6 +69,7 @@ proxy-groups:
   - 🇭🇰 香港 03 (原生)
   - 🇭🇰 香港 04 (原生)
   - 🇭🇰 香港 05 (原生)
+  - 🇭🇰 香港 06 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -69,6 +78,7 @@ proxy-groups:
   - 🇭🇰 香港 03 (原生)
   - 🇭🇰 香港 04 (原生)
   - 🇭🇰 香港 05 (原生)
+  - 🇭🇰 香港 06 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

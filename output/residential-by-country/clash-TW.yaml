@@ -5,6 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇼 台湾-台北 01 (家宽)
+  type: trojan
+  server: kw119.zxmm.eu.org
+  port: 20031
+  udp: true
+  password: 00a72bf349e6479b
+  sni: kw119.zxmm.eu.org
+  skip-cert-verify: true
+  network: tcp
+- name: 🇹🇼 台湾-台北 02 (家宽)
   type: vless
   server: hinet1.2yly.com
   port: 24215
@@ -12,7 +21,7 @@ proxies:
   uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
   tls: true
   servername: addons.mozilla.org
-  client-fingerprint: safari
+  client-fingerprint: chrome
   reality-opts:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
     short-id: ''
@@ -23,10 +32,12 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇹🇼 台湾-台北 01 (家宽)
+  - 🇹🇼 台湾-台北 02 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇹🇼 台湾-台北 01 (家宽)
+  - 🇹🇼 台湾-台北 02 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
