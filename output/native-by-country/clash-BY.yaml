@@ -6,34 +6,29 @@ log-level: info
 proxies:
 - name: 🇧🇾 BY-Bol’shoye Stiklevo 01 (原生)
   type: vless
-  server: 178.172.227.124
-  port: 14430
-  udp: true
-  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
-  packet-encoding: xudp
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 178.172.227.124
-- name: 🇧🇾 BY-Bol’shoye Stiklevo 02 (原生)
-  type: vless
   server: 178.172.227.228
   port: 14430
   udp: true
   uuid: b6e5dc56-836f-48c1-9163-b0b0b43b647d
-  packet-encoding: xudp
   network: ws
   ws-opts:
     path: /vless
     headers:
       Host: 178.172.227.228
+- name: 🇧🇾 BY-Bol’shoye Stiklevo 02 (原生)
+  type: vless
+  server: 178.172.227.124
+  port: 10443
+  udp: true
+  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
+  network: tcp
 - name: 🇧🇾 BY-Minsk 03 (原生)
   type: vless
   server: 95.128.71.79
   port: 14430
   udp: true
   uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
+  packet-encoding: xudp
   network: ws
   ws-opts:
     path: /vless

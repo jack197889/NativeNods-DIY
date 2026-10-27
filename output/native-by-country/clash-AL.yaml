@@ -4,23 +4,23 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇷 韩国-Yangcheon-gu 01 (家宽)
-  type: vless
-  server: 112.169.175.199
-  port: 31157
+- name: 🇦🇱 AL-Tirana 01 (原生)
+  type: ss
+  server: dns22.m3hrzd.ir
+  port: 1348
   udp: true
-  uuid: bd2fb303-b4c7-49af-a8e3-5c6f11b005dd
-  network: tcp
+  cipher: chacha20-ietf-poly1305
+  password: LzEeLj2OP0DQmpPDtVTazdGC0cHcT0Kn
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇰🇷 韩国-Yangcheon-gu 01 (家宽)
+  - 🇦🇱 AL-Tirana 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇰🇷 韩国-Yangcheon-gu 01 (家宽)
+  - 🇦🇱 AL-Tirana 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

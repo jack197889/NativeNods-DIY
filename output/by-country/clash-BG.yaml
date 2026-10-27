@@ -4,30 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇷🇺 俄罗斯-莫斯科 01
+- name: 🇧🇬 保加利亚-Teterboro 01
   type: vless
-  server: 193.160.141.50
+  server: us5.pc-peervax.top
   port: 443
   udp: true
-  uuid: 54d1afe5-f5aa-47e6-a02f-6c41a6f886b3
+  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
   flow: xtls-rprx-vision
   tls: true
-  servername: ozon.ru
-  client-fingerprint: ios
+  servername: us5.pc-peervax.top
+  client-fingerprint: qq
   reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: ''
+    public-key: v36yrZJ-5Zikx9eh_SXaoDS2GuobOA4_WLagBVO0vxk
+    short-id: a9c3f7e2
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇷🇺 俄罗斯-莫斯科 01
+  - 🇧🇬 保加利亚-Teterboro 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇷🇺 俄罗斯-莫斯科 01
+  - 🇧🇬 保加利亚-Teterboro 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

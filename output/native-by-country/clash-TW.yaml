@@ -10,34 +10,28 @@ proxies:
   port: 443
   udp: true
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2🇨🇳
+  sni: https%3a
   skip-cert-verify: true
-- name: 🇹🇼 台湾-Longjing 02 (原生)
-  type: vless
-  server: 60.248.219.54
+- name: 🇹🇼 台湾-台北 02 (原生)
+  type: hysteria2
+  server: vpn-tw-002.fastervpn.world
   port: 443
   udp: true
-  uuid: 06e177f7-240d-4687-bd85-235505801a5e
-  tls: true
-  servername: ty986gfazs.cainiaohub.xyz
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: speedtest.tinkoff.ru
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-    headers:
-      Host: ty986gfazs.cainiaohub.xyz
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇹🇼 台湾-台北 01 (原生)
-  - 🇹🇼 台湾-Longjing 02 (原生)
+  - 🇹🇼 台湾-台北 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇹🇼 台湾-台北 01 (原生)
-  - 🇹🇼 台湾-Longjing 02 (原生)
+  - 🇹🇼 台湾-台北 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

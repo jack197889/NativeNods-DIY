@@ -6,20 +6,17 @@ log-level: info
 proxies:
 - name: 🇪🇪 EE-Tallinn 01 (原生)
   type: vless
-  server: ee1.pad-sservice.lat
-  port: 8443
+  server: 79.182.39.232
+  port: 25895
   udp: true
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
   tls: true
-  servername: ee1.pad-sservice.lat
-  alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /EE1W
-    headers:
-      Host: ee1.pad-service.com
+  servername: www.samsung.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
+    short-id: a73f0410d728c823
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select

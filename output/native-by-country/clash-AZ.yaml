@@ -4,31 +4,29 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇦 乌克兰-Kharkiv 01
+- name: 🇦🇿 AZ-Baku 01 (原生)
   type: vless
-  server: staging.lastilhame.monster
+  server: 94.20.141.53
   port: 443
   udp: true
-  uuid: 2ba7f500-017b-4891-87a0-e4e62a4ad52d
-  flow: xtls-rprx-vision
-  packet-encoding: xudp
+  uuid: f439e4fe-139b-4882-ad8b-a16176d09c88
   tls: true
-  servername: www.microsoft.com
+  servername: eu63.cdn77.icu
   client-fingerprint: chrome
   reality-opts:
-    public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
-    short-id: 9409f73c2fd7
+    public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
+    short-id: 1ed136481e0ede74
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇺🇦 乌克兰-Kharkiv 01
+  - 🇦🇿 AZ-Baku 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇺🇦 乌克兰-Kharkiv 01
+  - 🇦🇿 AZ-Baku 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

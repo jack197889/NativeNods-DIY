@@ -18,25 +18,13 @@ proxies:
     short-id: d051f678212f9d54
   network: tcp
 - name: 🇬🇧 英国-伦敦 02
-  type: trojan
-  server: ikuk204.zxom.eu.org
-  port: 20022
-  udp: true
-  password: 5e4a2c58499345c3
-  sni: ikuk204.zxom.eu.org
-  skip-cert-verify: true
-  network: tcp
-- name: 🇬🇧 英国-伦敦 03
   type: vless
-  server: node-uk.connectsuite.org
+  server: 51.38.71.147
   port: 8443
   udp: true
   uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
   tls: true
   servername: node-uk.connectsuite.org
-  alpn:
-  - h2
-  - http/1.1
   client-fingerprint: chrome
   network: tcp
 proxy-groups:
@@ -46,13 +34,11 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇬🇧 英国-伦敦 01
   - 🇬🇧 英国-伦敦 02
-  - 🇬🇧 英国-伦敦 03
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇬🇧 英国-伦敦 01
   - 🇬🇧 英国-伦敦 02
-  - 🇬🇧 英国-伦敦 03
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

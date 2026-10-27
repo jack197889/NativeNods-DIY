@@ -6,93 +6,53 @@ log-level: info
 proxies:
 - name: 🇳🇱 荷兰-阿姆斯特丹 01 (原生)
   type: hysteria2
-  server: 109.235.49.234
-  port: 443
+  server: nl1.obxodvpn.us
+  port: 4443
   udp: true
-  password: 529f1911-04d5-4427-94b9-c851fd459a27
-  sni: tcp-reset-club.net
+  password: 146d567c-6335-4e63-a8aa-7ec068642440
+  sni: nl1.obxodvpn.us
 - name: 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
   type: ss
-  server: 158.173.20.208
-  port: 443
+  server: 82.38.31.191
+  port: 8080
   udp: true
-  cipher: aes-128-gcm
-  password: shadowsocks
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
 - name: 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
-  type: ss
-  server: 82.38.31.170
-  port: 443
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
-  type: ss
-  server: 193.29.139.198
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰-阿姆斯特丹 05 (原生)
-  type: ss
-  server: 82.38.31.181
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
-  type: ss
-  server: 82.38.31.66
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
   type: ss
   server: 193.29.139.235
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰-阿姆斯特丹 08 (原生)
-  type: vless
-  server: 150.251.141.203
-  port: 8443
+- name: 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
+  type: ss
+  server: 193.29.139.147
+  port: 8080
   udp: true
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  tls: true
-  servername: nl7.pad-sservice.lat
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /NL7W
-    headers:
-      Host: nl7.pad-service.com
-- name: 🇳🇱 荷兰-阿姆斯特丹 09 (原生)
-  type: vless
-  server: nl4.1.pad-sservice.lat
-  port: 8443
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰-阿姆斯特丹 05 (原生)
+  type: ss
+  server: 82.38.31.66
+  port: 8080
   udp: true
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  tls: true
-  servername: nl4.1.pad-sservice.lat
-  network: ws
-  ws-opts:
-    path: /NL4W
-    headers:
-      Host: nl4.1.pad-service.com
-- name: 🇳🇱 荷兰-阿姆斯特丹 10 (原生)
-  type: vless
-  server: nl3.1.pad-sservice.lat
-  port: 8443
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
+  type: ss
+  server: 82.38.31.171
+  port: 8080
   udp: true
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  tls: true
-  servername: nl3.1.pad-sservice.lat
-  network: ws
-  ws-opts:
-    path: /NL3W
-    headers:
-      Host: nl3.1.pad-service.com
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
+  type: ss
+  server: 158.173.20.208
+  port: 443
+  udp: true
+  cipher: aes-128-gcm
+  password: shadowsocks
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -105,9 +65,6 @@ proxy-groups:
   - 🇳🇱 荷兰-阿姆斯特丹 05 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
-  - 🇳🇱 荷兰-阿姆斯特丹 08 (原生)
-  - 🇳🇱 荷兰-阿姆斯特丹 09 (原生)
-  - 🇳🇱 荷兰-阿姆斯特丹 10 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -118,9 +75,6 @@ proxy-groups:
   - 🇳🇱 荷兰-阿姆斯特丹 05 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
-  - 🇳🇱 荷兰-阿姆斯特丹 08 (原生)
-  - 🇳🇱 荷兰-阿姆斯特丹 09 (原生)
-  - 🇳🇱 荷兰-阿姆斯特丹 10 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

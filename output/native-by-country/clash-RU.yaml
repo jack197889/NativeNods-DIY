@@ -6,59 +6,6 @@ log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯-莫斯科 01 (原生)
   type: vless
-  server: 147.45.46.157
-  port: 8443
-  udp: true
-  uuid: 75985152-e16e-4a48-87ff-35c2615e0ab5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: ''
-  network: tcp
-- name: 🇷🇺 俄罗斯-St Petersburg 02 (原生)
-  type: vless
-  server: 193.233.230.107
-  port: 443
-  udp: true
-  uuid: 37ca5f34-2531-4fda-a781-20f3845fea88
-  flow: xtls-rprx-vision
-  tls: true
-  servername: mortardapplebirch.kilnworkshop.info
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: hHor6jajmC4pqV1HSOHypVaMiE9xn8qBoE_oSO-c5x0
-    short-id: a0c58a106301b783
-  network: tcp
-- name: 🇷🇺 俄罗斯-St Petersburg 03 (原生)
-  type: vless
-  server: 193.233.221.86
-  port: 443
-  udp: true
-  uuid: 37ca5f34-2531-4fda-a781-20f3845fea88
-  flow: xtls-rprx-vision
-  tls: true
-  servername: capableconjuretarnish.clarionconsult.info
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 2iedjEliJfyf7VYxQjSHRiY0RY9ylwj-GtO4MCfuQhg
-    short-id: a50534e181896415
-  network: tcp
-- name: 🇷🇺 俄罗斯-莫斯科 04 (原生)
-  type: vless
-  server: 185.147.27.183
-  port: 8443
-  udp: true
-  uuid: 379998c5-2a71-4202-9c74-522e0c3c5404
-  flow: xtls-rprx-vision
-  tls: true
-  servername: user-6a917f32.noooo.win
-  client-fingerprint: firefox
-  network: tcp
-- name: 🇷🇺 俄罗斯-莫斯科 05 (原生)
-  type: vless
   server: xsru1.ddnsfree.com
   port: 443
   udp: true
@@ -69,12 +16,13 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc-ru
-- name: 🇷🇺 俄罗斯-St Petersburg 06 (原生)
+- name: 🇷🇺 俄罗斯-St Petersburg 02 (原生)
   type: vless
   server: 45.12.75.242
   port: 26424
   udp: true
   uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
+  packet-encoding: xudp
   tls: true
   servername: ya.ru
   client-fingerprint: chrome
@@ -89,19 +37,11 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇷🇺 俄罗斯-莫斯科 01 (原生)
   - 🇷🇺 俄罗斯-St Petersburg 02 (原生)
-  - 🇷🇺 俄罗斯-St Petersburg 03 (原生)
-  - 🇷🇺 俄罗斯-莫斯科 04 (原生)
-  - 🇷🇺 俄罗斯-莫斯科 05 (原生)
-  - 🇷🇺 俄罗斯-St Petersburg 06 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇷🇺 俄罗斯-莫斯科 01 (原生)
   - 🇷🇺 俄罗斯-St Petersburg 02 (原生)
-  - 🇷🇺 俄罗斯-St Petersburg 03 (原生)
-  - 🇷🇺 俄罗斯-莫斯科 04 (原生)
-  - 🇷🇺 俄罗斯-莫斯科 05 (原生)
-  - 🇷🇺 俄罗斯-St Petersburg 06 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

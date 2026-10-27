@@ -4,59 +4,48 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国-纽约 01
+- name: 🇺🇸 美国-洛杉矶 01
   type: vless
-  server: 167.17.69.171
-  port: 443
+  server: us6.zestapp778.com
+  port: 33069
   udp: true
-  uuid: 00144519-7e0d-476b-8d28-435576af9262
-  flow: xtls-rprx-vision
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
   tls: true
-  servername: www.cloudflare.com
-  alpn:
-  - channel
+  servername: us6.zestapp778.com
   client-fingerprint: chrome
-  reality-opts:
-    public-key: ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk
-    short-id: 0990d22f
   network: tcp
-- name: 🇺🇸 美国-芝加哥 02
+- name: 🇺🇸 美国-洛杉矶 02
+  type: ss
+  server: 103.11.76.248
+  port: 28679
+  udp: true
+  cipher: 2022-blake3-aes-128-gcm
+  password: NzJlOTQ5NWYtM2ZkYi00Cg==
+- name: 🇺🇸 美国-凤凰城 03
   type: hysteria2
-  server: promo3.betust.net
-  port: 443
+  server: 144.24.46.175
+  port: 8443
   udp: true
-  password: 94c2b91777f8de3a5bc12d2a91b732c2
-  sni: promo3.betust.net
+  password: pbgLTkd5276SN1sZ
+  sni: www.bing.com
   skip-cert-verify: true
-- name: 🇺🇸 美国-纽约 03
-  type: vless
-  server: 169.40.42.163
-  port: 443
+- name: 🇺🇸 美国-圣克拉拉 04
+  type: vmess
+  server: 43.130.35.53
+  port: 10087
   udp: true
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
+  uuid: 8e93b009-f1af-448a-b8ef-b110849a35f0
+  alterId: 0
+  cipher: auto
   network: tcp
-- name: 🇺🇸 美国-纽约 04
-  type: vless
-  server: 169.40.42.74
-  port: 443
+- name: 🇺🇸 美国-洛杉矶 05
+  type: ss
+  server: 64.83.20.73
+  port: 8388
   udp: true
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  network: tcp
-- name: 🇺🇸 美国-纽约 05
+  cipher: aes-256-gcm
+  password: BookCloud2026
+- name: 🇺🇸 美国-纽约 06
   type: vless
   server: 169.40.42.168
   port: 443
@@ -65,12 +54,12 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: yahoo.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   reality-opts:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: c39cc7310a
   network: tcp
-- name: 🇺🇸 美国-Secaucus 06
+- name: 🇺🇸 美国-Secaucus 07
   type: vless
   server: 45.138.100.248
   port: 14430
@@ -79,21 +68,23 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-- name: 🇺🇸 美国-纽约 07
+    headers:
+      Host: 45.138.100.248
+- name: 🇺🇸 美国-纽约 08
   type: vless
-  server: 169.40.42.89
+  server: 169.40.42.163
   port: 443
   udp: true
   uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   flow: xtls-rprx-vision
   tls: true
   servername: yahoo.com
-  client-fingerprint: random
+  client-fingerprint: firefox
   reality-opts:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: c39cc7310a
   network: tcp
-- name: 🇺🇸 美国-纽约 08
+- name: 🇺🇸 美国-纽约 09
   type: vless
   server: 169.40.42.90
   port: 443
@@ -107,112 +98,107 @@ proxies:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: c39cc7310a
   network: tcp
-- name: 🇺🇸 美国-纽约 09
-  type: ss
-  server: 37.19.198.244
+- name: 🇺🇸 美国-纽约 10
+  type: vless
+  server: 169.40.42.74
   port: 443
   udp: true
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国-华盛顿 10
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  network: tcp
+- name: 🇺🇸 美国-Edison 11
+  type: vless
+  server: 151.247.22.58
+  port: 443
+  udp: true
+  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
+  flow: xtls-rprx-vision
+  tls: true
+  servername: usa.letsconnectpoint.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: I45spoFEwSCaxR8FIP1HnrFj5KbR3keSAGMMdgt2AHY
+    short-id: b1c5a5e2
+  network: tcp
+- name: 🇺🇸 美国-纽约 12
+  type: vless
+  server: 169.40.42.89
+  port: 443
+  udp: true
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  network: tcp
+- name: 🇺🇸 美国-纽约 13
+  type: vless
+  server: 167.17.69.171
+  port: 443
+  udp: true
+  uuid: 00144519-7e0d-476b-8d28-435576af9262
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  alpn:
+  - channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk
+    short-id: 0990d22f
+  network: tcp
+- name: 🇺🇸 美国-华盛顿 14
   type: ss
   server: 185.230.230.18
   port: 19999
   udp: true
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国-洛杉矶 11
-  type: trojan
-  server: tjmg1.m2k699.com
-  port: 24999
-  udp: true
-  password: 29086912-33e4-4e06-ba2b-60f1a195864f
-  sni: www.itunes.com
-  skip-cert-verify: true
-  network: tcp
-- name: 🇺🇸 美国-凤凰城 12
-  type: hysteria2
-  server: 144.24.46.175
-  port: 8443
-  udp: true
-  password: pbgLTkd5276SN1sZ
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国-圣克拉拉 13
-  type: vmess
-  server: 43.130.35.53
-  port: 10087
-  udp: true
-  uuid: 8e93b009-f1af-448a-b8ef-b110849a35f0
-  alterId: 0
-  cipher: auto
-  network: tcp
-- name: 🇺🇸 美国-Meppel 14
-  type: vless
-  server: 195.123.221.36
-  port: 443
-  udp: true
-  uuid: 9c60369d-e5f9-4cec-9e63-1560e88e119a
-  flow: xtls-rprx-vision
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: random
-  reality-opts:
-    public-key: dIv6pPS-x6IzbiPyHX8nNdRrwI2yZl4y3YCeRWy9UgE
-    short-id: 3e67326f98ddb407
-  network: tcp
-- name: 🇺🇸 美国-洛杉矶 15
-  type: vless
-  server: 156.229.161.107
-  port: 10001
-  udp: true
-  uuid: 9c79aceb-4649-44ea-9698-b5e9ecf6d6da
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.icloud.com
-  client-fingerprint: edge
-  reality-opts:
-    public-key: 4jNz4Bw-FZlaX-WtfAdwK0hegY28W_k8AttGd-7hZn4
-    short-id: ''
-  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇺🇸 美国-纽约 01
-  - 🇺🇸 美国-芝加哥 02
-  - 🇺🇸 美国-纽约 03
-  - 🇺🇸 美国-纽约 04
-  - 🇺🇸 美国-纽约 05
-  - 🇺🇸 美国-Secaucus 06
-  - 🇺🇸 美国-纽约 07
+  - 🇺🇸 美国-洛杉矶 01
+  - 🇺🇸 美国-洛杉矶 02
+  - 🇺🇸 美国-凤凰城 03
+  - 🇺🇸 美国-圣克拉拉 04
+  - 🇺🇸 美国-洛杉矶 05
+  - 🇺🇸 美国-纽约 06
+  - 🇺🇸 美国-Secaucus 07
   - 🇺🇸 美国-纽约 08
   - 🇺🇸 美国-纽约 09
-  - 🇺🇸 美国-华盛顿 10
-  - 🇺🇸 美国-洛杉矶 11
-  - 🇺🇸 美国-凤凰城 12
-  - 🇺🇸 美国-圣克拉拉 13
-  - 🇺🇸 美国-Meppel 14
-  - 🇺🇸 美国-洛杉矶 15
+  - 🇺🇸 美国-纽约 10
+  - 🇺🇸 美国-Edison 11
+  - 🇺🇸 美国-纽约 12
+  - 🇺🇸 美国-纽约 13
+  - 🇺🇸 美国-华盛顿 14
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇺🇸 美国-纽约 01
-  - 🇺🇸 美国-芝加哥 02
-  - 🇺🇸 美国-纽约 03
-  - 🇺🇸 美国-纽约 04
-  - 🇺🇸 美国-纽约 05
-  - 🇺🇸 美国-Secaucus 06
-  - 🇺🇸 美国-纽约 07
+  - 🇺🇸 美国-洛杉矶 01
+  - 🇺🇸 美国-洛杉矶 02
+  - 🇺🇸 美国-凤凰城 03
+  - 🇺🇸 美国-圣克拉拉 04
+  - 🇺🇸 美国-洛杉矶 05
+  - 🇺🇸 美国-纽约 06
+  - 🇺🇸 美国-Secaucus 07
   - 🇺🇸 美国-纽约 08
   - 🇺🇸 美国-纽约 09
-  - 🇺🇸 美国-华盛顿 10
-  - 🇺🇸 美国-洛杉矶 11
-  - 🇺🇸 美国-凤凰城 12
-  - 🇺🇸 美国-圣克拉拉 13
-  - 🇺🇸 美国-Meppel 14
-  - 🇺🇸 美国-洛杉矶 15
+  - 🇺🇸 美国-纽约 10
+  - 🇺🇸 美国-Edison 11
+  - 🇺🇸 美国-纽约 12
+  - 🇺🇸 美国-纽约 13
+  - 🇺🇸 美国-华盛顿 14
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
