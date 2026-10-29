@@ -6,60 +6,25 @@ log-level: info
 proxies:
 - name: 🇭🇰 香港 01
   type: vmess
-  server: 47.243.194.125
-  port: 443
+  server: 206.237.11.17
+  port: 44441
   udp: true
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  uuid: de4e0335-2a3b-4006-d746-c939fa85fdc3
   alterId: 0
   cipher: auto
-  tls: true
-  servername: nycqg19zkwacpm1b.v.3dns.vip
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: nycqg19zkwacpm1b.v.3dns.vip
-- name: 🇭🇰 香港 02
-  type: vmess
-  server: 47.244.120.197
-  port: 36703
-  udp: true
-  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /arki
-- name: 🇭🇰 香港 03
-  type: vmess
-  server: 47.243.65.243
-  port: 443
-  udp: true
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: lcv8v9l7oyamxxfz.v.3dns.vip
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: lcv8v9l7oyamxxfz.v.3dns.vip
+  network: h2
+  h2-opts:
+    path: /
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇭🇰 香港 01
-  - 🇭🇰 香港 02
-  - 🇭🇰 香港 03
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇭🇰 香港 01
-  - 🇭🇰 香港 02
-  - 🇭🇰 香港 03
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

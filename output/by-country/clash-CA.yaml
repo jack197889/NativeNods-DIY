@@ -11,20 +11,7 @@ proxies:
   udp: true
   password: Trojan@82164024
   sni: ca.tronsg.com
-  network: tcp
-- name: 🇨🇦 加拿大-多伦多 02
-  type: vless
-  server: 38.145.220.58
-  port: 2093
-  udp: true
-  uuid: 0b418782-e023-447e-ba99-e66b84ff118d
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: C_GA8wVjeLmyqLK6em5OHn4WPlsbndA-RyvyNU1aGFM
-    short-id: 8a9725533854a7e8
+  skip-cert-verify: true
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
@@ -32,12 +19,10 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇨🇦 加拿大-多伦多 01
-  - 🇨🇦 加拿大-多伦多 02
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇨🇦 加拿大-多伦多 01
-  - 🇨🇦 加拿大-多伦多 02
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

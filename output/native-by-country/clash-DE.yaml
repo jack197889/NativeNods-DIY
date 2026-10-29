@@ -4,14 +4,47 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇩🇪 德国-Bad Soden am Taunus 01 (原生)
+- name: 🇩🇪 德国-柏林 01 (原生)
   type: vless
-  server: 5.175.205.190
-  port: 27774
+  server: 188.114.96.9
+  port: 443
   udp: true
-  uuid: 653137c6-474e-4a3d-9a20-5a5afb3d4a4f
-  network: tcp
-- name: 🇩🇪 德国-法兰克福 02 (原生)
+  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
+  tls: true
+  servername: IdB8ONMVbntuYT5t7t6cEJfw8vLrb.paGEs.DeV
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrj
+    headers:
+      Host: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
+- name: 🇩🇪 德国-纽伦堡 02 (原生)
+  type: vless
+  server: 188.114.98.112
+  port: 80
+  udp: true
+  uuid: 0991a0c4-0ee5-4213-af89-7ad589f853f3
+  network: ws
+  ws-opts:
+    path: ed2560
+    headers:
+      Host: elenaaaaaaaaaa.cloudns.pro.
+- name: 🇩🇪 德国-纽伦堡 03 (原生)
+  type: vless
+  server: sino.bestsellers1.site
+  port: 2083
+  udp: true
+  uuid: 7858128a-6b5e-4f86-9bff-52c1f1e6439d
+  tls: true
+  servername: sino.bestsellers1.site
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sino.bestsellers1.site
+- name: 🇩🇪 德国-法兰克福 04 (原生)
   type: hysteria2
   server: 179.61.138.145
   port: 36264
@@ -21,16 +54,102 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: Telegram@vpnjey
-- name: 🇩🇪 德国-法兰克福 03 (原生)
+- name: 🇩🇪 德国-杜塞尔多夫 05 (原生)
   type: vless
-  server: connect.wecantos.site
-  port: 10000
+  server: 45.129.242.56
+  port: 443
   udp: true
-  uuid: a05ecf37-c661-4247-ab09-4432cf0f3cc1
+  uuid: ebdfaf99-41d8-4e48-8196-d54510ffb556
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: YURKlEQ3rap4KOXXGsVFZyYev2oDU2gCEbNTXPdKWRY
+    short-id: abcdef
   network: tcp
-- name: 🇩🇪 德国-法兰克福 04 (原生)
+- name: 🇩🇪 德国-纽伦堡 06 (原生)
+  type: ss
+  server: gr1s.sublinkplas.ir
+  port: 53731
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: 1Pey1iumq-W30iHVnTEERD2n1RFUS_pS
+- name: 🇩🇪 德国-法兰克福 07 (原生)
   type: vless
-  server: 79.182.39.45
+  server: hw7.divarkhaghazi.com
+  port: 465
+  udp: true
+  uuid: d0d3d49c-56e8-40e1-9e83-793d03f83d93
+  tls: true
+  servername: hw7.divarkhaghazi.com.
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hw7.divarkhaghazi.com.
+- name: 🇩🇪 德国-法尔肯施泰因 08 (原生)
+  type: vless
+  server: p2real1.greewebservices.ir
+  port: 1310
+  udp: true
+  uuid: a7e9fc98-25a2-4801-961c-7a6ed9d69328
+  tls: true
+  servername: play.googleapis.com
+  client-fingerprint: ios
+  reality-opts:
+    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
+    short-id: 9b60d3
+  network: tcp
+- name: 🇩🇪 德国-法兰克福 09 (原生)
+  type: vless
+  server: 193.168.200.67
+  port: 443
+  udp: true
+  uuid: 64c05afc-ce81-4ba0-b697-afa04da1427e
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yunohost.org
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: ba3xYhPfXzT1HOHrbCka-pGaBIJGDouCg1MbdlRzklE
+    short-id: 5a7c3dab8d267f
+  network: tcp
+- name: 🇩🇪 德国-纽伦堡 10 (原生)
+  type: ss
+  server: dns22.m3hrzd.ir
+  port: 8044
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: U5Jk0BhRNKjb5wQBBOXx2wwkWZ_yWU0N
+- name: 🇩🇪 德国-法尔肯施泰因 11 (原生)
+  type: hysteria2
+  server: 88.99.213.222
+  port: 14444
+  udp: true
+  password: mhsl
+  sni: bing.com
+  skip-cert-verify: true
+- name: 🇩🇪 德国-法尔肯施泰因 12 (原生)
+  type: vless
+  server: germany1.xorsand.eu
+  port: 10105
+  udp: true
+  uuid: ad3f4a0a-a89f-498e-9869-a93c8fa185b1
+  flow: xtls-rprx-vision
+  tls: true
+  servername: play.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: PFC3JN1er1JE2vAemwRhNjewz8I4NUWP4XHf2Dza4Es
+    short-id: 12e321badd07906e
+  network: tcp
+- name: 🇩🇪 德国-法兰克福 13 (原生)
+  type: vless
+  server: 79.182.39.235
   port: 25172
   udp: true
   uuid: 5a519754-a673-4462-83f6-5eb25d2af141
@@ -41,71 +160,56 @@ proxies:
     public-key: Xr55Hig_JTeUluiGfSnma6zMHG2Uv5Xu30ZODGF5xGA
     short-id: f09ac427e1abd14b
   network: tcp
-- name: 🇩🇪 德国-法尔肯施泰因 05 (原生)
-  type: hysteria2
-  server: 88.99.213.222
-  port: 14444
-  udp: true
-  password: mhsl
-  sni: bing.com
-  skip-cert-verify: true
-- name: 🇩🇪 德国-纽伦堡 06 (原生)
+- name: 🇩🇪 德国-法兰克福 14 (原生)
   type: vless
-  server: 91.107.247.173
-  port: 2083
+  server: connect.wecantos.site
+  port: 10000
   udp: true
-  uuid: 7858128a-6b5e-4f86-9bff-52c1f1e6439d
-  tls: true
-  servername: sino.bestsellers1.site
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sino.bestsellers1.site
-- name: 🇩🇪 德国-Leopoldshöhe 07 (原生)
+  uuid: a05ecf37-c661-4247-ab09-4432cf0f3cc1
+  network: tcp
+- name: 🇩🇪 德国-纽伦堡 15 (原生)
+  type: ss
+  server: dns9.m3hrzd.ir
+  port: 8044
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: U5Jk0BhRNKjb5wQBBOXx2wwkWZ_yWU0N
+- name: 🇩🇪 德国-纽伦堡 16 (原生)
   type: vless
-  server: 37.114.34.108
+  server: fly.lumexa.ir
   port: 443
   udp: true
-  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
+  uuid: 7a96136a-20ad-4aec-86bd-f6622fbb8ce6
   flow: xtls-rprx-vision
   tls: true
-  servername: fi1-cl3.core-mirvante.top
-  client-fingerprint: firefox
+  servername: dynu.com
+  client-fingerprint: chrome
   reality-opts:
-    public-key: sQ5tfuCzFSQ9RRoong5dDlHRupZRNjqPoNJU9-ytpDk
-    short-id: bb413f2d089a9654
+    public-key: 0E-OTXVHsukKvwgwynrI49nTaT5m6rxdaFPg4D_UszI
+    short-id: 9cc0
   network: tcp
-- name: 🇩🇪 德国-法尔肯施泰因 08 (原生)
-  type: vmess
-  server: 91.107.128.44
-  port: 36812
+- name: 🇩🇪 德国-纽伦堡 17 (原生)
+  type: vless
+  server: mci1.amir12.ir
+  port: 1222
   udp: true
-  uuid: 6cdfc27b-a0cc-4ea1-802a-e98552be430d
-  alterId: 0
-  cipher: auto
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  tls: true
+  servername: play.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
+    short-id: a25d0f
   network: tcp
-- name: 🇩🇪 德国-纽伦堡 09 (原生)
+- name: 🇩🇪 德国-纽伦堡 18 (原生)
   type: hysteria2
   server: 5.45.100.100
   port: 51511
   udp: true
   password: miaoge110
+  sni: 5.45.100.100
   skip-cert-verify: true
-- name: 🇩🇪 德国-纽伦堡 10 (原生)
-  type: vless
-  server: 167.233.180.114
-  port: 443
-  udp: true
-  uuid: 6c688f63-fad4-45d8-a6a1-1e978ed26b8b
-  flow: xtls-rprx-vision
-  tls: true
-  servername: static.196.249.107.91.clients.your-server.de
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  network: tcp
-- name: 🇩🇪 德国-法尔肯施泰因 11 (原生)
+- name: 🇩🇪 德国-法尔肯施泰因 19 (原生)
   type: vless
   server: 91.107.188.129
   port: 2083
@@ -118,75 +222,76 @@ proxies:
     path: /
     headers:
       Host: site.check-looks.space
-- name: 🇩🇪 德国-纽伦堡 12 (原生)
+- name: 🇩🇪 德国-法兰克福 20 (原生)
   type: vless
-  server: mci.amir12.ir
-  port: 2112
+  server: 193.148.253.194
+  port: 25362
   udp: true
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  uuid: 36fb6650-8a50-42b5-9f66-06538806f32c
   tls: true
-  servername: play.google.com
+  servername: www.chip.de
   client-fingerprint: chrome
   reality-opts:
-    public-key: p8pUe3hwND5rhAti-yRQ5qMaIkNdhxOV1K1jpbtJlEQ
-    short-id: 125ba3
+    public-key: hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA
+    short-id: 23732d14a527990d
   network: tcp
-- name: 🇩🇪 德国-法兰克福 13 (原生)
-  type: trojan
-  server: uwu.blueknightnet.qzz.io
-  port: 2087
-  udp: true
-  password: 0y7hid61k3k2vuy1
-  sni: uwu.dianaw.cc.cd
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@BlueKnight_net--@BlueKnight_net--@BlueKnight_net
-    headers:
-      Host: uwu.dianaw.cc.cd
-- name: 🇩🇪 德国-杜塞尔多夫 14 (原生)
+- name: 🇩🇪 德国-杜塞尔多夫 21 (原生)
   type: ss
   server: 213.202.208.199
-  port: 5000
+  port: 7001
   udp: true
   cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
+  password: RexnBgU7EV5ADxG
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇩🇪 德国-Bad Soden am Taunus 01 (原生)
-  - 🇩🇪 德国-法兰克福 02 (原生)
-  - 🇩🇪 德国-法兰克福 03 (原生)
+  - 🇩🇪 德国-柏林 01 (原生)
+  - 🇩🇪 德国-纽伦堡 02 (原生)
+  - 🇩🇪 德国-纽伦堡 03 (原生)
   - 🇩🇪 德国-法兰克福 04 (原生)
-  - 🇩🇪 德国-法尔肯施泰因 05 (原生)
+  - 🇩🇪 德国-杜塞尔多夫 05 (原生)
   - 🇩🇪 德国-纽伦堡 06 (原生)
-  - 🇩🇪 德国-Leopoldshöhe 07 (原生)
+  - 🇩🇪 德国-法兰克福 07 (原生)
   - 🇩🇪 德国-法尔肯施泰因 08 (原生)
-  - 🇩🇪 德国-纽伦堡 09 (原生)
+  - 🇩🇪 德国-法兰克福 09 (原生)
   - 🇩🇪 德国-纽伦堡 10 (原生)
   - 🇩🇪 德国-法尔肯施泰因 11 (原生)
-  - 🇩🇪 德国-纽伦堡 12 (原生)
+  - 🇩🇪 德国-法尔肯施泰因 12 (原生)
   - 🇩🇪 德国-法兰克福 13 (原生)
-  - 🇩🇪 德国-杜塞尔多夫 14 (原生)
+  - 🇩🇪 德国-法兰克福 14 (原生)
+  - 🇩🇪 德国-纽伦堡 15 (原生)
+  - 🇩🇪 德国-纽伦堡 16 (原生)
+  - 🇩🇪 德国-纽伦堡 17 (原生)
+  - 🇩🇪 德国-纽伦堡 18 (原生)
+  - 🇩🇪 德国-法尔肯施泰因 19 (原生)
+  - 🇩🇪 德国-法兰克福 20 (原生)
+  - 🇩🇪 德国-杜塞尔多夫 21 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇩🇪 德国-Bad Soden am Taunus 01 (原生)
-  - 🇩🇪 德国-法兰克福 02 (原生)
-  - 🇩🇪 德国-法兰克福 03 (原生)
+  - 🇩🇪 德国-柏林 01 (原生)
+  - 🇩🇪 德国-纽伦堡 02 (原生)
+  - 🇩🇪 德国-纽伦堡 03 (原生)
   - 🇩🇪 德国-法兰克福 04 (原生)
-  - 🇩🇪 德国-法尔肯施泰因 05 (原生)
+  - 🇩🇪 德国-杜塞尔多夫 05 (原生)
   - 🇩🇪 德国-纽伦堡 06 (原生)
-  - 🇩🇪 德国-Leopoldshöhe 07 (原生)
+  - 🇩🇪 德国-法兰克福 07 (原生)
   - 🇩🇪 德国-法尔肯施泰因 08 (原生)
-  - 🇩🇪 德国-纽伦堡 09 (原生)
+  - 🇩🇪 德国-法兰克福 09 (原生)
   - 🇩🇪 德国-纽伦堡 10 (原生)
   - 🇩🇪 德国-法尔肯施泰因 11 (原生)
-  - 🇩🇪 德国-纽伦堡 12 (原生)
+  - 🇩🇪 德国-法尔肯施泰因 12 (原生)
   - 🇩🇪 德国-法兰克福 13 (原生)
-  - 🇩🇪 德国-杜塞尔多夫 14 (原生)
+  - 🇩🇪 德国-法兰克福 14 (原生)
+  - 🇩🇪 德国-纽伦堡 15 (原生)
+  - 🇩🇪 德国-纽伦堡 16 (原生)
+  - 🇩🇪 德国-纽伦堡 17 (原生)
+  - 🇩🇪 德国-纽伦堡 18 (原生)
+  - 🇩🇪 德国-法尔肯施泰因 19 (原生)
+  - 🇩🇪 德国-法兰克福 20 (原生)
+  - 🇩🇪 德国-杜塞尔多夫 21 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

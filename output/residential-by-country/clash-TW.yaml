@@ -4,23 +4,29 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇱 AL-Tirana 01 (原生)
-  type: ss
-  server: dns22.m3hrzd.ir
-  port: 1348
+- name: 🇹🇼 台湾-New Taipei City 01 (家宽)
+  type: trojan
+  server: 125.227.86.45
+  port: 443
   udp: true
-  cipher: chacha20-ietf-poly1305
-  password: LzEeLj2OP0DQmpPDtVTazdGC0cHcT0Kn
+  password: 0a9f1f5a397bd427
+  sni: TG.freecodes
+  alpn:
+  - h2
+  skip-cert-verify: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: db
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇦🇱 AL-Tirana 01 (原生)
+  - 🇹🇼 台湾-New Taipei City 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇦🇱 AL-Tirana 01 (原生)
+  - 🇹🇼 台湾-New Taipei City 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

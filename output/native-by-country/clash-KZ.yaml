@@ -4,30 +4,29 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 台湾-台北 01
+- name: 🇰🇿 KZ-Aktau 01 (原生)
   type: vless
-  server: 83.147.14.168
-  port: 9443
+  server: 45.136.59.28
+  port: 43000
   udp: true
-  uuid: 4a270d3e-27b4-497d-8c8c-28f1f54958d9
+  uuid: a8b8b21e-1f31-4e4d-a639-efb2de0d577e
   flow: xtls-rprx-vision
   tls: true
-  servername: www.amazon.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
-    short-id: b390142456517acc
+    public-key: osqok9aA_NR7WyAxZptD36-_U8BF_9gL8AH84MMzbFs
+    short-id: ced96d59
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇹🇼 台湾-台北 01
+  - 🇰🇿 KZ-Aktau 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇹🇼 台湾-台北 01
+  - 🇰🇿 KZ-Aktau 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

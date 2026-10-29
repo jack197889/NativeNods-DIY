@@ -6,23 +6,51 @@ log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯-莫斯科 01 (原生)
   type: vless
-  server: xsru1.ddnsfree.com
+  server: 147.45.46.157
+  port: 8443
+  udp: true
+  uuid: 75985152-e16e-4a48-87ff-35c2615e0ab5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: ''
+  network: tcp
+- name: 🇷🇺 俄罗斯-莫斯科 02 (原生)
+  type: vless
+  server: 83.166.251.25
+  port: 43000
+  udp: true
+  uuid: a2200b5e-bed4-4d5f-8b05-1daf12f4322d
+  flow: xtls-rprx-vision
+  tls: true
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ux8nnKsidZNSIvm54EQf2RdXVawMCwto2DZiUNU1UQg
+    short-id: 2ab73e0b
+  network: tcp
+- name: 🇷🇺 俄罗斯-莫斯科 03 (原生)
+  type: vless
+  server: xsru2.freeddns.org
   port: 443
   udp: true
   uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
   tls: true
-  servername: xsru1.ddnsfree.com
-  client-fingerprint: random
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-ru
-- name: 🇷🇺 俄罗斯-St Petersburg 02 (原生)
+  servername: xsru2.freeddns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /wsru
+    headers:
+      Host: xsru2.freeddns.org
+- name: 🇷🇺 俄罗斯-St Petersburg 04 (原生)
   type: vless
   server: 45.12.75.242
   port: 26424
   udp: true
   uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
-  packet-encoding: xudp
   tls: true
   servername: ya.ru
   client-fingerprint: chrome
@@ -36,12 +64,16 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇷🇺 俄罗斯-莫斯科 01 (原生)
-  - 🇷🇺 俄罗斯-St Petersburg 02 (原生)
+  - 🇷🇺 俄罗斯-莫斯科 02 (原生)
+  - 🇷🇺 俄罗斯-莫斯科 03 (原生)
+  - 🇷🇺 俄罗斯-St Petersburg 04 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇷🇺 俄罗斯-莫斯科 01 (原生)
-  - 🇷🇺 俄罗斯-St Petersburg 02 (原生)
+  - 🇷🇺 俄罗斯-莫斯科 02 (原生)
+  - 🇷🇺 俄罗斯-莫斯科 03 (原生)
+  - 🇷🇺 俄罗斯-St Petersburg 04 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

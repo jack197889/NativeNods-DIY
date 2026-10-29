@@ -4,6 +4,19 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
+- name: 🇹🇼 台湾-New Taipei City 01 (家宽)
+  type: trojan
+  server: 125.227.86.45
+  port: 443
+  udp: true
+  password: 0a9f1f5a397bd427
+  sni: TG.freecodes
+  alpn:
+  - h2
+  skip-cert-verify: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: db
 - name: 🇺🇸 美国-洛杉矶 01 (家宽)
   type: hysteria2
   server: 155.117.19.17
@@ -14,16 +27,50 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: a39ca173b57ac7021b08bf3e3de9f1f6
+- name: 🇮🇳 印度-Dhār 01 (家宽)
+  type: vless
+  server: 122.176.216.52
+  port: 443
+  udp: true
+  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+  tls: true
+  servername: app-6ada5023.deploy.meerasolution.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+    headers:
+      Host: app-6ada5023.deploy.meerasolution.com
+- name: 🇰🇷 韩国-Yongin-si 01 (家宽)
+  type: vless
+  server: saas.sin.fan
+  port: 443
+  udp: true
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  tls: true
+  servername: vp18.1145678.xyz
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /img/video/TkZDG0RVE1kPREsSEQ8YEEBHSEpZUwhIFF4WRBIIFUkVRQQQRhNYEFASC0FbR1ZETQ9cXUZAQ1laV0cXFBJEXFBRBl0PDF1XAUpYElFeVhQDWV0SQwEWQlpGWRoNC1wYSw==
+    headers:
+      Host: vp18.1145678.xyz
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
+  - 🇹🇼 台湾-New Taipei City 01 (家宽)
   - 🇺🇸 美国-洛杉矶 01 (家宽)
+  - 🇮🇳 印度-Dhār 01 (家宽)
+  - 🇰🇷 韩国-Yongin-si 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
+  - 🇹🇼 台湾-New Taipei City 01 (家宽)
   - 🇺🇸 美国-洛杉矶 01 (家宽)
+  - 🇮🇳 印度-Dhār 01 (家宽)
+  - 🇰🇷 韩国-Yongin-si 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

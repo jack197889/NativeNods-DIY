@@ -4,20 +4,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国-City of London 01 (原生)
-  type: vless
-  server: 23.81.36.148
-  port: 1222
-  udp: true
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
-  tls: true
-  servername: play.google.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
-    short-id: a25d0f
-  network: tcp
-- name: 🇬🇧 英国-伦敦 02 (原生)
+- name: 🇬🇧 英国-伦敦 01 (原生)
   type: vless
   server: 195.72.166.251
   port: 443
@@ -27,40 +14,21 @@ proxies:
   packet-encoding: xudp
   tls: true
   servername: www.lloydsbankinggroup.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   reality-opts:
     public-key: RKDT6fVgcZS8Qfzhv5rbeHRIflA3UTKD_HNLJyOoUwk
     short-id: 25349b36802f
-  network: tcp
-- name: 🇬🇧 英国-伦敦 03 (原生)
-  type: vless
-  server: 144.48.11.97
-  port: 43000
-  udp: true
-  uuid: 4799abf0-d0d9-4a46-9c31-b1f76ae00e1e
-  flow: xtls-rprx-vision
-  packet-encoding: xudp
-  tls: true
-  servername: 144.48.11.97
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: lmT0SFJL1A8_ariRWL65dhShaqFbpitjGanv7EFnoR0
-    short-id: 725e6ea0
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇬🇧 英国-City of London 01 (原生)
-  - 🇬🇧 英国-伦敦 02 (原生)
-  - 🇬🇧 英国-伦敦 03 (原生)
+  - 🇬🇧 英国-伦敦 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇬🇧 英国-City of London 01 (原生)
-  - 🇬🇧 英国-伦敦 02 (原生)
-  - 🇬🇧 英国-伦敦 03 (原生)
+  - 🇬🇧 英国-伦敦 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

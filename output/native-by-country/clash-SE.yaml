@@ -6,19 +6,17 @@ log-level: info
 proxies:
 - name: 🇸🇪 瑞典-斯德哥尔摩 01 (原生)
   type: vless
-  server: se1-cl3.vless-fiberstasis.top
-  port: 443
+  server: se3.h1cloud.net
+  port: 25387
   udp: true
-  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
+  uuid: 5a519754-a673-4462-83f6-5eb25d2af141
   tls: true
-  servername: se1-cl3.vless-fiberstasis.top
-  client-fingerprint: firefox
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
   reality-opts:
-    public-key: qJja_3vaCxm3As6alnqjpIIThwGm4e4m_MOluQBNFgo
-    short-id: 11d37dd92940329e
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-se-3
+    public-key: _nrnGiJUdyeLv2afSwe6P4j02AMayY34WFMjUJp5Kwc
+    short-id: 9608a9c65d315d52
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select

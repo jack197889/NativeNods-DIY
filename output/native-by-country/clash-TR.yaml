@@ -6,20 +6,6 @@ log-level: info
 proxies:
 - name: 🇹🇷 土耳其-Yakuplu 01 (原生)
   type: vless
-  server: tr2.tv-quoralyx.top
-  port: 443
-  udp: true
-  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
-  flow: xtls-rprx-vision
-  tls: true
-  servername: tr2.tv-quoralyx.top
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: w0yEuw7sPMCEwk9_vDVoqjBhJsGoPvR7TsxIZVJy3iw
-    short-id: f4b2a12c
-  network: tcp
-- name: 🇹🇷 土耳其-Yakuplu 02 (原生)
-  type: vless
   server: 78.135.73.47
   port: 443
   udp: true
@@ -27,32 +13,39 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: www.datadoghq.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   reality-opts:
     public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
     short-id: f46cd3ea3d1eb72d
   network: tcp
-- name: 🇹🇷 土耳其-Ümraniye 03 (原生)
-  type: ss
-  server: vip.brelux.ir
-  port: 1080
+- name: 🇹🇷 土耳其-Fatih 02 (原生)
+  type: vless
+  server: 206.1.101.85
+  port: 42654
   udp: true
-  cipher: chacha20-ietf-poly1305
-  password: gCs4favaVa7ErDOoQ2AMpc-QVxA4Q4Jy
+  uuid: 16e9ae65-c42d-49b9-9e86-524956e4ef19
+  tls: true
+  servername: 206.1.101.85
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 206.1.101.85
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇹🇷 土耳其-Yakuplu 01 (原生)
-  - 🇹🇷 土耳其-Yakuplu 02 (原生)
-  - 🇹🇷 土耳其-Ümraniye 03 (原生)
+  - 🇹🇷 土耳其-Fatih 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇹🇷 土耳其-Yakuplu 01 (原生)
-  - 🇹🇷 土耳其-Yakuplu 02 (原生)
-  - 🇹🇷 土耳其-Ümraniye 03 (原生)
+  - 🇹🇷 土耳其-Fatih 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

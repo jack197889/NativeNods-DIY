@@ -1,0 +1,35 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇱🇻 LV-Riga 01 (原生)
+  type: vless
+  server: 45.43.79.92
+  port: 443
+  udp: true
+  uuid: 042b12d8-bac4-4b3a-b661-79e333f08e4e
+  flow: xtls-rprx-vision
+  tls: true
+  servername: vikt659.isgood.host
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: M4Y9h339sntl5wEpiCa7f4IKhJ_8JLzPnAz2IzKlngM
+    short-id: af4ca5d16438c938
+  network: tcp
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇱🇻 LV-Riga 01 (原生)
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇱🇻 LV-Riga 01 (原生)
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

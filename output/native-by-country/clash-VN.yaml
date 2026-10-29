@@ -4,19 +4,12 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇻🇳 越南-河内 01 (原生)
+- name: 🇻🇳 越南-Trung Phụng 01 (原生)
   type: vless
-  server: 154.21.203.106
-  port: 51279
+  server: 150.95.109.109
+  port: 2086
   udp: true
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.tesla.com
-  client-fingerprint: safari
-  reality-opts:
-    public-key: f6Tj8-uvWsLv3V-lGLuPciArp5oKqUImBg-U7-WJ-0A
-    short-id: bb82c8
+  uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
   network: tcp
 - name: 🇻🇳 越南-河内 02 (原生)
   type: vless
@@ -24,18 +17,19 @@ proxies:
   port: 2086
   udp: true
   uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
+  packet-encoding: xudp
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇻🇳 越南-河内 01 (原生)
+  - 🇻🇳 越南-Trung Phụng 01 (原生)
   - 🇻🇳 越南-河内 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇻🇳 越南-河内 01 (原生)
+  - 🇻🇳 越南-Trung Phụng 01 (原生)
   - 🇻🇳 越南-河内 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300

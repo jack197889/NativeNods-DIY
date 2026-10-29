@@ -5,12 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰-阿姆斯特丹 01 (原生)
-  type: hysteria2
-  server: nl1.obxodvpn.us
-  port: 4443
+  type: ss
+  server: 82.38.31.171
+  port: 8080
   udp: true
-  password: 146d567c-6335-4e63-a8aa-7ec068642440
-  sni: nl1.obxodvpn.us
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
 - name: 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
   type: ss
   server: 82.38.31.191
@@ -21,13 +21,13 @@ proxies:
 - name: 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
   type: ss
   server: 193.29.139.235
-  port: 8080
+  port: 443
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
 - name: 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
   type: ss
-  server: 193.29.139.147
+  server: 82.38.31.181
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
@@ -41,18 +41,41 @@ proxies:
   password: oZIoA69Q8yhcQV8ka3Pa3A
 - name: 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
   type: ss
-  server: 82.38.31.171
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
-  type: ss
   server: 158.173.20.208
   port: 443
   udp: true
   cipher: aes-128-gcm
   password: shadowsocks
+- name: 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
+  type: vless
+  server: ahbpanel-4134.shiprr.dev
+  port: 443
+  udp: true
+  uuid: 930d11dc-0c6f-9e1a-4d57-b8473c715465
+  tls: true
+  servername: ahbpanel-4134.shiprr.dev
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws/930d11dc-0c6f-9e1a-4d57-b8473c715465
+    headers:
+      Host: ahbpanel-4134.shiprr.dev
+- name: 🇳🇱 荷兰-Enschede 08 (原生)
+  type: vless
+  server: 72.56.38.83
+  port: 443
+  udp: true
+  uuid: 1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200
+  flow: xtls-rprx-vision
+  tls: true
+  servername: absolute-disaster.org
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ZzIetLcQtENjIXQ9XZqFo8p3J81p8Emj0wi51Uy07n8
+    short-id: ''
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -65,6 +88,7 @@ proxy-groups:
   - 🇳🇱 荷兰-阿姆斯特丹 05 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
+  - 🇳🇱 荷兰-Enschede 08 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -75,6 +99,7 @@ proxy-groups:
   - 🇳🇱 荷兰-阿姆斯特丹 05 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
+  - 🇳🇱 荷兰-Enschede 08 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

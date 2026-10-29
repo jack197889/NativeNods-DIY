@@ -6,6 +6,43 @@ log-level: info
 proxies:
 - name: 🇭🇰 香港 01 (原生)
   type: vless
+  server: 156.224.79.61
+  port: 9443
+  udp: true
+  uuid: 4a270d3e-27b4-497d-8c8c-28f1f54958d9
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.amazon.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
+    short-id: b390142456517acc
+  network: tcp
+- name: 🇭🇰 香港 02 (原生)
+  type: hysteria2
+  server: 202.146.222.29
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: "https://t.me/wangcai2ð\x9F\x87"
+  skip-cert-verify: true
+- name: 🇭🇰 香港 03 (原生)
+  type: hysteria2
+  server: 202.146.222.174
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  skip-cert-verify: true
+- name: 🇭🇰 香港 04 (原生)
+  type: hysteria2
+  server: 202.146.222.89
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https://t.me/clashv8\u0001f1e8\u0001f1f3
+  skip-cert-verify: true
+- name: 🇭🇰 香港 05 (原生)
+  type: vless
   server: 165.154.63.139
   port: 443
   udp: true
@@ -18,26 +55,10 @@ proxies:
     public-key: AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ
     short-id: ca4aedd4
   network: tcp
-- name: 🇭🇰 香港 02 (原生)
-  type: hysteria2
-  server: 202.146.222.29
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2üá®üá
-  skip-cert-verify: true
-- name: 🇭🇰 香港 03 (原生)
-  type: hysteria2
-  server: 202.146.222.89
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 202.146.222.89
-  skip-cert-verify: true
-- name: 🇭🇰 香港 04 (原生)
+- name: 🇭🇰 香港 06 (原生)
   type: vless
   server: 526.150333.xyz
-  port: 21004
+  port: 21001
   udp: true
   uuid: 52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a
   tls: true
@@ -45,30 +66,17 @@ proxies:
   client-fingerprint: chrome
   reality-opts:
     public-key: EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo
-    short-id: 2f34703f16523c80
+    short-id: b6dfd5c750351c57
   network: tcp
-- name: 🇭🇰 香港 05 (原生)
+- name: 🇭🇰 香港 07 (原生)
   type: hysteria2
-  server: 202.146.222.174
-  port: 443
+  server: 152.32.254.68
+  port: 5010
   udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: t.me
-  skip-cert-verify: true
-- name: 🇭🇰 香港 06 (原生)
-  type: vless
-  server: 122.10.117.1
-  port: 11674
-  udp: true
-  uuid: fe40f32a-b03d-4ada-8bee-00f41b766098
-  flow: xtls-rprx-vision
-  tls: true
-  servername: apple.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: F-yU1O5Q00eeyUdst7ZGDsgo4xS5mrdNwg0UcfsrVQs
-    short-id: d889b977
-  network: tcp
+  password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ
+  sni: nas.aizhzo.com
+  obfs: salamander
+  obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -80,6 +88,7 @@ proxy-groups:
   - 🇭🇰 香港 04 (原生)
   - 🇭🇰 香港 05 (原生)
   - 🇭🇰 香港 06 (原生)
+  - 🇭🇰 香港 07 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -89,6 +98,7 @@ proxy-groups:
   - 🇭🇰 香港 04 (原生)
   - 🇭🇰 香港 05 (原生)
   - 🇭🇰 香港 06 (原生)
+  - 🇭🇰 香港 07 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

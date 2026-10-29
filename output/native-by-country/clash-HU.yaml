@@ -4,29 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇿 AZ-Baku 01 (原生)
+- name: 🇭🇺 HU-布达佩斯 01 (原生)
   type: vless
-  server: 94.20.141.53
-  port: 443
+  server: 172.67.131.125
+  port: 2083
   udp: true
-  uuid: f439e4fe-139b-4882-ad8b-a16176d09c88
+  uuid: f418674e-f518-4318-8ff9-e10000000046
   tls: true
-  servername: eu63.cdn77.icu
+  servername: smart-edge-424.arti98399-1905.workers.dev
   client-fingerprint: chrome
-  reality-opts:
-    public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
-    short-id: 1ed136481e0ede74
-  network: tcp
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: smart-edge-424.arti98399-1905.workers.dev
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇦🇿 AZ-Baku 01 (原生)
+  - 🇭🇺 HU-布达佩斯 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇦🇿 AZ-Baku 01 (原生)
+  - 🇭🇺 HU-布达佩斯 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
