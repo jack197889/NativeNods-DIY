@@ -4,30 +4,32 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇺 HU-布达佩斯 01 (原生)
+- name: 🇰🇷 韩国-首尔 01
   type: vless
-  server: 172.67.131.125
-  port: 2083
+  server: 172.64.155.111
+  port: 443
   udp: true
-  uuid: f418674e-f518-4318-8ff9-e10000000046
+  uuid: cf92529d-9c4a-4d71-ab87-ae784a2da6bb
   tls: true
-  servername: smart-edge-424.arti98399-1905.workers.dev
+  servername: gy-cffc4-node-project-lb5p6r204ts3xuoz.pages.dev
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /sync
+    path: /thread/proxyip=ProxyIP.KR.CMLiussss.net
     headers:
-      Host: smart-edge-424.arti98399-1905.workers.dev
+      Host: gy-cffc4-node-project-lb5p6r204ts3xuoz.pages.dev
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇭🇺 HU-布达佩斯 01 (原生)
+  - 🇰🇷 韩国-首尔 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇭🇺 HU-布达佩斯 01 (原生)
+  - 🇰🇷 韩国-首尔 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -5,93 +5,79 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本-东京 01
-  type: vless
-  server: 156.229.163.237
-  port: 10238
-  udp: true
-  uuid: 05cfac59-b08a-4d35-9e6d-7924f6439f28
-  tls: true
-  servername: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
-- name: 🇯🇵 日本-东京 02
-  type: vless
-  server: 156.229.163.237
-  port: 10238
-  udp: true
-  uuid: 17f9b0bf-f8e5-4b6a-8c51-564ee29d0048
-  tls: true
-  servername: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
-- name: 🇯🇵 日本-东京 03
-  type: vless
-  server: 128.241.25.11
-  port: 30021
-  udp: true
-  uuid: b8b47337-b7d3-4458-9000-482366061a95
-  tls: true
-  servername: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
-- name: 🇯🇵 日本-东京 04
   type: hysteria2
-  server: jap2.nexfile.net
-  port: 4444
+  server: 138.3.208.26
+  port: 50160
   udp: true
-  password: 10be1dad-9952-4c5e-aa30-db435f69b727
-  sni: jap2.nexfile.net
-- name: 🇯🇵 日本-东京 05
-  type: vless
-  server: 31.76.91.70
-  port: 443
-  udp: true
-  uuid: 7072eeba-94fd-4fb3-92f2-a4506dd84cd8
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuji.etherhub.cc
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: ejx56dFtS4LK_Th6HSLFFdm7v7zqRpv8KfjrWAw4Sjg
-    short-id: bd6f67b6b2152b45
-  network: tcp
-- name: 🇯🇵 日本-南品川 06
-  type: hysteria2
-  server: 45.32.10.7
-  port: 443
-  udp: true
-  password: 96ab5cd282733fd4c312a61f972f330a
-  sni: vp3.yysyy.online
+  password: 184cdec28da5a09450803c8debcd2cc9
+  sni: www.bing.com
   skip-cert-verify: true
-- name: 🇯🇵 日本-南品川 07
+- name: 🇯🇵 日本-Chiyoda City 02
+  type: hysteria2
+  server: freedom.chenlan.top
+  port: 12765
+  udp: true
+  password: STYyftThFn
+  sni: freedom.chenlan.top
+- name: 🇯🇵 日本-南品川 03
   type: trojan
   server: 45.32.52.173
   port: 8886
   udp: true
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   sni: 45.32.52.173
-  client-fingerprint: chrome
   skip-cert-verify: true
   network: tcp
+- name: 🇯🇵 日本-南品川 04
+  type: hysteria2
+  server: vp3.yysyy.online
+  port: 443
+  udp: true
+  password: 96ab5cd282733fd4c312a61f972f330a
+  sni: vp3.yysyy.online
+- name: 🇯🇵 日本-东京 05
+  type: vless
+  server: 3.114.220.22
+  port: 10583
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: qq
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  network: tcp
+- name: 🇯🇵 日本-东京 06
+  type: hysteria2
+  server: 8.209.247.109
+  port: 443
+  udp: true
+  password: usqmqUKJFIlCmvkCNSY64L3k
+  sni: bing.com
+  skip-cert-verify: true
+- name: 🇯🇵 日本-东京 07
+  type: vless
+  server: 104.16.10.185
+  port: 443
+  udp: true
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  tls: true
+  servername: jp3.yohototo.top
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
 - name: 🇯🇵 日本-东京 08
   type: hysteria2
-  server: 138.3.208.26
-  port: 50160
+  server: 8.211.175.236
+  port: 8443
   udp: true
-  password: 184cdec28da5a09450803c8debcd2cc9
-  sni: 'off'
+  password: u63SxILNwtrQZ7Y1ZrFaZfsA
+  sni: 8.211.175.236
   skip-cert-verify: true
 - name: 🇯🇵 日本-南品川 09
   type: vless
@@ -111,77 +97,14 @@ proxies:
     headers:
       Host: itunes.apple.com
 - name: 🇯🇵 日本-东京 10
-  type: hysteria2
-  server: 8.211.175.236
+  type: trojan
+  server: 43.167.186.78
   port: 8443
   udp: true
-  password: u63SxILNwtrQZ7Y1ZrFaZfsA
-  sni: bing.com
+  password: 9646699a-18b0-4ebc-9f53-453cc1c8e637
   skip-cert-verify: true
-- name: 🇯🇵 日本-东京 11
-  type: vless
-  server: 82.118.28.109
-  port: 49385
-  udp: true
-  uuid: 790314a1-e5c8-4827-819b-04b2bae92612
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.yahoo.co.jp
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: yDZlYo4JstlPYLXkZBGvgazIjQclEuwIQ5r5Wt1AwlI
-    short-id: 78d3b440af4d4aad
   network: tcp
-- name: 🇯🇵 日本-东京 12
-  type: vless
-  server: 3.114.220.22
-  port: 18007
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: random
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  network: tcp
-- name: 🇯🇵 日本-东京 13
-  type: hysteria2
-  server: 8.209.247.109
-  port: 443
-  udp: true
-  password: usqmqUKJFIlCmvkCNSY64L3k
-  sni: bing.com
-  skip-cert-verify: true
-- name: 🇯🇵 日本-东京 14
-  type: vless
-  server: 161.33.167.20
-  port: 443
-  udp: true
-  uuid: c69e7fcd-115e-483a-accb-bfd4e50ce048
-  flow: xtls-rprx-vision
-  tls: true
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: agxOIgWPqcmkKEPzEfNUjsgrHi4vlBmjtbdUoE-mvEk
-    short-id: fd9f6074
-  network: tcp
-- name: 🇯🇵 日本-东京 15
-  type: vless
-  server: 104.21.70.228
-  port: 443
-  udp: true
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  tls: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: 🇯🇵 日本-大阪 16
+- name: 🇯🇵 日本-大阪 11
   type: vmess
   server: 168.138.43.75
   port: 80
@@ -193,15 +116,8 @@ proxies:
   ws-opts:
     path: /cctv13.m3u8
     headers:
-      Host: 168.138.43.75
-- name: 🇯🇵 日本-东京 17
-  type: ss
-  server: 84.247.155.196
-  port: 80
-  udp: true
-  cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
-- name: 🇯🇵 日本-东京 18
+      Host: jp01.a0a.xyz
+- name: 🇯🇵 日本-东京 12
   type: hysteria2
   server: rb.mangshe.xyz
   port: 2060
@@ -209,66 +125,47 @@ proxies:
   password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
   sni: rb.mangshe.xyz
   skip-cert-verify: true
-- name: 🇯🇵 日本-东京 19
-  type: vless
-  server: 45.202.255.92
-  port: 9443
+- name: 🇯🇵 日本-东京 13
+  type: ss
+  server: 84.247.155.196
+  port: 443
   udp: true
-  uuid: 4a270d3e-27b4-497d-8c8c-28f1f54958d9
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amazon.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
-    short-id: b390142456517acc
-  network: tcp
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇯🇵 日本-东京 01
-  - 🇯🇵 日本-东京 02
-  - 🇯🇵 日本-东京 03
-  - 🇯🇵 日本-东京 04
+  - 🇯🇵 日本-Chiyoda City 02
+  - 🇯🇵 日本-南品川 03
+  - 🇯🇵 日本-南品川 04
   - 🇯🇵 日本-东京 05
-  - 🇯🇵 日本-南品川 06
-  - 🇯🇵 日本-南品川 07
+  - 🇯🇵 日本-东京 06
+  - 🇯🇵 日本-东京 07
   - 🇯🇵 日本-东京 08
   - 🇯🇵 日本-南品川 09
   - 🇯🇵 日本-东京 10
-  - 🇯🇵 日本-东京 11
+  - 🇯🇵 日本-大阪 11
   - 🇯🇵 日本-东京 12
   - 🇯🇵 日本-东京 13
-  - 🇯🇵 日本-东京 14
-  - 🇯🇵 日本-东京 15
-  - 🇯🇵 日本-大阪 16
-  - 🇯🇵 日本-东京 17
-  - 🇯🇵 日本-东京 18
-  - 🇯🇵 日本-东京 19
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇯🇵 日本-东京 01
-  - 🇯🇵 日本-东京 02
-  - 🇯🇵 日本-东京 03
-  - 🇯🇵 日本-东京 04
+  - 🇯🇵 日本-Chiyoda City 02
+  - 🇯🇵 日本-南品川 03
+  - 🇯🇵 日本-南品川 04
   - 🇯🇵 日本-东京 05
-  - 🇯🇵 日本-南品川 06
-  - 🇯🇵 日本-南品川 07
+  - 🇯🇵 日本-东京 06
+  - 🇯🇵 日本-东京 07
   - 🇯🇵 日本-东京 08
   - 🇯🇵 日本-南品川 09
   - 🇯🇵 日本-东京 10
-  - 🇯🇵 日本-东京 11
+  - 🇯🇵 日本-大阪 11
   - 🇯🇵 日本-东京 12
   - 🇯🇵 日本-东京 13
-  - 🇯🇵 日本-东京 14
-  - 🇯🇵 日本-东京 15
-  - 🇯🇵 日本-大阪 16
-  - 🇯🇵 日本-东京 17
-  - 🇯🇵 日本-东京 18
-  - 🇯🇵 日本-东京 19
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

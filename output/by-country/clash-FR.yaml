@@ -13,16 +13,18 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-    headers:
-      Host: 138.124.70.41
 - name: 🇫🇷 法国-巴黎 02
-  type: hysteria2
-  server: 13.36.234.11
+  type: vless
+  server: 82.22.2.225
   port: 443
   udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-fr-001.fastervpn.world
-  skip-cert-verify: true
+  uuid: 7b22dce8-7ebd-425b-8ca4-7b6190321985
+  tls: true
+  servername: b-wl.fr-2.bnc-gt.co.uk
+  client-fingerprint: qq
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
 proxy-groups:
 - name: 🚀 节点选择
   type: select

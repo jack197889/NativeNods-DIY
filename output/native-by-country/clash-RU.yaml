@@ -5,58 +5,44 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯-莫斯科 01 (原生)
-  type: vless
-  server: 147.45.46.157
-  port: 8443
+  type: ss
+  server: 185.22.155.121
+  port: 18443
   udp: true
-  uuid: 75985152-e16e-4a48-87ff-35c2615e0ab5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: ''
-  network: tcp
+  cipher: aes-256-gcm
+  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
 - name: 🇷🇺 俄罗斯-莫斯科 02 (原生)
   type: vless
-  server: 83.166.251.25
-  port: 43000
-  udp: true
-  uuid: a2200b5e-bed4-4d5f-8b05-1daf12f4322d
-  flow: xtls-rprx-vision
-  tls: true
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: ux8nnKsidZNSIvm54EQf2RdXVawMCwto2DZiUNU1UQg
-    short-id: 2ab73e0b
-  network: tcp
-- name: 🇷🇺 俄罗斯-莫斯科 03 (原生)
-  type: vless
-  server: xsru2.freeddns.org
+  server: xsru1.ddnsfree.com
   port: 443
   udp: true
   uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
   tls: true
-  servername: xsru2.freeddns.org
+  servername: xsru1.ddnsfree.com
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /wsru
-    headers:
-      Host: xsru2.freeddns.org
-- name: 🇷🇺 俄罗斯-St Petersburg 04 (原生)
-  type: vless
-  server: 45.12.75.242
-  port: 26424
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-ru
+- name: 🇷🇺 俄罗斯-莫斯科 03 (原生)
+  type: hysteria2
+  server: 103.88.243.142
+  port: 11592
   udp: true
-  uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
+  password: 41edb44c8e
+  sni: srv-17e124.21freedom.net
+- name: 🇷🇺 俄罗斯-莫斯科 04 (原生)
+  type: vless
+  server: 88.218.170.236
+  port: 443
+  udp: true
+  uuid: b872771d-e9d1-42d7-ad29-a9acff49ea2d
+  flow: xtls-rprx-vision
   tls: true
-  servername: ya.ru
+  servername: www.sun6-21.userapi.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0
-    short-id: 23103e1e
+    public-key: qC4VE5jv0q0ALYAfCNtAHU-kN32OdA-cqJmXpL4Y2VY
+    short-id: 3199b70105c62ce0
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
@@ -66,14 +52,14 @@ proxy-groups:
   - 🇷🇺 俄罗斯-莫斯科 01 (原生)
   - 🇷🇺 俄罗斯-莫斯科 02 (原生)
   - 🇷🇺 俄罗斯-莫斯科 03 (原生)
-  - 🇷🇺 俄罗斯-St Petersburg 04 (原生)
+  - 🇷🇺 俄罗斯-莫斯科 04 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇷🇺 俄罗斯-莫斯科 01 (原生)
   - 🇷🇺 俄罗斯-莫斯科 02 (原生)
   - 🇷🇺 俄罗斯-莫斯科 03 (原生)
-  - 🇷🇺 俄罗斯-St Petersburg 04 (原生)
+  - 🇷🇺 俄罗斯-莫斯科 04 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

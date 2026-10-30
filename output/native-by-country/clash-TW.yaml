@@ -6,18 +6,19 @@ log-level: info
 proxies:
 - name: 🇹🇼 台湾-台北 01 (原生)
   type: hysteria2
-  server: 160.187.100.109
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  skip-cert-verify: true
-- name: 🇹🇼 台湾-台北 02 (原生)
-  type: hysteria2
   server: 103.115.109.49
   port: 443
   udp: true
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2🇨🇳
+  sni: 'https:'
+  skip-cert-verify: true
+- name: 🇹🇼 台湾-台北 02 (原生)
+  type: hysteria2
+  server: vpn-tw-002.fastervpn.world
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: google.com
   skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择

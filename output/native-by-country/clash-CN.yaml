@@ -4,30 +4,27 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇭 泰国-曼谷 01 (原生)
-  type: vless
-  server: 104.16.10.2
-  port: 443
+- name: 🇨🇳 中国大陆-Beijing 01 (原生)
+  type: vmess
+  server: 120.48.133.162
+  port: 10086
   udp: true
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-  tls: true
-  servername: v2ray.simspeedup.com
-  client-fingerprint: chrome
+  uuid: a8d931b0-6c27-428b-8d86-c20efea3dba7
+  alterId: 0
+  cipher: auto
   network: ws
   ws-opts:
-    path: /ws
-    headers:
-      Host: v2ray.simspeedup.com
+    path: /
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇹🇭 泰国-曼谷 01 (原生)
+  - 🇨🇳 中国大陆-Beijing 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇹🇭 泰国-曼谷 01 (原生)
+  - 🇨🇳 中国大陆-Beijing 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

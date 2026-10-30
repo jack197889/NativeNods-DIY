@@ -4,30 +4,39 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇯🇵 日本-Fujisawa 01 (原生)
+- name: 🇯🇵 日本-Shibuya City 01 (原生)
   type: vless
-  server: 142.91.101.39
-  port: 627
+  server: ga1data.xyy123.bid
+  port: 443
   udp: true
-  uuid: aff1ffd0-594c-44c9-9f79-4096fde005ea
+  uuid: 81f686e2-0700-4e7d-b3aa-2f7fc544bcc3
+  flow: xtls-rprx-vision
   tls: true
-  servername: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
+  servername: www.amzn.com
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
+  reality-opts:
+    public-key: Z7B8VKvjAiBH93XEkHFWCVBfK8Mu5HTLtAwfr5LuYlk
+    short-id: 00b0389a
+  network: tcp
+- name: 🇯🇵 日本-东京 02 (原生)
+  type: vless
+  server: 137.220.221.179
+  port: 443
+  udp: true
+  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇯🇵 日本-Fujisawa 01 (原生)
+  - 🇯🇵 日本-Shibuya City 01 (原生)
+  - 🇯🇵 日本-东京 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇯🇵 日本-Fujisawa 01 (原生)
+  - 🇯🇵 日本-Shibuya City 01 (原生)
+  - 🇯🇵 日本-东京 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

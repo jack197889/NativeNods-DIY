@@ -4,35 +4,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇱 荷兰-阿姆斯特丹 01
-  type: vless
-  server: 87.199.205.28
-  port: 443
-  udp: true
-  uuid: 501a2da5-cb22-4a3f-915e-e3b821d1d62d
-  flow: xtls-rprx-vision
-  tls: true
-  servername: vkvd754.okcdn.ru
-  client-fingerprint: qq
-  reality-opts:
-    public-key: W-9zyiOq287RtXVTZlTFbSDJ0Mx8joyBLJoA7ZE7eBw
-    short-id: a9c11b06829163c9
-  network: tcp
-- name: 🇳🇱 荷兰-Haarlem 02
-  type: vless
-  server: 51.158.206.96
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  network: tcp
-- name: 🇳🇱 荷兰-Haarlem 03
+- name: 🇳🇱 荷兰-Haarlem 01
   type: vless
   server: 51.158.206.103
   port: 23576
@@ -46,9 +18,159 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   network: tcp
+- name: 🇳🇱 荷兰-Haarlem 02
+  type: vless
+  server: 51.158.206.12
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 03
+  type: vless
+  server: 51.158.206.80
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
 - name: 🇳🇱 荷兰-Haarlem 04
   type: vless
-  server: 51.158.206.25
+  server: 51.158.206.8
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: random
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: ''
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 05
+  type: vless
+  server: 51.158.206.97
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 06
+  type: vless
+  server: 51.158.206.96
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇳🇱 荷兰-阿姆斯特丹 07
+  type: vless
+  server: 152.70.58.201
+  port: 443
+  udp: true
+  uuid: 8892e34a-339b-4526-b88d-cf68c516231c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.nvidia.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28
+    short-id: 52c723e0fad49689
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 08
+  type: hysteria2
+  server: 51.15.19.206
+  port: 8443
+  udp: true
+  password: HowdyHysteria2023w0W
+  sni: sni-here.com
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: HysteriaHowdy
+- name: 🇳🇱 荷兰-Haarlem 09
+  type: vless
+  server: 51.158.206.19
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 10
+  type: vless
+  server: 51.158.206.86
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 11
+  type: vless
+  server: 51.158.206.26
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 12
+  type: vless
+  server: 51.158.206.93
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 13
+  type: vless
+  server: 51.158.206.20
   port: 23576
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
@@ -65,17 +187,35 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇳🇱 荷兰-阿姆斯特丹 01
+  - 🇳🇱 荷兰-Haarlem 01
   - 🇳🇱 荷兰-Haarlem 02
   - 🇳🇱 荷兰-Haarlem 03
   - 🇳🇱 荷兰-Haarlem 04
+  - 🇳🇱 荷兰-Haarlem 05
+  - 🇳🇱 荷兰-Haarlem 06
+  - 🇳🇱 荷兰-阿姆斯特丹 07
+  - 🇳🇱 荷兰-Haarlem 08
+  - 🇳🇱 荷兰-Haarlem 09
+  - 🇳🇱 荷兰-Haarlem 10
+  - 🇳🇱 荷兰-Haarlem 11
+  - 🇳🇱 荷兰-Haarlem 12
+  - 🇳🇱 荷兰-Haarlem 13
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇳🇱 荷兰-阿姆斯特丹 01
+  - 🇳🇱 荷兰-Haarlem 01
   - 🇳🇱 荷兰-Haarlem 02
   - 🇳🇱 荷兰-Haarlem 03
   - 🇳🇱 荷兰-Haarlem 04
+  - 🇳🇱 荷兰-Haarlem 05
+  - 🇳🇱 荷兰-Haarlem 06
+  - 🇳🇱 荷兰-阿姆斯特丹 07
+  - 🇳🇱 荷兰-Haarlem 08
+  - 🇳🇱 荷兰-Haarlem 09
+  - 🇳🇱 荷兰-Haarlem 10
+  - 🇳🇱 荷兰-Haarlem 11
+  - 🇳🇱 荷兰-Haarlem 12
+  - 🇳🇱 荷兰-Haarlem 13
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

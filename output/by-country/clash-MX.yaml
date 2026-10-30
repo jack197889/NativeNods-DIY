@@ -13,16 +13,26 @@ proxies:
   sni: connectwithtopemployersandfindidealjobs.com
   skip-cert-verify: true
   network: tcp
+- name: 🇲🇽 墨西哥-墨西哥城 02
+  type: trojan
+  server: mx001.zestapp778.com
+  port: 15083
+  udp: true
+  password: 5t6i121em5lkmsmk
+  sni: mx001.zestapp778.com
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇲🇽 墨西哥-Querétaro City 01
+  - 🇲🇽 墨西哥-墨西哥城 02
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇲🇽 墨西哥-Querétaro City 01
+  - 🇲🇽 墨西哥-墨西哥城 02
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -6,18 +6,17 @@ log-level: info
 proxies:
 - name: 🇬🇧 英国-伦敦 01 (原生)
   type: vless
-  server: 195.72.166.251
-  port: 443
+  server: 144.48.11.97
+  port: 43000
   udp: true
-  uuid: 64c05afc-ce81-4ba0-b697-afa04da1427e
+  uuid: 4799abf0-d0d9-4a46-9c31-b1f76ae00e1e
   flow: xtls-rprx-vision
-  packet-encoding: xudp
   tls: true
-  servername: www.lloydsbankinggroup.com
-  client-fingerprint: firefox
+  servername: 144.48.11.97
+  client-fingerprint: chrome
   reality-opts:
-    public-key: RKDT6fVgcZS8Qfzhv5rbeHRIflA3UTKD_HNLJyOoUwk
-    short-id: 25349b36802f
+    public-key: lmT0SFJL1A8_ariRWL65dhShaqFbpitjGanv7EFnoR0
+    short-id: 725e6ea0
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择

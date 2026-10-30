@@ -6,15 +6,6 @@ log-level: info
 proxies:
 - name: 🇧🇾 BY-Bol’shoye Stiklevo 01 (原生)
   type: vless
-  server: 178.172.227.124
-  port: 14430
-  udp: true
-  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
-  network: ws
-  ws-opts:
-    path: /vless
-- name: 🇧🇾 BY-Bol’shoye Stiklevo 02 (原生)
-  type: vless
   server: 178.172.227.228
   port: 14430
   udp: true
@@ -24,17 +15,30 @@ proxies:
     path: /vless
     headers:
       Host: 178.172.227.228
-- name: 🇧🇾 BY-Minsk 03 (原生)
+- name: 🇧🇾 BY-Minsk 02 (原生)
   type: vless
   server: 95.128.71.79
   port: 10444
   udp: true
   uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
   flow: xtls-rprx-vision
-  packet-encoding: xudp
   tls: true
   servername: ads.x5.ru
   client-fingerprint: safari
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  network: tcp
+- name: 🇧🇾 BY-Bol’shoye Stiklevo 03 (原生)
+  type: vless
+  server: 178.172.227.124
+  port: 10444
+  udp: true
+  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
+  flow: xtls-rprx-vision
+  tls: true
+  servername: ads.x5.ru
+  client-fingerprint: chrome
   reality-opts:
     public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
     short-id: 8debcf36f1cc69ff
@@ -45,14 +49,14 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇧🇾 BY-Bol’shoye Stiklevo 01 (原生)
-  - 🇧🇾 BY-Bol’shoye Stiklevo 02 (原生)
-  - 🇧🇾 BY-Minsk 03 (原生)
+  - 🇧🇾 BY-Minsk 02 (原生)
+  - 🇧🇾 BY-Bol’shoye Stiklevo 03 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇧🇾 BY-Bol’shoye Stiklevo 01 (原生)
-  - 🇧🇾 BY-Bol’shoye Stiklevo 02 (原生)
-  - 🇧🇾 BY-Minsk 03 (原生)
+  - 🇧🇾 BY-Minsk 02 (原生)
+  - 🇧🇾 BY-Bol’shoye Stiklevo 03 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
