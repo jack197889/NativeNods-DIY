@@ -6,24 +6,10 @@ log-level: info
 proxies:
 - name: 🇵🇱 波兰-华沙 01 (原生)
   type: vless
-  server: 150.251.113.34
-  port: 443
+  server: site.teslamotor.site
+  port: 20001
   udp: true
-  uuid: d7d724b5-17ce-4f3c-877d-dfbf0f07afa1
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 8yMLSTbkpJFfbgTjNzotzz7U8OT6AERrclgKdKrXXW8
-    short-id: 150a627d15154cf2
-  network: tcp
-- name: 🇵🇱 波兰-华沙 02 (原生)
-  type: vless
-  server: 168.222.43.53
-  port: 2052
-  udp: true
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
@@ -31,12 +17,10 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇵🇱 波兰-华沙 01 (原生)
-  - 🇵🇱 波兰-华沙 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇵🇱 波兰-华沙 01 (原生)
-  - 🇵🇱 波兰-华沙 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

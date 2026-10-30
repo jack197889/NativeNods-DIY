@@ -4,33 +4,21 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇷🇺 俄罗斯-莫斯科 01 (原生)
-  type: ss
-  server: 185.22.155.121
-  port: 18443
-  udp: true
-  cipher: aes-256-gcm
-  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
-- name: 🇷🇺 俄罗斯-莫斯科 02 (原生)
+- name: 🇷🇺 俄罗斯-St Petersburg 01 (原生)
   type: vless
-  server: xsru1.ddnsfree.com
-  port: 443
+  server: 45.12.75.242
+  port: 26424
   udp: true
-  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
+  uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
+  packet-encoding: xudp
   tls: true
-  servername: xsru1.ddnsfree.com
+  servername: ya.ru
   client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-ru
-- name: 🇷🇺 俄罗斯-莫斯科 03 (原生)
-  type: hysteria2
-  server: 103.88.243.142
-  port: 11592
-  udp: true
-  password: 41edb44c8e
-  sni: srv-17e124.21freedom.net
-- name: 🇷🇺 俄罗斯-莫斯科 04 (原生)
+  reality-opts:
+    public-key: l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0
+    short-id: 23103e1e
+  network: tcp
+- name: 🇷🇺 俄罗斯-莫斯科 02 (原生)
   type: vless
   server: 88.218.170.236
   port: 443
@@ -44,22 +32,66 @@ proxies:
     public-key: qC4VE5jv0q0ALYAfCNtAHU-kN32OdA-cqJmXpL4Y2VY
     short-id: 3199b70105c62ce0
   network: tcp
+- name: 🇷🇺 俄罗斯-莫斯科 03 (原生)
+  type: vless
+  server: xsru1.ddnsfree.com
+  port: 443
+  udp: true
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
+  tls: true
+  servername: xsru1.ddnsfree.com
+  client-fingerprint: random
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-ru
+- name: 🇷🇺 俄罗斯-莫斯科 04 (原生)
+  type: hysteria2
+  server: 103.88.243.142
+  port: 11592
+  udp: true
+  password: 41edb44c8e
+  sni: srv-17e124.21freedom.net
+  skip-cert-verify: true
+- name: 🇷🇺 俄罗斯-莫斯科 05 (原生)
+  type: ss
+  server: 185.22.155.121
+  port: 18443
+  udp: true
+  cipher: aes-256-gcm
+  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
+- name: 🇷🇺 俄罗斯-莫斯科 06 (原生)
+  type: vless
+  server: 46.254.19.164
+  port: 443
+  udp: true
+  uuid: a5212bcb-ab85-459a-bec6-9f259eeeebfa
+  tls: true
+  servername: wtb.tems.bet
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 3qgZ9UlB-y1i9jx_zQQBgiNgFHz6fPQdP9gMMl4zXiM
+    short-id: 8937c9ed2d470352
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇷🇺 俄罗斯-莫斯科 01 (原生)
+  - 🇷🇺 俄罗斯-St Petersburg 01 (原生)
   - 🇷🇺 俄罗斯-莫斯科 02 (原生)
   - 🇷🇺 俄罗斯-莫斯科 03 (原生)
   - 🇷🇺 俄罗斯-莫斯科 04 (原生)
+  - 🇷🇺 俄罗斯-莫斯科 05 (原生)
+  - 🇷🇺 俄罗斯-莫斯科 06 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇷🇺 俄罗斯-莫斯科 01 (原生)
+  - 🇷🇺 俄罗斯-St Petersburg 01 (原生)
   - 🇷🇺 俄罗斯-莫斯科 02 (原生)
   - 🇷🇺 俄罗斯-莫斯科 03 (原生)
   - 🇷🇺 俄罗斯-莫斯科 04 (原生)
+  - 🇷🇺 俄罗斯-莫斯科 05 (原生)
+  - 🇷🇺 俄罗斯-莫斯科 06 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -4,7 +4,23 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国-伦敦 01 (原生)
+- name: 🇬🇧 英国-Loudwater 01 (原生)
+  type: trojan
+  server: 151.101.36.120
+  port: 443
+  udp: true
+  password: MiTiVPN
+  sni: firefox.com
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
+    headers:
+      Host: mitivpn--mitivpn.ac.ir
+- name: 🇬🇧 英国-伦敦 02 (原生)
   type: vless
   server: 144.48.11.97
   port: 43000
@@ -23,11 +39,13 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇬🇧 英国-伦敦 01 (原生)
+  - 🇬🇧 英国-Loudwater 01 (原生)
+  - 🇬🇧 英国-伦敦 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇬🇧 英国-伦敦 01 (原生)
+  - 🇬🇧 英国-Loudwater 01 (原生)
+  - 🇬🇧 英国-伦敦 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

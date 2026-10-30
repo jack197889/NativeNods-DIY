@@ -13,30 +13,27 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-- name: 🇫🇷 法国-巴黎 02
-  type: vless
-  server: 82.22.2.225
-  port: 443
+- name: 🇫🇷 法国-Aubervilliers 02
+  type: trojan
+  server: fr001.zestapp778.com
+  port: 16778
   udp: true
-  uuid: 7b22dce8-7ebd-425b-8ca4-7b6190321985
-  tls: true
-  servername: b-wl.fr-2.bnc-gt.co.uk
-  client-fingerprint: qq
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
+  password: 5t6i121em5lkmsmk
+  sni: fr001.zestapp778.com
+  skip-cert-verify: true
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇫🇷 法国-巴黎 01
-  - 🇫🇷 法国-巴黎 02
+  - 🇫🇷 法国-Aubervilliers 02
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇫🇷 法国-巴黎 01
-  - 🇫🇷 法国-巴黎 02
+  - 🇫🇷 法国-Aubervilliers 02
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

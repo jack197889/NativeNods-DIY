@@ -20,112 +20,21 @@ proxies:
   network: tcp
 - name: 🇫🇷 法国-巴黎 02 (原生)
   type: hysteria2
-  server: 62.210.7.139
-  port: 60111
+  server: 62.210.124.146
+  port: 22000
+  udp: true
+  password: dongtaiwang.com
+  sni: www.microsoft.com
+  skip-cert-verify: true
+- name: 🇫🇷 法国-巴黎 03 (原生)
+  type: hysteria2
+  server: 62.210.147.2
+  port: 43115
   udp: true
   password: github.com/Alvin9999-newpac/fanqiang
-  sni: css.rbxcdn.com
+  sni: www.microsoft.com
   skip-cert-verify: true
-- name: 🇫🇷 法国-Roubaix 03 (原生)
-  type: hysteria2
-  server: 51.77.217.70
-  port: 8447
-  udp: true
-  password: capadmbd5f18bd:jX4BuciLLIqLvzJZsHpoXtc2
-  sni: vpn.local
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: ChY5QQQT3ZtUdNT8
-- name: 🇫🇷 法国-Roubaix 04 (原生)
-  type: vless
-  server: 51.83.6.5
-  port: 20250
-  udp: true
-  uuid: de883d6d-4099-41bc-ba86-82ffed64a380
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 51.83.6.5
-- name: 🇫🇷 法国-Roubaix 05 (原生)
-  type: vless
-  server: 163.245.42.157
-  port: 443
-  udp: true
-  uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
-  flow: xtls-rprx-vision
-  tls: true
-  servername: mother-earth.fyi
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: ''
-  network: tcp
-- name: 🇫🇷 法国-Gravelines 06 (原生)
-  type: hysteria2
-  server: 51.77.217.70
-  port: 21169
-  udp: true
-  password: capadmbd5f18bd:jX4BuciLLIqLvzJZsHpoXtc2
-  sni: vpn.local
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: ChY5QQQT3ZtUdNT8
-- name: 🇫🇷 法国-巴黎 07 (原生)
-  type: trojan
-  server: www.speedtest.net
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: 🇫🇷 法国-Strasbourg 08 (原生)
-  type: vless
-  server: 152.228.139.33
-  port: 35108
-  udp: true
-  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
-  tls: true
-  servername: www.nvidia.com
-  client-fingerprint: random
-  reality-opts:
-    public-key: X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg
-    short-id: 52add08b86a5ccea
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-common3
-- name: 🇫🇷 法国-Wattrelos 09 (原生)
-  type: vless
-  server: 137.74.16.237
-  port: 443
-  udp: true
-  uuid: aaec4e42-a095-44b6-a239-f16d234a0798
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.icloud.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I
-    short-id: b390e0a721d242b0
-  network: tcp
-- name: 🇫🇷 法国-巴黎 10 (原生)
-  type: trojan
-  server: 45.87.41.18
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: 🇫🇷 法国-巴黎 11 (原生)
+- name: 🇫🇷 法国-巴黎 04 (原生)
   type: trojan
   server: 89.150.34.41
   port: 2053
@@ -139,72 +48,97 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: 🇫🇷 法国-Wattrelos 12 (原生)
-  type: vmess
-  server: www.windowssearchtools.com
-  port: 443
+- name: 🇫🇷 法国-Roubaix 05 (原生)
+  type: hysteria2
+  server: 51.77.217.70
+  port: 33128
   udp: true
-  uuid: ba1116e2-8c2f-4e3d-8e50-c954360cf970
+  password: capadmbd5f18bd:jX4BuciLLIqLvzJZsHpoXtc2
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: ChY5QQQT3ZtUdNT8
+- name: 🇫🇷 法国-Roubaix 06 (原生)
+  type: vmess
+  server: 51.68.34.78
+  port: 20155
+  udp: true
+  uuid: 5365cb12-83e2-4e12-8098-c9673ed7f540
   alterId: 0
   cipher: auto
-  tls: true
-  servername: www.windowssearchtools.com
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /truth
-    headers:
-      Host: www.windowssearchtools.com
-- name: 🇫🇷 法国-巴黎 13 (原生)
+    path: /bp-vmess
+- name: 🇫🇷 法国-Roubaix 07 (原生)
+  type: vless
+  server: 163.245.42.157
+  port: 443
+  udp: true
+  uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: mother-earth.fyi
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: ''
+  network: tcp
+- name: 🇫🇷 法国-Strasbourg 08 (原生)
+  type: vless
+  server: 152.228.139.33
+  port: 35108
+  udp: true
+  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
+  tls: true
+  servername: www.nvidia.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg
+    short-id: 52add08b86a5ccea
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-common3
+- name: 🇫🇷 法国-巴黎 09 (原生)
   type: trojan
   server: 185.114.72.31
   port: 2053
   udp: true
   password: humanity
   sni: www.calmlunch.com
+  skip-cert-verify: true
   network: ws
   ws-opts:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: 🇫🇷 法国-巴黎 14 (原生)
-  type: trojan
-  server: 91.245.225.79
-  port: 2053
+- name: 🇫🇷 法国-Wattrelos 10 (原生)
+  type: vless
+  server: 137.74.16.237
+  port: 443
   udp: true
-  password: humanity
-  sni: www.calmlunch.com
+  uuid: aaec4e42-a095-44b6-a239-f16d234a0798
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.icloud.com
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: 🇫🇷 法国-巴黎 15 (原生)
+  reality-opts:
+    public-key: 7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I
+    short-id: b390e0a721d242b0
+  network: tcp
+- name: 🇫🇷 法国-巴黎 11 (原生)
   type: trojan
-  server: 194.147.149.54
+  server: 45.87.41.18
   port: 443
   udp: true
   password: humanity
   sni: www.calmlunch.com
+  skip-cert-verify: true
   network: ws
   ws-opts:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: 🇫🇷 法国-巴黎 16 (原生)
-  type: trojan
-  server: 212.227.90.142
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: 🇫🇷 法国-巴黎 17 (原生)
+- name: 🇫🇷 法国-巴黎 12 (原生)
   type: trojan
   server: 166.1.36.83
   port: 443
@@ -217,9 +151,24 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: 🇫🇷 法国-巴黎 18 (原生)
+- name: 🇫🇷 法国-Wattrelos 13 (原生)
+  type: vmess
+  server: 188.114.97.1
+  port: 443
+  udp: true
+  uuid: ba1116e2-8c2f-4e3d-8e50-c954360cf970
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: www.windowssearchtools.com
+  network: ws
+  ws-opts:
+    path: /truth
+    headers:
+      Host: www.windowssearchtools.com
+- name: 🇫🇷 法国-巴黎 14 (原生)
   type: trojan
-  server: 185.220.100.168
+  server: 212.227.90.142
   port: 443
   udp: true
   password: humanity
@@ -229,58 +178,57 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: 🇫🇷 法国-巴黎 19 (原生)
-  type: trojan
-  server: 82.117.245.125
-  port: 2053
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: 🇫🇷 法国-巴黎 20 (原生)
-  type: trojan
-  server: 185.255.179.166
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: 🇫🇷 法国-巴黎 21 (原生)
+- name: 🇫🇷 法国-巴黎 15 (原生)
   type: trojan
   server: 5.78.92.27
   port: 8443
   udp: true
   password: humanity
   sni: www.calmlunch.com
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: 🇫🇷 法国-巴黎 22 (原生)
+- name: 🇫🇷 法国-巴黎 16 (原生)
   type: trojan
-  server: 185.36.141.81
+  server: 185.255.179.166
   port: 443
   udp: true
   password: humanity
   sni: www.calmlunch.com
-  client-fingerprint: chrome
+  skip-cert-verify: true
   network: ws
   ws-opts:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: 🇫🇷 法国-巴黎 23 (原生)
+- name: 🇫🇷 法国-巴黎 17 (原生)
+  type: trojan
+  server: 212.24.104.79
+  port: 2053
+  udp: true
+  password: humanity
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: 🇫🇷 法国-Gravelines 18 (原生)
+  type: vmess
+  server: 145.239.55.210
+  port: 80
+  udp: true
+  uuid: 067fcd63-b215-4abd-8529-ae929a9971a9
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
+- name: 🇫🇷 法国-巴黎 19 (原生)
   type: trojan
   server: 155.103.71.142
   port: 443
@@ -294,7 +242,28 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: 🇫🇷 法国-巴黎 24 (原生)
+- name: 🇫🇷 法国-巴黎 20 (原生)
+  type: trojan
+  server: 5.44.46.142
+  port: 443
+  udp: true
+  password: humanity
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: 🇫🇷 法国-Roubaix 21 (原生)
+  type: vmess
+  server: 51.83.6.5
+  port: 20250
+  udp: true
+  uuid: de883d6d-4099-41bc-ba86-82ffed64a380
+  alterId: 0
+  cipher: auto
+  network: tcp
+- name: 🇫🇷 法国-巴黎 22 (原生)
   type: trojan
   server: 77.221.138.199
   port: 8443
@@ -307,19 +276,6 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: 🇫🇷 法国-Gravelines 25 (原生)
-  type: vmess
-  server: 145.239.55.210
-  port: 80
-  udp: true
-  uuid: 067fcd63-b215-4abd-8529-ae929a9971a9
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -327,57 +283,51 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇫🇷 法国-巴黎 01 (原生)
   - 🇫🇷 法国-巴黎 02 (原生)
-  - 🇫🇷 法国-Roubaix 03 (原生)
-  - 🇫🇷 法国-Roubaix 04 (原生)
+  - 🇫🇷 法国-巴黎 03 (原生)
+  - 🇫🇷 法国-巴黎 04 (原生)
   - 🇫🇷 法国-Roubaix 05 (原生)
-  - 🇫🇷 法国-Gravelines 06 (原生)
-  - 🇫🇷 法国-巴黎 07 (原生)
+  - 🇫🇷 法国-Roubaix 06 (原生)
+  - 🇫🇷 法国-Roubaix 07 (原生)
   - 🇫🇷 法国-Strasbourg 08 (原生)
-  - 🇫🇷 法国-Wattrelos 09 (原生)
-  - 🇫🇷 法国-巴黎 10 (原生)
+  - 🇫🇷 法国-巴黎 09 (原生)
+  - 🇫🇷 法国-Wattrelos 10 (原生)
   - 🇫🇷 法国-巴黎 11 (原生)
-  - 🇫🇷 法国-Wattrelos 12 (原生)
-  - 🇫🇷 法国-巴黎 13 (原生)
+  - 🇫🇷 法国-巴黎 12 (原生)
+  - 🇫🇷 法国-Wattrelos 13 (原生)
   - 🇫🇷 法国-巴黎 14 (原生)
   - 🇫🇷 法国-巴黎 15 (原生)
   - 🇫🇷 法国-巴黎 16 (原生)
   - 🇫🇷 法国-巴黎 17 (原生)
-  - 🇫🇷 法国-巴黎 18 (原生)
+  - 🇫🇷 法国-Gravelines 18 (原生)
   - 🇫🇷 法国-巴黎 19 (原生)
   - 🇫🇷 法国-巴黎 20 (原生)
-  - 🇫🇷 法国-巴黎 21 (原生)
+  - 🇫🇷 法国-Roubaix 21 (原生)
   - 🇫🇷 法国-巴黎 22 (原生)
-  - 🇫🇷 法国-巴黎 23 (原生)
-  - 🇫🇷 法国-巴黎 24 (原生)
-  - 🇫🇷 法国-Gravelines 25 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇫🇷 法国-巴黎 01 (原生)
   - 🇫🇷 法国-巴黎 02 (原生)
-  - 🇫🇷 法国-Roubaix 03 (原生)
-  - 🇫🇷 法国-Roubaix 04 (原生)
+  - 🇫🇷 法国-巴黎 03 (原生)
+  - 🇫🇷 法国-巴黎 04 (原生)
   - 🇫🇷 法国-Roubaix 05 (原生)
-  - 🇫🇷 法国-Gravelines 06 (原生)
-  - 🇫🇷 法国-巴黎 07 (原生)
+  - 🇫🇷 法国-Roubaix 06 (原生)
+  - 🇫🇷 法国-Roubaix 07 (原生)
   - 🇫🇷 法国-Strasbourg 08 (原生)
-  - 🇫🇷 法国-Wattrelos 09 (原生)
-  - 🇫🇷 法国-巴黎 10 (原生)
+  - 🇫🇷 法国-巴黎 09 (原生)
+  - 🇫🇷 法国-Wattrelos 10 (原生)
   - 🇫🇷 法国-巴黎 11 (原生)
-  - 🇫🇷 法国-Wattrelos 12 (原生)
-  - 🇫🇷 法国-巴黎 13 (原生)
+  - 🇫🇷 法国-巴黎 12 (原生)
+  - 🇫🇷 法国-Wattrelos 13 (原生)
   - 🇫🇷 法国-巴黎 14 (原生)
   - 🇫🇷 法国-巴黎 15 (原生)
   - 🇫🇷 法国-巴黎 16 (原生)
   - 🇫🇷 法国-巴黎 17 (原生)
-  - 🇫🇷 法国-巴黎 18 (原生)
+  - 🇫🇷 法国-Gravelines 18 (原生)
   - 🇫🇷 法国-巴黎 19 (原生)
   - 🇫🇷 法国-巴黎 20 (原生)
-  - 🇫🇷 法国-巴黎 21 (原生)
+  - 🇫🇷 法国-Roubaix 21 (原生)
   - 🇫🇷 法国-巴黎 22 (原生)
-  - 🇫🇷 法国-巴黎 23 (原生)
-  - 🇫🇷 法国-巴黎 24 (原生)
-  - 🇫🇷 法国-Gravelines 25 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

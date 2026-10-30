@@ -1,0 +1,30 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇬🇧 英国-City of London 01
+  type: trojan
+  server: en001.zestapp778.com
+  port: 29813
+  udp: true
+  password: 5t6i121em5lkmsmk
+  sni: en001.zestapp778.com
+  skip-cert-verify: true
+  network: tcp
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇬🇧 英国-City of London 01
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇬🇧 英国-City of London 01
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

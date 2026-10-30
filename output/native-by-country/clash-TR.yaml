@@ -13,32 +13,17 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: www.datadoghq.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   reality-opts:
     public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
     short-id: f46cd3ea3d1eb72d
   network: tcp
-- name: 🇹🇷 土耳其-Fatih 02 (原生)
-  type: vless
-  server: 206.1.101.85
-  port: 42654
-  udp: true
-  uuid: 893845c5-8e4a-48d5-8a85-622f5b7ea950
-  tls: true
-  servername: 206.1.101.85
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 206.1.101.85
-- name: 🇹🇷 土耳其-伊斯坦布尔 03 (原生)
+- name: 🇹🇷 土耳其-伊斯坦布尔 02 (原生)
   type: vless
   server: 177.3.208.65
   port: 443
   udp: true
   uuid: 4f34bc04-479c-49ba-91a8-6bb9ed15031c
-  packet-encoding: xudp
   tls: true
   servername: tgmansion.site
   client-fingerprint: firefox
@@ -53,14 +38,12 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇹🇷 土耳其-Yakuplu 01 (原生)
-  - 🇹🇷 土耳其-Fatih 02 (原生)
-  - 🇹🇷 土耳其-伊斯坦布尔 03 (原生)
+  - 🇹🇷 土耳其-伊斯坦布尔 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇹🇷 土耳其-Yakuplu 01 (原生)
-  - 🇹🇷 土耳其-Fatih 02 (原生)
-  - 🇹🇷 土耳其-伊斯坦布尔 03 (原生)
+  - 🇹🇷 土耳其-伊斯坦布尔 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
