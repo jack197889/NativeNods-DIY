@@ -4,42 +4,46 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 台湾-Chang-hua 01 (家宽)
-  type: anytls
-  server: er8u54dh.df6h451rh.xin
+- name: 🇭🇰 香港 01 (家宽)
+  type: hysteria2
+  server: b503b615-tm96o0-tne5x4-1rfon.hk3.hyhuawei.com
   port: 443
   udp: true
-  password: 0324fbc29561
-  sni: px.ads.linkedin.com
-  client-fingerprint: chrome
+  password: aed1cc24-351d-11ef-ba52-f23c9164ca5d
+  sni: b503b615-tm96o0-tne5x4-1rfon.hk3.hyhuawei.com
   skip-cert-verify: true
-- name: 🇮🇳 印度-Dhār 01 (家宽)
+- name: 🇰🇷 韩国-Yangcheon-gu 01 (家宽)
   type: vless
-  server: 122.176.216.52
+  server: 112.169.175.199
+  port: 31157
+  udp: true
+  uuid: bd2fb303-b4c7-49af-a8e3-5c6f11b005dd
+  packet-encoding: xudp
+  network: tcp
+- name: 🇺🇸 美国-洛杉矶 01 (家宽)
+  type: hysteria2
+  server: 155.117.19.17
   port: 443
   udp: true
-  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
-  tls: true
-  servername: app-6ada5023.deploy.meerasolution.com
-  client-fingerprint: chrome
+  password: 5fa748137b6d822308eea4611f474ad5
+  sni: www.bing.com
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
-    headers:
-      Host: app-6ada5023.deploy.meerasolution.com
+  obfs: salamander
+  obfs-password: a39ca173b57ac7021b08bf3e3de9f1f6
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇹🇼 台湾-Chang-hua 01 (家宽)
-  - 🇮🇳 印度-Dhār 01 (家宽)
+  - 🇭🇰 香港 01 (家宽)
+  - 🇰🇷 韩国-Yangcheon-gu 01 (家宽)
+  - 🇺🇸 美国-洛杉矶 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇹🇼 台湾-Chang-hua 01 (家宽)
-  - 🇮🇳 印度-Dhār 01 (家宽)
+  - 🇭🇰 香港 01 (家宽)
+  - 🇰🇷 韩国-Yangcheon-gu 01 (家宽)
+  - 🇺🇸 美国-洛杉矶 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

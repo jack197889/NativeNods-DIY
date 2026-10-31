@@ -4,31 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇳 印度-Dhār 01 (家宽)
+- name: 🇸🇬 新加坡 01
   type: vless
-  server: 122.176.216.52
+  server: us.huahua.wiki
   port: 443
   udp: true
-  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+  uuid: b9dd6833-9121-41fc-badc-ecbab952f606
+  flow: xtls-rprx-vision
   tls: true
-  servername: app-6ada5023.deploy.meerasolution.com
+  servername: www.apple.com
   client-fingerprint: chrome
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
-    headers:
-      Host: app-6ada5023.deploy.meerasolution.com
+  reality-opts:
+    public-key: mvgWVqCFiqMKlst2NpfN71iKmD1dFd2iTBEP929UozE
+    short-id: b91971fe98d55eb9
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇮🇳 印度-Dhār 01 (家宽)
+  - 🇸🇬 新加坡 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇮🇳 印度-Dhār 01 (家宽)
+  - 🇸🇬 新加坡 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

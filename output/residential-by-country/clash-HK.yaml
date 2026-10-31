@@ -4,25 +4,24 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 台湾-Chang-hua 01 (家宽)
-  type: anytls
-  server: er8u54dh.df6h451rh.xin
+- name: 🇭🇰 香港 01 (家宽)
+  type: hysteria2
+  server: b503b615-tm96o0-tne5x4-1rfon.hk3.hyhuawei.com
   port: 443
   udp: true
-  password: 0324fbc29561
-  sni: px.ads.linkedin.com
-  client-fingerprint: chrome
+  password: aed1cc24-351d-11ef-ba52-f23c9164ca5d
+  sni: b503b615-tm96o0-tne5x4-1rfon.hk3.hyhuawei.com
   skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇹🇼 台湾-Chang-hua 01 (家宽)
+  - 🇭🇰 香港 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇹🇼 台湾-Chang-hua 01 (家宽)
+  - 🇭🇰 香港 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -4,22 +4,15 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国-Loudwater 01 (原生)
-  type: trojan
-  server: 151.101.36.120
-  port: 443
+- name: 🇬🇧 英国-City of London 01 (原生)
+  type: vless
+  server: 23.81.36.148
+  port: 8080
   udp: true
-  password: MiTiVPN
-  sni: firefox.com
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  skip-cert-verify: true
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
   network: ws
   ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
-    headers:
-      Host: mitivpn--mitivpn.ac.ir
+    path: /
 - name: 🇬🇧 英国-伦敦 02 (原生)
   type: vless
   server: 144.48.11.97
@@ -29,7 +22,7 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: 144.48.11.97
-  client-fingerprint: chrome
+  client-fingerprint: random
   reality-opts:
     public-key: lmT0SFJL1A8_ariRWL65dhShaqFbpitjGanv7EFnoR0
     short-id: 725e6ea0
@@ -39,12 +32,12 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇬🇧 英国-Loudwater 01 (原生)
+  - 🇬🇧 英国-City of London 01 (原生)
   - 🇬🇧 英国-伦敦 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇬🇧 英国-Loudwater 01 (原生)
+  - 🇬🇧 英国-City of London 01 (原生)
   - 🇬🇧 英国-伦敦 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300

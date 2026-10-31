@@ -1,0 +1,35 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇩🇪 德国-法兰克福 01
+  type: vless
+  server: 144.31.140.125
+  port: 8443
+  udp: true
+  uuid: f5e70ce3-cfb4-4df1-b25c-d19bfae627c0
+  flow: xtls-rprx-vision
+  tls: true
+  servername: twitch.tv
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: wgyw3OxZw4HEzedNdY_eHdcVkrtT7GEeZSHfzcZ8iDo
+    short-id: 168c15efac9df5fd
+  network: tcp
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇩🇪 德国-法兰克福 01
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇩🇪 德国-法兰克福 01
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

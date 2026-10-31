@@ -4,30 +4,24 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇪 阿联酋-柏林 01
+- name: 🇰🇷 韩国-Yangcheon-gu 01 (家宽)
   type: vless
-  server: 140.225.208.50
-  port: 2083
+  server: 112.169.175.199
+  port: 31157
   udp: true
-  uuid: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
-  tls: true
-  servername: speedtestmark.com
-  client-fingerprint: random
-  network: ws
-  ws-opts:
-    path: /vless-ws
-    headers:
-      Host: speedtestmark.com
+  uuid: bd2fb303-b4c7-49af-a8e3-5c6f11b005dd
+  packet-encoding: xudp
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇦🇪 阿联酋-柏林 01
+  - 🇰🇷 韩国-Yangcheon-gu 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇦🇪 阿联酋-柏林 01
+  - 🇰🇷 韩国-Yangcheon-gu 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

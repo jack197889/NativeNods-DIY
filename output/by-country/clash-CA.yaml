@@ -5,15 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大-多伦多 01
-  type: vmess
-  server: 23.162.200.198
-  port: 18000
-  udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  network: tcp
-- name: 🇨🇦 加拿大-多伦多 02
   type: trojan
   server: ca001.zestapp778.com
   port: 46977
@@ -28,12 +19,10 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇨🇦 加拿大-多伦多 01
-  - 🇨🇦 加拿大-多伦多 02
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇨🇦 加拿大-多伦多 01
-  - 🇨🇦 加拿大-多伦多 02
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

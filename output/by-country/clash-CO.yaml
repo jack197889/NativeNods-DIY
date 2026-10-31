@@ -4,23 +4,23 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇵🇱 波兰-华沙 01 (原生)
-  type: vless
-  server: site.teslamotor.site
-  port: 20001
+- name: 🇨🇴 CO-Bogotá 01
+  type: ss
+  server: 149.104.107.41
+  port: 8090
   udp: true
-  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
-  network: tcp
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇵🇱 波兰-华沙 01 (原生)
+  - 🇨🇴 CO-Bogotá 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇵🇱 波兰-华沙 01 (原生)
+  - 🇨🇴 CO-Bogotá 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
