@@ -18,16 +18,31 @@ proxies:
     public-key: Z7B8VKvjAiBH93XEkHFWCVBfK8Mu5HTLtAwfr5LuYlk
     short-id: 00b0389a
   network: tcp
+- name: 🇯🇵 日本-Chiyoda City 02 (原生)
+  type: vless
+  server: 142.91.101.39
+  port: 627
+  udp: true
+  uuid: 30b40928-f431-4c83-bfed-44f1243d16ff
+  tls: true
+  servername: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇯🇵 日本-Shibuya City 01 (原生)
+  - 🇯🇵 日本-Chiyoda City 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇯🇵 日本-Shibuya City 01 (原生)
+  - 🇯🇵 日本-Chiyoda City 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

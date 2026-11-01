@@ -4,30 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇩🇪 德国-法兰克福 01
+- name: 🇵🇪 PE-Lima 01 (原生)
   type: vless
-  server: 144.31.140.125
-  port: 8443
+  server: 134.185.81.5
+  port: 47881
   udp: true
-  uuid: f5e70ce3-cfb4-4df1-b25c-d19bfae627c0
+  uuid: 59b203b2-b1bc-4e9c-a9e5-ccb8f691bf72
   flow: xtls-rprx-vision
   tls: true
-  servername: twitch.tv
+  servername: www.tesla.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: wgyw3OxZw4HEzedNdY_eHdcVkrtT7GEeZSHfzcZ8iDo
-    short-id: 168c15efac9df5fd
+    public-key: 6XmXX1QXGodmtqU37Zx9CDHnCnPtonRdq8ieLmt__g4
+    short-id: 38d72071
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇩🇪 德国-法兰克福 01
+  - 🇵🇪 PE-Lima 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇩🇪 德国-法兰克福 01
+  - 🇵🇪 PE-Lima 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

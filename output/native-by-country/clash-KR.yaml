@@ -4,13 +4,13 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大-多伦多 01
+- name: 🇰🇷 韩国-Yongin-si 01 (原生)
   type: trojan
-  server: ca001.zestapp778.com
-  port: 46977
+  server: ench-snet-app.w-ctrip.cn
+  port: 18572
   udp: true
-  password: 5t6i121em5lkmsmk
-  sni: ca001.zestapp778.com
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  sni: cm.g.doubleclick.net
   skip-cert-verify: true
   network: tcp
 proxy-groups:
@@ -18,11 +18,11 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇨🇦 加拿大-多伦多 01
+  - 🇰🇷 韩国-Yongin-si 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇨🇦 加拿大-多伦多 01
+  - 🇰🇷 韩国-Yongin-si 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -6,31 +6,20 @@ log-level: info
 proxies:
 - name: 🇫🇷 法国-Aubervilliers 01
   type: trojan
-  server: 108.61.177.57
+  server: fr001.zestapp778.com
   port: 16778
   udp: true
   password: 5t6i121em5lkmsmk
   sni: fr001.zestapp778.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
+  skip-cert-verify: true
   network: tcp
 - name: 🇫🇷 法国-巴黎 02
-  type: vless
-  server: 138.124.70.41
-  port: 14430
-  udp: true
-  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 138.124.70.41
-- name: 🇫🇷 法国-巴黎 03
   type: hysteria2
   server: 13.36.234.11
   port: 443
   udp: true
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 13.36.234.11
   skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
@@ -39,13 +28,11 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇫🇷 法国-Aubervilliers 01
   - 🇫🇷 法国-巴黎 02
-  - 🇫🇷 法国-巴黎 03
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇫🇷 法国-Aubervilliers 01
   - 🇫🇷 法国-巴黎 02
-  - 🇫🇷 法国-巴黎 03
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

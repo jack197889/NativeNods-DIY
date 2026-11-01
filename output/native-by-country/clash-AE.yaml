@@ -4,31 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇷 土耳其-伊斯坦布尔 01 (原生)
+- name: 🇦🇪 阿联酋-迪拜 01 (原生)
   type: vless
-  server: 177.3.208.65
+  server: 91.132.48.199
   port: 443
   udp: true
-  uuid: 4f34bc04-479c-49ba-91a8-6bb9ed15031c
-  packet-encoding: xudp
+  uuid: 0d607d84-0ae0-4b9c-a4f3-1766ab456e02
+  flow: xtls-rprx-vision
   tls: true
-  servername: tgmansion.site
+  servername: bunny.net
   client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /vless-tr
-    headers:
-      Host: tgmansion.site
+  reality-opts:
+    public-key: _0hmzeEAGEx6boacV3d-FrFGaFBYfdvJno39FxveJwM
+    short-id: e7c5f2a9
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇹🇷 土耳其-伊斯坦布尔 01 (原生)
+  - 🇦🇪 阿联酋-迪拜 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇹🇷 土耳其-伊斯坦布尔 01 (原生)
+  - 🇦🇪 阿联酋-迪拜 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

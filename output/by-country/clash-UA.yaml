@@ -6,18 +6,17 @@ log-level: info
 proxies:
 - name: 🇺🇦 乌克兰-Kharkiv 01
   type: vless
-  server: 104.253.216.227
+  server: staging.lastilhame.monster
   port: 443
   udp: true
-  uuid: 455cfdc6-9abf-4e40-863f-5ff6cc63457c
+  uuid: aded66f1-de12-4c3c-af9e-a21d6e7d9c96
   flow: xtls-rprx-vision
-  packet-encoding: xudp
   tls: true
-  servername: www.microsoft.com
-  client-fingerprint: firefox
+  servername: www.foxsports.com
+  client-fingerprint: chrome
   reality-opts:
     public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
-    short-id: 18e4d2d21241
+    short-id: 2a80364e93d9
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择

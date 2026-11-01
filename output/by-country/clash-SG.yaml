@@ -6,14 +6,14 @@ log-level: info
 proxies:
 - name: 🇸🇬 新加坡 01
   type: vless
-  server: us.huahua.wiki
+  server: 43.153.90.117
   port: 443
   udp: true
   uuid: b9dd6833-9121-41fc-badc-ecbab952f606
   flow: xtls-rprx-vision
   tls: true
   servername: www.apple.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   reality-opts:
     public-key: mvgWVqCFiqMKlst2NpfN71iKmD1dFd2iTBEP929UozE
     short-id: b91971fe98d55eb9

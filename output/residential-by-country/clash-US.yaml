@@ -4,26 +4,24 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国-洛杉矶 01 (家宽)
-  type: hysteria2
-  server: 155.117.19.17
-  port: 443
+- name: 🇺🇸 美国-华盛顿 01 (移动家宽)
+  type: trojan
+  server: us001.zestapp778.com
+  port: 57277
   udp: true
-  password: 5fa748137b6d822308eea4611f474ad5
-  sni: www.bing.com
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: a39ca173b57ac7021b08bf3e3de9f1f6
+  password: 5t6i121em5lkmsmk
+  sni: us001.zestapp778.com
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇺🇸 美国-洛杉矶 01 (家宽)
+  - 🇺🇸 美国-华盛顿 01 (移动家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇺🇸 美国-洛杉矶 01 (家宽)
+  - 🇺🇸 美国-华盛顿 01 (移动家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -6,22 +6,44 @@ log-level: info
 proxies:
 - name: 🇭🇰 香港 01 (家宽)
   type: hysteria2
-  server: b503b615-tm96o0-tne5x4-1rfon.hk3.hyhuawei.com
+  server: 9969bb96-tmm5c0-twuk0i-1hzyr.hk3.hyhuawei.com
   port: 443
   udp: true
-  password: aed1cc24-351d-11ef-ba52-f23c9164ca5d
-  sni: b503b615-tm96o0-tne5x4-1rfon.hk3.hyhuawei.com
+  password: 3be8cba8-b721-11ec-8b04-f23c91cfbbc9
+  sni: 9969bb96-tmm5c0-twuk0i-1hzyr.hk3.hyhuawei.com
+- name: 🇭🇰 香港 02 (家宽)
+  type: trojan
+  server: ench-snet-app.w-ctrip.cn
+  port: 53004
+  udp: true
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  sni: cm.g.doubleclick.net
   skip-cert-verify: true
+  network: tcp
+- name: 🇭🇰 香港 03 (家宽)
+  type: hysteria2
+  server: ufcaxsoooxez3p6h.5273ef7a.e.yuetong.online
+  port: 19310
+  udp: true
+  password: 171a4d7a-a1f0-499c-9fc5-3915c8b1f47b
+  sni: srv-l7o.yuetong.online
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: 4mcqiPwfROfrKkIKx1WO32Va
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇭🇰 香港 01 (家宽)
+  - 🇭🇰 香港 02 (家宽)
+  - 🇭🇰 香港 03 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇭🇰 香港 01 (家宽)
+  - 🇭🇰 香港 02 (家宽)
+  - 🇭🇰 香港 03 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -4,23 +4,23 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇴 CO-Bogotá 01
+- name: 🇸🇨 SC-洛杉矶 01
   type: ss
-  server: 149.104.107.41
-  port: 8090
+  server: 45.207.207.25
+  port: 443
   udp: true
   cipher: aes-256-gcm
-  password: PCnnH6SQSnfoS27
+  password: gj1+XKulKV0nmw6IThckOkkJh5DSM7+C
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇨🇴 CO-Bogotá 01
+  - 🇸🇨 SC-洛杉矶 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇨🇴 CO-Bogotá 01
+  - 🇸🇨 SC-洛杉矶 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

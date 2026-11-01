@@ -1,0 +1,37 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇱🇹 LT-Šiauliai 01 (原生)
+  type: vless
+  server: 185.178.208.167
+  port: 443
+  udp: true
+  uuid: 2232d904-8e6a-4202-8240-6efd8aec02e9
+  tls: true
+  servername: lorettmay.top
+  alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /blog/posts
+    headers:
+      Host: lorettmay.top
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇱🇹 LT-Šiauliai 01 (原生)
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇱🇹 LT-Šiauliai 01 (原生)
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择
