@@ -4,27 +4,23 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇳 中国大陆-Beijing 01 (原生)
-  type: vmess
-  server: 120.48.133.162
-  port: 10086
+- name: 🇲🇾 马来西亚-Semenyih 01 (原生)
+  type: ss
+  server: 58.152.58.193
+  port: 40006
   udp: true
-  uuid: a8d931b0-6c27-428b-8d86-c20efea3dba7
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
+  cipher: chacha20-ietf-poly1305
+  password: 28789988-887e-4e41-83cd-27bbfb7999ad
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇨🇳 中国大陆-Beijing 01 (原生)
+  - 🇲🇾 马来西亚-Semenyih 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇨🇳 中国大陆-Beijing 01 (原生)
+  - 🇲🇾 马来西亚-Semenyih 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

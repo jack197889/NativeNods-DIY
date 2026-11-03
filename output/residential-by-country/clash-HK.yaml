@@ -6,30 +6,26 @@ log-level: info
 proxies:
 - name: 🇭🇰 香港 01 (家宽)
   type: hysteria2
-  server: 9969bb96-tmm5c0-twuk0i-1hzyr.hk3.hyhuawei.com
+  server: a91af2af-tmm5c0-twnp5a-ahsb.hk3.hyhuawei.com
   port: 443
   udp: true
-  password: 3be8cba8-b721-11ec-8b04-f23c91cfbbc9
-  sni: 9969bb96-tmm5c0-twuk0i-1hzyr.hk3.hyhuawei.com
+  password: 2e42c1ee-aaaa-11ec-bb74-f23c9164ca5d
+  sni: a91af2af-tmm5c0-twnp5a-ahsb.hk3.hyhuawei.com
 - name: 🇭🇰 香港 02 (家宽)
-  type: trojan
-  server: ench-snet-app.w-ctrip.cn
-  port: 53004
-  udp: true
-  password: b17e9b52db9623bd6c16eea3d7adb5b3
-  sni: cm.g.doubleclick.net
-  skip-cert-verify: true
-  network: tcp
-- name: 🇭🇰 香港 03 (家宽)
   type: hysteria2
-  server: ufcaxsoooxez3p6h.5273ef7a.e.yuetong.online
-  port: 19310
+  server: d0f180c2-tmm5c0-tphvvu-gacy.nw4.hyhuawei.com
+  port: 443
   udp: true
-  password: 171a4d7a-a1f0-499c-9fc5-3915c8b1f47b
-  sni: srv-l7o.yuetong.online
+  password: 20f87b02-0eaa-11eb-8684-f23c913c8d2b
+  sni: d0f180c2-tmm5c0-tphvvu-gacy.nw4.hyhuawei.com
+- name: 🇭🇰 香港 03 (家宽)
+  type: anytls
+  server: 56481.df6h451rh.xin
+  port: 443
+  udp: true
+  password: 0324fbc29561
+  sni: images.ctfassets.net
   skip-cert-verify: true
-  obfs: salamander
-  obfs-password: 4mcqiPwfROfrKkIKx1WO32Va
 proxy-groups:
 - name: 🚀 节点选择
   type: select

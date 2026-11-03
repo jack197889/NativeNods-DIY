@@ -4,77 +4,51 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国-华盛顿 01 (移动家宽)
-  type: trojan
-  server: us001.zestapp778.com
-  port: 57277
-  udp: true
-  password: 5t6i121em5lkmsmk
-  sni: us001.zestapp778.com
-  network: tcp
 - name: 🇭🇰 香港 01 (家宽)
   type: hysteria2
-  server: 9969bb96-tmm5c0-twuk0i-1hzyr.hk3.hyhuawei.com
+  server: a91af2af-tmm5c0-twnp5a-ahsb.hk3.hyhuawei.com
   port: 443
   udp: true
-  password: 3be8cba8-b721-11ec-8b04-f23c91cfbbc9
-  sni: 9969bb96-tmm5c0-twuk0i-1hzyr.hk3.hyhuawei.com
+  password: 2e42c1ee-aaaa-11ec-bb74-f23c9164ca5d
+  sni: a91af2af-tmm5c0-twnp5a-ahsb.hk3.hyhuawei.com
 - name: 🇭🇰 香港 02 (家宽)
-  type: trojan
-  server: ench-snet-app.w-ctrip.cn
-  port: 53004
-  udp: true
-  password: b17e9b52db9623bd6c16eea3d7adb5b3
-  sni: cm.g.doubleclick.net
-  skip-cert-verify: true
-  network: tcp
-- name: 🇹🇼 台湾-Yuanlin 01 (家宽)
-  type: trojan
-  server: ench-snet-app.w-ctrip.cn
-  port: 45502
-  udp: true
-  password: b17e9b52db9623bd6c16eea3d7adb5b3
-  sni: ench-snet-app.w-ctrip.cn
-  skip-cert-verify: true
-  network: tcp
-- name: 🇹🇼 台湾-Yuanlin 02 (家宽)
-  type: trojan
-  server: ench-snet-app.w-ctrip.cn
-  port: 45503
-  udp: true
-  password: b17e9b52db9623bd6c16eea3d7adb5b3
-  sni: cm.g.doubleclick.net
-  skip-cert-verify: true
-  network: tcp
-- name: 🇭🇰 香港 03 (家宽)
   type: hysteria2
-  server: ufcaxsoooxez3p6h.5273ef7a.e.yuetong.online
-  port: 19310
+  server: d0f180c2-tmm5c0-tphvvu-gacy.nw4.hyhuawei.com
+  port: 443
   udp: true
-  password: 171a4d7a-a1f0-499c-9fc5-3915c8b1f47b
-  sni: srv-l7o.yuetong.online
+  password: 20f87b02-0eaa-11eb-8684-f23c913c8d2b
+  sni: d0f180c2-tmm5c0-tphvvu-gacy.nw4.hyhuawei.com
+- name: 🇹🇼 台湾-Changhua 01 (家宽)
+  type: anytls
+  server: 684616s4.df6h451rh.xin
+  port: 443
+  udp: true
+  password: 0324fbc29561
+  sni: 684616s4.df6h451rh.xin
   skip-cert-verify: true
-  obfs: salamander
-  obfs-password: 4mcqiPwfROfrKkIKx1WO32Va
+- name: 🇭🇰 香港 03 (家宽)
+  type: anytls
+  server: 56481.df6h451rh.xin
+  port: 443
+  udp: true
+  password: 0324fbc29561
+  sni: images.ctfassets.net
+  skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇺🇸 美国-华盛顿 01 (移动家宽)
   - 🇭🇰 香港 01 (家宽)
   - 🇭🇰 香港 02 (家宽)
-  - 🇹🇼 台湾-Yuanlin 01 (家宽)
-  - 🇹🇼 台湾-Yuanlin 02 (家宽)
+  - 🇹🇼 台湾-Changhua 01 (家宽)
   - 🇭🇰 香港 03 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇺🇸 美国-华盛顿 01 (移动家宽)
   - 🇭🇰 香港 01 (家宽)
   - 🇭🇰 香港 02 (家宽)
-  - 🇹🇼 台湾-Yuanlin 01 (家宽)
-  - 🇹🇼 台湾-Yuanlin 02 (家宽)
+  - 🇹🇼 台湾-Changhua 01 (家宽)
   - 🇭🇰 香港 03 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300

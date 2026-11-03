@@ -4,29 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇪 EE-Tallinn 01 (原生)
+- name: 🇭🇺 HU-布达佩斯 01 (原生)
   type: vless
-  server: ee.h1cloud.net
-  port: 25895
+  server: 172.67.131.125
+  port: 2083
   udp: true
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+  uuid: f418674e-f518-4318-8ff9-e10000000046
   tls: true
-  servername: www.samsung.com
+  servername: smart-edge-424.arti98399-1905.workers.dev
   client-fingerprint: chrome
-  reality-opts:
-    public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
-    short-id: a73f0410d728c823
-  network: tcp
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: smart-edge-424.arti98399-1905.workers.dev
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇪🇪 EE-Tallinn 01 (原生)
+  - 🇭🇺 HU-布达佩斯 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇪🇪 EE-Tallinn 01 (原生)
+  - 🇭🇺 HU-布达佩斯 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

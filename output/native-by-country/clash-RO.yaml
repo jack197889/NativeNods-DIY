@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚-布加勒斯特 01 (原生)
-  type: vless
-  server: 178.83.45.226
-  port: 2052
-  udp: true
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
-  network: tcp
-- name: 🇷🇴 罗马尼亚-布加勒斯特 02 (原生)
   type: hysteria2
   server: hy2-new.aspidnet.xyz
   port: 443
@@ -21,16 +14,16 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: c1b4086fea89914496c7e10967a419216566
-- name: 🇷🇴 罗马尼亚-Suceava 03 (原生)
+- name: 🇷🇴 罗马尼亚-Suceava 02 (原生)
   type: vless
-  server: du-rov.secureservice.top
+  server: 5.42.99.64
   port: 8443
   udp: true
   uuid: c53ea5e9-ed8b-4990-805d-7f1d6451426c
   flow: xtls-rprx-vision
   tls: true
   servername: du-rov.secureservice.top
-  client-fingerprint: chrome
+  client-fingerprint: random
   reality-opts:
     public-key: fSVfR9NB-6J6smrZlavi0GWd8JfDh0aXuEkKbtuFzUI
     short-id: 3cbc3d737fb9c4af
@@ -41,14 +34,12 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇷🇴 罗马尼亚-布加勒斯特 01 (原生)
-  - 🇷🇴 罗马尼亚-布加勒斯特 02 (原生)
-  - 🇷🇴 罗马尼亚-Suceava 03 (原生)
+  - 🇷🇴 罗马尼亚-Suceava 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇷🇴 罗马尼亚-布加勒斯特 01 (原生)
-  - 🇷🇴 罗马尼亚-布加勒斯特 02 (原生)
-  - 🇷🇴 罗马尼亚-Suceava 03 (原生)
+  - 🇷🇴 罗马尼亚-Suceava 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

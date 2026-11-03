@@ -4,30 +4,33 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇸 西班牙-伦敦 01
+- name: 🇩🇪 德国-法兰克福 01
   type: vless
-  server: 83.147.18.3
+  server: medium.com
   port: 443
   udp: true
-  uuid: 9f61cdf4-810d-4052-bbc7-2da0c8e20104
-  flow: xtls-rprx-vision
+  uuid: f2a73750-3087-48ff-a763-1348c15dce68
   tls: true
-  servername: www.cloudflare.com
+  servername: rAyAn-007.mAxImA.DpDnS.OrG
   client-fingerprint: chrome
-  reality-opts:
-    public-key: 3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA
-    short-id: fd8cf7e1173f0edb
-  network: tcp
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rAyAn-007.mAxImA.DpDnS.OrG
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇪🇸 西班牙-伦敦 01
+  - 🇩🇪 德国-法兰克福 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇪🇸 西班牙-伦敦 01
+  - 🇩🇪 德国-法兰克福 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

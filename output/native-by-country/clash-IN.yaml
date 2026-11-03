@@ -4,30 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇦 乌克兰-Kharkiv 01
+- name: 🇮🇳 印度-Dhār 01 (原生)
   type: vless
-  server: staging.lastilhame.monster
+  server: 122.176.216.52
   port: 443
   udp: true
-  uuid: aded66f1-de12-4c3c-af9e-a21d6e7d9c96
-  flow: xtls-rprx-vision
+  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
   tls: true
-  servername: www.foxsports.com
+  servername: app-6ada5023.deploy.meerasolution.com
   client-fingerprint: chrome
-  reality-opts:
-    public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
-    short-id: 2a80364e93d9
-  network: tcp
+  network: ws
+  ws-opts:
+    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+    headers:
+      Host: app-6ada5023.deploy.meerasolution.com
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇺🇦 乌克兰-Kharkiv 01
+  - 🇮🇳 印度-Dhār 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇺🇦 乌克兰-Kharkiv 01
+  - 🇮🇳 印度-Dhār 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

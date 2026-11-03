@@ -13,7 +13,7 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: www.tesla.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   reality-opts:
     public-key: f6Tj8-uvWsLv3V-lGLuPciArp5oKqUImBg-U7-WJ-0A
     short-id: bb82c8
@@ -25,6 +25,14 @@ proxies:
   udp: true
   uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
   network: tcp
+- name: 🇻🇳 越南-Trung Phụng 03 (原生)
+  type: vless
+  server: 150.95.109.109
+  port: 2086
+  udp: true
+  uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
+  packet-encoding: xudp
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -32,11 +40,13 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇻🇳 越南-河内 01 (原生)
   - 🇻🇳 越南-河内 02 (原生)
+  - 🇻🇳 越南-Trung Phụng 03 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇻🇳 越南-河内 01 (原生)
   - 🇻🇳 越南-河内 02 (原生)
+  - 🇻🇳 越南-Trung Phụng 03 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

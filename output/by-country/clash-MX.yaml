@@ -11,16 +11,20 @@ proxies:
   udp: true
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: connectwithtopemployersandfindidealjobs.com
-  skip-cert-verify: true
   network: tcp
 - name: 🇲🇽 墨西哥-墨西哥城 02
-  type: trojan
-  server: 149.104.87.33
-  port: 15083
+  type: vless
+  server: 147.78.1.253
+  port: 443
   udp: true
-  password: 5t6i121em5lkmsmk
-  sni: mx001.zestapp778.com
+  uuid: 39a390af-1f90-4c0e-89e4-4e2023732e4b
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
   client-fingerprint: chrome
+  reality-opts:
+    public-key: TefL2KtNcNLPmUY8TKlu5pA7ffipqgmbBN6gpyzyklk
+    short-id: ''
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择

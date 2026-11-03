@@ -5,20 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 01 (原生)
-  type: vless
-  server: sgp.huahua.wiki
-  port: 443
-  udp: true
-  uuid: aa83d161-1169-494a-a57e-c8d8b327f051
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 5KO-p5u_N5i11i_DC49SsSKTW1XvTiYMhg-eMzj3HTw
-    short-id: 0417be28beffdfc1
-  network: tcp
-- name: 🇸🇬 新加坡 02 (原生)
   type: vmess
   server: wjofHsQtEuEywxEq.v.3dns.vip
   port: 443
@@ -33,7 +19,7 @@ proxies:
     path: /ws-vmess
     headers:
       Host: wjofHsQtEuEywxEq.v.3dns.vip
-- name: 🇸🇬 新加坡 03 (原生)
+- name: 🇸🇬 新加坡 02 (原生)
   type: vless
   server: 147.93.173.45
   port: 10444
@@ -54,13 +40,11 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇸🇬 新加坡 01 (原生)
   - 🇸🇬 新加坡 02 (原生)
-  - 🇸🇬 新加坡 03 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇸🇬 新加坡 01 (原生)
   - 🇸🇬 新加坡 02 (原生)
-  - 🇸🇬 新加坡 03 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

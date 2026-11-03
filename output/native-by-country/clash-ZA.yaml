@@ -4,26 +4,23 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇪 阿联酋-Dronten 01
-  type: hysteria2
-  server: 130.49.161.70
+- name: 🇿🇦 南非-约翰内斯堡 01 (原生)
+  type: ss
+  server: 102.37.156.224
   port: 443
   udp: true
-  password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
-  sni: hy2.aspidnet.xyz
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇦🇪 阿联酋-Dronten 01
+  - 🇿🇦 南非-约翰内斯堡 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇦🇪 阿联酋-Dronten 01
+  - 🇿🇦 南非-约翰内斯堡 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

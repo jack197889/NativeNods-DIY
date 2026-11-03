@@ -4,36 +4,24 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 台湾-Yuanlin 01 (家宽)
-  type: trojan
-  server: ench-snet-app.w-ctrip.cn
-  port: 45502
+- name: 🇹🇼 台湾-Changhua 01 (家宽)
+  type: anytls
+  server: 684616s4.df6h451rh.xin
+  port: 443
   udp: true
-  password: b17e9b52db9623bd6c16eea3d7adb5b3
-  sni: ench-snet-app.w-ctrip.cn
+  password: 0324fbc29561
+  sni: 684616s4.df6h451rh.xin
   skip-cert-verify: true
-  network: tcp
-- name: 🇹🇼 台湾-Yuanlin 02 (家宽)
-  type: trojan
-  server: ench-snet-app.w-ctrip.cn
-  port: 45503
-  udp: true
-  password: b17e9b52db9623bd6c16eea3d7adb5b3
-  sni: cm.g.doubleclick.net
-  skip-cert-verify: true
-  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇹🇼 台湾-Yuanlin 01 (家宽)
-  - 🇹🇼 台湾-Yuanlin 02 (家宽)
+  - 🇹🇼 台湾-Changhua 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇹🇼 台湾-Yuanlin 01 (家宽)
-  - 🇹🇼 台湾-Yuanlin 02 (家宽)
+  - 🇹🇼 台湾-Changhua 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

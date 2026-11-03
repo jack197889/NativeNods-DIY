@@ -5,6 +5,30 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 香港 01 (原生)
+  type: hysteria2
+  server: 202.146.222.29
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: "https://t.me/wangcai2ð\x9F\x87ð\x9F\x87"
+  skip-cert-verify: true
+- name: 🇭🇰 香港 02 (原生)
+  type: hysteria2
+  server: 202.146.222.89
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https://t.me/clashv8\u0001f1e8\u0001f1f3
+  skip-cert-verify: true
+- name: 🇭🇰 香港 03 (原生)
+  type: hysteria2
+  server: 202.146.222.174
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https%3a%2f%2ft.me%2fwangcai2
+  skip-cert-verify: true
+- name: 🇭🇰 香港 04 (原生)
   type: vless
   server: 165.154.63.139
   port: 443
@@ -18,56 +42,13 @@ proxies:
     public-key: AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ
     short-id: ca4aedd4
   network: tcp
-- name: 🇭🇰 香港 02 (原生)
-  type: hysteria2
-  server: 202.146.222.29
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2üá®üá≥
-  skip-cert-verify: true
-- name: 🇭🇰 香港 03 (原生)
-  type: hysteria2
-  server: 202.146.222.174
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2fwangcai2
-  skip-cert-verify: true
-- name: 🇭🇰 香港 04 (原生)
-  type: hysteria2
-  server: 202.146.222.89
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/clashv8🇨🇳
-  skip-cert-verify: true
 - name: 🇭🇰 香港 05 (原生)
-  type: trojan
-  server: ench-snet-app.w-ctrip.cn
-  port: 43638
-  udp: true
-  password: b17e9b52db9623bd6c16eea3d7adb5b3
-  sni: cm.g.doubleclick.net
-  skip-cert-verify: true
-  network: tcp
-- name: 🇭🇰 香港 06 (原生)
-  type: trojan
-  server: hik160.pacemakere.com
-  port: 20014
-  udp: true
-  password: 778f5385b4254495
-  sni: hik160.pacemakere.com
-  skip-cert-verify: true
-  network: tcp
-- name: 🇭🇰 香港 07 (原生)
   type: hysteria2
   server: 152.32.254.68
   port: 5010
   udp: true
   password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ
-  sni: 127.0.0.1
-  skip-cert-verify: true
+  sni: nas.aizhzo.com
   obfs: salamander
   obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
 proxy-groups:
@@ -80,8 +61,6 @@ proxy-groups:
   - 🇭🇰 香港 03 (原生)
   - 🇭🇰 香港 04 (原生)
   - 🇭🇰 香港 05 (原生)
-  - 🇭🇰 香港 06 (原生)
-  - 🇭🇰 香港 07 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -90,8 +69,6 @@ proxy-groups:
   - 🇭🇰 香港 03 (原生)
   - 🇭🇰 香港 04 (原生)
   - 🇭🇰 香港 05 (原生)
-  - 🇭🇰 香港 06 (原生)
-  - 🇭🇰 香港 07 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
