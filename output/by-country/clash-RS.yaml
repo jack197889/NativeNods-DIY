@@ -4,30 +4,27 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇱🇹 LT-Šiauliai 01 (原生)
+- name: 🇷🇸 RS-Belgrade 01
   type: vless
-  server: 185.178.208.167
-  port: 443
+  server: chat.openai.com
+  port: 8880
   udp: true
-  uuid: 2232d904-8e6a-4202-8240-6efd8aec02e9
-  tls: true
-  servername: lorettmay.top
-  client-fingerprint: firefox
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   network: ws
   ws-opts:
-    path: /blog/posts
+    path: /
     headers:
-      Host: lorettmay.top
+      Host: vms.lifetime29.workers.dev
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇱🇹 LT-Šiauliai 01 (原生)
+  - 🇷🇸 RS-Belgrade 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇱🇹 LT-Šiauliai 01 (原生)
+  - 🇷🇸 RS-Belgrade 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -33,6 +33,20 @@ proxies:
     public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
     short-id: 8debcf36f1cc69ff
   network: tcp
+- name: 🇸🇬 新加坡 03 (原生)
+  type: vless
+  server: 162.4.172.55
+  port: 443
+  udp: true
+  uuid: 780fab9a-e5be-470c-8c31-51640779ba2c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.samsung.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ZVMW8jnFE_zxUQjSsZVDaqOY13RGrdnHivXWdXxFhxg
+    short-id: d7fd
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -40,11 +54,13 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇸🇬 新加坡 01 (原生)
   - 🇸🇬 新加坡 02 (原生)
+  - 🇸🇬 新加坡 03 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇸🇬 新加坡 01 (原生)
   - 🇸🇬 新加坡 02 (原生)
+  - 🇸🇬 新加坡 03 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -5,20 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国-法兰克福 01
-  type: vless
-  server: medium.com
-  port: 443
+  type: trojan
+  server: 188.114.96.3
+  port: 2096
   udp: true
-  uuid: f2a73750-3087-48ff-a763-1348c15dce68
-  tls: true
-  servername: rAyAn-007.mAxImA.DpDnS.OrG
+  password: vP!XvZBNdw.e*ddSgmH!
+  sni: n0q4XPrJ2D4X4PRCQ29L8JKCZd0.pAGES.dev
+  alpn:
+  - http/1.1
   client-fingerprint: chrome
-  skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
+    path: /tr/ZFttmjSqvda5ohOQ
     headers:
-      Host: rAyAn-007.mAxImA.DpDnS.OrG
+      Host: n0q4xprj2d4x4prcq29l8jkczd0.pages.dev
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
 proxy-groups:

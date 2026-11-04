@@ -6,12 +6,29 @@ log-level: info
 proxies:
 - name: 🇳🇱 荷兰-阿姆斯特丹 01
   type: vless
-  server: 5.149.249.94
+  server: medium.com
   port: 443
   udp: true
-  uuid: ed77c1dc-3df2-412b-b855-49286f979c21
+  uuid: f2a73750-3087-48ff-a763-1348c15dce68
   tls: true
-  servername: nlb.kosmosapp.net
+  servername: rAyAn-007.mAxImA.DpDnS.OrG
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rAyAn-007.mAxImA.DpDnS.OrG
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇳🇱 荷兰-阿姆斯特丹 02
+  type: vless
+  server: 5.149.248.151
+  port: 443
+  udp: true
+  uuid: 8b3241d8-0d8e-4f8b-a43a-052a80957840
+  tls: true
+  servername: nla.kosmosapp.net
   client-fingerprint: firefox
   reality-opts:
     public-key: pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ
@@ -19,116 +36,62 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: neurex
-- name: 🇳🇱 荷兰-Haarlem 02
+- name: 🇳🇱 荷兰-阿姆斯特丹 03
   type: vless
-  server: 51.158.206.86
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  network: tcp
-- name: 🇳🇱 荷兰-Haarlem 03
-  type: vless
-  server: 51.158.206.34
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  network: tcp
-- name: 🇳🇱 荷兰-阿姆斯特丹 04
-  type: vless
-  server: 152.70.58.201
+  server: 5.149.249.94
   port: 443
   udp: true
-  uuid: 8892e34a-339b-4526-b88d-cf68c516231c
+  uuid: ed77c1dc-3df2-412b-b855-49286f979c21
+  tls: true
+  servername: nlb.kosmosapp.net
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ
+    short-id: 27350908de933e09
+  network: grpc
+  grpc-opts:
+    grpc-service-name: neurex
+- name: 🇳🇱 荷兰-阿姆斯特丹 04
+  type: vless
+  server: 86.54.28.75
+  port: 443
+  udp: true
+  uuid: 44ae52b9-76fc-444d-8e43-186b4384b80a
   flow: xtls-rprx-vision
   tls: true
-  servername: www.nvidia.com
-  client-fingerprint: firefox
+  servername: www.apple.com
+  client-fingerprint: random
   reality-opts:
-    public-key: Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28
-    short-id: 52c723e0fad49689
+    public-key: PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU
+    short-id: 1d86d17709852910
   network: tcp
 - name: 🇳🇱 荷兰-Haarlem 05
+  type: hysteria2
+  server: 51.15.16.68
+  port: 24050
+  udp: true
+  password: capadm54312235:JdypYweuDQOrFqWTcFAL6aFq
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: ypvL8T4HFIBLoH8q
+- name: 🇳🇱 荷兰-Haarlem 06
   type: vless
-  server: 51.158.206.25
+  server: 51.158.206.103
   port: 23576
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
   tls: true
   servername: fuck.rkn
-  client-fingerprint: firefox
+  alpn:
+  - networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-
+  client-fingerprint: chrome
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   network: tcp
-- name: 🇳🇱 荷兰-Oude Meer 06
-  type: vless
-  server: 45.91.202.32
-  port: 8444
-  udp: true
-  uuid: 35c9f200-7520-4005-b78e-f8a2fb9f68f7
-  tls: true
-  servername: nl15.meshbeat.online
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /api/v1/devices/02585a2d89/telemetry
-    headers:
-      Host: nl15.meshbeat.online
 - name: 🇳🇱 荷兰-Haarlem 07
-  type: vless
-  server: sc-thenetherlands2.09vpn.com
-  port: 80
-  udp: true
-  uuid: e73df646-1f62-41bf-8c50-653497d603d0
-  network: ws
-  ws-opts:
-    path: /vless/
-    headers:
-      Host: SC-TheNetherlands2.09vpn.com
-- name: 🇳🇱 荷兰-Haarlem 08
-  type: vless
-  server: 51.15.16.68
-  port: 2053
-  udp: true
-  uuid: 7d0fd363-16d2-43ce-9d6d-ed2c15d2cb7c
-  packet-encoding: xudp
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: Zotx4F9CI6_q9yeKCKIHDjwzCv_Aq7WSo7N0Zc1A6Sc
-    short-id: 3c99c85cbb6b3b44
-  network: tcp
-- name: 🇳🇱 荷兰-阿姆斯特丹 09
-  type: vless
-  server: 177.177.215.45
-  port: 444
-  udp: true
-  uuid: 254f28cb-d0c1-41e9-a06b-f2155213ff04
-  flow: xtls-rprx-vision
-  tls: true
-  servername: ams2.shtil.io
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  network: tcp
-- name: 🇳🇱 荷兰-Haarlem 10
   type: vless
   server: 51.158.206.80
   port: 23576
@@ -142,9 +105,9 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   network: tcp
-- name: 🇳🇱 荷兰-Haarlem 11
+- name: 🇳🇱 荷兰-Haarlem 08
   type: vless
-  server: 51.158.206.93
+  server: 51.158.206.26
   port: 23576
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
@@ -156,19 +119,17 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   network: tcp
-- name: 🇳🇱 荷兰-Haarlem 12
+- name: 🇳🇱 荷兰-阿姆斯特丹 09
   type: vless
-  server: 51.158.206.96
-  port: 23576
+  server: 177.177.215.45
+  port: 444
   udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  uuid: 254f28cb-d0c1-41e9-a06b-f2155213ff04
   flow: xtls-rprx-vision
   tls: true
-  servername: fuck.rkn
+  servername: ams2.shtil.io
   client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
+  skip-cert-verify: true
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
@@ -176,32 +137,26 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇳🇱 荷兰-阿姆斯特丹 01
-  - 🇳🇱 荷兰-Haarlem 02
-  - 🇳🇱 荷兰-Haarlem 03
+  - 🇳🇱 荷兰-阿姆斯特丹 02
+  - 🇳🇱 荷兰-阿姆斯特丹 03
   - 🇳🇱 荷兰-阿姆斯特丹 04
   - 🇳🇱 荷兰-Haarlem 05
-  - 🇳🇱 荷兰-Oude Meer 06
+  - 🇳🇱 荷兰-Haarlem 06
   - 🇳🇱 荷兰-Haarlem 07
   - 🇳🇱 荷兰-Haarlem 08
   - 🇳🇱 荷兰-阿姆斯特丹 09
-  - 🇳🇱 荷兰-Haarlem 10
-  - 🇳🇱 荷兰-Haarlem 11
-  - 🇳🇱 荷兰-Haarlem 12
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇳🇱 荷兰-阿姆斯特丹 01
-  - 🇳🇱 荷兰-Haarlem 02
-  - 🇳🇱 荷兰-Haarlem 03
+  - 🇳🇱 荷兰-阿姆斯特丹 02
+  - 🇳🇱 荷兰-阿姆斯特丹 03
   - 🇳🇱 荷兰-阿姆斯特丹 04
   - 🇳🇱 荷兰-Haarlem 05
-  - 🇳🇱 荷兰-Oude Meer 06
+  - 🇳🇱 荷兰-Haarlem 06
   - 🇳🇱 荷兰-Haarlem 07
   - 🇳🇱 荷兰-Haarlem 08
   - 🇳🇱 荷兰-阿姆斯特丹 09
-  - 🇳🇱 荷兰-Haarlem 10
-  - 🇳🇱 荷兰-Haarlem 11
-  - 🇳🇱 荷兰-Haarlem 12
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

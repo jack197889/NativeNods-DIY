@@ -1,8 +1,8 @@
 # 🚀 免费节点自动测活订阅池 (含真实家宽/原生IP甄选)
 
 > ⚡ **真实测活**: 每个节点都通过 sing-box 建立隧道，并访问 generate_204 验证。
-> 🕒 **最近更新**: `2026-11-03 02:19:30 UTC`
-> 📌 **精选节点总数**: `182` 个 (家宽 `4` | 原生 `128` | 普通精选 `50`)
+> 🕒 **最近更新**: `2026-11-04 00:40:55 UTC`
+> 📌 **精选节点总数**: `205` 个 (家宽 `7` | 原生 `148` | 普通精选 `50`)
 > 🏠 家宽 / 原生节点全部保留；普通节点保留延迟最低的前 50 个；相同出口 IP 只保留一个。
 
 ## 📎 订阅链接
@@ -21,41 +21,47 @@ sing-box 客户端配置 (1.12+): `https://raw.githubusercontent.com/jack197889/
 
 ### 🏠 家宽
 - 🇭🇰 香港: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/residential-by-country/HK.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/residential-by-country/clash-HK.yaml)
+- 🇹🇷 土耳其: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/residential-by-country/TR.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/residential-by-country/clash-TR.yaml)
 - 🇹🇼 台湾: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/residential-by-country/TW.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/residential-by-country/clash-TW.yaml)
 
 ### 🧬 原生
 - 🇧🇾 BY: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/BY.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-BY.yaml)
 - 🇨🇦 加拿大: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/CA.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-CA.yaml)
+- 🇨🇳 中国大陆: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/CN.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-CN.yaml)
 - 🇩🇪 德国: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/DE.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-DE.yaml)
 - 🇫🇷 法国: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/FR.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-FR.yaml)
 - 🇬🇧 英国: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/GB.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-GB.yaml)
 - 🇭🇰 香港: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/HK.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-HK.yaml)
-- 🇭🇺 HU: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/HU.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-HU.yaml)
 - 🇮🇳 印度: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/IN.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-IN.yaml)
+- 🇮🇹 意大利: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/IT.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-IT.yaml)
 - 🇯🇵 日本: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/JP.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-JP.yaml)
-- 🇱🇹 LT: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/LT.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-LT.yaml)
 - 🇲🇾 马来西亚: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/MY.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-MY.yaml)
 - 🇳🇱 荷兰: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/NL.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-NL.yaml)
 - 🇵🇪 PE: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/PE.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-PE.yaml)
+- 🇵🇱 波兰: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/PL.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-PL.yaml)
 - 🇷🇴 罗马尼亚: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/RO.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-RO.yaml)
 - 🇷🇺 俄罗斯: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/RU.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-RU.yaml)
 - 🇸🇬 新加坡: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/SG.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-SG.yaml)
+- 🇹🇷 土耳其: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/TR.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-TR.yaml)
 - 🇹🇼 台湾: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/TW.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-TW.yaml)
-- 🇺🇦 乌克兰: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/UA.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-UA.yaml)
 - 🇺🇸 美国: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/US.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-US.yaml)
 - 🇻🇳 越南: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/VN.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-VN.yaml)
 - 🇿🇦 南非: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/ZA.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/native-by-country/clash-ZA.yaml)
 
 ### ⚡ 普通精选
+- 🇧🇷 巴西: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/BR.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/clash-BR.yaml)
 - 🇨🇦 加拿大: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/CA.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/clash-CA.yaml)
 - 🇨🇴 CO: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/CO.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/clash-CO.yaml)
 - 🇩🇪 德国: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/DE.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/clash-DE.yaml)
-- 🇫🇷 法国: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/FR.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/clash-FR.yaml)
 - 🇬🇧 英国: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/GB.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/clash-GB.yaml)
+- 🇮🇪 爱尔兰: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/IE.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/clash-IE.yaml)
 - 🇮🇱 以色列: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/IL.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/clash-IL.yaml)
 - 🇯🇵 日本: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/JP.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/clash-JP.yaml)
+- 🇰🇷 韩国: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/KR.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/clash-KR.yaml)
 - 🇲🇽 墨西哥: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/MX.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/clash-MX.yaml)
 - 🇳🇱 荷兰: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/NL.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/clash-NL.yaml)
+- 🇷🇸 RS: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/RS.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/clash-RS.yaml)
+- 🇸🇨 SC: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/SC.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/clash-SC.yaml)
 - 🇺🇸 美国: [v2ray](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/US.txt) · [clash](https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/by-country/clash-US.yaml)
 
 ## 📖 说明
