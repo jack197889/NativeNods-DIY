@@ -18,16 +18,32 @@ proxies:
     public-key: Z7B8VKvjAiBH93XEkHFWCVBfK8Mu5HTLtAwfr5LuYlk
     short-id: 00b0389a
   network: tcp
+- name: 🇯🇵 日本-东京 02 (原生)
+  type: vless
+  server: 179.61.251.244
+  port: 7443
+  udp: true
+  uuid: 635e8406-9253-4444-88a2-dad1f0826034
+  tls: true
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇯🇵 日本-Shibuya City 01 (原生)
+  - 🇯🇵 日本-东京 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇯🇵 日本-Shibuya City 01 (原生)
+  - 🇯🇵 日本-东京 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

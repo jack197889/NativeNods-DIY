@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: 🇸🇬 新加坡 01 (原生)
   type: vmess
-  server: wjofHsQtEuEywxEq.v.3dns.vip
+  server: 8.222.176.249
   port: 443
   udp: true
   uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
@@ -21,6 +21,20 @@ proxies:
       Host: wjofHsQtEuEywxEq.v.3dns.vip
 - name: 🇸🇬 新加坡 02 (原生)
   type: vless
+  server: 43.163.112.174
+  port: 443
+  udp: true
+  uuid: 0dedd47d-47b9-4ed1-9c9f-cbeecad57a68
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: mXQudYHNu0pebcdk1_qn-UgcmwhjaV7y9UrYu3HX7Rg
+    short-id: 0123456789abcdef
+  network: tcp
+- name: 🇸🇬 新加坡 03 (原生)
+  type: vless
   server: 147.93.173.45
   port: 10444
   udp: true
@@ -32,20 +46,6 @@ proxies:
   reality-opts:
     public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
     short-id: 8debcf36f1cc69ff
-  network: tcp
-- name: 🇸🇬 新加坡 03 (原生)
-  type: vless
-  server: 162.4.172.55
-  port: 443
-  udp: true
-  uuid: 780fab9a-e5be-470c-8c31-51640779ba2c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.samsung.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: ZVMW8jnFE_zxUQjSsZVDaqOY13RGrdnHivXWdXxFhxg
-    short-id: d7fd
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择

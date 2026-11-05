@@ -29,6 +29,35 @@ proxies:
   uuid: 4d8132cb-f4e3-428c-91ff-2b4f7a868551
   tls: true
   servername: pl.sparxiecn.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /lovelive
+    headers:
+      Host: pl.sparxiecn.com
+- name: 🇵🇱 波兰-华沙 03 (原生)
+  type: vless
+  server: 84.23.52.120
+  port: 28449
+  udp: true
+  uuid: 4d8132cb-f4e3-428c-91ff-2b4f7a868551
+  tls: true
+  servername: pl.sparxiecn.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /lovelive
+    headers:
+      Host: pl.sparxiecn.com
+- name: 🇵🇱 波兰-华沙 04 (原生)
+  type: vless
+  server: 84.23.52.120
+  port: 28450
+  udp: true
+  uuid: 4d8132cb-f4e3-428c-91ff-2b4f7a868551
+  tls: true
+  servername: pl.sparxiecn.com
   alpn:
   - h2
   - http/1.1
@@ -45,11 +74,15 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇵🇱 波兰-华沙 01 (原生)
   - 🇵🇱 波兰-华沙 02 (原生)
+  - 🇵🇱 波兰-华沙 03 (原生)
+  - 🇵🇱 波兰-华沙 04 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇵🇱 波兰-华沙 01 (原生)
   - 🇵🇱 波兰-华沙 02 (原生)
+  - 🇵🇱 波兰-华沙 03 (原生)
+  - 🇵🇱 波兰-华沙 04 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

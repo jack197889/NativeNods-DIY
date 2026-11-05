@@ -4,23 +4,24 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇿🇦 南非-约翰内斯堡 01 (原生)
-  type: ss
-  server: 102.37.156.224
+- name: 🇪🇪 EE-Tallinn 01
+  type: hysteria2
+  server: 141.0.187.15
   port: 443
   udp: true
-  cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
+  password: 70043bfa-d6fb-4980-b27e-773e9e8b2004
+  sni: crt.onecloudstream.com
+  skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇿🇦 南非-约翰内斯堡 01 (原生)
+  - 🇪🇪 EE-Tallinn 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇿🇦 南非-约翰内斯堡 01 (原生)
+  - 🇪🇪 EE-Tallinn 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

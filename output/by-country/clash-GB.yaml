@@ -10,7 +10,6 @@ proxies:
   port: 2053
   udp: true
   uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
-  packet-encoding: xudp
   tls: true
   servername: www.apple.com
   client-fingerprint: firefox
@@ -18,40 +17,16 @@ proxies:
     public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
     short-id: 9922313fffed1c63
   network: tcp
-- name: 🇬🇧 英国-伦敦 02
-  type: vless
-  server: 51.89.194.151
-  port: 2053
-  udp: true
-  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
-    short-id: d051f678212f9d54
-  network: tcp
-- name: 🇬🇧 英国-Slough 03
-  type: hysteria2
-  server: promo2.betust.net
-  port: 443
-  udp: true
-  password: 2bc6428196efb899f544d750bea0c06d
-  sni: promo2.betust.net
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇬🇧 英国-伦敦 01
-  - 🇬🇧 英国-伦敦 02
-  - 🇬🇧 英国-Slough 03
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇬🇧 英国-伦敦 01
-  - 🇬🇧 英国-伦敦 02
-  - 🇬🇧 英国-Slough 03
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

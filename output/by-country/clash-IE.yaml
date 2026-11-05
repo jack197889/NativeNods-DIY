@@ -5,16 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇪 爱尔兰-都柏林 01
-  type: vless
-  server: 159.246.55.30
-  port: 8880
+  type: ss
+  server: 20.107.206.186
+  port: 443
   udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime59.workers.dev
+  cipher: chacha20-ietf-poly1305
+  password: 45dM0ZrNdAk4OHiM
 proxy-groups:
 - name: 🚀 节点选择
   type: select
