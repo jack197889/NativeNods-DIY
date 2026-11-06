@@ -5,22 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大-多伦多 01
-  type: vmess
-  server: 23.162.200.198
-  port: 18000
+  type: vless
+  server: ca1.japancase.site
+  port: 443
   udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  network: tcp
-- name: 🇨🇦 加拿大-多伦多 02
-  type: trojan
-  server: ca001.zestapp778.com
-  port: 46977
-  udp: true
-  password: 5t6i121em5lkmsmk
-  sni: ca001.zestapp778.com
-  skip-cert-verify: true
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
+  flow: xtls-rprx-vision
+  tls: true
+  servername: ca1.japancase.site
+  client-fingerprint: edge
+  reality-opts:
+    public-key: zN5buqMK95hn0mv3vKlfoOAi99ehuvP73cUuyNbZNWc
+    short-id: dbd6b473c7038dd5
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
@@ -28,12 +24,10 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇨🇦 加拿大-多伦多 01
-  - 🇨🇦 加拿大-多伦多 02
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇨🇦 加拿大-多伦多 01
-  - 🇨🇦 加拿大-多伦多 02
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

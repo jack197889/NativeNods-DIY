@@ -6,10 +6,45 @@ log-level: info
 proxies:
 - name: 🇳🇱 荷兰-阿姆斯特丹 01
   type: vless
+  server: www.speedtest.net
+  port: 443
+  udp: true
+  uuid: eb92918e-b1a0-450a-af99-337d76b3fa0d
+  tls: true
+  servername: net-bridge-88f351-gw.9yzm3yekuoys.workers.dev
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /b16c0b57857ff8c3
+    headers:
+      Host: net-bridge-88f351-gw.9yzm3yekuoys.workers.dev
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇳🇱 荷兰-Naaldwijk 02
+  type: vless
+  server: medium.com
+  port: 443
+  udp: true
+  uuid: f2a73750-3087-48ff-a763-1348c15dce68
+  tls: true
+  servername: rAyAn-007.mAxImA.DpDnS.OrG
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rAyAn-007.mAxImA.DpDnS.OrG
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇳🇱 荷兰-阿姆斯特丹 03
+  type: vless
   server: 5.149.248.151
   port: 443
   udp: true
-  uuid: 4fdf8c8f-4728-4437-a309-5ecfac2bf021
+  uuid: 72992f3d-875e-496d-a410-372317076427
   tls: true
   servername: nla.kosmosapp.net
   client-fingerprint: chrome
@@ -19,21 +54,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: neurex
-- name: 🇳🇱 荷兰-Haarlem 02
-  type: vless
-  server: 51.158.206.26
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  network: tcp
-- name: 🇳🇱 荷兰-Haarlem 03
+- name: 🇳🇱 荷兰-Haarlem 04
   type: vless
   server: 51.158.206.20
   port: 23576
@@ -47,94 +68,22 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: ''
   network: tcp
-- name: 🇳🇱 荷兰-阿姆斯特丹 04
-  type: vless
-  server: 5.149.249.94
-  port: 443
-  udp: true
-  uuid: f06afde8-bd57-4c20-a3e2-4a088bceee9e
-  tls: true
-  servername: nlb.kosmosapp.net
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ
-    short-id: 27350908de933e09
-  network: grpc
-  grpc-opts:
-    grpc-service-name: neurex
-- name: 🇳🇱 荷兰-阿姆斯特丹 05
-  type: vless
-  server: 177.177.215.45
-  port: 444
-  udp: true
-  uuid: 254f28cb-d0c1-41e9-a06b-f2155213ff04
-  flow: xtls-rprx-vision
-  tls: true
-  servername: ams2.shtil.io
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇳🇱 荷兰-Haarlem 06
-  type: hysteria2
-  server: 51.15.16.68
-  port: 37030
-  udp: true
-  password: capadm54312235:JdypYweuDQOrFqWTcFAL6aFq
-  sni: vpn.local
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: ypvL8T4HFIBLoH8q
-- name: 🇳🇱 荷兰-Haarlem 07
-  type: vless
-  server: 51.158.206.80
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  network: tcp
-- name: 🇳🇱 荷兰-Haarlem 08
-  type: vless
-  server: 51.158.206.86
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇳🇱 荷兰-阿姆斯特丹 01
-  - 🇳🇱 荷兰-Haarlem 02
-  - 🇳🇱 荷兰-Haarlem 03
-  - 🇳🇱 荷兰-阿姆斯特丹 04
-  - 🇳🇱 荷兰-阿姆斯特丹 05
-  - 🇳🇱 荷兰-Haarlem 06
-  - 🇳🇱 荷兰-Haarlem 07
-  - 🇳🇱 荷兰-Haarlem 08
+  - 🇳🇱 荷兰-Naaldwijk 02
+  - 🇳🇱 荷兰-阿姆斯特丹 03
+  - 🇳🇱 荷兰-Haarlem 04
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇳🇱 荷兰-阿姆斯特丹 01
-  - 🇳🇱 荷兰-Haarlem 02
-  - 🇳🇱 荷兰-Haarlem 03
-  - 🇳🇱 荷兰-阿姆斯特丹 04
-  - 🇳🇱 荷兰-阿姆斯特丹 05
-  - 🇳🇱 荷兰-Haarlem 06
-  - 🇳🇱 荷兰-Haarlem 07
-  - 🇳🇱 荷兰-Haarlem 08
+  - 🇳🇱 荷兰-Naaldwijk 02
+  - 🇳🇱 荷兰-阿姆斯特丹 03
+  - 🇳🇱 荷兰-Haarlem 04
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

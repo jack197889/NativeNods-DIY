@@ -4,21 +4,20 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇩🇪 德国-法尔肯施泰因 01 (原生)
-  type: trojan
-  server: 188.114.96.3
-  port: 2096
+- name: 🇩🇪 德国-法兰克福 01 (原生)
+  type: vless
+  server: k9-85j.pages.dev
+  port: 443
   udp: true
-  password: vP!XvZBNdw.e*ddSgmH!
-  sni: n0q4XPrJ2D4X4PRCQ29L8JKCZd0.pAGES.dev
-  alpn:
-  - http/1.1
+  uuid: 3dc83518-4002-485e-a066-d3bbcaaa2b2e
+  tls: true
+  servername: K9-85J.paGEs.Dev
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /tr/ZFttmjSqvda5ohOQ
+    path: /1WWzkWgNslKTcceU
     headers:
-      Host: n0q4xprj2d4x4prcq29l8jkczd0.pages.dev
+      Host: K9-85J.paGEs.Dev
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
 - name: 🇩🇪 德国-法兰克福 02 (原生)
@@ -35,14 +34,34 @@ proxies:
     public-key: SRKTZm_KYvsD9ONd5VU54ABZxudjR65r5Uhxc-1lLko
     short-id: 1c601fed
   network: tcp
-- name: 🇩🇪 德国-杜塞尔多夫 03 (原生)
-  type: ss
-  server: 213.202.208.199
-  port: 5000
+- name: 🇩🇪 德国-法尔肯施泰因 03 (原生)
+  type: vless
+  server: 91.107.179.0
+  port: 10105
   udp: true
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-- name: 🇩🇪 德国-Bad Soden am Taunus 04 (原生)
+  uuid: ad3f4a0a-a89f-498e-9869-a93c8fa185b1
+  flow: xtls-rprx-vision
+  tls: true
+  servername: play.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: PFC3JN1er1JE2vAemwRhNjewz8I4NUWP4XHf2Dza4Es
+    short-id: 12e321badd07906e
+  network: tcp
+- name: 🇩🇪 德国-法兰克福 04 (原生)
+  type: vless
+  server: hw14.roghanmo.com
+  port: 465
+  udp: true
+  uuid: 98aa35fc-7d2f-4744-a91b-7e33b4fdd9c8
+  tls: true
+  servername: hw14.roghanmo.com.
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hw14.roghanmo.com
+- name: 🇩🇪 德国-Bad Soden am Taunus 05 (原生)
   type: vless
   server: 5.230.216.85
   port: 443
@@ -56,104 +75,47 @@ proxies:
     public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
     short-id: 1a2b3c4d
   network: tcp
-- name: 🇩🇪 德国-柏林 05 (原生)
-  type: vless
-  server: 5.231.45.10
-  port: 8444
+- name: 🇩🇪 德国-法尔肯施泰因 06 (原生)
+  type: hysteria2
+  server: 88.99.213.222
+  port: 14444
   udp: true
-  uuid: 5c32201a-6c0e-451b-8f0a-24b4bd40df59
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.volkswagen.de
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
-    short-id: 1a2b3c4d
-  network: tcp
-- name: 🇩🇪 德国-法兰克福 06 (原生)
+  password: mhsl
+  skip-cert-verify: true
+- name: 🇩🇪 德国-杜塞尔多夫 07 (原生)
   type: vless
-  server: 7bb66bg.de27.h1clayd.click
+  server: 45.129.242.56
   port: 443
   udp: true
-  uuid: 41fb5fc3-f2b8-4c85-9b3a-775e3d5e5f71
-  tls: true
-  servername: 7bb66bg.de27.h1clayd.click
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: qntkEvEqmtFbkByDIo6dDCidWvRPjCFXXFXq3pzPUXU
-    short-id: 1e678b9e6884e806
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2d40ef9fda5b
-- name: 🇩🇪 德国-Bad Soden am Taunus 07 (原生)
-  type: vless
-  server: 5.230.219.109
-  port: 8444
-  udp: true
-  uuid: 5c32201a-6c0e-451b-8f0a-24b4bd40df59
+  uuid: ebdfaf99-41d8-4e48-8196-d54510ffb556
   flow: xtls-rprx-vision
   tls: true
-  servername: volkswagen.de
+  servername: www.cloudflare.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
-    short-id: 1a2b3c4d
+    public-key: YURKlEQ3rap4KOXXGsVFZyYev2oDU2gCEbNTXPdKWRY
+    short-id: abcdef
   network: tcp
-- name: 🇩🇪 德国-法兰克福 08 (原生)
-  type: vless
-  server: hw14.roghanmo.com
-  port: 465
+- name: 🇩🇪 德国-纽伦堡 08 (原生)
+  type: hysteria2
+  server: 5.45.100.100
+  port: 51511
   udp: true
-  uuid: 98aa35fc-7d2f-4744-a91b-7e33b4fdd9c8
-  tls: true
-  servername: hw14.roghanmo.com.
+  password: miaoge110
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 🇩🇪 德国-法兰克福 09 (原生)
+  type: vless
+  server: 104.27.88.172
+  port: 80
+  udp: true
+  uuid: 50414e45-4c5f-5a45-5553-52108a2d5224
   network: ws
   ws-opts:
-    path: /
+    path: /api/ws
     headers:
-      Host: hw14.roghanmo.com
-- name: 🇩🇪 德国-Kirchberg 09 (原生)
-  type: vless
-  server: 94.249.198.211
-  port: 43000
-  udp: true
-  uuid: 97462b18-1836-4e4f-b0fb-5c84d38a2e9d
-  flow: xtls-rprx-vision
-  tls: true
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: QaPoY-5W4Z7NA_LUG37yjYNy3JWg53Ru7eWLTzec-nE
-    short-id: b62ac375
-  network: tcp
-- name: 🇩🇪 德国-法尔肯施泰因 10 (原生)
-  type: vless
-  server: germany1.xorsand.eu
-  port: 10105
-  udp: true
-  uuid: ad3f4a0a-a89f-498e-9869-a93c8fa185b1
-  flow: xtls-rprx-vision
-  tls: true
-  servername: play.google.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: PFC3JN1er1JE2vAemwRhNjewz8I4NUWP4XHf2Dza4Es
-    short-id: 12e321badd07906e
-  network: tcp
-- name: 🇩🇪 德国-法尔肯施泰因 11 (原生)
-  type: vless
-  server: 2.31.22.130
-  port: 8080
-  udp: true
-  uuid: 838e8b68-b583-4850-9c06-3ca63b05a936
-  flow: xtls-rprx-vision
-  tls: true
-  servername: digikala.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: aiFPeLurQNAOYZhwdXsYwxCxBgw6qg8rt0UvdrdNPTY
-    short-id: ed516450fce897dd
-  network: tcp
-- name: 🇩🇪 德国-法兰克福 12 (原生)
+      Host: web-app-nr6wpa.app-tp57xz.workers.dev
+- name: 🇩🇪 德国-法兰克福 10 (原生)
   type: vless
   server: hw5.roghanmo.com
   port: 465
@@ -169,75 +131,75 @@ proxies:
     path: /
     headers:
       Host: hw5.roghanmo.com.
-- name: 🇩🇪 德国-法兰克福 13 (原生)
+- name: 🇩🇪 德国-Bad Soden am Taunus 11 (原生)
   type: vless
-  server: 185.255.115.64
+  server: 5.230.219.105
   port: 443
   udp: true
-  uuid: 9a0e84f8-4b58-477f-99da-5fac5a2e58e8
+  uuid: 5c32201a-6c0e-451b-8f0a-24b4bd40df59
+  flow: xtls-rprx-vision
   tls: true
-  servername: 36a466g.fi1.h1clayd.click
+  servername: files.porsche.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg
-    short-id: b3c9d0c6bdd114a6
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 0adb9638509b
-- name: 🇩🇪 德国-纽伦堡 14 (原生)
-  type: vmess
-  server: getnet.serversubasli.top
-  port: 8080
+    public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
+    short-id: 1a2b3c4d
+  network: tcp
+- name: 🇩🇪 德国-杜塞尔多夫 12 (原生)
+  type: ss
+  server: 213.202.208.199
+  port: 5000
   udp: true
-  uuid: d2b67e48-c341-47ba-8caa-5658df693ac4
-  alterId: 0
-  cipher: auto
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: 🇩🇪 德国-柏林 13 (原生)
+  type: vless
+  server: 5.231.45.10
+  port: 8444
+  udp: true
+  uuid: 5c32201a-6c0e-451b-8f0a-24b4bd40df59
+  flow: xtls-rprx-vision
   tls: true
-  servername: getnet.serversubasli.top
-  alpn:
-  - http/1.1
+  servername: www.volkswagen.de
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: getnet.serversubasli.top
+  reality-opts:
+    public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
+    short-id: 1a2b3c4d
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇩🇪 德国-法尔肯施泰因 01 (原生)
+  - 🇩🇪 德国-法兰克福 01 (原生)
   - 🇩🇪 德国-法兰克福 02 (原生)
-  - 🇩🇪 德国-杜塞尔多夫 03 (原生)
-  - 🇩🇪 德国-Bad Soden am Taunus 04 (原生)
-  - 🇩🇪 德国-柏林 05 (原生)
-  - 🇩🇪 德国-法兰克福 06 (原生)
-  - 🇩🇪 德国-Bad Soden am Taunus 07 (原生)
-  - 🇩🇪 德国-法兰克福 08 (原生)
-  - 🇩🇪 德国-Kirchberg 09 (原生)
-  - 🇩🇪 德国-法尔肯施泰因 10 (原生)
-  - 🇩🇪 德国-法尔肯施泰因 11 (原生)
-  - 🇩🇪 德国-法兰克福 12 (原生)
-  - 🇩🇪 德国-法兰克福 13 (原生)
-  - 🇩🇪 德国-纽伦堡 14 (原生)
+  - 🇩🇪 德国-法尔肯施泰因 03 (原生)
+  - 🇩🇪 德国-法兰克福 04 (原生)
+  - 🇩🇪 德国-Bad Soden am Taunus 05 (原生)
+  - 🇩🇪 德国-法尔肯施泰因 06 (原生)
+  - 🇩🇪 德国-杜塞尔多夫 07 (原生)
+  - 🇩🇪 德国-纽伦堡 08 (原生)
+  - 🇩🇪 德国-法兰克福 09 (原生)
+  - 🇩🇪 德国-法兰克福 10 (原生)
+  - 🇩🇪 德国-Bad Soden am Taunus 11 (原生)
+  - 🇩🇪 德国-杜塞尔多夫 12 (原生)
+  - 🇩🇪 德国-柏林 13 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇩🇪 德国-法尔肯施泰因 01 (原生)
+  - 🇩🇪 德国-法兰克福 01 (原生)
   - 🇩🇪 德国-法兰克福 02 (原生)
-  - 🇩🇪 德国-杜塞尔多夫 03 (原生)
-  - 🇩🇪 德国-Bad Soden am Taunus 04 (原生)
-  - 🇩🇪 德国-柏林 05 (原生)
-  - 🇩🇪 德国-法兰克福 06 (原生)
-  - 🇩🇪 德国-Bad Soden am Taunus 07 (原生)
-  - 🇩🇪 德国-法兰克福 08 (原生)
-  - 🇩🇪 德国-Kirchberg 09 (原生)
-  - 🇩🇪 德国-法尔肯施泰因 10 (原生)
-  - 🇩🇪 德国-法尔肯施泰因 11 (原生)
-  - 🇩🇪 德国-法兰克福 12 (原生)
-  - 🇩🇪 德国-法兰克福 13 (原生)
-  - 🇩🇪 德国-纽伦堡 14 (原生)
+  - 🇩🇪 德国-法尔肯施泰因 03 (原生)
+  - 🇩🇪 德国-法兰克福 04 (原生)
+  - 🇩🇪 德国-Bad Soden am Taunus 05 (原生)
+  - 🇩🇪 德国-法尔肯施泰因 06 (原生)
+  - 🇩🇪 德国-杜塞尔多夫 07 (原生)
+  - 🇩🇪 德国-纽伦堡 08 (原生)
+  - 🇩🇪 德国-法兰克福 09 (原生)
+  - 🇩🇪 德国-法兰克福 10 (原生)
+  - 🇩🇪 德国-Bad Soden am Taunus 11 (原生)
+  - 🇩🇪 德国-杜塞尔多夫 12 (原生)
+  - 🇩🇪 德国-柏林 13 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

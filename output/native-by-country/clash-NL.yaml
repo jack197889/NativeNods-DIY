@@ -4,7 +4,21 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇱 荷兰-Zoetermeer 01 (原生)
+- name: 🇳🇱 荷兰-阿姆斯特丹 01 (原生)
+  type: ss
+  server: 82.38.31.193
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
+  type: ss
+  server: 193.29.139.235
+  port: 443
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰-Zoetermeer 03 (原生)
   type: vless
   server: 45.141.202.69
   port: 443
@@ -18,92 +32,63 @@ proxies:
     public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
     short-id: 1a2b3c4d
   network: tcp
-- name: 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
-  type: ss
-  server: 193.29.139.235
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
-  type: ss
-  server: 82.38.31.193
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
 - name: 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
-  type: ss
-  server: 82.38.31.66
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰-阿姆斯特丹 05 (原生)
   type: ss
   server: 82.38.31.159
   port: 443
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰-阿姆斯特丹 05 (原生)
+  type: ss
+  server: 82.38.31.66
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
 - name: 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
+  type: vless
+  server: 83.217.211.231
+  port: 443
+  udp: true
+  uuid: 6b0023c4-d47b-11f1-a3b6-9330eb53805e
+  flow: xtls-rprx-vision
+  tls: true
+  servername: cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: UxMconnAC8swjYWF_THL0wB3K3zVC574kphOOxDvlxs
+    short-id: a0d0f6096ff75581
+  network: tcp
+- name: 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
   type: ss
   server: 158.173.20.208
   port: 443
   udp: true
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇳🇱 荷兰-Dronten 07 (原生)
-  type: vless
-  server: 188.114.96.25
-  port: 443
-  udp: true
-  uuid: b15f187e-9b34-437c-8243-8651a8ada76c
-  tls: true
-  servername: tepar-k4j9.jounet.workers.dev
-  network: ws
-  ws-opts:
-    path: /stream/DEVCOP/8651a8ada76c/loc-0
-    headers:
-      Host: tepar-k4j9.jounet.workers.dev
-- name: 🇳🇱 荷兰-Enschede 08 (原生)
-  type: vless
-  server: 147.45.108.45
-  port: 443
-  udp: true
-  uuid: 1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200
-  flow: xtls-rprx-vision
-  tls: true
-  servername: absolute-disaster.org
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: IuzAWh6UM62Txrnh_No9y5n6wmZecyR1ki8z5xor-0g
-    short-id: ''
-  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇳🇱 荷兰-Zoetermeer 01 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 01 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
-  - 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
+  - 🇳🇱 荷兰-Zoetermeer 03 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 05 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
-  - 🇳🇱 荷兰-Dronten 07 (原生)
-  - 🇳🇱 荷兰-Enschede 08 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇳🇱 荷兰-Zoetermeer 01 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 01 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
-  - 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
+  - 🇳🇱 荷兰-Zoetermeer 03 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 05 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
-  - 🇳🇱 荷兰-Dronten 07 (原生)
-  - 🇳🇱 荷兰-Enschede 08 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

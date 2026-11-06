@@ -1,0 +1,36 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇺🇿 UZ-Tashkent 01 (原生)
+  type: trojan
+  server: arc.net
+  port: 2083
+  udp: true
+  password: BQbRrd5QMMEF
+  sni: rayaN04-frqBdb4h-t2.rayAn-04.woRkers.dEv
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rayaN04-frqBdb4h-t2.rayAn-04.woRkers.dEv
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇺🇿 UZ-Tashkent 01 (原生)
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇺🇿 UZ-Tashkent 01 (原生)
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

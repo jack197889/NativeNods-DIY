@@ -4,9 +4,16 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇷🇴 罗马尼亚-Suceava 01 (原生)
+- name: 🇷🇴 罗马尼亚-布加勒斯特 01 (原生)
+  type: ss
+  server: 82.152.132.211
+  port: 8044
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: dCamglzrORaopqbpBlptzbt9QdiH4CSN
+- name: 🇷🇴 罗马尼亚-Suceava 02 (原生)
   type: vless
-  server: du-rov.secureservice.top
+  server: 5.42.99.64
   port: 8443
   udp: true
   uuid: c53ea5e9-ed8b-4990-805d-7f1d6451426c
@@ -23,11 +30,13 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇷🇴 罗马尼亚-Suceava 01 (原生)
+  - 🇷🇴 罗马尼亚-布加勒斯特 01 (原生)
+  - 🇷🇴 罗马尼亚-Suceava 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇷🇴 罗马尼亚-Suceava 01 (原生)
+  - 🇷🇴 罗马尼亚-布加勒斯特 01 (原生)
+  - 🇷🇴 罗马尼亚-Suceava 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -4,32 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇷🇺 俄罗斯-Kostroma 01 (原生)
-  type: hysteria2
-  server: steel7.hadsvpn.com
+- name: 🇷🇺 俄罗斯-莫斯科 01 (原生)
+  type: vless
+  server: xsru2.freeddns.org
   port: 443
   udp: true
-  password: 23c82941-70f4-4381-90db-bd28e9a902e9
-  sni: steel7.hadsvpn.com
-- name: 🇷🇺 俄罗斯-Kazan' 02 (原生)
-  type: ss
-  server: 46.17.46.27
-  port: 18443
-  udp: true
-  cipher: aes-256-gcm
-  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
+  tls: true
+  servername: xsru2.freeddns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /wsru
+    headers:
+      Host: xsru2.freeddns.org
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇷🇺 俄罗斯-Kostroma 01 (原生)
-  - 🇷🇺 俄罗斯-Kazan' 02 (原生)
+  - 🇷🇺 俄罗斯-莫斯科 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇷🇺 俄罗斯-Kostroma 01 (原生)
-  - 🇷🇺 俄罗斯-Kazan' 02 (原生)
+  - 🇷🇺 俄罗斯-莫斯科 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

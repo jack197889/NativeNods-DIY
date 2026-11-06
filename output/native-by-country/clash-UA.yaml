@@ -4,30 +4,29 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇿 AZ-Baku 01 (原生)
+- name: 🇺🇦 乌克兰-基辅 01 (原生)
   type: vless
-  server: 198.16.113.220
-  port: 8443
+  server: netx.smrtai.top
+  port: 443
   udp: true
-  uuid: 98a24806-141a-43d3-b094-bd66c4eb93b8
-  flow: xtls-rprx-vision
+  uuid: d8b58872-cc25-4bb2-badb-b86399c075fa
   tls: true
-  servername: www.apple.com
+  servername: www.cloudflare.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: 8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE
-    short-id: 69984b9e02545831
+    public-key: L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk
+    short-id: d8b58872
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇦🇿 AZ-Baku 01 (原生)
+  - 🇺🇦 乌克兰-基辅 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇦🇿 AZ-Baku 01 (原生)
+  - 🇺🇦 乌克兰-基辅 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

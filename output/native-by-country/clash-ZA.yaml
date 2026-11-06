@@ -4,23 +4,23 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇪 爱尔兰-都柏林 01
+- name: 🇿🇦 南非-约翰内斯堡 01 (原生)
   type: ss
-  server: 20.107.206.186
+  server: 102.37.156.224
   port: 443
   udp: true
   cipher: chacha20-ietf-poly1305
-  password: 45dM0ZrNdAk4OHiM
+  password: aduB9HGxQHjA2SBMRjkHX6
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇮🇪 爱尔兰-都柏林 01
+  - 🇿🇦 南非-约翰内斯堡 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇮🇪 爱尔兰-都柏林 01
+  - 🇿🇦 南非-约翰内斯堡 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

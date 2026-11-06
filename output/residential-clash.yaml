@@ -15,29 +15,30 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: db
+- name: 🇹🇼 台湾-Changhua 02 (家宽)
+  type: anytls
+  server: er8u54dh.df6h451rh.xin
+  port: 443
+  udp: true
+  password: 0324fbc29561
+  sni: px.ads.linkedin.com
+  skip-cert-verify: true
 - name: 🇭🇰 香港 01 (家宽)
   type: hysteria2
-  server: fc05feb7-tmm5c0-tpv2b9-1o8ak.hk3.hyhuawei.com
+  server: e0064cf5-tmm5c0-to0mym-z93q.hk3.hyhuawei.com
   port: 443
   udp: true
-  password: 8bb68d04-6973-11ee-b518-f23c9164ca5d
-  sni: fc05feb7-tmm5c0-tpv2b9-1o8ak.hk3.hyhuawei.com
-- name: 🇭🇰 香港 02 (家宽)
-  type: hysteria2
-  server: 112.120.123.140
-  port: 443
-  udp: true
-  password: 3f514ea2-4662-11ed-a8bf-f23c91cfbbc9
-  sni: 9fc34650-tmm5c0-tmj4pk-1kcpe.nw4.hyhuawei.com
-- name: 🇹🇼 台湾-台中 02 (家宽)
+  password: 40639730-e027-11ea-87ad-f23c913c8d2b
+  sni: e0064cf5-tmm5c0-to0mym-z93q.hk3.hyhuawei.com
+  skip-cert-verify: true
+- name: 🇹🇼 台湾-台中 03 (家宽)
   type: vless
-  server: 59.125.69.23
+  server: 60.248.219.78
   port: 443
   udp: true
   uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
   tls: true
   servername: ty986gfazs.cainiaohub.xyz
-  client-fingerprint: chrome
   skip-cert-verify: true
   network: ws
   ws-opts:
@@ -50,16 +51,16 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇹🇼 台湾-Yuanlin 01 (家宽)
+  - 🇹🇼 台湾-Changhua 02 (家宽)
   - 🇭🇰 香港 01 (家宽)
-  - 🇭🇰 香港 02 (家宽)
-  - 🇹🇼 台湾-台中 02 (家宽)
+  - 🇹🇼 台湾-台中 03 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇹🇼 台湾-Yuanlin 01 (家宽)
+  - 🇹🇼 台湾-Changhua 02 (家宽)
   - 🇭🇰 香港 01 (家宽)
-  - 🇭🇰 香港 02 (家宽)
-  - 🇹🇼 台湾-台中 02 (家宽)
+  - 🇹🇼 台湾-台中 03 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

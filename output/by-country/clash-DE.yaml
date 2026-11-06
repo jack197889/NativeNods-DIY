@@ -6,48 +6,31 @@ log-level: info
 proxies:
 - name: 🇩🇪 德国-法兰克福 01
   type: vless
-  server: www.speedtest.net
+  server: 188.114.98.0
   port: 443
   udp: true
-  uuid: eb92918e-b1a0-450a-af99-337d76b3fa0d
+  uuid: c2f1f999-365f-42a7-87e7-726cbd0753ae
   tls: true
-  servername: net-bridge-88f351-gw.9yzm3yekuoys.workers.dev
+  servername: auth-api-8be4aa-gw.prod-relay-110934.workers.dev
   alpn:
   - http/1.1
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /b16c0b57857ff8c3
+    path: /294dd38929bdec5b
     headers:
-      Host: net-bridge-88f351-gw.9yzm3yekuoys.workers.dev
+      Host: auth-api-8be4aa-gw.prod-relay-110934.workers.dev
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇩🇪 德国-法兰克福 02
-  type: vless
-  server: 188.114.96.9
-  port: 443
-  udp: true
-  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
-  tls: true
-  servername: IdB8ONMVbntuYT5t7t6cEJfw8vLrb.paGEs.DeV
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrj
-    headers:
-      Host: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇩🇪 德国-法兰克福 01
-  - 🇩🇪 德国-法兰克福 02
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇩🇪 德国-法兰克福 01
-  - 🇩🇪 德国-法兰克福 02
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

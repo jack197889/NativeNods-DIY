@@ -5,35 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 01 (原生)
-  type: vmess
-  server: 8.222.176.249
-  port: 443
-  udp: true
-  uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: wjofHsQtEuEywxEq.v.3dns.vip
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: wjofHsQtEuEywxEq.v.3dns.vip
-- name: 🇸🇬 新加坡 02 (原生)
-  type: vless
-  server: 43.163.112.174
-  port: 443
-  udp: true
-  uuid: 0dedd47d-47b9-4ed1-9c9f-cbeecad57a68
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: mXQudYHNu0pebcdk1_qn-UgcmwhjaV7y9UrYu3HX7Rg
-    short-id: 0123456789abcdef
-  network: tcp
-- name: 🇸🇬 新加坡 03 (原生)
   type: vless
   server: 147.93.173.45
   port: 10444
@@ -42,7 +13,7 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: video.yandex.ru
-  client-fingerprint: safari
+  client-fingerprint: chrome
   reality-opts:
     public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
     short-id: 8debcf36f1cc69ff
@@ -53,14 +24,10 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇸🇬 新加坡 01 (原生)
-  - 🇸🇬 新加坡 02 (原生)
-  - 🇸🇬 新加坡 03 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇸🇬 新加坡 01 (原生)
-  - 🇸🇬 新加坡 02 (原生)
-  - 🇸🇬 新加坡 03 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

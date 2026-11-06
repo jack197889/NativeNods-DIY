@@ -4,24 +4,27 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇪 EE-Tallinn 01
-  type: hysteria2
-  server: 141.0.187.15
-  port: 443
+- name: 🇨🇳 中国大陆-Shenzhen 01 (原生)
+  type: vmess
+  server: 39.108.113.127
+  port: 10086
   udp: true
-  password: 70043bfa-d6fb-4980-b27e-773e9e8b2004
-  sni: crt.onecloudstream.com
-  skip-cert-verify: true
+  uuid: fccbad0f-eb6c-4bdd-80ed-145409e2f761
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇪🇪 EE-Tallinn 01
+  - 🇨🇳 中国大陆-Shenzhen 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇪🇪 EE-Tallinn 01
+  - 🇨🇳 中国大陆-Shenzhen 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
