@@ -4,47 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇩 印度尼西亚-Banyuwangi 01 (原生)
-  type: vless
-  server: 103.172.197.3
-  port: 16006
+- name: 🇮🇩 印度尼西亚-雅加达 01 (原生)
+  type: vmess
+  server: free2.rajaserver2.web.id
+  port: 80
   udp: true
-  uuid: f8c9d2a1-da40-4f90-b671-11772a0b13d6
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: ll7JTP628PuBMZJvx6fuhGSmCRSURnReAetmhCEL8GU
-    short-id: ''
-  network: tcp
-- name: 🇮🇩 印度尼西亚-Banyuwangi 02 (原生)
-  type: vless
-  server: 103.172.197.2
-  port: 29172
-  udp: true
-  uuid: 3977434d-6a9b-4858-8ced-80326ba5e367
-  flow: xtls-rprx-vision
-  packet-encoding: xudp
-  tls: true
-  servername: aws.amazon.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: pff94OJwuKXnF7_3SJ8KKJuAN4GJtInBlR-kg-4mwzQ
-    short-id: ''
-  network: tcp
+  uuid: 4d4708ef-0729-44ac-b2b0-411ce0242e89
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /upvmess
+    v2ray-http-upgrade: true
+    headers:
+      Host: free2.rajaserver2.web.id
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇮🇩 印度尼西亚-Banyuwangi 01 (原生)
-  - 🇮🇩 印度尼西亚-Banyuwangi 02 (原生)
+  - 🇮🇩 印度尼西亚-雅加达 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇮🇩 印度尼西亚-Banyuwangi 01 (原生)
-  - 🇮🇩 印度尼西亚-Banyuwangi 02 (原生)
+  - 🇮🇩 印度尼西亚-雅加达 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -4,6 +4,21 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
+- name: 🇭🇰 香港 01 (家宽)
+  type: hysteria2
+  server: 9969bb96-tmm5c0-twuk0i-1hzyr.hk3.hyhuawei.com
+  port: 443
+  udp: true
+  password: 3be8cba8-b721-11ec-8b04-f23c91cfbbc9
+  sni: 9969bb96-tmm5c0-twuk0i-1hzyr.hk3.hyhuawei.com
+- name: 🇭🇰 香港 02 (家宽)
+  type: hysteria2
+  server: 71db9f3f-tmm5c0-tyn7s3-1q3dm.nw4.hyhuawei.com
+  port: 443
+  udp: true
+  password: c1785de0-212f-11ef-92aa-f23c9164ca5d
+  sni: 71db9f3f-tmm5c0-tyn7s3-1q3dm.nw4.hyhuawei.com
+  skip-cert-verify: true
 - name: 🇹🇼 台湾-台中 01 (家宽)
   type: vless
   server: 60.248.219.78
@@ -18,34 +33,20 @@ proxies:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
       Host: ty986gfazs.cainiaohub.xyz
-- name: 🇭🇰 香港 01 (家宽)
-  type: hysteria2
-  server: 0d6ed79d-tlsio0-u4ai7k-z7a1.nw4.hyhuawei.com
-  port: 443
-  udp: true
-  password: 3bd247a8-993e-11ec-a8bf-f23c91cfbbc9
-  sni: 0d6ed79d-tlsio0-u4ai7k-z7a1.nw4.hyhuawei.com
-- name: 🇭🇰 香港 02 (家宽)
-  type: hysteria2
-  server: aac08668-tmm5c0-tw661e-1isea.hk3.hyhuawei.com
-  port: 443
-  udp: true
-  password: d6abdbda-fe9d-11ec-bb74-f23c9164ca5d
-  sni: aac08668-tmm5c0-tw661e-1isea.hk3.hyhuawei.com
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇹🇼 台湾-台中 01 (家宽)
   - 🇭🇰 香港 01 (家宽)
   - 🇭🇰 香港 02 (家宽)
+  - 🇹🇼 台湾-台中 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇹🇼 台湾-台中 01 (家宽)
   - 🇭🇰 香港 01 (家宽)
   - 🇭🇰 香港 02 (家宽)
+  - 🇹🇼 台湾-台中 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

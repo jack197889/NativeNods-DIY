@@ -5,19 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本-东京 01 (原生)
-  type: vless
-  server: 79.137.197.212
-  port: 2105
+  type: trojan
+  server: 160.21.74.183
+  port: 8443
   udp: true
-  uuid: 663c0d65-f2bc-43f3-b329-1a4e2b781d44
-  tls: true
-  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  password: ZLNrfFIw6IXWvhFvGEWi4EcsWJ76ZiDh
+  sni: 160.21.74.183
+  skip-cert-verify: true
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select

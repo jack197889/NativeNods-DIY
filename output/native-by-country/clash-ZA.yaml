@@ -4,27 +4,23 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇺 澳大利亚-墨尔本 01
-  type: vless
-  server: 63.141.128.30
-  port: 8880
+- name: 🇿🇦 南非-约翰内斯堡 01 (原生)
+  type: ss
+  server: 102.37.156.224
+  port: 443
   udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime42.workers.dev
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇦🇺 澳大利亚-墨尔本 01
+  - 🇿🇦 南非-约翰内斯堡 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇦🇺 澳大利亚-墨尔本 01
+  - 🇿🇦 南非-约翰内斯堡 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

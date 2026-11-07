@@ -22,6 +22,13 @@ proxies:
   udp: true
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇦🇪 阿联酋-阿姆斯特丹 03
+  type: ss
+  server: 151.241.19.36
+  port: 19999
+  udp: true
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -29,11 +36,13 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇦🇪 阿联酋-阿姆斯特丹 01
   - 🇦🇪 阿联酋-阿姆斯特丹 02
+  - 🇦🇪 阿联酋-阿姆斯特丹 03
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇦🇪 阿联酋-阿姆斯特丹 01
   - 🇦🇪 阿联酋-阿姆斯特丹 02
+  - 🇦🇪 阿联酋-阿姆斯特丹 03
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

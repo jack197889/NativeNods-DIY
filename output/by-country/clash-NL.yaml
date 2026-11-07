@@ -4,98 +4,32 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇱 荷兰-Meppel 01
+- name: 🇳🇱 荷兰-阿姆斯特丹 01
   type: vless
-  server: 188.116.27.6
+  server: free-amsterdam-node-1.cloudwidecdn.com
   port: 443
   udp: true
-  uuid: 441caaf2-aae6-4883-8af9-1e5770395ae8
+  uuid: 44ae52b9-76fc-444d-8e43-186b4384b80a
   flow: xtls-rprx-vision
   tls: true
-  servername: www.sony.co.uk
+  servername: www.apple.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: mprwTEsQ9nJ78qG7BJskAWXaVfDxeMHBkQHbReVfMnc
-    short-id: '1174'
+    public-key: PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU
+    short-id: 1d86d17709852910
   network: tcp
 - name: 🇳🇱 荷兰-Haarlem 02
-  type: hysteria2
-  server: 51.15.19.206
-  port: 8443
+  type: vless
+  server: 163.172.213.174
+  port: 80
   udp: true
-  password: HowdyHysteria2023w0W
-  sni: t.me
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: HysteriaHowdy
+  uuid: e73df646-1f62-41bf-8c50-653497d603d0
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: SC-TheNetherlands2.09vpn.com
 - name: 🇳🇱 荷兰-Haarlem 03
-  type: hysteria2
-  server: 51.15.16.68
-  port: 24062
-  udp: true
-  password: capadm54312235:JdypYweuDQOrFqWTcFAL6aFq
-  sni: vpn.local
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: ypvL8T4HFIBLoH8q
-- name: 🇳🇱 荷兰-阿姆斯特丹 04
-  type: vless
-  server: 79.141.164.83
-  port: 443
-  udp: true
-  uuid: 58bd14df-fbd9-42e1-ab9b-0513dab9e6cc
-  tls: true
-  servername: nlb.kosmosapp.net
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ
-    short-id: 27350908de933e09
-  network: grpc
-  grpc-opts:
-    grpc-service-name: neurex
-- name: 🇳🇱 荷兰-Haarlem 05
-  type: vless
-  server: 51.158.206.80
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  network: tcp
-- name: 🇳🇱 荷兰-Haarlem 06
-  type: vless
-  server: 51.158.206.25
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  network: tcp
-- name: 🇳🇱 荷兰-Haarlem 07
-  type: vless
-  server: 51.158.206.20
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: ''
-  network: tcp
-- name: 🇳🇱 荷兰-Haarlem 08
   type: vless
   server: 51.158.206.103
   port: 23576
@@ -111,7 +45,7 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   network: tcp
-- name: 🇳🇱 荷兰-阿姆斯特丹 09
+- name: 🇳🇱 荷兰-阿姆斯特丹 04
   type: vless
   server: ams2.shtil.io
   port: 444
@@ -125,20 +59,79 @@ proxies:
   - http/1.1
   client-fingerprint: firefox
   network: tcp
+- name: 🇳🇱 荷兰-Haarlem 05
+  type: vless
+  server: 51.158.206.80
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: ''
+  network: tcp
+- name: 🇳🇱 荷兰-阿姆斯特丹 06
+  type: vless
+  server: 152.70.58.201
+  port: 443
+  udp: true
+  uuid: 8892e34a-339b-4526-b88d-cf68c516231c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.nvidia.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28
+    short-id: 52c723e0fad49689
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 07
+  type: hysteria2
+  server: 51.15.16.68
+  port: 24050
+  udp: true
+  password: capadm54312235:JdypYweuDQOrFqWTcFAL6aFq
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: ypvL8T4HFIBLoH8q
+- name: 🇳🇱 荷兰-阿姆斯特丹 08
+  type: hysteria2
+  server: 5.129.235.85
+  port: 443
+  udp: true
+  password: gf1:gfhysteria2024
+  sni: www.linux.com
+  skip-cert-verify: true
+- name: 🇳🇱 荷兰-Haarlem 09
+  type: hysteria2
+  server: hysteria.udpgw.com
+  port: 8443
+  udp: true
+  password: HowdyHysteria2023w0W
+  sni: sni-here.com
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: HysteriaHowdy
 - name: 🇳🇱 荷兰-Haarlem 10
   type: vless
-  server: sc-thenetherlands1.09vpn.com
-  port: 80
+  server: 51.158.206.20
+  port: 23576
   udp: true
-  uuid: 40cc9b52-25b8-4cd5-8b45-715ae26e6baf
-  network: ws
-  ws-opts:
-    path: /vless/
-    headers:
-      Host: SC-TheNetherlands1.09vpn.com
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
 - name: 🇳🇱 荷兰-Haarlem 11
   type: vless
-  server: 51.158.206.93
+  server: 51.158.206.8
   port: 23576
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
@@ -151,16 +144,23 @@ proxies:
     short-id: '01'
   network: tcp
 - name: 🇳🇱 荷兰-阿姆斯特丹 12
-  type: hysteria2
-  server: 5.129.235.85
+  type: vless
+  server: 79.141.164.81
   port: 443
   udp: true
-  password: gf1:gfhysteria2024
-  sni: www.linux.com
-  skip-cert-verify: true
+  uuid: cff462b8-bf0e-41ee-8d45-13048c463a0f
+  tls: true
+  servername: nla.kosmosapp.net
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ
+    short-id: 27350908de933e09
+  network: grpc
+  grpc-opts:
+    grpc-service-name: neurex
 - name: 🇳🇱 荷兰-Haarlem 13
   type: vless
-  server: 51.158.206.96
+  server: 51.158.206.86
   port: 23576
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
@@ -172,40 +172,84 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   network: tcp
+- name: 🇳🇱 荷兰-Haarlem 14
+  type: vless
+  server: 51.158.206.34
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 15
+  type: hysteria2
+  server: 51.15.19.206
+  port: 8443
+  udp: true
+  password: HowdyHysteria2023w0W
+  sni: t.me
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: HysteriaHowdy
+- name: 🇳🇱 荷兰-Haarlem 16
+  type: vless
+  server: 51.158.206.93
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: ''
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇳🇱 荷兰-Meppel 01
+  - 🇳🇱 荷兰-阿姆斯特丹 01
   - 🇳🇱 荷兰-Haarlem 02
   - 🇳🇱 荷兰-Haarlem 03
   - 🇳🇱 荷兰-阿姆斯特丹 04
   - 🇳🇱 荷兰-Haarlem 05
-  - 🇳🇱 荷兰-Haarlem 06
+  - 🇳🇱 荷兰-阿姆斯特丹 06
   - 🇳🇱 荷兰-Haarlem 07
-  - 🇳🇱 荷兰-Haarlem 08
-  - 🇳🇱 荷兰-阿姆斯特丹 09
+  - 🇳🇱 荷兰-阿姆斯特丹 08
+  - 🇳🇱 荷兰-Haarlem 09
   - 🇳🇱 荷兰-Haarlem 10
   - 🇳🇱 荷兰-Haarlem 11
   - 🇳🇱 荷兰-阿姆斯特丹 12
   - 🇳🇱 荷兰-Haarlem 13
+  - 🇳🇱 荷兰-Haarlem 14
+  - 🇳🇱 荷兰-Haarlem 15
+  - 🇳🇱 荷兰-Haarlem 16
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇳🇱 荷兰-Meppel 01
+  - 🇳🇱 荷兰-阿姆斯特丹 01
   - 🇳🇱 荷兰-Haarlem 02
   - 🇳🇱 荷兰-Haarlem 03
   - 🇳🇱 荷兰-阿姆斯特丹 04
   - 🇳🇱 荷兰-Haarlem 05
-  - 🇳🇱 荷兰-Haarlem 06
+  - 🇳🇱 荷兰-阿姆斯特丹 06
   - 🇳🇱 荷兰-Haarlem 07
-  - 🇳🇱 荷兰-Haarlem 08
-  - 🇳🇱 荷兰-阿姆斯特丹 09
+  - 🇳🇱 荷兰-阿姆斯特丹 08
+  - 🇳🇱 荷兰-Haarlem 09
   - 🇳🇱 荷兰-Haarlem 10
   - 🇳🇱 荷兰-Haarlem 11
   - 🇳🇱 荷兰-阿姆斯特丹 12
   - 🇳🇱 荷兰-Haarlem 13
+  - 🇳🇱 荷兰-Haarlem 14
+  - 🇳🇱 荷兰-Haarlem 15
+  - 🇳🇱 荷兰-Haarlem 16
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -17,43 +17,43 @@ proxies:
     public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
     short-id: 83f8317a948bb769
   network: tcp
-- name: 🇨🇦 加拿大-蒙特利尔 02 (原生)
-  type: ss
-  server: 51.222.136.236
-  port: 8882
-  udp: true
-  cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-- name: 🇨🇦 加拿大-博阿尔努瓦 03 (原生)
+- name: 🇨🇦 加拿大-博阿尔努瓦 02 (原生)
   type: ss
   server: 51.222.200.165
   port: 5000
   udp: true
   cipher: aes-256-gcm
   password: Y6R9pAtvxxzmGC
-- name: 🇨🇦 加拿大-博阿尔努瓦 04 (原生)
+- name: 🇨🇦 加拿大-博阿尔努瓦 03 (原生)
   type: ss
-  server: 51.222.12.127
-  port: 445
+  server: 51.222.155.32
+  port: 5003
   udp: true
   cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
+  password: g5MeD6Ft3CWlJId
+- name: 🇨🇦 加拿大-蒙特利尔 04 (原生)
+  type: ss
+  server: 51.79.49.116
+  port: 8882
+  udp: true
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇨🇦 加拿大-蒙特利尔 01 (原生)
-  - 🇨🇦 加拿大-蒙特利尔 02 (原生)
+  - 🇨🇦 加拿大-博阿尔努瓦 02 (原生)
   - 🇨🇦 加拿大-博阿尔努瓦 03 (原生)
-  - 🇨🇦 加拿大-博阿尔努瓦 04 (原生)
+  - 🇨🇦 加拿大-蒙特利尔 04 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇨🇦 加拿大-蒙特利尔 01 (原生)
-  - 🇨🇦 加拿大-蒙特利尔 02 (原生)
+  - 🇨🇦 加拿大-博阿尔努瓦 02 (原生)
   - 🇨🇦 加拿大-博阿尔努瓦 03 (原生)
-  - 🇨🇦 加拿大-博阿尔努瓦 04 (原生)
+  - 🇨🇦 加拿大-蒙特利尔 04 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

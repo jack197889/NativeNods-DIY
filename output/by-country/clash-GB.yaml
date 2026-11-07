@@ -6,56 +6,36 @@ log-level: info
 proxies:
 - name: 🇬🇧 英国-伦敦 01
   type: vless
-  server: 104.25.51.43
-  port: 443
-  udp: true
-  uuid: 0192e468-ddb2-48f5-9450-e33608d299c4
-  tls: true
-  servername: net-bridge-4126e7-gw.wallweb3obtar.workers.dev
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dbb0764aca00c946
-    headers:
-      Host: net-bridge-4126e7-gw.wallweb3obtar.workers.dev
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇬🇧 英国-伦敦 02
-  type: vless
   server: 51.89.194.151
   port: 2053
   udp: true
   uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
   tls: true
   servername: www.apple.com
-  client-fingerprint: chrome
+  client-fingerprint: random
   reality-opts:
     public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
     short-id: d051f678212f9d54
   network: tcp
-- name: 🇬🇧 英国-阿姆斯特丹 03
-  type: ss
-  server: 104.239.12.81
-  port: 43385
+- name: 🇬🇧 英国-Slough 02
+  type: hysteria2
+  server: promo2.betust.net
+  port: 443
   udp: true
-  cipher: chacha20-ietf-poly1305
-  password: AwW1fV6oDDQKh8r2znmptv59tPgt4eHVTgFaTqgKS2jiSdikJ7GyGCBYehDaK38S8yMgHFdbJqcTmRJSfYS5CFw345bNhFZa
+  password: 2bc6428196efb899f544d750bea0c06d
+  sni: promo2.betust.net
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇬🇧 英国-伦敦 01
-  - 🇬🇧 英国-伦敦 02
-  - 🇬🇧 英国-阿姆斯特丹 03
+  - 🇬🇧 英国-Slough 02
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇬🇧 英国-伦敦 01
-  - 🇬🇧 英国-伦敦 02
-  - 🇬🇧 英国-阿姆斯特丹 03
+  - 🇬🇧 英国-Slough 02
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

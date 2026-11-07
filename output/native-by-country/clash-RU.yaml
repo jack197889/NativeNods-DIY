@@ -4,7 +4,21 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇷🇺 俄罗斯-莫斯科 01 (原生)
+- name: 🇷🇺 俄罗斯-St Petersburg 01 (原生)
+  type: vless
+  server: 147.45.104.86
+  port: 7443
+  udp: true
+  uuid: 5d978525-bfa5-4b1e-b807-c4e2ac2db56d
+  flow: xtls-rprx-vision
+  tls: true
+  servername: max.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: KbjX7IJnVtwq2USeRmLgXzACOtFCiA5lnsXhIFOX3ho
+    short-id: a7eb8a4e
+  network: tcp
+- name: 🇷🇺 俄罗斯-莫斯科 02 (原生)
   type: vless
   server: xsru2.freeddns.org
   port: 443
@@ -18,31 +32,17 @@ proxies:
     path: /wsru
     headers:
       Host: xsru2.freeddns.org
-- name: 🇷🇺 俄罗斯-莫斯科 02 (原生)
-  type: vless
-  server: ru1.aoyou.stream
-  port: 443
-  udp: true
-  uuid: 1d2392a0-1713-4ea9-be88-8a1e5ddab6bd
-  flow: xtls-rprx-vision
-  tls: true
-  servername: news.apple.com
-  client-fingerprint: edge
-  reality-opts:
-    public-key: 7ZOPr8Vbg0jSLw91-ONdvxGzGfen9sRz1VMpmau72RY
-    short-id: 31a2cc
-  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇷🇺 俄罗斯-莫斯科 01 (原生)
+  - 🇷🇺 俄罗斯-St Petersburg 01 (原生)
   - 🇷🇺 俄罗斯-莫斯科 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇷🇺 俄罗斯-莫斯科 01 (原生)
+  - 🇷🇺 俄罗斯-St Petersburg 01 (原生)
   - 🇷🇺 俄罗斯-莫斯科 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300

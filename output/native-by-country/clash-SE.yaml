@@ -6,15 +6,12 @@ log-level: info
 proxies:
 - name: 🇸🇪 瑞典-Umeå 01 (原生)
   type: vless
-  server: se3.shtil.io
+  server: 194.104.94.141
   port: 443
   udp: true
   uuid: 6ba4ed2e-b42b-4880-8b3b-c7e2df2d02f6
   tls: true
   servername: se3.shtil.io
-  alpn:
-  - h2
-  - http/1.1
   client-fingerprint: firefox
   network: tcp
 proxy-groups:
