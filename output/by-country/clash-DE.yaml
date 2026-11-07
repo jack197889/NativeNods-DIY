@@ -6,19 +6,176 @@ log-level: info
 proxies:
 - name: 🇩🇪 德国-法兰克福 01
   type: vless
-  server: 188.114.98.0
+  server: 141.101.121.61
   port: 443
   udp: true
-  uuid: c2f1f999-365f-42a7-87e7-726cbd0753ae
+  uuid: 0192e468-ddb2-48f5-9450-e33608d299c4
   tls: true
-  servername: auth-api-8be4aa-gw.prod-relay-110934.workers.dev
+  servername: net-bridge-4126e7-gw.wallweb3obtar.workers.dev
   alpn:
   - http/1.1
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /294dd38929bdec5b
+    path: /dbb0764aca00c946
     headers:
-      Host: auth-api-8be4aa-gw.prod-relay-110934.workers.dev
+      Host: net-bridge-4126e7-gw.wallweb3obtar.workers.dev
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇩🇪 德国-法兰克福 02
+  type: vless
+  server: 104.27.197.129
+  port: 443
+  udp: true
+  uuid: 0192e468-ddb2-48f5-9450-e33608d299c4
+  tls: true
+  servername: net-bridge-4126e7-gw.wallweb3obtar.workers.dev
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /dbb0764aca00c946
+    headers:
+      Host: net-bridge-4126e7-gw.wallweb3obtar.workers.dev
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇩🇪 德国-法兰克福 03
+  type: vless
+  server: 104.18.133.94
+  port: 443
+  udp: true
+  uuid: 0192e468-ddb2-48f5-9450-e33608d299c4
+  tls: true
+  servername: net-bridge-4126e7-gw.wallweb3obtar.workers.dev
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /dbb0764aca00c946
+    headers:
+      Host: net-bridge-4126e7-gw.wallweb3obtar.workers.dev
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇩🇪 德国-法兰克福 04
+  type: vless
+  server: www.speedtest.net
+  port: 443
+  udp: true
+  uuid: eb92918e-b1a0-450a-af99-337d76b3fa0d
+  tls: true
+  servername: net-bridge-88f351-gw.9yzm3yekuoys.workers.dev
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /b16c0b57857ff8c3
+    headers:
+      Host: net-bridge-88f351-gw.9yzm3yekuoys.workers.dev
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇩🇪 德国-法兰克福 05
+  type: vless
+  server: 172.67.116.212
+  port: 443
+  udp: true
+  uuid: 0192e468-ddb2-48f5-9450-e33608d299c4
+  tls: true
+  servername: net-bridge-4126e7-gw.wallweb3obtar.workers.dev
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /dbb0764aca00c946
+    headers:
+      Host: net-bridge-4126e7-gw.wallweb3obtar.workers.dev
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇩🇪 德国-法兰克福 06
+  type: vless
+  server: 172.67.170.148
+  port: 443
+  udp: true
+  uuid: 0192e468-ddb2-48f5-9450-e33608d299c4
+  tls: true
+  servername: net-bridge-4126e7-gw.wallweb3obtar.workers.dev
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /dbb0764aca00c946
+    headers:
+      Host: net-bridge-4126e7-gw.wallweb3obtar.workers.dev
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇩🇪 德国-法兰克福 07
+  type: vless
+  server: 188.114.97.6
+  port: 8080
+  udp: true
+  uuid: 93fa8bdb-9cca-4a3e-8355-b7c12e4f595e
+  network: ws
+  ws-opts:
+    path: /vl/yLWNcuUuw1jlJpkDhGy
+    headers:
+      Host: fornewiran.ade-1000.workers.dev
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇩🇪 德国-法兰克福 08
+  type: vless
+  server: medium.com
+  port: 443
+  udp: true
+  uuid: f2a73750-3087-48ff-a763-1348c15dce68
+  tls: true
+  servername: rAyAn-007.mAxImA.DpDnS.OrG
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rAyAn-007.mAxImA.DpDnS.OrG
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇩🇪 德国-法兰克福 09
+  type: vless
+  server: 104.24.0.193
+  port: 443
+  udp: true
+  uuid: 0192e468-ddb2-48f5-9450-e33608d299c4
+  tls: true
+  servername: net-bridge-4126e7-gw.wallweb3obtar.workers.dev
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /dbb0764aca00c946
+    headers:
+      Host: net-bridge-4126e7-gw.wallweb3obtar.workers.dev
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇩🇪 德国-法兰克福 10
+  type: vless
+  server: 190.93.245.239
+  port: 443
+  udp: true
+  uuid: 0192e468-ddb2-48f5-9450-e33608d299c4
+  tls: true
+  servername: net-bridge-4126e7-gw.wallweb3obtar.workers.dev
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /dbb0764aca00c946
+    headers:
+      Host: net-bridge-4126e7-gw.wallweb3obtar.workers.dev
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
 proxy-groups:
@@ -27,10 +184,28 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇩🇪 德国-法兰克福 01
+  - 🇩🇪 德国-法兰克福 02
+  - 🇩🇪 德国-法兰克福 03
+  - 🇩🇪 德国-法兰克福 04
+  - 🇩🇪 德国-法兰克福 05
+  - 🇩🇪 德国-法兰克福 06
+  - 🇩🇪 德国-法兰克福 07
+  - 🇩🇪 德国-法兰克福 08
+  - 🇩🇪 德国-法兰克福 09
+  - 🇩🇪 德国-法兰克福 10
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇩🇪 德国-法兰克福 01
+  - 🇩🇪 德国-法兰克福 02
+  - 🇩🇪 德国-法兰克福 03
+  - 🇩🇪 德国-法兰克福 04
+  - 🇩🇪 德国-法兰克福 05
+  - 🇩🇪 德国-法兰克福 06
+  - 🇩🇪 德国-法兰克福 07
+  - 🇩🇪 德国-法兰克福 08
+  - 🇩🇪 德国-法兰克福 09
+  - 🇩🇪 德国-法兰克福 10
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

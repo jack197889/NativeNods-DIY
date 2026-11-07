@@ -4,26 +4,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 台湾-Yuanlin 01 (家宽)
-  type: trojan
-  server: 125.227.86.46
-  port: 443
-  udp: true
-  password: 0a9f1f5a397bd427
-  sni: TG.freecodes
-  skip-cert-verify: true
-  network: grpc
-  grpc-opts:
-    grpc-service-name: db
-- name: 🇹🇼 台湾-Changhua 02 (家宽)
-  type: anytls
-  server: er8u54dh.df6h451rh.xin
-  port: 443
-  udp: true
-  password: 0324fbc29561
-  sni: px.ads.linkedin.com
-  skip-cert-verify: true
-- name: 🇹🇼 台湾-台中 03 (家宽)
+- name: 🇹🇼 台湾-台中 01 (家宽)
   type: vless
   server: 60.248.219.78
   port: 443
@@ -42,15 +23,11 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇹🇼 台湾-Yuanlin 01 (家宽)
-  - 🇹🇼 台湾-Changhua 02 (家宽)
-  - 🇹🇼 台湾-台中 03 (家宽)
+  - 🇹🇼 台湾-台中 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇹🇼 台湾-Yuanlin 01 (家宽)
-  - 🇹🇼 台湾-Changhua 02 (家宽)
-  - 🇹🇼 台湾-台中 03 (家宽)
+  - 🇹🇼 台湾-台中 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

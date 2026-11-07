@@ -18,16 +18,32 @@ proxies:
     path: /wsru
     headers:
       Host: xsru2.freeddns.org
+- name: 🇷🇺 俄罗斯-莫斯科 02 (原生)
+  type: vless
+  server: ru1.aoyou.stream
+  port: 443
+  udp: true
+  uuid: 1d2392a0-1713-4ea9-be88-8a1e5ddab6bd
+  flow: xtls-rprx-vision
+  tls: true
+  servername: news.apple.com
+  client-fingerprint: edge
+  reality-opts:
+    public-key: 7ZOPr8Vbg0jSLw91-ONdvxGzGfen9sRz1VMpmau72RY
+    short-id: 31a2cc
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇷🇺 俄罗斯-莫斯科 01 (原生)
+  - 🇷🇺 俄罗斯-莫斯科 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇷🇺 俄罗斯-莫斯科 01 (原生)
+  - 🇷🇺 俄罗斯-莫斯科 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

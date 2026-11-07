@@ -4,30 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇷🇺 俄罗斯-阿姆斯特丹 01
+- name: 🇪🇪 EE-Narva 01 (原生)
   type: vless
-  server: 5.129.237.55
+  server: ee.subv.ru
   port: 443
   udp: true
-  uuid: 8d954cbe-7ca9-402d-bfaf-aca6c92c04c3
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
   flow: xtls-rprx-vision
   tls: true
-  servername: www.asml.com
+  servername: dvizhok.su
   client-fingerprint: firefox
   reality-opts:
-    public-key: LFbPIbtPbYVHinY8qVv9uGji-10AUbJRpiy2b1w35ls
-    short-id: a623829279b6054a
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇷🇺 俄罗斯-阿姆斯特丹 01
+  - 🇪🇪 EE-Narva 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇷🇺 俄罗斯-阿姆斯特丹 01
+  - 🇪🇪 EE-Narva 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
