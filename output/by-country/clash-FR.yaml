@@ -15,33 +15,23 @@ proxies:
   network: tcp
 - name: 🇫🇷 法国-巴黎 02
   type: vless
-  server: 138.124.70.41
-  port: 14430
-  udp: true
-  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
-  packet-encoding: xudp
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 138.124.70.41
-- name: 🇫🇷 法国-巴黎 03
-  type: vless
-  server: w.geogame.ir
+  server: 15.236.109.186
   port: 2053
   udp: true
   uuid: fbda2834-b1e7-4148-afb9-deda31036a30
   tls: true
   servername: w.geogame.ir
+  alpn:
+  - h2
+  - http/1.1
   client-fingerprint: chrome
   network: tcp
-- name: 🇫🇷 法国-巴黎 04
+- name: 🇫🇷 法国-巴黎 03
   type: hysteria2
   server: 13.36.234.11
   port: 443
   udp: true
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 13.36.234.11
   skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
@@ -51,14 +41,12 @@ proxy-groups:
   - 🇫🇷 法国-Aubervilliers 01
   - 🇫🇷 法国-巴黎 02
   - 🇫🇷 法国-巴黎 03
-  - 🇫🇷 法国-巴黎 04
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇫🇷 法国-Aubervilliers 01
   - 🇫🇷 法国-巴黎 02
   - 🇫🇷 法国-巴黎 03
-  - 🇫🇷 法国-巴黎 04
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

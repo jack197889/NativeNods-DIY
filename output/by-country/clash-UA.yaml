@@ -1,0 +1,35 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇺🇦 乌克兰-Kharkiv 01
+  type: vless
+  server: staging.lastilhame.monster
+  port: 443
+  udp: true
+  uuid: 594d466e-8ac3-4fda-b1d1-eeb817853518
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.microsoft.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
+    short-id: 5a018643df03
+  network: tcp
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇺🇦 乌克兰-Kharkiv 01
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇺🇦 乌克兰-Kharkiv 01
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

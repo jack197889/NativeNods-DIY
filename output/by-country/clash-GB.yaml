@@ -17,25 +17,32 @@ proxies:
     public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
     short-id: d051f678212f9d54
   network: tcp
-- name: 🇬🇧 英国-Slough 02
-  type: hysteria2
-  server: promo2.betust.net
-  port: 443
+- name: 🇬🇧 英国-伦敦 02
+  type: vless
+  server: 34.39.80.57
+  port: 50818
   udp: true
-  password: 2bc6428196efb899f544d750bea0c06d
-  sni: promo2.betust.net
+  uuid: 408c814e-f70a-4d16-b3b3-8182bb70211d
+  tls: true
+  servername: yingguo.rymaker.cn
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /GunService
+    headers:
+      Host: yingguo.rymaker.cn
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇬🇧 英国-伦敦 01
-  - 🇬🇧 英国-Slough 02
+  - 🇬🇧 英国-伦敦 02
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇬🇧 英国-伦敦 01
-  - 🇬🇧 英国-Slough 02
+  - 🇬🇧 英国-伦敦 02
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

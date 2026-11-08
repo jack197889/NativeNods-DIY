@@ -12,7 +12,10 @@ proxies:
   uuid: 6ba4ed2e-b42b-4880-8b3b-c7e2df2d02f6
   tls: true
   servername: se3.shtil.io
-  client-fingerprint: firefox
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择

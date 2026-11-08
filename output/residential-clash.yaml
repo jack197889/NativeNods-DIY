@@ -6,19 +6,30 @@ log-level: info
 proxies:
 - name: 🇭🇰 香港 01 (家宽)
   type: hysteria2
-  server: 9969bb96-tmm5c0-twuk0i-1hzyr.hk3.hyhuawei.com
+  server: e49952e3-tmm5c0-tv7zgh-1ijh5.hk3.hyhuawei.com
   port: 443
   udp: true
-  password: 3be8cba8-b721-11ec-8b04-f23c91cfbbc9
-  sni: 9969bb96-tmm5c0-twuk0i-1hzyr.hk3.hyhuawei.com
+  password: f7d95364-607b-11ee-93af-f23c91369f2d
+  sni: e49952e3-tmm5c0-tv7zgh-1ijh5.hk3.hyhuawei.com
 - name: 🇭🇰 香港 02 (家宽)
   type: hysteria2
-  server: 71db9f3f-tmm5c0-tyn7s3-1q3dm.nw4.hyhuawei.com
+  server: 9a07c316-tmkao0-u1vxv2-v3c2.nw4.hyhuawei.com
   port: 443
   udp: true
-  password: c1785de0-212f-11ef-92aa-f23c9164ca5d
-  sni: 71db9f3f-tmm5c0-tyn7s3-1q3dm.nw4.hyhuawei.com
-  skip-cert-verify: true
+  password: 5f091cbe-fb34-11ea-9777-f23c9164ca5d
+  sni: 9a07c316-tmkao0-u1vxv2-v3c2.nw4.hyhuawei.com
+- name: 🇭🇰 香港 03 (家宽)
+  type: tuic
+  server: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com
+  port: 443
+  udp: true
+  uuid: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8
+  password: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8
+  sni: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com
+  alpn:
+  - h3
+  congestion-controller: bbr
+  udp-relay-mode: native
 - name: 🇹🇼 台湾-台中 01 (家宽)
   type: vless
   server: 60.248.219.78
@@ -40,12 +51,14 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇭🇰 香港 01 (家宽)
   - 🇭🇰 香港 02 (家宽)
+  - 🇭🇰 香港 03 (家宽)
   - 🇹🇼 台湾-台中 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇭🇰 香港 01 (家宽)
   - 🇭🇰 香港 02 (家宽)
+  - 🇭🇰 香港 03 (家宽)
   - 🇹🇼 台湾-台中 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300

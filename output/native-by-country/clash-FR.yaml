@@ -10,19 +10,22 @@ proxies:
   port: 60111
   udp: true
   password: github.com/Alvin9999-newpac/fanqiang
-  sni: css.rbxcdn.com
+  sni: www.bing.com
   skip-cert-verify: true
-- name: 🇫🇷 法国-Gravelines 02 (原生)
+- name: 🇫🇷 法国-巴黎 02 (原生)
   type: vless
-  server: OV-France1.09vpn.com
-  port: 80
+  server: 62.210.91.10
+  port: 23576
   udp: true
-  uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0
-  network: ws
-  ws-opts:
-    path: /vless/
-    headers:
-      Host: OV-France1.09vpn.com
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
 - name: 🇫🇷 法国-Roubaix 03 (原生)
   type: vless
   server: 163.245.42.56
@@ -32,32 +35,31 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: mother-earth.fyi
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
     short-id: ''
   network: tcp
-- name: 🇫🇷 法国-Wattrelos 04 (原生)
-  type: vmess
-  server: 46.105.222.155
-  port: 1270
-  udp: true
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  network: tcp
-- name: 🇫🇷 法国-Gravelines 05 (原生)
-  type: hysteria2
+- name: 🇫🇷 法国-Roubaix 04 (原生)
+  type: vless
   server: 51.77.217.70
-  port: 8447
+  port: 2053
   udp: true
-  password: capadmbd5f18bd:jX4BuciLLIqLvzJZsHpoXtc2
-  sni: vpn.local
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: ChY5QQQT3ZtUdNT8
+  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
+    short-id: bfe58beb41f1d09f
+  network: tcp
+- name: 🇫🇷 法国-Roubaix 05 (原生)
+  type: vless
+  server: 51.68.34.78
+  port: 20327
+  udp: true
+  uuid: 5485ddcf-562b-4638-b92e-5eabfe60ad86
+  network: tcp
 - name: 🇫🇷 法国-Strasbourg 06 (原生)
   type: vless
   server: 152.228.139.33
@@ -73,41 +75,32 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc_common3
-- name: 🇫🇷 法国-Roubaix 07 (原生)
-  type: hysteria2
-  server: 51.77.217.70
-  port: 21169
-  udp: true
-  password: capadmbd5f18bd:jX4BuciLLIqLvzJZsHpoXtc2
-  sni: vpn.local
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: ChY5QQQT3ZtUdNT8
-- name: 🇫🇷 法国-Wattrelos 08 (原生)
-  type: vmess
-  server: 46.105.222.157
-  port: 1270
-  udp: true
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  network: tcp
-- name: 🇫🇷 法国-Gravelines 09 (原生)
-  type: vmess
-  server: 162.19.82.57
-  port: 1270
-  udp: true
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  network: tcp
-- name: 🇫🇷 法国-Wattrelos 10 (原生)
+- name: 🇫🇷 法国-Wattrelos 07 (原生)
   type: vmess
   server: 79.137.99.183
+  port: 1270
+  udp: true
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  network: tcp
+- name: 🇫🇷 法国-Gravelines 08 (原生)
+  type: vless
+  server: ov-france1.09vpn.com
+  port: 80
+  udp: true
+  uuid: f5c47e9c-914a-4a91-a81e-a5a77bc10fc1
+  packet-encoding: xudp
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: ov-france1.09vpn.com
+- name: 🇫🇷 法国-Wattrelos 09 (原生)
+  type: vmess
+  server: 46.105.222.157
   port: 1270
   udp: true
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
@@ -122,28 +115,26 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇫🇷 法国-巴黎 01 (原生)
-  - 🇫🇷 法国-Gravelines 02 (原生)
+  - 🇫🇷 法国-巴黎 02 (原生)
   - 🇫🇷 法国-Roubaix 03 (原生)
-  - 🇫🇷 法国-Wattrelos 04 (原生)
-  - 🇫🇷 法国-Gravelines 05 (原生)
+  - 🇫🇷 法国-Roubaix 04 (原生)
+  - 🇫🇷 法国-Roubaix 05 (原生)
   - 🇫🇷 法国-Strasbourg 06 (原生)
-  - 🇫🇷 法国-Roubaix 07 (原生)
-  - 🇫🇷 法国-Wattrelos 08 (原生)
-  - 🇫🇷 法国-Gravelines 09 (原生)
-  - 🇫🇷 法国-Wattrelos 10 (原生)
+  - 🇫🇷 法国-Wattrelos 07 (原生)
+  - 🇫🇷 法国-Gravelines 08 (原生)
+  - 🇫🇷 法国-Wattrelos 09 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇫🇷 法国-巴黎 01 (原生)
-  - 🇫🇷 法国-Gravelines 02 (原生)
+  - 🇫🇷 法国-巴黎 02 (原生)
   - 🇫🇷 法国-Roubaix 03 (原生)
-  - 🇫🇷 法国-Wattrelos 04 (原生)
-  - 🇫🇷 法国-Gravelines 05 (原生)
+  - 🇫🇷 法国-Roubaix 04 (原生)
+  - 🇫🇷 法国-Roubaix 05 (原生)
   - 🇫🇷 法国-Strasbourg 06 (原生)
-  - 🇫🇷 法国-Roubaix 07 (原生)
-  - 🇫🇷 法国-Wattrelos 08 (原生)
-  - 🇫🇷 法国-Gravelines 09 (原生)
-  - 🇫🇷 法国-Wattrelos 10 (原生)
+  - 🇫🇷 法国-Wattrelos 07 (原生)
+  - 🇫🇷 法国-Gravelines 08 (原生)
+  - 🇫🇷 法国-Wattrelos 09 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

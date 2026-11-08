@@ -4,30 +4,32 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇩 印度尼西亚-雅加达 01 (原生)
-  type: vmess
-  server: free2.rajaserver2.web.id
-  port: 80
+- name: 🇱🇹 LT-Šiauliai 01 (原生)
+  type: vless
+  server: 6b9iw.guardora.pro
+  port: 443
   udp: true
-  uuid: 4d4708ef-0729-44ac-b2b0-411ce0242e89
-  alterId: 0
-  cipher: auto
+  uuid: d9cc5c37-b53c-1131-b4e1-1b9f7fbea1b1
+  tls: true
+  servername: 6b9iw.guardora.pro
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /upvmess
-    v2ray-http-upgrade: true
+    path: /ogVAL8moh5SB
     headers:
-      Host: free2.rajaserver2.web.id
+      Host: 6b9iw.guardora.pro
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇮🇩 印度尼西亚-雅加达 01 (原生)
+  - 🇱🇹 LT-Šiauliai 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇮🇩 印度尼西亚-雅加达 01 (原生)
+  - 🇱🇹 LT-Šiauliai 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

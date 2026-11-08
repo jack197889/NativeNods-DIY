@@ -4,25 +4,23 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇭 泰国-Pak Kret 01 (原生)
-  type: vmess
-  server: 119.46.51.45
-  port: 37515
+- name: 🇱🇺 LU-Schieren 01 (原生)
+  type: ss
+  server: 87.228.61.175
+  port: 1443
   udp: true
-  uuid: 9b76bc31-17a5-4454-934a-8d5fb602cd70
-  alterId: 0
-  cipher: auto
-  network: tcp
+  cipher: chacha20-ietf-poly1305
+  password: tAGGzgRCi6W95UwG0qerf6
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇹🇭 泰国-Pak Kret 01 (原生)
+  - 🇱🇺 LU-Schieren 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇹🇭 泰国-Pak Kret 01 (原生)
+  - 🇱🇺 LU-Schieren 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

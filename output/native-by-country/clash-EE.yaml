@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: 🇪🇪 EE-Narva 01 (原生)
   type: vless
-  server: 185.215.184.85
+  server: 185.215.184.53
   port: 443
   udp: true
   uuid: 90157e25-cee1-4217-921e-91f300bc1a24
@@ -20,6 +20,20 @@ proxies:
   network: tcp
 - name: 🇪🇪 EE-Narva 02 (原生)
   type: vless
+  server: ee.subv.ru
+  port: 443
+  udp: true
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  flow: xtls-rprx-vision
+  tls: true
+  servername: dvizhok.su
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+  network: tcp
+- name: 🇪🇪 EE-Narva 03 (原生)
+  type: vless
   server: 185.215.184.49
   port: 443
   udp: true
@@ -27,7 +41,7 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: dvizhok.su
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   reality-opts:
     public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
     short-id: 428ef87fd47a3a32
@@ -39,11 +53,13 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇪🇪 EE-Narva 01 (原生)
   - 🇪🇪 EE-Narva 02 (原生)
+  - 🇪🇪 EE-Narva 03 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇪🇪 EE-Narva 01 (原生)
   - 🇪🇪 EE-Narva 02 (原生)
+  - 🇪🇪 EE-Narva 03 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

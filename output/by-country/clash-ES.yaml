@@ -13,32 +13,21 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   reality-opts:
     public-key: 3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA
     short-id: fd8cf7e1173f0edb
   network: tcp
-- name: 🇪🇸 西班牙-Estepona 02
-  type: vless
-  server: 213.182.201.18
-  port: 3090
-  udp: true
-  uuid: 8bac7917-b4d2-4338-bbfc-5d47bda8c5ab
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇪🇸 西班牙-伦敦 01
-  - 🇪🇸 西班牙-Estepona 02
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇪🇸 西班牙-伦敦 01
-  - 🇪🇸 西班牙-Estepona 02
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

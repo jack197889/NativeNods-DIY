@@ -6,17 +6,17 @@ log-level: info
 proxies:
 - name: 🇨🇿 捷克-阿姆斯特丹 01
   type: vless
-  server: 193.124.17.190
+  server: server.slavkiti.monster
   port: 443
   udp: true
-  uuid: d84c13b2-c2b9-4a7c-838f-05ac09ee422e
+  uuid: fad0b9a6-187d-4fcc-96fc-498bc5b3135a
   flow: xtls-rprx-vision
   tls: true
-  servername: www.mozilla.org
+  servername: www.foxsports.com
   client-fingerprint: chrome
   reality-opts:
     public-key: J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk
-    short-id: 2a2ce9e42980
+    short-id: 8325360e8bd2
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择

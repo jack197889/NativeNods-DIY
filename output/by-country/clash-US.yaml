@@ -6,20 +6,6 @@ log-level: info
 proxies:
 - name: 🇺🇸 美国-纽约 01
   type: vless
-  server: 169.40.42.90
-  port: 443
-  udp: true
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  network: tcp
-- name: 🇺🇸 美国-纽约 02
-  type: vless
   server: 167.17.69.171
   port: 443
   udp: true
@@ -27,14 +13,16 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: www.cloudflare.com
-  client-fingerprint: qq
+  alpn:
+  - channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpnـ
+  client-fingerprint: chrome
   reality-opts:
     public-key: ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk
     short-id: 0990d22f
   network: tcp
-- name: 🇺🇸 美国-纽约 03
+- name: 🇺🇸 美国-纽约 02
   type: vless
-  server: 169.40.42.163
+  server: 169.40.42.74
   port: 443
   udp: true
   uuid: d65cc14c-f53f-4fe2-b262-97856601319c
@@ -46,13 +34,37 @@ proxies:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: c39cc7310a
   network: tcp
-- name: 🇺🇸 美国-纽约 04
-  type: ss
-  server: 37.19.198.244
+- name: 🇺🇸 美国-纽约 03
+  type: vless
+  server: 169.40.42.90
   port: 443
   udp: true
-  cipher: aes-128-gcm
-  password: shadowsocks
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: edge
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  network: tcp
+- name: 🇺🇸 美国-纽约 04
+  type: vless
+  server: 169.40.42.163
+  port: 443
+  udp: true
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  network: tcp
 - name: 🇺🇸 美国-纽约 05
   type: vless
   server: 169.40.42.168
@@ -62,25 +74,20 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: yahoo.com
+  alpn:
+  - networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-
   client-fingerprint: chrome
   reality-opts:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: c39cc7310a
   network: tcp
 - name: 🇺🇸 美国-纽约 06
-  type: vless
-  server: 169.40.42.74
+  type: ss
+  server: 37.19.198.244
   port: 443
   udp: true
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: ios
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  network: tcp
+  cipher: aes-128-gcm
+  password: shadowsocks
 - name: 🇺🇸 美国-Secaucus 07
   type: vless
   server: 45.138.100.248
@@ -92,21 +99,7 @@ proxies:
     path: /vless
     headers:
       Host: 45.138.100.248
-- name: 🇺🇸 美国-芝加哥 08
-  type: ss
-  server: twichcom.plus-hit.ru
-  port: 1080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: V7WLaYdujkwnj6xxXq-2BSxGWEcSJtTA
-- name: 🇺🇸 美国-芝加哥 09
-  type: hysteria2
-  server: 88.216.195.188
-  port: 443
-  udp: true
-  password: 63e1b9462d708b56d5d5a0267cffecdc
-  sni: promo3.goonars.com
-- name: 🇺🇸 美国-波士顿 10
+- name: 🇺🇸 美国-波士顿 08
   type: vless
   server: 2.24.124.64
   port: 443
@@ -120,7 +113,21 @@ proxies:
     public-key: zpXR6Y36C8qUCIVk2p_j8C9KGeBk5xisLw66j3WFOls
     short-id: 9f1fc5a631ef3126
   network: tcp
-- name: 🇺🇸 美国-洛杉矶 11
+- name: 🇺🇸 美国-洛杉矶 09
+  type: vless
+  server: 156.229.167.109
+  port: 8443
+  udp: true
+  uuid: eb8c97f7-a154-4442-91b0-54c0d055ad0b
+  packet-encoding: xudp
+  tls: true
+  servername: github.githubassets.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 4g6gX0ueJap7pY_iTDx23h6bzo3KIOTcFzP1Uacn0QA
+    short-id: 4ad2e4e660550e43
+  network: tcp
+- name: 🇺🇸 美国-洛杉矶 10
   type: vless
   server: 85.155.179.206
   port: 443
@@ -129,36 +136,21 @@ proxies:
   tls: true
   servername: us3.shtil.io
   network: tcp
-- name: 🇺🇸 美国-洛杉矶 12
+- name: 🇺🇸 美国-洛杉矶 11
   type: ss
   server: 103.11.76.248
   port: 28679
   udp: true
   cipher: 2022-blake3-aes-128-gcm
   password: NzJlOTQ5NWYtM2ZkYi00Cg==
-- name: 🇺🇸 美国-盐湖城 13
-  type: vless
-  server: 151.241.88.81
-  port: 19606
-  udp: true
-  uuid: 782ba1d2-1241-418e-9054-463c08a424bc
-  flow: xtls-rprx-vision
-  packet-encoding: xudp
-  tls: true
-  servername: zh-hk.vuejs.org
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 4GIE6ygCBY4pqRPkQ3OLLo6inpNcbBUEYLIqjMoZ3n4
-    short-id: 6ba85179e30d4fc2
-  network: tcp
-- name: 🇺🇸 美国-Halfweg 14
+- name: 🇺🇸 美国-Halfweg 12
   type: hysteria2
   server: promo.betust.net
   port: 443
   udp: true
   password: d4ca9415f0eac7897472e1e5b86d2e96
   sni: promo.betust.net
-- name: 🇺🇸 美国-Halfweg 15
+- name: 🇺🇸 美国-Halfweg 13
   type: vless
   server: 50.7.176.65
   port: 443
@@ -184,14 +176,12 @@ proxy-groups:
   - 🇺🇸 美国-纽约 05
   - 🇺🇸 美国-纽约 06
   - 🇺🇸 美国-Secaucus 07
-  - 🇺🇸 美国-芝加哥 08
-  - 🇺🇸 美国-芝加哥 09
-  - 🇺🇸 美国-波士顿 10
+  - 🇺🇸 美国-波士顿 08
+  - 🇺🇸 美国-洛杉矶 09
+  - 🇺🇸 美国-洛杉矶 10
   - 🇺🇸 美国-洛杉矶 11
-  - 🇺🇸 美国-洛杉矶 12
-  - 🇺🇸 美国-盐湖城 13
-  - 🇺🇸 美国-Halfweg 14
-  - 🇺🇸 美国-Halfweg 15
+  - 🇺🇸 美国-Halfweg 12
+  - 🇺🇸 美国-Halfweg 13
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -202,14 +192,12 @@ proxy-groups:
   - 🇺🇸 美国-纽约 05
   - 🇺🇸 美国-纽约 06
   - 🇺🇸 美国-Secaucus 07
-  - 🇺🇸 美国-芝加哥 08
-  - 🇺🇸 美国-芝加哥 09
-  - 🇺🇸 美国-波士顿 10
+  - 🇺🇸 美国-波士顿 08
+  - 🇺🇸 美国-洛杉矶 09
+  - 🇺🇸 美国-洛杉矶 10
   - 🇺🇸 美国-洛杉矶 11
-  - 🇺🇸 美国-洛杉矶 12
-  - 🇺🇸 美国-盐湖城 13
-  - 🇺🇸 美国-Halfweg 14
-  - 🇺🇸 美国-Halfweg 15
+  - 🇺🇸 美国-Halfweg 12
+  - 🇺🇸 美国-Halfweg 13
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

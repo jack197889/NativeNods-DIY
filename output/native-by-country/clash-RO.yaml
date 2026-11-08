@@ -5,45 +5,29 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚-布加勒斯特 01 (原生)
-  type: hysteria2
-  server: hy2-new.aspidnet.xyz
+  type: vless
+  server: cdn-rum-keno-prsv.keno.su
   port: 443
   udp: true
-  password: QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s
-  sni: hy2-new.aspidnet.xyz
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: c1b4086fea89914496c7e10967a419216566
-- name: 🇷🇴 罗马尼亚-布加勒斯特 02 (原生)
-  type: hysteria2
-  server: 162.249.125.133
-  port: 443
-  udp: true
-  password: QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s
-  sni: hy2-new.aspidnet.xyz
-  obfs: salamander
-  obfs-password: c1b4086fea89914496c7e10967a419216566
-- name: 🇷🇴 罗马尼亚-布加勒斯特 03 (原生)
-  type: ss
-  server: 82.152.132.211
-  port: 8044
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: dCamglzrORaopqbpBlptzbt9QdiH4CSN
+  uuid: dc95c1dd-2cd3-414c-8cf1-71ae86dad666
+  flow: xtls-rprx-vision
+  tls: true
+  servername: cdn-rum-keno-prsv.keno.su
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: Cw04nkURk7InPCPZl-0PovP44rh5o74dMHBUFOsjFig
+    short-id: a1b2c3d4e5f60718
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇷🇴 罗马尼亚-布加勒斯特 01 (原生)
-  - 🇷🇴 罗马尼亚-布加勒斯特 02 (原生)
-  - 🇷🇴 罗马尼亚-布加勒斯特 03 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇷🇴 罗马尼亚-布加勒斯特 01 (原生)
-  - 🇷🇴 罗马尼亚-布加勒斯特 02 (原生)
-  - 🇷🇴 罗马尼亚-布加勒斯特 03 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

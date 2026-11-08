@@ -13,16 +13,27 @@ proxies:
   sni: 160.21.74.183
   skip-cert-verify: true
   network: tcp
+- name: 🇯🇵 日本-大阪 02 (原生)
+  type: vmess
+  server: df.668fx.com
+  port: 11353
+  udp: true
+  uuid: d105eadc-c3ea-4a82-a299-373d75f2d2b7
+  alterId: 0
+  cipher: auto
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇯🇵 日本-东京 01 (原生)
+  - 🇯🇵 日本-大阪 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇯🇵 日本-东京 01 (原生)
+  - 🇯🇵 日本-大阪 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
