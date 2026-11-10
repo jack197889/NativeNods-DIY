@@ -5,20 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 香港 01 (家宽)
-  type: hysteria2
-  server: e49952e3-tmm5c0-tv7zgh-1ijh5.hk3.hyhuawei.com
-  port: 443
-  udp: true
-  password: f7d95364-607b-11ee-93af-f23c91369f2d
-  sni: e49952e3-tmm5c0-tv7zgh-1ijh5.hk3.hyhuawei.com
-- name: 🇭🇰 香港 02 (家宽)
-  type: hysteria2
-  server: 9a07c316-tmkao0-u1vxv2-v3c2.nw4.hyhuawei.com
-  port: 443
-  udp: true
-  password: 5f091cbe-fb34-11ea-9777-f23c9164ca5d
-  sni: 9a07c316-tmkao0-u1vxv2-v3c2.nw4.hyhuawei.com
-- name: 🇭🇰 香港 03 (家宽)
   type: tuic
   server: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com
   port: 443
@@ -30,7 +16,37 @@ proxies:
   - h3
   congestion-controller: bbr
   udp-relay-mode: native
-- name: 🇹🇼 台湾-台中 01 (家宽)
+- name: 🇭🇰 香港 02 (家宽)
+  type: hysteria2
+  server: fc6ffc71-tmm5c0-ts3rye-mrtr.hk3.hyhuawei.com
+  port: 443
+  udp: true
+  password: 28a8a4d0-3e02-11eb-a8bf-f23c91cfbbc9
+  sni: fc6ffc71-tmm5c0-ts3rye-mrtr.hk3.hyhuawei.com
+- name: 🇸🇬 新加坡 01 (家宽)
+  type: vmess
+  server: 195.133.135.238
+  port: 10086
+  udp: true
+  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
+  alterId: 0
+  cipher: auto
+  network: tcp
+- name: 🇹🇼 台湾-Yuanlin 01 (家宽)
+  type: vless
+  server: dddz-1-x.473221.xyz
+  port: 13239
+  udp: true
+  uuid: 65ec84f5-0dd4-4582-8b4f-592e50b22116
+  flow: xtls-rprx-vision
+  tls: true
+  servername: updates.cdn-apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: NJgrmuV1CFhj7PeKJoQfDQVagDcFITkfrM-a7sa_mWw
+    short-id: 8591c4d31f59a60d
+  network: tcp
+- name: 🇹🇼 台湾-台中 02 (家宽)
   type: vless
   server: 60.248.219.78
   port: 443
@@ -51,15 +67,17 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇭🇰 香港 01 (家宽)
   - 🇭🇰 香港 02 (家宽)
-  - 🇭🇰 香港 03 (家宽)
-  - 🇹🇼 台湾-台中 01 (家宽)
+  - 🇸🇬 新加坡 01 (家宽)
+  - 🇹🇼 台湾-Yuanlin 01 (家宽)
+  - 🇹🇼 台湾-台中 02 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇭🇰 香港 01 (家宽)
   - 🇭🇰 香港 02 (家宽)
-  - 🇭🇰 香港 03 (家宽)
-  - 🇹🇼 台湾-台中 01 (家宽)
+  - 🇸🇬 新加坡 01 (家宽)
+  - 🇹🇼 台湾-Yuanlin 01 (家宽)
+  - 🇹🇼 台湾-台中 02 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

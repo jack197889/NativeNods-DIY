@@ -5,6 +5,53 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 香港 01 (原生)
+  type: hysteria2
+  server: 202.146.222.29
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  skip-cert-verify: true
+- name: 🇭🇰 香港 02 (原生)
+  type: hysteria2
+  server: 202.146.222.174
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: t.me
+  skip-cert-verify: true
+- name: 🇭🇰 香港 03 (原生)
+  type: hysteria2
+  server: 202.146.222.89
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https://t.me/clashv8
+  skip-cert-verify: true
+- name: 🇭🇰 香港 04 (原生)
+  type: vmess
+  server: vipccc.cc
+  port: 443
+  udp: true
+  uuid: 5bead32f-a987-4f57-b1a8-6698778facda
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: vipccc.cc
+  network: ws
+  ws-opts:
+    path: /ray_proxy
+    headers:
+      Host: vipccc.cc
+- name: 🇭🇰 香港 05 (原生)
+  type: hysteria2
+  server: 152.32.254.68
+  port: 5010
+  udp: true
+  password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ
+  sni: nas.aizhzo.com
+  obfs: salamander
+  obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
+- name: 🇭🇰 香港 06 (原生)
   type: vless
   server: 209.33.160.122
   port: 39098
@@ -17,49 +64,6 @@ proxies:
   reality-opts:
     public-key: DtOZ39u6MyQMG96tl13-M7-HeaqQzW2RLBVPk9py-Vg
     short-id: ''
-  network: tcp
-- name: 🇭🇰 香港 02 (原生)
-  type: hysteria2
-  server: 202.146.222.29
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: httpst.mewangcai2
-  skip-cert-verify: true
-- name: 🇭🇰 香港 03 (原生)
-  type: hysteria2
-  server: 152.32.254.68
-  port: 5010
-  udp: true
-  password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ
-  sni: nas.aizhzo.com
-  obfs: salamander
-  obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
-- name: 🇭🇰 香港 04 (原生)
-  type: hysteria2
-  server: 202.146.222.174
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 'off'
-  skip-cert-verify: true
-- name: 🇭🇰 香港 05 (原生)
-  type: hysteria2
-  server: 202.146.222.89
-  port: 443
-  udp: true
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/clashv8🇨🇳
-  skip-cert-verify: true
-- name: 🇭🇰 香港 06 (原生)
-  type: vless
-  server: 152.175.6.229
-  port: 31884
-  udp: true
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  tls: true
-  servername: hk010.zestapp778.com
-  client-fingerprint: chrome
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择

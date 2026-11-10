@@ -18,70 +18,39 @@ proxies:
     short-id: 83f8317a948bb769
   network: tcp
 - name: 🇨🇦 加拿大-蒙特利尔 02 (原生)
-  type: vless
-  server: 149.56.209.48
-  port: 443
-  udp: true
-  uuid: 39826f32-f5ca-42a5-ab33-188f7d199478
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: rV2Qmjr31w2nxtnMcbwHJNY2wxJynjmxwbKPlfSgET4
-    short-id: 1c72fb25098b8807
-  network: tcp
-- name: 🇨🇦 加拿大-蒙特利尔 03 (原生)
-  type: ss
-  server: 51.79.49.116
-  port: 8882
-  udp: true
-  cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-- name: 🇨🇦 加拿大-多伦多 04 (原生)
-  type: vmess
-  server: 134.195.196.211
-  port: 18000
-  udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  network: tcp
-- name: 🇨🇦 加拿大-蒙特利尔 05 (原生)
-  type: ss
-  server: 51.222.141.125
-  port: 445
-  udp: true
-  cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
-- name: 🇨🇦 加拿大-蒙特利尔 06 (原生)
   type: ss
   server: 51.222.136.236
   port: 8882
   udp: true
   cipher: aes-256-gcm
   password: kDWvXYZoTBcGkC4
-- name: 🇨🇦 加拿大-博阿尔努瓦 07 (原生)
-  type: ss
-  server: 51.222.12.127
-  port: 445
+- name: 🇨🇦 加拿大-渥太华 03 (原生)
+  type: vless
+  server: eu90.cdn77.icu
+  port: 20016
   udp: true
-  cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
-- name: 🇨🇦 加拿大-博阿尔努瓦 08 (原生)
+  uuid: 2f094d48-7186-47ca-9e57-e977bbac3b08
+  tls: true
+  servername: eu64.cdn77.icu
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
+    short-id: 1ed136481e0ede74
+  network: tcp
+- name: 🇨🇦 加拿大-博阿尔努瓦 04 (原生)
   type: ss
   server: 51.222.200.165
   port: 5000
   udp: true
   cipher: aes-256-gcm
   password: Y6R9pAtvxxzmGC
-- name: 🇨🇦 加拿大-博阿尔努瓦 09 (原生)
+- name: 🇨🇦 加拿大-蒙特利尔 05 (原生)
   type: ss
-  server: 51.222.155.32
-  port: 5003
+  server: 51.79.49.116
+  port: 8882
   udp: true
   cipher: aes-256-gcm
-  password: g5MeD6Ft3CWlJId
+  password: kDWvXYZoTBcGkC4
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -89,25 +58,17 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇨🇦 加拿大-蒙特利尔 01 (原生)
   - 🇨🇦 加拿大-蒙特利尔 02 (原生)
-  - 🇨🇦 加拿大-蒙特利尔 03 (原生)
-  - 🇨🇦 加拿大-多伦多 04 (原生)
+  - 🇨🇦 加拿大-渥太华 03 (原生)
+  - 🇨🇦 加拿大-博阿尔努瓦 04 (原生)
   - 🇨🇦 加拿大-蒙特利尔 05 (原生)
-  - 🇨🇦 加拿大-蒙特利尔 06 (原生)
-  - 🇨🇦 加拿大-博阿尔努瓦 07 (原生)
-  - 🇨🇦 加拿大-博阿尔努瓦 08 (原生)
-  - 🇨🇦 加拿大-博阿尔努瓦 09 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇨🇦 加拿大-蒙特利尔 01 (原生)
   - 🇨🇦 加拿大-蒙特利尔 02 (原生)
-  - 🇨🇦 加拿大-蒙特利尔 03 (原生)
-  - 🇨🇦 加拿大-多伦多 04 (原生)
+  - 🇨🇦 加拿大-渥太华 03 (原生)
+  - 🇨🇦 加拿大-博阿尔努瓦 04 (原生)
   - 🇨🇦 加拿大-蒙特利尔 05 (原生)
-  - 🇨🇦 加拿大-蒙特利尔 06 (原生)
-  - 🇨🇦 加拿大-博阿尔努瓦 07 (原生)
-  - 🇨🇦 加拿大-博阿尔努瓦 08 (原生)
-  - 🇨🇦 加拿大-博阿尔努瓦 09 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

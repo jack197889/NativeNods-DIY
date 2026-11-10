@@ -5,6 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚-布加勒斯特 01 (原生)
+  type: hysteria2
+  server: hy2-new.aspidnet.xyz
+  port: 443
+  udp: true
+  password: QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s
+  sni: hy2-new.aspidnet.xyz
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: c1b4086fea89914496c7e10967a419216566
+- name: 🇷🇴 罗马尼亚-布加勒斯特 02 (原生)
   type: vless
   server: cdn-rum-keno-prsv.keno.su
   port: 443
@@ -24,10 +34,12 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇷🇴 罗马尼亚-布加勒斯特 01 (原生)
+  - 🇷🇴 罗马尼亚-布加勒斯特 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇷🇴 罗马尼亚-布加勒斯特 01 (原生)
+  - 🇷🇴 罗马尼亚-布加勒斯特 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -6,12 +6,11 @@ log-level: info
 proxies:
 - name: 🇨🇦 加拿大-多伦多 01
   type: trojan
-  server: 149.248.50.252
+  server: 216.128.185.90
   port: 46977
   udp: true
   password: 5t6i121em5lkmsmk
   sni: ca001.zestapp778.com
-  skip-cert-verify: true
   network: tcp
 - name: 🇨🇦 加拿大-多伦多 02
   type: vmess

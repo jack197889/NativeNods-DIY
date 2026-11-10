@@ -4,23 +4,25 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇱🇺 LU-Schieren 01 (原生)
-  type: ss
-  server: 87.228.61.175
-  port: 1443
+- name: 🇸🇬 新加坡 01 (家宽)
+  type: vmess
+  server: 195.133.135.238
+  port: 10086
   udp: true
-  cipher: chacha20-ietf-poly1305
-  password: tAGGzgRCi6W95UwG0qerf6
+  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
+  alterId: 0
+  cipher: auto
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇱🇺 LU-Schieren 01 (原生)
+  - 🇸🇬 新加坡 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇱🇺 LU-Schieren 01 (原生)
+  - 🇸🇬 新加坡 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

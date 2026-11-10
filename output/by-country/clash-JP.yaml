@@ -1,0 +1,85 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇯🇵 日本-东京 01
+  type: vless
+  server: 162.159.228.255
+  port: 443
+  udp: true
+  uuid: b135a1e0-ebdb-4d46-b3fa-bd1e78580244
+  tls: true
+  servername: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+- name: 🇯🇵 日本-东京 02
+  type: vless
+  server: 57.129.130.57
+  port: 52014
+  udp: true
+  uuid: 201e0019-2e79-4147-8a09-e510d630abeb
+  tls: true
+  servername: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+- name: 🇯🇵 日本-大阪 03
+  type: vless
+  server: 57.129.130.34
+  port: 52014
+  udp: true
+  uuid: 6f33c3ef-ac0c-4138-8562-531d8d0eddb0
+  packet-encoding: xudp
+  tls: true
+  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+- name: 🇯🇵 日本-东京 04
+  type: vless
+  server: 57.129.130.34
+  port: 52014
+  udp: true
+  uuid: cf0091de-cde9-4be7-9368-4dfc2870db59
+  packet-encoding: xudp
+  tls: true
+  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇯🇵 日本-东京 01
+  - 🇯🇵 日本-东京 02
+  - 🇯🇵 日本-大阪 03
+  - 🇯🇵 日本-东京 04
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇯🇵 日本-东京 01
+  - 🇯🇵 日本-东京 02
+  - 🇯🇵 日本-大阪 03
+  - 🇯🇵 日本-东京 04
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

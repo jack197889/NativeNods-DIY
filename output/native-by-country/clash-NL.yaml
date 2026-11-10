@@ -4,7 +4,95 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇱 荷兰-Enschede 01 (原生)
+- name: 🇳🇱 荷兰-阿姆斯特丹 01 (原生)
+  type: vless
+  server: 172.67.184.45
+  port: 443
+  udp: true
+  uuid: 82b279c6-5cba-3a96-f8bd-780a00000045
+  tls: true
+  servername: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
+- name: 🇳🇱 荷兰-Enschede 02 (原生)
+  type: vless
+  server: assets.mediacorphub.org
+  port: 443
+  udp: true
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  tls: true
+  servername: assets.mediacorphub.org
+  alpn:
+  - h2
+  client-fingerprint: edge
+  network: grpc
+  grpc-opts:
+    grpc-service-name: hub.v1.ObjectService
+- name: 🇳🇱 荷兰-Enschede 03 (原生)
+  type: vless
+  server: 89.105.218.138
+  port: 443
+  udp: true
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  flow: xtls-rprx-vision
+  tls: true
+  servername: golos.mail.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+  network: tcp
+- name: 🇳🇱 荷兰-Enschede 04 (原生)
+  type: vless
+  server: 89.105.218.143
+  port: 443
+  udp: true
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  flow: xtls-rprx-vision
+  tls: true
+  servername: golos.mail.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+  network: tcp
+- name: 🇳🇱 荷兰-Enschede 05 (原生)
+  type: hysteria2
+  server: 89.105.218.106
+  port: 8443
+  udp: true
+  password: ba3aeb91-2ed0-45d3-8dcf-81e5ed45168b
+  sni: speedtestmark.com
+  skip-cert-verify: true
+- name: 🇳🇱 荷兰-Enschede 06 (原生)
+  type: vless
+  server: 89.105.195.148
+  port: 443
+  udp: true
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  tls: true
+  servername: api.mediacorphub.org
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: gw.v2.PushService
+- name: 🇳🇱 荷兰-Enschede 07 (原生)
+  type: vless
+  server: 89.105.195.150
+  port: 443
+  udp: true
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  tls: true
+  servername: images.mediacorphub.org
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: stats.v2.StreamService
+- name: 🇳🇱 荷兰-Enschede 08 (原生)
   type: vless
   server: 89.105.218.153
   port: 443
@@ -18,42 +106,7 @@ proxies:
     public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
     short-id: 428ef87fd47a3a32
   network: tcp
-- name: 🇳🇱 荷兰-Enschede 02 (原生)
-  type: vless
-  server: 89.105.218.133
-  port: 443
-  udp: true
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-  flow: xtls-rprx-vision
-  tls: true
-  servername: golos.mail.ru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: 428ef87fd47a3a32
-  network: tcp
-- name: 🇳🇱 荷兰-Enschede 03 (原生)
-  type: hysteria2
-  server: 89.105.218.106
-  port: 8443
-  udp: true
-  password: ba3aeb91-2ed0-45d3-8dcf-81e5ed45168b
-  sni: speedtestmark.com
-- name: 🇳🇱 荷兰-Enschede 04 (原生)
-  type: vless
-  server: 89.105.218.143
-  port: 443
-  udp: true
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-  flow: xtls-rprx-vision
-  tls: true
-  servername: golos.mail.ru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: 428ef87fd47a3a32
-  network: tcp
-- name: 🇳🇱 荷兰-Enschede 05 (原生)
+- name: 🇳🇱 荷兰-Enschede 09 (原生)
   type: vless
   server: 89.105.218.148
   port: 443
@@ -62,43 +115,73 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: golos.mail.ru
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   reality-opts:
     public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
     short-id: 428ef87fd47a3a32
   network: tcp
-- name: 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
-  type: ss
-  server: 158.173.20.208
+- name: 🇳🇱 荷兰-Enschede 10 (原生)
+  type: vless
+  server: 89.105.195.149
   port: 443
   udp: true
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  tls: true
+  servername: data.mediacorphub.org
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: home.v2.MetricsService
+- name: 🇳🇱 荷兰-Enschede 11 (原生)
+  type: vless
+  server: rpc.mediacorphub.org
+  port: 443
+  udp: true
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  tls: true
+  servername: rpc.mediacorphub.org
+  alpn:
+  - h2
+  client-fingerprint: edge
+  network: grpc
+  grpc-opts:
+    grpc-service-name: api.v1.FeedService
+- name: 🇳🇱 荷兰-阿姆斯特丹 12 (原生)
   type: ss
-  server: 193.29.139.198
-  port: 8080
+  server: dns27.m3hrzd.ir
+  port: 8044
   udp: true
   cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰-阿姆斯特丹 08 (原生)
+  password: H4JHkHU2pIRZ1sbruQ-p39Grh1z6nxY8
+- name: 🇳🇱 荷兰-Enschede 13 (原生)
+  type: vless
+  server: 89.105.195.147
+  port: 443
+  udp: true
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  tls: true
+  servername: live.mediacorphub.org
+  network: grpc
+  grpc-opts:
+    grpc-service-name: home.v1.ObjectService
+- name: 🇳🇱 荷兰-阿姆斯特丹 14 (原生)
   type: ss
   server: 82.38.31.165
   port: 443
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰-阿姆斯特丹 09 (原生)
+- name: 🇳🇱 荷兰-阿姆斯特丹 15 (原生)
   type: ss
-  server: 82.38.31.66
+  server: 82.38.31.193
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰-阿姆斯特丹 10 (原生)
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰-阿姆斯特丹 16 (原生)
   type: ss
-  server: 82.38.31.159
-  port: 443
+  server: 82.38.31.66
+  port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
@@ -107,29 +190,41 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇳🇱 荷兰-Enschede 01 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 01 (原生)
   - 🇳🇱 荷兰-Enschede 02 (原生)
   - 🇳🇱 荷兰-Enschede 03 (原生)
   - 🇳🇱 荷兰-Enschede 04 (原生)
   - 🇳🇱 荷兰-Enschede 05 (原生)
-  - 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
-  - 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
-  - 🇳🇱 荷兰-阿姆斯特丹 08 (原生)
-  - 🇳🇱 荷兰-阿姆斯特丹 09 (原生)
-  - 🇳🇱 荷兰-阿姆斯特丹 10 (原生)
+  - 🇳🇱 荷兰-Enschede 06 (原生)
+  - 🇳🇱 荷兰-Enschede 07 (原生)
+  - 🇳🇱 荷兰-Enschede 08 (原生)
+  - 🇳🇱 荷兰-Enschede 09 (原生)
+  - 🇳🇱 荷兰-Enschede 10 (原生)
+  - 🇳🇱 荷兰-Enschede 11 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 12 (原生)
+  - 🇳🇱 荷兰-Enschede 13 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 14 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 15 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 16 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇳🇱 荷兰-Enschede 01 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 01 (原生)
   - 🇳🇱 荷兰-Enschede 02 (原生)
   - 🇳🇱 荷兰-Enschede 03 (原生)
   - 🇳🇱 荷兰-Enschede 04 (原生)
   - 🇳🇱 荷兰-Enschede 05 (原生)
-  - 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
-  - 🇳🇱 荷兰-阿姆斯特丹 07 (原生)
-  - 🇳🇱 荷兰-阿姆斯特丹 08 (原生)
-  - 🇳🇱 荷兰-阿姆斯特丹 09 (原生)
-  - 🇳🇱 荷兰-阿姆斯特丹 10 (原生)
+  - 🇳🇱 荷兰-Enschede 06 (原生)
+  - 🇳🇱 荷兰-Enschede 07 (原生)
+  - 🇳🇱 荷兰-Enschede 08 (原生)
+  - 🇳🇱 荷兰-Enschede 09 (原生)
+  - 🇳🇱 荷兰-Enschede 10 (原生)
+  - 🇳🇱 荷兰-Enschede 11 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 12 (原生)
+  - 🇳🇱 荷兰-Enschede 13 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 14 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 15 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 16 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

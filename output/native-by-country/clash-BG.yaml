@@ -1,0 +1,33 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇧🇬 保加利亚-索非亚 01 (原生)
+  type: trojan
+  server: 191.44.112.170.sslip.io
+  port: 443
+  udp: true
+  password: 46d221fa-e9b4-748c-4eae-019a88e42991
+  sni: orbylume.my.to
+  network: ws
+  ws-opts:
+    path: /tvpn-trojan/bg
+    headers:
+      Host: orbylume.my.to
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇧🇬 保加利亚-索非亚 01 (原生)
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇧🇬 保加利亚-索非亚 01 (原生)
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择
