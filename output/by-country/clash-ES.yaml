@@ -4,30 +4,31 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇺 HU-布达佩斯 01 (原生)
+- name: 🇪🇸 西班牙-马德里 01
   type: vless
-  server: 172.67.131.125
+  server: 68.221.177.135
   port: 2083
   udp: true
-  uuid: f418674e-f518-4318-8ff9-e10000000046
+  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
+  flow: xtls-rprx-vision
+  packet-encoding: xudp
   tls: true
-  servername: smart-edge-424.arti98399-1905.workers.dev
+  servername: www.apple.com
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: smart-edge-424.arti98399-1905.workers.dev
+  reality-opts:
+    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
+    short-id: 0123456789abcdef
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇭🇺 HU-布达佩斯 01 (原生)
+  - 🇪🇸 西班牙-马德里 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇭🇺 HU-布达佩斯 01 (原生)
+  - 🇪🇸 西班牙-马德里 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

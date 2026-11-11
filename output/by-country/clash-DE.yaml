@@ -1,0 +1,38 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇩🇪 德国-法兰克福 01
+  type: trojan
+  server: 188.114.96.3
+  port: 2096
+  udp: true
+  password: vP!XvZBNdw.e*ddSgmH!
+  sni: n0q4XPrJ2D4X4PRCQ29L8JKCZd0.pAGES.dev
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /tr/ZFttmjSqvda5ohOQ
+    headers:
+      Host: n0q4xprj2d4x4prcq29l8jkczd0.pages.dev
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇩🇪 德国-法兰克福 01
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇩🇪 德国-法兰克福 01
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

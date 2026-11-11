@@ -6,16 +6,16 @@ log-level: info
 proxies:
 - name: 🇬🇧 英国-伦敦 01
   type: vless
-  server: 51.89.194.151
+  server: 46.250.250.149
   port: 2053
   udp: true
-  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
+  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
   tls: true
   servername: www.apple.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   reality-opts:
-    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
-    short-id: d051f678212f9d54
+    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
+    short-id: 9922313fffed1c63
   network: tcp
 - name: 🇬🇧 英国-伦敦 02
   type: vless
@@ -23,6 +23,7 @@ proxies:
   port: 50818
   udp: true
   uuid: 408c814e-f70a-4d16-b3b3-8182bb70211d
+  packet-encoding: xudp
   tls: true
   servername: yingguo.rymaker.cn
   client-fingerprint: chrome
@@ -31,13 +32,27 @@ proxies:
     path: /GunService
     headers:
       Host: yingguo.rymaker.cn
-- name: 🇬🇧 英国-Slough 03
-  type: hysteria2
-  server: promo2.betust.net
-  port: 443
+- name: 🇬🇧 英国-City of London 03
+  type: trojan
+  server: 38.60.197.163
+  port: 29813
   udp: true
-  password: 2bc6428196efb899f544d750bea0c06d
-  sni: promo2.betust.net
+  password: 5t6i121em5lkmsmk
+  sni: en001.zestapp778.com
+  network: tcp
+- name: 🇬🇧 英国-伦敦 04
+  type: vless
+  server: 51.89.194.151
+  port: 2053
+  udp: true
+  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
+    short-id: d051f678212f9d54
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -45,13 +60,15 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇬🇧 英国-伦敦 01
   - 🇬🇧 英国-伦敦 02
-  - 🇬🇧 英国-Slough 03
+  - 🇬🇧 英国-City of London 03
+  - 🇬🇧 英国-伦敦 04
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇬🇧 英国-伦敦 01
   - 🇬🇧 英国-伦敦 02
-  - 🇬🇧 英国-Slough 03
+  - 🇬🇧 英国-City of London 03
+  - 🇬🇧 英国-伦敦 04
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

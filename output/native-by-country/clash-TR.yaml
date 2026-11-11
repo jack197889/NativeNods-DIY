@@ -4,30 +4,23 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇷 土耳其-Yakuplu 01 (原生)
-  type: vless
-  server: 78.135.73.47
-  port: 443
+- name: 🇹🇷 土耳其-伊斯坦布尔 01 (原生)
+  type: ss
+  server: gaming.cloudnamercqtzumigrhrjm.ir
+  port: 30473
   udp: true
-  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.datadoghq.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
-    short-id: f46cd3ea3d1eb72d
-  network: tcp
+  cipher: 2022-blake3-aes-256-gcm
+  password: 5n3cwrcnUDtzPesQ9EC2/95cxVKaWNud1aUJSj4Aemw=:BNQqPjIRZvaTHbySMfNMYKLFQ2D13bVg+l/iyJkMsSM=
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇹🇷 土耳其-Yakuplu 01 (原生)
+  - 🇹🇷 土耳其-伊斯坦布尔 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇹🇷 土耳其-Yakuplu 01 (原生)
+  - 🇹🇷 土耳其-伊斯坦布尔 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

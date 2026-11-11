@@ -5,18 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 香港 01 (家宽)
-  type: tuic
-  server: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com
-  port: 443
-  udp: true
-  uuid: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8
-  password: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8
-  sni: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com
-  alpn:
-  - h3
-  congestion-controller: bbr
-  udp-relay-mode: native
-- name: 🇭🇰 香港 02 (家宽)
   type: hysteria2
   server: fc6ffc71-tmm5c0-ts3rye-mrtr.hk3.hyhuawei.com
   port: 443
@@ -29,12 +17,10 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇭🇰 香港 01 (家宽)
-  - 🇭🇰 香港 02 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇭🇰 香港 01 (家宽)
-  - 🇭🇰 香港 02 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

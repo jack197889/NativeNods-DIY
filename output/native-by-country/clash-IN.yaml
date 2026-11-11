@@ -4,29 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇬 NG-Lagos 01 (原生)
+- name: 🇮🇳 印度-Dhār 01 (原生)
   type: vless
-  server: eu90.cdn77.icu
-  port: 20052
+  server: 122.176.216.52
+  port: 443
   udp: true
-  uuid: 2f094d48-7186-47ca-9e57-e977bbac3b08
+  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
   tls: true
-  servername: eu64.cdn77.icu
+  servername: app-6ada5023.deploy.meerasolution.com
   client-fingerprint: chrome
-  reality-opts:
-    public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
-    short-id: 1ed136481e0ede74
-  network: tcp
+  network: ws
+  ws-opts:
+    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+    headers:
+      Host: app-6ada5023.deploy.meerasolution.com
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇳🇬 NG-Lagos 01 (原生)
+  - 🇮🇳 印度-Dhār 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇳🇬 NG-Lagos 01 (原生)
+  - 🇮🇳 印度-Dhār 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

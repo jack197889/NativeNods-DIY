@@ -4,19 +4,14 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 台湾-Yuanlin 01 (家宽)
-  type: vless
-  server: dddz-1-x.473221.xyz
-  port: 13239
+- name: 🇹🇼 台湾-Puyan 01 (家宽)
+  type: trojan
+  server: 161.114.15.215
+  port: 30502
   udp: true
-  uuid: 65ec84f5-0dd4-4582-8b4f-592e50b22116
-  flow: xtls-rprx-vision
-  tls: true
-  servername: updates.cdn-apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: NJgrmuV1CFhj7PeKJoQfDQVagDcFITkfrM-a7sa_mWw
-    short-id: 8591c4d31f59a60d
+  password: 5KdDtpoJI58OTsoG0PwEYunqB0mkAEDm
+  sni: www.cloudflare.com
+  skip-cert-verify: true
   network: tcp
 - name: 🇹🇼 台湾-台中 02 (家宽)
   type: vless
@@ -37,12 +32,12 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇹🇼 台湾-Yuanlin 01 (家宽)
+  - 🇹🇼 台湾-Puyan 01 (家宽)
   - 🇹🇼 台湾-台中 02 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇹🇼 台湾-Yuanlin 01 (家宽)
+  - 🇹🇼 台湾-Puyan 01 (家宽)
   - 🇹🇼 台湾-台中 02 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300

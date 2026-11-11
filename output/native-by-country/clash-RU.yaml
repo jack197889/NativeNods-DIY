@@ -6,40 +6,33 @@ log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯-莫斯科 01 (原生)
   type: vless
-  server: 89.105.218.133
+  server: 89.105.218.143
   port: 443
   udp: true
   uuid: 90157e25-cee1-4217-921e-91f300bc1a24
   flow: xtls-rprx-vision
   tls: true
   servername: golos.mail.ru
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   reality-opts:
     public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
     short-id: 428ef87fd47a3a32
   network: tcp
 - name: 🇷🇺 俄罗斯-莫斯科 02 (原生)
   type: vless
-  server: 89.105.218.148
+  server: novonl.subv.ru
   port: 443
   udp: true
   uuid: 90157e25-cee1-4217-921e-91f300bc1a24
   flow: xtls-rprx-vision
   tls: true
   servername: golos.mail.ru
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   reality-opts:
     public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
     short-id: 428ef87fd47a3a32
   network: tcp
 - name: 🇷🇺 俄罗斯-莫斯科 03 (原生)
-  type: ss
-  server: 46.17.47.58
-  port: 18443
-  udp: true
-  cipher: aes-256-gcm
-  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
-- name: 🇷🇺 俄罗斯-莫斯科 04 (原生)
   type: ss
   server: 185.22.153.117
   port: 18443
@@ -54,14 +47,12 @@ proxy-groups:
   - 🇷🇺 俄罗斯-莫斯科 01 (原生)
   - 🇷🇺 俄罗斯-莫斯科 02 (原生)
   - 🇷🇺 俄罗斯-莫斯科 03 (原生)
-  - 🇷🇺 俄罗斯-莫斯科 04 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇷🇺 俄罗斯-莫斯科 01 (原生)
   - 🇷🇺 俄罗斯-莫斯科 02 (原生)
   - 🇷🇺 俄罗斯-莫斯科 03 (原生)
-  - 🇷🇺 俄罗斯-莫斯科 04 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

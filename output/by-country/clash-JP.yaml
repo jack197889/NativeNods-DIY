@@ -4,7 +4,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇯🇵 日本-东京 01
+- name: 🇯🇵 日本-大阪 01
   type: vless
   server: 162.159.228.255
   port: 443
@@ -18,66 +18,165 @@ proxies:
     path: /@Marisa_kristi
     headers:
       Host: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
-- name: 🇯🇵 日本-东京 02
+- name: 🇯🇵 日本-南品川 02
   type: vless
-  server: 57.129.130.57
-  port: 52014
+  server: s2533.gogocs.xyz
+  port: 443
   udp: true
-  uuid: 201e0019-2e79-4147-8a09-e510d630abeb
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  flow: xtls-rprx-vision
   tls: true
-  servername: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
-- name: 🇯🇵 日本-大阪 03
+  servername: u695098udfec02ees2532.xxti.top
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  network: tcp
+- name: 🇯🇵 日本-东京 03
   type: vless
-  server: 57.129.130.34
-  port: 52014
+  server: 3.114.220.22
+  port: 10583
   udp: true
-  uuid: 6f33c3ef-ac0c-4138-8562-531d8d0eddb0
-  packet-encoding: xudp
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  flow: xtls-rprx-vision
   tls: true
-  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  servername: www.apple.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  network: tcp
 - name: 🇯🇵 日本-东京 04
   type: vless
-  server: 57.129.130.34
-  port: 52014
+  server: 104.19.164.155
+  port: 443
   udp: true
-  uuid: cf0091de-cde9-4be7-9368-4dfc2870db59
-  packet-encoding: xudp
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   tls: true
-  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: 🇯🇵 日本-东京 05
+  type: hysteria2
+  server: 138.3.208.26
+  port: 50160
+  udp: true
+  password: 184cdec28da5a09450803c8debcd2cc9
+  sni: '1'
+  skip-cert-verify: true
+- name: 🇯🇵 日本-东京 06
+  type: vmess
+  server: 141.11.139.102
+  port: 32515
+  udp: true
+  uuid: 081dbf5a-d8b6-40c8-96f8-3c4ca9f50442
+  alterId: 0
+  cipher: auto
+  network: tcp
+- name: 🇯🇵 日本-Chiyoda City 07
+  type: hysteria2
+  server: freedom.chenlan.top
+  port: 12765
+  udp: true
+  password: STYyftThFn
+  sni: freedom.chenlan.top
+- name: 🇯🇵 日本-东京 08
+  type: hysteria2
+  server: 8.211.175.236
+  port: 8443
+  udp: true
+  password: u63SxILNwtrQZ7Y1ZrFaZfsA
+  skip-cert-verify: true
+- name: 🇯🇵 日本-大阪 09
+  type: vless
+  server: s2546.wagahaha.xyz
+  port: 443
+  udp: true
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  flow: xtls-rprx-vision
+  tls: true
+  servername: u695098uf08a6307s2544.xxti.top
+  client-fingerprint: firefox
+  network: tcp
+- name: 🇯🇵 日本-东京 10
+  type: hysteria2
+  server: 8.209.247.109
+  port: 443
+  udp: true
+  password: usqmqUKJFIlCmvkCNSY64L3k
+  sni: bing.com
+  skip-cert-verify: true
+- name: 🇯🇵 日本-大阪 11
+  type: vmess
+  server: 168.138.43.75
+  port: 80
+  udp: true
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: None
+- name: 🇯🇵 日本-南品川 12
+  type: vless
+  server: 203.137.165.164
+  port: 57554
+  udp: true
+  uuid: 0985e268-5c1c-4141-9d96-139f8046c47c
+  tls: true
+  servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
   client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /@Marisa_kristi
     headers:
-      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
+      Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+- name: 🇯🇵 日本-大阪 13
+  type: vless
+  server: 152.69.195.67
+  port: 47878
+  udp: true
+  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇯🇵 日本-东京 01
-  - 🇯🇵 日本-东京 02
-  - 🇯🇵 日本-大阪 03
+  - 🇯🇵 日本-大阪 01
+  - 🇯🇵 日本-南品川 02
+  - 🇯🇵 日本-东京 03
   - 🇯🇵 日本-东京 04
+  - 🇯🇵 日本-东京 05
+  - 🇯🇵 日本-东京 06
+  - 🇯🇵 日本-Chiyoda City 07
+  - 🇯🇵 日本-东京 08
+  - 🇯🇵 日本-大阪 09
+  - 🇯🇵 日本-东京 10
+  - 🇯🇵 日本-大阪 11
+  - 🇯🇵 日本-南品川 12
+  - 🇯🇵 日本-大阪 13
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇯🇵 日本-东京 01
-  - 🇯🇵 日本-东京 02
-  - 🇯🇵 日本-大阪 03
+  - 🇯🇵 日本-大阪 01
+  - 🇯🇵 日本-南品川 02
+  - 🇯🇵 日本-东京 03
   - 🇯🇵 日本-东京 04
+  - 🇯🇵 日本-东京 05
+  - 🇯🇵 日本-东京 06
+  - 🇯🇵 日本-Chiyoda City 07
+  - 🇯🇵 日本-东京 08
+  - 🇯🇵 日本-大阪 09
+  - 🇯🇵 日本-东京 10
+  - 🇯🇵 日本-大阪 11
+  - 🇯🇵 日本-南品川 12
+  - 🇯🇵 日本-大阪 13
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

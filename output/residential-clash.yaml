@@ -4,19 +4,16 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇰 香港 01 (家宽)
-  type: tuic
-  server: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com
-  port: 443
+- name: 🇺🇸 美国-华盛顿 01 (移动家宽)
+  type: trojan
+  server: us001.zestapp778.com
+  port: 57277
   udp: true
-  uuid: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8
-  password: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8
-  sni: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com
-  alpn:
-  - h3
-  congestion-controller: bbr
-  udp-relay-mode: native
-- name: 🇭🇰 香港 02 (家宽)
+  password: 5t6i121em5lkmsmk
+  sni: us001.zestapp778.com
+  skip-cert-verify: true
+  network: tcp
+- name: 🇭🇰 香港 01 (家宽)
   type: hysteria2
   server: fc6ffc71-tmm5c0-ts3rye-mrtr.hk3.hyhuawei.com
   port: 443
@@ -25,26 +22,35 @@ proxies:
   sni: fc6ffc71-tmm5c0-ts3rye-mrtr.hk3.hyhuawei.com
 - name: 🇸🇬 新加坡 01 (家宽)
   type: vmess
-  server: 195.133.135.238
-  port: 10086
+  server: 116.88.224.217
+  port: 8080
   udp: true
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
+  uuid: 6f4f0eb5-fe86-41ca-eccb-a6ca68f88d9b
   alterId: 0
   cipher: auto
   network: tcp
-- name: 🇹🇼 台湾-Yuanlin 01 (家宽)
-  type: vless
-  server: dddz-1-x.473221.xyz
-  port: 13239
+- name: 🇹🇼 台湾-Puyan 01 (家宽)
+  type: trojan
+  server: 161.114.15.215
+  port: 30502
   udp: true
-  uuid: 65ec84f5-0dd4-4582-8b4f-592e50b22116
+  password: 5KdDtpoJI58OTsoG0PwEYunqB0mkAEDm
+  sni: www.cloudflare.com
+  skip-cert-verify: true
+  network: tcp
+- name: 🇰🇷 韩国-Seongnam-si 01 (家宽)
+  type: vless
+  server: 23.95.72.244
+  port: 50135
+  udp: true
+  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
   flow: xtls-rprx-vision
   tls: true
-  servername: updates.cdn-apple.com
+  servername: api.adidas.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: NJgrmuV1CFhj7PeKJoQfDQVagDcFITkfrM-a7sa_mWw
-    short-id: 8591c4d31f59a60d
+    public-key: ugirklnmY9hUeY9BQ9rdeVbu29iGblEM8N2_HHA8Rk4
+    short-id: 8cd0eddfb0
   network: tcp
 - name: 🇹🇼 台湾-台中 02 (家宽)
   type: vless
@@ -65,18 +71,20 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
+  - 🇺🇸 美国-华盛顿 01 (移动家宽)
   - 🇭🇰 香港 01 (家宽)
-  - 🇭🇰 香港 02 (家宽)
   - 🇸🇬 新加坡 01 (家宽)
-  - 🇹🇼 台湾-Yuanlin 01 (家宽)
+  - 🇹🇼 台湾-Puyan 01 (家宽)
+  - 🇰🇷 韩国-Seongnam-si 01 (家宽)
   - 🇹🇼 台湾-台中 02 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
+  - 🇺🇸 美国-华盛顿 01 (移动家宽)
   - 🇭🇰 香港 01 (家宽)
-  - 🇭🇰 香港 02 (家宽)
   - 🇸🇬 新加坡 01 (家宽)
-  - 🇹🇼 台湾-Yuanlin 01 (家宽)
+  - 🇹🇼 台湾-Puyan 01 (家宽)
+  - 🇰🇷 韩国-Seongnam-si 01 (家宽)
   - 🇹🇼 台湾-台中 02 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
