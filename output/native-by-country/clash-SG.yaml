@@ -1,0 +1,80 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇸🇬 新加坡 01 (原生)
+  type: vless
+  server: 147.93.173.45
+  port: 10444
+  udp: true
+  uuid: 75c5f51b-d548-4eab-a26e-aa10fc3dbc7b
+  flow: xtls-rprx-vision
+  tls: true
+  servername: video.yandex.ru
+  client-fingerprint: safari
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  network: tcp
+- name: 🇸🇬 新加坡 02 (原生)
+  type: vless
+  server: 103.172.116.201
+  port: 443
+  udp: true
+  uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: mjWmmSvs0D3V3130FT7MVbRs94pPuWXR7ffaQ_3A4kU
+    short-id: f96b3b17a0f5b1fe
+  network: tcp
+- name: 🇸🇬 新加坡 03 (原生)
+  type: hysteria2
+  server: 165.154.193.165
+  port: 443
+  udp: true
+  password: qtMKhrFAMrVZUfupkc5CFHmRKYtNPSjt
+  sni: 165.154.193.165
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: d7897b996af77eeecb7ac010361d74fb
+- name: 🇸🇬 新加坡 04 (原生)
+  type: vmess
+  server: 141.193.213.21
+  port: 8443
+  udp: true
+  uuid: bd67fcd2-ec34-40a6-aac6-67731f2d7011
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: matrix.phonicsindia.mobi
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: matrix.phonicsindia.mobi
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇸🇬 新加坡 01 (原生)
+  - 🇸🇬 新加坡 02 (原生)
+  - 🇸🇬 新加坡 03 (原生)
+  - 🇸🇬 新加坡 04 (原生)
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇸🇬 新加坡 01 (原生)
+  - 🇸🇬 新加坡 02 (原生)
+  - 🇸🇬 新加坡 03 (原生)
+  - 🇸🇬 新加坡 04 (原生)
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

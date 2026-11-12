@@ -5,32 +5,56 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国-法兰克福 01
-  type: trojan
-  server: 188.114.96.3
-  port: 2096
+  type: vless
+  server: fast-route-4aa49d-gw.staging-api-05a87c.workers.dev
+  port: 443
   udp: true
-  password: vP!XvZBNdw.e*ddSgmH!
-  sni: n0q4XPrJ2D4X4PRCQ29L8JKCZd0.pAGES.dev
+  uuid: 51c5a070-39ff-43fd-ac53-597bb7e7ff3d
+  tls: true
+  servername: fast-route-4aa49d-gw.staging-api-05a87c.workers.dev
   alpn:
   - http/1.1
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /tr/ZFttmjSqvda5ohOQ
+    path: /9dffa10cc2d3b317
     headers:
-      Host: n0q4xprj2d4x4prcq29l8jkczd0.pages.dev
+      Host: fast-route-4aa49d-gw.staging-api-05a87c.workers.dev
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇩🇪 德国-法兰克福 02
+  type: trojan
+  server: 104.19.45.195
+  port: 443
+  udp: true
+  password: pH[]S[Bh:_:D6T4k
+  sni: AZaDneT-692.PagEs.DEv
+  network: ws
+  ws-opts:
+    path: /trsVu9Ualb1DOfGjpw
+    headers:
+      Host: AZaDneT-692.PagEs.DEv
+- name: 🇩🇪 德国-Kostroma 03
+  type: hysteria2
+  server: steel7.hadsvpn.com
+  port: 443
+  udp: true
+  password: 23c82941-70f4-4381-90db-bd28e9a902e9
+  sni: steel7.hadsvpn.com
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇩🇪 德国-法兰克福 01
+  - 🇩🇪 德国-法兰克福 02
+  - 🇩🇪 德国-Kostroma 03
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇩🇪 德国-法兰克福 01
+  - 🇩🇪 德国-法兰克福 02
+  - 🇩🇪 德国-Kostroma 03
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

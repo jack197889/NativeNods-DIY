@@ -6,30 +6,113 @@ log-level: info
 proxies:
 - name: 🇺🇸 美国-华盛顿 01 (移动家宽)
   type: trojan
-  server: us001.zestapp778.com
+  server: 130.94.19.95
   port: 57277
   udp: true
   password: 5t6i121em5lkmsmk
   sni: us001.zestapp778.com
-  skip-cert-verify: true
+  client-fingerprint: firefox
+  network: tcp
+- name: 🇺🇸 美国-旧金山 02 (移动家宽)
+  type: vless
+  server: 23.95.72.244
+  port: 5464
+  udp: true
+  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: api.adidas.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: Dv_9FO1focQJCvcUOspkZ5AGoZ4CxbTUp7dVKzt9LVA
+    short-id: d07e9dcda8
+  network: tcp
+- name: 🇺🇸 美国-旧金山 03 (移动家宽)
+  type: vless
+  server: 23.95.72.244
+  port: 5466
+  udp: true
+  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: api.adidas.com
+  client-fingerprint: ios
+  reality-opts:
+    public-key: vr-C-6JEfZhnEVO2NDzUIlRhr0LCXFx9BoOBb31AsSg
+    short-id: fb16a20a0815
+  network: tcp
+- name: 🇺🇸 美国-旧金山 04 (移动家宽)
+  type: vless
+  server: 23.95.72.244
+  port: 5465
+  udp: true
+  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: api.adidas.com
+  client-fingerprint: edge
+  reality-opts:
+    public-key: GaZo6ZlyOUxhems08m3fhEc-0j3IYppLUpjNmMqNjlk
+    short-id: 7024258fb07f5eb5
+  network: tcp
+- name: 🇯🇵 日本-东京 01 (家宽)
+  type: vless
+  server: 23.95.72.244
+  port: 7443
+  udp: true
+  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: business.amazon.com.au
+  client-fingerprint: safari
+  reality-opts:
+    public-key: CXt1liJyAb-5vgsD_VROhs7kXwOz9DFjvFtM_r_QL28
+    short-id: b5f8108aacdd2b6f
+  network: tcp
+- name: 🇹🇼 台湾-台北 01 (家宽)
+  type: vless
+  server: 23.95.72.244
+  port: 5463
+  udp: true
+  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: api.adidas.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 8kZm9gW7saiRPuqXppCTlOAx_dIsqZUbNOBERMvMDVw
+    short-id: be33ecc1975c
   network: tcp
 - name: 🇭🇰 香港 01 (家宽)
   type: hysteria2
-  server: fc6ffc71-tmm5c0-ts3rye-mrtr.hk3.hyhuawei.com
+  server: 6d889de6-tly2o0-tn28ki-mv7m.nw4.hyhuawei.com
   port: 443
   udp: true
-  password: 28a8a4d0-3e02-11eb-a8bf-f23c91cfbbc9
-  sni: fc6ffc71-tmm5c0-ts3rye-mrtr.hk3.hyhuawei.com
-- name: 🇸🇬 新加坡 01 (家宽)
-  type: vmess
-  server: 116.88.224.217
-  port: 8080
+  password: 94d40708-8273-11ea-8fc9-f23c913c8d2b
+  sni: 6d889de6-tly2o0-tn28ki-mv7m.nw4.hyhuawei.com
+- name: 🇭🇰 香港 02 (家宽)
+  type: hysteria2
+  server: 4e3e8635-tmm5c0-tvh2gy-1qzi1.hk3.hyhuawei.com
+  port: 443
   udp: true
-  uuid: 6f4f0eb5-fe86-41ca-eccb-a6ca68f88d9b
-  alterId: 0
-  cipher: auto
+  password: 8f99107c-f091-11ee-9935-f23c9164ca5d
+  sni: 4e3e8635-tmm5c0-tvh2gy-1qzi1.hk3.hyhuawei.com
+  skip-cert-verify: true
+- name: 🇯🇵 日本-Minato-ku 02 (家宽)
+  type: vless
+  server: 23.95.72.244
+  port: 55568
+  udp: true
+  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: api.adidas.com
+  client-fingerprint: safari
+  reality-opts:
+    public-key: TVLsDTqLqNaI50rscB-dvDnCBK8xvXsFhqgB9y0BEzQ
+    short-id: 8e46ebc92990
   network: tcp
-- name: 🇹🇼 台湾-Puyan 01 (家宽)
+- name: 🇹🇼 台湾-Puyan 02 (家宽)
   type: trojan
   server: 161.114.15.215
   port: 30502
@@ -38,7 +121,21 @@ proxies:
   sni: www.cloudflare.com
   skip-cert-verify: true
   network: tcp
-- name: 🇰🇷 韩国-Seongnam-si 01 (家宽)
+- name: 🇰🇷 韩国-Paju 01 (家宽)
+  type: vless
+  server: 23.95.72.244
+  port: 2096
+  udp: true
+  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: api.amazonalexa.com
+  client-fingerprint: ios
+  reality-opts:
+    public-key: 71OwuN_2X-et_42RLIteY2parqX2cARuv-718eg_VD4
+    short-id: b88b4ed92599c16a
+  network: tcp
+- name: 🇰🇷 韩国-Seongnam-si 02 (家宽)
   type: vless
   server: 23.95.72.244
   port: 50135
@@ -52,7 +149,7 @@ proxies:
     public-key: ugirklnmY9hUeY9BQ9rdeVbu29iGblEM8N2_HHA8Rk4
     short-id: 8cd0eddfb0
   network: tcp
-- name: 🇹🇼 台湾-台中 02 (家宽)
+- name: 🇹🇼 台湾-台中 03 (家宽)
   type: vless
   server: 60.248.219.78
   port: 443
@@ -72,20 +169,34 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇺🇸 美国-华盛顿 01 (移动家宽)
+  - 🇺🇸 美国-旧金山 02 (移动家宽)
+  - 🇺🇸 美国-旧金山 03 (移动家宽)
+  - 🇺🇸 美国-旧金山 04 (移动家宽)
+  - 🇯🇵 日本-东京 01 (家宽)
+  - 🇹🇼 台湾-台北 01 (家宽)
   - 🇭🇰 香港 01 (家宽)
-  - 🇸🇬 新加坡 01 (家宽)
-  - 🇹🇼 台湾-Puyan 01 (家宽)
-  - 🇰🇷 韩国-Seongnam-si 01 (家宽)
-  - 🇹🇼 台湾-台中 02 (家宽)
+  - 🇭🇰 香港 02 (家宽)
+  - 🇯🇵 日本-Minato-ku 02 (家宽)
+  - 🇹🇼 台湾-Puyan 02 (家宽)
+  - 🇰🇷 韩国-Paju 01 (家宽)
+  - 🇰🇷 韩国-Seongnam-si 02 (家宽)
+  - 🇹🇼 台湾-台中 03 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇺🇸 美国-华盛顿 01 (移动家宽)
+  - 🇺🇸 美国-旧金山 02 (移动家宽)
+  - 🇺🇸 美国-旧金山 03 (移动家宽)
+  - 🇺🇸 美国-旧金山 04 (移动家宽)
+  - 🇯🇵 日本-东京 01 (家宽)
+  - 🇹🇼 台湾-台北 01 (家宽)
   - 🇭🇰 香港 01 (家宽)
-  - 🇸🇬 新加坡 01 (家宽)
-  - 🇹🇼 台湾-Puyan 01 (家宽)
-  - 🇰🇷 韩国-Seongnam-si 01 (家宽)
-  - 🇹🇼 台湾-台中 02 (家宽)
+  - 🇭🇰 香港 02 (家宽)
+  - 🇯🇵 日本-Minato-ku 02 (家宽)
+  - 🇹🇼 台湾-Puyan 02 (家宽)
+  - 🇰🇷 韩国-Paju 01 (家宽)
+  - 🇰🇷 韩国-Seongnam-si 02 (家宽)
+  - 🇹🇼 台湾-台中 03 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

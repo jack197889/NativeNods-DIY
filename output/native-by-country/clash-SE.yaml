@@ -5,12 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典-Hudiksvall 01 (原生)
-  type: hysteria2
+  type: trojan
   server: 95.143.196.97
   port: 443
   udp: true
-  password: 769f34f0-1500-488f-b414-03bc90666502
-  sni: se.mimowhat.online
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  sni: connect-se.mimowhat.online
+  client-fingerprint: chrome
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select

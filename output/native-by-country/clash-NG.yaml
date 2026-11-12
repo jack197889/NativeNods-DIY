@@ -4,30 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 台湾-台北 01
+- name: 🇳🇬 NG-Lekki 01 (原生)
   type: vless
-  server: 83.147.13.74
-  port: 8443
+  server: 23.95.72.244
+  port: 50889
   udp: true
-  uuid: eb8c97f7-a154-4442-91b0-54c0d055ad0b
-  packet-encoding: xudp
+  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
+  flow: xtls-rprx-vision
   tls: true
-  servername: github.githubassets.com
-  client-fingerprint: chrome
+  servername: api.adidas.com
+  client-fingerprint: firefox
   reality-opts:
-    public-key: 4g6gX0ueJap7pY_iTDx23h6bzo3KIOTcFzP1Uacn0QA
-    short-id: 4ad2e4e660550e43
+    public-key: nRsOy4cUKjMIi5k8HtdfY9qnrm8fMe031yi56zMtzSg
+    short-id: 2eae70bfca3776cc
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇹🇼 台湾-台北 01
+  - 🇳🇬 NG-Lekki 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇹🇼 台湾-台北 01
+  - 🇳🇬 NG-Lekki 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

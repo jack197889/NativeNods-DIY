@@ -11,7 +11,6 @@ proxies:
   udp: true
   uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
   flow: xtls-rprx-vision
-  packet-encoding: xudp
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
@@ -19,16 +18,32 @@ proxies:
     public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
     short-id: 0123456789abcdef
   network: tcp
+- name: 🇪🇸 西班牙-伦敦 02
+  type: vless
+  server: 83.147.18.3
+  port: 443
+  udp: true
+  uuid: 9f61cdf4-810d-4052-bbc7-2da0c8e20104
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA
+    short-id: fd8cf7e1173f0edb
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇪🇸 西班牙-马德里 01
+  - 🇪🇸 西班牙-伦敦 02
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇪🇸 西班牙-马德里 01
+  - 🇪🇸 西班牙-伦敦 02
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

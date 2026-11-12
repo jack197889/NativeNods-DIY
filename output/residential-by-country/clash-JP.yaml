@@ -1,0 +1,51 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇯🇵 日本-东京 01 (家宽)
+  type: vless
+  server: 23.95.72.244
+  port: 7443
+  udp: true
+  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: business.amazon.com.au
+  client-fingerprint: safari
+  reality-opts:
+    public-key: CXt1liJyAb-5vgsD_VROhs7kXwOz9DFjvFtM_r_QL28
+    short-id: b5f8108aacdd2b6f
+  network: tcp
+- name: 🇯🇵 日本-Minato-ku 02 (家宽)
+  type: vless
+  server: 23.95.72.244
+  port: 55568
+  udp: true
+  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: api.adidas.com
+  client-fingerprint: safari
+  reality-opts:
+    public-key: TVLsDTqLqNaI50rscB-dvDnCBK8xvXsFhqgB9y0BEzQ
+    short-id: 8e46ebc92990
+  network: tcp
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇯🇵 日本-东京 01 (家宽)
+  - 🇯🇵 日本-Minato-ku 02 (家宽)
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇯🇵 日本-东京 01 (家宽)
+  - 🇯🇵 日本-Minato-ku 02 (家宽)
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

@@ -4,23 +4,25 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇪 爱尔兰-都柏林 01
-  type: ss
-  server: 68.219.96.146
-  port: 443
+- name: 🇹🇭 泰国-Pak Kret 01 (原生)
+  type: vmess
+  server: 119.46.51.45
+  port: 37515
   udp: true
-  cipher: chacha20-ietf-poly1305
-  password: 8ds10bQrvY4KE8Tz
+  uuid: 9b76bc31-17a5-4454-934a-8d5fb602cd70
+  alterId: 0
+  cipher: auto
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇮🇪 爱尔兰-都柏林 01
+  - 🇹🇭 泰国-Pak Kret 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇮🇪 爱尔兰-都柏林 01
+  - 🇹🇭 泰国-Pak Kret 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

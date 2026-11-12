@@ -4,32 +4,29 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇬 保加利亚-法兰克福 01
+- name: 🇺🇦 乌克兰-基辅 01 (原生)
   type: vless
-  server: 188.114.96.9
+  server: netx.smrtai.top
   port: 443
   udp: true
-  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
+  uuid: d8b58872-cc25-4bb2-badb-b86399c075fa
   tls: true
-  servername: IdB8ONMVbntuYT5t7t6cEJfw8vLrb.paGEs.DeV
-  alpn:
-  - http/1.1
+  servername: www.cloudflare.com
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrj
-    headers:
-      Host: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
+  reality-opts:
+    public-key: L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk
+    short-id: d8b58872
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇧🇬 保加利亚-法兰克福 01
+  - 🇺🇦 乌克兰-基辅 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇧🇬 保加利亚-法兰克福 01
+  - 🇺🇦 乌克兰-基辅 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

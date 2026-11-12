@@ -6,21 +6,31 @@ log-level: info
 proxies:
 - name: 🇭🇰 香港 01 (家宽)
   type: hysteria2
-  server: fc6ffc71-tmm5c0-ts3rye-mrtr.hk3.hyhuawei.com
+  server: 6d889de6-tly2o0-tn28ki-mv7m.nw4.hyhuawei.com
   port: 443
   udp: true
-  password: 28a8a4d0-3e02-11eb-a8bf-f23c91cfbbc9
-  sni: fc6ffc71-tmm5c0-ts3rye-mrtr.hk3.hyhuawei.com
+  password: 94d40708-8273-11ea-8fc9-f23c913c8d2b
+  sni: 6d889de6-tly2o0-tn28ki-mv7m.nw4.hyhuawei.com
+- name: 🇭🇰 香港 02 (家宽)
+  type: hysteria2
+  server: 4e3e8635-tmm5c0-tvh2gy-1qzi1.hk3.hyhuawei.com
+  port: 443
+  udp: true
+  password: 8f99107c-f091-11ee-9935-f23c9164ca5d
+  sni: 4e3e8635-tmm5c0-tvh2gy-1qzi1.hk3.hyhuawei.com
+  skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇭🇰 香港 01 (家宽)
+  - 🇭🇰 香港 02 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇭🇰 香港 01 (家宽)
+  - 🇭🇰 香港 02 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
