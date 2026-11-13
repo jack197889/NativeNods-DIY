@@ -6,20 +6,6 @@ log-level: info
 proxies:
 - name: 🇸🇬 新加坡 01 (原生)
   type: vless
-  server: 147.93.173.45
-  port: 10444
-  udp: true
-  uuid: 75c5f51b-d548-4eab-a26e-aa10fc3dbc7b
-  flow: xtls-rprx-vision
-  tls: true
-  servername: video.yandex.ru
-  client-fingerprint: safari
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  network: tcp
-- name: 🇸🇬 新加坡 02 (原生)
-  type: vless
   server: 103.172.116.201
   port: 443
   udp: true
@@ -32,17 +18,7 @@ proxies:
     public-key: mjWmmSvs0D3V3130FT7MVbRs94pPuWXR7ffaQ_3A4kU
     short-id: f96b3b17a0f5b1fe
   network: tcp
-- name: 🇸🇬 新加坡 03 (原生)
-  type: hysteria2
-  server: 165.154.193.165
-  port: 443
-  udp: true
-  password: qtMKhrFAMrVZUfupkc5CFHmRKYtNPSjt
-  sni: 165.154.193.165
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: d7897b996af77eeecb7ac010361d74fb
-- name: 🇸🇬 新加坡 04 (原生)
+- name: 🇸🇬 新加坡 02 (原生)
   type: vmess
   server: 141.193.213.21
   port: 8443
@@ -64,15 +40,11 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇸🇬 新加坡 01 (原生)
   - 🇸🇬 新加坡 02 (原生)
-  - 🇸🇬 新加坡 03 (原生)
-  - 🇸🇬 新加坡 04 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇸🇬 新加坡 01 (原生)
   - 🇸🇬 新加坡 02 (原生)
-  - 🇸🇬 新加坡 03 (原生)
-  - 🇸🇬 新加坡 04 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

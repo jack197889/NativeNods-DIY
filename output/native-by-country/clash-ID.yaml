@@ -4,30 +4,31 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇳 印度-Dhār 01 (原生)
-  type: vless
-  server: 122.176.216.52
+- name: 🇮🇩 印度尼西亚-Depok 01 (原生)
+  type: vmess
+  server: 13.249.231.85
   port: 443
   udp: true
-  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+  uuid: a84c132a-3151-40fe-947b-4dd9a7d2122c
+  alterId: 0
+  cipher: auto
   tls: true
-  servername: app-6ada5023.deploy.meerasolution.com
-  skip-cert-verify: true
+  servername: d7pu5mzr9c4b0.cloudfront.net
   network: ws
   ws-opts:
-    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+    path: /vmess
     headers:
-      Host: app-6ada5023.deploy.meerasolution.com
+      Host: d7pu5mzr9c4b0.cloudfront.net
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇮🇳 印度-Dhār 01 (原生)
+  - 🇮🇩 印度尼西亚-Depok 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇮🇳 印度-Dhār 01 (原生)
+  - 🇮🇩 印度尼西亚-Depok 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

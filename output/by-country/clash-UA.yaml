@@ -4,30 +4,31 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇬 NG-Lekki 01 (原生)
+- name: 🇺🇦 乌克兰-基辅 01
   type: vless
-  server: 23.95.72.244
-  port: 50889
+  server: 83.147.18.75
+  port: 443
   udp: true
-  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
+  uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
   flow: xtls-rprx-vision
+  packet-encoding: xudp
   tls: true
-  servername: api.adidas.com
-  client-fingerprint: firefox
+  servername: www.bing.com
+  client-fingerprint: chrome
   reality-opts:
-    public-key: nRsOy4cUKjMIi5k8HtdfY9qnrm8fMe031yi56zMtzSg
-    short-id: 2eae70bfca3776cc
+    public-key: tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc
+    short-id: 7f1e29593aa94ad1
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇳🇬 NG-Lekki 01 (原生)
+  - 🇺🇦 乌克兰-基辅 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇳🇬 NG-Lekki 01 (原生)
+  - 🇺🇦 乌克兰-基辅 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -5,19 +5,37 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 香港 01 (家宽)
-  type: hysteria2
-  server: 6d889de6-tly2o0-tn28ki-mv7m.nw4.hyhuawei.com
-  port: 443
+  type: vless
+  server: www.visa.com
+  port: 8443
   udp: true
-  password: 94d40708-8273-11ea-8fc9-f23c913c8d2b
-  sni: 6d889de6-tly2o0-tn28ki-mv7m.nw4.hyhuawei.com
+  uuid: 226279dd-28b2-4b61-96be-a2a0b1afd522
+  packet-encoding: xudp
+  tls: true
+  servername: hk.zhaoqing.city
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
+    headers:
+      Host: hk.zhaoqing.city
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
 - name: 🇭🇰 香港 02 (家宽)
   type: hysteria2
-  server: 4e3e8635-tmm5c0-tvh2gy-1qzi1.hk3.hyhuawei.com
+  server: 3de2432e-tmm5c0-tonrqx-1khwf.hk3.hyhuawei.com
   port: 443
   udp: true
-  password: 8f99107c-f091-11ee-9935-f23c9164ca5d
-  sni: 4e3e8635-tmm5c0-tvh2gy-1qzi1.hk3.hyhuawei.com
+  password: 92bd8c68-6434-11ee-b644-f23c91cfbbc9
+  sni: 3de2432e-tmm5c0-tonrqx-1khwf.hk3.hyhuawei.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港 03 (家宽)
+  type: hysteria2
+  server: 88f7008b-tmm5c0-tonrqx-1khwf.nw4.hyhuawei.com
+  port: 443
+  udp: true
+  password: 92bd8c68-6434-11ee-b644-f23c91cfbbc9
+  sni: 88f7008b-tmm5c0-tonrqx-1khwf.nw4.hyhuawei.com
   skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
@@ -26,11 +44,13 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇭🇰 香港 01 (家宽)
   - 🇭🇰 香港 02 (家宽)
+  - 🇭🇰 香港 03 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇭🇰 香港 01 (家宽)
   - 🇭🇰 香港 02 (家宽)
+  - 🇭🇰 香港 03 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

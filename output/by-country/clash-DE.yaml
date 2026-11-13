@@ -6,6 +6,20 @@ log-level: info
 proxies:
 - name: 🇩🇪 德国-法兰克福 01
   type: vless
+  server: 172.67.208.235
+  port: 2096
+  udp: true
+  uuid: b9ede7a5-5b4b-4aee-ac37-2c307e587e47
+  tls: true
+  servername: courses.mftplus.qzz.io
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoidVkzQm1ROUg4dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: courses.mftplus.qzz.io
+- name: 🇩🇪 德国-法兰克福 02
+  type: vless
   server: fast-route-4aa49d-gw.staging-api-05a87c.workers.dev
   port: 443
   udp: true
@@ -22,25 +36,20 @@ proxies:
       Host: fast-route-4aa49d-gw.staging-api-05a87c.workers.dev
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇩🇪 德国-法兰克福 02
-  type: trojan
-  server: 104.19.45.195
+- name: 🇩🇪 德国-法兰克福 03
+  type: vless
+  server: 82.39.171.12
   port: 443
   udp: true
-  password: pH[]S[Bh:_:D6T4k
-  sni: AZaDneT-692.PagEs.DEv
-  network: ws
-  ws-opts:
-    path: /trsVu9Ualb1DOfGjpw
-    headers:
-      Host: AZaDneT-692.PagEs.DEv
-- name: 🇩🇪 德国-Kostroma 03
-  type: hysteria2
-  server: steel7.hadsvpn.com
-  port: 443
-  udp: true
-  password: 23c82941-70f4-4381-90db-bd28e9a902e9
-  sni: steel7.hadsvpn.com
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -48,13 +57,13 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇩🇪 德国-法兰克福 01
   - 🇩🇪 德国-法兰克福 02
-  - 🇩🇪 德国-Kostroma 03
+  - 🇩🇪 德国-法兰克福 03
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇩🇪 德国-法兰克福 01
   - 🇩🇪 德国-法兰克福 02
-  - 🇩🇪 德国-Kostroma 03
+  - 🇩🇪 德国-法兰克福 03
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

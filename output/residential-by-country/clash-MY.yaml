@@ -4,27 +4,25 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇳 中国大陆-Shenzhen 01 (原生)
+- name: 🇲🇾 马来西亚-吉隆坡 01 (家宽)
   type: vmess
-  server: 39.108.113.127
+  server: 192.228.145.118
   port: 10086
   udp: true
-  uuid: b0253c6c-0b96-4950-bde1-669f13bc1a01
+  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
   alterId: 0
   cipher: auto
-  network: ws
-  ws-opts:
-    path: /
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇨🇳 中国大陆-Shenzhen 01 (原生)
+  - 🇲🇾 马来西亚-吉隆坡 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇨🇳 中国大陆-Shenzhen 01 (原生)
+  - 🇲🇾 马来西亚-吉隆坡 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -4,29 +4,29 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇵🇱 波兰-华沙 01 (原生)
+- name: 🇮🇳 印度-Indore 01 (家宽)
   type: vless
-  server: 201.58.139.66
+  server: 122.176.216.52
   port: 443
   udp: true
-  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
+  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
   tls: true
-  servername: 57aac2t.pl7.h1clayd.click
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: LY0H47MWx87_L_JBzxFAuTzKZB53U7MrZQK8-dNnMxM
-    short-id: 6c5c7900406a1ae7
-  network: tcp
+  servername: app-6ada5023.deploy.meerasolution.com
+  network: ws
+  ws-opts:
+    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+    headers:
+      Host: app-6ada5023.deploy.meerasolution.com
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇵🇱 波兰-华沙 01 (原生)
+  - 🇮🇳 印度-Indore 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇵🇱 波兰-华沙 01 (原生)
+  - 🇮🇳 印度-Indore 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -4,30 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇾 马来西亚-Ipoh 01 (原生)
+- name: 🇮🇷 IR-Tehran 01 (原生)
   type: vless
-  server: 23.95.72.244
-  port: 50684
+  server: 198.16.113.218
+  port: 8443
   udp: true
-  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
+  uuid: 98a24806-141a-43d3-b094-bd66c4eb93b8
   flow: xtls-rprx-vision
   tls: true
-  servername: api.adidas.com
-  client-fingerprint: firefox
+  servername: www.apple.com
+  client-fingerprint: chrome
   reality-opts:
-    public-key: F9djf8t16xjf7WRVmek0OWg_Q6OvmsZdI3rR9xiz2jI
-    short-id: 39c553a45e5649d9
+    public-key: 8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE
+    short-id: 69984b9e02545831
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇲🇾 马来西亚-Ipoh 01 (原生)
+  - 🇮🇷 IR-Tehran 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇲🇾 马来西亚-Ipoh 01 (原生)
+  - 🇮🇷 IR-Tehran 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

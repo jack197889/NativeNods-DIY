@@ -4,21 +4,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇸 西班牙-马德里 01
-  type: vless
-  server: 68.221.177.135
-  port: 2083
-  udp: true
-  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
-    short-id: 0123456789abcdef
-  network: tcp
-- name: 🇪🇸 西班牙-伦敦 02
+- name: 🇪🇸 西班牙-伦敦 01
   type: vless
   server: 83.147.18.3
   port: 443
@@ -37,13 +23,11 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇪🇸 西班牙-马德里 01
-  - 🇪🇸 西班牙-伦敦 02
+  - 🇪🇸 西班牙-伦敦 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇪🇸 西班牙-马德里 01
-  - 🇪🇸 西班牙-伦敦 02
+  - 🇪🇸 西班牙-伦敦 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

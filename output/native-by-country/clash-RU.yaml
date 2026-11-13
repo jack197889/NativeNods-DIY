@@ -5,18 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯-莫斯科 01 (原生)
-  type: vless
-  server: 5.42.111.231
-  port: 443
-  udp: true
-  uuid: 95f85937-7b95-45c4-8d69-95da6a978569
-  tls: true
-  servername: vps2.nemnogogo.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: mobile.api.Event
-- name: 🇷🇺 俄罗斯-莫斯科 02 (原生)
   type: ss
   server: 185.22.153.117
   port: 18443
@@ -29,12 +17,10 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇷🇺 俄罗斯-莫斯科 01 (原生)
-  - 🇷🇺 俄罗斯-莫斯科 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇷🇺 俄罗斯-莫斯科 01 (原生)
-  - 🇷🇺 俄罗斯-莫斯科 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

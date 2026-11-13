@@ -4,26 +4,23 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大-多伦多 01
-  type: trojan
-  server: 155.138.138.2
+- name: 🇿🇦 南非-约翰内斯堡 01 (原生)
+  type: ss
+  server: 20.164.204.82
   port: 443
   udp: true
-  password: Trojan@82164024
-  sni: ca.tronsg.com
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  network: tcp
+  cipher: chacha20-ietf-poly1305
+  password: zJINhErlCXBpyP95
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇨🇦 加拿大-多伦多 01
+  - 🇿🇦 南非-约翰内斯堡 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇨🇦 加拿大-多伦多 01
+  - 🇿🇦 南非-约翰内斯堡 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
