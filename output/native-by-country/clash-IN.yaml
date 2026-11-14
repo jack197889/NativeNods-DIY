@@ -4,29 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇦 乌克兰-基辅 01 (原生)
+- name: 🇮🇳 印度-孟买 01 (原生)
   type: vless
-  server: netx.smrtai.top
+  server: 103.111.114.136
   port: 443
   udp: true
-  uuid: d8b58872-cc25-4bb2-badb-b86399c075fa
+  uuid: 555b35c4-30f9-40c6-a61a-7f53ab1bea45
+  flow: xtls-rprx-vision
   tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  servername: videos.porsche.com
+  client-fingerprint: firefox
   reality-opts:
-    public-key: L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk
-    short-id: d8b58872
+    public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
+    short-id: 1a2b3c4d
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇺🇦 乌克兰-基辅 01 (原生)
+  - 🇮🇳 印度-孟买 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇺🇦 乌克兰-基辅 01 (原生)
+  - 🇮🇳 印度-孟买 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
