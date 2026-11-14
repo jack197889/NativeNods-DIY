@@ -4,30 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇷 IR-Tehran 01 (原生)
+- name: 🇸🇬 新加坡-Tucumcari 01
   type: vless
-  server: 198.16.113.218
-  port: 8443
+  server: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+  port: 443
   udp: true
-  uuid: 98a24806-141a-43d3-b094-bd66c4eb93b8
-  flow: xtls-rprx-vision
+  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
   tls: true
-  servername: www.apple.com
+  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
   client-fingerprint: chrome
-  reality-opts:
-    public-key: 8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE
-    short-id: 69984b9e02545831
-  network: tcp
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇮🇷 IR-Tehran 01 (原生)
+  - 🇸🇬 新加坡-Tucumcari 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇮🇷 IR-Tehran 01 (原生)
+  - 🇸🇬 新加坡-Tucumcari 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -4,52 +4,6 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇰 香港 01 (家宽)
-  type: vless
-  server: www.visa.com
-  port: 8443
-  udp: true
-  uuid: 226279dd-28b2-4b61-96be-a2a0b1afd522
-  packet-encoding: xudp
-  tls: true
-  servername: hk.zhaoqing.city
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
-    headers:
-      Host: hk.zhaoqing.city
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇭🇰 香港 02 (家宽)
-  type: hysteria2
-  server: 3de2432e-tmm5c0-tonrqx-1khwf.hk3.hyhuawei.com
-  port: 443
-  udp: true
-  password: 92bd8c68-6434-11ee-b644-f23c91cfbbc9
-  sni: 3de2432e-tmm5c0-tonrqx-1khwf.hk3.hyhuawei.com
-  skip-cert-verify: true
-- name: 🇭🇰 香港 03 (家宽)
-  type: hysteria2
-  server: 88f7008b-tmm5c0-tonrqx-1khwf.nw4.hyhuawei.com
-  port: 443
-  udp: true
-  password: 92bd8c68-6434-11ee-b644-f23c91cfbbc9
-  sni: 88f7008b-tmm5c0-tonrqx-1khwf.nw4.hyhuawei.com
-  skip-cert-verify: true
-- name: 🇮🇳 印度-Indore 01 (家宽)
-  type: vless
-  server: 122.176.216.52
-  port: 443
-  udp: true
-  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
-  tls: true
-  servername: app-6ada5023.deploy.meerasolution.com
-  network: ws
-  ws-opts:
-    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
-    headers:
-      Host: app-6ada5023.deploy.meerasolution.com
 - name: 🇸🇬 新加坡 01 (家宽)
   type: vmess
   server: 195.133.135.238
@@ -59,24 +13,14 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: 🇲🇾 马来西亚-吉隆坡 01 (家宽)
-  type: vmess
-  server: 192.228.145.118
-  port: 10086
-  udp: true
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
-  alterId: 0
-  cipher: auto
-  network: tcp
 - name: 🇹🇼 台湾-台中 01 (家宽)
   type: vless
-  server: 60.248.219.53
+  server: 60.248.219.78
   port: 443
   udp: true
   uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
   tls: true
   servername: ty986gfazs.cainiaohub.xyz
-  client-fingerprint: chrome
   skip-cert-verify: true
   network: ws
   ws-opts:
@@ -88,22 +32,12 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇭🇰 香港 01 (家宽)
-  - 🇭🇰 香港 02 (家宽)
-  - 🇭🇰 香港 03 (家宽)
-  - 🇮🇳 印度-Indore 01 (家宽)
   - 🇸🇬 新加坡 01 (家宽)
-  - 🇲🇾 马来西亚-吉隆坡 01 (家宽)
   - 🇹🇼 台湾-台中 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇭🇰 香港 01 (家宽)
-  - 🇭🇰 香港 02 (家宽)
-  - 🇭🇰 香港 03 (家宽)
-  - 🇮🇳 印度-Indore 01 (家宽)
   - 🇸🇬 新加坡 01 (家宽)
-  - 🇲🇾 马来西亚-吉隆坡 01 (家宽)
   - 🇹🇼 台湾-台中 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300

@@ -6,33 +6,55 @@ log-level: info
 proxies:
 - name: 🇸🇬 新加坡 01 (原生)
   type: vless
-  server: 103.172.116.201
+  server: 23.156.153.40
   port: 443
   udp: true
-  uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
-  flow: xtls-rprx-vision
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: mjWmmSvs0D3V3130FT7MVbRs94pPuWXR7ffaQ_3A4kU
-    short-id: f96b3b17a0f5b1fe
-  network: tcp
-- name: 🇸🇬 新加坡 02 (原生)
-  type: vmess
-  server: 141.193.213.21
-  port: 8443
-  udp: true
-  uuid: bd67fcd2-ec34-40a6-aac6-67731f2d7011
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: matrix.phonicsindia.mobi
+  servername: fs.qicai99.com
   network: ws
   ws-opts:
-    path: /
+    path: /fp=chrome
     headers:
-      Host: matrix.phonicsindia.mobi
+      Host: fs.qicai99.com
+- name: 🇸🇬 新加坡 02 (原生)
+  type: vless
+  server: zfapi.zalolink.com
+  port: 30322
+  udp: true
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  flow: xtls-rprx-vision
+  packet-encoding: xudp
+  tls: true
+  servername: psstatic.cdn.bcebos.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 5gncThwqPFzLu23WO3mPTEhG7-KgVYlGVvveHjM2SUo
+    short-id: 6a60e7e382d6
+  network: tcp
+- name: 🇸🇬 新加坡 03 (原生)
+  type: trojan
+  server: 173.234.15.84
+  port: 48994
+  udp: true
+  password: Z5lvhmLqSc
+  sni: m.microsoft.com
+  skip-cert-verify: true
+  network: tcp
+- name: 🇸🇬 新加坡 04 (原生)
+  type: vless
+  server: zfapi.zalolink.com
+  port: 46957
+  udp: true
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  flow: xtls-rprx-vision
+  tls: true
+  servername: psstatic.cdn.bcebos.com
+  client-fingerprint: safari
+  reality-opts:
+    public-key: 1SefqLQXrqkiUdf7cTMF53hrMZyo684_uneRC8-qTxI
+    short-id: 8f6683a234d3
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -40,11 +62,15 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇸🇬 新加坡 01 (原生)
   - 🇸🇬 新加坡 02 (原生)
+  - 🇸🇬 新加坡 03 (原生)
+  - 🇸🇬 新加坡 04 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇸🇬 新加坡 01 (原生)
   - 🇸🇬 新加坡 02 (原生)
+  - 🇸🇬 新加坡 03 (原生)
+  - 🇸🇬 新加坡 04 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

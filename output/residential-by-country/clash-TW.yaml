@@ -6,13 +6,12 @@ log-level: info
 proxies:
 - name: 🇹🇼 台湾-台中 01 (家宽)
   type: vless
-  server: 60.248.219.53
+  server: 60.248.219.78
   port: 443
   udp: true
   uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
   tls: true
   servername: ty986gfazs.cainiaohub.xyz
-  client-fingerprint: chrome
   skip-cert-verify: true
   network: ws
   ws-opts:

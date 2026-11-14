@@ -6,21 +6,30 @@ log-level: info
 proxies:
 - name: 🇿🇦 南非-约翰内斯堡 01 (原生)
   type: ss
-  server: 20.164.204.82
+  server: 40.123.240.228
   port: 443
   udp: true
   cipher: chacha20-ietf-poly1305
-  password: zJINhErlCXBpyP95
+  password: SF2qoMGrmVYQTj2P
+- name: 🇿🇦 南非-约翰内斯堡 02 (原生)
+  type: ss
+  server: 102.37.156.224
+  port: 443
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇿🇦 南非-约翰内斯堡 01 (原生)
+  - 🇿🇦 南非-约翰内斯堡 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇿🇦 南非-约翰内斯堡 01 (原生)
+  - 🇿🇦 南非-约翰内斯堡 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

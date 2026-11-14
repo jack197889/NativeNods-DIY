@@ -6,24 +6,6 @@ log-level: info
 proxies:
 - name: 🇬🇧 英国-伦敦 01
   type: vless
-  server: 104.18.79.242
-  port: 443
-  udp: true
-  uuid: bb2a729c-6185-4170-8769-6f5b9f64d5b8
-  tls: true
-  servername: cloud-sync-3d1512-gw.maziarkish.workers.dev
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /11290579a72cdb4e
-    headers:
-      Host: cloud-sync-3d1512-gw.maziarkish.workers.dev
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇬🇧 英国-伦敦 02
-  type: vless
   server: 34.39.80.57
   port: 50818
   udp: true
@@ -36,7 +18,7 @@ proxies:
     path: /GunService
     headers:
       Host: yingguo.rymaker.cn
-- name: 🇬🇧 英国-伦敦 03
+- name: 🇬🇧 英国-伦敦 02
   type: vless
   server: 51.89.194.151
   port: 2053
@@ -44,32 +26,32 @@ proxies:
   uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
   tls: true
   servername: www.apple.com
-  client-fingerprint: random
+  client-fingerprint: chrome
   reality-opts:
     public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
     short-id: d051f678212f9d54
   network: tcp
-- name: 🇬🇧 英国-Slough 04
-  type: hysteria2
-  server: 50.7.193.146
-  port: 443
+- name: 🇬🇧 英国-Coventry 03
+  type: vless
+  server: 138.124.125.193
+  port: 10444
   udp: true
-  password: 2bc6428196efb899f544d750bea0c06d
-  sni: promo2.betust.net
-- name: 🇬🇧 英国-阿姆斯特丹 05
+  uuid: e57ce64d-5a1a-4a90-96df-9e1bd3ad26e4
+  flow: xtls-rprx-vision
+  tls: true
+  servername: ads.x5.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  network: tcp
+- name: 🇬🇧 英国-阿姆斯特丹 04
   type: ss
   server: 104.222.183.180
   port: 47195
   udp: true
   cipher: chacha20-ietf-poly1305
   password: DYVqFDnYoMquRQunXC1xd2FyuDhd7JWs5jtf2eb7VkKLzXgZv8pt8gY1e91TT71V762zRX7MWW4HmjavanYdUF9bij8gG8AP
-- name: 🇬🇧 英国-Slough 06
-  type: ss
-  server: 67.159.56.79
-  port: 8388
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: ~4HT,}bC@heiRai
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -77,19 +59,15 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇬🇧 英国-伦敦 01
   - 🇬🇧 英国-伦敦 02
-  - 🇬🇧 英国-伦敦 03
-  - 🇬🇧 英国-Slough 04
-  - 🇬🇧 英国-阿姆斯特丹 05
-  - 🇬🇧 英国-Slough 06
+  - 🇬🇧 英国-Coventry 03
+  - 🇬🇧 英国-阿姆斯特丹 04
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇬🇧 英国-伦敦 01
   - 🇬🇧 英国-伦敦 02
-  - 🇬🇧 英国-伦敦 03
-  - 🇬🇧 英国-Slough 04
-  - 🇬🇧 英国-阿姆斯特丹 05
-  - 🇬🇧 英国-Slough 06
+  - 🇬🇧 英国-Coventry 03
+  - 🇬🇧 英国-阿姆斯特丹 04
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

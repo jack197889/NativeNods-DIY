@@ -6,18 +6,15 @@ log-level: info
 proxies:
 - name: 🇩🇪 德国-法兰克福 01
   type: vless
-  server: 172.67.208.235
-  port: 2096
+  server: tally.so
+  port: 2082
   udp: true
-  uuid: b9ede7a5-5b4b-4aee-ac37-2c307e587e47
-  tls: true
-  servername: courses.mftplus.qzz.io
-  client-fingerprint: chrome
+  uuid: 975955b1-0521-49d9-97ad-eed2e626a30f
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoidVkzQm1ROUg4dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    path: /
     headers:
-      Host: courses.mftplus.qzz.io
+      Host: roOz-ryo1kZgj-v1.rOoz-67c.woRKers.deV
 - name: 🇩🇪 德国-法兰克福 02
   type: vless
   server: fast-route-4aa49d-gw.staging-api-05a87c.workers.dev
@@ -38,18 +35,35 @@ proxies:
     early-data-header-name: Sec-WebSocket-Protocol
 - name: 🇩🇪 德国-法兰克福 03
   type: vless
-  server: 82.39.171.12
+  server: 172.67.136.172
   port: 443
   udp: true
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
+  uuid: e14a20cc-1b84-49d9-b0f4-0b6ab95dc1ab
   tls: true
-  servername: yahoo.com
+  servername: log-svc-31164c-gw.sandy-harbor-9ae1.workers.dev
+  alpn:
+  - http/1.1
   client-fingerprint: chrome
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  network: tcp
+  network: ws
+  ws-opts:
+    path: /7535cdef70c9d7d4
+    headers:
+      Host: log-svc-31164c-gw.sandy-harbor-9ae1.workers.dev
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇩🇪 德国-法兰克福 04
+  type: vless
+  server: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+  port: 443
+  udp: true
+  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
+  tls: true
+  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -58,12 +72,14 @@ proxy-groups:
   - 🇩🇪 德国-法兰克福 01
   - 🇩🇪 德国-法兰克福 02
   - 🇩🇪 德国-法兰克福 03
+  - 🇩🇪 德国-法兰克福 04
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇩🇪 德国-法兰克福 01
   - 🇩🇪 德国-法兰克福 02
   - 🇩🇪 德国-法兰克福 03
+  - 🇩🇪 德国-法兰克福 04
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

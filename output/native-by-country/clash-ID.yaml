@@ -4,31 +4,25 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇩 印度尼西亚-Depok 01 (原生)
+- name: 🇮🇩 印度尼西亚-雅加达 01 (原生)
   type: vmess
-  server: 13.249.231.85
-  port: 443
+  server: zfd-boardv2.kunlun01dns.com
+  port: 16298
   udp: true
-  uuid: a84c132a-3151-40fe-947b-4dd9a7d2122c
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
   alterId: 0
   cipher: auto
-  tls: true
-  servername: d7pu5mzr9c4b0.cloudfront.net
-  network: ws
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: d7pu5mzr9c4b0.cloudfront.net
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇮🇩 印度尼西亚-Depok 01 (原生)
+  - 🇮🇩 印度尼西亚-雅加达 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇮🇩 印度尼西亚-Depok 01 (原生)
+  - 🇮🇩 印度尼西亚-雅加达 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

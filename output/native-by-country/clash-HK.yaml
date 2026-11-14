@@ -15,11 +15,11 @@ proxies:
   obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
 - name: 🇭🇰 香港 02 (原生)
   type: hysteria2
-  server: 202.146.222.89
+  server: 202.146.222.29
   port: 443
   udp: true
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/clashv8🇨🇳
+  sni: whatsapp.com
   skip-cert-verify: true
 - name: 🇭🇰 香港 03 (原生)
   type: hysteria2
@@ -27,22 +27,16 @@ proxies:
   port: 443
   udp: true
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 'off'
+  sni: https://t.me/wangcai2
   skip-cert-verify: true
 - name: 🇭🇰 香港 04 (原生)
-  type: vless
-  server: doghkzf.zalolink.com
-  port: 28675
+  type: hysteria2
+  server: 202.146.222.89
+  port: 443
   udp: true
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.lamer.com.hk
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: jgtiLXdCnQ9WRWMuu2gsuGQOQTCRZQpspnn228kjTSA
-    short-id: 9a79807253c040
-  network: tcp
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https://t.me/clashv8🇨🇳
+  skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
