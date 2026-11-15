@@ -2278,8 +2278,9 @@ def _purity_verdict(it) -> tuple:
     if not ENABLE_PURITY_HARDEN:
         return False, ""
     nt, conf, asn = it.get("net_type"), it.get("confidence") or 0, it.get("asn")
-    if nt == "datacenter" and conf >= 88:
-        return True, f"ip-api机房/代理标记(conf={conf})"
+    # v3.4.1 修正（2026-11-16 首跑复盘）：ip-api 的 hosting/proxy 标记会命中几乎全部
+    # 免费节点出口（实测决赛圈 100%），单凭它判脏等于误杀全池，故删除该条；
+    # 判脏只认「已知劣迹主机商 ASN + 机房分类」的组合（Scaleway/OVH/Hetzner 等）。
     if nt == "datacenter" and conf >= 80 and asn in DATACENTER_ASNS and asn not in _BACKBONE_ASNS:
         return True, f"主机商ASN{asn}(conf={conf})"
     reg, cc = it.get("registered"), it.get("country")
