@@ -2007,6 +2007,43 @@ def gemini_diag(html: str) -> dict:
     }
 
 
+def parse_chatgpt(r1: str, r2: str) -> str:
+    """ChatGPT 可用性（RegionRestrictionCheck 同款双端点判定）：
+    r1=api.openai.com 合规检查，r2=ios.chat.openai.com 首页。"""
+    if not r1 or not r2:
+        return "失败(网络)"
+    bad_country = "unsupported_country" in r1
+    bad_vpn = "VPN" in r2
+    if not bad_country and not bad_vpn:
+        return "Yes"
+    if bad_country and bad_vpn:
+        return "No"
+    if bad_vpn:
+        return "No(仅网页版可用)"
+    return "No(仅App可用)"
+
+
+def probe_claude(proxy_url: str) -> str:
+    """Claude 可用性：跟随 claude.ai 跳转看最终落地页（地区不可用会跳专用页）。"""
+    args = ["curl", "-s", "-L", "--max-time", "20", "-A", USER_AGENT,
+            "-o", os.devnull, "-w", "%{url_effective}"]
+    if proxy_url:
+        args += ["-x", proxy_url]
+    args.append("https://claude.ai/")
+    try:
+        r = subprocess.run(args, capture_output=True, text=True, timeout=30)
+        eff = (r.stdout or "").strip()
+    except Exception:  # noqa: BLE001
+        eff = ""
+    if not eff:
+        return "失败(网络)"
+    if eff.rstrip("/") == "https://claude.ai":
+        return "Yes"
+    if "app-unavailable-in-region" in eff:
+        return "No(地区不可用)"
+    return "未知"
+
+
 def parse_tiktok(html: str) -> str:
     """TikTok 首页 -> TikTok 认定的地区二位码，拿不到返回空串。"""
     if not html:
@@ -2038,7 +2075,8 @@ def _curl_via(proxy_url: str, url: str, headers=None, max_time: int = 20) -> str
 
 def _probe_platform(proxy_url: str) -> dict:
     out = {"youtube": "", "youtube_region": "", "gemini": "",
-           "gemini_region": "", "tiktok_region": ""}
+           "gemini_region": "", "tiktok_region": "", "chatgpt": "",
+           "claude": ""}
     html = ""
     for _ in range(2):                      # 空响应重试一次，抗瞬时抖动
         html = _curl_via(proxy_url, "https://www.youtube.com/premium",
@@ -2056,6 +2094,10 @@ def _probe_platform(proxy_url: str) -> dict:
     out["gemini_diag"] = gemini_diag(gemini_html)
     tiktok_html = _curl_via(proxy_url, "https://www.tiktok.com/")
     out["tiktok_region"] = parse_tiktok(tiktok_html) or "未知"
+    out["chatgpt"] = parse_chatgpt(
+        _curl_via(proxy_url, "https://api.openai.com/compliance/cookie_requirements"),
+        _curl_via(proxy_url, "https://ios.chat.openai.com/"))
+    out["claude"] = probe_claude(proxy_url)
     return out
 
 
@@ -2211,13 +2253,34 @@ def build_purpose_pools(groups: dict) -> dict:
     与备选（平台过、速度未达或未测）。同时写 platform_report.json。"""
     os.makedirs(PURPOSE_DIR, exist_ok=True)
     items = groups["residential"] + groups["native"] + groups["normal"]
-    us_pass = [i for i in items if i["country"] == "US" and i.get("platform")
-               and i["platform"]["gemini"] == "Yes"
-               and i["platform"]["youtube_region"] == "US"]
-    nl_pass = [i for i in items if i["country"] == "NL" and i.get("platform")
-               and i["platform"]["tiktok_region"] == "NL"]
 
-    finalists = list({id(i): i for i in us_pass + nl_pass}.values())
+    def yt(i, cc):
+        p = i["platform"]
+        return p.get("youtube") == "Yes" and p.get("youtube_region") == cc
+
+    def tk(i, cc):
+        return i["platform"].get("tiktok_region") == cc
+
+    def ai(i, cc):
+        p = i["platform"]
+        return (p.get("gemini") == "Yes" and p.get("gemini_region") == cc
+                and p.get("chatgpt") == "Yes" and p.get("claude") == "Yes")
+
+    cand = [i for i in items if i.get("platform")]
+    # v3.2 标准（用户 2026-11-15 晚定）：家宽/原生/普通同标准参选
+    us_pass = [i for i in cand if i["country"] == "US" and yt(i, "US")
+               and i["platform"].get("gemini") == "Yes"
+               and i["platform"].get("gemini_region") == "US" and tk(i, "US")]
+    nl_pass = [i for i in cand if i["country"] == "NL" and yt(i, "NL") and tk(i, "NL")]
+    dual_pass = {cc: [i for i in cand if i["country"] == cc and yt(i, cc) and tk(i, cc)]
+                 for cc in ("AU", "TW", "GB", "CA")}
+    jp_pass = [i for i in cand if i["country"] == "JP" and yt(i, "JP")
+               and tk(i, "JP") and ai(i, "JP")]
+    sg_pass = [i for i in cand if i["country"] == "SG" and yt(i, "SG")
+               and tk(i, "SG") and ai(i, "SG")]
+
+    finalists = list({id(i): i for i in (us_pass + nl_pass + jp_pass + sg_pass
+                                         + [x for v in dual_pass.values() for x in v])}.values())
     if ENABLE_FINALIST_SPEED and finalists:
         print(f"[*] 用途池速度门槛: 实测 {len(finalists)} 个平台过关节点的下载/上传 "
               f"(严选下限 {STRICT_MIN_DOWN_MBPS}/{STRICT_MIN_UP_MBPS} Mbps) ...")
@@ -2236,14 +2299,27 @@ def build_purpose_pools(groups: dict) -> dict:
         "us_gemini_backup": [i for i in us_pass if not _speed_pass(i)],
         "nl_tiktok_strict": [i for i in nl_pass if _speed_pass(i)],
         "nl_tiktok_backup": [i for i in nl_pass if not _speed_pass(i)],
+        "au_dual_strict": [i for i in dual_pass["AU"] if _speed_pass(i)],
+        "au_dual_backup": [i for i in dual_pass["AU"] if not _speed_pass(i)],
+        "tw_dual_strict": [i for i in dual_pass["TW"] if _speed_pass(i)],
+        "tw_dual_backup": [i for i in dual_pass["TW"] if not _speed_pass(i)],
+        "gb_dual_strict": [i for i in dual_pass["GB"] if _speed_pass(i)],
+        "gb_dual_backup": [i for i in dual_pass["GB"] if not _speed_pass(i)],
+        "ca_dual_strict": [i for i in dual_pass["CA"] if _speed_pass(i)],
+        "ca_dual_backup": [i for i in dual_pass["CA"] if not _speed_pass(i)],
+        "jp_ai_strict": [i for i in jp_pass if _speed_pass(i)],
+        "jp_ai_backup": [i for i in jp_pass if not _speed_pass(i)],
+        "sg_ai_strict": [i for i in sg_pass if _speed_pass(i)],
+        "sg_ai_backup": [i for i in sg_pass if not _speed_pass(i)],
     }
     counts = {}
     for name, lst in pools.items():
         counts[name] = export_group(
             lst, os.path.join(PURPOSE_DIR, f"{name}.txt"),
             os.path.join(PURPOSE_DIR, f"{name}-clash.yaml"))
-    # 严选总链接：两个严选池合并成一条订阅，供一条复制直接导入
-    strict_all = pools["us_gemini_strict"] + pools["nl_tiktok_strict"]
+    # 严选总链接：全部严选池合并成一条订阅，供一条复制直接导入
+    strict_all = [i for name, lst in pools.items() if name.endswith("_strict")
+                  for i in lst]
     counts["strict_all"] = export_group(
         strict_all, os.path.join(PURPOSE_DIR, "strict_all.txt"),
         os.path.join(PURPOSE_DIR, "strict_all-clash.yaml"))
@@ -2259,8 +2335,8 @@ def build_purpose_pools(groups: dict) -> dict:
         })
     write_text(os.path.join(OUTPUT_DIR, "platform_report.json"),
                json.dumps(report, indent=1, ensure_ascii=False))
-    print(f"[*] 用途池: 美国Gemini 严选 {counts['us_gemini_strict']} / 备选 {counts['us_gemini_backup']}"
-          f" | 荷兰TikTok 严选 {counts['nl_tiktok_strict']} / 备选 {counts['nl_tiktok_backup']}")
+    print("[*] 用途池: " + " | ".join(
+        f"{k} {v}" for k, v in counts.items()))
     return counts
 
 
@@ -2269,22 +2345,34 @@ def append_purpose_readme(counts: dict):
     repo = (os.environ.get("GITHUB_REPOSITORY") or "jack197889/NativeNods-DIY").strip()
     raw = f"https://raw.githubusercontent.com/{repo}/main/output/purpose"
     section = f"""
-## 🎯 按用途严选（v3 新增）
+## 🎯 按用途严选（v3.2 标准）
 
-> 平台地区只取决于出口 IP：以下节点均经隧道实测平台本身判定，并通过速度门槛分层。
-> **严选** = 平台过关 + 下载 ≥ {STRICT_MIN_DOWN_MBPS} Mbps + 上传 ≥ {STRICT_MIN_UP_MBPS} Mbps；**备选** = 平台过关但速度未达或未测出。
+> 平台地区只取决于出口 IP：以下节点均经隧道实测平台本身判定，并通过速度门槛分层。家宽 / 原生 / 普通同标准参选。
+> **严选** = 平台全过 + 下载 ≥ {STRICT_MIN_DOWN_MBPS} Mbps + 上传 ≥ {STRICT_MIN_UP_MBPS} Mbps；**备选** = 平台全过但速度未达或未测出。
 
-**严选总链接（一条复制）**：`{raw}/strict_all.txt`（美国 Gemini 严选 + 荷兰 TikTok 严选合并，共 {counts.get('strict_all', 0)} 条；Clash 版 `{raw}/strict_all-clash.yaml`）
+**严选总链接（一条复制）**：`{raw}/strict_all.txt`（全部严选池合并，共 {counts.get('strict_all', 0)} 条；Clash 版 `{raw}/strict_all-clash.yaml`）
 
 | 用途池 | 判定标准 | 数量 | v2ray | Clash |
 | --- | --- | --- | --- | --- |
-| 美国 Gemini 严选 | Gemini 可用 + YouTube 认 US + 速度达标 | {counts.get('us_gemini_strict', 0)} | `{raw}/us_gemini_strict.txt` | `{raw}/us_gemini_strict-clash.yaml` |
-| 美国 Gemini 备选 | Gemini 可用 + YouTube 认 US | {counts.get('us_gemini_backup', 0)} | `{raw}/us_gemini_backup.txt` | `{raw}/us_gemini_backup-clash.yaml` |
-| 荷兰 TikTok 严选 | TikTok 认 NL + 速度达标 | {counts.get('nl_tiktok_strict', 0)} | `{raw}/nl_tiktok_strict.txt` | `{raw}/nl_tiktok_strict-clash.yaml` |
-| 荷兰 TikTok 备选 | TikTok 认 NL | {counts.get('nl_tiktok_backup', 0)} | `{raw}/nl_tiktok_backup.txt` | `{raw}/nl_tiktok_backup-clash.yaml` |
+| 美国全平台严选 | YouTube 认 US + Gemini 可用 + TikTok 认 US + 速度达标 | {counts.get('us_gemini_strict', 0)} | `{raw}/us_gemini_strict.txt` | `{raw}/us_gemini_strict-clash.yaml` |
+| 美国全平台备选 | YouTube 认 US + Gemini 可用 + TikTok 认 US | {counts.get('us_gemini_backup', 0)} | `{raw}/us_gemini_backup.txt` | `{raw}/us_gemini_backup-clash.yaml` |
+| 荷兰双平台严选 | YouTube 认 NL + TikTok 认 NL + 速度达标 | {counts.get('nl_tiktok_strict', 0)} | `{raw}/nl_tiktok_strict.txt` | `{raw}/nl_tiktok_strict-clash.yaml` |
+| 荷兰双平台备选 | YouTube 认 NL + TikTok 认 NL | {counts.get('nl_tiktok_backup', 0)} | `{raw}/nl_tiktok_backup.txt` | `{raw}/nl_tiktok_backup-clash.yaml` |
+| 日本 AI 全能严选 | YouTube 认 JP + TikTok 认 JP + Gemini/ChatGPT/Claude 全过 + 速度达标 | {counts.get('jp_ai_strict', 0)} | `{raw}/jp_ai_strict.txt` | `{raw}/jp_ai_strict-clash.yaml` |
+| 日本 AI 全能备选 | YouTube 认 JP + TikTok 认 JP + Gemini/ChatGPT/Claude 全过 | {counts.get('jp_ai_backup', 0)} | `{raw}/jp_ai_backup.txt` | `{raw}/jp_ai_backup-clash.yaml` |
+| 新加坡 AI 全能严选 | YouTube 认 SG + TikTok 认 SG + Gemini/ChatGPT/Claude 全过 + 速度达标 | {counts.get('sg_ai_strict', 0)} | `{raw}/sg_ai_strict.txt` | `{raw}/sg_ai_strict-clash.yaml` |
+| 新加坡 AI 全能备选 | YouTube 认 SG + TikTok 认 SG + Gemini/ChatGPT/Claude 全过 | {counts.get('sg_ai_backup', 0)} | `{raw}/sg_ai_backup.txt` | `{raw}/sg_ai_backup-clash.yaml` |
+| 澳洲双平台严选 | YouTube 认 AU + TikTok 认 AU + 速度达标 | {counts.get('au_dual_strict', 0)} | `{raw}/au_dual_strict.txt` | `{raw}/au_dual_strict-clash.yaml` |
+| 澳洲双平台备选 | YouTube 认 AU + TikTok 认 AU | {counts.get('au_dual_backup', 0)} | `{raw}/au_dual_backup.txt` | `{raw}/au_dual_backup-clash.yaml` |
+| 台湾双平台严选 | YouTube 认 TW + TikTok 认 TW + 速度达标 | {counts.get('tw_dual_strict', 0)} | `{raw}/tw_dual_strict.txt` | `{raw}/tw_dual_strict-clash.yaml` |
+| 台湾双平台备选 | YouTube 认 TW + TikTok 认 TW | {counts.get('tw_dual_backup', 0)} | `{raw}/tw_dual_backup.txt` | `{raw}/tw_dual_backup-clash.yaml` |
+| 英国双平台严选 | YouTube 认 GB + TikTok 认 GB + 速度达标 | {counts.get('gb_dual_strict', 0)} | `{raw}/gb_dual_strict.txt` | `{raw}/gb_dual_strict-clash.yaml` |
+| 英国双平台备选 | YouTube 认 GB + TikTok 认 GB | {counts.get('gb_dual_backup', 0)} | `{raw}/gb_dual_backup.txt` | `{raw}/gb_dual_backup-clash.yaml` |
+| 加拿大双平台严选 | YouTube 认 CA + TikTok 认 CA + 速度达标 | {counts.get('ca_dual_strict', 0)} | `{raw}/ca_dual_strict.txt` | `{raw}/ca_dual_strict-clash.yaml` |
+| 加拿大双平台备选 | YouTube 认 CA + TikTok 认 CA | {counts.get('ca_dual_backup', 0)} | `{raw}/ca_dual_backup.txt` | `{raw}/ca_dual_backup-clash.yaml` |
 
-- 每个出口的 YouTube / Gemini / TikTok 判定明细见 `output/platform_report.json`。
-- TikTok 提示：IP 认 NL 只是网络这一关，作品分发地区还受账号注册区、SIM、设备语言影响。
+- 每个出口的 YouTube / Gemini / TikTok / ChatGPT / Claude 判定明细见 `output/platform_report.json`。
+- TikTok 提示：IP 认对地区只是网络这一关，作品分发地区还受账号注册区、SIM、设备语言影响。
 """
     path = os.path.join(BASEDIR, "README.md")
     try:
