@@ -211,6 +211,8 @@ MAX_RESIDENTIAL = _env_int("MAX_RESIDENTIAL", 0)
 ENABLE_PLATFORM_CHECK = _env_flag("ENABLE_PLATFORM_CHECK", True)   # YouTube/Gemini/TikTok 地区判定
 PLATFORM_WORKERS = _env_int("PLATFORM_WORKERS", 12)                  # 平台验证并发 (每个 worker 起一个 sing-box)
 ENABLE_FINALIST_SPEED = _env_flag("ENABLE_FINALIST_SPEED", True)     # 用途池入选节点的速度门槛
+ENABLE_PURITY_HARDEN = _env_flag("ENABLE_PURITY_HARDEN", True)     # v3.4 严选纯净度加固（机房/广播硬排除，保守防误杀）
+STRICT_MAX_PER_24 = _env_int("STRICT_MAX_PER_24", 2)               # 严选池每个 /24 网段最多收几个出口
 STRICT_MIN_DOWN_MBPS = _env_int("STRICT_MIN_DOWN_MBPS", 5)           # 严选池下载下限 (Mbps)
 STRICT_MIN_UP_MBPS = _env_int("STRICT_MIN_UP_MBPS", 2)               # 严选池上传下限 (Mbps, TikTok 上传作品用)
 DEDUP_BY_EXIT_IP = True         # 相同出口 IP 只保留延迟最低的一个
@@ -317,6 +319,9 @@ DATACENTER_ASNS = {
     60205,  # 62610 关联段
     8342,  # Deltacomputers/Evrasia 类
     9009, 47692, 62041, 56630, 57502,  # Serverius/ProXmedia/Clouvider 类
+    12876,  # Scaleway（v3.4 实测漏网：阿姆斯特丹裸金属段混入严选）
+    60781,  # Leaseweb
+    18450,  # WebNX / 廉价独服类
 }
 
 # 民用宽带 ASN 白名单 (离线兜底; 关键国家主流运营商)
@@ -2257,6 +2262,42 @@ def _speed_pass(item) -> bool:
     return True
 
 
+# ── v3.4 严选纯净度加固 ──
+# 设计原则（用户 2026-11-16 定）：宁可少量漏网（目标脏节点 ≤10%），绝不误杀。
+# 因此只用高置信信号硬排除，且被排除者只是降入备选池，不删节点。
+_BACKBONE_ASNS = {174, 3356, 1299, 2914, 6939}  # 骨干运营商：其地址段含大量正规客户分配，ASN 本身不作判脏依据
+_RDNS_DIRTY_RE = re.compile(r"baremetal|\bvps\b|dedicated|cloud[-_ ]?server|\bhosting\b", re.I)
+
+
+def _purity_verdict(it) -> tuple:
+    """返回 (dirty: bool, reason: str)。仅高置信信号判脏：
+    A. ip-api 实测 hosting/proxy 标记（分类置信度 ≥88 的机房判定）
+    B. 已知主机商 ASN（骨干网除外）且分类为机房（置信度 ≥80）
+    C. 广播坐实：RDAP 注册国 ≠ 地理国，且另一独立地理源（echo/ip-api）也 ≠ 地理国
+    D. rDNS 强机房关键词（baremetal/vps 等）且分类为机房"""
+    if not ENABLE_PURITY_HARDEN:
+        return False, ""
+    nt, conf, asn = it.get("net_type"), it.get("confidence") or 0, it.get("asn")
+    if nt == "datacenter" and conf >= 88:
+        return True, f"ip-api机房/代理标记(conf={conf})"
+    if nt == "datacenter" and conf >= 80 and asn in DATACENTER_ASNS and asn not in _BACKBONE_ASNS:
+        return True, f"主机商ASN{asn}(conf={conf})"
+    reg, cc = it.get("registered"), it.get("country")
+    if reg and cc and reg != cc:
+        for other in (it.get("echo_cc"), it.get("ipapi_cc")):
+            if other and other != cc:
+                return True, f"广播坐实(注册{reg}/地理{cc}/另一源{other})"
+    rdns = (it.get("rdns") or "").lower()
+    if nt == "datacenter" and rdns and _RDNS_DIRTY_RE.search(rdns):
+        return True, "rDNS机房关键词"
+    return False, ""
+
+
+def _net24(ip: str) -> str:
+    parts = (ip or "").split(".")
+    return ".".join(parts[:3]) if len(parts) == 4 else (ip or "")
+
+
 def build_purpose_pools(groups: dict) -> dict:
     """按用途出池：美国 Gemini 池 / 荷兰 TikTok 池，各分严选（平台+速度全过）
     与备选（平台过、速度未达或未测）。同时写 platform_report.json。"""
@@ -2291,6 +2332,18 @@ def build_purpose_pools(groups: dict) -> dict:
 
     finalists = list({id(i): i for i in (us_pass + nl_pass + jp_pass + sg_pass + tw_pass
                                          + [x for v in dual_pass.values() for x in v])}.values())
+    # v3.4 纯净度加固：判脏者降入备选（不删节点），并打印构成以便审计
+    demoted = []
+    for i in finalists:
+        dirty, reason = _purity_verdict(i)
+        i["purity_dirty"], i["purity_reason"] = dirty, reason
+        if dirty:
+            demoted.append(i)
+    if demoted:
+        from collections import Counter
+        reasons = Counter(i["purity_reason"].split("(")[0] for i in demoted)
+        print(f"[*] v3.4 纯净度加固: {len(demoted)}/{len(finalists)} 个决赛节点判脏降入备选 "
+              f"| 原因构成: " + "、".join(f"{k}×{v}" for k, v in reasons.items()))
     if ENABLE_FINALIST_SPEED and finalists:
         print(f"[*] 用途池速度门槛: 实测 {len(finalists)} 个平台过关节点的下载/上传 "
               f"(严选下限 {STRICT_MIN_DOWN_MBPS}/{STRICT_MIN_UP_MBPS} Mbps) ...")
@@ -2304,24 +2357,31 @@ def build_purpose_pools(groups: dict) -> dict:
                     res = None
                 it["down_mbps"], it["up_mbps"] = res if res else (None, None)
 
-    pools = {
-        "us_gemini_strict": [i for i in us_pass if _speed_pass(i)],
-        "us_gemini_backup": [i for i in us_pass if not _speed_pass(i)],
-        "nl_tiktok_strict": [i for i in nl_pass if _speed_pass(i)],
-        "nl_tiktok_backup": [i for i in nl_pass if not _speed_pass(i)],
-        "au_dual_strict": [i for i in dual_pass["AU"] if _speed_pass(i)],
-        "au_dual_backup": [i for i in dual_pass["AU"] if not _speed_pass(i)],
-        "tw_pure_strict": [i for i in tw_pass if _speed_pass(i)],
-        "tw_pure_backup": [i for i in tw_pass if not _speed_pass(i)],
-        "gb_dual_strict": [i for i in dual_pass["GB"] if _speed_pass(i)],
-        "gb_dual_backup": [i for i in dual_pass["GB"] if not _speed_pass(i)],
-        "ca_dual_strict": [i for i in dual_pass["CA"] if _speed_pass(i)],
-        "ca_dual_backup": [i for i in dual_pass["CA"] if not _speed_pass(i)],
-        "jp_ai_strict": [i for i in jp_pass if _speed_pass(i)],
-        "jp_ai_backup": [i for i in jp_pass if not _speed_pass(i)],
-        "sg_ai_strict": [i for i in sg_pass if _speed_pass(i)],
-        "sg_ai_backup": [i for i in sg_pass if not _speed_pass(i)],
-    }
+    def _eligible(i):
+        return _speed_pass(i) and not i.get("purity_dirty")
+
+    def _split(lst):
+        strict = sorted((i for i in lst if _eligible(i)),
+                        key=lambda i: (-(i.get("down_mbps") or 0), i.get("latency_ms") or 10 ** 9))
+        kept, overflow, seen24 = [], [], {}
+        for i in strict:  # v3.4: 同 /24 上限，防单个脏网段批发进场
+            k = _net24(i.get("exit_ip") or "")
+            if ENABLE_PURITY_HARDEN and seen24.get(k, 0) >= STRICT_MAX_PER_24:
+                overflow.append(i)
+            else:
+                seen24[k] = seen24.get(k, 0) + 1
+                kept.append(i)
+        backup = [i for i in lst if i not in kept]
+        return kept, backup
+
+    _pairs = {}
+    for _name, _lst in (("us_gemini", us_pass), ("nl_tiktok", nl_pass),
+                        ("au_dual", dual_pass["AU"]), ("tw_pure", tw_pass),
+                        ("gb_dual", dual_pass["GB"]), ("ca_dual", dual_pass["CA"]),
+                        ("jp_ai", jp_pass), ("sg_ai", sg_pass)):
+        _s, _b = _split(_lst)
+        _pairs[f"{_name}_strict"], _pairs[f"{_name}_backup"] = _s, _b
+    pools = _pairs
     counts = {}
     for name, lst in pools.items():
         counts[name] = export_group(
@@ -2341,6 +2401,8 @@ def build_purpose_pools(groups: dict) -> dict:
             "exit_ip": i.get("exit_ip"), "country": i["country"],
             "city": i.get("city") or "", "category": i.get("tag") or "普通",
             "risk": i.get("risk"), "platform": i["platform"],
+            "net_type": i.get("net_type"), "confidence": i.get("confidence"),
+            "purity_dirty": i.get("purity_dirty"), "purity_reason": i.get("purity_reason") or "", 
             "down_mbps": i.get("down_mbps"), "up_mbps": i.get("up_mbps"),
         })
     write_text(os.path.join(OUTPUT_DIR, "platform_report.json"),
@@ -2355,7 +2417,7 @@ def append_purpose_readme(counts: dict):
     repo = (os.environ.get("GITHUB_REPOSITORY") or "jack197889/NativeNods-DIY").strip()
     raw = f"https://raw.githubusercontent.com/{repo}/main/output/purpose"
     section = f"""
-## 🎯 按用途严选（v3.3 标准）
+## 🎯 按用途严选（v3.4 标准：平台 + 速度 + 纯净度加固）
 
 > 平台地区只取决于出口 IP：以下节点均经隧道实测平台本身判定，并通过速度门槛分层。家宽 / 原生 / 普通同标准参选。
 > **严选** = 平台全过 + 下载 ≥ {STRICT_MIN_DOWN_MBPS} Mbps + 上传 ≥ {STRICT_MIN_UP_MBPS} Mbps；**备选** = 平台全过但速度未达或未测出。
