@@ -5,22 +5,95 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国-法兰克福 01
+  type: vless
+  server: 82.39.171.12
+  port: 443
+  udp: true
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  network: tcp
+- name: 🇩🇪 德国-Eygelshoven 02
+  type: vless
+  server: 194.60.228.97
+  port: 443
+  udp: true
+  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
+  tls: true
+  servername: base.hosamobenl.co.uk
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇩🇪 德国-法兰克福 03
   type: hysteria2
-  server: 151.243.169.164
+  server: derfderf.ru
   port: 12824
   udp: true
   password: d62s7ghfehm742us
   sni: derfderf.ru
+- name: 🇩🇪 德国-法兰克福 04
+  type: ss
+  server: 47.254.175.2
+  port: 443
+  udp: true
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+- name: 🇩🇪 德国-Kostroma 05
+  type: hysteria2
+  server: 201.8.71.59
+  port: 443
+  udp: true
+  password: 23c82941-70f4-4381-90db-bd28e9a902e9
+  sni: steel7.hadsvpn.com
+- name: 🇩🇪 德国-Orem 06
+  type: hysteria2
+  server: steel7.hadsvpn.com
+  port: 443
+  udp: true
+  password: 23c82941-70f4-4381-90db-bd28e9a902e9
+  sni: steel7.hadsvpn.com
+  skip-cert-verify: true
+- name: 🇩🇪 德国-法兰克福 07
+  type: vless
+  server: 144.31.140.125
+  port: 8443
+  udp: true
+  uuid: f5e70ce3-cfb4-4df1-b25c-d19bfae627c0
+  flow: xtls-rprx-vision
+  packet-encoding: xudp
+  tls: true
+  servername: twitch.tv
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: wgyw3OxZw4HEzedNdY_eHdcVkrtT7GEeZSHfzcZ8iDo
+    short-id: 168c15efac9df5fd
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇩🇪 德国-法兰克福 01
+  - 🇩🇪 德国-Eygelshoven 02
+  - 🇩🇪 德国-法兰克福 03
+  - 🇩🇪 德国-法兰克福 04
+  - 🇩🇪 德国-Kostroma 05
+  - 🇩🇪 德国-Orem 06
+  - 🇩🇪 德国-法兰克福 07
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇩🇪 德国-法兰克福 01
+  - 🇩🇪 德国-Eygelshoven 02
+  - 🇩🇪 德国-法兰克福 03
+  - 🇩🇪 德国-法兰克福 04
+  - 🇩🇪 德国-Kostroma 05
+  - 🇩🇪 德国-Orem 06
+  - 🇩🇪 德国-法兰克福 07
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

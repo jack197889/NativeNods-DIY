@@ -1,18 +1,20 @@
 [
  {
-  "exit_ip": "192.228.145.118",
-  "country": "MY",
-  "city": "Kuala Lumpur",
+  "exit_ip": "112.120.54.175",
+  "country": "HK",
+  "city": "Central",
   "category": "家宽",
-  "risk": 2,
+  "risk": 0,
   "platform": {
    "youtube": "Yes",
-   "youtube_region": "MY",
+   "youtube_region": "HK",
    "gemini": "Yes",
-   "gemini_region": "MY",
+   "gemini_region": "HK",
    "tiktok_region": "未知",
+   "chatgpt": "No(仅App可用)",
+   "claude": "No(地区不可用)",
    "gemini_diag": {
-    "bytes": 930697,
+    "bytes": 924811,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
@@ -22,19 +24,165 @@
   "up_mbps": null
  },
  {
-  "exit_ip": "60.248.219.52",
-  "country": "TW",
-  "city": "Taichung",
-  "category": "家宽",
+  "exit_ip": "38.107.232.36",
+  "country": "US",
+  "city": "Dallas",
+  "category": "原生",
+  "risk": 8,
+  "platform": {
+   "youtube": "失败(网络)",
+   "youtube_region": "",
+   "gemini": "失败(网络)",
+   "gemini_region": "",
+   "tiktok_region": "未知",
+   "chatgpt": "失败(网络)",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 0,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "134.195.196.211",
+  "country": "CA",
+  "city": "Toronto",
+  "category": "原生",
+  "risk": 11,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "US",
+   "gemini": "失败(网络)",
+   "gemini_region": "",
+   "tiktok_region": "未知",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 0,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "216.152.155.158",
+  "country": "US",
+  "city": "Chicago",
+  "category": "原生",
   "risk": 0,
   "platform": {
-   "youtube": "No",
-   "youtube_region": "CN",
+   "youtube": "失败(网络)",
+   "youtube_region": "",
    "gemini": "Yes",
-   "gemini_region": "CN",
-   "tiktok_region": "未知",
+   "gemini_region": "IRN",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 926057,
+    "bytes": 930299,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "2a12:6fc1::2d9",
+  "country": "US",
+  "city": "Chicago",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "US",
+   "gemini": "失败(网络)",
+   "gemini_region": "",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 0,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "174.138.187.118",
+  "country": "US",
+  "city": "Secaucus",
+  "category": "原生",
+  "risk": 25,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "US",
+   "gemini": "Yes",
+   "gemini_region": "US",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 929033,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": 150.1,
+  "up_mbps": 66.52
+ },
+ {
+  "exit_ip": "47.253.226.114",
+  "country": "US",
+  "city": "Henrico",
+  "category": "原生",
+  "risk": 12,
+  "platform": {
+   "youtube": "未知(页面无标记)",
+   "youtube_region": "US",
+   "gemini": "失败(网络)",
+   "gemini_region": "",
+   "tiktok_region": "未知",
+   "chatgpt": "失败(网络)",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 0,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "66.70.179.198",
+  "country": "CA",
+  "city": "Montreal",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "IN",
+   "gemini": "Yes",
+   "gemini_region": "IN",
+   "tiktok_region": "未知",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 924679,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
@@ -55,32 +203,12 @@
    "gemini": "Yes",
    "gemini_region": "IRN",
    "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 924916,
+    "bytes": 925063,
     "has_marker": false,
     "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 216.63,
-  "up_mbps": 81.91
- },
- {
-  "exit_ip": "66.23.203.18",
-  "country": "US",
-  "city": "Dallas",
-  "category": "原生",
-  "risk": 33,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "US",
-   "gemini": "No",
-   "gemini_region": "",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 1575,
-    "has_marker": false,
-    "app_shell": false,
     "blocked_text": false
    }
   },
@@ -88,21 +216,23 @@
   "up_mbps": null
  },
  {
-  "exit_ip": "155.248.209.237",
-  "country": "US",
-  "city": "San Jose",
+  "exit_ip": "51.222.200.165",
+  "country": "CA",
+  "city": "Beauharnois",
   "category": "原生",
-  "risk": 4,
+  "risk": 33,
   "platform": {
    "youtube": "Yes",
-   "youtube_region": "US",
-   "gemini": "失败(网络)",
-   "gemini_region": "",
-   "tiktok_region": "US",
+   "youtube_region": "CA",
+   "gemini": "Yes",
+   "gemini_region": "CA",
+   "tiktok_region": "未知",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 0,
+    "bytes": 934560,
     "has_marker": false,
-    "app_shell": false,
+    "app_shell": true,
     "blocked_text": false
    }
   },
@@ -121,6 +251,8 @@
    "gemini": "失败(网络)",
    "gemini_region": "",
    "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
     "bytes": 0,
     "has_marker": false,
@@ -132,75 +264,9 @@
   "up_mbps": null
  },
  {
-  "exit_ip": "38.145.220.193",
+  "exit_ip": "170.101.101.112",
   "country": "US",
-  "city": "Redondo Beach",
-  "category": "原生",
-  "risk": 27,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "US",
-   "gemini": "No",
-   "gemini_region": "",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 1575,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "47.89.232.46",
-  "country": "US",
-  "city": "Minkler",
-  "category": "原生",
-  "risk": 12,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "US",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 925652,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 175.51,
-  "up_mbps": 20.0
- },
- {
-  "exit_ip": "47.251.108.158",
-  "country": "US",
-  "city": "Minkler",
-  "category": "原生",
-  "risk": 12,
-  "platform": {
-   "youtube": "未知(页面无标记)",
-   "youtube_region": "US",
-   "gemini": "No",
-   "gemini_region": "",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 8844,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "216.152.155.59",
-  "country": "US",
-  "city": "Chicago",
+  "city": "Detroit",
   "category": "原生",
   "risk": 0,
   "platform": {
@@ -209,72 +275,56 @@
    "gemini": "Yes",
    "gemini_region": "IRN",
    "tiktok_region": "US",
+   "chatgpt": "失败(网络)",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 930243,
+    "bytes": 936508,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
    }
   },
-  "down_mbps": 163.13,
-  "up_mbps": 4.91
+  "down_mbps": null,
+  "up_mbps": null
  },
  {
-  "exit_ip": "2a12:6fc1::2d9",
+  "exit_ip": "155.248.209.237",
   "country": "US",
-  "city": "Chicago",
+  "city": "San Jose",
   "category": "原生",
-  "risk": 0,
+  "risk": 4,
   "platform": {
    "youtube": "Yes",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "US",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 926739,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 13.4,
-  "up_mbps": 60.05
- },
- {
-  "exit_ip": "2602:fa4f:802:faeb:8e14:5059:25b5:1405",
-  "country": "US",
-  "city": "Los Angeles",
-  "category": "原生",
-  "risk": 14,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "US",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 925655,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 136.51,
-  "up_mbps": 58.6
- },
- {
-  "exit_ip": "2604:2dc0:200:26db::",
-  "country": "US",
-  "city": "Reston",
-  "category": "原生",
-  "risk": 33,
-  "platform": {
-   "youtube": "No",
    "youtube_region": "US",
    "gemini": "失败(网络)",
    "gemini_region": "",
    "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 0,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "2603:c028:4501:3d88:b782:2bc:9b2c:f38a",
+  "country": "US",
+  "city": "Chicago",
+  "category": "原生",
+  "risk": 1,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "RU",
+   "gemini": "失败(网络)",
+   "gemini_region": "",
+   "tiktok_region": "US",
+   "chatgpt": "失败(网络)",
+   "claude": "Yes",
    "gemini_diag": {
     "bytes": 0,
     "has_marker": false,
@@ -296,9 +346,11 @@
    "youtube_region": "RU",
    "gemini": "Yes",
    "gemini_region": "RU",
-   "tiktok_region": "未知",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 925009,
+    "bytes": 924650,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
@@ -308,48 +360,52 @@
   "up_mbps": null
  },
  {
-  "exit_ip": "96.44.133.37",
+  "exit_ip": "216.152.155.59",
   "country": "US",
-  "city": "Los Angeles",
+  "city": "Chicago",
   "category": "原生",
-  "risk": 19,
+  "risk": 0,
   "platform": {
-   "youtube": "Yes",
+   "youtube": "No",
    "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "US",
-   "tiktok_region": "US",
+   "gemini": "失败(网络)",
+   "gemini_region": "",
+   "tiktok_region": "未知",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 925723,
+    "bytes": 0,
     "has_marker": false,
-    "app_shell": true,
+    "app_shell": false,
     "blocked_text": false
    }
   },
-  "down_mbps": 121.67,
-  "up_mbps": 37.37
+  "down_mbps": null,
+  "up_mbps": null
  },
  {
-  "exit_ip": "192.255.152.147",
+  "exit_ip": "47.89.232.46",
   "country": "US",
-  "city": "Dallas",
+  "city": "Minkler",
   "category": "原生",
-  "risk": 19,
+  "risk": 12,
   "platform": {
    "youtube": "Yes",
    "youtube_region": "US",
    "gemini": "Yes",
    "gemini_region": "US",
    "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 925841,
+    "bytes": 925899,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
    }
   },
-  "down_mbps": 72.2,
-  "up_mbps": 39.09
+  "down_mbps": 118.44,
+  "up_mbps": 49.38
  },
  {
   "exit_ip": "107.174.50.37",
@@ -363,8 +419,10 @@
    "gemini": "Yes",
    "gemini_region": "CN",
    "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 924970,
+    "bytes": 926017,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
@@ -372,6 +430,30 @@
   },
   "down_mbps": null,
   "up_mbps": null
+ },
+ {
+  "exit_ip": "2602:fa4f:802:5055:eca9:4233:a027:3692",
+  "country": "US",
+  "city": "Los Angeles",
+  "category": "原生",
+  "risk": 14,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "US",
+   "gemini": "Yes",
+   "gemini_region": "US",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 931128,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": 116.65,
+  "up_mbps": 41.73
  },
  {
   "exit_ip": "2a05:9402::269",
@@ -385,6 +467,104 @@
    "gemini": "失败(网络)",
    "gemini_region": "",
    "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 0,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "2602:fa4f:802:faeb:8e14:5059:25b5:1405",
+  "country": "US",
+  "city": "Los Angeles",
+  "category": "原生",
+  "risk": 14,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "US",
+   "gemini": "Yes",
+   "gemini_region": "US",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 936210,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": 82.89,
+  "up_mbps": 47.8
+ },
+ {
+  "exit_ip": "69.17.3.150",
+  "country": "US",
+  "city": "Los Angeles",
+  "category": "原生",
+  "risk": 17,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "US",
+   "gemini": "失败(网络)",
+   "gemini_region": "",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 0,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "2605:52c0:2:54cf:be24:11ff:fe12:32d3",
+  "country": "US",
+  "city": "Los Angeles",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "US",
+   "gemini": "Yes",
+   "gemini_region": "US",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 931362,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": 5.66,
+  "up_mbps": 24.95
+ },
+ {
+  "exit_ip": "216.106.186.124",
+  "country": "US",
+  "city": "Seattle",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "US",
+   "gemini": "失败(网络)",
+   "gemini_region": "",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
     "bytes": 0,
     "has_marker": false,
@@ -407,32 +587,60 @@
    "gemini": "Yes",
    "gemini_region": "US",
    "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 925517,
+    "bytes": 925549,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
    }
   },
-  "down_mbps": 114.69,
-  "up_mbps": 50.26
+  "down_mbps": 94.3,
+  "up_mbps": 30.39
  },
  {
-  "exit_ip": "198.2.210.178",
+  "exit_ip": "192.177.26.55",
   "country": "US",
-  "city": "San Jose",
+  "city": "New York",
   "category": "原生",
   "risk": 0,
   "platform": {
-   "youtube": "No",
-   "youtube_region": "CN",
+   "youtube": "Yes",
+   "youtube_region": "US",
    "gemini": "Yes",
-   "gemini_region": "CN",
+   "gemini_region": "US",
    "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 924886,
+    "bytes": 925707,
     "has_marker": false,
     "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": 20.77,
+  "up_mbps": 19.52
+ },
+ {
+  "exit_ip": "129.146.77.248",
+  "country": "US",
+  "city": "Phoenix",
+  "category": "原生",
+  "risk": 1,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "US",
+   "gemini": "失败(网络)",
+   "gemini_region": "",
+   "tiktok_region": "US",
+   "chatgpt": "失败(网络)",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 0,
+    "has_marker": false,
+    "app_shell": false,
     "blocked_text": false
    }
   },
@@ -440,70 +648,52 @@
   "up_mbps": null
  },
  {
-  "exit_ip": "193.151.163.142",
+  "exit_ip": "2604:2dc0:200:26db::",
   "country": "US",
-  "city": "Newark",
+  "city": "Reston",
   "category": "原生",
-  "risk": 0,
+  "risk": 33,
   "platform": {
    "youtube": "No",
    "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "IRN",
+   "gemini": "失败(网络)",
+   "gemini_region": "",
    "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 924640,
+    "bytes": 0,
     "has_marker": false,
-    "app_shell": true,
+    "app_shell": false,
     "blocked_text": false
    }
   },
-  "down_mbps": 108.34,
-  "up_mbps": 34.18
+  "down_mbps": null,
+  "up_mbps": null
  },
  {
-  "exit_ip": "216.106.186.124",
-  "country": "US",
-  "city": "Seattle",
+  "exit_ip": "51.222.136.236",
+  "country": "CA",
+  "city": "Montreal",
   "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "IRN",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 924919,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 103.63,
-  "up_mbps": 5.92
- },
- {
-  "exit_ip": "174.138.187.118",
-  "country": "US",
-  "city": "Secaucus",
-  "category": "原生",
-  "risk": 25,
+  "risk": 33,
   "platform": {
    "youtube": "Yes",
-   "youtube_region": "US",
+   "youtube_region": "CA",
    "gemini": "Yes",
-   "gemini_region": "US",
-   "tiktok_region": "US",
+   "gemini_region": "CA",
+   "tiktok_region": "CA",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 931081,
+    "bytes": 930386,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
    }
   },
-  "down_mbps": 106.14,
-  "up_mbps": 44.98
+  "down_mbps": 44.67,
+  "up_mbps": 29.18
  },
  {
   "exit_ip": "199.7.140.201",
@@ -517,30 +707,34 @@
    "gemini": "Yes",
    "gemini_region": "US",
    "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 931450,
+    "bytes": 925612,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
    }
   },
-  "down_mbps": 0.75,
-  "up_mbps": null
+  "down_mbps": 0.99,
+  "up_mbps": 1.8
  },
  {
-  "exit_ip": "51.222.141.125",
-  "country": "CA",
-  "city": "Montreal",
+  "exit_ip": "198.2.210.178",
+  "country": "US",
+  "city": "San Jose",
   "category": "原生",
-  "risk": 33,
+  "risk": 0,
   "platform": {
-   "youtube": "Yes",
-   "youtube_region": "CA",
+   "youtube": "No",
+   "youtube_region": "CN",
    "gemini": "Yes",
-   "gemini_region": "CA",
-   "tiktok_region": "未知",
+   "gemini_region": "CN",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 924962,
+    "bytes": 930258,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
@@ -561,6 +755,8 @@
    "gemini": "失败(网络)",
    "gemini_region": "",
    "tiktok_region": "未知",
+   "chatgpt": "失败(网络)",
+   "claude": "Yes",
    "gemini_diag": {
     "bytes": 0,
     "has_marker": false,
@@ -570,138 +766,6 @@
   },
   "down_mbps": null,
   "up_mbps": null
- },
- {
-  "exit_ip": "51.222.12.127",
-  "country": "CA",
-  "city": "Beauharnois",
-  "category": "原生",
-  "risk": 33,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "IRN",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 924944,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "198.247.127.131",
-  "country": "US",
-  "city": "New York",
-  "category": "原生",
-  "risk": 1,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "US",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 925878,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 87.38,
-  "up_mbps": 34.46
- },
- {
-  "exit_ip": "2603:c028:4501:3d88:b782:2bc:9b2c:f38a",
-  "country": "US",
-  "city": "Chicago",
-  "category": "原生",
-  "risk": 1,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "RU",
-   "gemini": "失败(网络)",
-   "gemini_region": "",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 0,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "66.163.122.81",
-  "country": "US",
-  "city": "Ashburn",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "EG",
-   "gemini": "Yes",
-   "gemini_region": "EGY",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 924987,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "51.79.49.116",
-  "country": "CA",
-  "city": "Montreal",
-  "category": "原生",
-  "risk": 33,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "CA",
-   "gemini": "Yes",
-   "gemini_region": "CA",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 925097,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "45.61.186.3",
-  "country": "US",
-  "city": "Miami",
-  "category": "原生",
-  "risk": 26,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "US",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 925538,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 56.71,
-  "up_mbps": 29.33
  },
  {
   "exit_ip": "64.181.219.110",
@@ -710,37 +774,17 @@
   "category": "原生",
   "risk": 1,
   "platform": {
-   "youtube": "No",
-   "youtube_region": "RU",
+   "youtube": "失败(网络)",
+   "youtube_region": "",
    "gemini": "No",
    "gemini_region": "",
    "tiktok_region": "未知",
+   "chatgpt": "失败(网络)",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 1946,
+    "bytes": 1940,
     "has_marker": false,
     "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "62.210.91.2",
-  "country": "FR",
-  "city": "Paris",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "IRN",
-   "tiktok_region": "FR",
-   "gemini_diag": {
-    "bytes": 925721,
-    "has_marker": false,
-    "app_shell": true,
     "blocked_text": false
    }
   },
@@ -759,52 +803,10 @@
    "gemini": "Yes",
    "gemini_region": "FR",
    "tiktok_region": "FR",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 926233,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "89.105.218.106",
-  "country": "NL",
-  "city": "Enschede",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "RU",
-   "gemini": "Yes",
-   "gemini_region": "RU",
-   "tiktok_region": "NL",
-   "gemini_diag": {
-    "bytes": 937769,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 39.35,
-  "up_mbps": 18.88
- },
- {
-  "exit_ip": "62.210.113.151",
-  "country": "FR",
-  "city": "Paris",
-  "category": "原生",
-  "risk": 35,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "FR",
-   "tiktok_region": "FR",
-   "gemini_diag": {
-    "bytes": 926444,
+    "bytes": 926318,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
@@ -825,76 +827,12 @@
    "gemini": "No",
    "gemini_region": "",
    "tiktok_region": "NL",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
     "bytes": 1575,
     "has_marker": false,
     "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 38.5,
-  "up_mbps": 14.81
- },
- {
-  "exit_ip": "93.123.85.230",
-  "country": "DE",
-  "city": "Frankfurt am Main",
-  "category": "原生",
-  "risk": 18,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "DE",
-   "gemini": "Yes",
-   "gemini_region": "DE",
-   "tiktok_region": "DE",
-   "gemini_diag": {
-    "bytes": 926375,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "193.29.139.164",
-  "country": "NL",
-  "city": "Amsterdam",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "US",
-   "gemini": "No",
-   "gemini_region": "",
-   "tiktok_region": "NL",
-   "gemini_diag": {
-    "bytes": 1575,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 37.24,
-  "up_mbps": 11.81
- },
- {
-  "exit_ip": "62.210.91.10",
-  "country": "FR",
-  "city": "Paris",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "FR",
-   "gemini": "Yes",
-   "gemini_region": "FR",
-   "tiktok_region": "FR",
-   "gemini_diag": {
-    "bytes": 926412,
-    "has_marker": false,
-    "app_shell": true,
     "blocked_text": false
    }
   },
@@ -913,732 +851,8 @@
    "gemini": "No",
    "gemini_region": "",
    "tiktok_region": "NL",
-   "gemini_diag": {
-    "bytes": 1575,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 36.23,
-  "up_mbps": 13.15
- },
- {
-  "exit_ip": "136.148.213.96",
-  "country": "SE",
-  "city": "Stockholm",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "未知(页面无标记)",
-   "youtube_region": "SE",
-   "gemini": "No",
-   "gemini_region": "",
-   "tiktok_region": "SE",
-   "gemini_diag": {
-    "bytes": 614863,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "103.115.108.50",
-  "country": "TW",
-  "city": "Taipei",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "TW",
-   "gemini": "Yes",
-   "gemini_region": "TW",
-   "tiktok_region": "TW",
-   "gemini_diag": {
-    "bytes": 924717,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "160.187.100.109",
-  "country": "TW",
-  "city": "Taipei",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "TW",
-   "gemini": "Yes",
-   "gemini_region": "TW",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 927431,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "2a02:20b3:103:3d::1",
-  "country": "NL",
-  "city": "Amsterdam",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "US",
-   "gemini": "失败(网络)",
-   "gemini_region": "",
-   "tiktok_region": "NL",
-   "gemini_diag": {
-    "bytes": 0,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": 1.93
- },
- {
-  "exit_ip": "2a01:4f8:c010:4843::1",
-  "country": "DE",
-  "city": "Falkenstein",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "RU",
-   "gemini": "Yes",
-   "gemini_region": "RU",
-   "tiktok_region": "DE",
-   "gemini_diag": {
-    "bytes": 925520,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "152.32.254.68",
-  "country": "HK",
-  "city": "Hong Kong",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "RU",
-   "gemini": "Yes",
-   "gemini_region": "RU",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 924693,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "2a12:3200:1002:6::1",
-  "country": "RO",
-  "city": "Bucharest",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "US",
-   "gemini": "No",
-   "gemini_region": "",
-   "tiktok_region": "RO",
-   "gemini_diag": {
-    "bytes": 1575,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "202.146.222.29",
-  "country": "HK",
-  "city": "Fo Tan",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "HK",
-   "gemini": "Yes",
-   "gemini_region": "HK",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 924846,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "202.146.222.89",
-  "country": "HK",
-  "city": "Fo Tan",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "HK",
-   "gemini": "Yes",
-   "gemini_region": "HK",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 924923,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "202.146.222.174",
-  "country": "HK",
-  "city": "Fo Tan",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "HK",
-   "gemini": "Yes",
-   "gemini_region": "HK",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 930124,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "45.157.235.170",
-  "country": "DE",
-  "city": "Frankfurt am Main",
-  "category": "原生",
-  "risk": 18,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "DE",
-   "gemini": "Yes",
-   "gemini_region": "DE",
-   "tiktok_region": "DE",
-   "gemini_diag": {
-    "bytes": 926478,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "31.222.235.81",
-  "country": "UA",
-  "city": "Kyiv",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "失败(网络)",
-   "youtube_region": "",
-   "gemini": "No",
-   "gemini_region": "",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 1575,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "51.77.144.182",
-  "country": "FR",
-  "city": "Roubaix",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "US",
-   "tiktok_region": "FR",
-   "gemini_diag": {
-    "bytes": 925588,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "77.93.89.197",
-  "country": "SG",
-  "city": "Singapore",
-  "category": "原生",
-  "risk": 7,
-  "platform": {
-   "youtube": "未知(页面无标记)",
-   "youtube_region": "SG",
-   "gemini": "Yes",
-   "gemini_region": "SG",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 937005,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "2603:c024:c020:4e00:0:c2b9:61c:c596",
-  "country": "US",
-  "city": "San Jose",
-  "category": "原生",
-  "risk": 1,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "US",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 925697,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "170.101.101.112",
-  "country": "US",
-  "city": "Detroit",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "IRN",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 924708,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 92.29,
-  "up_mbps": 31.78
- },
- {
-  "exit_ip": "2a14:2f40:0:101::e0",
-  "country": "HU",
-  "city": "Budapest",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "RU",
-   "gemini": "Yes",
-   "gemini_region": "RU",
-   "tiktok_region": "HU",
-   "gemini_diag": {
-    "bytes": 924660,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "95.143.196.97",
-  "country": "SE",
-  "city": "Hudiksvall",
-  "category": "原生",
-  "risk": 33,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "RU",
-   "gemini": "Yes",
-   "gemini_region": "SE",
-   "tiktok_region": "SE",
-   "gemini_diag": {
-    "bytes": 926518,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "91.107.171.66",
-  "country": "DE",
-  "city": "Frankfurt Am Main",
-  "category": "原生",
-  "risk": 6,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "DE",
-   "gemini": "Yes",
-   "gemini_region": "DE",
-   "tiktok_region": "DE",
-   "gemini_diag": {
-    "bytes": 926390,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "91.107.157.36",
-  "country": "DE",
-  "city": "Frankfurt Am Main",
-  "category": "原生",
-  "risk": 6,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "RU",
-   "gemini": "Yes",
-   "gemini_region": "RU",
-   "tiktok_region": "DE",
-   "gemini_diag": {
-    "bytes": 925710,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "47.251.25.74",
-  "country": "US",
-  "city": "Santa Clara",
-  "category": "原生",
-  "risk": 12,
-  "platform": {
-   "youtube": "未知(页面无标记)",
-   "youtube_region": "US",
-   "gemini": "No",
-   "gemini_region": "",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 116676,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "178.172.227.228",
-  "country": "BY",
-  "city": "Bol’shoye Stiklevo",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "RU",
-   "gemini": "Yes",
-   "gemini_region": "RU",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 924732,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "2402:a7c0:3003:104:1c00:30ff:fe00:12b",
-  "country": "SG",
-  "city": "Singapore",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "LK",
-   "gemini": "Yes",
-   "gemini_region": "SG",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 926041,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "48.102.170.205",
-  "country": "US",
-  "city": "Washington",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "US",
-   "gemini": "失败(网络)",
-   "gemini_region": "",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 0,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "102.37.156.224",
-  "country": "ZA",
-  "city": "Johannesburg",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "ZA",
-   "gemini": "Yes",
-   "gemini_region": "ZA",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 925149,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "216.219.92.130",
-  "country": "US",
-  "city": "New York",
-  "category": "原生",
-  "risk": 24,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "US",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 925405,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 3.49,
-  "up_mbps": 3.85
- },
- {
-  "exit_ip": "136.148.213.206",
-  "country": "SE",
-  "city": "Stockholm",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "SE",
-   "gemini": "Yes",
-   "gemini_region": "SE",
-   "tiktok_region": "SE",
-   "gemini_diag": {
-    "bytes": 926473,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "186.241.66.95",
-  "country": "US",
-  "city": "Los Angeles",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "CN",
-   "gemini": "Yes",
-   "gemini_region": "CN",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 930391,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "192.9.158.29",
-  "country": "US",
-  "city": "San Jose",
-  "category": "原生",
-  "risk": 1,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "US",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 931193,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "23.174.104.83",
-  "country": "US",
-  "city": "Los Angeles",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "失败(网络)",
-   "youtube_region": "",
-   "gemini": "失败(网络)",
-   "gemini_region": "",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 0,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "48.102.169.194",
-  "country": "US",
-  "city": "Washington",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "US",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 925779,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 0.6,
-  "up_mbps": null
- },
- {
-  "exit_ip": "31.210.52.74",
-  "country": "TR",
-  "city": "Fatih",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "TR",
-   "gemini": "失败(网络)",
-   "gemini_region": "",
-   "tiktok_region": "TR",
-   "gemini_diag": {
-    "bytes": 0,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "178.172.227.124",
-  "country": "BY",
-  "city": "Bol’shoye Stiklevo",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "US",
-   "gemini": "No",
-   "gemini_region": "",
-   "tiktok_region": "未知",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
     "bytes": 1575,
     "has_marker": false,
@@ -1661,6 +875,8 @@
    "gemini": "No",
    "gemini_region": "",
    "tiktok_region": "DE",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
     "bytes": 1575,
     "has_marker": false,
@@ -1672,17 +888,43 @@
   "up_mbps": null
  },
  {
-  "exit_ip": "2001:1af8:5301:106:1c00:83ff:fe00:583",
+  "exit_ip": "193.29.139.164",
   "country": "NL",
   "city": "Amsterdam",
   "category": "原生",
   "risk": 0,
   "platform": {
-   "youtube": "Yes",
-   "youtube_region": "NL",
-   "gemini": "失败(网络)",
+   "youtube": "No",
+   "youtube_region": "US",
+   "gemini": "No",
    "gemini_region": "",
    "tiktok_region": "NL",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 1575,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "2a01:4f8:1c1b:2a70::1",
+  "country": "DE",
+  "city": "Nuremberg",
+  "category": "原生",
+  "risk": 6,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "DE",
+   "gemini": "失败(网络)",
+   "gemini_region": "",
+   "tiktok_region": "DE",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
     "bytes": 0,
     "has_marker": false,
@@ -1690,8 +932,728 @@
     "blocked_text": false
    }
   },
-  "down_mbps": 0.61,
-  "up_mbps": 1.79
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "2a01:4f8:1c1b:1635::1",
+  "country": "DE",
+  "city": "Nuremberg",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "US",
+   "gemini": "Yes",
+   "gemini_region": "IRN",
+   "tiktok_region": "DE",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 925918,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "185.255.115.181",
+  "country": "DE",
+  "city": "Frankfurt am Main",
+  "category": "原生",
+  "risk": 18,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "RU",
+   "gemini": "Yes",
+   "gemini_region": "RU",
+   "tiktok_region": "DE",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 925513,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "167.233.129.126",
+  "country": "DE",
+  "city": "Falkenstein",
+  "category": "原生",
+  "risk": 6,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "US",
+   "gemini": "Yes",
+   "gemini_region": "IRN",
+   "tiktok_region": "DE",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 925665,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "48.102.169.194",
+  "country": "US",
+  "city": "Washington",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "US",
+   "gemini": "No",
+   "gemini_region": "",
+   "tiktok_region": "US",
+   "chatgpt": "失败(网络)",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 447038,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "62.210.91.10",
+  "country": "FR",
+  "city": "Paris",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "FR",
+   "gemini": "Yes",
+   "gemini_region": "FR",
+   "tiktok_region": "FR",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 926481,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "216.219.92.130",
+  "country": "US",
+  "city": "New York",
+  "category": "原生",
+  "risk": 24,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "US",
+   "gemini": "Yes",
+   "gemini_region": "US",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 925639,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": 3.55,
+  "up_mbps": 2.74
+ },
+ {
+  "exit_ip": "162.249.125.133",
+  "country": "RO",
+  "city": "Bucharest",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "US",
+   "gemini": "No",
+   "gemini_region": "",
+   "tiktok_region": "RO",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 1575,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "103.115.108.50",
+  "country": "TW",
+  "city": "Taipei",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "TW",
+   "gemini": "Yes",
+   "gemini_region": "TW",
+   "tiktok_region": "未知",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 924903,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "160.187.100.109",
+  "country": "TW",
+  "city": "Taipei",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "TW",
+   "gemini": "Yes",
+   "gemini_region": "TW",
+   "tiktok_region": "未知",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 937454,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "51.77.144.182",
+  "country": "FR",
+  "city": "Roubaix",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "US",
+   "gemini": "Yes",
+   "gemini_region": "US",
+   "tiktok_region": "FR",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 925698,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "95.128.71.79",
+  "country": "BY",
+  "city": "Minsk",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "RU",
+   "gemini": "Yes",
+   "gemini_region": "RU",
+   "tiktok_region": "未知",
+   "chatgpt": "No(仅App可用)",
+   "claude": "No(地区不可用)",
+   "gemini_diag": {
+    "bytes": 924858,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "178.172.227.124",
+  "country": "BY",
+  "city": "Bol’shoye Stiklevo",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "US",
+   "gemini": "No",
+   "gemini_region": "",
+   "tiktok_region": "未知",
+   "chatgpt": "No(仅App可用)",
+   "claude": "No(地区不可用)",
+   "gemini_diag": {
+    "bytes": 1575,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "202.146.222.174",
+  "country": "HK",
+  "city": "Fo Tan",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "HK",
+   "gemini": "Yes",
+   "gemini_region": "HK",
+   "tiktok_region": "未知",
+   "chatgpt": "No(仅App可用)",
+   "claude": "No(地区不可用)",
+   "gemini_diag": {
+    "bytes": 924871,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "202.146.222.29",
+  "country": "HK",
+  "city": "Fo Tan",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "HK",
+   "gemini": "Yes",
+   "gemini_region": "HK",
+   "tiktok_region": "未知",
+   "chatgpt": "No(仅App可用)",
+   "claude": "No(地区不可用)",
+   "gemini_diag": {
+    "bytes": 930415,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "202.146.222.89",
+  "country": "HK",
+  "city": "Fo Tan",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "HK",
+   "gemini": "Yes",
+   "gemini_region": "HK",
+   "tiktok_region": "未知",
+   "chatgpt": "No(仅App可用)",
+   "claude": "No(地区不可用)",
+   "gemini_diag": {
+    "bytes": 924791,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "95.143.196.97",
+  "country": "SE",
+  "city": "Hudiksvall",
+  "category": "原生",
+  "risk": 33,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "RU",
+   "gemini": "Yes",
+   "gemini_region": "SE",
+   "tiktok_region": "SE",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 926529,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "152.32.254.68",
+  "country": "HK",
+  "city": "Hong Kong",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "RU",
+   "gemini": "Yes",
+   "gemini_region": "RU",
+   "tiktok_region": "未知",
+   "chatgpt": "No(仅App可用)",
+   "claude": "No(地区不可用)",
+   "gemini_diag": {
+    "bytes": 937286,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "185.22.153.117",
+  "country": "RU",
+  "city": "Moscow",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "RU",
+   "gemini": "Yes",
+   "gemini_region": "RU",
+   "tiktok_region": "未知",
+   "chatgpt": "失败(网络)",
+   "claude": "No(地区不可用)",
+   "gemini_diag": {
+    "bytes": 931259,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "77.93.89.2",
+  "country": "SG",
+  "city": "Singapore",
+  "category": "原生",
+  "risk": 7,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "SG",
+   "gemini": "Yes",
+   "gemini_region": "SG",
+   "tiktok_region": "未知",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 924858,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "77.93.89.197",
+  "country": "SG",
+  "city": "Singapore",
+  "category": "原生",
+  "risk": 7,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "SG",
+   "gemini": "Yes",
+   "gemini_region": "SG",
+   "tiktok_region": "未知",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 925080,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "2001:1af8:5301:126:1c00:f9ff:fe00:19ef",
+  "country": "NL",
+  "city": "Amsterdam",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "失败(网络)",
+   "youtube_region": "",
+   "gemini": "Yes",
+   "gemini_region": "RU",
+   "tiktok_region": "未知",
+   "chatgpt": "失败(网络)",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 927807,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "173.214.164.110",
+  "country": "US",
+  "city": "Secaucus",
+  "category": "原生",
+  "risk": 28,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "US",
+   "gemini": "Yes",
+   "gemini_region": "US",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 926869,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": 1.11,
+  "up_mbps": 1.39
+ },
+ {
+  "exit_ip": "119.46.51.45",
+  "country": "TH",
+  "city": "Pak Kret",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "TH",
+   "gemini": "Yes",
+   "gemini_region": "TH",
+   "tiktok_region": "TH",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 925162,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "148.135.86.162",
+  "country": "US",
+  "city": "Los Angeles",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "US",
+   "gemini": "Yes",
+   "gemini_region": "US",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 931533,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": 124.43,
+  "up_mbps": 25.29
+ },
+ {
+  "exit_ip": "157.85.111.206",
+  "country": "TH",
+  "city": "Mae Ramat",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "TH",
+   "gemini": "No",
+   "gemini_region": "",
+   "tiktok_region": "TH",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 577927,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "178.172.227.228",
+  "country": "BY",
+  "city": "Bol’shoye Stiklevo",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "未知(页面无标记)",
+   "youtube_region": "RU",
+   "gemini": "No",
+   "gemini_region": "",
+   "tiktok_region": "未知",
+   "chatgpt": "No(仅App可用)",
+   "claude": "No(地区不可用)",
+   "gemini_diag": {
+    "bytes": 438499,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "31.210.52.74",
+  "country": "TR",
+  "city": "Fatih",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "TR",
+   "gemini": "失败(网络)",
+   "gemini_region": "",
+   "tiktok_region": "未知",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 0,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "2a01:4f8:1c1d:9d7::1",
+  "country": "DE",
+  "city": "Nuremberg",
+  "category": "原生",
+  "risk": 6,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "DE",
+   "gemini": "Yes",
+   "gemini_region": "DE",
+   "tiktok_region": "DE",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 926390,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "194.187.166.50",
+  "country": "DE",
+  "city": "Freinsheim",
+  "category": "原生",
+  "risk": 0,
+  "platform": {
+   "youtube": "未知(页面无标记)",
+   "youtube_region": "DE",
+   "gemini": "Yes",
+   "gemini_region": "DE",
+   "tiktok_region": "DE",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 926566,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "93.123.85.230",
+  "country": "DE",
+  "city": "Frankfurt am Main",
+  "category": "原生",
+  "risk": 18,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "DE",
+   "gemini": "Yes",
+   "gemini_region": "DE",
+   "tiktok_region": "未知",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 926240,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
  },
  {
   "exit_ip": "136.148.220.7",
@@ -1705,6 +1667,8 @@
    "gemini": "失败(网络)",
    "gemini_region": "",
    "tiktok_region": "SE",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
     "bytes": 0,
     "has_marker": false,
@@ -1716,118 +1680,32 @@
   "up_mbps": null
  },
  {
-  "exit_ip": "64.186.244.143",
+  "exit_ip": "167.17.69.171",
   "country": "US",
-  "city": "Los Angeles",
-  "category": "原生",
-  "risk": 3,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "US",
-   "gemini": "No",
-   "gemini_region": "",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 493312,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "69.10.52.92",
-  "country": "US",
-  "city": "Secaucus",
-  "category": "原生",
-  "risk": 28,
+  "city": "New York",
+  "category": "普通",
+  "risk": 0,
   "platform": {
    "youtube": "Yes",
    "youtube_region": "US",
    "gemini": "Yes",
    "gemini_region": "US",
    "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 931165,
+    "bytes": 933720,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
    }
   },
-  "down_mbps": 1.21,
-  "up_mbps": null
+  "down_mbps": 59.41,
+  "up_mbps": 37.13
  },
  {
-  "exit_ip": "194.187.166.50",
-  "country": "DE",
-  "city": "Freinsheim",
-  "category": "原生",
-  "risk": 0,
-  "platform": {
-   "youtube": "未知(页面无标记)",
-   "youtube_region": "DE",
-   "gemini": "No",
-   "gemini_region": "",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 332764,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "2a04:bdc7:100:e33b::1",
+  "exit_ip": "45.138.100.248",
   "country": "US",
-  "city": "Los Angeles",
-  "category": "普通",
-  "risk": 32,
-  "platform": {
-   "youtube": "未知(页面无标记)",
-   "youtube_region": "US",
-   "gemini": "No",
-   "gemini_region": "",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 1575,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "23.162.200.198",
-  "country": "CA",
-  "city": "Toronto",
-  "category": "普通",
-  "risk": 26,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "US",
-   "gemini": "失败(网络)",
-   "gemini_region": "",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 0,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "185.95.231.156",
-  "country": "IL",
   "city": "Secaucus",
   "category": "普通",
   "risk": 10,
@@ -1836,7 +1714,9 @@
    "youtube_region": "US",
    "gemini": "No",
    "gemini_region": "",
-   "tiktok_region": "IL",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
     "bytes": 1575,
     "has_marker": false,
@@ -1859,81 +1739,17 @@
    "gemini": "Yes",
    "gemini_region": "US",
    "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 925817,
+    "bytes": 925596,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
    }
   },
-  "down_mbps": 82.35,
-  "up_mbps": 43.31
- },
- {
-  "exit_ip": "45.138.100.248",
-  "country": "US",
-  "city": "Secaucus",
-  "category": "普通",
-  "risk": 10,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "US",
-   "gemini": "No",
-   "gemini_region": "",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 1575,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "156.229.167.109",
-  "country": "US",
-  "city": "Los Angeles",
-  "category": "普通",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "US",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 928057,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 92.3,
-  "up_mbps": 41.31
- },
- {
-  "exit_ip": "167.17.69.171",
-  "country": "US",
-  "city": "New York",
-  "category": "普通",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "US",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 931277,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 66.58,
-  "up_mbps": 5.32
+  "down_mbps": 101.83,
+  "up_mbps": 61.28
  },
  {
   "exit_ip": "45.144.112.55",
@@ -1947,20 +1763,22 @@
    "gemini": "Yes",
    "gemini_region": "US",
    "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 931295,
+    "bytes": 931336,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
    }
   },
-  "down_mbps": 79.64,
-  "up_mbps": 42.96
+  "down_mbps": 118.18,
+  "up_mbps": 54.58
  },
  {
-  "exit_ip": "185.230.230.142",
+  "exit_ip": "162.120.69.88",
   "country": "US",
-  "city": "Washington",
+  "city": "New York",
   "category": "普通",
   "risk": 33,
   "platform": {
@@ -1969,15 +1787,113 @@
    "gemini": "Yes",
    "gemini_region": "US",
    "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 925528,
+    "bytes": 925543,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
    }
   },
-  "down_mbps": 111.05,
-  "up_mbps": 38.27
+  "down_mbps": 129.66,
+  "up_mbps": 32.59
+ },
+ {
+  "exit_ip": "185.95.231.156",
+  "country": "IL",
+  "city": "Secaucus",
+  "category": "普通",
+  "risk": 10,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "US",
+   "gemini": "No",
+   "gemini_region": "",
+   "tiktok_region": "IL",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 1575,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "2a04:bdc7:100:e33b::1",
+  "country": "US",
+  "city": "Los Angeles",
+  "category": "普通",
+  "risk": 32,
+  "platform": {
+   "youtube": "未知(页面无标记)",
+   "youtube_region": "US",
+   "gemini": "No",
+   "gemini_region": "",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 1578,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "146.70.147.90",
+  "country": "US",
+  "city": "Miami",
+  "category": "普通",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "US",
+   "gemini": "Yes",
+   "gemini_region": "US",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 936654,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": 77.54,
+  "up_mbps": 38.59
+ },
+ {
+  "exit_ip": "64.177.90.30",
+  "country": "MX",
+  "city": "Querétaro City",
+  "category": "普通",
+  "risk": 28,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "MX",
+   "gemini": "Yes",
+   "gemini_region": "MX",
+   "tiktok_region": "未知",
+   "chatgpt": "失败(网络)",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 934822,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
  },
  {
   "exit_ip": "149.104.87.125",
@@ -1991,54 +1907,12 @@
    "gemini": "Yes",
    "gemini_region": "MX",
    "tiktok_region": "未知",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 936670,
+    "bytes": 924813,
     "has_marker": false,
     "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "2a02:4780:75:ab4b::1",
-  "country": "US",
-  "city": "Boston",
-  "category": "普通",
-  "risk": 15,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "US",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 925528,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 2.66,
-  "up_mbps": 2.54
- },
- {
-  "exit_ip": "83.147.18.3",
-  "country": "ES",
-  "city": "London",
-  "category": "普通",
-  "risk": 13,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "US",
-   "gemini": "No",
-   "gemini_region": "",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 1575,
-    "has_marker": false,
-    "app_shell": false,
     "blocked_text": false
    }
   },
@@ -2057,8 +1931,10 @@
    "gemini": "Yes",
    "gemini_region": "IN",
    "tiktok_region": "GB",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 925465,
+    "bytes": 925673,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
@@ -2068,283 +1944,69 @@
   "up_mbps": null
  },
  {
-  "exit_ip": "152.70.58.201",
+  "exit_ip": "51.158.206.12",
   "country": "NL",
-  "city": "Amsterdam",
+  "city": "Haarlem",
   "category": "普通",
-  "risk": 1,
+  "risk": 33,
   "platform": {
    "youtube": "Yes",
    "youtube_region": "NL",
    "gemini": "Yes",
    "gemini_region": "NL",
    "tiktok_region": "NL",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 926294,
+    "bytes": 926487,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
    }
   },
-  "down_mbps": 33.26,
-  "up_mbps": 15.36
+  "down_mbps": 42.82,
+  "up_mbps": 18.24
  },
  {
-  "exit_ip": "51.158.206.25",
+  "exit_ip": "51.158.206.103",
   "country": "NL",
   "city": "Haarlem",
   "category": "普通",
-  "risk": 0,
+  "risk": 20,
   "platform": {
    "youtube": "Yes",
    "youtube_region": "NL",
-   "gemini": "失败(网络)",
-   "gemini_region": "",
-   "tiktok_region": "NL",
-   "gemini_diag": {
-    "bytes": 0,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 39.33,
-  "up_mbps": 16.73
- },
- {
-  "exit_ip": "51.158.206.8",
-  "country": "NL",
-  "city": "Haarlem",
-  "category": "普通",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "NL",
-   "gemini": "失败(网络)",
-   "gemini_region": "",
-   "tiktok_region": "NL",
-   "gemini_diag": {
-    "bytes": 0,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 38.6,
-  "up_mbps": 15.86
- },
- {
-  "exit_ip": "51.158.206.20",
-  "country": "NL",
-  "city": "Haarlem",
-  "category": "普通",
-  "risk": 17,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "NL",
-   "gemini": "失败(网络)",
-   "gemini_region": "",
-   "tiktok_region": "NL",
-   "gemini_diag": {
-    "bytes": 0,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 39.16,
-  "up_mbps": 16.19
- },
- {
-  "exit_ip": "51.158.206.34",
-  "country": "NL",
-  "city": "Haarlem",
-  "category": "普通",
-  "risk": 33,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "US",
    "gemini": "Yes",
-   "gemini_region": "IRN",
+   "gemini_region": "NL",
    "tiktok_region": "NL",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 925651,
+    "bytes": 926315,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
    }
   },
-  "down_mbps": 38.24,
-  "up_mbps": 17.1
+  "down_mbps": 41.38,
+  "up_mbps": 17.27
  },
  {
-  "exit_ip": "2a03:6f02::1:68c8",
-  "country": "NL",
-  "city": "Amsterdam",
-  "category": "普通",
-  "risk": 0,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "RU",
-   "gemini": "失败(网络)",
-   "gemini_region": "",
-   "tiktok_region": "NL",
-   "gemini_diag": {
-    "bytes": 0,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 36.97,
-  "up_mbps": 16.1
- },
- {
-  "exit_ip": "87.199.205.28",
-  "country": "NL",
-  "city": "Amsterdam",
-  "category": "普通",
-  "risk": 4,
-  "platform": {
-   "youtube": "No",
-   "youtube_region": "US",
-   "gemini": "失败(网络)",
-   "gemini_region": "",
-   "tiktok_region": "NL",
-   "gemini_diag": {
-    "bytes": 0,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 0.6,
-  "up_mbps": null
- },
- {
-  "exit_ip": "158.101.158.101",
-  "country": "JP",
-  "city": "Tokyo",
-  "category": "普通",
-  "risk": 4,
-  "platform": {
-   "youtube": "失败(网络)",
-   "youtube_region": "",
-   "gemini": "失败(网络)",
-   "gemini_region": "",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 0,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "138.3.208.26",
-  "country": "JP",
-  "city": "Tokyo",
-  "category": "普通",
-  "risk": 1,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "JP",
-   "gemini": "Yes",
-   "gemini_region": "JP",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 938359,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "13.36.234.11",
+  "exit_ip": "138.124.70.41",
   "country": "FR",
   "city": "Paris",
   "category": "普通",
-  "risk": 1,
+  "risk": 10,
   "platform": {
    "youtube": "Yes",
-   "youtube_region": "FR",
+   "youtube_region": "EG",
    "gemini": "Yes",
-   "gemini_region": "FR",
+   "gemini_region": "EGY",
    "tiktok_region": "FR",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 926616,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "163.172.213.174",
-  "country": "NL",
-  "city": "Haarlem",
-  "category": "普通",
-  "risk": 30,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "NL",
-   "gemini": "失败(网络)",
-   "gemini_region": "",
-   "tiktok_region": "NL",
-   "gemini_diag": {
-    "bytes": 0,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 0.77,
-  "up_mbps": null
- },
- {
-  "exit_ip": "168.138.205.100",
-  "country": "JP",
-  "city": "Tokyo",
-  "category": "普通",
-  "risk": 4,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "JP",
-   "gemini": "Yes",
-   "gemini_region": "JP",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 925015,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "8.211.175.236",
-  "country": "JP",
-  "city": "Tokyo",
-  "category": "普通",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "JP",
-   "gemini": "Yes",
-   "gemini_region": "JP",
-   "tiktok_region": "JP",
-   "gemini_diag": {
-    "bytes": 930641,
+    "bytes": 924368,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
@@ -2365,74 +2027,34 @@
    "gemini": "Yes",
    "gemini_region": "NL",
    "tiktok_region": "NL",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 926491,
+    "bytes": 926368,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
    }
   },
-  "down_mbps": 35.63,
-  "up_mbps": 16.09
+  "down_mbps": 46.75,
+  "up_mbps": 19.17
  },
  {
-  "exit_ip": "151.241.19.44",
-  "country": "AE",
-  "city": "Amsterdam",
+  "exit_ip": "163.172.214.188",
+  "country": "NL",
+  "city": "Haarlem",
   "category": "普通",
-  "risk": 0,
+  "risk": 30,
   "platform": {
-   "youtube": "Yes",
-   "youtube_region": "US",
+   "youtube": "失败(网络)",
+   "youtube_region": "",
    "gemini": "Yes",
-   "gemini_region": "US",
-   "tiktok_region": "AE",
-   "gemini_diag": {
-    "bytes": 925750,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "2a12:bec0:164:1007::",
-  "country": "JP",
-  "city": "Tokyo",
-  "category": "普通",
-  "risk": 0,
-  "platform": {
-   "youtube": "未知(页面无标记)",
-   "youtube_region": "JP",
-   "gemini": "No",
-   "gemini_region": "",
+   "gemini_region": "NL",
    "tiktok_region": "未知",
+   "chatgpt": "失败(网络)",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 411378,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "151.241.19.29",
-  "country": "AE",
-  "city": "Amsterdam",
-  "category": "普通",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "US",
-   "tiktok_region": "AE",
-   "gemini_diag": {
-    "bytes": 930953,
+    "bytes": 926411,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
@@ -2442,19 +2064,69 @@
   "up_mbps": null
  },
  {
-  "exit_ip": "43.130.234.128",
-  "country": "JP",
-  "city": "Tokyo",
+  "exit_ip": "23.230.52.119",
+  "country": "US",
+  "city": "Santa Clara",
+  "category": "普通",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "US",
+   "gemini": "Yes",
+   "gemini_region": "US",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 925739,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": 0.75,
+  "up_mbps": 11.61
+ },
+ {
+  "exit_ip": "152.70.58.201",
+  "country": "NL",
+  "city": "Amsterdam",
   "category": "普通",
   "risk": 1,
   "platform": {
+   "youtube": "Yes",
+   "youtube_region": "NL",
+   "gemini": "Yes",
+   "gemini_region": "NL",
+   "tiktok_region": "NL",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 926338,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": 1.53
+ },
+ {
+  "exit_ip": "77.221.132.206",
+  "country": "NL",
+  "city": "Amsterdam",
+  "category": "普通",
+  "risk": 0,
+  "platform": {
    "youtube": "未知(页面无标记)",
-   "youtube_region": "JP",
+   "youtube_region": "US",
    "gemini": "No",
    "gemini_region": "",
-   "tiktok_region": "JP",
+   "tiktok_region": "NL",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 365092,
+    "bytes": 41972,
     "has_marker": false,
     "app_shell": false,
     "blocked_text": false
@@ -2464,19 +2136,69 @@
   "up_mbps": null
  },
  {
-  "exit_ip": "151.241.19.36",
-  "country": "AE",
+  "exit_ip": "20.19.83.143",
+  "country": "FR",
+  "city": "Paris",
+  "category": "普通",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "FR",
+   "gemini": "失败(网络)",
+   "gemini_region": "",
+   "tiktok_region": "FR",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 0,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "86.54.28.75",
+  "country": "NL",
   "city": "Amsterdam",
   "category": "普通",
   "risk": 0,
   "platform": {
    "youtube": "Yes",
-   "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "US",
-   "tiktok_region": "AE",
+   "youtube_region": "NL",
+   "gemini": "No",
+   "gemini_region": "",
+   "tiktok_region": "NL",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 925482,
+    "bytes": 1575,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": 24.0,
+  "up_mbps": 12.43
+ },
+ {
+  "exit_ip": "130.49.161.70",
+  "country": "AE",
+  "city": "Dronten",
+  "category": "普通",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "AE",
+   "gemini": "Yes",
+   "gemini_region": "AE",
+   "tiktok_region": "AE",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 924998,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
@@ -2497,94 +2219,32 @@
    "gemini": "Yes",
    "gemini_region": "IN",
    "tiktok_region": "NL",
+   "chatgpt": "失败(网络)",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 925656,
+    "bytes": 925494,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
    }
   },
-  "down_mbps": 24.42,
-  "up_mbps": 15.48
- },
- {
-  "exit_ip": "51.158.206.103",
-  "country": "NL",
-  "city": "Haarlem",
-  "category": "普通",
-  "risk": 20,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "NL",
-   "gemini": "Yes",
-   "gemini_region": "NL",
-   "tiktok_region": "NL",
-   "gemini_diag": {
-    "bytes": 926398,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 38.77,
-  "up_mbps": 15.48
- },
- {
-  "exit_ip": "163.172.214.188",
-  "country": "NL",
-  "city": "Haarlem",
-  "category": "普通",
-  "risk": 30,
-  "platform": {
-   "youtube": "失败(网络)",
-   "youtube_region": "",
-   "gemini": "Yes",
-   "gemini_region": "NL",
-   "tiktok_region": "NL",
-   "gemini_diag": {
-    "bytes": 926657,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 0.43,
+  "down_mbps": null,
   "up_mbps": null
  },
  {
-  "exit_ip": "72.56.21.252",
+  "exit_ip": "188.116.27.6",
   "country": "NL",
-  "city": "Amsterdam",
+  "city": "Meppel",
   "category": "普通",
-  "risk": 3,
+  "risk": 0,
   "platform": {
-   "youtube": "Yes",
-   "youtube_region": "NL",
-   "gemini": "Yes",
-   "gemini_region": "NL",
-   "tiktok_region": "NL",
-   "gemini_diag": {
-    "bytes": 926486,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 32.77,
-  "up_mbps": 17.15
- },
- {
-  "exit_ip": "34.39.80.57",
-  "country": "GB",
-  "city": "London",
-  "category": "普通",
-  "risk": 2,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "GB",
+   "youtube": "No",
+   "youtube_region": "US",
    "gemini": "失败(网络)",
    "gemini_region": "",
-   "tiktok_region": "GB",
+   "tiktok_region": "NL",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
     "bytes": 0,
     "has_marker": false,
@@ -2596,41 +2256,69 @@
   "up_mbps": null
  },
  {
-  "exit_ip": "51.158.206.96",
+  "exit_ip": "51.158.206.25",
   "country": "NL",
   "city": "Haarlem",
   "category": "普通",
-  "risk": 22,
+  "risk": 0,
   "platform": {
    "youtube": "Yes",
    "youtube_region": "NL",
-   "gemini": "Yes",
-   "gemini_region": "NL",
+   "gemini": "失败(网络)",
+   "gemini_region": "",
    "tiktok_region": "NL",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 926496,
+    "bytes": 0,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": 42.12,
+  "up_mbps": 17.81
+ },
+ {
+  "exit_ip": "151.241.19.29",
+  "country": "AE",
+  "city": "Amsterdam",
+  "category": "普通",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "US",
+   "gemini": "Yes",
+   "gemini_region": "US",
+   "tiktok_region": "AE",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 925536,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
    }
   },
-  "down_mbps": 39.29,
-  "up_mbps": 16.04
+  "down_mbps": null,
+  "up_mbps": null
  },
  {
-  "exit_ip": "2a0f:b240:18:115::1",
-  "country": "NL",
-  "city": "Eygelshoven",
+  "exit_ip": "216.172.144.199",
+  "country": "US",
+  "city": "Amsterdam",
   "category": "普通",
-  "risk": 4,
+  "risk": 0,
   "platform": {
    "youtube": "No",
    "youtube_region": "RU",
    "gemini": "Yes",
    "gemini_region": "RU",
-   "tiktok_region": "DE",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 924851,
+    "bytes": 924752,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
@@ -2640,21 +2328,215 @@
   "up_mbps": null
  },
  {
-  "exit_ip": "168.138.43.75",
-  "country": "JP",
-  "city": "Osaka",
+  "exit_ip": "151.241.19.36",
+  "country": "AE",
+  "city": "Amsterdam",
   "category": "普通",
-  "risk": 4,
+  "risk": 0,
   "platform": {
    "youtube": "Yes",
-   "youtube_region": "JP",
+   "youtube_region": "US",
+   "gemini": "Yes",
+   "gemini_region": "US",
+   "tiktok_region": "AE",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 931226,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "151.241.19.44",
+  "country": "AE",
+  "city": "Amsterdam",
+  "category": "普通",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "US",
+   "gemini": "Yes",
+   "gemini_region": "US",
+   "tiktok_region": "AE",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 925635,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "138.124.125.193",
+  "country": "GB",
+  "city": "Coventry",
+  "category": "普通",
+  "risk": 10,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "RU",
+   "gemini": "Yes",
+   "gemini_region": "RU",
+   "tiktok_region": "GB",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 924583,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "172.213.24.16",
+  "country": "IT",
+  "city": "Milan",
+  "category": "普通",
+  "risk": 0,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "IT",
+   "gemini": "Yes",
+   "gemini_region": "IT",
+   "tiktok_region": "IT",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 926569,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "2a03:6f02::1:68c8",
+  "country": "NL",
+  "city": "Amsterdam",
+  "category": "普通",
+  "risk": 0,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "RU",
    "gemini": "失败(网络)",
    "gemini_region": "",
-   "tiktok_region": "未知",
+   "tiktok_region": "NL",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
     "bytes": 0,
     "has_marker": false,
     "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "51.158.206.34",
+  "country": "NL",
+  "city": "Haarlem",
+  "category": "普通",
+  "risk": 33,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "US",
+   "gemini": "Yes",
+   "gemini_region": "IRN",
+   "tiktok_region": "NL",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 925563,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "2a03:6f02::ea52",
+  "country": "NL",
+  "city": "Amsterdam",
+  "category": "普通",
+  "risk": 0,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "RU",
+   "gemini": "Yes",
+   "gemini_region": "NL",
+   "tiktok_region": "NL",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 928515,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "91.239.157.84",
+  "country": "DE",
+  "city": "Frankfurt am Main",
+  "category": "普通",
+  "risk": 20,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "DE",
+   "gemini": "Yes",
+   "gemini_region": "DE",
+   "tiktok_region": "DE",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 926450,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "94.183.164.176",
+  "country": "NL",
+  "city": "Tehran",
+  "category": "普通",
+  "risk": 0,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "RU",
+   "gemini": "Yes",
+   "gemini_region": "RU",
+   "tiktok_region": "AE",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 938783,
+    "has_marker": false,
+    "app_shell": true,
     "blocked_text": false
    }
   },
@@ -2673,140 +2555,58 @@
    "gemini": "Yes",
    "gemini_region": "NL",
    "tiktok_region": "NL",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 926567,
+    "bytes": 926414,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
    }
   },
-  "down_mbps": 38.32,
-  "up_mbps": 15.95
+  "down_mbps": 43.0,
+  "up_mbps": 17.3
  },
  {
-  "exit_ip": "94.183.164.176",
+  "exit_ip": "87.199.205.28",
   "country": "NL",
-  "city": "Tehran",
+  "city": "Amsterdam",
+  "category": "普通",
+  "risk": 4,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "US",
+   "gemini": "失败(网络)",
+   "gemini_region": "",
+   "tiktok_region": "NL",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 0,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "176.65.136.38",
+  "country": "DE",
+  "city": "Eygelshoven",
   "category": "普通",
   "risk": 0,
   "platform": {
    "youtube": "No",
-   "youtube_region": "RU",
-   "gemini": "Yes",
-   "gemini_region": "RU",
-   "tiktok_region": "AE",
-   "gemini_diag": {
-    "bytes": 924898,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "130.49.161.70",
-  "country": "AE",
-  "city": "Dronten",
-  "category": "普通",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "AE",
-   "gemini": "Yes",
-   "gemini_region": "AE",
-   "tiktok_region": "AE",
-   "gemini_diag": {
-    "bytes": 939775,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "138.124.70.41",
-  "country": "FR",
-  "city": "Paris",
-  "category": "普通",
-  "risk": 10,
-  "platform": {
-   "youtube": "Yes",
-   "youtube_region": "EG",
-   "gemini": "Yes",
-   "gemini_region": "EGY",
-   "tiktok_region": "FR",
-   "gemini_diag": {
-    "bytes": 935890,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "8.209.247.109",
-  "country": "JP",
-  "city": "Tokyo",
-  "category": "普通",
-  "risk": 0,
-  "platform": {
-   "youtube": "未知(页面无标记)",
-   "youtube_region": "",
-   "gemini": "No",
-   "gemini_region": "",
-   "tiktok_region": "未知",
-   "gemini_diag": {
-    "bytes": 10960,
-    "has_marker": false,
-    "app_shell": false,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": null,
-  "up_mbps": null
- },
- {
-  "exit_ip": "23.230.52.119",
-  "country": "US",
-  "city": "Santa Clara",
-  "category": "普通",
-  "risk": 0,
-  "platform": {
-   "youtube": "Yes",
    "youtube_region": "US",
-   "gemini": "Yes",
-   "gemini_region": "US",
-   "tiktok_region": "US",
-   "gemini_diag": {
-    "bytes": 925523,
-    "has_marker": false,
-    "app_shell": true,
-    "blocked_text": false
-   }
-  },
-  "down_mbps": 6.19,
-  "up_mbps": 12.02
- },
- {
-  "exit_ip": "77.221.132.206",
-  "country": "NL",
-  "city": "Amsterdam",
-  "category": "普通",
-  "risk": 0,
-  "platform": {
-   "youtube": "未知(页面无标记)",
-   "youtube_region": "",
    "gemini": "No",
    "gemini_region": "",
-   "tiktok_region": "未知",
+   "tiktok_region": "DE",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 118797,
+    "bytes": 1575,
     "has_marker": false,
     "app_shell": false,
     "blocked_text": false
@@ -2814,6 +2614,54 @@
   },
   "down_mbps": null,
   "up_mbps": null
+ },
+ {
+  "exit_ip": "2a0f:b240:18:115::1",
+  "country": "NL",
+  "city": "Eygelshoven",
+  "category": "普通",
+  "risk": 4,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "RU",
+   "gemini": "失败(网络)",
+   "gemini_region": "",
+   "tiktok_region": "DE",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 0,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "51.158.206.20",
+  "country": "NL",
+  "city": "Haarlem",
+  "category": "普通",
+  "risk": 17,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "NL",
+   "gemini": "失败(网络)",
+   "gemini_region": "",
+   "tiktok_region": "NL",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 0,
+    "has_marker": false,
+    "app_shell": false,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": 42.55,
+  "up_mbps": 17.48
  },
  {
   "exit_ip": "151.243.169.164",
@@ -2827,6 +2675,8 @@
    "gemini": "No",
    "gemini_region": "",
    "tiktok_region": "DE",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
     "bytes": 1575,
     "has_marker": false,
@@ -2838,19 +2688,21 @@
   "up_mbps": null
  },
  {
-  "exit_ip": "151.145.78.30",
-  "country": "JP",
-  "city": "Tokyo",
+  "exit_ip": "31.77.228.53",
+  "country": "US",
+  "city": "Warsaw",
   "category": "普通",
-  "risk": 1,
+  "risk": 0,
   "platform": {
-   "youtube": "Yes",
-   "youtube_region": "JP",
+   "youtube": "No",
+   "youtube_region": "RU",
    "gemini": "Yes",
-   "gemini_region": "JP",
-   "tiktok_region": "JP",
+   "gemini_region": "RU",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 930388,
+    "bytes": 924844,
     "has_marker": false,
     "app_shell": true,
     "blocked_text": false
@@ -2860,25 +2712,171 @@
   "up_mbps": null
  },
  {
-  "exit_ip": "86.54.28.75",
+  "exit_ip": "51.158.206.93",
   "country": "NL",
-  "city": "Amsterdam",
+  "city": "Haarlem",
   "category": "普通",
   "risk": 0,
   "platform": {
    "youtube": "Yes",
    "youtube_region": "NL",
-   "gemini": "No",
-   "gemini_region": "",
+   "gemini": "Yes",
+   "gemini_region": "NL",
    "tiktok_region": "NL",
+   "chatgpt": "Yes",
+   "claude": "Yes",
    "gemini_diag": {
-    "bytes": 1575,
+    "bytes": 926533,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": 38.18,
+  "up_mbps": 8.14
+ },
+ {
+  "exit_ip": "163.123.193.23",
+  "country": "DE",
+  "city": "Frankfurt am Main",
+  "category": "普通",
+  "risk": 0,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "US",
+   "gemini": "失败(网络)",
+   "gemini_region": "",
+   "tiktok_region": "未知",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 0,
     "has_marker": false,
     "app_shell": false,
     "blocked_text": false
    }
   },
-  "down_mbps": 3.91,
-  "up_mbps": 5.7
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "2a0d:d940:b210:1099::1",
+  "country": "DE",
+  "city": "Kostroma",
+  "category": "普通",
+  "risk": 0,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "RU",
+   "gemini": "Yes",
+   "gemini_region": "RU",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 924618,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "147.79.59.19",
+  "country": "JP",
+  "city": "Tokyo",
+  "category": "普通",
+  "risk": 0,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "US",
+   "gemini": "Yes",
+   "gemini_region": "IRN",
+   "tiktok_region": "DE",
+   "chatgpt": "失败(网络)",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 925668,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "201.8.71.59",
+  "country": "DE",
+  "city": "Orem",
+  "category": "普通",
+  "risk": 0,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "RU",
+   "gemini": "Yes",
+   "gemini_region": "RU",
+   "tiktok_region": "US",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 925971,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "144.31.140.125",
+  "country": "DE",
+  "city": "Frankfurt am Main",
+  "category": "普通",
+  "risk": 20,
+  "platform": {
+   "youtube": "Yes",
+   "youtube_region": "DE",
+   "gemini": "Yes",
+   "gemini_region": "DE",
+   "tiktok_region": "DE",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 926547,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
+ },
+ {
+  "exit_ip": "213.182.201.138",
+  "country": "ES",
+  "city": "Estepona",
+  "category": "普通",
+  "risk": 0,
+  "platform": {
+   "youtube": "No",
+   "youtube_region": "RU",
+   "gemini": "Yes",
+   "gemini_region": "RU",
+   "tiktok_region": "ES",
+   "chatgpt": "Yes",
+   "claude": "Yes",
+   "gemini_diag": {
+    "bytes": 924861,
+    "has_marker": false,
+    "app_shell": true,
+    "blocked_text": false
+   }
+  },
+  "down_mbps": null,
+  "up_mbps": null
  }
 ]

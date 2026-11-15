@@ -4,23 +4,25 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇿🇦 南非-约翰内斯堡 01 (原生)
-  type: ss
-  server: 102.37.156.224
-  port: 443
+- name: 🇭🇰 香港 01 (家宽)
+  type: trojan
+  server: 112.49.65.212
+  port: 18000
   udp: true
-  cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
+  password: 3b985d60-e252-4935-8e03-06afeb1144c9
+  sni: www.biliimg.com
+  skip-cert-verify: true
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇿🇦 南非-约翰内斯堡 01 (原生)
+  - 🇭🇰 香港 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇿🇦 南非-约翰内斯堡 01 (原生)
+  - 🇭🇰 香港 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

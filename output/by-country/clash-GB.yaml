@@ -12,37 +12,37 @@ proxies:
   uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
   tls: true
   servername: www.apple.com
-  client-fingerprint: chrome
+  client-fingerprint: random
   reality-opts:
     public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
     short-id: d051f678212f9d54
   network: tcp
-- name: 🇬🇧 英国-伦敦 02
+- name: 🇬🇧 英国-Coventry 02
   type: vless
-  server: 34.39.80.57
-  port: 50818
+  server: 138.124.125.193
+  port: 10444
   udp: true
-  uuid: 408c814e-f70a-4d16-b3b3-8182bb70211d
+  uuid: e57ce64d-5a1a-4a90-96df-9e1bd3ad26e4
+  flow: xtls-rprx-vision
   tls: true
-  servername: yingguo.rymaker.cn
+  servername: ads.x5.ru
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /GunService
-    headers:
-      Host: yingguo.rymaker.cn
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇬🇧 英国-伦敦 01
-  - 🇬🇧 英国-伦敦 02
+  - 🇬🇧 英国-Coventry 02
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇬🇧 英国-伦敦 01
-  - 🇬🇧 英国-伦敦 02
+  - 🇬🇧 英国-Coventry 02
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

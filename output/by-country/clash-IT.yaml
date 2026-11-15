@@ -4,29 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇦 乌克兰-基辅 01 (原生)
+- name: 🇮🇹 意大利-米兰 01
   type: vless
-  server: netx.smrtai.top
-  port: 443
+  server: 172.213.24.16
+  port: 2083
   udp: true
-  uuid: d8b58872-cc25-4bb2-badb-b86399c075fa
+  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
+  flow: xtls-rprx-vision
   tls: true
-  servername: www.cloudflare.com
+  servername: www.apple.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk
-    short-id: d8b58872
+    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
+    short-id: 0123456789abcdef
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇺🇦 乌克兰-基辅 01 (原生)
+  - 🇮🇹 意大利-米兰 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇺🇦 乌克兰-基辅 01 (原生)
+  - 🇮🇹 意大利-米兰 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

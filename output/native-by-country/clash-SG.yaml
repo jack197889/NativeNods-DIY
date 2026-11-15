@@ -7,6 +7,20 @@ proxies:
 - name: 🇸🇬 新加坡 01 (原生)
   type: vless
   server: zfapi.zalolink.com
+  port: 30322
+  udp: true
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  flow: xtls-rprx-vision
+  tls: true
+  servername: psstatic.cdn.bcebos.com
+  client-fingerprint: ios
+  reality-opts:
+    public-key: 5gncThwqPFzLu23WO3mPTEhG7-KgVYlGVvveHjM2SUo
+    short-id: 6a60e7e382d6
+  network: tcp
+- name: 🇸🇬 新加坡 02 (原生)
+  type: vless
+  server: zfapi.zalolink.com
   port: 46957
   udp: true
   uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
@@ -18,21 +32,6 @@ proxies:
     public-key: 1SefqLQXrqkiUdf7cTMF53hrMZyo684_uneRC8-qTxI
     short-id: 8f6683a234d3
   network: tcp
-- name: 🇸🇬 新加坡 02 (原生)
-  type: vmess
-  server: 141.193.213.21
-  port: 8443
-  udp: true
-  uuid: bd67fcd2-ec34-40a6-aac6-67731f2d7011
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: matrix.phonicsindia.mobi
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: matrix.phonicsindia.mobi
 proxy-groups:
 - name: 🚀 节点选择
   type: select

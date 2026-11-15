@@ -6,11 +6,12 @@ log-level: info
 proxies:
 - name: 🇹🇷 土耳其-Fatih 01 (原生)
   type: trojan
-  server: 157.254.38.210
+  server: sclass-b1.catcat321.com
   port: 20027
   udp: true
   password: d7563108-615c-4338-a7bd-77f359869a4a
   sni: hk.catxstar.com
+  skip-cert-verify: true
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
