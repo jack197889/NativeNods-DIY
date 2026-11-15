@@ -13,30 +13,76 @@ proxies:
   password: Y6R9pAtvxxzmGC
 - name: 🇩🇪 德国-纽伦堡 02 (原生)
   type: vless
-  server: 91.107.255.63
+  server: online.shop.ir.eeso.cc
   port: 39653
   udp: true
   uuid: baded307-189c-4ffc-a271-9acdab51a324
   tls: true
   servername: online.shop.ir.eeso.cc
+  skip-cert-verify: true
+  network: tcp
+- name: 🇩🇪 德国-法兰克福 03 (原生)
+  type: vless
+  server: 345739t.de19.h1clayd.click
+  port: 443
+  udp: true
+  uuid: 07df3711-07a1-4649-9a61-3f16cb931d02
+  tls: true
+  servername: 345739t.de19.h1clayd.click
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA
+    short-id: 23732d14a527990d
+  network: tcp
+- name: 🇩🇪 德国-法兰克福 04 (原生)
+  type: vless
+  server: f3b21at.de18.h1clayd.click
+  port: 443
+  udp: true
+  uuid: 4618cebd-e1e9-45c3-be98-d9d6e3ee8bef
+  tls: true
+  servername: f3b21at.de18.h1clayd.click
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: lneTk9CP66okHF_VgXVaSj_QNpRzEmvrAmRxmux5JVU
+    short-id: 08485ad122fafbd5
+  network: tcp
+- name: 🇩🇪 德国-法尔肯施泰因 05 (原生)
+  type: vless
+  server: 167.233.129.126
+  port: 2474
+  udp: true
+  uuid: 287db857-de04-4212-bd69-5d14083e340e
+  network: tcp
+- name: 🇩🇪 德国-法兰克福 06 (原生)
+  type: vless
+  server: 147.45.153.29
+  port: 443
+  udp: true
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  flow: xtls-rprx-vision
+  tls: true
+  servername: patch-46.topp-con.xyz
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
+    short-id: b9120cd53ffd7bba
+  network: tcp
+- name: 🇩🇪 德国-法兰克福 07 (原生)
+  type: vless
+  server: 176.98.176.60
+  port: 443
+  udp: true
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  flow: xtls-rprx-vision
+  tls: true
+  servername: mosaic.topp-con.xyz
   alpn:
   - h2
   - http/1.1
+  client-fingerprint: firefox
   network: tcp
-- name: 🇩🇪 德国-纽伦堡 03 (原生)
-  type: vless
-  server: sino.bestsellers1.site
-  port: 2083
-  udp: true
-  uuid: 0386df1b-7abd-4676-f3c6-d65d691023b9
-  tls: true
-  servername: sino.bestsellers1.site
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sino.bestsellers1.site
-- name: 🇩🇪 德国-法兰克福 04 (原生)
+- name: 🇩🇪 德国-法兰克福 08 (原生)
   type: vless
   server: 185.255.115.118
   port: 443
@@ -50,51 +96,6 @@ proxies:
     public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
     short-id: 6976d670818644cc
   network: tcp
-- name: 🇩🇪 德国-法尔肯施泰因 05 (原生)
-  type: vless
-  server: 167.233.129.126
-  port: 2474
-  udp: true
-  uuid: 287db857-de04-4212-bd69-5d14083e340e
-  network: tcp
-- name: 🇩🇪 德国-纽伦堡 06 (原生)
-  type: vless
-  server: 199.232.78.120
-  port: 443
-  udp: true
-  uuid: 8d2cbffd-43d0-458d-906b-7c54b7b51f38
-  tls: true
-  servername: cdn.akamai.steamstatic.com
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: finalnsdger.global.ssl.fastly.net.
-- name: 🇩🇪 德国-Freinsheim 07 (原生)
-  type: anytls
-  server: forwarded.frnhk.xyz
-  port: 2086
-  udp: true
-  password: 9b24e5d0-62be-41df-b967-9b670cf90ff8
-  sni: de.gosthk.site
-  skip-cert-verify: true
-- name: 🇩🇪 德国-法兰克福 08 (原生)
-  type: vless
-  server: ec7a81g.de15.h1clayd.click
-  port: 443
-  udp: true
-  uuid: 55458d10-24ab-4ea6-a522-13741b546f2a
-  tls: true
-  servername: ec7a81g.de15.h1clayd.click
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: shUbIWcBJdXaDzO80KqTU9exgMarUCOiiZ56Dwl7XVU
-    short-id: 7a8e24da4eb2c1b5
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 43f41cd7fee0
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -102,22 +103,22 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇩🇪 德国-杜塞尔多夫 01 (原生)
   - 🇩🇪 德国-纽伦堡 02 (原生)
-  - 🇩🇪 德国-纽伦堡 03 (原生)
+  - 🇩🇪 德国-法兰克福 03 (原生)
   - 🇩🇪 德国-法兰克福 04 (原生)
   - 🇩🇪 德国-法尔肯施泰因 05 (原生)
-  - 🇩🇪 德国-纽伦堡 06 (原生)
-  - 🇩🇪 德国-Freinsheim 07 (原生)
+  - 🇩🇪 德国-法兰克福 06 (原生)
+  - 🇩🇪 德国-法兰克福 07 (原生)
   - 🇩🇪 德国-法兰克福 08 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇩🇪 德国-杜塞尔多夫 01 (原生)
   - 🇩🇪 德国-纽伦堡 02 (原生)
-  - 🇩🇪 德国-纽伦堡 03 (原生)
+  - 🇩🇪 德国-法兰克福 03 (原生)
   - 🇩🇪 德国-法兰克福 04 (原生)
   - 🇩🇪 德国-法尔肯施泰因 05 (原生)
-  - 🇩🇪 德国-纽伦堡 06 (原生)
-  - 🇩🇪 德国-Freinsheim 07 (原生)
+  - 🇩🇪 德国-法兰克福 06 (原生)
+  - 🇩🇪 德国-法兰克福 07 (原生)
   - 🇩🇪 德国-法兰克福 08 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300

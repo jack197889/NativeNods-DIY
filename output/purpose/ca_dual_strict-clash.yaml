@@ -6,6 +6,20 @@ log-level: info
 proxies:
 - name: 🇨🇦 加拿大-蒙特利尔 01 (原生)
   type: ss
+  server: 51.222.141.125
+  port: 445
+  udp: true
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
+- name: 🇨🇦 加拿大-博阿尔努瓦 02 (原生)
+  type: ss
+  server: 51.222.200.165
+  port: 5000
+  udp: true
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: 🇨🇦 加拿大-蒙特利尔 03 (原生)
+  type: ss
   server: 51.222.136.236
   port: 8882
   udp: true
@@ -17,10 +31,14 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇨🇦 加拿大-蒙特利尔 01 (原生)
+  - 🇨🇦 加拿大-博阿尔努瓦 02 (原生)
+  - 🇨🇦 加拿大-蒙特利尔 03 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇨🇦 加拿大-蒙特利尔 01 (原生)
+  - 🇨🇦 加拿大-博阿尔努瓦 02 (原生)
+  - 🇨🇦 加拿大-蒙特利尔 03 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

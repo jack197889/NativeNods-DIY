@@ -6,18 +6,18 @@ log-level: info
 proxies:
 - name: 🇳🇱 荷兰-阿姆斯特丹 01 (原生)
   type: ss
-  server: 82.38.31.193
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
-  type: ss
   server: 193.29.139.235
   port: 443
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
+  type: ss
+  server: 82.38.31.192
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
 - name: 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
   type: ss
   server: 82.38.31.66
@@ -26,17 +26,39 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
 - name: 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
+  type: ss
+  server: 185.4.115.146
+  port: 8044
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: _c43uV0__ztFhshnuY4RvhVOC2FgxCjA
+- name: 🇳🇱 荷兰-Enschede 05 (原生)
   type: vless
-  server: 213.171.31.83
+  server: 201.51.11.65
   port: 443
   udp: true
-  uuid: 77146066-6f06-0001-bced-d2b73668de07
+  uuid: 1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200
+  flow: xtls-rprx-vision
   tls: true
-  servername: cffhi-ru-46sb.fade.mom
-  alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: qq
+  servername: absolute-disaster.org
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: GiDgVRVYrTkv1mZJeFVWkr736Iey2kqLM6L0eUbffV8
+    short-id: ''
+  network: tcp
+- name: 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
+  type: vless
+  server: 8a2e72t.nl11.h1clayd.click
+  port: 443
+  udp: true
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  flow: xtls-rprx-vision
+  tls: true
+  servername: 8a2e72t.nl11.h1clayd.click
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA
+    short-id: 8d0d0679f42ffd98
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
@@ -47,6 +69,8 @@ proxy-groups:
   - 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
+  - 🇳🇱 荷兰-Enschede 05 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -54,6 +78,8 @@ proxy-groups:
   - 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
+  - 🇳🇱 荷兰-Enschede 05 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 06 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

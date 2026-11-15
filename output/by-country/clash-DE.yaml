@@ -20,58 +20,22 @@ proxies:
   network: tcp
 - name: 🇩🇪 德国-Eygelshoven 02
   type: vless
-  server: 194.60.228.97
+  server: base.hosamobenl.co.uk
   port: 443
   udp: true
   uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
   tls: true
   servername: base.hosamobenl.co.uk
-  client-fingerprint: chrome
+  alpn:
+  - http/1.1
   network: tcp
 - name: 🇩🇪 德国-法兰克福 03
   type: hysteria2
-  server: derfderf.ru
+  server: 151.243.169.164
   port: 12824
   udp: true
   password: d62s7ghfehm742us
   sni: derfderf.ru
-- name: 🇩🇪 德国-法兰克福 04
-  type: ss
-  server: 47.254.175.2
-  port: 443
-  udp: true
-  cipher: 2022-blake3-chacha20-poly1305
-  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
-- name: 🇩🇪 德国-Kostroma 05
-  type: hysteria2
-  server: 201.8.71.59
-  port: 443
-  udp: true
-  password: 23c82941-70f4-4381-90db-bd28e9a902e9
-  sni: steel7.hadsvpn.com
-- name: 🇩🇪 德国-Orem 06
-  type: hysteria2
-  server: steel7.hadsvpn.com
-  port: 443
-  udp: true
-  password: 23c82941-70f4-4381-90db-bd28e9a902e9
-  sni: steel7.hadsvpn.com
-  skip-cert-verify: true
-- name: 🇩🇪 德国-法兰克福 07
-  type: vless
-  server: 144.31.140.125
-  port: 8443
-  udp: true
-  uuid: f5e70ce3-cfb4-4df1-b25c-d19bfae627c0
-  flow: xtls-rprx-vision
-  packet-encoding: xudp
-  tls: true
-  servername: twitch.tv
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: wgyw3OxZw4HEzedNdY_eHdcVkrtT7GEeZSHfzcZ8iDo
-    short-id: 168c15efac9df5fd
-  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -80,20 +44,12 @@ proxy-groups:
   - 🇩🇪 德国-法兰克福 01
   - 🇩🇪 德国-Eygelshoven 02
   - 🇩🇪 德国-法兰克福 03
-  - 🇩🇪 德国-法兰克福 04
-  - 🇩🇪 德国-Kostroma 05
-  - 🇩🇪 德国-Orem 06
-  - 🇩🇪 德国-法兰克福 07
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇩🇪 德国-法兰克福 01
   - 🇩🇪 德国-Eygelshoven 02
   - 🇩🇪 德国-法兰克福 03
-  - 🇩🇪 德国-法兰克福 04
-  - 🇩🇪 德国-Kostroma 05
-  - 🇩🇪 德国-Orem 06
-  - 🇩🇪 德国-法兰克福 07
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

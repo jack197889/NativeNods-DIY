@@ -10,6 +10,7 @@ proxies:
   port: 14430
   udp: true
   uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
+  packet-encoding: xudp
   network: ws
   ws-opts:
     path: /vless
@@ -22,7 +23,6 @@ proxies:
   udp: true
   uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
   flow: xtls-rprx-vision
-  packet-encoding: xudp
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
@@ -30,6 +30,14 @@ proxies:
     public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
     short-id: 0123456789abcdef
   network: tcp
+- name: 🇫🇷 法国-巴黎 03
+  type: hysteria2
+  server: 13.36.234.11
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-fr-001.fastervpn.world
+  skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -37,11 +45,13 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇫🇷 法国-巴黎 01
   - 🇫🇷 法国-巴黎 02
+  - 🇫🇷 法国-巴黎 03
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇫🇷 法国-巴黎 01
   - 🇫🇷 法国-巴黎 02
+  - 🇫🇷 法国-巴黎 03
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

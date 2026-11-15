@@ -4,25 +4,25 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇸 西班牙-Estepona 01
-  type: vless
-  server: 213.182.201.138
-  port: 3090
+- name: 🇸🇬 新加坡 01 (家宽)
+  type: vmess
+  server: 195.133.135.238
+  port: 10086
   udp: true
-  uuid: 303e1419-66cb-4fcf-bde2-88b26c0e9f67
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
+  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
+  alterId: 0
+  cipher: auto
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇪🇸 西班牙-Estepona 01
+  - 🇸🇬 新加坡 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇪🇸 西班牙-Estepona 01
+  - 🇸🇬 新加坡 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

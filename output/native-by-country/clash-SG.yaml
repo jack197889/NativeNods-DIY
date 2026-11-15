@@ -19,18 +19,13 @@ proxies:
     short-id: 6a60e7e382d6
   network: tcp
 - name: 🇸🇬 新加坡 02 (原生)
-  type: vless
-  server: zfapi.zalolink.com
-  port: 46957
+  type: trojan
+  server: matrix.phonicsindia.mobi
+  port: 48994
   udp: true
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  flow: xtls-rprx-vision
-  tls: true
-  servername: psstatic.cdn.bcebos.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1SefqLQXrqkiUdf7cTMF53hrMZyo684_uneRC8-qTxI
-    short-id: 8f6683a234d3
+  password: Z5lvhmLqSc
+  sni: m.microsoft.com
+  skip-cert-verify: true
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择

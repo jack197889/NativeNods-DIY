@@ -4,7 +4,15 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国-达拉斯 01 (原生)
+- name: 🇺🇸 美国-芝加哥 01 (原生)
+  type: trojan
+  server: 216.152.155.50
+  port: 443
+  udp: true
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: cdn.nextjobopportunityandclaimyouridealrole.com
+  network: tcp
+- name: 🇺🇸 美国-达拉斯 02 (原生)
   type: vless
   server: 38.107.232.36
   port: 80
@@ -13,17 +21,22 @@ proxies:
   network: ws
   ws-opts:
     path: /vless/
-- name: 🇺🇸 美国-芝加哥 02 (原生)
-  type: trojan
-  server: 216.152.155.59
-  port: 443
-  udp: true
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: api.nextjobopportunityandclaimyouridealrole.com
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  network: tcp
 - name: 🇺🇸 美国-芝加哥 03 (原生)
+  type: vmess
+  server: cf.0sm.com
+  port: 80
+  udp: true
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: vmess.lbw666.dpdns.org
+    max-early-data: 2048
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国-芝加哥 04 (原生)
   type: vless
   server: 195.211.98.43
   port: 443
@@ -32,75 +45,14 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: www.cloudflare.com
-  client-fingerprint: random
+  client-fingerprint: chrome
   reality-opts:
     public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
     short-id: 9c56fddf237e8eaf
   network: tcp
-- name: 🇺🇸 美国-Secaucus 04 (原生)
-  type: trojan
-  server: 69.164.240.85
-  port: 50875
-  udp: true
-  password: nwilryafgkyvuxauc8pz
-  skip-cert-verify: true
-  network: tcp
-- name: 🇺🇸 美国-Henrico 05 (原生)
-  type: vless
-  server: 47.253.226.114
-  port: 443
-  udp: true
-  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
-    short-id: ''
-  network: tcp
-- name: 🇺🇸 美国-丹佛 06 (原生)
-  type: trojan
-  server: 66.163.114.132
-  port: 443
-  udp: true
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: courses.findconnectwithemployersandbuildprofessionalnetwork.com
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇺🇸 美国-圣何塞 07 (原生)
-  type: vless
-  server: 147.224.54.25
-  port: 2053
-  udp: true
-  uuid: cdb7fa1d-6e7a-467c-da9c-da363c7bf779
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: DEFJSLdILrvauMpwtpvFZddadpt3rNtv03Dui2EkmRk
-    short-id: '68'
-  network: tcp
-- name: 🇺🇸 美国-底特律 08 (原生)
-  type: trojan
-  server: 170.101.101.237
-  port: 443
-  udp: true
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: cdn.explorecreativejobsandenhanceyourcareerportfolio.com
-  skip-cert-verify: true
-  network: tcp
-- name: 🇺🇸 美国-圣何塞 09 (原生)
-  type: hysteria2
-  server: 155.248.209.237
-  port: 33333
-  udp: true
-  password: bce6c821-200d-421f-bf3d-7159e5246ea0
-  sni: hy2.123266.xyz
-  skip-cert-verify: true
-- name: 🇺🇸 美国-芝加哥 10 (原生)
+- name: 🇺🇸 美国-芝加哥 05 (原生)
   type: vmess
-  server: cf.090227.xyz
+  server: 104.17.136.198
   port: 443
   udp: true
   uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
@@ -108,6 +60,7 @@ proxies:
   cipher: auto
   tls: true
   servername: vmess.lbw666.dpdns.org
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /ws
@@ -115,31 +68,139 @@ proxies:
       Host: vmess.lbw666.dpdns.org
     max-early-data: 2048
     early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国-洛杉矶 11 (原生)
+- name: 🇺🇸 美国-达拉斯 06 (原生)
+  type: trojan
+  server: 66.23.203.21
+  port: 59689
+  udp: true
+  password: ae7eb4dwyaz25pxwgq59
+  skip-cert-verify: true
+  network: tcp
+- name: 🇺🇸 美国-Henrico 07 (原生)
+  type: vless
+  server: 47.253.226.114
+  port: 443
+  udp: true
+  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
+  flow: xtls-rprx-vision
+  packet-encoding: xudp
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
+    short-id: ''
+  network: tcp
+- name: 🇺🇸 美国-Secaucus 08 (原生)
+  type: trojan
+  server: 69.164.240.85
+  port: 50875
+  udp: true
+  password: nwilryafgkyvuxauc8pz
+  sni: 69.164.240.85
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  network: tcp
+- name: 🇺🇸 美国-Columbus 09 (原生)
+  type: hysteria2
+  server: 13.184.166.19
+  port: 443
+  udp: true
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-us-001.fastervpn.world
+  skip-cert-verify: true
+- name: 🇺🇸 美国-丹佛 10 (原生)
+  type: trojan
+  server: 66.163.114.166
+  port: 443
+  udp: true
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: blog.findconnectwithemployersandbuildprofessionalnetwork.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  network: tcp
+- name: 🇺🇸 美国-圣何塞 11 (原生)
+  type: vless
+  server: panel.apexkey.store
+  port: 2053
+  udp: true
+  uuid: cdb7fa1d-6e7a-467c-da9c-da363c7bf779
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: DEFJSLdILrvauMpwtpvFZddadpt3rNtv03Dui2EkmRk
+    short-id: '68'
+  network: tcp
+- name: 🇺🇸 美国-圣何塞 12 (原生)
+  type: hysteria2
+  server: 155.248.209.237
+  port: 33333
+  udp: true
+  password: bce6c821-200d-421f-bf3d-7159e5246ea0
+  sni: hy2.123266.xyz
+  skip-cert-verify: true
+- name: 🇺🇸 美国-洛杉矶 13 (原生)
+  type: vless
+  server: 64.186.244.143
+  port: 443
+  udp: true
+  uuid: 8c2d8960-ee85-427d-9653-191d905d21e5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.vanqled.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: r3Y1YAWhGYjD72DevyQuUiJdvaTb7qzxdTNrUWVmOzQ
+    short-id: 0bd6
+  network: tcp
+- name: 🇺🇸 美国-Newark 14 (原生)
+  type: ss
+  server: 193.151.163.18
+  port: 19999
+  udp: true
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸 美国-洛杉矶 15 (原生)
   type: ss
   server: 216.105.168.18
   port: 443
   udp: true
   cipher: chacha20-ietf-poly1305
   password: hCCWOcIsK5wrFz4OX70rWf
-- name: 🇺🇸 美国-芝加哥 12 (原生)
+- name: 🇺🇸 美国-洛杉矶 16 (原生)
   type: trojan
-  server: 216.152.155.54
+  server: 96.44.133.37
+  port: 2087
+  udp: true
+  password: 2e7sEZERnvGOlt35hf6rNg
+  sni: www.bing.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  network: tcp
+- name: 🇺🇸 美国-底特律 17 (原生)
+  type: trojan
+  server: 170.101.101.211
   port: 443
   udp: true
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: 216.152.155.54
-  skip-cert-verify: true
+  sni: api.explorecreativejobsandenhanceyourcareerportfolio.com
   network: tcp
-- name: 🇺🇸 美国-Minkler 13 (原生)
-  type: hysteria2
-  server: 47.89.232.46
-  port: 8443
+- name: 🇺🇸 美国-Minkler 18 (原生)
+  type: vless
+  server: 47.251.108.158
+  port: 443
   udp: true
-  password: 4afd4e1b1b0edd429b10d800a1cf64a7
-  sni: hysteria2.local
-  skip-cert-verify: true
-- name: 🇺🇸 美国-洛杉矶 14 (原生)
+  uuid: 975fc322-6e38-434b-a53c-d39fed49b9a9
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: safari
+  reality-opts:
+    public-key: SmgYcFIvvFXW3xh4gvGhIJuQsaZvWkAylcjB6TEddEs
+    short-id: 896f52ba2cfca903
+  network: tcp
+- name: 🇺🇸 美国-洛杉矶 19 (原生)
   type: vless
   server: 107.174.50.37
   port: 8443
@@ -153,48 +214,7 @@ proxies:
     public-key: gvTO758wlsVaA4ZVZ_A0Ee_5XcnZfbZUJZiqOpXfrEw
     short-id: 6219103f017a0851
   network: tcp
-- name: 🇺🇸 美国-洛杉矶 15 (原生)
-  type: vless
-  server: 143.246.60.254
-  port: 443
-  udp: true
-  uuid: fa895069-bfe5-42c9-9f30-f918e1e442c1
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: ccJ6xUaUhUxN6GEj6a1vqsQDNDTJJX1KYSURY5pJpBE
-    short-id: eb68848e2575a1f4
-  network: tcp
-- name: 🇺🇸 美国-洛杉矶 16 (原生)
-  type: vless
-  server: 195.123.240.65
-  port: 443
-  udp: true
-  uuid: ce18d0eb-5c71-41f9-96e5-1632e22456e4
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: ios
-  reality-opts:
-    public-key: StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE
-    short-id: 19296c9f1bf9c7b1
-  network: tcp
-- name: 🇺🇸 美国-洛杉矶 17 (原生)
-  type: vless
-  server: 143.246.62.191
-  port: 8443
-  udp: true
-  uuid: eb8c97f7-a154-4442-91b0-54c0d055ad0b
-  tls: true
-  servername: github.githubassets.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 4g6gX0ueJap7pY_iTDx23h6bzo3KIOTcFzP1Uacn0QA
-    short-id: 4ad2e4e660550e43
-  network: tcp
-- name: 🇺🇸 美国-洛杉矶 18 (原生)
+- name: 🇺🇸 美国-洛杉矶 20 (原生)
   type: vless
   server: 69.17.3.150
   port: 443
@@ -208,7 +228,81 @@ proxies:
     public-key: zUbdpLqoZN7kSFDrHgGnAcZqJzKilme_rIJwI3FPGCA
     short-id: d898752d58acbfe0
   network: tcp
-- name: 🇺🇸 美国-洛杉矶 19 (原生)
+- name: 🇺🇸 美国-洛杉矶 21 (原生)
+  type: vless
+  server: 195.123.240.65
+  port: 443
+  udp: true
+  uuid: ce18d0eb-5c71-41f9-96e5-1632e22456e4
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: qq
+  reality-opts:
+    public-key: StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE
+    short-id: 19296c9f1bf9c7b1
+  network: tcp
+- name: 🇺🇸 美国-阿什本 22 (原生)
+  type: trojan
+  server: 66.163.122.81
+  port: 443
+  udp: true
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: courses.searchnationwidecareerchangehelperandguidancetoday.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  network: tcp
+- name: 🇺🇸 美国-圣何塞 23 (原生)
+  type: hysteria2
+  server: 107.149.232.92
+  port: 443
+  udp: true
+  password: fanvpn.net
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国-纽约 24 (原生)
+  type: vless
+  server: 198.247.127.131
+  port: 443
+  udp: true
+  uuid: 59548d2d-5d7c-4328-aa81-0d5614da0c1b
+  flow: xtls-rprx-vision
+  tls: true
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: vmHHRwA9ER6c8dfgtL-gh2HBMCvjySy1xLimqYpLiCI
+    short-id: ''
+  network: tcp
+- name: 🇺🇸 美国-洛杉矶 25 (原生)
+  type: vless
+  server: 143.246.60.254
+  port: 443
+  udp: true
+  uuid: fa895069-bfe5-42c9-9f30-f918e1e442c1
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ccJ6xUaUhUxN6GEj6a1vqsQDNDTJJX1KYSURY5pJpBE
+    short-id: eb68848e2575a1f4
+  network: tcp
+- name: 🇺🇸 美国-Reston 26 (原生)
+  type: vless
+  server: 15.204.97.219
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: ''
+  network: tcp
+- name: 🇺🇸 美国-洛杉矶 27 (原生)
   type: vmess
   server: clash.ddm4.cn
   port: 443
@@ -223,97 +317,19 @@ proxies:
     path: /vmess
     headers:
       Host: clash.ddm4.cn
-- name: 🇺🇸 美国-西雅图 20 (原生)
-  type: trojan
-  server: 216.106.186.82
-  port: 443
-  udp: true
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: courses.findlocaljobnetworkandbuildcommunityconnections.com
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇺🇸 美国-洛杉矶 21 (原生)
-  type: vless
-  server: 172.239.67.142
-  port: 443
-  udp: true
-  uuid: b0d814b5-7232-4fe9-9ce9-e552c9abbae8
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: Knpni0SBmL6d1nGWtqmHRDsOQvQxcD2Wd0eOf2KZtgs
-    short-id: ba356a45
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🇺🇸 美国-纽约 22 (原生)
-  type: vless
-  server: 192.177.26.55
-  port: 443
-  udp: true
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  flow: xtls-rprx-vision
-  tls: true
-  servername: repo-16.topp-con.xyz
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: cC6kqzQ1mdCXyPey8xRXS7TQ1S4kF3nJW-h1ItJ4SH8
-    short-id: bdaddda4cbc8c7bf
-  network: tcp
-- name: 🇺🇸 美国-凤凰城 23 (原生)
-  type: vmess
-  server: 129.146.77.248
-  port: 39495
-  udp: true
-  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: 129.146.77.248
-- name: 🇺🇸 美国-Reston 24 (原生)
-  type: vless
-  server: 15.204.97.219
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: ''
-  network: tcp
-- name: 🇺🇸 美国-洛杉矶 25 (原生)
-  type: vless
-  server: 199.7.140.201
-  port: 443
-  udp: true
-  uuid: a52ac672-0f5f-4070-b8fd-6b5685fc8004
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: LRAkgKlj5BPtVAGEIZfO5LvDZ5Eg91X0CBKIYhBC1jE
-    short-id: ''
-  network: tcp
-- name: 🇺🇸 美国-圣何塞 26 (原生)
+- name: 🇺🇸 美国-洛杉矶 28 (原生)
   type: hysteria2
-  server: 107.149.232.92
+  server: 155.117.19.17
   port: 443
   udp: true
-  password: fanvpn.net
+  password: 5fa748137b6d822308eea4611f474ad5
   sni: www.bing.com
   skip-cert-verify: true
-- name: 🇺🇸 美国-洛杉矶 27 (原生)
+  obfs: salamander
+  obfs-password: a39ca173b57ac7021b08bf3e3de9f1f6
+- name: 🇺🇸 美国-洛杉矶 29 (原生)
   type: vmess
-  server: 172.67.190.164
+  server: guanwang.awsno.com
   port: 443
   udp: true
   uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
@@ -326,33 +342,6 @@ proxies:
     path: /hls/cctv5phd.m3u8
     headers:
       Host: guanwang.awsno.com
-- name: 🇺🇸 美国-芝加哥 28 (原生)
-  type: vmess
-  server: 104.21.7.133
-  port: 80
-  udp: true
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: vmess.lbw666.dpdns.org
-- name: 🇺🇸 美国-华盛顿 29 (原生)
-  type: vless
-  server: 48.102.169.194
-  port: 8443
-  udp: true
-  uuid: e07a6d05-f665-4811-91f0-9b3dc1094e4d
-  flow: xtls-rprx-vision
-  tls: true
-  servername: tradingview.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: yr_opKG6DGTppNDXkk-DhGSYJZXbb9o-caexk2FZO38
-    short-id: 8f3c6e2a1b5d4f09
-  network: tcp
 - name: 🇺🇸 美国-纽约 30 (原生)
   type: vless
   server: 162.35.38.156
@@ -367,9 +356,23 @@ proxies:
     public-key: UkUbCx7k5ykWTJTr1jqCOxns6TwvTAbfR0JvJzuALjM
     short-id: a62b22480f962a1d
   network: tcp
-- name: 🇺🇸 美国-Secaucus 31 (原生)
+- name: 🇺🇸 美国-华盛顿 31 (原生)
   type: vless
-  server: 196.245.52.188
+  server: 48.102.169.194
+  port: 8443
+  udp: true
+  uuid: e07a6d05-f665-4811-91f0-9b3dc1094e4d
+  flow: xtls-rprx-vision
+  tls: true
+  servername: tradingview.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: yr_opKG6DGTppNDXkk-DhGSYJZXbb9o-caexk2FZO38
+    short-id: 8f3c6e2a1b5d4f09
+  network: tcp
+- name: 🇺🇸 美国-Secaucus 32 (原生)
+  type: vless
+  server: 13.143.232.227
   port: 443
   udp: true
   uuid: 747db87a-0cf6-4ea7-ae6b-3293afe2cef6
@@ -380,7 +383,7 @@ proxies:
     public-key: UTK3fM9wiII4uIcBYUYJwppN1HezxBPhxPfIxDHZqj4
     short-id: ce43937e79bc30f0
   network: tcp
-- name: 🇺🇸 美国-洛杉矶 32 (原生)
+- name: 🇺🇸 美国-洛杉矶 33 (原生)
   type: vless
   server: 148.135.86.162
   port: 10000
@@ -394,78 +397,95 @@ proxies:
     public-key: DCbnS4mIPc1W2-wI0MGHhykwzf2nVuZvBadErSE6MxU
     short-id: a1b2c3d4
   network: tcp
+- name: 🇺🇸 美国-Secaucus 34 (原生)
+  type: vless
+  server: 196.245.52.187
+  port: 443
+  udp: true
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  tls: true
+  servername: 04535dt.us8.h1clayd.click
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY
+    short-id: ba2a3dce62b99092
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇺🇸 美国-达拉斯 01 (原生)
-  - 🇺🇸 美国-芝加哥 02 (原生)
+  - 🇺🇸 美国-芝加哥 01 (原生)
+  - 🇺🇸 美国-达拉斯 02 (原生)
   - 🇺🇸 美国-芝加哥 03 (原生)
-  - 🇺🇸 美国-Secaucus 04 (原生)
-  - 🇺🇸 美国-Henrico 05 (原生)
-  - 🇺🇸 美国-丹佛 06 (原生)
-  - 🇺🇸 美国-圣何塞 07 (原生)
-  - 🇺🇸 美国-底特律 08 (原生)
-  - 🇺🇸 美国-圣何塞 09 (原生)
-  - 🇺🇸 美国-芝加哥 10 (原生)
-  - 🇺🇸 美国-洛杉矶 11 (原生)
-  - 🇺🇸 美国-芝加哥 12 (原生)
-  - 🇺🇸 美国-Minkler 13 (原生)
-  - 🇺🇸 美国-洛杉矶 14 (原生)
+  - 🇺🇸 美国-芝加哥 04 (原生)
+  - 🇺🇸 美国-芝加哥 05 (原生)
+  - 🇺🇸 美国-达拉斯 06 (原生)
+  - 🇺🇸 美国-Henrico 07 (原生)
+  - 🇺🇸 美国-Secaucus 08 (原生)
+  - 🇺🇸 美国-Columbus 09 (原生)
+  - 🇺🇸 美国-丹佛 10 (原生)
+  - 🇺🇸 美国-圣何塞 11 (原生)
+  - 🇺🇸 美国-圣何塞 12 (原生)
+  - 🇺🇸 美国-洛杉矶 13 (原生)
+  - 🇺🇸 美国-Newark 14 (原生)
   - 🇺🇸 美国-洛杉矶 15 (原生)
   - 🇺🇸 美国-洛杉矶 16 (原生)
-  - 🇺🇸 美国-洛杉矶 17 (原生)
-  - 🇺🇸 美国-洛杉矶 18 (原生)
+  - 🇺🇸 美国-底特律 17 (原生)
+  - 🇺🇸 美国-Minkler 18 (原生)
   - 🇺🇸 美国-洛杉矶 19 (原生)
-  - 🇺🇸 美国-西雅图 20 (原生)
+  - 🇺🇸 美国-洛杉矶 20 (原生)
   - 🇺🇸 美国-洛杉矶 21 (原生)
-  - 🇺🇸 美国-纽约 22 (原生)
-  - 🇺🇸 美国-凤凰城 23 (原生)
-  - 🇺🇸 美国-Reston 24 (原生)
+  - 🇺🇸 美国-阿什本 22 (原生)
+  - 🇺🇸 美国-圣何塞 23 (原生)
+  - 🇺🇸 美国-纽约 24 (原生)
   - 🇺🇸 美国-洛杉矶 25 (原生)
-  - 🇺🇸 美国-圣何塞 26 (原生)
+  - 🇺🇸 美国-Reston 26 (原生)
   - 🇺🇸 美国-洛杉矶 27 (原生)
-  - 🇺🇸 美国-芝加哥 28 (原生)
-  - 🇺🇸 美国-华盛顿 29 (原生)
+  - 🇺🇸 美国-洛杉矶 28 (原生)
+  - 🇺🇸 美国-洛杉矶 29 (原生)
   - 🇺🇸 美国-纽约 30 (原生)
-  - 🇺🇸 美国-Secaucus 31 (原生)
-  - 🇺🇸 美国-洛杉矶 32 (原生)
+  - 🇺🇸 美国-华盛顿 31 (原生)
+  - 🇺🇸 美国-Secaucus 32 (原生)
+  - 🇺🇸 美国-洛杉矶 33 (原生)
+  - 🇺🇸 美国-Secaucus 34 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇺🇸 美国-达拉斯 01 (原生)
-  - 🇺🇸 美国-芝加哥 02 (原生)
+  - 🇺🇸 美国-芝加哥 01 (原生)
+  - 🇺🇸 美国-达拉斯 02 (原生)
   - 🇺🇸 美国-芝加哥 03 (原生)
-  - 🇺🇸 美国-Secaucus 04 (原生)
-  - 🇺🇸 美国-Henrico 05 (原生)
-  - 🇺🇸 美国-丹佛 06 (原生)
-  - 🇺🇸 美国-圣何塞 07 (原生)
-  - 🇺🇸 美国-底特律 08 (原生)
-  - 🇺🇸 美国-圣何塞 09 (原生)
-  - 🇺🇸 美国-芝加哥 10 (原生)
-  - 🇺🇸 美国-洛杉矶 11 (原生)
-  - 🇺🇸 美国-芝加哥 12 (原生)
-  - 🇺🇸 美国-Minkler 13 (原生)
-  - 🇺🇸 美国-洛杉矶 14 (原生)
+  - 🇺🇸 美国-芝加哥 04 (原生)
+  - 🇺🇸 美国-芝加哥 05 (原生)
+  - 🇺🇸 美国-达拉斯 06 (原生)
+  - 🇺🇸 美国-Henrico 07 (原生)
+  - 🇺🇸 美国-Secaucus 08 (原生)
+  - 🇺🇸 美国-Columbus 09 (原生)
+  - 🇺🇸 美国-丹佛 10 (原生)
+  - 🇺🇸 美国-圣何塞 11 (原生)
+  - 🇺🇸 美国-圣何塞 12 (原生)
+  - 🇺🇸 美国-洛杉矶 13 (原生)
+  - 🇺🇸 美国-Newark 14 (原生)
   - 🇺🇸 美国-洛杉矶 15 (原生)
   - 🇺🇸 美国-洛杉矶 16 (原生)
-  - 🇺🇸 美国-洛杉矶 17 (原生)
-  - 🇺🇸 美国-洛杉矶 18 (原生)
+  - 🇺🇸 美国-底特律 17 (原生)
+  - 🇺🇸 美国-Minkler 18 (原生)
   - 🇺🇸 美国-洛杉矶 19 (原生)
-  - 🇺🇸 美国-西雅图 20 (原生)
+  - 🇺🇸 美国-洛杉矶 20 (原生)
   - 🇺🇸 美国-洛杉矶 21 (原生)
-  - 🇺🇸 美国-纽约 22 (原生)
-  - 🇺🇸 美国-凤凰城 23 (原生)
-  - 🇺🇸 美国-Reston 24 (原生)
+  - 🇺🇸 美国-阿什本 22 (原生)
+  - 🇺🇸 美国-圣何塞 23 (原生)
+  - 🇺🇸 美国-纽约 24 (原生)
   - 🇺🇸 美国-洛杉矶 25 (原生)
-  - 🇺🇸 美国-圣何塞 26 (原生)
+  - 🇺🇸 美国-Reston 26 (原生)
   - 🇺🇸 美国-洛杉矶 27 (原生)
-  - 🇺🇸 美国-芝加哥 28 (原生)
-  - 🇺🇸 美国-华盛顿 29 (原生)
+  - 🇺🇸 美国-洛杉矶 28 (原生)
+  - 🇺🇸 美国-洛杉矶 29 (原生)
   - 🇺🇸 美国-纽约 30 (原生)
-  - 🇺🇸 美国-Secaucus 31 (原生)
-  - 🇺🇸 美国-洛杉矶 32 (原生)
+  - 🇺🇸 美国-华盛顿 31 (原生)
+  - 🇺🇸 美国-Secaucus 32 (原生)
+  - 🇺🇸 美国-洛杉矶 33 (原生)
+  - 🇺🇸 美国-Secaucus 34 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

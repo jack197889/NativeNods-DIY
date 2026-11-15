@@ -4,25 +4,24 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇰 香港 01 (家宽)
-  type: trojan
-  server: 112.49.65.212
-  port: 18000
+- name: 🇱🇹 LT-Vilnius 01 (原生)
+  type: hysteria2
+  server: 196.240.181.9
+  port: 25318
   udp: true
-  password: 3b985d60-e252-4935-8e03-06afeb1144c9
-  sni: www.biliimg.com
+  password: b36a14f8-fc3f-4142-968f-48031cf5f330
+  sni: 775c8bt.lt4.h1clayd.click
   skip-cert-verify: true
-  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇭🇰 香港 01 (家宽)
+  - 🇱🇹 LT-Vilnius 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇭🇰 香港 01 (家宽)
+  - 🇱🇹 LT-Vilnius 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

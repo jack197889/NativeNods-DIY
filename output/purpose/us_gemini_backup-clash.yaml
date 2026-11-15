@@ -4,69 +4,62 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国-洛杉矶 01 (原生)
+- name: 🇺🇸 美国-华盛顿 01 (原生)
   type: vless
-  server: 199.7.140.201
-  port: 443
+  server: 48.102.169.194
+  port: 8443
   udp: true
-  uuid: a52ac672-0f5f-4070-b8fd-6b5685fc8004
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: LRAkgKlj5BPtVAGEIZfO5LvDZ5Eg91X0CBKIYhBC1jE
-    short-id: ''
-  network: tcp
-- name: 🇺🇸 美国-纽约 02 (原生)
-  type: vless
-  server: 162.35.38.156
-  port: 443
-  udp: true
-  uuid: a88d4614-2134-404c-9479-6aba1ca9cdfd
+  uuid: e07a6d05-f665-4811-91f0-9b3dc1094e4d
   flow: xtls-rprx-vision
   tls: true
-  servername: 2499dbt.us12.h1clayd.click
-  client-fingerprint: firefox
+  servername: tradingview.com
+  client-fingerprint: chrome
   reality-opts:
-    public-key: UkUbCx7k5ykWTJTr1jqCOxns6TwvTAbfR0JvJzuALjM
-    short-id: a62b22480f962a1d
+    public-key: yr_opKG6DGTppNDXkk-DhGSYJZXbb9o-caexk2FZO38
+    short-id: 8f3c6e2a1b5d4f09
   network: tcp
-- name: 🇺🇸 美国-Secaucus 03 (原生)
+- name: 🇺🇸 美国-Secaucus 02 (原生)
   type: vless
-  server: 196.245.52.188
+  server: 196.245.52.187
   port: 443
   udp: true
-  uuid: 747db87a-0cf6-4ea7-ae6b-3293afe2cef6
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   tls: true
-  servername: 62981et.us11.h1clayd.click
+  servername: 04535dt.us8.h1clayd.click
   client-fingerprint: firefox
   reality-opts:
-    public-key: UTK3fM9wiII4uIcBYUYJwppN1HezxBPhxPfIxDHZqj4
-    short-id: ce43937e79bc30f0
+    public-key: UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY
+    short-id: ba2a3dce62b99092
   network: tcp
-- name: 🇺🇸 美国-圣克拉拉 04
-  type: ss
-  server: news.bushyjenz.cyou
-  port: 42878
+- name: 🇺🇸 美国-洛杉矶 03
+  type: vmess
+  server: 104.19.36.106
+  port: 443
   udp: true
-  cipher: chacha20-ietf-poly1305
-  password: ijoUwfdnkz7mX4pWdkSpmEixTZCt2TRm1JDr4BSaBAWkLxYGoXBHXadFKY5D5ZfoVTwqsx46jCmEUDnQUizJDYrM7B5anhnu
+  uuid: c08d2444-cc3c-43ad-9a41-f5ea60f99293
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: wonbill.1565995.xyz
+  network: ws
+  ws-opts:
+    path: /wonbill
+    headers:
+      Host: wonbill.1565995.xyz
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇺🇸 美国-洛杉矶 01 (原生)
-  - 🇺🇸 美国-纽约 02 (原生)
-  - 🇺🇸 美国-Secaucus 03 (原生)
-  - 🇺🇸 美国-圣克拉拉 04
+  - 🇺🇸 美国-华盛顿 01 (原生)
+  - 🇺🇸 美国-Secaucus 02 (原生)
+  - 🇺🇸 美国-洛杉矶 03
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇺🇸 美国-洛杉矶 01 (原生)
-  - 🇺🇸 美国-纽约 02 (原生)
-  - 🇺🇸 美国-Secaucus 03 (原生)
-  - 🇺🇸 美国-圣克拉拉 04
+  - 🇺🇸 美国-华盛顿 01 (原生)
+  - 🇺🇸 美国-Secaucus 02 (原生)
+  - 🇺🇸 美国-洛杉矶 03
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

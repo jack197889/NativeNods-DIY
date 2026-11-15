@@ -4,30 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇹 意大利-米兰 01
+- name: 🇬🇧 英国-伦敦 01
   type: vless
-  server: 172.213.24.16
-  port: 2083
+  server: 34.39.80.57
+  port: 50818
   udp: true
-  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
-  flow: xtls-rprx-vision
+  uuid: 408c814e-f70a-4d16-b3b3-8182bb70211d
   tls: true
-  servername: www.apple.com
+  servername: yingguo.rymaker.cn
   client-fingerprint: chrome
-  reality-opts:
-    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
-    short-id: 0123456789abcdef
-  network: tcp
+  network: ws
+  ws-opts:
+    path: /GunService
+    headers:
+      Host: yingguo.rymaker.cn
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇮🇹 意大利-米兰 01
+  - 🇬🇧 英国-伦敦 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇮🇹 意大利-米兰 01
+  - 🇬🇧 英国-伦敦 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

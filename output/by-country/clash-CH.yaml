@@ -1,0 +1,40 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇨🇭 瑞士-苏黎世 01
+  type: hysteria2
+  server: 152.67.75.161
+  port: 443
+  udp: true
+  password: 3a702d4d1de4949005d8431220e040fb
+  sni: www.bing.com
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: c13f29db6a638ad2b211b9ce2669ef27
+- name: 🇨🇭 瑞士-苏黎世 02
+  type: hysteria2
+  server: 140.238.213.114
+  port: 50160
+  udp: true
+  password: 84a506ca5aca505696a454d828420b3f
+  skip-cert-verify: true
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇨🇭 瑞士-苏黎世 01
+  - 🇨🇭 瑞士-苏黎世 02
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇨🇭 瑞士-苏黎世 01
+  - 🇨🇭 瑞士-苏黎世 02
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

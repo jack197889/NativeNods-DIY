@@ -10,43 +10,18 @@ proxies:
   port: 60111
   udp: true
   password: github.com/Alvin9999-newpac/fanqiang
-  sni: …
+  sni: www.bing.com
   skip-cert-verify: true
-- name: 🇫🇷 法国-巴黎 02 (原生)
-  type: vless
-  server: 62.210.91.10
-  port: 23576
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  network: tcp
-- name: 🇫🇷 法国-Roubaix 03 (原生)
-  type: ss
-  server: 51.83.61.102
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: 29irqk0paakcx19v
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇫🇷 法国-巴黎 01 (原生)
-  - 🇫🇷 法国-巴黎 02 (原生)
-  - 🇫🇷 法国-Roubaix 03 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇫🇷 法国-巴黎 01 (原生)
-  - 🇫🇷 法国-巴黎 02 (原生)
-  - 🇫🇷 法国-Roubaix 03 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

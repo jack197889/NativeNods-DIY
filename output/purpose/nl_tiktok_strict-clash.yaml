@@ -4,28 +4,27 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇱 荷兰-Haarlem 01
+- name: 🇳🇱 荷兰-阿姆斯特丹 01
   type: vless
-  server: 51.158.206.12
-  port: 23576
+  server: 152.70.58.201
+  port: 443
   udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  uuid: 8892e34a-339b-4526-b88d-cf68c516231c
   flow: xtls-rprx-vision
   tls: true
-  servername: fuck.rkn
+  servername: www.nvidia.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
+    public-key: Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28
+    short-id: 52c723e0fad49689
   network: tcp
 - name: 🇳🇱 荷兰-Haarlem 02
   type: vless
-  server: 51.158.206.103
+  server: 51.158.206.96
   port: 23576
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
-  packet-encoding: xudp
   tls: true
   servername: fuck.rkn
   client-fingerprint: chrome
@@ -47,23 +46,9 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   network: tcp
-- name: 🇳🇱 荷兰-阿姆斯特丹 04
+- name: 🇳🇱 荷兰-Haarlem 04
   type: vless
-  server: free-amsterdam-node-1.cloudwidecdn.com
-  port: 443
-  udp: true
-  uuid: 44ae52b9-76fc-444d-8e43-186b4384b80a
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: random
-  reality-opts:
-    public-key: PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU
-    short-id: 1d86d17709852910
-  network: tcp
-- name: 🇳🇱 荷兰-Haarlem 05
-  type: vless
-  server: 51.158.206.25
+  server: 51.158.206.12
   port: 23576
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
@@ -75,7 +60,7 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   network: tcp
-- name: 🇳🇱 荷兰-Haarlem 06
+- name: 🇳🇱 荷兰-Haarlem 05
   type: vless
   server: 51.158.206.80
   port: 23576
@@ -89,9 +74,9 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   network: tcp
-- name: 🇳🇱 荷兰-Haarlem 07
+- name: 🇳🇱 荷兰-Haarlem 06
   type: vless
-  server: 51.158.206.20
+  server: 51.158.206.103
   port: 23576
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
@@ -103,7 +88,7 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   network: tcp
-- name: 🇳🇱 荷兰-Haarlem 08
+- name: 🇳🇱 荷兰-Haarlem 07
   type: vless
   server: 51.158.206.93
   port: 23576
@@ -117,30 +102,88 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: ''
   network: tcp
+- name: 🇳🇱 荷兰-Haarlem 08
+  type: vless
+  server: 51.158.206.20
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 09
+  type: hysteria2
+  server: 51.15.19.206
+  port: 8443
+  udp: true
+  password: HowdyHysteria2023w0W
+  sni: hysteria.udpgw.co
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: HysteriaHowdy
+- name: 🇳🇱 荷兰-阿姆斯特丹 10
+  type: vless
+  server: 86.54.28.75
+  port: 443
+  udp: true
+  uuid: 44ae52b9-76fc-444d-8e43-186b4384b80a
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU
+    short-id: 1d86d17709852910
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 11
+  type: vless
+  server: 51.158.206.25
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇳🇱 荷兰-Haarlem 01
+  - 🇳🇱 荷兰-阿姆斯特丹 01
   - 🇳🇱 荷兰-Haarlem 02
   - 🇳🇱 荷兰-Haarlem 03
-  - 🇳🇱 荷兰-阿姆斯特丹 04
+  - 🇳🇱 荷兰-Haarlem 04
   - 🇳🇱 荷兰-Haarlem 05
   - 🇳🇱 荷兰-Haarlem 06
   - 🇳🇱 荷兰-Haarlem 07
   - 🇳🇱 荷兰-Haarlem 08
+  - 🇳🇱 荷兰-Haarlem 09
+  - 🇳🇱 荷兰-阿姆斯特丹 10
+  - 🇳🇱 荷兰-Haarlem 11
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇳🇱 荷兰-Haarlem 01
+  - 🇳🇱 荷兰-阿姆斯特丹 01
   - 🇳🇱 荷兰-Haarlem 02
   - 🇳🇱 荷兰-Haarlem 03
-  - 🇳🇱 荷兰-阿姆斯特丹 04
+  - 🇳🇱 荷兰-Haarlem 04
   - 🇳🇱 荷兰-Haarlem 05
   - 🇳🇱 荷兰-Haarlem 06
   - 🇳🇱 荷兰-Haarlem 07
   - 🇳🇱 荷兰-Haarlem 08
+  - 🇳🇱 荷兰-Haarlem 09
+  - 🇳🇱 荷兰-阿姆斯特丹 10
+  - 🇳🇱 荷兰-Haarlem 11
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

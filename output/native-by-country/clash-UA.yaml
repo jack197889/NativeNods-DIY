@@ -4,30 +4,29 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇱 荷兰-阿姆斯特丹 01
+- name: 🇺🇦 乌克兰-基辅 01 (原生)
   type: vless
-  server: 152.70.58.201
+  server: 31.222.235.81
   port: 443
   udp: true
-  uuid: 8892e34a-339b-4526-b88d-cf68c516231c
-  flow: xtls-rprx-vision
+  uuid: d8b58872-cc25-4bb2-badb-b86399c075fa
   tls: true
-  servername: www.nvidia.com
-  client-fingerprint: firefox
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
   reality-opts:
-    public-key: Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28
-    short-id: 52c723e0fad49689
+    public-key: L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk
+    short-id: d8b58872
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇳🇱 荷兰-阿姆斯特丹 01
+  - 🇺🇦 乌克兰-基辅 01 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇳🇱 荷兰-阿姆斯特丹 01
+  - 🇺🇦 乌克兰-基辅 01 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
