@@ -12,6 +12,8 @@ jobs:
     timeout-minutes: 65
     permissions:
       contents: write
+    env:
+      HAS_PRIVATE_PAT: ${{ secrets.PRIVATE_REPO_PAT != '' }}
 
     steps:
       - name: Checkout Code
@@ -45,14 +47,28 @@ jobs:
           retention-days: 7
           if-no-files-found: ignore
 
-      - name: Commit and Push Results
+      # 产出不再提交到公开仓库，改为同步到私库 clean-notes-sub
+      - name: Checkout Private Repo
+        if: env.HAS_PRIVATE_PAT == 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: jack197889/clean-notes-sub
+          token: ${{ secrets.PRIVATE_REPO_PAT }}
+          path: private-repo
+
+      - name: Sync Outputs to Private Repo
+        if: env.HAS_PRIVATE_PAT == 'true'
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A output/ README.md
+          mkdir -p private-repo/outputs
+          rsync -a --delete output/ private-repo/outputs/
+          cp README.md private-repo/outputs/README.md
+          cd private-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A outputs/
           if git diff --staged --quiet; then
-            echo "没有节点变动与内容更新。"
+            echo "私库产出无变动。"
           else
-            git commit -m "Auto Update: $(date -u '+%Y-%m-%d %H:%M:%S') UTC"
+            git commit -m "Sync outputs: $(date -u '+%Y-%m-%d %H:%M:%S') UTC"
             git push
           fi
