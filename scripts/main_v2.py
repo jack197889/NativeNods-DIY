@@ -17,7 +17,7 @@
        - 普通：其余，含「广播 IP」(包括家庭宽带但广播的 IP)
   5. 导出：v2ray(base64) / Clash / sing-box，总表 + 按国家，并更新 README
 
-规则：风控值(Scamalytics) 超过 MAX_RISK_SCORE(默认 45) 的节点一律淘汰；家宽、原生节点全部保留；普通节点保留延迟最低的 MAX_NORMAL(默认 50) 个。
+规则：风控值(Scamalytics) 超过 MAX_RISK_SCORE(默认 35) 的节点一律淘汰；家宽、原生节点全部保留；普通节点保留延迟最低的 MAX_NORMAL(默认 50) 个。
 
 依赖：pip install -r requirements.txt   (requests[socks]  PyYAML  maxminddb)
 
@@ -27,7 +27,10 @@
   MAX_CANDIDATES                  最多测试多少个节点（默认 5000，0=不限）；超出时
                                   PRIORITY_SOURCE_URLS（JP/NL/TW/AU 专属源）的节点优先保留
   MAX_NORMAL / MAX_NATIVE / MAX_RESIDENTIAL   各类保留上限（0=不限）
-  MAX_RISK_SCORE / ENABLE_RISK_FILTER / DROP_RISK_UNKNOWN   风控值过滤(默认 45 / 开 / 查询失败保留)
+  MAX_RISK_SCORE / ENABLE_RISK_FILTER / DROP_RISK_UNKNOWN   风控值过滤(默认 35 / 开 / 查询失败保留)
+  ENABLE_PLATFORM_CHECK=0         关闭平台验证阶段 (YouTube/Gemini/TikTok 地区判定)
+  ENABLE_FINALIST_SPEED=0         关闭入选节点速度门槛 (严选池不再按速度分层)
+  STRICT_MIN_DOWN_MBPS / STRICT_MIN_UP_MBPS   严选池速度下限 (默认 5 / 2 Mbps)
   ENABLE_SPEED_TEST=1             开启限时测速
   ENABLE_RDAP=0                   关闭 RDAP 注册地查询（仅用 GeoLite2）
   DROP_INSECURE=1                 丢弃「跳过证书验证」的节点
@@ -110,7 +113,6 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/hysteria2",
     "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",
     "https://raw.githubusercontent.com/yy1588133/proxy-pool/main/v2ray.txt",
-    "https://sub.445569.xyz/",
     "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
     "https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.txt",
     # 额外高更新频率聚合源（含 JP/NL/TW/AU 等）
@@ -124,17 +126,26 @@ SOURCE_URLS = [
     # ── 2026-10 新增：多源聚合 + 真实测活（日更或更快）──
     "https://raw.githubusercontent.com/Mahdi0024/ProxyCollector/master/sub/proxies.txt",   # sing-box 测活，24h
     "https://raw.githubusercontent.com/ishalumi/proxy-node-collector/main/output/nodes_base64.txt",  # 聚合15个仓库，6h
+    # ── v3 新增 (2026-11-15 实测增量验证)：FastNodes 按国家分仓，与基准池重复率仅约一成 ──
+    "https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/countries/US.txt",
+    "https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/countries/NL.txt",
+    "https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/countries/AU.txt",
+    "https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/countries/JP.txt",
+    "https://radarhub.top/v2ray.txt",   # 节点雷达固定版 (每6小时实测刷新)
+    "https://raw.githubusercontent.com/TelegaVPN/free-vpn-keys/main/sub/base64/all.txt",  # 量小，但节点自带 gemini_ok/tiktok_ok 平台标签，可作交叉参考
 ]
 
 # 目标地区专属源（荷兰/日本/台湾/澳洲）：这些源里的节点在候选过多时优先入选，不参与随机抽样淘汰。
 # 说明：源里的国家标签只是第三方按 IP 归属地打的，是否原生/家宽仍由下方流程自行判定。
 _AU1 = "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-"
 _SOLI = "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/Countries/"
+_FN = "https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/countries/"
 PRIORITY_SOURCE_URLS = {
     _AU1 + "JP.txt", _AU1 + "NL.txt", _AU1 + "TW.txt", _AU1 + "AU.txt",   # 已有，每小时更新并经 sing-box 验证
     # SoliSpirit 分国（Netherlands.txt 404，仅用 The_Netherlands.txt）
     _SOLI + "Japan.txt", _SOLI + "The_Netherlands.txt",
     _SOLI + "Taiwan.txt", _SOLI + "Australia.txt",
+    _FN + "US.txt", _FN + "NL.txt", _FN + "AU.txt", _FN + "JP.txt",   # v3: FastNodes 目标国家分仓
 }
 SOURCE_URLS.extend(sorted(u for u in PRIORITY_SOURCE_URLS if u not in SOURCE_URLS))
 
@@ -146,6 +157,7 @@ OUTPUT_DIR = os.path.join(BASEDIR, "output")
 COUNTRY_DIR = os.path.join(OUTPUT_DIR, "by-country")
 RESIDENTIAL_COUNTRY_DIR = os.path.join(OUTPUT_DIR, "residential-by-country")
 NATIVE_COUNTRY_DIR = os.path.join(OUTPUT_DIR, "native-by-country")
+PURPOSE_DIR = os.path.join(OUTPUT_DIR, "purpose")
 RUNTIME_DIR = os.path.join(BASEDIR, "runtime")
 
 IS_WINDOWS = os.name == "nt"
@@ -187,7 +199,7 @@ SPEED_MIN_BYTES_PER_S = 70_000
 
 # 精选规则
 ENABLE_RISK_FILTER = _env_flag("ENABLE_RISK_FILTER", True)   # 风控值过滤（所有节点，含普通）
-MAX_RISK_SCORE = _env_int("MAX_RISK_SCORE", 45)              # 风控值超过它的节点淘汰
+MAX_RISK_SCORE = _env_int("MAX_RISK_SCORE", 35)              # 风控值超过它的节点淘汰
 DROP_RISK_UNKNOWN = _env_flag("DROP_RISK_UNKNOWN", False)    # 风控值查询失败的节点：默认保留
 RISK_WORKERS = 4
 RISK_BATCH = 60
@@ -195,6 +207,12 @@ NO_EXIT_MAX_RATIO = 0.5         # 取不到出口 IP 的存活节点占比超过
 MAX_NORMAL = _env_int("MAX_NORMAL", 50)
 MAX_NATIVE = _env_int("MAX_NATIVE", 0)
 MAX_RESIDENTIAL = _env_int("MAX_RESIDENTIAL", 0)
+# ── v3 平台验证 / 严选分层 ──
+ENABLE_PLATFORM_CHECK = _env_flag("ENABLE_PLATFORM_CHECK", True)   # YouTube/Gemini/TikTok 地区判定
+PLATFORM_WORKERS = _env_int("PLATFORM_WORKERS", 12)                  # 平台验证并发 (每个 worker 起一个 sing-box)
+ENABLE_FINALIST_SPEED = _env_flag("ENABLE_FINALIST_SPEED", True)     # 用途池入选节点的速度门槛
+STRICT_MIN_DOWN_MBPS = _env_int("STRICT_MIN_DOWN_MBPS", 5)           # 严选池下载下限 (Mbps)
+STRICT_MIN_UP_MBPS = _env_int("STRICT_MIN_UP_MBPS", 2)               # 严选池上传下限 (Mbps, TikTok 上传作品用)
 DEDUP_BY_EXIT_IP = True         # 相同出口 IP 只保留延迟最低的一个
 DROP_INSECURE = _env_flag("DROP_INSECURE", False)
 ALLOW_INSECURE_DEFAULT = False  # 订阅链接没写 insecure 时，是否默认跳过证书验证
@@ -1161,9 +1179,28 @@ def extract_nodes_from_text(text: str) -> set:
 PRIORITY_URIS: set = set()      # 来自 PRIORITY_SOURCE_URLS 的节点链接（候选过多时优先保留）
 
 
+def read_extra_sources() -> list:
+    """v3: 每周轮换源。读仓库根目录 sources_extra.txt（一行一个 URL，# 开头为注释），
+    与内置 SOURCE_URLS 合并。文件不存在或为空时静默跳过，不影响原有流程。"""
+    path = os.path.join(BASEDIR, "sources_extra.txt")
+    extra = []
+    try:
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith("#") and line.startswith("http"):
+                    extra.append(line)
+    except OSError:
+        pass
+    if extra:
+        print(f"[*] 另加载每周轮换源 {len(extra)} 条 (sources_extra.txt)")
+    return extra
+
+
 def fetch_raw_nodes() -> list:
     nodes = set()
-    print(f"[*] 抓取 {len(SOURCE_URLS)} 个订阅源 ...")
+    all_source_urls = list(dict.fromkeys(SOURCE_URLS + read_extra_sources()))
+    print(f"[*] 抓取 {len(all_source_urls)} 个订阅源 ...")
 
     def _fetch(url):
         for _ in range(2):
@@ -1176,7 +1213,7 @@ def fetch_raw_nodes() -> list:
         return url, set()
 
     with ThreadPoolExecutor(MAX_WORKERS_FETCH) as ex:
-        for fut in as_completed([ex.submit(_fetch, u) for u in SOURCE_URLS]):
+        for fut in as_completed([ex.submit(_fetch, u) for u in all_source_urls]):
             url, got = fut.result()
             print(f"    {'+' if got else '-'} {len(got):>5}  {url}")
             nodes.update(got)
@@ -1895,6 +1932,336 @@ def classify_results(results: list):
     return {"residential": residential, "native": native, "normal": selected_normal}
 
 
+
+# ══════════════════════════════════════════════════════════════════
+# v3 平台验证：YouTube / Gemini / TikTok 地区判定（按出口 IP 去重）
+# 判定方法借鉴开源脚本 RegionRestrictionCheck：不打开网页界面，
+# 而是经节点隧道直接请求平台页面并解析其中的地区标记。
+# 平台认哪个地区只取决于出口 IP，与到达路径无关，所以同一出口
+# 只需测一次，结果回填到该出口的全部节点。
+# ══════════════════════════════════════════════════════════════════
+
+_ALPHA3_TO_2 = {
+    "USA": "US", "NLD": "NL", "JPN": "JP", "GBR": "GB", "DEU": "DE", "FRA": "FR",
+    "KOR": "KR", "SGP": "SG", "TWN": "TW", "HKG": "HK", "AUS": "AU", "CAN": "CA",
+    "CHN": "CN", "IND": "IN", "BRA": "BR", "MEX": "MX", "ESP": "ES", "ITA": "IT",
+    "CHE": "CH", "AUT": "AT", "BEL": "BE", "SWE": "SE", "NOR": "NO", "DNK": "DK",
+    "FIN": "FI", "POL": "PL", "TUR": "TR", "RUS": "RU", "UKR": "UA", "THA": "TH",
+    "VNM": "VN", "MYS": "MY", "IDN": "ID", "PHL": "PH", "NZL": "NZ", "ARE": "AE",
+    "ISR": "IL", "ZAF": "ZA", "ARG": "AR", "CHL": "CL", "COL": "CO", "PER": "PE",
+    "IRL": "IE", "PRT": "PT", "GRC": "GR", "CZE": "CZ", "ROU": "RO", "HUN": "HU",
+}
+
+
+def parse_youtube(html: str):
+    """YouTube Premium 页 -> (可用状态, YouTube 认定的地区)。"""
+    if not html:
+        return "失败(网络)", ""
+    if "www.google.cn" in html:
+        return "No", "CN"          # 被送中
+    m = re.search(r'"INNERTUBE_CONTEXT_GL"\s*:\s*"([^"]+)"', html)
+    region = m.group(1).upper() if m else ""
+    if "Premium is not available in your country" in html:
+        return "No", region
+    if "ad-free" in html.lower():
+        return "Yes", region
+    return "未知(页面无标记)", region
+
+
+def parse_gemini(html: str):
+    """Gemini 首页 -> (可用状态, 地区二位码)。标记与地区提取同 RegionRestrictionCheck。"""
+    if not html:
+        return "失败(网络)", ""
+    region = ""
+    m = re.search(r',2,1,200,"([A-Z]{3})"', html)
+    if m:
+        region = _ALPHA3_TO_2.get(m.group(1), m.group(1))
+    if "45631641,null,true" in html:
+        return "Yes", region
+    return "No", region
+
+
+def parse_tiktok(html: str) -> str:
+    """TikTok 首页 -> TikTok 认定的地区二位码，拿不到返回空串。"""
+    if not html:
+        return ""
+    for pat in (r'"region"\s*:\s*"([A-Za-z]{2})"',
+                r'"store-country-code"\s*:\s*"([A-Za-z]{2})"'):
+        m = re.search(pat, html)
+        if m:
+            return m.group(1).upper()
+    return ""
+
+
+def _curl_via(proxy_url: str, url: str, headers=None, max_time: int = 20) -> str:
+    """经节点代理用 curl 取页面文本。平台对浏览器指纹敏感，curl 的成功率
+    明显高于 requests（RegionRestrictionCheck 同样用 curl）。失败返回空串。"""
+    args = ["curl", "-s", "-L", "--max-time", str(max_time), "-A", USER_AGENT]
+    if proxy_url:
+        args += ["-x", proxy_url]
+    for k, v in (headers or {}).items():
+        args += ["-H", f"{k}: {v}"]
+    args.append(url)
+    try:
+        r = subprocess.run(args, capture_output=True, text=True,
+                           timeout=max_time + 10, errors="replace")
+        return r.stdout or ""
+    except Exception:  # noqa: BLE001
+        return ""
+
+
+def _probe_platform(proxy_url: str) -> dict:
+    out = {"youtube": "", "youtube_region": "", "gemini": "",
+           "gemini_region": "", "tiktok_region": ""}
+    html = ""
+    for _ in range(2):                      # 空响应重试一次，抗瞬时抖动
+        html = _curl_via(proxy_url, "https://www.youtube.com/premium",
+                         headers={"accept-language": "en-US,en;q=0.9",
+                                  "cookie": "PREF=f7=4000"})
+        if html:
+            break
+    out["youtube"], out["youtube_region"] = parse_youtube(html)
+    gemini_html = ""
+    for gurl in ("https://gemini.google.com", "https://gemini.google.com/app"):
+        gemini_html = _curl_via(proxy_url, gurl)
+        if gemini_html:
+            break
+    out["gemini"], out["gemini_region"] = parse_gemini(gemini_html)
+    tiktok_html = _curl_via(proxy_url, "https://www.tiktok.com/")
+    out["tiktok_region"] = parse_tiktok(tiktok_html) or "未知"
+    return out
+
+
+_SPEED_DOWN_URLS = [
+    "https://speed.cloudflare.com/__down?bytes=8000000",
+    "https://dl.google.com/dl/android/repository/platform-tools-latest-windows.zip",
+]
+_SPEED_UP_URL = "https://speed.cloudflare.com/__up"
+
+
+def _probe_speed(proxy_url: str):
+    """返回 (下载Mbps, 上传Mbps)，测不到的一项为 None。
+    下载多目标：任一成功即可（单目标曾出现过整类出口不可达）。"""
+    sess = requests.Session()
+    sess.trust_env = False
+    sess.headers.update({"User-Agent": USER_AGENT})
+    proxies = {"http": proxy_url, "https": proxy_url}
+    down = None
+    for url in _SPEED_DOWN_URLS:
+        try:
+            t0, got = time.time(), 0
+            with sess.get(url, proxies=proxies, stream=True, timeout=(8, 8)) as r:
+                if r.status_code != 200:
+                    continue
+                for chunk in r.iter_content(65536):
+                    got += len(chunk)
+                    if time.time() - t0 >= 6 or got >= 8_000_000:
+                        break
+            dt = max(time.time() - t0, 0.001)
+            if got > 200_000:
+                down = round(got * 8 / dt / 1_000_000, 2)
+                break
+        except requests.RequestException:
+            continue
+    up = None
+    try:
+        payload = b"\0" * 2_000_000
+        t0 = time.time()
+        r = sess.post(_SPEED_UP_URL, proxies=proxies, data=payload, timeout=(8, 15))
+        dt = max(time.time() - t0, 0.001)
+        if r.status_code == 200:
+            up = round(len(payload) * 8 / dt / 1_000_000, 2)
+    except requests.RequestException:
+        pass
+    return down, up
+
+
+def _with_node_session(item, fn):
+    """按 test_single_node 同样的方式为 item 起一个 sing-box 会话，
+    在会话里执行 fn(proxy_url)，返回 fn 的结果；启动失败返回 None。"""
+    ob = dict(item["outbound"])
+    ob["server"] = item["ip"]
+    ob["tag"] = "node"
+    exe = _SINGBOX_EXE
+    for attempt in range(2):
+        port = _alloc_socks_port()
+        task = uuid.uuid4().hex[:10]
+        cfg_path = os.path.join(RUNTIME_DIR, f"sbp_{task}.json")
+        proc = None
+        try:
+            config = {
+                "log": {"level": "error"},
+                "inbounds": [{"type": "socks", "tag": "socks-in",
+                              "listen": "127.0.0.1", "listen_port": port}],
+                "outbounds": [ob, {"type": "direct", "tag": "direct"}],
+                "route": {"final": "node"},
+            }
+            with open(cfg_path, "w", encoding="utf-8") as f:
+                json.dump(config, f)
+            proc = subprocess.Popen([exe, "run", "-c", cfg_path],
+                                    stdout=subprocess.DEVNULL,
+                                    stderr=subprocess.DEVNULL, cwd=RUNTIME_DIR)
+            ready = died = False
+            deadline = time.time() + SINGBOX_START_TIMEOUT
+            while time.time() < deadline:
+                if proc.poll() is not None:
+                    died = True
+                    break
+                try:
+                    with socket.create_connection(("127.0.0.1", port), timeout=0.3):
+                        ready = True
+                        break
+                except OSError:
+                    time.sleep(0.1)
+            if not ready:
+                if died and attempt == 0:
+                    continue
+                return None
+            return fn(f"socks5h://127.0.0.1:{port}")
+        except Exception:  # noqa: BLE001
+            return None
+        finally:
+            if proc is not None:
+                if proc.poll() is None:
+                    proc.kill()
+                try:
+                    proc.wait(timeout=3)
+                except Exception:  # noqa: BLE001
+                    pass
+            remove_path(cfg_path)
+            _release_port(port)
+    return None
+
+
+def platform_check_stage(groups: dict):
+    """对精选结果做平台验证：按出口 IP 选延迟最低的节点为代表实测，
+    结果回填同出口全部节点（item["platform"]）。"""
+    items = groups["residential"] + groups["native"] + groups["normal"]
+    reps = {}
+    for it in items:
+        key = it.get("exit_ip")
+        if not key:
+            continue
+        if key not in reps or it["latency_ms"] < reps[key]["latency_ms"]:
+            reps[key] = it
+    print(f"[*] 平台验证: {len(items)} 个节点 / {len(reps)} 个独立出口，并发 {PLATFORM_WORKERS} ...")
+    results = {}
+    with ThreadPoolExecutor(max_workers=PLATFORM_WORKERS) as ex:
+        futs = {ex.submit(_with_node_session, rep, _probe_platform): ip
+                for ip, rep in reps.items()}
+        for fut in as_completed(futs):
+            try:
+                results[futs[fut]] = fut.result()
+            except Exception:  # noqa: BLE001
+                results[futs[fut]] = None
+    for it in items:
+        it["platform"] = results.get(it.get("exit_ip"))
+    ok = sum(1 for v in results.values() if v)
+    us = [i for i in items if i["country"] == "US" and i.get("platform")]
+    nl = [i for i in items if i["country"] == "NL" and i.get("platform")]
+    print(f"    出口实测成功 {ok}/{len(reps)} | 美国节点 Gemini可用 "
+          f"{sum(1 for i in us if i['platform']['gemini'] == 'Yes')}/{len(us)} | "
+          f"荷兰节点 TikTok认NL "
+          f"{sum(1 for i in nl if i['platform']['tiktok_region'] == 'NL')}/{len(nl)}")
+    return results
+
+
+def _speed_pass(item) -> bool:
+    if not ENABLE_FINALIST_SPEED:
+        return True
+    down, up = item.get("down_mbps"), item.get("up_mbps")
+    if down is None:
+        return False
+    if down < STRICT_MIN_DOWN_MBPS:
+        return False
+    if up is not None and up < STRICT_MIN_UP_MBPS:
+        return False
+    return True
+
+
+def build_purpose_pools(groups: dict) -> dict:
+    """按用途出池：美国 Gemini 池 / 荷兰 TikTok 池，各分严选（平台+速度全过）
+    与备选（平台过、速度未达或未测）。同时写 platform_report.json。"""
+    os.makedirs(PURPOSE_DIR, exist_ok=True)
+    items = groups["residential"] + groups["native"] + groups["normal"]
+    us_pass = [i for i in items if i["country"] == "US" and i.get("platform")
+               and i["platform"]["gemini"] == "Yes"
+               and i["platform"]["youtube_region"] == "US"]
+    nl_pass = [i for i in items if i["country"] == "NL" and i.get("platform")
+               and i["platform"]["tiktok_region"] == "NL"]
+
+    finalists = list({id(i): i for i in us_pass + nl_pass}.values())
+    if ENABLE_FINALIST_SPEED and finalists:
+        print(f"[*] 用途池速度门槛: 实测 {len(finalists)} 个平台过关节点的下载/上传 "
+              f"(严选下限 {STRICT_MIN_DOWN_MBPS}/{STRICT_MIN_UP_MBPS} Mbps) ...")
+        with ThreadPoolExecutor(max_workers=PLATFORM_WORKERS) as ex:
+            futs = {ex.submit(_with_node_session, it, _probe_speed): it for it in finalists}
+            for fut in as_completed(futs):
+                it = futs[fut]
+                try:
+                    res = fut.result()
+                except Exception:  # noqa: BLE001
+                    res = None
+                it["down_mbps"], it["up_mbps"] = res if res else (None, None)
+
+    pools = {
+        "us_gemini_strict": [i for i in us_pass if _speed_pass(i)],
+        "us_gemini_backup": [i for i in us_pass if not _speed_pass(i)],
+        "nl_tiktok_strict": [i for i in nl_pass if _speed_pass(i)],
+        "nl_tiktok_backup": [i for i in nl_pass if not _speed_pass(i)],
+    }
+    counts = {}
+    for name, lst in pools.items():
+        counts[name] = export_group(
+            lst, os.path.join(PURPOSE_DIR, f"{name}.txt"),
+            os.path.join(PURPOSE_DIR, f"{name}-clash.yaml"))
+    report = []
+    for i in items:
+        if not i.get("platform"):
+            continue
+        report.append({
+            "exit_ip": i.get("exit_ip"), "country": i["country"],
+            "city": i.get("city") or "", "category": i.get("tag") or "普通",
+            "risk": i.get("risk"), "platform": i["platform"],
+            "down_mbps": i.get("down_mbps"), "up_mbps": i.get("up_mbps"),
+        })
+    write_text(os.path.join(OUTPUT_DIR, "platform_report.json"),
+               json.dumps(report, indent=1, ensure_ascii=False))
+    print(f"[*] 用途池: 美国Gemini 严选 {counts['us_gemini_strict']} / 备选 {counts['us_gemini_backup']}"
+          f" | 荷兰TikTok 严选 {counts['nl_tiktok_strict']} / 备选 {counts['nl_tiktok_backup']}")
+    return counts
+
+
+def append_purpose_readme(counts: dict):
+    """把用途池一节追加到 update_readme 刚生成的 README 末尾（每次运行重新生成，不累积）。"""
+    repo = (os.environ.get("GITHUB_REPOSITORY") or "jack197889/NativeNods-DIY").strip()
+    raw = f"https://raw.githubusercontent.com/{repo}/main/output/purpose"
+    section = f"""
+## 🎯 按用途严选（v3 新增）
+
+> 平台地区只取决于出口 IP：以下节点均经隧道实测平台本身判定，并通过速度门槛分层。
+> **严选** = 平台过关 + 下载 ≥ {STRICT_MIN_DOWN_MBPS} Mbps + 上传 ≥ {STRICT_MIN_UP_MBPS} Mbps；**备选** = 平台过关但速度未达或未测出。
+
+| 用途池 | 判定标准 | 数量 | v2ray | Clash |
+| --- | --- | --- | --- | --- |
+| 美国 Gemini 严选 | Gemini 可用 + YouTube 认 US + 速度达标 | {counts.get('us_gemini_strict', 0)} | `{raw}/us_gemini_strict.txt` | `{raw}/us_gemini_strict-clash.yaml` |
+| 美国 Gemini 备选 | Gemini 可用 + YouTube 认 US | {counts.get('us_gemini_backup', 0)} | `{raw}/us_gemini_backup.txt` | `{raw}/us_gemini_backup-clash.yaml` |
+| 荷兰 TikTok 严选 | TikTok 认 NL + 速度达标 | {counts.get('nl_tiktok_strict', 0)} | `{raw}/nl_tiktok_strict.txt` | `{raw}/nl_tiktok_strict-clash.yaml` |
+| 荷兰 TikTok 备选 | TikTok 认 NL | {counts.get('nl_tiktok_backup', 0)} | `{raw}/nl_tiktok_backup.txt` | `{raw}/nl_tiktok_backup-clash.yaml` |
+
+- 每个出口的 YouTube / Gemini / TikTok 判定明细见 `output/platform_report.json`。
+- TikTok 提示：IP 认 NL 只是网络这一关，作品分发地区还受账号注册区、SIM、设备语言影响。
+"""
+    path = os.path.join(BASEDIR, "README.md")
+    try:
+        with open(path, encoding="utf-8") as f:
+            text = f.read()
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(text.rstrip() + "\n" + section)
+    except OSError:
+        pass
+
+
 # ══════════════════════════════════════════════════════════════════
 # 格式转换：outbound → v2ray 链接 / Clash / sing-box
 # ══════════════════════════════════════════════════════════════════
@@ -2366,8 +2733,13 @@ def main():
         sys.exit(1)
 
     groups = classify_results(results)
+    if ENABLE_PLATFORM_CHECK:
+        platform_check_stage(groups)
     stats = export_all(groups)
     update_readme(stats, groups)
+    if ENABLE_PLATFORM_CHECK:
+        purpose_counts = build_purpose_pools(groups)
+        append_purpose_readme(purpose_counts)
     print(f"===== 运行结束，用时 {int(time.time() - t_start)}s =====")
 
 
