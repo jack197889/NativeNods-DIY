@@ -6,18 +6,20 @@ log-level: info
 proxies:
 - name: 🇭🇺 HU-布达佩斯 01 (原生)
   type: vless
-  server: 172.67.131.125
-  port: 2083
+  server: 212.41.8.76
+  port: 11443
   udp: true
-  uuid: f418674e-f518-4318-8ff9-e10000000046
+  uuid: a628c583-24a8-4ce5-98ad-c6458abf1cc4
+  packet-encoding: xudp
   tls: true
-  servername: smart-edge-424.arti98399-1905.workers.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: smart-edge-424.arti98399-1905.workers.dev
+  servername: s3.storage.selcloud.ru
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: LR_FEXsJiKJUtXcmO1UR4Oi2IMmRcaS04D05oooqn28
+    short-id: 9edc24fc
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cas-hu
 proxy-groups:
 - name: 🚀 节点选择
   type: select

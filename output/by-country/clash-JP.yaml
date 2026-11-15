@@ -6,33 +6,62 @@ log-level: info
 proxies:
 - name: 🇯🇵 日本-东京 01
   type: vless
-  server: 104.16.111.102
+  server: 62.106.70.68
   port: 443
   udp: true
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   tls: true
   servername: jp3.yohototo.top
-  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /tyxyws
     headers:
       Host: jp3.yohototo.top
 - name: 🇯🇵 日本-东京 02
-  type: vless
-  server: zfapi.zalolink.com
-  port: 43149
+  type: hysteria2
+  server: 138.3.208.26
+  port: 50160
   udp: true
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  password: 184cdec28da5a09450803c8debcd2cc9
+  skip-cert-verify: true
+- name: 🇯🇵 日本-东京 03
+  type: ss
+  server: 168.138.205.100
+  port: 53758
+  udp: true
+  cipher: aes-128-gcm
+  password: Bwlqh7GcFB
+- name: 🇯🇵 日本-东京 04
+  type: hysteria2
+  server: 8.211.175.236
+  port: 8443
+  udp: true
+  password: u63SxILNwtrQZ7Y1ZrFaZfsA
+  skip-cert-verify: true
+- name: 🇯🇵 日本-东京 05
+  type: vmess
+  server: 141.11.139.102
+  port: 32515
+  udp: true
+  uuid: 081dbf5a-d8b6-40c8-96f8-3c4ca9f50442
+  alterId: 0
+  cipher: auto
+  network: tcp
+- name: 🇯🇵 日本-东京 06
+  type: vless
+  server: 43.130.234.128
+  port: 443
+  udp: true
+  uuid: a2d4ddd8-4d3f-49f5-b78b-bdb3eebab9a6
   flow: xtls-rprx-vision
   tls: true
-  servername: psstatic.cdn.bcebos.com
+  servername: www.microsoft.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: cvong7paE8XIzzbKWgV5iUruP1pBqI2IhMuBHc8c0UE
-    short-id: 15aa0ad4
+    public-key: DLYP4CSy4Ey15aYSzcYdwfW4XIuiw3_DuKunNLEDgS4
+    short-id: ''
   network: tcp
-- name: 🇯🇵 日本-大阪 03
+- name: 🇯🇵 日本-大阪 07
   type: vmess
   server: 168.138.43.75
   port: 80
@@ -43,41 +72,8 @@ proxies:
   network: ws
   ws-opts:
     path: /cctv13.m3u8
-- name: 🇯🇵 日本-东京 04
-  type: hysteria2
-  server: 138.3.208.26
-  port: 50160
-  udp: true
-  password: 184cdec28da5a09450803c8debcd2cc9
-  skip-cert-verify: true
-- name: 🇯🇵 日本-东京 05
-  type: hysteria2
-  server: 8.211.175.236
-  port: 8443
-  udp: true
-  password: u63SxILNwtrQZ7Y1ZrFaZfsA
-  skip-cert-verify: true
-- name: 🇯🇵 日本-东京 06
-  type: ss
-  server: 168.138.205.100
-  port: 53758
-  udp: true
-  cipher: aes-128-gcm
-  password: Bwlqh7GcFB
-- name: 🇯🇵 日本-东京 07
-  type: vless
-  server: 43.130.234.128
-  port: 443
-  udp: true
-  uuid: a2d4ddd8-4d3f-49f5-b78b-bdb3eebab9a6
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.microsoft.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: DLYP4CSy4Ey15aYSzcYdwfW4XIuiw3_DuKunNLEDgS4
-    short-id: ''
-  network: tcp
+    headers:
+      Host: 168.138.43.75
 - name: 🇯🇵 日本-东京 08
   type: hysteria2
   server: 8.209.247.109
@@ -86,19 +82,20 @@ proxies:
   password: usqmqUKJFIlCmvkCNSY64L3k
   sni: bing.com
   skip-cert-verify: true
-- name: 🇯🇵 日本-南品川 09
+- name: 🇯🇵 日本-东京 09
   type: vless
-  server: 38.47.96.220
-  port: 11424
+  server: 203.137.165.164
+  port: 57554
   udp: true
-  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  uuid: 12d65cdc-3391-4227-a2d5-52deb9948ae5
   tls: true
-  servername: notls.lukongtou.eu.org
+  servername: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: Telegram-WangCai2🇨🇳
+    path: /@Marisa_kristi
     headers:
-      Host: notls.lukongtou.eu.org
+      Host: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -106,25 +103,25 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇯🇵 日本-东京 01
   - 🇯🇵 日本-东京 02
-  - 🇯🇵 日本-大阪 03
+  - 🇯🇵 日本-东京 03
   - 🇯🇵 日本-东京 04
   - 🇯🇵 日本-东京 05
   - 🇯🇵 日本-东京 06
-  - 🇯🇵 日本-东京 07
+  - 🇯🇵 日本-大阪 07
   - 🇯🇵 日本-东京 08
-  - 🇯🇵 日本-南品川 09
+  - 🇯🇵 日本-东京 09
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇯🇵 日本-东京 01
   - 🇯🇵 日本-东京 02
-  - 🇯🇵 日本-大阪 03
+  - 🇯🇵 日本-东京 03
   - 🇯🇵 日本-东京 04
   - 🇯🇵 日本-东京 05
   - 🇯🇵 日本-东京 06
-  - 🇯🇵 日本-东京 07
+  - 🇯🇵 日本-大阪 07
   - 🇯🇵 日本-东京 08
-  - 🇯🇵 日本-南品川 09
+  - 🇯🇵 日本-东京 09
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

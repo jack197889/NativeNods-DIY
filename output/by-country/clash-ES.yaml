@@ -4,30 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇰 香港 01
+- name: 🇪🇸 西班牙-伦敦 01
   type: vless
-  server: 45.192.193.54
-  port: 35600
+  server: 83.147.18.3
+  port: 443
   udp: true
-  uuid: 8614bde7-34cf-4413-8360-e96f1b960528
+  uuid: 9f61cdf4-810d-4052-bbc7-2da0c8e20104
   flow: xtls-rprx-vision
   tls: true
-  servername: www.iij.ad.jp
+  servername: www.cloudflare.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: fJwbUNPAxu-CcoWnzWrvtDkX7QMDvJwFGWzJ3lDcFC4
-    short-id: ''
+    public-key: 3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA
+    short-id: fd8cf7e1173f0edb
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇭🇰 香港 01
+  - 🇪🇸 西班牙-伦敦 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇭🇰 香港 01
+  - 🇪🇸 西班牙-伦敦 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

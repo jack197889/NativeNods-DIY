@@ -11,7 +11,6 @@ proxies:
   udp: true
   uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
   flow: xtls-rprx-vision
-  packet-encoding: xudp
   tls: true
   servername: psstatic.cdn.bcebos.com
   client-fingerprint: chrome
@@ -21,7 +20,7 @@ proxies:
   network: tcp
 - name: 🇸🇬 新加坡 02 (原生)
   type: vmess
-  server: news.zoom.us
+  server: 141.193.213.21
   port: 8443
   udp: true
   uuid: bd67fcd2-ec34-40a6-aac6-67731f2d7011

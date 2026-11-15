@@ -4,6 +4,15 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
+- name: 🇲🇾 马来西亚-吉隆坡 01 (家宽)
+  type: vmess
+  server: 192.228.145.118
+  port: 10086
+  udp: true
+  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
+  alterId: 0
+  cipher: auto
+  network: tcp
 - name: 🇹🇼 台湾-台中 01 (家宽)
   type: vless
   server: 60.248.219.78
@@ -23,10 +32,12 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
+  - 🇲🇾 马来西亚-吉隆坡 01 (家宽)
   - 🇹🇼 台湾-台中 01 (家宽)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
+  - 🇲🇾 马来西亚-吉隆坡 01 (家宽)
   - 🇹🇼 台湾-台中 01 (家宽)
   url: https://www.gstatic.com/generate_204
   interval: 300

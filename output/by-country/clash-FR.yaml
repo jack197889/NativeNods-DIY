@@ -10,17 +10,31 @@ proxies:
   port: 443
   udp: true
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 13.36.234.11
   skip-cert-verify: true
+- name: 🇫🇷 法国-巴黎 02
+  type: vless
+  server: 138.124.70.41
+  port: 14430
+  udp: true
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 138.124.70.41
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇫🇷 法国-巴黎 01
+  - 🇫🇷 法国-巴黎 02
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇫🇷 法国-巴黎 01
+  - 🇫🇷 法国-巴黎 02
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

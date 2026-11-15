@@ -6,137 +6,19 @@ log-level: info
 proxies:
 - name: 🇩🇪 德国-法兰克福 01 (原生)
   type: vless
-  server: 188.114.96.9
-  port: 443
-  udp: true
-  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
-  tls: true
-  servername: IdB8ONMVbntuYT5t7t6cEJfw8vLrb.paGEs.DeV
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrj
-    headers:
-      Host: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
-- name: 🇩🇪 德国-柏林 02 (原生)
-  type: vless
-  server: 5.175.171.30
-  port: 8444
-  udp: true
-  uuid: 555b35c4-30f9-40c6-a61a-7f53ab1bea45
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.volkswagen.de
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
-    short-id: 1a2b3c4d
-  network: tcp
-- name: 🇩🇪 德国-柏林 03 (原生)
-  type: vless
-  server: 5.231.45.196
-  port: 443
-  udp: true
-  uuid: 555b35c4-30f9-40c6-a61a-7f53ab1bea45
-  flow: xtls-rprx-vision
-  tls: true
-  servername: images.porsche.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
-    short-id: 1a2b3c4d
-  network: tcp
-- name: 🇩🇪 德国-法兰克福 04 (原生)
-  type: vless
-  server: 179.254.115.127
-  port: 443
-  udp: true
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  flow: xtls-rprx-vision
-  tls: true
-  servername: 4935e4t.de25.h1clayd.click
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
-    short-id: 6976d670818644cc
-  network: tcp
-- name: 🇩🇪 德国-Bad Soden am Taunus 05 (原生)
-  type: vless
-  server: 5.231.28.177
-  port: 443
-  udp: true
-  uuid: 555b35c4-30f9-40c6-a61a-7f53ab1bea45
-  flow: xtls-rprx-vision
-  tls: true
-  servername: images.porsche.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
-    short-id: 1a2b3c4d
-  network: tcp
-- name: 🇩🇪 德国-法尔肯施泰因 06 (原生)
-  type: vless
-  server: 167.233.129.126
-  port: 2474
-  udp: true
-  uuid: 287db857-de04-4212-bd69-5d14083e340e
-  network: tcp
-- name: 🇩🇪 德国-杜塞尔多夫 07 (原生)
-  type: vless
-  server: 45.129.242.56
-  port: 443
-  udp: true
-  uuid: ebdfaf99-41d8-4e48-8196-d54510ffb556
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: YURKlEQ3rap4KOXXGsVFZyYev2oDU2gCEbNTXPdKWRY
-    short-id: abcdef
-  network: tcp
-- name: 🇩🇪 德国-纽伦堡 08 (原生)
-  type: vless
-  server: online.shop.ir.eeso.cc
-  port: 39653
-  udp: true
-  uuid: baded307-189c-4ffc-a271-9acdab51a324
-  tls: true
-  servername: online.shop.ir.eeso.cc
-  network: tcp
-- name: 🇩🇪 德国-Kirchberg 09 (原生)
-  type: vless
-  server: 178.18.158.12
-  port: 43000
-  udp: true
-  uuid: a741d82e-6087-466d-b590-f24e2245d12c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: 178.18.158.12
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: KeFxVlEEuDN8alZBsrXiX9yrcY2-H7lcdzXWjtrIWy0
-    short-id: a9c3bda4
-  network: tcp
-- name: 🇩🇪 德国-法兰克福 10 (原生)
-  type: vless
-  server: ec7a81g.de15.h1clayd.click
+  server: 195.206.235.190
   port: 443
   udp: true
   uuid: 55458d10-24ab-4ea6-a522-13741b546f2a
   packet-encoding: xudp
   tls: true
-  servername: ec7a81g.de15.h1clayd.click
-  client-fingerprint: chrome
+  servername: 345739t.de15.h1clayd.click
+  client-fingerprint: firefox
   reality-opts:
-    public-key: shUbIWcBJdXaDzO80KqTU9exgMarUCOiiZ56Dwl7XVU
-    short-id: 7a8e24da4eb2c1b5
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 43f41cd7fee0
-- name: 🇩🇪 德国-法尔肯施泰因 11 (原生)
+    public-key: hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA
+    short-id: 23732d14a527990d
+  network: tcp
+- name: 🇩🇪 德国-法尔肯施泰因 02 (原生)
   type: vless
   server: 91.107.188.129
   port: 2083
@@ -150,7 +32,22 @@ proxies:
     path: /
     headers:
       Host: site.check-looks.space
-- name: 🇩🇪 德国-法兰克福 12 (原生)
+- name: 🇩🇪 德国-法兰克福 03 (原生)
+  type: vless
+  server: 195.206.235.7
+  port: 443
+  udp: true
+  uuid: 95c2ba1e-a330-4e6b-bd81-bf9c0f647b2f
+  tls: true
+  servername: a566d1g.de7.h1clayd.click
+  client-fingerprint: edge
+  reality-opts:
+    public-key: C_DlyXDDS4fWcAlxb-6O7LBKtq28fg2slCrH5tPaTQ4
+    short-id: 16cea10606a4e401
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 98b9c56e8ebb
+- name: 🇩🇪 德国-法兰克福 04 (原生)
   type: vless
   server: 147.45.153.29
   port: 443
@@ -164,7 +61,28 @@ proxies:
     public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
     short-id: b9120cd53ffd7bba
   network: tcp
-- name: 🇩🇪 德国-Freinsheim 13 (原生)
+- name: 🇩🇪 德国-法兰克福 05 (原生)
+  type: vless
+  server: 176.98.176.60
+  port: 443
+  udp: true
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  flow: xtls-rprx-vision
+  tls: true
+  servername: mosaic.topp-con.xyz
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  network: tcp
+- name: 🇩🇪 德国-杜塞尔多夫 06 (原生)
+  type: ss
+  server: 213.202.208.199
+  port: 7001
+  udp: true
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+- name: 🇩🇪 德国-Freinsheim 07 (原生)
   type: anytls
   server: forwarded.frnhk.xyz
   port: 2086
@@ -178,34 +96,22 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - 🇩🇪 德国-法兰克福 01 (原生)
-  - 🇩🇪 德国-柏林 02 (原生)
-  - 🇩🇪 德国-柏林 03 (原生)
+  - 🇩🇪 德国-法尔肯施泰因 02 (原生)
+  - 🇩🇪 德国-法兰克福 03 (原生)
   - 🇩🇪 德国-法兰克福 04 (原生)
-  - 🇩🇪 德国-Bad Soden am Taunus 05 (原生)
-  - 🇩🇪 德国-法尔肯施泰因 06 (原生)
-  - 🇩🇪 德国-杜塞尔多夫 07 (原生)
-  - 🇩🇪 德国-纽伦堡 08 (原生)
-  - 🇩🇪 德国-Kirchberg 09 (原生)
-  - 🇩🇪 德国-法兰克福 10 (原生)
-  - 🇩🇪 德国-法尔肯施泰因 11 (原生)
-  - 🇩🇪 德国-法兰克福 12 (原生)
-  - 🇩🇪 德国-Freinsheim 13 (原生)
+  - 🇩🇪 德国-法兰克福 05 (原生)
+  - 🇩🇪 德国-杜塞尔多夫 06 (原生)
+  - 🇩🇪 德国-Freinsheim 07 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇩🇪 德国-法兰克福 01 (原生)
-  - 🇩🇪 德国-柏林 02 (原生)
-  - 🇩🇪 德国-柏林 03 (原生)
+  - 🇩🇪 德国-法尔肯施泰因 02 (原生)
+  - 🇩🇪 德国-法兰克福 03 (原生)
   - 🇩🇪 德国-法兰克福 04 (原生)
-  - 🇩🇪 德国-Bad Soden am Taunus 05 (原生)
-  - 🇩🇪 德国-法尔肯施泰因 06 (原生)
-  - 🇩🇪 德国-杜塞尔多夫 07 (原生)
-  - 🇩🇪 德国-纽伦堡 08 (原生)
-  - 🇩🇪 德国-Kirchberg 09 (原生)
-  - 🇩🇪 德国-法兰克福 10 (原生)
-  - 🇩🇪 德国-法尔肯施泰因 11 (原生)
-  - 🇩🇪 德国-法兰克福 12 (原生)
-  - 🇩🇪 德国-Freinsheim 13 (原生)
+  - 🇩🇪 德国-法兰克福 05 (原生)
+  - 🇩🇪 德国-杜塞尔多夫 06 (原生)
+  - 🇩🇪 德国-Freinsheim 07 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
