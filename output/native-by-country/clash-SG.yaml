@@ -11,6 +11,7 @@ proxies:
   udp: true
   uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
   flow: xtls-rprx-vision
+  packet-encoding: xudp
   tls: true
   servername: psstatic.cdn.bcebos.com
   client-fingerprint: chrome
@@ -19,42 +20,20 @@ proxies:
     short-id: 8f6683a234d3
   network: tcp
 - name: 🇸🇬 新加坡 02 (原生)
-  type: vless
-  server: zfapi.zalolink.com
-  port: 30322
+  type: vmess
+  server: news.zoom.us
+  port: 8443
   udp: true
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  flow: xtls-rprx-vision
+  uuid: bd67fcd2-ec34-40a6-aac6-67731f2d7011
+  alterId: 0
+  cipher: auto
   tls: true
-  servername: psstatic.cdn.bcebos.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 5gncThwqPFzLu23WO3mPTEhG7-KgVYlGVvveHjM2SUo
-    short-id: 6a60e7e382d6
-  network: tcp
-- name: 🇸🇬 新加坡 03 (原生)
-  type: vless
-  server: 147.93.173.45
-  port: 10444
-  udp: true
-  uuid: 75c5f51b-d548-4eab-a26e-aa10fc3dbc7b
-  flow: xtls-rprx-vision
-  tls: true
-  servername: video.yandex.ru
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  network: tcp
-- name: 🇸🇬 新加坡 04 (原生)
-  type: trojan
-  server: matrix.phonicsindia.mobi
-  port: 48994
-  udp: true
-  password: Z5lvhmLqSc
-  sni: m.microsoft.com
-  skip-cert-verify: true
-  network: tcp
+  servername: matrix.phonicsindia.mobi
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: matrix.phonicsindia.mobi
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -62,15 +41,11 @@ proxy-groups:
   - ♻️ 自动选择
   - 🇸🇬 新加坡 01 (原生)
   - 🇸🇬 新加坡 02 (原生)
-  - 🇸🇬 新加坡 03 (原生)
-  - 🇸🇬 新加坡 04 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇸🇬 新加坡 01 (原生)
   - 🇸🇬 新加坡 02 (原生)
-  - 🇸🇬 新加坡 03 (原生)
-  - 🇸🇬 新加坡 04 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

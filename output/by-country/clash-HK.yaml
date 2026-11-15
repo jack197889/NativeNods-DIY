@@ -4,25 +4,30 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇬 新加坡 01 (家宽)
-  type: vmess
-  server: 195.133.135.238
-  port: 10086
+- name: 🇭🇰 香港 01
+  type: vless
+  server: 45.192.193.54
+  port: 35600
   udp: true
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
-  alterId: 0
-  cipher: auto
+  uuid: 8614bde7-34cf-4413-8360-e96f1b960528
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.iij.ad.jp
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: fJwbUNPAxu-CcoWnzWrvtDkX7QMDvJwFGWzJ3lDcFC4
+    short-id: ''
   network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇸🇬 新加坡 01 (家宽)
+  - 🇭🇰 香港 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇸🇬 新加坡 01 (家宽)
+  - 🇭🇰 香港 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -1,0 +1,264 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇳🇱 荷兰-阿姆斯特丹 01 (原生)
+  type: ss
+  server: 193.29.139.235
+  port: 443
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
+  type: ss
+  server: 193.29.139.198
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
+  type: ss
+  server: 185.4.115.146
+  port: 8044
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: _c43uV0__ztFhshnuY4RvhVOC2FgxCjA
+- name: 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
+  type: ss
+  server: 82.38.31.66
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰-Enschede 05 (原生)
+  type: vless
+  server: 201.51.11.65
+  port: 443
+  udp: true
+  uuid: 1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200
+  flow: xtls-rprx-vision
+  tls: true
+  servername: absolute-disaster.org
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: GiDgVRVYrTkv1mZJeFVWkr736Iey2kqLM6L0eUbffV8
+    short-id: ''
+  network: tcp
+- name: 🇳🇱 荷兰-阿姆斯特丹 06
+  type: vless
+  server: ams2.shtil.io
+  port: 444
+  udp: true
+  uuid: 254f28cb-d0c1-41e9-a06b-f2155213ff04
+  flow: xtls-rprx-vision
+  tls: true
+  servername: ams2.shtil.io
+  client-fingerprint: firefox
+  network: tcp
+- name: 🇳🇱 荷兰-阿姆斯特丹 07
+  type: vless
+  server: 87.199.205.28
+  port: 443
+  udp: true
+  uuid: 501a2da5-cb22-4a3f-915e-e3b821d1d62d
+  flow: xtls-rprx-vision
+  tls: true
+  servername: vkvd754.okcdn.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: W-9zyiOq287RtXVTZlTFbSDJ0Mx8joyBLJoA7ZE7eBw
+    short-id: ef1d3554c652a436
+  network: tcp
+- name: 🇳🇱 荷兰-阿姆斯特丹 08
+  type: hysteria2
+  server: 212.34.137.105
+  port: 443
+  udp: true
+  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
+  sni: shorts.blog-forme.ru
+  skip-cert-verify: true
+- name: 🇳🇱 荷兰-阿姆斯特丹 09
+  type: hysteria2
+  server: 5.129.235.85
+  port: 443
+  udp: true
+  password: gf1:gfhysteria2024
+  sni: www.linux.com
+  skip-cert-verify: true
+- name: 🇳🇱 荷兰-阿姆斯特丹 10
+  type: vless
+  server: free-amsterdam-node-1.cloudwidecdn.com
+  port: 443
+  udp: true
+  uuid: 44ae52b9-76fc-444d-8e43-186b4384b80a
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: qq
+  reality-opts:
+    public-key: PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU
+    short-id: 1d86d17709852910
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 11
+  type: vless
+  server: 51.158.206.8
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 12
+  type: vless
+  server: 51.158.206.20
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 13
+  type: vless
+  server: 51.158.206.93
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: ''
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 14
+  type: vless
+  server: 51.158.206.34
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 15
+  type: vless
+  server: 51.158.206.103
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 16
+  type: vless
+  server: 51.158.206.80
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 17
+  type: vless
+  server: 51.158.206.96
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+- name: 🇳🇱 荷兰-Haarlem 18
+  type: vless
+  server: 51.158.206.25
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇳🇱 荷兰-阿姆斯特丹 01 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
+  - 🇳🇱 荷兰-Enschede 05 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 06
+  - 🇳🇱 荷兰-阿姆斯特丹 07
+  - 🇳🇱 荷兰-阿姆斯特丹 08
+  - 🇳🇱 荷兰-阿姆斯特丹 09
+  - 🇳🇱 荷兰-阿姆斯特丹 10
+  - 🇳🇱 荷兰-Haarlem 11
+  - 🇳🇱 荷兰-Haarlem 12
+  - 🇳🇱 荷兰-Haarlem 13
+  - 🇳🇱 荷兰-Haarlem 14
+  - 🇳🇱 荷兰-Haarlem 15
+  - 🇳🇱 荷兰-Haarlem 16
+  - 🇳🇱 荷兰-Haarlem 17
+  - 🇳🇱 荷兰-Haarlem 18
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇳🇱 荷兰-阿姆斯特丹 01 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
+  - 🇳🇱 荷兰-Enschede 05 (原生)
+  - 🇳🇱 荷兰-阿姆斯特丹 06
+  - 🇳🇱 荷兰-阿姆斯特丹 07
+  - 🇳🇱 荷兰-阿姆斯特丹 08
+  - 🇳🇱 荷兰-阿姆斯特丹 09
+  - 🇳🇱 荷兰-阿姆斯特丹 10
+  - 🇳🇱 荷兰-Haarlem 11
+  - 🇳🇱 荷兰-Haarlem 12
+  - 🇳🇱 荷兰-Haarlem 13
+  - 🇳🇱 荷兰-Haarlem 14
+  - 🇳🇱 荷兰-Haarlem 15
+  - 🇳🇱 荷兰-Haarlem 16
+  - 🇳🇱 荷兰-Haarlem 17
+  - 🇳🇱 荷兰-Haarlem 18
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

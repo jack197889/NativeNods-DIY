@@ -4,58 +4,51 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇱 荷兰-Enschede 01 (原生)
-  type: hysteria2
-  server: 89.105.218.106
-  port: 8443
+- name: 🇳🇱 荷兰-Zoetermeer 01 (原生)
+  type: vless
+  server: 89.248.65.152
+  port: 443
   udp: true
-  password: ba3aeb91-2ed0-45d3-8dcf-81e5ed45168b
-  sni: speedtestmark.com
+  uuid: 555b35c4-30f9-40c6-a61a-7f53ab1bea45
+  flow: xtls-rprx-vision
+  tls: true
+  servername: images.porsche.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
+    short-id: 1a2b3c4d
+  network: tcp
 - name: 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
+  type: ss
+  server: 193.29.139.235
+  port: 443
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
+  type: ss
+  server: 193.29.139.198
+  port: 8080
+  udp: true
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
   type: ss
   server: 185.4.115.146
   port: 8044
   udp: true
   cipher: chacha20-ietf-poly1305
   password: _c43uV0__ztFhshnuY4RvhVOC2FgxCjA
-- name: 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
-  type: ss
-  server: 82.38.31.165
-  port: 443
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
+- name: 🇳🇱 荷兰-阿姆斯特丹 05 (原生)
   type: ss
   server: 82.38.31.66
   port: 8080
   udp: true
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰-阿姆斯特丹 05 (原生)
-  type: ss
-  server: 82.38.31.192
-  port: 8080
-  udp: true
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱 荷兰-Dedemsvaart 06 (原生)
+- name: 🇳🇱 荷兰-Enschede 06 (原生)
   type: vless
-  server: 138.16.249.177
-  port: 443
-  udp: true
-  uuid: 80a06811-f74b-4b82-ac99-7e66c2a98e1c
-  tls: true
-  servername: folio.basterdym.asia
-  alpn:
-  - h2
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: folio.index.v1
-- name: 🇳🇱 荷兰-Enschede 07 (原生)
-  type: vless
-  server: 72.56.38.83
+  server: 201.51.11.65
   port: 443
   udp: true
   uuid: 1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200
@@ -64,7 +57,7 @@ proxies:
   servername: absolute-disaster.org
   client-fingerprint: chrome
   reality-opts:
-    public-key: ZzIetLcQtENjIXQ9XZqFo8p3J81p8Emj0wi51Uy07n8
+    public-key: GiDgVRVYrTkv1mZJeFVWkr736Iey2kqLM6L0eUbffV8
     short-id: ''
   network: tcp
 proxy-groups:
@@ -72,23 +65,21 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇳🇱 荷兰-Enschede 01 (原生)
+  - 🇳🇱 荷兰-Zoetermeer 01 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 05 (原生)
-  - 🇳🇱 荷兰-Dedemsvaart 06 (原生)
-  - 🇳🇱 荷兰-Enschede 07 (原生)
+  - 🇳🇱 荷兰-Enschede 06 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇳🇱 荷兰-Enschede 01 (原生)
+  - 🇳🇱 荷兰-Zoetermeer 01 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 02 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 03 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 04 (原生)
   - 🇳🇱 荷兰-阿姆斯特丹 05 (原生)
-  - 🇳🇱 荷兰-Dedemsvaart 06 (原生)
-  - 🇳🇱 荷兰-Enschede 07 (原生)
+  - 🇳🇱 荷兰-Enschede 06 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

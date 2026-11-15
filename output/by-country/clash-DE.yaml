@@ -1,0 +1,76 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 🇩🇪 德国-法兰克福 01
+  type: vless
+  server: 162.159.152.4
+  port: 443
+  udp: true
+  uuid: f2a73750-3087-48ff-a763-1348c15dce68
+  tls: true
+  servername: rAyAn-007.mAxImA.DpDnS.OrG
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rAyAn-007.mAxImA.DpDnS.OrG
+- name: 🇩🇪 德国-法兰克福 02
+  type: ss
+  server: 8.220.81.25
+  port: 443
+  udp: true
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+- name: 🇩🇪 德国-Eygelshoven 03
+  type: vless
+  server: base.hosamobenl.co.uk
+  port: 443
+  udp: true
+  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
+  tls: true
+  servername: base.hosamobenl.co.uk
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇩🇪 德国-法兰克福 04
+  type: ss
+  server: 8.211.38.49
+  port: 443
+  udp: true
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+- name: 🇩🇪 德国-法兰克福 05
+  type: hysteria2
+  server: 151.243.169.164
+  port: 12824
+  udp: true
+  password: d62s7ghfehm742us
+  sni: derfderf.ru
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🇩🇪 德国-法兰克福 01
+  - 🇩🇪 德国-法兰克福 02
+  - 🇩🇪 德国-Eygelshoven 03
+  - 🇩🇪 德国-法兰克福 04
+  - 🇩🇪 德国-法兰克福 05
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇩🇪 德国-法兰克福 01
+  - 🇩🇪 德国-法兰克福 02
+  - 🇩🇪 德国-Eygelshoven 03
+  - 🇩🇪 德国-法兰克福 04
+  - 🇩🇪 德国-法兰克福 05
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rules:
+- MATCH,🚀 节点选择

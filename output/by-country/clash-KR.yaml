@@ -4,25 +4,24 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇾 马来西亚-吉隆坡 01 (家宽)
-  type: vmess
-  server: 192.228.145.118
-  port: 10086
+- name: 🇰🇷 韩国-Chuncheon 01
+  type: hysteria2
+  server: 152.67.200.82
+  port: 50160
   udp: true
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
-  alterId: 0
-  cipher: auto
-  network: tcp
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  sni: t.me
+  skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - 🇲🇾 马来西亚-吉隆坡 01 (家宽)
+  - 🇰🇷 韩国-Chuncheon 01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇲🇾 马来西亚-吉隆坡 01 (家宽)
+  - 🇰🇷 韩国-Chuncheon 01
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

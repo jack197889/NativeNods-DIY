@@ -11,16 +11,32 @@ proxies:
   udp: true
   password: 769f34f0-1500-488f-b414-03bc90666502
   sni: se.mimowhat.online
+- name: 🇸🇪 瑞典-斯德哥尔摩 02 (原生)
+  type: vless
+  server: 132.243.163.114
+  port: 443
+  udp: true
+  uuid: 07df3711-07a1-4649-9a61-3f16cb931d02
+  flow: xtls-rprx-vision
+  tls: true
+  servername: 3fb2b6t.se2.h1clayd.click
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: XQWaIMBPo0mpWs3MooxxkjWNSgxnkIESd_2PnR8_2HA
+    short-id: 1061f1b1cdaad3ad
+  network: tcp
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇸🇪 瑞典-Hudiksvall 01 (原生)
+  - 🇸🇪 瑞典-斯德哥尔摩 02 (原生)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇸🇪 瑞典-Hudiksvall 01 (原生)
+  - 🇸🇪 瑞典-斯德哥尔摩 02 (原生)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
