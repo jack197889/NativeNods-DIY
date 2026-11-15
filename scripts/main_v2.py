@@ -1969,16 +1969,42 @@ def parse_youtube(html: str):
 
 
 def parse_gemini(html: str):
-    """Gemini 首页 -> (可用状态, 地区二位码)。标记与地区提取同 RegionRestrictionCheck。"""
+    """Gemini 首页 -> (可用状态, 地区二位码)。
+
+    v3.1 判定（2026-11-15 标定）：旧标记 45631641 已被 Google 下线——经实测，
+    一个确认可用的美国出口（页面地区 US、本人实测 Gemini 正常）同样没有该
+    标记，145 个出口全灭是判定失效而非全不可用。新判据为复合信号：
+    地区码可解析 + 页面是完整应用壳（含聊天输入区）+ 无地区不可用文案 +
+    页面体积达标（拦截页远小于完整应用页 ~900KB）。"""
     if not html:
         return "失败(网络)", ""
     region = ""
     m = re.search(r',2,1,200,"([A-Z]{3})"', html)
     if m:
         region = _ALPHA3_TO_2.get(m.group(1), m.group(1))
-    if "45631641,null,true" in html:
+    low = html.lower()
+    blocked = ("not available in your country" in low
+               or "isn't available in your country" in low
+               or "not currently available in your country" in low)
+    app_shell = "chat-app" in low and "gemini" in low
+    if region and app_shell and not blocked and len(html) > 300_000:
         return "Yes", region
     return "No", region
+
+
+def gemini_diag(html: str) -> dict:
+    """Gemini 页面诊断，随 platform_report.json 落盘，便于日后复核判定。"""
+    if not html:
+        return {"bytes": 0, "has_marker": False, "app_shell": False,
+                "blocked_text": False}
+    low = html.lower()
+    return {
+        "bytes": len(html),
+        "has_marker": "45631641,null,true" in html,
+        "app_shell": "chat-app" in low,
+        "blocked_text": ("not available in your country" in low
+                         or "isn't available in your country" in low),
+    }
 
 
 def parse_tiktok(html: str) -> str:
@@ -2027,6 +2053,7 @@ def _probe_platform(proxy_url: str) -> dict:
         if gemini_html:
             break
     out["gemini"], out["gemini_region"] = parse_gemini(gemini_html)
+    out["gemini_diag"] = gemini_diag(gemini_html)
     tiktok_html = _curl_via(proxy_url, "https://www.tiktok.com/")
     out["tiktok_region"] = parse_tiktok(tiktok_html) or "未知"
     return out
@@ -2215,6 +2242,11 @@ def build_purpose_pools(groups: dict) -> dict:
         counts[name] = export_group(
             lst, os.path.join(PURPOSE_DIR, f"{name}.txt"),
             os.path.join(PURPOSE_DIR, f"{name}-clash.yaml"))
+    # 严选总链接：两个严选池合并成一条订阅，供一条复制直接导入
+    strict_all = pools["us_gemini_strict"] + pools["nl_tiktok_strict"]
+    counts["strict_all"] = export_group(
+        strict_all, os.path.join(PURPOSE_DIR, "strict_all.txt"),
+        os.path.join(PURPOSE_DIR, "strict_all-clash.yaml"))
     report = []
     for i in items:
         if not i.get("platform"):
@@ -2241,6 +2273,8 @@ def append_purpose_readme(counts: dict):
 
 > 平台地区只取决于出口 IP：以下节点均经隧道实测平台本身判定，并通过速度门槛分层。
 > **严选** = 平台过关 + 下载 ≥ {STRICT_MIN_DOWN_MBPS} Mbps + 上传 ≥ {STRICT_MIN_UP_MBPS} Mbps；**备选** = 平台过关但速度未达或未测出。
+
+**严选总链接（一条复制）**：`{raw}/strict_all.txt`（美国 Gemini 严选 + 荷兰 TikTok 严选合并，共 {counts.get('strict_all', 0)} 条；Clash 版 `{raw}/strict_all-clash.yaml`）
 
 | 用途池 | 判定标准 | 数量 | v2ray | Clash |
 | --- | --- | --- | --- | --- |
