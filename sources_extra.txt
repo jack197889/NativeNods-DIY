@@ -1,1 +1,17 @@
-IyDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZAKIyDmr4/lkajova7mjaLmupDvvIh2MyDmlrDlop7mnLrliLbvvIkKIyDkuIDooYzkuIDkuKrorqLpmIUgVVJM77yMIyDlvIDlpLTmmK/ms6jph4rjgILkuLvohJrmnKzmr4/mrKHov5DooYzkvJroh6rliqjmiorov5nph4wKIyDnmoTmupDkuI7lhoXnva7lm7rlrprmupDlkIjlubbmipPlj5bvvJvova7mjaLml7blj6rmlLnov5nkuKrmlofku7bvvIzkuI3liqjku6PnoIHjgIIKIyDnu7TmiqToioLlpY/vvJrmr4/lkajlpI3moLjkuIDmrKHigJTigJTlpLHmlYjnmoTliKDjgIHmlrDmib7liLDnmoTlpb3mupDliqDov5vmnaXvvJsKIyBHcm9rIOmCruS7tumHjOeahOaXpeacn+W/q+eFp+iuoumYheS5n+i0tOWIsOi/memHjO+8iOi/h+acn+WQjuWIoOaOie+8ieOAggojIOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkAoKIyDilIDilIAg56ysIDEg5om56L2u5o2i77yIMjAyNi0xMS0xNSDpqozor4HvvJrmlrDpopbluqbpq5jvvIzlsKTlhbYgTkwgLyBBVe+8ieKUgOKUgAojIGZyZWVub2RlLmJpeiDmjInlm73lrrbmjqXlj6PvvJrmr4/mrKHnuqYgNDAg5Liq77yM5L2G6I235YWwIDc5JeOAgea+s+a0siA4OCUg5piv5Z+65YeG5rGg5rKh5pyJ55qE5paw5Zyw5Z2ACmh0dHBzOi8vZnJlZW5vZGUuYml6L2FwaS9zdWJzY3JpYmU/Y291bnRyeT1VUyZmb3JtYXQ9dGV4dApodHRwczovL2ZyZWVub2RlLmJpei9hcGkvc3Vic2NyaWJlP2NvdW50cnk9TkwmZm9ybWF0PXRleHQKaHR0cHM6Ly9mcmVlbm9kZS5iaXovYXBpL3N1YnNjcmliZT9jb3VudHJ5PUFVJmZvcm1hdD10ZXh0CiMgbnllaW5rb2tvYXVuZzQwNCBTdWIx77ya57qmIDcyJSDkuLrmlrDlnLDlnYDvvIjlroPnmoQgdGVzdGVkIOaWh+S7tuS4juWfuuWHhuaxoOWHoOS5juWFqOmHjeWkje+8jOS4jeimgeeUqOmCo+S4qu+8iQpodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vbnllaW5rb2tvYXVuZzQwNC9WMnJheS1Db25maWdzL21haW4vU3ViMS50eHQKIyBNYXRpbkdoYW5iYXJp77ya6ICB54mM5aSn6IGa5ZCI77yM5rC06YeP6KGl5YWF77yI57qm5LiD5oiQ5LiO5Z+65YeG5rGg6YeN5aSN77yM6IOc5Zyo5pu05paw5Yuk77yJCmh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9NYXRpbkdoYW5iYXJpL3YycmF5LWNvbmZpZ3MvbWFpbi9zdWJzY3JpcHRpb25zL3YycmF5L2FsbF9zdWIudHh0Cg==
+# ══════════════════════════════════════════════════════════════
+# 每周轮换源（v3 新增机制）
+# 一行一个订阅 URL，# 开头是注释。主脚本每次运行会自动把这里
+# 的源与内置固定源合并抓取；轮换时只改这个文件，不动代码。
+# 维护节奏：每周复核一次——失效的删、新找到的好源加进来；
+# Grok 邮件里的日期快照订阅也贴到这里（过期后删掉）。
+# ══════════════════════════════════════════════════════════════
+
+# ── 第 1 批轮换（2026-11-15 验证：新颖度高，尤其 NL / AU）──
+# freenode.biz 按国家接口：每次约 40 个，但荷兰 79%、澳洲 88% 是基准池没有的新地址
+https://freenode.biz/api/subscribe?country=US&format=text
+https://freenode.biz/api/subscribe?country=NL&format=text
+https://freenode.biz/api/subscribe?country=AU&format=text
+# nyeinkokoaung404 Sub1：约 72% 为新地址（它的 tested 文件与基准池几乎全重复，不要用那个）
+https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/Sub1.txt
+# MatinGhanbari：老牌大聚合，水量补充（约七成与基准池重复，胜在更新勤）
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt
