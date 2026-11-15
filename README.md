@@ -70,6 +70,8 @@ sing-box 客户端配置 (1.12+): `https://raw.githubusercontent.com/jack197889/
 > 平台地区只取决于出口 IP：以下节点均经隧道实测平台本身判定，并通过速度门槛分层。
 > **严选** = 平台过关 + 下载 ≥ 5 Mbps + 上传 ≥ 2 Mbps；**备选** = 平台过关但速度未达或未测出。
 
+**严选总链接（一条复制）**：`https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/purpose/strict_all.txt`（美国 Gemini 严选 + 荷兰 TikTok 严选合并；当前美国侧 0 条、荷兰侧 18 条）
+
 | 用途池 | 判定标准 | 数量 | v2ray | Clash |
 | --- | --- | --- | --- | --- |
 | 美国 Gemini 严选 | Gemini 可用 + YouTube 认 US + 速度达标 | 0 | `https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/purpose/us_gemini_strict.txt` | `https://raw.githubusercontent.com/jack197889/NativeNods-DIY/main/output/purpose/us_gemini_strict-clash.yaml` |
