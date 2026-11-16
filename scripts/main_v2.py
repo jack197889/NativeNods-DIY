@@ -213,6 +213,8 @@ PLATFORM_WORKERS = _env_int("PLATFORM_WORKERS", 12)                  # 平台验
 ENABLE_FINALIST_SPEED = _env_flag("ENABLE_FINALIST_SPEED", True)     # 用途池入选节点的速度门槛
 ENABLE_PURITY_HARDEN = _env_flag("ENABLE_PURITY_HARDEN", True)     # v3.4 严选纯净度加固（机房/广播硬排除，保守防误杀）
 STRICT_MAX_PER_24 = _env_int("STRICT_MAX_PER_24", 2)               # 严选池每个 /24 网段最多收几个出口
+ENABLE_PROXYCHECK = _env_flag("ENABLE_PROXYCHECK", True)           # v3.5 第二风控源 proxycheck（仅决赛圈）
+PROXYCHECK_RISK_MAX = _env_int("PROXYCHECK_RISK_MAX", 66)          # proxycheck 风险 ≥ 此值且判定为代理 → 降级（校准样本：好节点 0，脏节点 66）
 STRICT_MIN_DOWN_MBPS = _env_int("STRICT_MIN_DOWN_MBPS", 5)           # 严选池下载下限 (Mbps)
 STRICT_MIN_UP_MBPS = _env_int("STRICT_MIN_UP_MBPS", 2)               # 严选池上传下限 (Mbps, TikTok 上传作品用)
 DEDUP_BY_EXIT_IP = True         # 相同出口 IP 只保留延迟最低的一个
@@ -321,6 +323,7 @@ DATACENTER_ASNS = {
     9009, 47692, 62041, 56630, 57502,  # Serverius/ProXmedia/Clouvider 类
     12876,  # Scaleway（v3.4 实测漏网：阿姆斯特丹裸金属段混入严选）
     60781,  # Leaseweb
+    12989,  # Black HOST（v3.5 实测漏网：VPN/主机商，Scamalytics 给 0 分但 proxycheck 66）
     18450,  # WebNX / 廉价独服类
 }
 
@@ -2265,6 +2268,28 @@ def _speed_pass(item) -> bool:
 # ── v3.4 严选纯净度加固 ──
 # 设计原则（用户 2026-11-16 定）：宁可少量漏网（目标脏节点 ≤10%），绝不误杀。
 # 因此只用高置信信号硬排除，且被排除者只是降入备选池，不删节点。
+_PC_CACHE = {}
+
+
+def proxycheck_lookup(ip: str):
+    """第二风控源 proxycheck.io（免费额度，仅决赛圈调用）。
+    返回 {"risk": int, "proxy": bool, "type": str}；查询失败/额度不足返回 None（不据此判脏）。"""
+    if ip in _PC_CACHE:
+        return _PC_CACHE[ip]
+    out = None
+    try:
+        r = DIRECT_SESSION.get(f"https://proxycheck.io/v2/{ip}?vpn=1&risk=1", timeout=12)
+        if r.status_code == 200:
+            v = (r.json() or {}).get(ip) or {}
+            if isinstance(v.get("risk"), int):
+                out = {"risk": v["risk"], "proxy": v.get("proxy") == "yes",
+                       "type": str(v.get("type") or "")}
+    except (requests.RequestException, ValueError):
+        pass
+    _PC_CACHE[ip] = out
+    return out
+
+
 _BACKBONE_ASNS = {174, 3356, 1299, 2914, 6939}  # 骨干运营商：其地址段含大量正规客户分配，ASN 本身不作判脏依据
 _RDNS_DIRTY_RE = re.compile(r"baremetal|\bvps\b|dedicated|cloud[-_ ]?server|\bhosting\b", re.I)
 
@@ -2324,7 +2349,7 @@ def build_purpose_pools(groups: dict) -> dict:
                and i["platform"].get("gemini_region") == "US" and tk(i, "US")]
     nl_pass = [i for i in cand if i["country"] == "NL" and yt(i, "NL") and tk(i, "NL")]
     dual_pass = {cc: [i for i in cand if i["country"] == cc and yt(i, cc) and tk(i, cc)]
-                 for cc in ("AU", "GB", "CA")}
+                 for cc in ("AU", "GB", "CA", "DE")}
     # v3.3（用户 2026-11-15 晚定）：日/新只看 YouTube + AI，不看 TikTok
     jp_pass = [i for i in cand if i["country"] == "JP" and yt(i, "JP") and ai(i, "JP")]
     sg_pass = [i for i in cand if i["country"] == "SG" and yt(i, "SG") and ai(i, "SG")]
@@ -2335,11 +2360,23 @@ def build_purpose_pools(groups: dict) -> dict:
                                          + [x for v in dual_pass.values() for x in v])}.values())
     # v3.4 纯净度加固：判脏者降入备选（不删节点），并打印构成以便审计
     demoted = []
+    pc_checked = 0
     for i in finalists:
         dirty, reason = _purity_verdict(i)
+        # v3.5 第二风控源：仅对未判脏者查 proxycheck（省免费额度），高门槛才降级
+        if not dirty and ENABLE_PROXYCHECK and i.get("exit_ip"):
+            pc = proxycheck_lookup(i["exit_ip"])
+            i["proxycheck"] = pc
+            if pc:
+                pc_checked += 1
+                if pc["risk"] >= PROXYCHECK_RISK_MAX and pc["proxy"]:
+                    dirty, reason = True, f"第二风控proxycheck风险{pc['risk']}"
         i["purity_dirty"], i["purity_reason"] = dirty, reason
         if dirty:
             demoted.append(i)
+    if ENABLE_PROXYCHECK:
+        print(f"[*] v3.5 第二风控源 proxycheck: 成功查询 {pc_checked} 个决赛出口"
+              f"（门槛 风险≥{PROXYCHECK_RISK_MAX} 且为代理）")
     if demoted:
         from collections import Counter
         reasons = Counter(i["purity_reason"].split("(")[0] for i in demoted)
@@ -2379,6 +2416,7 @@ def build_purpose_pools(groups: dict) -> dict:
     for _name, _lst in (("us_gemini", us_pass), ("nl_tiktok", nl_pass),
                         ("au_dual", dual_pass["AU"]), ("tw_pure", tw_pass),
                         ("gb_dual", dual_pass["GB"]), ("ca_dual", dual_pass["CA"]),
+                        ("de_dual", dual_pass["DE"]),
                         ("jp_ai", jp_pass), ("sg_ai", sg_pass)):
         _s, _b = _split(_lst)
         _pairs[f"{_name}_strict"], _pairs[f"{_name}_backup"] = _s, _b
@@ -2403,7 +2441,7 @@ def build_purpose_pools(groups: dict) -> dict:
             "city": i.get("city") or "", "category": i.get("tag") or "普通",
             "risk": i.get("risk"), "platform": i["platform"],
             "net_type": i.get("net_type"), "confidence": i.get("confidence"),
-            "purity_dirty": i.get("purity_dirty"), "purity_reason": i.get("purity_reason") or "", 
+            "purity_dirty": i.get("purity_dirty"), "purity_reason": i.get("purity_reason") or "", "proxycheck": i.get("proxycheck"), 
             "down_mbps": i.get("down_mbps"), "up_mbps": i.get("up_mbps"),
         })
     write_text(os.path.join(OUTPUT_DIR, "platform_report.json"),
@@ -2418,7 +2456,7 @@ def append_purpose_readme(counts: dict):
     repo = (os.environ.get("GITHUB_REPOSITORY") or "jack197889/NativeNods-DIY").strip()
     raw = f"https://raw.githubusercontent.com/{repo}/main/output/purpose"
     section = f"""
-## 🎯 按用途严选（v3.4 标准：平台 + 速度 + 纯净度加固）
+## 🎯 按用途严选（v3.5 标准：平台 + 速度 + 双源纯净度）
 
 > 平台地区只取决于出口 IP：以下节点均经隧道实测平台本身判定，并通过速度门槛分层。家宽 / 原生 / 普通同标准参选。
 > **严选** = 平台全过 + 下载 ≥ {STRICT_MIN_DOWN_MBPS} Mbps + 上传 ≥ {STRICT_MIN_UP_MBPS} Mbps；**备选** = 平台全过但速度未达或未测出。
@@ -2443,6 +2481,8 @@ def append_purpose_readme(counts: dict):
 | 英国双平台备选 | YouTube 认 GB + TikTok 认 GB | {counts.get('gb_dual_backup', 0)} | `{raw}/gb_dual_backup.txt` | `{raw}/gb_dual_backup-clash.yaml` |
 | 加拿大双平台严选 | YouTube 认 CA + TikTok 认 CA + 速度达标 | {counts.get('ca_dual_strict', 0)} | `{raw}/ca_dual_strict.txt` | `{raw}/ca_dual_strict-clash.yaml` |
 | 加拿大双平台备选 | YouTube 认 CA + TikTok 认 CA | {counts.get('ca_dual_backup', 0)} | `{raw}/ca_dual_backup.txt` | `{raw}/ca_dual_backup-clash.yaml` |
+| 德国双平台严选 | YouTube 认 DE + TikTok 认 DE + 速度达标 | {counts.get('de_dual_strict', 0)} | `{raw}/de_dual_strict.txt` | `{raw}/de_dual_strict-clash.yaml` |
+| 德国双平台备选 | YouTube 认 DE + TikTok 认 DE | {counts.get('de_dual_backup', 0)} | `{raw}/de_dual_backup.txt` | `{raw}/de_dual_backup-clash.yaml` |
 
 - 每个出口的 YouTube / Gemini / TikTok / ChatGPT / Claude 判定明细见 `output/platform_report.json`。
 - TikTok 提示：IP 认对地区只是网络这一关，作品分发地区还受账号注册区、SIM、设备语言影响。
