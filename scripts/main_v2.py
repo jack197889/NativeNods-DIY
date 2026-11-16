@@ -214,7 +214,10 @@ ENABLE_FINALIST_SPEED = _env_flag("ENABLE_FINALIST_SPEED", True)     # 用途池
 ENABLE_PURITY_HARDEN = _env_flag("ENABLE_PURITY_HARDEN", True)     # v3.4 严选纯净度加固（机房/广播硬排除，保守防误杀）
 STRICT_MAX_PER_24 = _env_int("STRICT_MAX_PER_24", 2)               # 严选池每个 /24 网段最多收几个出口
 ENABLE_PROXYCHECK = _env_flag("ENABLE_PROXYCHECK", True)           # v3.5 第二风控源 proxycheck（仅决赛圈）
-PROXYCHECK_RISK_MAX = _env_int("PROXYCHECK_RISK_MAX", 66)          # proxycheck 风险 ≥ 此值且判定为代理 → 降级（校准样本：好节点 0，脏节点 66）
+PROXYCHECK_RISK_MAX = _env_int("PROXYCHECK_RISK_MAX", 66)          # 仅记录用（见下）
+# v3.5.1 修正（run #145 教训）：proxycheck 对几乎所有 VPN/主机商出口一律给 66 分，
+# 拿它降级等于误杀全池（美国严选 17→1）。故默认只记录、不降级；判脏仍靠 ASN 名单+广播+ rDNS。
+ENABLE_PROXYCHECK_DEMOTE = _env_flag("ENABLE_PROXYCHECK_DEMOTE", False)
 STRICT_MIN_DOWN_MBPS = _env_int("STRICT_MIN_DOWN_MBPS", 5)           # 严选池下载下限 (Mbps)
 STRICT_MIN_UP_MBPS = _env_int("STRICT_MIN_UP_MBPS", 2)               # 严选池上传下限 (Mbps, TikTok 上传作品用)
 DEDUP_BY_EXIT_IP = True         # 相同出口 IP 只保留延迟最低的一个
@@ -2350,6 +2353,28 @@ def build_purpose_pools(groups: dict) -> dict:
     nl_pass = [i for i in cand if i["country"] == "NL" and yt(i, "NL") and tk(i, "NL")]
     dual_pass = {cc: [i for i in cand if i["country"] == cc and yt(i, cc) and tk(i, cc)]
                  for cc in ("AU", "GB", "CA", "DE")}
+    # v3.5.1（用户 2026-11-16 定）：纯净度优质（原生/家宽）但只过 YT 或 TK 一个的，
+    # 也进严选，名字加 (YT)/(TK) 标记标明它能过哪关；普通节点不享此宽容。
+    def _premium(i):
+        return bool(i.get("residential") or i.get("native_final"))
+    dual_single = {}
+    for cc in ("AU", "GB", "CA", "DE"):
+        lst = []
+        for i in cand:
+            if i["country"] != cc or not _premium(i):
+                continue
+            y, t = yt(i, cc), tk(i, cc)
+            if y ^ t:
+                i["single_mark"] = "YT" if y else "TK"
+                lst.append(i)
+        dual_single[cc] = lst
+    _nl_single = []
+    for i in cand:
+        if i["country"] == "NL" and _premium(i):
+            y, t = yt(i, "NL"), tk(i, "NL")
+            if y ^ t:
+                i["single_mark"] = "YT" if y else "TK"
+                _nl_single.append(i)
     # v3.3（用户 2026-11-15 晚定）：日/新只看 YouTube + AI，不看 TikTok
     jp_pass = [i for i in cand if i["country"] == "JP" and yt(i, "JP") and ai(i, "JP")]
     sg_pass = [i for i in cand if i["country"] == "SG" and yt(i, "SG") and ai(i, "SG")]
@@ -2357,7 +2382,9 @@ def build_purpose_pools(groups: dict) -> dict:
     tw_pass = [i for i in items if i["country"] == "TW"]
 
     finalists = list({id(i): i for i in (us_pass + nl_pass + jp_pass + sg_pass + tw_pass
-                                         + [x for v in dual_pass.values() for x in v])}.values())
+                                         + [x for v in dual_pass.values() for x in v]
+                                         + [x for v in dual_single.values() for x in v]
+                                         + _nl_single)}.values())
     # v3.4 纯净度加固：判脏者降入备选（不删节点），并打印构成以便审计
     demoted = []
     pc_checked = 0
@@ -2369,7 +2396,7 @@ def build_purpose_pools(groups: dict) -> dict:
             i["proxycheck"] = pc
             if pc:
                 pc_checked += 1
-                if pc["risk"] >= PROXYCHECK_RISK_MAX and pc["proxy"]:
+                if ENABLE_PROXYCHECK_DEMOTE and pc["risk"] >= PROXYCHECK_RISK_MAX and pc["proxy"]:
                     dirty, reason = True, f"第二风控proxycheck风险{pc['risk']}"
         i["purity_dirty"], i["purity_reason"] = dirty, reason
         if dirty:
@@ -2413,10 +2440,11 @@ def build_purpose_pools(groups: dict) -> dict:
         return kept, backup
 
     _pairs = {}
-    for _name, _lst in (("us_gemini", us_pass), ("nl_tiktok", nl_pass),
-                        ("au_dual", dual_pass["AU"]), ("tw_pure", tw_pass),
-                        ("gb_dual", dual_pass["GB"]), ("ca_dual", dual_pass["CA"]),
-                        ("de_dual", dual_pass["DE"]),
+    for _name, _lst in (("us_gemini", us_pass), ("nl_tiktok", nl_pass + _nl_single),
+                        ("au_dual", dual_pass["AU"] + dual_single["AU"]), ("tw_pure", tw_pass),
+                        ("gb_dual", dual_pass["GB"] + dual_single["GB"]),
+                        ("ca_dual", dual_pass["CA"] + dual_single["CA"]),
+                        ("de_dual", dual_pass["DE"] + dual_single["DE"]),
                         ("jp_ai", jp_pass), ("sg_ai", sg_pass)):
         _s, _b = _split(_lst)
         _pairs[f"{_name}_strict"], _pairs[f"{_name}_backup"] = _s, _b
@@ -2785,7 +2813,8 @@ def make_node_name(item: dict, idx: int) -> str:
         if city_zh and city_zh != place and city_zh not in place:
             place = f"{place}-{city_zh}"
     tag = f" ({item['tag']})" if item.get("tag") else ""
-    return f"{get_country_flag(cc)} {place} {idx:02d}{tag}"
+    mark = f" ({item['single_mark']})" if item.get("single_mark") else ""
+    return f"{get_country_flag(cc)} {place} {idx:02d}{tag}{mark}"
 
 
 def build_group(nodes_list: list):
