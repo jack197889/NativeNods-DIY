@@ -211,7 +211,7 @@ MAX_RESIDENTIAL = _env_int("MAX_RESIDENTIAL", 0)
 ENABLE_PLATFORM_CHECK = _env_flag("ENABLE_PLATFORM_CHECK", True)   # YouTube/Gemini/TikTok 地区判定
 PLATFORM_WORKERS = _env_int("PLATFORM_WORKERS", 12)                  # 平台验证并发 (每个 worker 起一个 sing-box)
 ENABLE_FINALIST_SPEED = _env_flag("ENABLE_FINALIST_SPEED", True)     # 用途池入选节点的速度门槛
-ENABLE_PURITY_HARDEN = _env_flag("ENABLE_PURITY_HARDEN", True)     # v3.4 严选纯净度加固（机房/广播硬排除，保守防误杀）
+ENABLE_PURITY_HARDEN = _env_flag("ENABLE_PURITY_HARDEN", False)    # v3.6（用户 2026-11-16 定）：GH 侧风控放宽——纯净度判定只记录不降级，终审交给本地 ping0 工具（>35% 淘汰）；置 True 可恢复 v3.4 降级
 STRICT_MAX_PER_24 = _env_int("STRICT_MAX_PER_24", 2)               # 严选池每个 /24 网段最多收几个出口
 ENABLE_PROXYCHECK = _env_flag("ENABLE_PROXYCHECK", True)           # v3.5 第二风控源 proxycheck（仅决赛圈）
 PROXYCHECK_RISK_MAX = _env_int("PROXYCHECK_RISK_MAX", 66)          # 仅记录用（见下）
@@ -2303,8 +2303,6 @@ def _purity_verdict(it) -> tuple:
     B. 已知主机商 ASN（骨干网除外）且分类为机房（置信度 ≥80）
     C. 广播坐实：RDAP 注册国 ≠ 地理国，且另一独立地理源（echo/ip-api）也 ≠ 地理国
     D. rDNS 强机房关键词（baremetal/vps 等）且分类为机房"""
-    if not ENABLE_PURITY_HARDEN:
-        return False, ""
     nt, conf, asn = it.get("net_type"), it.get("confidence") or 0, it.get("asn")
     # v3.4.1 修正（2026-11-16 首跑复盘）：ip-api 的 hosting/proxy 标记会命中几乎全部
     # 免费节点出口（实测决赛圈 100%），单凭它判脏等于误杀全池，故删除该条；
@@ -2390,6 +2388,8 @@ def build_purpose_pools(groups: dict) -> dict:
     pc_checked = 0
     for i in finalists:
         dirty, reason = _purity_verdict(i)
+        if not ENABLE_PURITY_HARDEN:
+            dirty = False  # v3.6：只记录判定，不据此降级（reason 保留在报告里）
         # v3.5 第二风控源：仅对未判脏者查 proxycheck（省免费额度），高门槛才降级
         if not dirty and ENABLE_PROXYCHECK and i.get("exit_ip"):
             pc = proxycheck_lookup(i["exit_ip"])
@@ -2431,7 +2431,7 @@ def build_purpose_pools(groups: dict) -> dict:
         kept, overflow, seen24 = [], [], {}
         for i in strict:  # v3.4: 同 /24 上限，防单个脏网段批发进场
             k = _net24(i.get("exit_ip") or "")
-            if ENABLE_PURITY_HARDEN and seen24.get(k, 0) >= STRICT_MAX_PER_24:
+            if seen24.get(k, 0) >= STRICT_MAX_PER_24:  # /24 多样性上限与风控开关解耦，常开
                 overflow.append(i)
             else:
                 seen24[k] = seen24.get(k, 0) + 1
@@ -2484,7 +2484,7 @@ def append_purpose_readme(counts: dict):
     repo = (os.environ.get("GITHUB_REPOSITORY") or "jack197889/NativeNods-DIY").strip()
     raw = f"https://raw.githubusercontent.com/{repo}/main/output/purpose"
     section = f"""
-## 🎯 按用途严选（v3.5 标准：平台 + 速度 + 双源纯净度）
+## 🎯 按用途严选（v3.6 标准：平台 + 速度；纯净度终审在本地 ping0）
 
 > 平台地区只取决于出口 IP：以下节点均经隧道实测平台本身判定，并通过速度门槛分层。家宽 / 原生 / 普通同标准参选。
 > **严选** = 平台全过 + 下载 ≥ {STRICT_MIN_DOWN_MBPS} Mbps + 上传 ≥ {STRICT_MIN_UP_MBPS} Mbps；**备选** = 平台全过但速度未达或未测出。
