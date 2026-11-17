@@ -221,6 +221,11 @@ ENABLE_PROXYCHECK_DEMOTE = _env_flag("ENABLE_PROXYCHECK_DEMOTE", False)
 STRICT_MIN_DOWN_MBPS = _env_int("STRICT_MIN_DOWN_MBPS", 5)           # 严选池下载下限 (Mbps)
 STRICT_MIN_UP_MBPS = _env_int("STRICT_MIN_UP_MBPS", 2)               # 严选池上传下限 (Mbps, TikTok 上传作品用)
 DEDUP_BY_EXIT_IP = True         # 相同出口 IP 只保留延迟最低的一个
+# ── v3.7 ping0 终审黑名单 ──
+# 本地 ping0 工具实测风控 >35% 的出口 IP 名单（blacklist.txt，一行一个 IP，# 为注释）。
+# 命中出口在「按出口去重之后、平台验证之前」直接剔除（严选与备选池均不收录）——
+# 这些脏出口每天都会被免费源重新发布，不拦就会反复浪费平台验证 / 速度测试名额。
+BLACKLIST_FILE = "blacklist.txt"   # 查找顺序：脚本同目录优先，其次仓库根目录；缺失 = 空名单
 DROP_INSECURE = _env_flag("DROP_INSECURE", False)
 ALLOW_INSECURE_DEFAULT = False  # 订阅链接没写 insecure 时，是否默认跳过证书验证
 ENABLE_IP_API = _env_flag("ENABLE_IP_API", True)
@@ -1798,6 +1803,47 @@ def risk_select(cands: list, cap: int, label: str) -> list:
     return picked
 
 
+# ══════════════════════════════════════════════════════════════════
+# v3.7 ping0 终审黑名单：本地 ping0 实测风控 >35% 的出口，GH 侧直接剔除
+# ══════════════════════════════════════════════════════════════════
+
+BLACKLIST_DROPPED = 0  # 本次运行被黑名单剔除的出口数（classify 时统计，写进 platform_report 汇总）
+
+
+def load_exit_blacklist() -> set:
+    """读取 blacklist.txt（一行一个出口 IP，# 开头整行注释，行尾 # 后为备注一并剥掉）。
+    查找顺序：脚本同目录 (SCRIPT_DIR) 优先，其次仓库根目录 (BASEDIR)；
+    文件不存在 → 返回空名单，不报错。"""
+    for base in (SCRIPT_DIR, BASEDIR):
+        path = os.path.join(base, BLACKLIST_FILE)
+        if os.path.exists(path):
+            ips = set()
+            with open(path, encoding="utf-8") as f:
+                for line in f:
+                    ip = line.split("#", 1)[0].strip()
+                    if ip:
+                        ips.add(ip)
+            print(f"[*] ping0 终审黑名单: 已加载 {len(ips)} 个出口 ({path})")
+            return ips
+    print("[*] ping0 终审黑名单: 未找到 blacklist.txt，按空名单处理")
+    return set()
+
+
+def apply_exit_blacklist(results: list, blacklist: set) -> list:
+    """出口 IP 命中黑名单的测活结果直接剔除。
+    调用点在 classify_results 内、按出口 IP 去重之后 —— 此后所有阶段
+    （分类 / 平台验证 / 速度门槛 / 用途池，含严选与备选）都不会再见到这些出口。"""
+    global BLACKLIST_DROPPED
+    if not blacklist:
+        return results
+    kept = [r for r in results if (r.get("exit_ip") or "").strip() not in blacklist]
+    BLACKLIST_DROPPED = len(results) - len(kept)
+    if BLACKLIST_DROPPED:
+        print(f"[*] 黑名单剔除 {BLACKLIST_DROPPED} 个出口，剩余 {len(kept)} 个节点")
+        bump("blacklist_dropped", BLACKLIST_DROPPED)
+    return kept
+
+
 def classify_results(results: list):
     """每个节点只属于一类：家宽 > 原生 > 普通，互不重叠。
        家宽 = 家庭宽带 IP（含移动网络）且是原生 IP，无需额外核验
@@ -1814,6 +1860,9 @@ def classify_results(results: list):
         if len(best) != len(results):
             print(f"[*] 相同出口 IP 去重: {len(results)} → {len(best)}")
         results = list(best.values())
+
+    # v3.7：出口去重后、平台验证前，先过 ping0 终审黑名单（脏出口不再进任何池子）
+    results = apply_exit_blacklist(results, load_exit_blacklist())
 
     geo = GeoDB()
     if not geo.country:
@@ -2472,8 +2521,11 @@ def build_purpose_pools(groups: dict) -> dict:
             "purity_dirty": i.get("purity_dirty"), "purity_reason": i.get("purity_reason") or "", "proxycheck": i.get("proxycheck"), 
             "down_mbps": i.get("down_mbps"), "up_mbps": i.get("up_mbps"),
         })
+    # v3.7：报告加顶层汇总（summary），原有逐出口明细字段一字不动，挪到 nodes 下
     write_text(os.path.join(OUTPUT_DIR, "platform_report.json"),
-               json.dumps(report, indent=1, ensure_ascii=False))
+               json.dumps({"summary": {"blacklist_dropped": BLACKLIST_DROPPED,
+                                       "platform_checked_exits": len(report)},
+                           "nodes": report}, indent=1, ensure_ascii=False))
     print("[*] 用途池: " + " | ".join(
         f"{k} {v}" for k, v in counts.items()))
     return counts
