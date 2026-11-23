@@ -218,6 +218,19 @@ PROXYCHECK_RISK_MAX = _env_int("PROXYCHECK_RISK_MAX", 66)          # 仅记录�
 # v3.5.1 修正（run #145 教训）：proxycheck 对几乎所有 VPN/主机商出口一律给 66 分，
 # 拿它降级等于误杀全池（美国严选 17→1）。故默认只记录、不降级；判脏仍靠 ASN 名单+广播+ rDNS。
 ENABLE_PROXYCHECK_DEMOTE = _env_flag("ENABLE_PROXYCHECK_DEMOTE", False)
+# ── v3.8 地区取舍 + 其他国家严选档（用户 2026-11-23 定）──
+# 不收的地区：阿联酋、东南亚（新加坡除外——它是头号目标）、非洲。
+# 按实测出口国家在分类后直接剔除，不进任何池子、不耗平台/测速预算。
+# 其余国家全部保留；没有专属用途池的国家另设「其他国家」严选档（见 build_purpose_pools）。
+EXCLUDED_COUNTRIES = set(
+    "AE".split()                                                # 阿联酋
+    + "BN ID KH LA MM MY PH TH TL VN".split()                   # 东南亚（SG 除外）
+    + ("DZ AO BJ BW BF BI CM CV CF TD KM CG CD CI DJ EG GQ ER SZ ET GA GM GH GN GW "
+       "KE LS LR LY MG MW ML MR MU MA MZ NA NE NG RW ST SN SC SL SO ZA SS SD TZ TG "
+       "TN UG EH ZM ZW").split()                                # 非洲
+)
+OTHER_MAX_PER_COUNTRY = _env_int("OTHER_MAX_PER_COUNTRY", 5)    # 其他国家档：每国最多送测几个（按延迟取最快）
+OTHER_MAX_TOTAL = _env_int("OTHER_MAX_TOTAL", 50)               # 其他国家档：送测总数上限（护栏，防测速阶段膨胀）
 STRICT_MIN_DOWN_MBPS = _env_int("STRICT_MIN_DOWN_MBPS", 5)           # 严选池下载下限 (Mbps)
 STRICT_MIN_UP_MBPS = _env_int("STRICT_MIN_UP_MBPS", 2)               # 严选池上传下限 (Mbps, TikTok 上传作品用)
 DEDUP_BY_EXIT_IP = True         # 相同出口 IP 只保留延迟最低的一个
@@ -1808,6 +1821,7 @@ def risk_select(cands: list, cap: int, label: str) -> list:
 # ══════════════════════════════════════════════════════════════════
 
 BLACKLIST_DROPPED = 0  # 本次运行被黑名单剔除的出口数（classify 时统计，写进 platform_report 汇总）
+REGION_DROPPED = 0     # v3.8：本次运行被地区过滤剔除的节点数（同上）
 
 
 def load_exit_blacklist() -> set:
@@ -1849,6 +1863,7 @@ def classify_results(results: list):
        家宽 = 家庭宽带 IP（含移动网络）且是原生 IP，无需额外核验
        原生 = 非家宽，且是原生 IP（注册地国家 == 使用地国家，典型如机房原生）
        普通 = 其余（含「广播 IP」，包括家庭宽带但广播的 IP）"""
+    global REGION_DROPPED
     print("[*] 分类: 家宽 / 原生 / 普通 ...")
 
     if DEDUP_BY_EXIT_IP:                    # 先去重，减少后续所有外部查询
@@ -1962,6 +1977,15 @@ def classify_results(results: list):
     if dropped_cf:
         print(f"[*] 已剔除 Cloudflare/WARP 节点: {dropped_cf} 个，剩余 {len(items)}")
         bump("dropped_cloudflare", dropped_cf)
+
+    # v3.8：地区过滤（用户 2026-11-23 定）——阿联酋 / 东南亚（新加坡除外）/ 非洲不收，
+    # 其余国家全部保留。此后所有阶段（风控精选 / 平台验证 / 用途池）都不再见到这些地区。
+    before_region = len(items)
+    items = [i for i in items if i["country"] not in EXCLUDED_COUNTRIES]
+    REGION_DROPPED = before_region - len(items)
+    if REGION_DROPPED:
+        print(f"[*] 地区过滤: 剔除 {REGION_DROPPED} 个（阿联酋/东南亚/非洲），剩余 {len(items)} 个")
+        bump("region_dropped", REGION_DROPPED)
 
     items.sort(key=lambda x: x["latency_ms"])
     residential = [i for i in items if i["residential"]]
@@ -2427,8 +2451,25 @@ def build_purpose_pools(groups: dict) -> dict:
     sg_pass = [i for i in cand if i["country"] == "SG" and yt(i, "SG") and ai(i, "SG")]
     # 台湾只看纯净关：能进总池即已过 Scamalytics 风险 ≤35，不再加平台门槛
     tw_pass = [i for i in items if i["country"] == "TW"]
+    # v3.8「其他国家」档（用户 2026-11-23 定）：没有专属用途池的国家（被地区过滤
+    # 剔除的不会出现在 items 里；OTHER = 地理未知，不进严选）照台湾档标准——
+    # 只看纯净关，不加平台门槛。每国按延迟取最快 N 个、总数设上限，送进决赛圈测速；
+    # 进严选仍须过速度门槛与 /24 上限（_split 统一处理），未过者入备选。
+    _purpose_cc = {"US", "NL", "AU", "GB", "CA", "DE", "JP", "SG", "TW"}
+    _other_by_cc = {}
+    for i in items:
+        cc = i["country"]
+        if cc not in _purpose_cc and cc != "OTHER":
+            _other_by_cc.setdefault(cc, []).append(i)
+    other_pass = []
+    for cc, lst in _other_by_cc.items():
+        other_pass.extend(sorted(lst, key=lambda x: x.get("latency_ms") or 10 ** 9)
+                          [:OTHER_MAX_PER_COUNTRY])
+    other_pass = sorted(other_pass, key=lambda x: x.get("latency_ms") or 10 ** 9)[:OTHER_MAX_TOTAL]
+    if other_pass:
+        print(f"[*] v3.8 其他国家档: {len(_other_by_cc)} 个国家共 {len(other_pass)} 个候选送测速")
 
-    finalists = list({id(i): i for i in (us_pass + nl_pass + jp_pass + sg_pass + tw_pass
+    finalists = list({id(i): i for i in (us_pass + nl_pass + jp_pass + sg_pass + tw_pass + other_pass
                                          + [x for v in dual_pass.values() for x in v]
                                          + [x for v in dual_single.values() for x in v]
                                          + _nl_single)}.values())
@@ -2494,7 +2535,7 @@ def build_purpose_pools(groups: dict) -> dict:
                         ("gb_dual", dual_pass["GB"] + dual_single["GB"]),
                         ("ca_dual", dual_pass["CA"] + dual_single["CA"]),
                         ("de_dual", dual_pass["DE"] + dual_single["DE"]),
-                        ("jp_ai", jp_pass), ("sg_ai", sg_pass)):
+                        ("jp_ai", jp_pass), ("sg_ai", sg_pass), ("other_all", other_pass)):
         _s, _b = _split(_lst)
         _pairs[f"{_name}_strict"], _pairs[f"{_name}_backup"] = _s, _b
     pools = _pairs
@@ -2524,6 +2565,7 @@ def build_purpose_pools(groups: dict) -> dict:
     # v3.7：报告加顶层汇总（summary），原有逐出口明细字段一字不动，挪到 nodes 下
     write_text(os.path.join(OUTPUT_DIR, "platform_report.json"),
                json.dumps({"summary": {"blacklist_dropped": BLACKLIST_DROPPED,
+                                       "region_dropped": REGION_DROPPED,
                                        "platform_checked_exits": len(report)},
                            "nodes": report}, indent=1, ensure_ascii=False))
     print("[*] 用途池: " + " | ".join(
