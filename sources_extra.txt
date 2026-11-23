@@ -26,7 +26,6 @@ https://raw.githubusercontent.com/856668/free-vpn-subscriptions/main/output/coun
 https://raw.githubusercontent.com/856668/free-vpn-subscriptions/main/output/country/CA/v2ray-base64-0001.txt
 https://raw.githubusercontent.com/856668/free-vpn-subscriptions/main/output/country/GB/v2ray-base64-0001.txt
 # itsyebekhe/PSG 按国家文件（Telegram 渠道采集，量小而精：澳/加/英）
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/locations/AU.b64
 https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/locations/CA.b64
 https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/locations/GB.b64
 
@@ -40,9 +39,21 @@ https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/Countries/Ja
 https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/Countries/Australia.txt
 # MustafaBaqer/VestraNet-Nodes：Telegram 提取大池，9351 链接、与基准池重合仅约 2%
 https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/subscriptions/mix-normal.txt
-# freenodess/freenodess：荷兰富集（抽样 NL 约 17%），每日更新
-https://raw.githubusercontent.com/freenodess/freenodess/main/nodes/v2ray-base64.txt
 # iboxz/free-v2ray-collector：小而鲜，DE/NL 倾向
 https://raw.githubusercontent.com/iboxz/free-v2ray-collector/main/main/mix.txt
 # morpheusadam/v2ray-config：按实测评分 ≥85 的分层，重合仅约 3%
 https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/best.txt
+
+# ── 第 4 批轮换（2026-11-23 侦察：专补 SG/CA/DE/GB/FR + 新聚合）──
+# FastNodes 未用国家分片：仓库每日自动更新（2026-11-23 仍在更），
+# SG 997 条/563 地址、与现池重合仅 18%——补 856668 冻结后 SG 的最大缺口；
+# CA/DE/GB/FR 四片合计约 2000 个新地址
+https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/countries/SG.txt
+https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/countries/CA.txt
+https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/countries/DE.txt
+https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/countries/GB.txt
+https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/countries/FR.txt
+# Barabama/FreeNodes：每日爬取大聚合，JP 86 / SG 103（备注口径），新增地址约 313 个
+https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/nodev2ray.txt
+# ShatakVPN/ConfigForge：720 条、日更多次，约 52 个新地址（无国家标签，靠下游筛选）
+https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/all.txt
