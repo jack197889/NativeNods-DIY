@@ -228,6 +228,7 @@ EXCLUDED_COUNTRIES = set(
     + ("DZ AO BJ BW BF BI CM CV CF TD KM CG CD CI DJ EG GQ ER SZ ET GA GM GH GN GW "
        "KE LS LR LY MG MW ML MR MU MA MZ NA NE NG RW ST SN SC SL SO ZA SS SD TZ TG "
        "TN UG EH ZM ZW").split()                                # 非洲
+    + "IL UA BY RU LT".split()                                  # v3.8.1（用户 2026-11-23 追加）：以色列/乌克兰/白俄罗斯/俄罗斯/立陶宛
 )
 OTHER_MAX_PER_COUNTRY = _env_int("OTHER_MAX_PER_COUNTRY", 5)    # 其他国家档：每国最多送测几个（按延迟取最快）
 OTHER_MAX_TOTAL = _env_int("OTHER_MAX_TOTAL", 50)               # 其他国家档：送测总数上限（护栏，防测速阶段膨胀）
