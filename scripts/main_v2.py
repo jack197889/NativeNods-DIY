@@ -35,6 +35,10 @@
   ENABLE_RDAP=0                   关闭 RDAP 注册地查询（仅用 GeoLite2）
   DROP_INSECURE=1                 丢弃「跳过证书验证」的节点
   DEBUG=1                         打印更多排查信息
+  PRIVATE_SOURCE_URLS             v3.9 私有源订阅地址（逗号/空白分隔，只存仓库
+                                  Secret、运行时注入，绝不写入仓库文件）：其节点
+                                  只过连通/纯净/速度三关，单独成 private_direct
+                                  池随产出同步私库，永不加前置、永不进公开池
 """
 
 from __future__ import annotations
@@ -1207,6 +1211,22 @@ def extract_nodes_from_text(text: str) -> set:
 
 
 PRIORITY_URIS: set = set()      # 来自 PRIORITY_SOURCE_URLS 的节点链接（候选过多时优先保留）
+PRIVATE_URIS: set = set()       # v3.9：来自私有源（环境变量）的节点链接
+
+
+def read_private_sources() -> list:
+    """v3.9 私有源（用户 2026-11-26 定）：订阅地址只存仓库 Secret，
+    运行时经环境变量 PRIVATE_SOURCE_URLS 注入（逗号/空白分隔），
+    绝不写入仓库文件。其节点照常过连通/纯净/速度三关，但不查
+    平台、不进任何公开用途池，单独成 private_direct 池随产出
+    同步到私库（产出本就不回公开仓库），下游以直连形态并入
+    严选 gist、永不加前置。"""
+    raw = os.environ.get("PRIVATE_SOURCE_URLS", "")
+    urls = [u.strip() for u in re.split(r"[\s,]+", raw)
+            if u.strip().startswith("http")]
+    if urls:
+        print(f"[*] 另加载私有源 {len(urls)} 条 (PRIVATE_SOURCE_URLS)")
+    return urls
 
 
 def read_extra_sources() -> list:
@@ -1229,7 +1249,9 @@ def read_extra_sources() -> list:
 
 def fetch_raw_nodes() -> list:
     nodes = set()
-    all_source_urls = list(dict.fromkeys(SOURCE_URLS + read_extra_sources()))
+    _priv_urls = read_private_sources()
+    all_source_urls = list(dict.fromkeys(
+        SOURCE_URLS + read_extra_sources() + _priv_urls))
     print(f"[*] 抓取 {len(all_source_urls)} 个订阅源 ...")
 
     def _fetch(url):
@@ -1249,6 +1271,8 @@ def fetch_raw_nodes() -> list:
             nodes.update(got)
             if url in PRIORITY_SOURCE_URLS:
                 PRIORITY_URIS.update(got)
+            if url in _priv_urls:
+                PRIVATE_URIS.update(got)
     print(f"[*] 初始抓取总量: {len(nodes)}")
     return list(nodes)
 
@@ -1915,6 +1939,7 @@ def classify_results(results: list):
             "net_type": net_type, "confidence": conf, "geo": g, "echo_cc": r.get("exit_country"),
             "ipapi_cc": ipapi_cc, "registered": None, "native": False, "tag": "",
             "risk": None, "risk_drop": False,
+            "private": r.get("raw") in PRIVATE_URIS,
         })
 
     # rDNS 兜底：仅对「仍无法判断」的 IP
@@ -2302,6 +2327,8 @@ def platform_check_stage(groups: dict):
     items = groups["residential"] + groups["native"] + groups["normal"]
     reps = {}
     for it in items:
+        if it.get("private"):
+            continue  # v3.9：私有源节点不查平台（只过连通/纯净/速度三关）
         key = it.get("exit_ip")
         if not key:
             continue
@@ -2404,6 +2431,13 @@ def build_purpose_pools(groups: dict) -> dict:
     与备选（平台过、速度未达或未测）。同时写 platform_report.json。"""
     os.makedirs(PURPOSE_DIR, exist_ok=True)
     items = groups["residential"] + groups["native"] + groups["normal"]
+    # v3.9：私有源节点先分出去——不进任何公开用途池（防混进公开
+    # 严选、防被私库链式转换误加前置），只过纯净（能进 groups 即
+    # Scamalytics ≤35）+ 速度两关，单独成 private_direct 池。
+    private_items = [i for i in items if i.get("private")]
+    items = [i for i in items if not i.get("private")]
+    if private_items:
+        print(f"[*] v3.9 私有直连候选: {len(private_items)} 个（不查平台，只过纯净+速度）")
 
     def yt(i, cc):
         p = i["platform"]
@@ -2470,7 +2504,7 @@ def build_purpose_pools(groups: dict) -> dict:
     if other_pass:
         print(f"[*] v3.8 其他国家档: {len(_other_by_cc)} 个国家共 {len(other_pass)} 个候选送测速")
 
-    finalists = list({id(i): i for i in (us_pass + nl_pass + jp_pass + sg_pass + tw_pass + other_pass
+    finalists = list({id(i): i for i in (us_pass + nl_pass + jp_pass + sg_pass + tw_pass + other_pass + private_items
                                          + [x for v in dual_pass.values() for x in v]
                                          + [x for v in dual_single.values() for x in v]
                                          + _nl_single)}.values())
@@ -2536,7 +2570,8 @@ def build_purpose_pools(groups: dict) -> dict:
                         ("gb_dual", dual_pass["GB"] + dual_single["GB"]),
                         ("ca_dual", dual_pass["CA"] + dual_single["CA"]),
                         ("de_dual", dual_pass["DE"] + dual_single["DE"]),
-                        ("jp_ai", jp_pass), ("sg_ai", sg_pass), ("other_all", other_pass)):
+                        ("jp_ai", jp_pass), ("sg_ai", sg_pass), ("other_all", other_pass),
+                        ("private_direct", private_items)):
         _s, _b = _split(_lst)
         _pairs[f"{_name}_strict"], _pairs[f"{_name}_backup"] = _s, _b
     pools = _pairs
@@ -2546,7 +2581,9 @@ def build_purpose_pools(groups: dict) -> dict:
             lst, os.path.join(PURPOSE_DIR, f"{name}.txt"),
             os.path.join(PURPOSE_DIR, f"{name}-clash.yaml"))
     # 严选总链接：全部严选池合并成一条订阅，供一条复制直接导入
-    strict_all = [i for name, lst in pools.items() if name.endswith("_strict")
+    # 私有直连池不并入严选总链接：它由私库转换单独以直连形态并入 gist
+    strict_all = [i for name, lst in pools.items()
+                  if name.endswith("_strict") and name != "private_direct_strict"
                   for i in lst]
     counts["strict_all"] = export_group(
         strict_all, os.path.join(PURPOSE_DIR, "strict_all.txt"),
