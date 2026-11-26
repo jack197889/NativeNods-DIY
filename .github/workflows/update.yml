@@ -36,6 +36,8 @@ jobs:
         env:
           # 便于 ip-api 等识别限速; GitHub runner 出口为美国 Azure
           PYTHONUNBUFFERED: '1'
+          # v3.9 私有源（地址只存 Secret，绝不写入仓库文件）
+          PRIVATE_SOURCE_URLS: ${{ secrets.PRIVATE_SOURCE_URLS }}
 
       - name: Upload test artifacts (调试用, 7天保留)
         uses: actions/upload-artifact@v4
