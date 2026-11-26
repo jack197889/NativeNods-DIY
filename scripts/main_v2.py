@@ -30,7 +30,7 @@
   MAX_RISK_SCORE / ENABLE_RISK_FILTER / DROP_RISK_UNKNOWN   风控值过滤(默认 35 / 开 / 查询失败保留)
   ENABLE_PLATFORM_CHECK=0         关闭平台验证阶段 (YouTube/Gemini/TikTok 地区判定)
   ENABLE_FINALIST_SPEED=0         关闭入选节点速度门槛 (严选池不再按速度分层)
-  STRICT_MIN_DOWN_MBPS / STRICT_MIN_UP_MBPS   严选池速度下限 (默认 5 / 2 Mbps)
+  STRICT_MIN_DOWN_MBPS / STRICT_MIN_UP_MBPS   严选池速度下限 (默认 1 / 0 Mbps, 0=不设上行门)
   ENABLE_SPEED_TEST=1             开启限时测速
   ENABLE_RDAP=0                   关闭 RDAP 注册地查询（仅用 GeoLite2）
   DROP_INSECURE=1                 丢弃「跳过证书验证」的节点
@@ -236,8 +236,12 @@ EXCLUDED_COUNTRIES = set(
 )
 OTHER_MAX_PER_COUNTRY = _env_int("OTHER_MAX_PER_COUNTRY", 5)    # 其他国家档：每国最多送测几个（按延迟取最快）
 OTHER_MAX_TOTAL = _env_int("OTHER_MAX_TOTAL", 50)               # 其他国家档：送测总数上限（护栏，防测速阶段膨胀）
-STRICT_MIN_DOWN_MBPS = _env_int("STRICT_MIN_DOWN_MBPS", 5)           # 严选池下载下限 (Mbps)
-STRICT_MIN_UP_MBPS = _env_int("STRICT_MIN_UP_MBPS", 2)               # 严选池上传下限 (Mbps, TikTok 上传作品用)
+STRICT_MIN_DOWN_MBPS = _env_int("STRICT_MIN_DOWN_MBPS", 1)           # 严选池下载下限 (Mbps)
+# v3.9.1（用户 2026-11-26 定）：严选速度门由 5/2 降为下行 ≥1、不设上行门。
+# GH 测速是从美国机房量的「天花板参考」，不是用户本地的真实速度；1 Mbps
+# 已够 360p 视频，终审在本地 ping0/实际使用。原 5/2 把大批优质家宽/原生
+# 误杀在备选池（etnote2 首跑 12 个日韩家宽全卡速度）。
+STRICT_MIN_UP_MBPS = _env_int("STRICT_MIN_UP_MBPS", 0)               # 严选池上传下限 (Mbps, 0=不设门槛)
 DEDUP_BY_EXIT_IP = True         # 相同出口 IP 只保留延迟最低的一个
 # ── v3.7 ping0 终审黑名单 ──
 # 本地 ping0 工具实测风控 >35% 的出口 IP 名单（blacklist.txt，一行一个 IP，# 为注释）。
@@ -1217,8 +1221,9 @@ PRIVATE_URIS: set = set()       # v3.9：来自私有源（环境变量）的节
 def read_private_sources() -> list:
     """v3.9 私有源（用户 2026-11-26 定）：订阅地址只存仓库 Secret，
     运行时经环境变量 PRIVATE_SOURCE_URLS 注入（逗号/空白分隔），
-    绝不写入仓库文件。其节点照常过连通/纯净/速度三关，但不查
-    平台、不进任何公开用途池，单独成 private_direct 池随产出
+    绝不写入仓库文件。其节点只过连通/纯净两关（v3.9.1 起不设
+    速度门，速度终审在用户本地），不查平台、不进任何公开用途池，
+    单独成 private_direct 池随产出
     同步到私库（产出本就不回公开仓库），下游以直连形态并入
     严选 gist、永不加前置。"""
     raw = os.environ.get("PRIVATE_SOURCE_URLS", "")
@@ -2437,7 +2442,7 @@ def build_purpose_pools(groups: dict) -> dict:
     private_items = [i for i in items if i.get("private")]
     items = [i for i in items if not i.get("private")]
     if private_items:
-        print(f"[*] v3.9 私有直连候选: {len(private_items)} 个（不查平台，只过纯净+速度）")
+        print(f"[*] v3.9 私有直连候选: {len(private_items)} 个（不查平台、不设速度门，只过连通+纯净）")
 
     def yt(i, cc):
         p = i["platform"]
@@ -2550,8 +2555,8 @@ def build_purpose_pools(groups: dict) -> dict:
     def _eligible(i):
         return _speed_pass(i) and not i.get("purity_dirty")
 
-    def _split(lst):
-        strict = sorted((i for i in lst if _eligible(i)),
+    def _split(lst, eligible=None):
+        strict = sorted((i for i in lst if (eligible or _eligible)(i)),
                         key=lambda i: (-(i.get("down_mbps") or 0), i.get("latency_ms") or 10 ** 9))
         kept, overflow, seen24 = [], [], {}
         for i in strict:  # v3.4: 同 /24 上限，防单个脏网段批发进场
@@ -2572,7 +2577,12 @@ def build_purpose_pools(groups: dict) -> dict:
                         ("de_dual", dual_pass["DE"] + dual_single["DE"]),
                         ("jp_ai", jp_pass), ("sg_ai", sg_pass), ("other_all", other_pass),
                         ("private_direct", private_items)):
-        _s, _b = _split(_lst)
+        if _name == "private_direct":
+            # v3.9.1（用户 2026-11-26 定）：私有道不设速度门——连通
+            # 且纯净即进严选（速度终审在用户本地），只保留 /24 上限
+            _s, _b = _split(_lst, eligible=lambda i: not i.get("purity_dirty"))
+        else:
+            _s, _b = _split(_lst)
         _pairs[f"{_name}_strict"], _pairs[f"{_name}_backup"] = _s, _b
     pools = _pairs
     counts = {}
